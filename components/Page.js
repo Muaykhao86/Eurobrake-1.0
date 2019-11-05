@@ -98,6 +98,9 @@ const GlobalStyle = createGlobalStyle`
 ` 
 
 export default class Page extends Component {
+
+    
+
     render() {
         return (
             <ThemeProvider theme={theme}>

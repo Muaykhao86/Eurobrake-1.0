@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import Link from 'next/link';
 import { NavStyles, Burger, TopBun, HiddenNavBG, HiddenContainer } from './styles/NavStyles';
-import styled from 'styled-components';
+
 
 
 export default class Nav extends Component {
@@ -13,14 +13,16 @@ export default class Nav extends Component {
         }
     }
 
+
     handleClick = () => {
         this.setState(prev => ({ isOpen: !prev.isOpen }));
+
     }
 
     render() {
         return (
             <NavStyles>
-                <HiddenNavBG isOpen={this.state.isOpen} />
+                 <HiddenNavBG isOpen={this.state.isOpen} />
                 <HiddenContainer isOpen={this.state.isOpen}>
                     <div className="nav_box-1">
                         <h1>Heading if needed</h1>
@@ -58,7 +60,7 @@ export default class Nav extends Component {
                     </a>
                 </Link>
                 <Burger isOpen={this.state.isOpen} onClick={this.handleClick}>
-                    <TopBun  sticky={this.props.sticky}  />
+                    <TopBun  isOpen={this.state.isOpen} sticky={this.props.sticky}  />
                 </Burger>
             </NavStyles>
         )

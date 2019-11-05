@@ -41,16 +41,16 @@ constructor(props) {
             username: this.state.username,
             password: this.state.password
         }
-        
-        const res = await fetch('https://prelude.eurobrake.net/login', {
-                method: 'POST',
-                body: JSON.stringify(formData)
-            });
-        const data = await res.json().catch(error => console.log(error));
-        return {
-            loggedIn: data
-            }
     }
+    //     const res = await fetch('https://prelude.eurobrake.net/login', {
+    //             method: 'POST',
+    //             body: JSON.stringify(formData)
+    //         });
+    //     const data = await res.json().catch(error => console.log(error));
+    //     return {
+    //         loggedIn: data
+    //         }
+    // }
 
 
 

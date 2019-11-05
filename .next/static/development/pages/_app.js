@@ -475,7 +475,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_8__);
 /* harmony import */ var _styles_NavStyles__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./styles/NavStyles */ "./components/styles/NavStyles.js");
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
 
 
 
@@ -485,7 +484,6 @@ __webpack_require__.r(__webpack_exports__);
 
 var _jsxFileName = "/mnt/c/Users/D.Hardiman/desktop/eurobrake/components/Nav.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement;
-
 
 
 
@@ -522,177 +520,151 @@ function (_Component) {
       return __jsx(_styles_NavStyles__WEBPACK_IMPORTED_MODULE_9__["NavStyles"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 22
+          lineNumber: 24
         },
         __self: this
       }, __jsx(_styles_NavStyles__WEBPACK_IMPORTED_MODULE_9__["HiddenNavBG"], {
         isOpen: this.state.isOpen,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 23
+          lineNumber: 25
         },
         __self: this
       }), __jsx(_styles_NavStyles__WEBPACK_IMPORTED_MODULE_9__["HiddenContainer"], {
         isOpen: this.state.isOpen,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 24
+          lineNumber: 26
         },
         __self: this
       }, __jsx("div", {
         className: "nav_box-1",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 25
+          lineNumber: 27
         },
         __self: this
       }, __jsx("h1", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 26
+          lineNumber: 28
         },
         __self: this
       }, "Heading if needed"), __jsx(next_link__WEBPACK_IMPORTED_MODULE_8___default.a, {
         href: "/about",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 27
+          lineNumber: 29
         },
         __self: this
       }, __jsx("a", {
         onClick: this.handleClick,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 27
+          lineNumber: 29
         },
         __self: this
       }, "About")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_8___default.a, {
         href: "/authorsArea",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 28
+          lineNumber: 30
         },
         __self: this
       }, __jsx("a", {
         onClick: this.handleClick,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 28
+          lineNumber: 30
         },
         __self: this
       }, "Authors Area")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_8___default.a, {
         href: "/expoAndSponsor",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 29
+          lineNumber: 31
         },
         __self: this
       }, __jsx("a", {
         onClick: this.handleClick,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 29
+          lineNumber: 31
         },
         __self: this
       }, "Exhibition And Sponsorship ")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_8___default.a, {
         href: "/studentArea",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 30
+          lineNumber: 32
         },
         __self: this
       }, __jsx("a", {
         onClick: this.handleClick,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 30
+          lineNumber: 32
         },
         __self: this
       }, "Student Area")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_8___default.a, {
         href: "/ticketPortal",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 31
+          lineNumber: 33
         },
         __self: this
       }, __jsx("a", {
         onClick: this.handleClick,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 31
+          lineNumber: 33
         },
         __self: this
       }, "Ticket Portal"))), __jsx("div", {
         className: "nav_box-2",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 33
+          lineNumber: 35
         },
         __self: this
       }, __jsx("h1", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 34
+          lineNumber: 36
         },
         __self: this
       }, "Heading if needed"), __jsx(next_link__WEBPACK_IMPORTED_MODULE_8___default.a, {
         href: "/welcome",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 35
+          lineNumber: 37
         },
         __self: this
       }, __jsx("a", {
         onClick: this.handleClick,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 35
+          lineNumber: 37
         },
         __self: this
       }, "Welcome")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_8___default.a, {
         href: "/login",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 36
+          lineNumber: 38
         },
         __self: this
       }, __jsx("a", {
         onClick: this.handleClick,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 36
+          lineNumber: 38
         },
         __self: this
       }, "Login")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_8___default.a, {
         href: "",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 37
-        },
-        __self: this
-      }, __jsx("a", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 37
-        },
-        __self: this
-      }, "This is a link to somewhere on the website")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_8___default.a, {
-        href: "",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 38
-        },
-        __self: this
-      }, __jsx("a", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 38
-        },
-        __self: this
-      }, "This is a link to somewhere on the website")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_8___default.a, {
-        href: "",
-        __source: {
-          fileName: _jsxFileName,
           lineNumber: 39
         },
         __self: this
@@ -700,47 +672,73 @@ function (_Component) {
         __source: {
           fileName: _jsxFileName,
           lineNumber: 39
+        },
+        __self: this
+      }, "This is a link to somewhere on the website")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_8___default.a, {
+        href: "",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 40
+        },
+        __self: this
+      }, __jsx("a", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 40
+        },
+        __self: this
+      }, "This is a link to somewhere on the website")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_8___default.a, {
+        href: "",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 41
+        },
+        __self: this
+      }, __jsx("a", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 41
         },
         __self: this
       }, "This is a link to somewhere on the website"))), __jsx("div", {
         className: "nav_box-3",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 41
+          lineNumber: 43
         },
         __self: this
       }, __jsx("div", {
         className: "nav_box-4",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 42
+          lineNumber: 44
         },
         __self: this
       }, "BOOK NOW"), __jsx("div", {
         className: "nav_box-5",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 45
+          lineNumber: 47
         },
         __self: this
       }, "IMPORTANT DATES"), __jsx("div", {
         className: "nav_box-6",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 48
+          lineNumber: 50
         },
         __self: this
       }, "SOMTHING ELSE IMPORTANT"))), __jsx(next_link__WEBPACK_IMPORTED_MODULE_8___default.a, {
         href: "/about",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 54
+          lineNumber: 56
         },
         __self: this
       }, __jsx("a", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 56
+          lineNumber: 58
         },
         __self: this
       }, "Menu")), __jsx(_styles_NavStyles__WEBPACK_IMPORTED_MODULE_9__["Burger"], {
@@ -748,14 +746,15 @@ function (_Component) {
         onClick: this.handleClick,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 60
+          lineNumber: 62
         },
         __self: this
       }, __jsx(_styles_NavStyles__WEBPACK_IMPORTED_MODULE_9__["TopBun"], {
+        isOpen: this.state.isOpen,
         sticky: this.props.sticky,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 61
+          lineNumber: 63
         },
         __self: this
       })));
@@ -856,37 +855,37 @@ function (_Component) {
         theme: theme,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 103
+          lineNumber: 106
         },
         __self: this
       }, __jsx(GlobalStyle, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 104
+          lineNumber: 107
         },
         __self: this
       }), __jsx(StyledPage, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 105
+          lineNumber: 108
         },
         __self: this
       }, __jsx(_Meta__WEBPACK_IMPORTED_MODULE_9__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 106
+          lineNumber: 109
         },
         __self: this
       }), __jsx(_Header__WEBPACK_IMPORTED_MODULE_7__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 107
+          lineNumber: 110
         },
         __self: this
       }), this.props.children, __jsx(_Footer__WEBPACK_IMPORTED_MODULE_8__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 111
+          lineNumber: 114
         },
         __self: this
       })));
@@ -900,21 +899,69 @@ function (_Component) {
 
 /***/ }),
 
+/***/ "./components/styles/BaseAnimation.js":
+/*!********************************************!*\
+  !*** ./components/styles/BaseAnimation.js ***!
+  \********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
+
+var BaseAnimation = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
+  displayName: "BaseAnimation",
+  componentId: "sc-95mkv-0"
+})(["animation-duration:", ";animation-timing-function:", ";animation-delay:", ";animation-iteration-count:", ";animation-direction:", ";animation-fill-mode:", ";animation-play-state:", ";display:", ";"], function (props) {
+  return props.duration;
+}, function (props) {
+  return props.timingFunction;
+}, function (props) {
+  return props.delay;
+}, function (props) {
+  return props.iterationCount;
+}, function (props) {
+  return props.direction;
+}, function (props) {
+  return props.fillMode;
+}, function (props) {
+  return props.playState;
+}, function (props) {
+  return props.display;
+});
+BaseAnimation.defaultProps = {
+  duration: '1s',
+  timingFunction: 'ease',
+  delay: '0s',
+  iterationnCount: '1',
+  direction: 'normal',
+  fillMode: 'both',
+  playState: 'running',
+  diplay: 'block'
+};
+/* harmony default export */ __webpack_exports__["default"] = (BaseAnimation);
+
+/***/ }),
+
 /***/ "./components/styles/NavStyles.js":
 /*!****************************************!*\
   !*** ./components/styles/NavStyles.js ***!
   \****************************************/
-/*! exports provided: NavStyles, Burger, TopBun, HiddenNavBG, HiddenContainer */
+/*! exports provided: NavStyles, Rotate, Burger, TopBun, HiddenNavBG, HiddenContainer */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NavStyles", function() { return NavStyles; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Rotate", function() { return Rotate; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Burger", function() { return Burger; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TopBun", function() { return TopBun; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HiddenNavBG", function() { return HiddenNavBG; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HiddenContainer", function() { return HiddenContainer; });
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
+/* harmony import */ var _BaseAnimation__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./BaseAnimation */ "./components/styles/BaseAnimation.js");
+
 
 var NavStyles = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
   displayName: "NavStyles",
@@ -925,34 +972,58 @@ var NavStyles = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.wi
   return props.sticky ? props.theme.white : props.theme.secondary;
 });
 var Rotate360 = Object(styled_components__WEBPACK_IMPORTED_MODULE_0__["keyframes"])(["100%{transform:rotate(360deg);}"]);
-var BunFun = Object(styled_components__WEBPACK_IMPORTED_MODULE_0__["keyframes"])(["100%{top:0;}"]);
-var Movedown = Object(styled_components__WEBPACK_IMPORTED_MODULE_0__["keyframes"])([""]);
+var Rotate = Object(styled_components__WEBPACK_IMPORTED_MODULE_0__["default"])(_BaseAnimation__WEBPACK_IMPORTED_MODULE_1__["default"]).withConfig({
+  displayName: "NavStyles__Rotate",
+  componentId: "sc-2i9r8j-1"
+})(["animation-name:", ";transform-origin:center center;"], Rotate360);
 var Burger = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
   displayName: "NavStyles__Burger",
-  componentId: "sc-2i9r8j-1"
-})(["margin:0 1rem;width:4rem;height:4rem;cursor:pointer;display:flex;align-items:center;z-index:300;"]);
+  componentId: "sc-2i9r8j-2"
+})(["margin:0 1rem;width:4rem;height:4rem;cursor:pointer;display:flex;align-items:center;z-index:300;transition:all 10s linear;"]);
+var trans = {
+  up: 'translateY(1.2rem)',
+  stay: 'translateY(0)',
+  down: 'translateY(-1.2rem)',
+  spin0: 'rotate(0)',
+  spin90: 'rotate(-90deg)',
+  spin220: 'rotate(-224deg)',
+  scale1000: 'scale(1000)',
+  scale0: 'scale(0)',
+  "in": 'all .6s cubic-bezier(0.22, 0.61, 0.36, 1) .3s',
+  out: 'all .6s cubic-bezier(.55,.055,.675,.19); .3 '
+};
 var TopBun = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
   displayName: "NavStyles__TopBun",
-  componentId: "sc-2i9r8j-2"
-})(["position:relative;width:100%;height:.2rem;background-color:", ";&:before{width:100%;height:100%;position:absolute;top:-1.2rem;content:'';border-bottom:2px solid ", ";animation:", " .2s ease-out;}&:after{border-bottom:2px solid ", ";width:100%;height:100%;position:absolute;content:'';top:1.2rem;animation:", " .2s ease-out;}"], function (props) {
+  componentId: "sc-2i9r8j-3"
+})(["position:relative;width:100%;height:.2rem;transition:", ";background-color:", ";transform:", ";&:before{width:100%;height:100%;position:absolute;transition:top .2s ease-out,transform .22s cubic-bezier(.215,.61,.355,1) .12s;top:", ";content:'';transform:", ";border-bottom:2px solid ", ";}&:after{border-bottom:2px solid ", ";width:100%;height:100%;position:absolute;content:'';transition:all .2s ease-out;top:", ";}"], function (props) {
+  return props.isOpen ? trans["in"] : trans.out;
+}, function (props) {
+  return props.sticky ? props.theme.white : props.theme.secondary;
+}, function (props) {
+  return props.isOpen ? trans.spin220 : trans.spin0;
+}, function (props) {
+  return props.isOpen ? 0 : '-1.2rem';
+}, function (props) {
+  return props.isOpen ? trans.spin90 : trans.spin0;
+}, function (props) {
   return props.sticky ? props.theme.white : props.theme.secondary;
 }, function (props) {
   return props.sticky ? props.theme.white : props.theme.secondary;
-}, BunFun, function (props) {
-  return props.sticky ? props.theme.white : props.theme.secondary;
-}, BunFun);
+}, function (props) {
+  return props.isOpen ? 0 : '1.2rem';
+});
 var HiddenNavBG = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
   displayName: "NavStyles__HiddenNavBG",
-  componentId: "sc-2i9r8j-3"
-})(["background-color:", ";position:absolute;top:-4rem;right:0rem;width:1rem;height:1rem;border-radius:50%;transition:transform .8s ease-in-out;transform:", ";"], function (props) {
+  componentId: "sc-2i9r8j-4"
+})(["background-color:", ";position:absolute;top:-4rem;right:0rem;width:1rem;height:1rem;border-radius:50%;transform:", ";transition:all 1.2s ease-in-out;"], function (props) {
   return props.theme.primary;
 }, function (props) {
-  return props.isOpen ? 'scale(1000)' : null;
+  return props.isOpen ? trans.scale1000 : trans.scale0;
 });
 var HiddenContainer = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
   displayName: "NavStyles__HiddenContainer",
-  componentId: "sc-2i9r8j-4"
-})(["position:absolute;right:-15rem;top:0;display:flex;min-width:90vw;min-height:90vh;padding:2rem;margin:2rem;transition:transform .8s ease-in-out;transform:", ";.nav_box-1{border:2px solid white;padding:2rem;margin:2rem;display:flex;flex-flow:column;align-items:flex-start;}.nav_box-2{border:2px solid white;padding:2rem;margin:2rem;margin-right:auto;display:flex;flex-flow:column;align-items:flex-start;}.nav_box-3{border:2px solid white;padding:2rem;margin:2rem;display:flex;flex-flow:column;align-items:center;justify-content:space-around;}.nav_box-4{border:2px solid white;padding:2rem;margin:2rem;min-height:15rem;min-width:15rem;}.nav_box-5{border:2px solid white;padding:2rem;margin:2rem;min-height:15rem;min-width:15rem;}.nav_box-6{border:2px solid white;padding:2rem;margin:2rem;min-height:15rem;min-width:15rem;}"], function (props) {
+  componentId: "sc-2i9r8j-5"
+})(["position:absolute;right:-15rem;top:0;display:flex;min-width:90vw;min-height:90vh;padding:2rem;margin:2rem;transition:all .8s ease-in-out;transform:", ";.nav_box-1{border:2px solid white;padding:2rem;margin:2rem;display:flex;flex-flow:column;align-items:flex-start;}.nav_box-2{border:2px solid white;padding:2rem;margin:2rem;margin-right:auto;display:flex;flex-flow:column;align-items:flex-start;}.nav_box-3{border:2px solid white;padding:2rem;margin:2rem;display:flex;flex-flow:column;align-items:center;justify-content:space-around;}.nav_box-4{border:2px solid white;padding:2rem;margin:2rem;min-height:15rem;min-width:15rem;}.nav_box-5{border:2px solid white;padding:2rem;margin:2rem;min-height:15rem;min-width:15rem;}.nav_box-6{border:2px solid white;padding:2rem;margin:2rem;min-height:15rem;min-width:15rem;}"], function (props) {
   return props.isOpen ? null : 'translateX(-200rem)';
 });
 

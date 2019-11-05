@@ -15,6 +15,13 @@ const BaseAnimation = styled.div`
 BaseAnimation.defaultProps = {
     duration: '1s',
     timingFunction: 'ease',
-   
-}
+    delay: '0s',
+    iterationnCount: '1',
+    direction: 'normal',
+    fillMode: 'both',
+    playState: 'running',
+    diplay: 'block'   
+};
+
+export default BaseAnimation;
 
