@@ -7,7 +7,6 @@ export const NavStyles = styled.div`
     position: absolute;
     transform: translateX(-20rem);
     z-index: 200;
-
     a{  
         font-family: ${props => props.theme.MPBold};
         font-size: 1.6rem;
@@ -17,7 +16,6 @@ export const NavStyles = styled.div`
         text-transform: uppercase;
         cursor: pointer;
         z-index: 100;
-
     }
 `;
 
@@ -48,7 +46,6 @@ export const Burger = styled.div `
     z-index: 300;
     transition: all 10s linear;
     /* background-color: salmon; */
-
 `;
 
 const trans = {
@@ -60,8 +57,8 @@ const trans = {
     spin220: 'rotate(-224deg)',
     scale1000 : 'scale(1000)',
     scale0 : 'scale(0)',
-    in: 'all .6s cubic-bezier(0.22, 0.61, 0.36, 1) .3s',
-    out: 'all .6s cubic-bezier(.55,.055,.675,.19); .3 '
+    in: 'transform .6s cubic-bezier(0.22, 0.61, 0.36, 1) .3s',
+    out: 'transform .6s cubic-bezier(.55,.055,.675,.19); .3 '
 }
 
 export const TopBun = styled.div`
@@ -75,7 +72,6 @@ export const TopBun = styled.div`
     transform: ${props => props.isOpen ?
     trans.spin220 : trans.spin0};
             
-
 &:before {
     width: 100%;
     height: 100%;
@@ -92,7 +88,6 @@ export const TopBun = styled.div`
  
   
 }
-
 &:after {
     border-bottom: 2px solid ${props => props.sticky ? 
      props.theme.white : props.theme.secondary };
@@ -100,11 +95,10 @@ export const TopBun = styled.div`
     height: 100%;
     position: absolute;
     content: '';
-    transition: all .2s ease-out;
+    transition: top .2s ease-out;
     top: ${props => props.isOpen ?
     0 : '1.2rem'};
    
-
 }`;
 
 
@@ -135,18 +129,14 @@ export const HiddenContainer = styled.div`
     /* border: 100px white solid; */
     padding: 2rem;
     margin: 2rem;
-
     transition: all .8s ease-in-out;
     transform: ${props => props.isOpen ?
         null : 'translateX(-200rem)'};
-
     .nav_box-1{
         border: 2px solid white;
         padding: 2rem;
         margin: 2rem;
-
         /* background-color: orangered; */
-
         display: flex;
         flex-flow: column;
         align-items: flex-start;
@@ -162,7 +152,6 @@ export const HiddenContainer = styled.div`
         align-items: flex-start;
     }
     .nav_box-3{
-
         border: 2px solid white;
         padding: 2rem;
         margin: 2rem;
@@ -176,7 +165,6 @@ export const HiddenContainer = styled.div`
         border: 2px solid white;
         padding: 2rem;
         margin: 2rem;
-
         /* background-color: sandybrown; */
         min-height: 15rem;
         min-width: 15rem;

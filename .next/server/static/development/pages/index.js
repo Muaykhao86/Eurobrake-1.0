@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 5);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -387,7 +387,7 @@ __webpack_require__.r(__webpack_exports__);
 
 const Button = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.button.withConfig({
   displayName: "Button",
-  componentId: "sc-1a2zoxy-0"
+  componentId: "sc-1t6v16c-0"
 })(["&,&:link,&:visited{text-align:center;text-transform:uppercase;text-decoration:none;font-size:2.1rem;color:", ";background:", ";border:1px solid ", ";border-radius:", ";font-family:", ";letter-spacing:0;padding:", ";transition:all .2s;cursor:pointer;}&:hover{box-shadow:0 2.5rem 4rem rgba(0,0,0,0.5);color:#FFF;background-color:#12377D;transform:translateY(-.3rem);}&::after{transform:scalex(1.4) scaleY(1.6);opacity:0;}&:focus{outline:none;}&:active{outline:none;transform:translateY(-.1rem);box-shadow:0 2rem 2rem rgba(0,0,0,0.5);}"], props => props.color || props.theme.white, props => props.background || 'transparent', props => props.color || props.theme.white, props => props.br || '0', props => props.theme.MPBold, props => props.padding || '1.5rem 4rem');
 
 /***/ }),
@@ -407,7 +407,7 @@ __webpack_require__.r(__webpack_exports__);
 
 const Card = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({
   displayName: "Card",
-  componentId: "lux97l-0"
+  componentId: "sc-1fywwyw-0"
 })(["position:absolute;bottom:-12rem;left:", ";right:", ";max-width:33rem;min-height:33rem;background-color:", ";padding:4rem;padding-bottom:3.5rem;align-self:", ";display:flex;flex-flow:column;justify-content:space-between;h1{font-size:4rem;color:", ";align-self:flex-start;max-width:90%;}"], props => props.right && 'null' || props.left && '-5rem' || props.center && 'null', props => props.right && '-5rem' || props.left && 'null' || props.center && 'null', props => props.theme.primary, props => props.right && 'flex-end' || props.left && 'flex-start' || props.center && 'center', props => props.theme.white);
 
 /***/ }),
@@ -433,15 +433,15 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 const CDBanner = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div.withConfig({
   displayName: "CountDownBanner__CDBanner",
-  componentId: "sc-1foyllz-0"
+  componentId: "y7fpkn-0"
 })(["background-color:#134381;margin-top:0;min-width:100%;height:10rem;display:flex;justify-content:center;align-items:center;color:white;"]);
 const CDContainer = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div.withConfig({
   displayName: "CountDownBanner__CDContainer",
-  componentId: "sc-1foyllz-1"
+  componentId: "y7fpkn-1"
 })(["display:flex;max-width:50%;margin-right:2rem;"]);
 const CDItem = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div.withConfig({
   displayName: "CountDownBanner__CDItem",
-  componentId: "sc-1foyllz-2"
+  componentId: "y7fpkn-2"
 })(["font-size:3rem;font-family:", ";margin:1rem;span{margin-left:.5rem;}"], props => props.theme.MPBold);
 
 class CountDownBanner extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
@@ -939,8 +939,14 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement;
 
 const VideoContainer = styled_components__WEBPACK_IMPORTED_MODULE_4___default.a.div.withConfig({
   displayName: "VideoPlayer__VideoContainer",
-  componentId: "sc-1o7nzoc-0"
+  componentId: "sc-7m7rkg-0"
 })(["padding:0;position:relative;top:0;left:0;min-width:100%;"]);
+const Poster = styled_components__WEBPACK_IMPORTED_MODULE_4___default.a.img.attrs(props => ({
+  src: '/images/video-poster.jpg'
+})).withConfig({
+  displayName: "VideoPlayer__Poster",
+  componentId: "sc-7m7rkg-1"
+})(["min-width:100%;min-height:100%;"]);
 class VideoPlayer extends react__WEBPACK_IMPORTED_MODULE_2___default.a.Component {
   render() {
     const videoJsOptions = {
@@ -948,6 +954,9 @@ class VideoPlayer extends react__WEBPACK_IMPORTED_MODULE_2___default.a.Component
       autoplay: 'any',
       fluid: true,
       controls: false,
+      poster: {
+        Poster
+      },
       sources: [{
         src: '/videos/temp2.mp4',
         type: 'video/mp4'
@@ -956,13 +965,13 @@ class VideoPlayer extends react__WEBPACK_IMPORTED_MODULE_2___default.a.Component
     return __jsx(VideoContainer, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 34
+        lineNumber: 41
       },
       __self: this
     }, __jsx(_components_Player__WEBPACK_IMPORTED_MODULE_3__["default"], Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, videoJsOptions, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 35
+        lineNumber: 42
       },
       __self: this
     })));
@@ -988,11 +997,11 @@ __webpack_require__.r(__webpack_exports__);
 
 const StyledContainer = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({
   displayName: "HomeStyles__StyledContainer",
-  componentId: "sc-1f6guao-0"
+  componentId: "sc-1nylq97-0"
 })(["display:flex;flex-flow:column;align-items:center;"]);
 const StyledSection = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({
   displayName: "HomeStyles__StyledSection",
-  componentId: "sc-1f6guao-1"
+  componentId: "sc-1nylq97-1"
 })(["max-width:55%;display:flex;flex-flow:column;justify-content:flex-start;margin:0 10rem;margin-top:5rem;margin-bottom:15rem;h1{font-family:", ";font-size:4.4rem;color:", ";line-height:1.1;margin-bottom:3rem;}p{font-family:", ";font-size:2rem;color:", ";margin-bottom:1rem;}.innerContainer{position:relative;display:flex;flex-flow:column;margin-top:2rem;}.mediaBox{min-width:66.4rem;max-height:33rem;overflow:hidden;display:flex;justify-content:center;align-items:center;}"], props => props.theme.MPSemibold, props => props.theme.primary, props => props.theme.MPLight, props => props.theme.primary);
 
 /***/ }),
@@ -1156,7 +1165,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 /***/ }),
 
-/***/ 5:
+/***/ 3:
 /*!******************************!*\
   !*** multi ./pages/index.js ***!
   \******************************/

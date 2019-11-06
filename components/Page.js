@@ -62,8 +62,6 @@ const GlobalStyle = createGlobalStyle`
     font-display: auto;
     font-style: normal;
     };
-
-
     *,
     *::before,
     *::after{
@@ -71,13 +69,11 @@ const GlobalStyle = createGlobalStyle`
         padding: 0;
         box-sizing: inherit;
     };
-
     html{
         height: 100%;
         box-sizing:  border-box;
         font-size: 62.5%;
     };
-
     body{
         /* To set the footer at the bottom we have to leave space for it in the parent container */
         position: relative;
@@ -93,8 +89,6 @@ const GlobalStyle = createGlobalStyle`
         color: black;
     }
     ;
-
-
 ` 
 
 export default class Page extends Component {

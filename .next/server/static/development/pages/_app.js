@@ -114,7 +114,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 const FooterBar = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div.withConfig({
   displayName: "Footer__FooterBar",
-  componentId: "sc-1xm0izr-0"
+  componentId: "sc-1wn18ws-0"
 })(["color:", ";background:", ";min-width:100%;min-height:10rem;display:flex;justify-content:space-between;align-items:flex-end;position:absolute;bottom:0;padding:3rem;.ftr_container-1{padding:.2rem;min-width:30rem;display:flex;flex-flow:column;}.ftr_container-2{padding:.2rem;min-width:20rem;display:flex;flex-flow:column;align-items:center;}.ftr_container-3{padding:.2rem;min-width:15rem;display:flex;flex-flow:column;}.ftr_container-4{padding:1rem;min-width:30rem;display:flex;justify-content:space-around;align-items:center;}.ftr_container-5{padding:1rem;min-width:40rem;border:1px solid white;min-height:20rem;display:flex;flex-flow:column;}.ftr_container-6{padding:1rem;min-width:40rem;border:1px solid white;min-height:20rem;display:flex;flex-flow:column wrap;}.ftr_container-7{padding:1rem;display:flex;justify-content:space-between;min-width:20rem;}.social{color:", ";;margin:1rem;font-size:2rem;}a{color:", ";text-transform:uppercase;font-family:", ";font-size:2rem;}h1{padding:1rem;text-align:center;}input{max-width:70%;margin-left:auto;}label{font-family:", ";font-size:1.6rem;text-transform:uppercase;}"], props => props.theme.white, props => props.theme.primary, props => props.theme.white, props => props.theme.white, props => props.theme.MPBold, props => props.theme.MPBold);
 
 function Footer() {
@@ -283,7 +283,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 const Gmap = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div.withConfig({
   displayName: "GoogleMaps__Gmap",
-  componentId: "rd7nos-0"
+  componentId: "sc-15qzys9-0"
 })(["width:100%;height:100%;"]); // Dont know if the above dov will work, will have to test it when i get the api key => tbh dont evenm know if I need to set fixed with
 
 const MapContainer = () => __jsx(Gmap, {
@@ -340,18 +340,18 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 
 const HeaderBar = styled_components__WEBPACK_IMPORTED_MODULE_3___default.a.div.withConfig({
   displayName: "Header__HeaderBar",
-  componentId: "kf2njr-0"
+  componentId: "zfe6h7-0"
 })(["color:white;position:fixed;background-color:", ";min-width:100vw;height:10rem;display:flex;justify-content:flex-end;align-items:center;z-index:100;"], props => props.sticky ? "#134381" : "transparent");
 const HeaderLogo = styled_components__WEBPACK_IMPORTED_MODULE_3___default.a.img.attrs(props => ({
   src: "/images/logo.png",
   alt: "Logo"
 })).withConfig({
   displayName: "Header__HeaderLogo",
-  componentId: "kf2njr-1"
+  componentId: "zfe6h7-1"
 })(["max-width:16.8rem;margin-left:10rem;margin-right:auto;cursor:pointer;"]);
 const HeaderButton = styled_components__WEBPACK_IMPORTED_MODULE_3___default.a.button.withConfig({
   displayName: "Header__HeaderButton",
-  componentId: "kf2njr-2"
+  componentId: "zfe6h7-2"
 })(["font-size:1.5rem;font-family:", ";margin-left:2rem;text-transform:uppercase;align-self:flex-end;min-width:16rem;min-height:100%;background-color:", ";border:none;color:", ";cursor:pointer;outline:none;"], props => props.theme.MPBold, props => props.sticky ? props.theme.secondary : 'transparent', props => props.theme.white);
 
 class Header extends react__WEBPACK_IMPORTED_MODULE_1__["Component"] {
@@ -672,19 +672,20 @@ class Nav extends react__WEBPACK_IMPORTED_MODULE_1__["Component"] {
       },
       __self: this
     }, "Login")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
-      href: "",
+      href: "/exhibitors",
       __source: {
         fileName: _jsxFileName,
         lineNumber: 39
       },
       __self: this
     }, __jsx("a", {
+      onClick: this.handleClick,
       __source: {
         fileName: _jsxFileName,
         lineNumber: 39
       },
       __self: this
-    }, "This is a link to somewhere on the website")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
+    }, "Exhibitors List")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
       href: "",
       __source: {
         fileName: _jsxFileName,
@@ -811,11 +812,11 @@ const theme = {
 };
 const StyledPage = styled_components__WEBPACK_IMPORTED_MODULE_4___default.a.div.withConfig({
   displayName: "Page__StyledPage",
-  componentId: "sc-1on8dql-0"
+  componentId: "sc-1cyutnt-0"
 })(["display:flex;flex-flow:column;background:white;"]);
 const Inner = styled_components__WEBPACK_IMPORTED_MODULE_4___default.a.div.withConfig({
   displayName: "Page__Inner",
-  componentId: "sc-1on8dql-1"
+  componentId: "sc-1cyutnt-1"
 })(["margin:0 auto;"]);
 const GlobalStyle = styled_components__WEBPACK_IMPORTED_MODULE_4__["createGlobalStyle"]`
     @font-face {
@@ -846,8 +847,6 @@ const GlobalStyle = styled_components__WEBPACK_IMPORTED_MODULE_4__["createGlobal
     font-display: auto;
     font-style: normal;
     };
-
-
     *,
     *::before,
     *::after{
@@ -855,13 +854,11 @@ const GlobalStyle = styled_components__WEBPACK_IMPORTED_MODULE_4__["createGlobal
         padding: 0;
         box-sizing: inherit;
     };
-
     html{
         height: 100%;
         box-sizing:  border-box;
         font-size: 62.5%;
     };
-
     body{
         /* To set the footer at the bottom we have to leave space for it in the parent container */
         position: relative;
@@ -877,8 +874,6 @@ const GlobalStyle = styled_components__WEBPACK_IMPORTED_MODULE_4__["createGlobal
         color: black;
     }
     ;
-
-
 `;
 class Page extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
   render() {
@@ -886,37 +881,37 @@ class Page extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       theme: theme,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 106
+        lineNumber: 100
       },
       __self: this
     }, __jsx(GlobalStyle, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 107
+        lineNumber: 101
       },
       __self: this
     }), __jsx(StyledPage, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 108
+        lineNumber: 102
       },
       __self: this
     }, __jsx(_Meta__WEBPACK_IMPORTED_MODULE_3__["default"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 109
+        lineNumber: 103
       },
       __self: this
     }), __jsx(_Header__WEBPACK_IMPORTED_MODULE_1__["default"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 110
+        lineNumber: 104
       },
       __self: this
     }), this.props.children, __jsx(_Footer__WEBPACK_IMPORTED_MODULE_2__["default"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 114
+        lineNumber: 108
       },
       __self: this
     })));
@@ -940,7 +935,7 @@ __webpack_require__.r(__webpack_exports__);
 
 const BaseAnimation = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({
   displayName: "BaseAnimation",
-  componentId: "sc-95mkv-0"
+  componentId: "sc-17nylf8-0"
 })(["animation-duration:", ";animation-timing-function:", ";animation-delay:", ";animation-iteration-count:", ";animation-direction:", ";animation-fill-mode:", ";animation-play-state:", ";display:", ";"], props => props.duration, props => props.timingFunction, props => props.delay, props => props.iterationCount, props => props.direction, props => props.fillMode, props => props.playState, props => props.display);
 BaseAnimation.defaultProps = {
   duration: '1s',
@@ -978,16 +973,16 @@ __webpack_require__.r(__webpack_exports__);
 
 const NavStyles = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({
   displayName: "NavStyles",
-  componentId: "sc-2i9r8j-0"
+  componentId: "sc-1ltvdnj-0"
 })(["display:flex;position:absolute;transform:translateX(-20rem);z-index:200;a{font-family:", ";font-size:1.6rem;color:", ";margin:1rem;text-transform:uppercase;cursor:pointer;z-index:100;}"], props => props.theme.MPBold, props => props.sticky ? props.theme.white : props.theme.secondary);
 const Rotate360 = Object(styled_components__WEBPACK_IMPORTED_MODULE_0__["keyframes"])(["100%{transform:rotate(360deg);}"]);
 const Rotate = styled_components__WEBPACK_IMPORTED_MODULE_0___default()(_BaseAnimation__WEBPACK_IMPORTED_MODULE_1__["default"]).withConfig({
   displayName: "NavStyles__Rotate",
-  componentId: "sc-2i9r8j-1"
+  componentId: "sc-1ltvdnj-1"
 })(["animation-name:", ";transform-origin:center center;"], Rotate360);
 const Burger = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({
   displayName: "NavStyles__Burger",
-  componentId: "sc-2i9r8j-2"
+  componentId: "sc-1ltvdnj-2"
 })(["margin:0 1rem;width:4rem;height:4rem;cursor:pointer;display:flex;align-items:center;z-index:300;transition:all 10s linear;"]);
 const trans = {
   up: 'translateY(1.2rem)',
@@ -998,20 +993,20 @@ const trans = {
   spin220: 'rotate(-224deg)',
   scale1000: 'scale(1000)',
   scale0: 'scale(0)',
-  in: 'all .6s cubic-bezier(0.22, 0.61, 0.36, 1) .3s',
-  out: 'all .6s cubic-bezier(.55,.055,.675,.19); .3 '
+  in: 'transform .6s cubic-bezier(0.22, 0.61, 0.36, 1) .3s',
+  out: 'transform .6s cubic-bezier(.55,.055,.675,.19); .3 '
 };
 const TopBun = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({
   displayName: "NavStyles__TopBun",
-  componentId: "sc-2i9r8j-3"
-})(["position:relative;width:100%;height:.2rem;transition:", ";background-color:", ";transform:", ";&:before{width:100%;height:100%;position:absolute;transition:top .2s ease-out,transform .22s cubic-bezier(.215,.61,.355,1) .12s;top:", ";content:'';transform:", ";border-bottom:2px solid ", ";}&:after{border-bottom:2px solid ", ";width:100%;height:100%;position:absolute;content:'';transition:all .2s ease-out;top:", ";}"], props => props.isOpen ? trans.in : trans.out, props => props.sticky ? props.theme.white : props.theme.secondary, props => props.isOpen ? trans.spin220 : trans.spin0, props => props.isOpen ? 0 : '-1.2rem', props => props.isOpen ? trans.spin90 : trans.spin0, props => props.sticky ? props.theme.white : props.theme.secondary, props => props.sticky ? props.theme.white : props.theme.secondary, props => props.isOpen ? 0 : '1.2rem');
+  componentId: "sc-1ltvdnj-3"
+})(["position:relative;width:100%;height:.2rem;transition:", ";background-color:", ";transform:", ";&:before{width:100%;height:100%;position:absolute;transition:top .2s ease-out,transform .22s cubic-bezier(.215,.61,.355,1) .12s;top:", ";content:'';transform:", ";border-bottom:2px solid ", ";}&:after{border-bottom:2px solid ", ";width:100%;height:100%;position:absolute;content:'';transition:top .2s ease-out;top:", ";}"], props => props.isOpen ? trans.in : trans.out, props => props.sticky ? props.theme.white : props.theme.secondary, props => props.isOpen ? trans.spin220 : trans.spin0, props => props.isOpen ? 0 : '-1.2rem', props => props.isOpen ? trans.spin90 : trans.spin0, props => props.sticky ? props.theme.white : props.theme.secondary, props => props.sticky ? props.theme.white : props.theme.secondary, props => props.isOpen ? 0 : '1.2rem');
 const HiddenNavBG = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({
   displayName: "NavStyles__HiddenNavBG",
-  componentId: "sc-2i9r8j-4"
+  componentId: "sc-1ltvdnj-4"
 })(["background-color:", ";position:absolute;top:-4rem;right:0rem;width:1rem;height:1rem;border-radius:50%;transform:", ";transition:all 1.2s ease-in-out;"], props => props.theme.primary, props => props.isOpen ? trans.scale1000 : trans.scale0);
 const HiddenContainer = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({
   displayName: "NavStyles__HiddenContainer",
-  componentId: "sc-2i9r8j-5"
+  componentId: "sc-1ltvdnj-5"
 })(["position:absolute;right:-15rem;top:0;display:flex;min-width:90vw;min-height:90vh;padding:2rem;margin:2rem;transition:all .8s ease-in-out;transform:", ";.nav_box-1{border:2px solid white;padding:2rem;margin:2rem;display:flex;flex-flow:column;align-items:flex-start;}.nav_box-2{border:2px solid white;padding:2rem;margin:2rem;margin-right:auto;display:flex;flex-flow:column;align-items:flex-start;}.nav_box-3{border:2px solid white;padding:2rem;margin:2rem;display:flex;flex-flow:column;align-items:center;justify-content:space-around;}.nav_box-4{border:2px solid white;padding:2rem;margin:2rem;min-height:15rem;min-width:15rem;}.nav_box-5{border:2px solid white;padding:2rem;margin:2rem;min-height:15rem;min-width:15rem;}.nav_box-6{border:2px solid white;padding:2rem;margin:2rem;min-height:15rem;min-width:15rem;}"], props => props.isOpen ? null : 'translateX(-200rem)');
 
 /***/ }),
@@ -3017,13 +3012,13 @@ class MyApp extends next_app__WEBPACK_IMPORTED_MODULE_1___default.a {
     return __jsx(_components_Page__WEBPACK_IMPORTED_MODULE_3__["default"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 10
+        lineNumber: 11
       },
       __self: this
     }, __jsx(Component, Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, pageProps, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 11
+        lineNumber: 12
       },
       __self: this
     })));

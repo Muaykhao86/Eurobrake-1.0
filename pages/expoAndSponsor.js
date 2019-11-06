@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components';
+import Link from 'next/link';
 
 
 const DemoDiv = styled.div`
@@ -17,6 +18,14 @@ const Demo = styled.h1`
 
 `;
 
+const Al = styled.a`
+    padding: 10rem;
+    margin: 5rem;
+    color: blue;
+    cursor: pointer;
+    `;
+
+
 export default () => (
 <DemoDiv>
     <Demo>Exhibition and Sponsor</Demo>
@@ -24,6 +33,11 @@ export default () => (
         Saepe asperiores quibusdam facere ipsa reprehenderit possimus necessitatibus id, 
         quisquam sed tempore vel, maiores cupiditate facilis accusamus sunt dolorem amet repellat labore.
     </Demo>
+    <Link href="/exhibitors">
+    <Al>
+        List of Exphibitors
+    </Al>
+    </Link>
 </DemoDiv>    
 
 ) 

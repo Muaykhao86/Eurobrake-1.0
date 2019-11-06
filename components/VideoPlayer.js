@@ -12,8 +12,14 @@ const VideoContainer = styled.div`
     top: 0;
     left: 0;
     min-width: 100%;
-    /* min-height: 100vh; */
     `;
+
+const Poster = styled.img.attrs(props => ({
+  src: '/images/video-poster.jpg'
+}))`
+    min-width: 100%;
+    min-height: 100%;
+`;
 
 export default class VideoPlayer extends React.Component {
   render () {
@@ -22,6 +28,7 @@ export default class VideoPlayer extends React.Component {
       autoplay: 'any',
       fluid: true,
       controls: false,
+      poster: {Poster},
       sources: [
         {
           src: '/videos/temp2.mp4',
@@ -32,7 +39,7 @@ export default class VideoPlayer extends React.Component {
 
     return (
       <VideoContainer>
-        <Player {...videoJsOptions} />
+        <Player {...videoJsOptions} /> 
       </VideoContainer>
     )
   }

@@ -8,8 +8,6 @@ module.exports = withCss({
         loader: 'url-loader',
         options: {
           limit: 100000,
-          publicPath: './',
-          outputPath: 'static/',
           name: '[name].[ext]'
         }
       }
@@ -19,3 +17,6 @@ module.exports = withCss({
   }
 });
 
+// NEEDED??
+// publicPath: './',
+// outputPath: 'static/',
