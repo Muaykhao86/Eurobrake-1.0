@@ -54,13 +54,13 @@ AuthorsArea.getInitialProps = async ctx => {
     process.browser
       ? Router.push('/login')
       : ctx.res.writeHead(301, { Location: '/login' })
-
+//  headers: {
+//         Authorization: JSON.stringify({ token })
+//       }
   try {
     const response = await fetch(apiUrl, {
       credentials: 'include',
-      headers: {
-        Authorization: JSON.stringify({ token })
-      }
+     
     })
 
     if (response.ok) {
