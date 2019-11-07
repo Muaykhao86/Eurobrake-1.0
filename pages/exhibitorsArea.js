@@ -93,7 +93,7 @@ export default class ExhibitorsArea extends React.Component {
 }
 
 // action="//2019.eurobrake.net/exhibition/exhibitors/login" SHOULD BE LOGIN FORM FOR EXHIBITORS
-ExhibitorsLogin.getInitialProps = async function () {
+ExhibitorsArea.getInitialProps = async function () {
 
             let res = await fetch('https://prelude.eurobrake.net/login');
             const data = await res.json().catch(error => console.log(error));;

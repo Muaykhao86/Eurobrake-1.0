@@ -1,73 +1,4 @@
-(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["static/development/pages/exhibitorsArea.js"],{
-
-/***/ "./components/FormBuilder.js":
-/*!***********************************!*\
-  !*** ./components/FormBuilder.js ***!
-  \***********************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/regenerator */ "./node_modules/@babel/runtime-corejs2/regenerator/index.js");
-/* harmony import */ var _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime-corejs2/helpers/esm/asyncToGenerator.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! isomorphic-unfetch */ "./node_modules/isomorphic-unfetch/browser.js");
-/* harmony import */ var isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_3__);
-
-
-
-
-
-var FormBuilder = function FormBuilder(props) {
-  return console.log(props);
-}; // FormBuilder.getInitialProps = async () => {
-//     const res = await fetch('https://api.tvmaze.com/search/shows?q=batman') ;
-//     const data = await res.json();
-//     console.log({data});
-//     return {form: json}
-// }
-
-
-FormBuilder.getInitialProps =
-/*#__PURE__*/
-Object(_babel_runtime_corejs2_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1__["default"])(
-/*#__PURE__*/
-_babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee() {
-  var res, data;
-  return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
-    while (1) {
-      switch (_context.prev = _context.next) {
-        case 0:
-          _context.next = 2;
-          return isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_3___default()('https://api.tvmaze.com/search/shows?q=batman');
-
-        case 2:
-          res = _context.sent;
-          _context.next = 5;
-          return res.json();
-
-        case 5:
-          data = _context.sent;
-          console.log("Show data fetched. Count: ".concat(data.length));
-          return _context.abrupt("return", {
-            shows: data.map(function (entry) {
-              return entry.show;
-            })
-          });
-
-        case 8:
-        case "end":
-          return _context.stop();
-      }
-    }
-  }, _callee);
-}));
-/* harmony default export */ __webpack_exports__["default"] = (FormBuilder);
-
-/***/ }),
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["static/development/pages/exhibitors.js"],{
 
 /***/ "./node_modules/@babel/runtime-corejs2/core-js/object/create.js":
 /*!**********************************************************************!*\
@@ -265,36 +196,6 @@ function _createClass(Constructor, protoProps, staticProps) {
   if (protoProps) _defineProperties(Constructor.prototype, protoProps);
   if (staticProps) _defineProperties(Constructor, staticProps);
   return Constructor;
-}
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime-corejs2/helpers/esm/defineProperty.js":
-/*!***************************************************************************!*\
-  !*** ./node_modules/@babel/runtime-corejs2/helpers/esm/defineProperty.js ***!
-  \***************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _defineProperty; });
-/* harmony import */ var _core_js_object_define_property__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../core-js/object/define-property */ "./node_modules/@babel/runtime-corejs2/core-js/object/define-property.js");
-/* harmony import */ var _core_js_object_define_property__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_core_js_object_define_property__WEBPACK_IMPORTED_MODULE_0__);
-
-function _defineProperty(obj, key, value) {
-  if (key in obj) {
-    _core_js_object_define_property__WEBPACK_IMPORTED_MODULE_0___default()(obj, key, {
-      value: value,
-      enumerable: true,
-      configurable: true,
-      writable: true
-    });
-  } else {
-    obj[key] = value;
-  }
-
-  return obj;
 }
 
 /***/ }),
@@ -3700,21 +3601,21 @@ function concatArrays(originVal, newVal) {
 
 /***/ }),
 
-/***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2FexhibitorsArea&absolutePagePath=%2Fmnt%2Fc%2FUsers%2FD.Hardiman%2Fdesktop%2Feurobrake%2Fpages%2FexhibitorsArea.js!./":
-/*!************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2FexhibitorsArea&absolutePagePath=%2Fmnt%2Fc%2FUsers%2FD.Hardiman%2Fdesktop%2Feurobrake%2Fpages%2FexhibitorsArea.js ***!
-  \************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fexhibitors&absolutePagePath=%2Fmnt%2Fc%2FUsers%2FD.Hardiman%2Fdesktop%2Feurobrake%2Fpages%2Fexhibitors.js!./":
+/*!****************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fexhibitors&absolutePagePath=%2Fmnt%2Fc%2FUsers%2FD.Hardiman%2Fdesktop%2Feurobrake%2Fpages%2Fexhibitors.js ***!
+  \****************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 
-    (window.__NEXT_P=window.__NEXT_P||[]).push(["/exhibitorsArea", function() {
-      var mod = __webpack_require__(/*! ./pages/exhibitorsArea.js */ "./pages/exhibitorsArea.js")
+    (window.__NEXT_P=window.__NEXT_P||[]).push(["/exhibitors", function() {
+      var mod = __webpack_require__(/*! ./pages/exhibitors.js */ "./pages/exhibitors.js")
       if(true) {
-        module.hot.accept(/*! ./pages/exhibitorsArea.js */ "./pages/exhibitorsArea.js", function() {
-          if(!next.router.components["/exhibitorsArea"]) return
-          var updatedPage = __webpack_require__(/*! ./pages/exhibitorsArea.js */ "./pages/exhibitorsArea.js")
-          next.router.update("/exhibitorsArea", updatedPage)
+        module.hot.accept(/*! ./pages/exhibitors.js */ "./pages/exhibitors.js", function() {
+          if(!next.router.components["/exhibitors"]) return
+          var updatedPage = __webpack_require__(/*! ./pages/exhibitors.js */ "./pages/exhibitors.js")
+          next.router.update("/exhibitors", updatedPage)
         })
       }
       return mod
@@ -8209,16 +8110,16 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./pages/exhibitorsArea.js":
-/*!*********************************!*\
-  !*** ./pages/exhibitorsArea.js ***!
-  \*********************************/
+/***/ "./pages/exhibitors.js":
+/*!*****************************!*\
+  !*** ./pages/exhibitors.js ***!
+  \*****************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return ExhibitorsArea; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return ExhibitorList; });
 /* harmony import */ var _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/regenerator */ "./node_modules/@babel/runtime-corejs2/regenerator/index.js");
 /* harmony import */ var _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _babel_runtime_corejs2_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime-corejs2/helpers/esm/asyncToGenerator.js");
@@ -8226,15 +8127,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/createClass */ "./node_modules/@babel/runtime-corejs2/helpers/esm/createClass.js");
 /* harmony import */ var _babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/possibleConstructorReturn */ "./node_modules/@babel/runtime-corejs2/helpers/esm/possibleConstructorReturn.js");
 /* harmony import */ var _babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/getPrototypeOf */ "./node_modules/@babel/runtime-corejs2/helpers/esm/getPrototypeOf.js");
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/assertThisInitialized */ "./node_modules/@babel/runtime-corejs2/helpers/esm/assertThisInitialized.js");
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/inherits */ "./node_modules/@babel/runtime-corejs2/helpers/esm/inherits.js");
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/defineProperty */ "./node_modules/@babel/runtime-corejs2/helpers/esm/defineProperty.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_9__);
-/* harmony import */ var _components_FormBuilder__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../components/FormBuilder */ "./components/FormBuilder.js");
-/* harmony import */ var isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! isomorphic-unfetch */ "./node_modules/isomorphic-unfetch/browser.js");
-/* harmony import */ var isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_11__);
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/inherits */ "./node_modules/@babel/runtime-corejs2/helpers/esm/inherits.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
+/* harmony import */ var isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! isomorphic-unfetch */ "./node_modules/isomorphic-unfetch/browser.js");
+/* harmony import */ var isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_9__);
 
 
 
@@ -8242,69 +8140,145 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-
-
-var _jsxFileName = "/mnt/c/Users/D.Hardiman/desktop/eurobrake/pages/exhibitorsArea.js";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement;
-
+var _jsxFileName = "/mnt/c/Users/D.Hardiman/desktop/eurobrake/pages/exhibitors.js";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement;
 
 
 
-var DemoDiv = styled_components__WEBPACK_IMPORTED_MODULE_12__["default"].form.withConfig({
-  displayName: "exhibitorsArea__DemoDiv",
-  componentId: "sc-1h2s0md-0"
+var StyledPage = styled_components__WEBPACK_IMPORTED_MODULE_8__["default"].div.withConfig({
+  displayName: "exhibitors__StyledPage",
+  componentId: "sc-1kpvgm5-0"
 })(["display:flex;flex-direction:column;align-self:center;margin-top:10rem;max-width:", ";"], function (props) {
   return props.theme.maxWidth;
 });
-var Demo = styled_components__WEBPACK_IMPORTED_MODULE_12__["default"].h1.withConfig({
-  displayName: "exhibitorsArea__Demo",
-  componentId: "sc-1h2s0md-1"
-})(["padding:10rem;margin:5rem;color:orangered;"]);
+var StyledExhibitors = styled_components__WEBPACK_IMPORTED_MODULE_8__["default"].div.withConfig({
+  displayName: "exhibitors__StyledExhibitors",
+  componentId: "sc-1kpvgm5-1"
+})(["display:flex;flex-flow:wrap;"]);
+var StyledCard = styled_components__WEBPACK_IMPORTED_MODULE_8__["default"].div.withConfig({
+  displayName: "exhibitors__StyledCard",
+  componentId: "sc-1kpvgm5-2"
+})(["display:flex;flex-direction:column;max-height:50rem;max-width:35rem;justify-content:space-between;padding:2rem;border:1px solid black;margin:2rem;"]);
 
-var ExhibitorsArea =
+var ExhibitorList =
 /*#__PURE__*/
-function (_React$Component) {
-  Object(_babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_7__["default"])(ExhibitorsArea, _React$Component);
+function (_Component) {
+  Object(_babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_6__["default"])(ExhibitorList, _Component);
 
-  function ExhibitorsArea(props) {
+  function ExhibitorList(props) {
     var _this;
 
-    Object(_babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_2__["default"])(this, ExhibitorsArea);
+    Object(_babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_2__["default"])(this, ExhibitorList);
 
-    _this = Object(_babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_4__["default"])(this, Object(_babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5__["default"])(ExhibitorsArea).call(this, props));
+    _this = Object(_babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_4__["default"])(this, Object(_babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5__["default"])(ExhibitorList).call(this, props));
+    _this.state = {
+      exhibitors: [],
+      companies: []
+    };
+    return _this;
+  }
 
-    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_8__["default"])(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_6__["default"])(_this), "saveToState", function (e) {
-      _this.setState(Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_8__["default"])({}, e.target.name, e.target.value));
-    });
-
-    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_8__["default"])(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_6__["default"])(_this), "onSubmit",
-    /*#__PURE__*/
-    function () {
-      var _ref = Object(_babel_runtime_corejs2_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1__["default"])(
+  Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_3__["default"])(ExhibitorList, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      var exhibitors = this.props.exhibitors.exhibitors;
+      var company = exhibitors.map(function (ex, i) {
+        return ex.company;
+      });
+      this.setState({
+        companies: company
+      });
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      var exhibitors = this.props.exhibitors.exhibitors;
+      return __jsx(StyledPage, {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 61
+        },
+        __self: this
+      }, __jsx("h1", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 62
+        },
+        __self: this
+      }, "Exhibitors List"), __jsx(StyledExhibitors, {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 63
+        },
+        __self: this
+      }, exhibitors.map(function (company, i) {
+        return __jsx(StyledCard, {
+          key: i,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 66
+          },
+          __self: this
+        }, __jsx("img", {
+          src: company.logo,
+          style: {
+            maxWidth: '30rem'
+          },
+          alt: "logo",
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 67
+          },
+          __self: this
+        }), __jsx("h1", {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 68
+          },
+          __self: this
+        }, company.company), __jsx("h2", {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 69
+          },
+          __self: this
+        }, "Based in ", company.country), __jsx("h2", {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 70
+          },
+          __self: this
+        }, "Booth: ", company.booth));
+      })));
+    }
+  }], [{
+    key: "getInitialProps",
+    value: function () {
+      var _getInitialProps = Object(_babel_runtime_corejs2_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1__["default"])(
       /*#__PURE__*/
-      _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee(e) {
-        var formData;
+      _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee() {
+        var res, data;
         return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
           while (1) {
             switch (_context.prev = _context.next) {
               case 0:
-                e.preventDefault();
-                console.log('click');
-                formData = {
-                  username: _this.state.username,
-                  password: _this.state.password
-                }; // let res = await fetch('https://prelude.eurobrake.net/login', {
-                //         method: 'POST',
-                //         credentials: 'include',
-                //         body: JSON.stringify(formData)
-                //     });
-                // const data = await res.json().catch(error => console.log(error));
-                // console.log(data);
-                // return {
-                //     loggedIn: data 
-                //     }
+                _context.next = 2;
+                return isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_9___default()('https://prelude.eurobrake.net/exhibitors');
 
-              case 3:
+              case 2:
+                res = _context.sent;
+                _context.next = 5;
+                return res.json()["catch"](function (error) {
+                  return console.log(error);
+                });
+
+              case 5:
+                data = _context.sent;
+                return _context.abrupt("return", {
+                  exhibitors: data
+                });
+
+              case 7:
               case "end":
                 return _context.stop();
             }
@@ -8312,160 +8286,33 @@ function (_React$Component) {
         }, _callee);
       }));
 
-      return function (_x) {
-        return _ref.apply(this, arguments);
-      };
-    }());
+      function getInitialProps() {
+        return _getInitialProps.apply(this, arguments);
+      }
 
-    _this.state = {
-      username: '',
-      password: '',
-      loggedIn: false
-    };
-    return _this;
-  }
-
-  Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_3__["default"])(ExhibitorsArea, [{
-    key: "render",
-    value: function render() {
-      console.log(this.props);
-      var loggedIn = this.state.loggedIn;
-      var form = this.props.form.form;
-      return __jsx(DemoDiv, {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 67
-        },
-        __self: this
-      }, loggedIn ? __jsx(DemoDiv, {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 70
-        },
-        __self: this
-      }, __jsx("h1", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 71
-        },
-        __self: this
-      }, "You are logged in!!!!")) : __jsx(DemoDiv, {
-        onSubmit: this.onSubmit,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 76
-        },
-        __self: this
-      }, __jsx("div", {
-        className: "",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 77
-        },
-        __self: this
-      }, __jsx("label", {
-        htmlFor: "label",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 78
-        },
-        __self: this
-      }, form[0].label), __jsx("input", {
-        type: "text",
-        name: form[0].name,
-        onChange: this.saveToState,
-        value: this.state.username,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 79
-        },
-        __self: this
-      })), __jsx("div", {
-        className: "",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 81
-        },
-        __self: this
-      }, __jsx("label", {
-        htmlFor: "label",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 82
-        },
-        __self: this
-      }, form[1].label), __jsx("input", {
-        type: "password",
-        name: form[1].name,
-        onChange: this.saveToState,
-        value: this.state.password,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 83
-        },
-        __self: this
-      })), __jsx("input", {
-        type: "submit",
-        value: "Submit",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 85
-        },
-        __self: this
-      })));
-    }
+      return getInitialProps;
+    }()
   }]);
 
-  return ExhibitorsArea;
-}(react__WEBPACK_IMPORTED_MODULE_9___default.a.Component); // action="//2019.eurobrake.net/exhibition/exhibitors/login" SHOULD BE LOGIN FORM FOR EXHIBITORS
+  return ExhibitorList;
+}(react__WEBPACK_IMPORTED_MODULE_7__["Component"]); // ON THIS PAGE!!!
+// HAVE A BIG CARD LIST OF ALL EXHIBITORS
+// DISPLAY LOGO NAME AND BOOTH
+// THEN ON CLICK SHOW POPUP PORTAL WITH THE REST OPF THEIR DETAILS
 
 
 
-ExhibitorsArea.getInitialProps =
-/*#__PURE__*/
-Object(_babel_runtime_corejs2_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1__["default"])(
-/*#__PURE__*/
-_babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee2() {
-  var res, data;
-  return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee2$(_context2) {
-    while (1) {
-      switch (_context2.prev = _context2.next) {
-        case 0:
-          _context2.next = 2;
-          return isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_11___default()('https://prelude.eurobrake.net/login');
-
-        case 2:
-          res = _context2.sent;
-          _context2.next = 5;
-          return res.json()["catch"](function (error) {
-            return console.log(error);
-          });
-
-        case 5:
-          data = _context2.sent;
-          ;
-          return _context2.abrupt("return", {
-            form: data
-          });
-
-        case 8:
-        case "end":
-          return _context2.stop();
-      }
-    }
-  }, _callee2);
-}));
 
 /***/ }),
 
-/***/ 0:
-/*!****************************************************************************************************************************************************************!*\
-  !*** multi next-client-pages-loader?page=%2FexhibitorsArea&absolutePagePath=%2Fmnt%2Fc%2FUsers%2FD.Hardiman%2Fdesktop%2Feurobrake%2Fpages%2FexhibitorsArea.js ***!
-  \****************************************************************************************************************************************************************/
+/***/ 6:
+/*!********************************************************************************************************************************************************!*\
+  !*** multi next-client-pages-loader?page=%2Fexhibitors&absolutePagePath=%2Fmnt%2Fc%2FUsers%2FD.Hardiman%2Fdesktop%2Feurobrake%2Fpages%2Fexhibitors.js ***!
+  \********************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2FexhibitorsArea&absolutePagePath=%2Fmnt%2Fc%2FUsers%2FD.Hardiman%2Fdesktop%2Feurobrake%2Fpages%2FexhibitorsArea.js! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2FexhibitorsArea&absolutePagePath=%2Fmnt%2Fc%2FUsers%2FD.Hardiman%2Fdesktop%2Feurobrake%2Fpages%2FexhibitorsArea.js!./");
+module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2Fexhibitors&absolutePagePath=%2Fmnt%2Fc%2FUsers%2FD.Hardiman%2Fdesktop%2Feurobrake%2Fpages%2Fexhibitors.js! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fexhibitors&absolutePagePath=%2Fmnt%2Fc%2FUsers%2FD.Hardiman%2Fdesktop%2Feurobrake%2Fpages%2Fexhibitors.js!./");
 
 
 /***/ }),
@@ -8481,5 +8328,5 @@ module.exports = dll_ea92a4d9664833a26066;
 
 /***/ })
 
-},[[0,"static/runtime/webpack.js"]]]);
-//# sourceMappingURL=exhibitorsArea.js.map
+},[[6,"static/runtime/webpack.js"]]]);
+//# sourceMappingURL=exhibitors.js.map

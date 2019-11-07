@@ -333,7 +333,7 @@ class ExhibitorsArea extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Compon
 
 } // action="//2019.eurobrake.net/exhibition/exhibitors/login" SHOULD BE LOGIN FORM FOR EXHIBITORS
 
-ExhibitorsLogin.getInitialProps = async function () {
+ExhibitorsArea.getInitialProps = async function () {
   let res = await isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_3___default()('https://prelude.eurobrake.net/login');
   const data = await res.json().catch(error => console.log(error));
   ;
