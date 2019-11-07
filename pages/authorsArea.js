@@ -25,7 +25,7 @@ const Demo = styled.h1`
 `;
 
 
-export default class AuthorsArea extends React.Component {
+class AuthorsArea extends React.Component {
 constructor(props) {
     super(props);
     
