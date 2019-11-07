@@ -29,9 +29,9 @@ class AuthorsArea extends Component {
 constructor(props) {
     super(props);
     
-    const { data } = props;
 }
 render(){
+    const { data } = props;
     console.log(data);
     return(
         <div className="">
@@ -48,8 +48,8 @@ render(){
 AuthorsArea.getInitialProps = async ctx => {
   // We use `nextCookie` to get the cookie and pass the token to the
   // frontend in the `props`.
-  const { token } = nextCookie(ctx)
-
+  const { token } = nextCookie(ctx);
+    const apiUrl = 'https://prelude.eurobrake.net/dashboard ';
   const redirectOnError = () =>
     process.browser
       ? Router.push('/login')

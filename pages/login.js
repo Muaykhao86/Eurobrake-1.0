@@ -1,8 +1,10 @@
 import React, { Component } from 'react'
 import styled from 'styled-components';
+import fetch from 'isomorphic-unfetch';
 
 
-const DemoDiv = styled.div`
+
+const DemoDiv = styled.form`
     display: flex;
     flex-direction: column;
     align-self: center; 
@@ -19,9 +21,9 @@ const Demo = styled.h1`
 
 
 
-export default class login extends Component {
+export default class Login extends Component {
     static getInitialProps = async function () {
-        const res = await fetch('https://prelude.eurobrake.net/dashboard');
+        const res = await fetch('https://prelude.eurobrake.net/login');
         const data = await res.json().catch(error => console.log(error));;
         return {
             form: data
@@ -37,22 +39,24 @@ constructor(props) {
         authorLogin: true,
         error: ''
     }
-
-
 }
 
     saveToState = (e) => {
         this.setState({ [e.target.name]: e.target.value });
     }
+    onSub =(e) => {
+    e.preventDefault()
+        console.log('click1');
+    }
 
     onSubmit = async (e) =>{
     e.preventDefault()
+    console.log('click');
         
-    const {authorLogin, uesername, password, error} = this.state;
+    const {authorLogin, username, password, error} = this.state;
     const apiUrl = authorLogin ? 'https://prelude.eurobrake.net/login' : '' ;
 // action="//2019.eurobrake.net/exhibition/exhibitors/login" SHOULD BE LOGIN FORM FOR EXHIBITORS
         
-        console.log('click');
         const formData = {
             username: username,
             password: password,
@@ -92,6 +96,8 @@ render(){
     const {form} = this.props.form;
         return (
          <DemoDiv onSubmit={this.onSubmit}>
+            <Demo>
+
             <div className="">
                 <label htmlFor="label">{form[0].label}</label>
                 <input type="text" name={form[0].name} onChange={this.saveToState} value={this.state.username}/>
@@ -100,6 +106,7 @@ render(){
                 <label htmlFor="label">{form[1].label}</label>
                 <input type="password" name={form[1].name} onChange={this.saveToState} value={this.state.password}/>
             </div>
+            </Demo>
             <input type="submit" value="Submit"/>
         </DemoDiv>
         )
