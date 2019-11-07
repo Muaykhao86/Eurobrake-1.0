@@ -15,15 +15,16 @@ const HeaderBar = styled.div`
     align-items: center;
     z-index: 100;
 
-    /* a{color: white} */
+    .logo{
+        margin-left: 10rem;
+        margin-right: auto;
+    }
 `;
 
 const HeaderLogo = styled.img.attrs(props => ({
     src: "/images/logo.png",
     alt: "Logo"
 }))`max-width: 16.8rem;
-    margin-left: 10rem;
-    margin-right: auto;
     cursor: pointer;
 `;
 
@@ -53,6 +54,7 @@ const HeaderButton = styled.button`
             sticky: false
         }
     }
+
     
     headerScroll = () => {
         if(global.window.scrollY === 0) {
@@ -76,8 +78,9 @@ const HeaderButton = styled.button`
         return (
 
         <HeaderBar sticky={this.state.sticky} ref={this.myRef}>
-            <Link href="/">
+            <Link href="/"><a className="logo">
             <HeaderLogo />
+            </a>
             </Link>
             <Nav sticky={this.state.sticky} />
             <HeaderButton sticky={this.state.sticky}>Book now</HeaderButton>

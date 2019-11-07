@@ -23,9 +23,10 @@ const Content = styled.iframe`
     margin-top: 2rem;
     width: 100%;
     height: 100rem;
-    border: solid 1px black;
+    border: none;
     background-color: transparent;
     overflow: hidden;
+    text-decoration: none;
 `;
 
 const Bar = styled.div`
@@ -34,12 +35,13 @@ const Bar = styled.div`
     height: 10rem;
     background-color: ${props => props.theme.primary};
     z-index: 0;
+    
 `;
 
 export default () => (
 <DemoDiv>
     <Demo> Ticket Portal</Demo>
-    <Content src="https://www.eventsforce.net/fisita/9/register" />
+    <Content src="https://www.eventsforce.net/fisita/14/register" />
     <Demo>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
         Saepe asperiores quibusdam facere ipsa reprehenderit possimus necessitatibus id, 
         quisquam sed tempore vel, maiores cupiditate facilis accusamus sunt dolorem amet repellat labore.

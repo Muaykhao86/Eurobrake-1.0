@@ -13,10 +13,8 @@ export default class Nav extends Component {
         }
     }
 
-
     handleClick = () => {
         this.setState(prev => ({ isOpen: !prev.isOpen }));
-
     }
 
     render() {

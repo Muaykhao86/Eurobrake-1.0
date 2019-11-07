@@ -35,7 +35,7 @@ export default () => (
     </Demo>
     <Link href="/exhibitors">
     <Al>
-        List of Exphibitors
+        List of Exhibitors
     </Al>
     </Link>
 </DemoDiv>    

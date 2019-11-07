@@ -55,7 +55,7 @@ const trans = {
     spin0: 'rotate(0)',
     spin90: 'rotate(-90deg)',
     spin220: 'rotate(-224deg)',
-    scale1000 : 'scale(1000)',
+    scale900 : 'scale(900)',
     scale0 : 'scale(0)',
     in: 'transform .6s cubic-bezier(0.22, 0.61, 0.36, 1) .3s',
     out: 'transform .6s cubic-bezier(.55,.055,.675,.19); .3 '
@@ -84,10 +84,8 @@ export const TopBun = styled.div`
     trans.spin90: trans.spin0};
     border-bottom:2px solid ${props => props.sticky ? 
      props.theme.white : props.theme.secondary };
-    
- 
-  
 }
+
 &:after {
     border-bottom: 2px solid ${props => props.sticky ? 
      props.theme.white : props.theme.secondary };
@@ -110,11 +108,9 @@ export const HiddenNavBG = styled.div`
     width: 1rem;
     height: 1rem;
     border-radius: 50%;
+    transition: transform .8s ease-in-out;
     transform: ${props => props.isOpen ?
-     trans.scale1000 : trans.scale0};
-    transition: all 1.2s ease-in-out ;
-    
-     
+     trans.scale900 : trans.scale0};
 `;
 
 

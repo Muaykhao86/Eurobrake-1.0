@@ -273,7 +273,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement;
 var HeaderBar = styled_components__WEBPACK_IMPORTED_MODULE_9__["default"].div.withConfig({
   displayName: "Header__HeaderBar",
   componentId: "zfe6h7-0"
-})(["color:white;position:fixed;background-color:", ";min-width:100vw;height:10rem;display:flex;justify-content:flex-end;align-items:center;z-index:100;"], function (props) {
+})(["color:white;position:fixed;background-color:", ";min-width:100vw;height:10rem;display:flex;justify-content:flex-end;align-items:center;z-index:100;.logo{margin-left:10rem;margin-right:auto;}"], function (props) {
   return props.sticky ? "#134381" : "transparent";
 });
 var HeaderLogo = styled_components__WEBPACK_IMPORTED_MODULE_9__["default"].img.attrs(function (props) {
@@ -284,7 +284,7 @@ var HeaderLogo = styled_components__WEBPACK_IMPORTED_MODULE_9__["default"].img.a
 }).withConfig({
   displayName: "Header__HeaderLogo",
   componentId: "zfe6h7-1"
-})(["max-width:16.8rem;margin-left:10rem;margin-right:auto;cursor:pointer;"]);
+})(["max-width:16.8rem;cursor:pointer;"]);
 var HeaderButton = styled_components__WEBPACK_IMPORTED_MODULE_9__["default"].button.withConfig({
   displayName: "Header__HeaderButton",
   componentId: "zfe6h7-2"
@@ -349,34 +349,41 @@ function (_Component) {
         ref: this.myRef,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 78
+          lineNumber: 80
         },
         __self: this
       }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_8___default.a, {
         href: "/",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 79
+          lineNumber: 81
+        },
+        __self: this
+      }, __jsx("a", {
+        className: "logo",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 81
         },
         __self: this
       }, __jsx(HeaderLogo, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 80
+          lineNumber: 82
         },
         __self: this
-      })), __jsx(_Nav__WEBPACK_IMPORTED_MODULE_10__["default"], {
+      }))), __jsx(_Nav__WEBPACK_IMPORTED_MODULE_10__["default"], {
         sticky: this.state.sticky,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 82
+          lineNumber: 85
         },
         __self: this
       }), __jsx(HeaderButton, {
         sticky: this.state.sticky,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 83
+          lineNumber: 86
         },
         __self: this
       }, "Book now"));
@@ -520,226 +527,226 @@ function (_Component) {
       return __jsx(_styles_NavStyles__WEBPACK_IMPORTED_MODULE_9__["NavStyles"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 24
+          lineNumber: 22
         },
         __self: this
       }, __jsx(_styles_NavStyles__WEBPACK_IMPORTED_MODULE_9__["HiddenNavBG"], {
         isOpen: this.state.isOpen,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 25
+          lineNumber: 23
         },
         __self: this
       }), __jsx(_styles_NavStyles__WEBPACK_IMPORTED_MODULE_9__["HiddenContainer"], {
         isOpen: this.state.isOpen,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 26
+          lineNumber: 24
         },
         __self: this
       }, __jsx("div", {
         className: "nav_box-1",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 27
+          lineNumber: 25
         },
         __self: this
       }, __jsx("h1", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 28
+          lineNumber: 26
         },
         __self: this
       }, "Heading if needed"), __jsx(next_link__WEBPACK_IMPORTED_MODULE_8___default.a, {
         href: "/about",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 29
+          lineNumber: 27
         },
         __self: this
       }, __jsx("a", {
         onClick: this.handleClick,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 29
+          lineNumber: 27
         },
         __self: this
       }, "About")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_8___default.a, {
         href: "/authorsArea",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 30
+          lineNumber: 28
         },
         __self: this
       }, __jsx("a", {
         onClick: this.handleClick,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 30
+          lineNumber: 28
         },
         __self: this
       }, "Authors Area")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_8___default.a, {
         href: "/expoAndSponsor",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 31
+          lineNumber: 29
         },
         __self: this
       }, __jsx("a", {
         onClick: this.handleClick,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 31
+          lineNumber: 29
         },
         __self: this
       }, "Exhibition And Sponsorship ")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_8___default.a, {
         href: "/studentArea",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 32
+          lineNumber: 30
         },
         __self: this
       }, __jsx("a", {
         onClick: this.handleClick,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 32
+          lineNumber: 30
         },
         __self: this
       }, "Student Area")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_8___default.a, {
         href: "/ticketPortal",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 33
+          lineNumber: 31
         },
         __self: this
       }, __jsx("a", {
         onClick: this.handleClick,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 33
+          lineNumber: 31
         },
         __self: this
       }, "Ticket Portal"))), __jsx("div", {
         className: "nav_box-2",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 35
+          lineNumber: 33
         },
         __self: this
       }, __jsx("h1", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 36
+          lineNumber: 34
         },
         __self: this
       }, "Heading if needed"), __jsx(next_link__WEBPACK_IMPORTED_MODULE_8___default.a, {
         href: "/welcome",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 37
+          lineNumber: 35
         },
         __self: this
       }, __jsx("a", {
         onClick: this.handleClick,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 37
+          lineNumber: 35
         },
         __self: this
       }, "Welcome")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_8___default.a, {
         href: "/login",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 38
+          lineNumber: 36
         },
         __self: this
       }, __jsx("a", {
         onClick: this.handleClick,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 38
+          lineNumber: 36
         },
         __self: this
       }, "Login")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_8___default.a, {
         href: "/exhibitors",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 39
+          lineNumber: 37
         },
         __self: this
       }, __jsx("a", {
         onClick: this.handleClick,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 39
+          lineNumber: 37
         },
         __self: this
       }, "Exhibitors List")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_8___default.a, {
         href: "",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 40
+          lineNumber: 38
         },
         __self: this
       }, __jsx("a", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 40
+          lineNumber: 38
         },
         __self: this
       }, "This is a link to somewhere on the website")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_8___default.a, {
         href: "",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 41
+          lineNumber: 39
         },
         __self: this
       }, __jsx("a", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 41
+          lineNumber: 39
         },
         __self: this
       }, "This is a link to somewhere on the website"))), __jsx("div", {
         className: "nav_box-3",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 43
+          lineNumber: 41
         },
         __self: this
       }, __jsx("div", {
         className: "nav_box-4",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 44
+          lineNumber: 42
         },
         __self: this
       }, "BOOK NOW"), __jsx("div", {
         className: "nav_box-5",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 47
+          lineNumber: 45
         },
         __self: this
       }, "IMPORTANT DATES"), __jsx("div", {
         className: "nav_box-6",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 50
+          lineNumber: 48
         },
         __self: this
       }, "SOMTHING ELSE IMPORTANT"))), __jsx(next_link__WEBPACK_IMPORTED_MODULE_8___default.a, {
         href: "/about",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 56
+          lineNumber: 54
         },
         __self: this
       }, __jsx("a", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 58
+          lineNumber: 56
         },
         __self: this
       }, "Menu")), __jsx(_styles_NavStyles__WEBPACK_IMPORTED_MODULE_9__["Burger"], {
@@ -747,7 +754,7 @@ function (_Component) {
         onClick: this.handleClick,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 62
+          lineNumber: 60
         },
         __self: this
       }, __jsx(_styles_NavStyles__WEBPACK_IMPORTED_MODULE_9__["TopBun"], {
@@ -755,7 +762,7 @@ function (_Component) {
         sticky: this.props.sticky,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 63
+          lineNumber: 61
         },
         __self: this
       })));
@@ -830,10 +837,6 @@ var StyledPage = styled_components__WEBPACK_IMPORTED_MODULE_10__["default"].div.
   displayName: "Page__StyledPage",
   componentId: "sc-1cyutnt-0"
 })(["display:flex;flex-flow:column;background:white;"]);
-var Inner = styled_components__WEBPACK_IMPORTED_MODULE_10__["default"].div.withConfig({
-  displayName: "Page__Inner",
-  componentId: "sc-1cyutnt-1"
-})(["margin:0 auto;"]);
 var GlobalStyle = Object(styled_components__WEBPACK_IMPORTED_MODULE_10__["createGlobalStyle"])(_templateObject(), function (props) {
   return props.theme.MPRegular;
 });
@@ -856,37 +859,37 @@ function (_Component) {
         theme: theme,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 100
+          lineNumber: 89
         },
         __self: this
       }, __jsx(GlobalStyle, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 101
+          lineNumber: 90
         },
         __self: this
       }), __jsx(StyledPage, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 102
+          lineNumber: 91
         },
         __self: this
       }, __jsx(_Meta__WEBPACK_IMPORTED_MODULE_9__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 103
+          lineNumber: 92
         },
         __self: this
       }), __jsx(_Header__WEBPACK_IMPORTED_MODULE_7__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 104
+          lineNumber: 93
         },
         __self: this
       }), this.props.children, __jsx(_Footer__WEBPACK_IMPORTED_MODULE_8__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 108
+          lineNumber: 95
         },
         __self: this
       })));
@@ -988,7 +991,7 @@ var trans = {
   spin0: 'rotate(0)',
   spin90: 'rotate(-90deg)',
   spin220: 'rotate(-224deg)',
-  scale1000: 'scale(1000)',
+  scale900: 'scale(900)',
   scale0: 'scale(0)',
   "in": 'transform .6s cubic-bezier(0.22, 0.61, 0.36, 1) .3s',
   out: 'transform .6s cubic-bezier(.55,.055,.675,.19); .3 '
@@ -1016,10 +1019,10 @@ var TopBun = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withC
 var HiddenNavBG = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
   displayName: "NavStyles__HiddenNavBG",
   componentId: "sc-1ltvdnj-4"
-})(["background-color:", ";position:absolute;top:-4rem;right:0rem;width:1rem;height:1rem;border-radius:50%;transform:", ";transition:all 1.2s ease-in-out;"], function (props) {
+})(["background-color:", ";position:absolute;top:-4rem;right:0rem;width:1rem;height:1rem;border-radius:50%;transition:transform .8s ease-in-out;transform:", ";"], function (props) {
   return props.theme.primary;
 }, function (props) {
-  return props.isOpen ? trans.scale1000 : trans.scale0;
+  return props.isOpen ? trans.scale900 : trans.scale0;
 });
 var HiddenContainer = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
   displayName: "NavStyles__HiddenContainer",

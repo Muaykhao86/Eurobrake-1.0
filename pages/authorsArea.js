@@ -37,6 +37,7 @@ constructor(props) {
 
     onSubmit = async (e) =>{
         e.preventDefault()
+        console.log('click');
         const formData = {
             username: this.state.username,
             password: this.state.password
@@ -44,6 +45,7 @@ constructor(props) {
     
         const res = await fetch('https://prelude.eurobrake.net/login', {
                 method: 'POST',
+                credentials: 'include',
                 body: JSON.stringify(formData)
             });
         const data = await res.json().catch(error => console.log(error));

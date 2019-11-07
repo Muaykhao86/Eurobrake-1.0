@@ -22,15 +22,6 @@ const StyledPage = styled.div`
     display: flex;
     flex-flow: column;
     background: white;
-  
-    
-`;
-
-const Inner = styled.div`
-    /* max-width: ${props => props.theme.maxWidth}; */
-    margin: 0 auto;
-    /* margin-top: 10rem; */
-    /* background: ${props => props.theme.secondary}; */
 `;
 
 const GlobalStyle = createGlobalStyle`
@@ -93,8 +84,6 @@ const GlobalStyle = createGlobalStyle`
 
 export default class Page extends Component {
 
-    
-
     render() {
         return (
             <ThemeProvider theme={theme}>
@@ -102,9 +91,7 @@ export default class Page extends Component {
             <StyledPage>
                 <Meta/>
                 <Header/>
-                {/* <Inner> */}
                 {this.props.children}
-                {/* </Inner> */}
                 <Footer/>
             </StyledPage>
             </ThemeProvider>
