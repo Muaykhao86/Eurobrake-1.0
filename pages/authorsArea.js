@@ -34,13 +34,13 @@ render(){
     const { data } = this.props;
     console.log(data);
     return(
-        <div className="">
+        <DemoDiv>
         <h1>
             you are logged In
         </h1>
 
-        <button onClick={() => logout}>logout</button>
-        </div>
+        <button onClick={() => logout()}>logout</button>
+        </DemoDiv>
     )
 }
 }
