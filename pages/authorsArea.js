@@ -31,7 +31,7 @@ constructor(props) {
     
 }
 render(){
-    const { data } = props;
+    const { data } = this.props;
     console.log(data);
     return(
         <div className="">
