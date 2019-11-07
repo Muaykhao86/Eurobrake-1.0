@@ -48,7 +48,7 @@ render(){
 AuthorsArea.getInitialProps = async ctx => {
   // We use `nextCookie` to get the cookie and pass the token to the
   // frontend in the `props`.
-  const { token } = nextCookie(ctx);
+  const { logintoken } = nextCookie(ctx);
     const apiUrl = 'https://prelude.eurobrake.net/dashboard ';
 
   const redirectOnError = () =>

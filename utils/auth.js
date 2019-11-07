@@ -15,22 +15,22 @@ export const login = ({logintoken}) => {
 export const auth = ctx => {
     const {logintoken} = nextCookie(ctx);
 
-     if (ctx.req && !token) {
+     if (ctx.req && !logintoken) {
     ctx.res.writeHead(302, { Location: '/login' })
     ctx.res.end()
   }
 
-    if(!token) {
+    if(!logintoken) {
         Router.push('/login')
     }
 
-    return token
+    return logintoken
 }
 
 // LOGOUT FUNCTION
 
 export const logout = () => {
-  cookie.remove('token');
+  cookie.remove('logintoken');
 
   // To trigger the event listener we save some random data into the `logout` key
   window.localStorage.setItem("logout", Date.now()); 
@@ -63,13 +63,13 @@ export const withAuthSync = WrappedComponent => {
   }
 
   Wrapper.getInitialProps = async ctx => {
-    const token = auth(ctx)
+    const logintoken = auth(ctx)
 
     const componentProps =
       WrappedComponent.getInitialProps &&
       (await WrappedComponent.getInitialProps(ctx))
 
-    return { ...componentProps, token }
+    return { ...componentProps, logintoken }
   }
 
   return Wrapper
