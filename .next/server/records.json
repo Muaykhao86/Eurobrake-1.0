@@ -1,0 +1,80 @@
+{
+  "modules": {
+    "byIdentifier": {
+      "multi private-next-pages/_app.js": 0,
+      "multi private-next-pages/_document.js": 1,
+      "multi private-next-pages/about.js": 2,
+      "multi private-next-pages/authorsArea.js": 3,
+      "multi private-next-pages/exhibitors.js": 4,
+      "multi private-next-pages/exhibitorsArea.js": 5,
+      "multi private-next-pages/expoAndSponsor.js": 6,
+      "multi private-next-pages/index.js": 7,
+      "multi private-next-pages/login.js": 8,
+      "multi private-next-pages/studentArea.js": 9,
+      "multi private-next-pages/ticketPortal.js": 10,
+      "multi private-next-pages/welcome.js": 11,
+      "multi next/dist/pages/_error": 12
+    },
+    "usedIds": {
+      "0": 0,
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5,
+      "6": 6,
+      "7": 7,
+      "8": 8,
+      "9": 9,
+      "10": 10,
+      "11": 11,
+      "12": 12
+    }
+  },
+  "chunks": {
+    "byName": {
+      "static/faiy5sxTa4BdfN4vQo9Mt/pages/_app.js": 0,
+      "static/faiy5sxTa4BdfN4vQo9Mt/pages/_document.js": 1,
+      "static/faiy5sxTa4BdfN4vQo9Mt/pages/_error.js": 2,
+      "static/faiy5sxTa4BdfN4vQo9Mt/pages/about.js": 3,
+      "static/faiy5sxTa4BdfN4vQo9Mt/pages/authorsArea.js": 4,
+      "static/faiy5sxTa4BdfN4vQo9Mt/pages/exhibitors.js": 5,
+      "static/faiy5sxTa4BdfN4vQo9Mt/pages/exhibitorsArea.js": 6,
+      "static/faiy5sxTa4BdfN4vQo9Mt/pages/expoAndSponsor.js": 7,
+      "static/faiy5sxTa4BdfN4vQo9Mt/pages/index.js": 8,
+      "static/faiy5sxTa4BdfN4vQo9Mt/pages/login.js": 9,
+      "static/faiy5sxTa4BdfN4vQo9Mt/pages/studentArea.js": 10,
+      "static/faiy5sxTa4BdfN4vQo9Mt/pages/ticketPortal.js": 11,
+      "static/faiy5sxTa4BdfN4vQo9Mt/pages/welcome.js": 12,
+      "static/MALjBE-lRmZTCiqg4fL8q/pages/_app.js": 13,
+      "static/MALjBE-lRmZTCiqg4fL8q/pages/_document.js": 14,
+      "static/MALjBE-lRmZTCiqg4fL8q/pages/_error.js": 15,
+      "static/MALjBE-lRmZTCiqg4fL8q/pages/about.js": 16,
+      "static/MALjBE-lRmZTCiqg4fL8q/pages/authorsArea.js": 17,
+      "static/MALjBE-lRmZTCiqg4fL8q/pages/exhibitors.js": 18,
+      "static/MALjBE-lRmZTCiqg4fL8q/pages/exhibitorsArea.js": 19,
+      "static/MALjBE-lRmZTCiqg4fL8q/pages/expoAndSponsor.js": 20,
+      "static/MALjBE-lRmZTCiqg4fL8q/pages/index.js": 21,
+      "static/MALjBE-lRmZTCiqg4fL8q/pages/login.js": 22,
+      "static/MALjBE-lRmZTCiqg4fL8q/pages/studentArea.js": 23,
+      "static/MALjBE-lRmZTCiqg4fL8q/pages/ticketPortal.js": 24,
+      "static/MALjBE-lRmZTCiqg4fL8q/pages/welcome.js": 25
+    },
+    "bySource": {},
+    "usedIds": [
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25
+    ]
+  }
+}

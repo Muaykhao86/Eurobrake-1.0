@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {Component} from 'react'
 import Router from 'next/router';
 import nextCookie from 'next-cookies';
 import fetch from 'isomorphic-unfetch';
@@ -25,7 +25,7 @@ const Demo = styled.h1`
 `;
 
 
-class AuthorsArea extends React.Component {
+class AuthorsArea extends Component {
 constructor(props) {
     super(props);
     
