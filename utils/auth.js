@@ -7,7 +7,7 @@ import cookie from 'js-cookie';
 
 
 export const login = ({logintoken}) => {
-  cookie.set('token', logintoken, { expires: 1 })
+  cookie.set('logintoken', logintoken, { expires: 1 })
  Router.push('/authorsArea')
 }
 
