@@ -1,0 +1,68 @@
+{
+  "mini-css-extract-plugin node_modules/@zeit/next-css/node_modules/css-loader/index.js??ref--5-1!node_modules/video.js/dist/video-js.css": [
+    {
+      "modules": {
+        "byIdentifier": {},
+        "usedIds": {}
+      },
+      "chunks": {
+        "byName": {
+          "mini-css-extract-plugin": 0
+        },
+        "bySource": {},
+        "usedIds": [
+          0
+        ]
+      }
+    }
+  ],
+  "modules": {
+    "byIdentifier": {
+      "ignored node_modules/global min-document": 0,
+      "css node_modules/@zeit/next-css/node_modules/css-loader/index.js??ref--5-1!node_modules/video.js/dist/video-js.css 0": 1
+    },
+    "usedIds": {
+      "0": 0,
+      "1": 1
+    }
+  },
+  "chunks": {
+    "byName": {
+      "commons": 0,
+      "static/runtime/webpack.js": 1,
+      "static/runtime/main.js": 2,
+      "static/saY_88_QKWvwAAKEzlJZI/pages/_app.js": 3,
+      "static/saY_88_QKWvwAAKEzlJZI/pages/_error.js": 4,
+      "static/saY_88_QKWvwAAKEzlJZI/pages/about.js": 5,
+      "static/saY_88_QKWvwAAKEzlJZI/pages/authorsArea.js": 6,
+      "static/saY_88_QKWvwAAKEzlJZI/pages/exhibitors.js": 7,
+      "static/saY_88_QKWvwAAKEzlJZI/pages/exhibitorsArea.js": 8,
+      "static/saY_88_QKWvwAAKEzlJZI/pages/expoAndSponsor.js": 9,
+      "static/saY_88_QKWvwAAKEzlJZI/pages/index.js": 10,
+      "static/saY_88_QKWvwAAKEzlJZI/pages/login.js": 11,
+      "static/saY_88_QKWvwAAKEzlJZI/pages/studentArea.js": 12,
+      "static/saY_88_QKWvwAAKEzlJZI/pages/ticketPortal.js": 13,
+      "static/saY_88_QKWvwAAKEzlJZI/pages/welcome.js": 14,
+      "styles": 15
+    },
+    "bySource": {},
+    "usedIds": [
+      0,
+      1,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ]
+  }
+}

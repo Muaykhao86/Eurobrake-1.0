@@ -50,13 +50,11 @@ AuthorsArea.getInitialProps = async ctx => {
   // frontend in the `props`.
   const { token } = nextCookie(ctx);
     const apiUrl = 'https://prelude.eurobrake.net/dashboard ';
+
   const redirectOnError = () =>
     process.browser
       ? Router.push('/login')
       : ctx.res.writeHead(301, { Location: '/login' })
-//  headers: {
-//         Authorization: JSON.stringify({ token })
-//       }
   try {
     const response = await fetch(apiUrl, {
       credentials: 'include',
@@ -64,7 +62,10 @@ AuthorsArea.getInitialProps = async ctx => {
     })
 
     if (response.ok) {
-      return await response.json()
+      const js = await response.json()
+      console.log('js', js)
+      return js
+
     } else {
       // https://github.com/developit/unfetch#caveats
       return redirectOnError()
@@ -73,6 +74,11 @@ AuthorsArea.getInitialProps = async ctx => {
     // Implementation or Network error
     return redirectOnError()
   }
+
 }
 
 export default withAuthSync(AuthorsArea)
+
+//   headers: {
+//         Authorization: JSON.stringify({ token })
+//       }

@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import styled from 'styled-components';
 import fetch from 'isomorphic-unfetch';
+import { login } from '../utils/auth';
 
 
 
@@ -70,22 +71,20 @@ constructor(props) {
                 body: JSON.stringify(formData)
             });
 
-        if(response.ok) {
-        const data = await response.json()
-        return {
-            loggedIn: data
-            }
+        if(response.status === 200) {
+        const {token} = await response.json()
+        await login({token})
     }else{
         console.log('login failed')
         let error = new Error(response.statusText)
         error.response = response
-        return Promise.reject(error)
+       throw error
         }
     }catch (error){
         console.error(
             'Failed to login, please try again', error
             )
-        throw new Error(error)
+       this.setState({error: error.message});
     }
 
 }
