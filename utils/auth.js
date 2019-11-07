@@ -15,6 +15,11 @@ export const login = ({token}) => {
 export const auth = ctx => {
     const {token} = nextCookie(ctx);
 
+     if (ctx.req && !token) {
+    ctx.res.writeHead(302, { Location: '/login' })
+    ctx.res.end()
+  }
+
     if(!token) {
         Router.push('/login')
     }

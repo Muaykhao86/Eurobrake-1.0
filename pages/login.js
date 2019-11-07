@@ -45,10 +45,7 @@ constructor(props) {
     saveToState = (e) => {
         this.setState({ [e.target.name]: e.target.value });
     }
-    onSub =(e) => {
-    e.preventDefault()
-        console.log('click1');
-    }
+   
 
     onSubmit = async (e) =>{
     e.preventDefault()
@@ -61,8 +58,8 @@ constructor(props) {
         const formData = {
             username: username,
             password: password,
-            
         }
+
     try{
 
         const response = await fetch(apiUrl, {
@@ -70,9 +67,10 @@ constructor(props) {
                 credentials: 'include',
                 body: JSON.stringify(formData)
             });
-
+        console.log(response.status);
         if(response.status === 200) {
         const {token} = await response.json()
+        console.log({token})
         await login({token})
     }else{
         console.log('login failed')
