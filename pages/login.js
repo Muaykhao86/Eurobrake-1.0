@@ -67,11 +67,11 @@ constructor(props) {
                 credentials: 'include',
                 body: JSON.stringify(formData)
             });
-        console.log(response.status);
+       
         if(response.status === 200) {
-        const {token} = await response.json()
-        console.log({token})
-        await login({token})
+        const {logintoken} = await response.json()
+        console.log({logintoken})
+        await login({logintoken})
     }else{
         console.log('login failed')
         let error = new Error(response.statusText)

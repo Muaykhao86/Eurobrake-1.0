@@ -6,14 +6,14 @@ import cookie from 'js-cookie';
 
 
 
-export const login = ({token}) => {
+export const login = ({logintoken}) => {
  Router.push('/authorsArea')
 }
 
 // CHECK TOKEN, IF WE HAVE ONE RETURN TOKEN, IF WE DONT REDIRECT TO LOGIN PAGE
 
 export const auth = ctx => {
-    const {token} = nextCookie(ctx);
+    const {logintoken} = nextCookie(ctx);
 
      if (ctx.req && !token) {
     ctx.res.writeHead(302, { Location: '/login' })
