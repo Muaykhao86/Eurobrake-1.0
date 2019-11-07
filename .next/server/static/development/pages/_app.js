@@ -693,19 +693,20 @@ class Nav extends react__WEBPACK_IMPORTED_MODULE_1__["Component"] {
       },
       __self: this
     }, "Exhibitors List")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
-      href: "",
+      href: "/exhibitorsArea",
       __source: {
         fileName: _jsxFileName,
         lineNumber: 38
       },
       __self: this
     }, __jsx("a", {
+      onClick: this.handleClick,
       __source: {
         fileName: _jsxFileName,
         lineNumber: 38
       },
       __self: this
-    }, "This is a link to somewhere on the website")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
+    }, "Exhibitors Area")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
       href: "",
       __source: {
         fileName: _jsxFileName,
@@ -1006,7 +1007,7 @@ const TopBun = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.with
 const HiddenNavBG = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({
   displayName: "NavStyles__HiddenNavBG",
   componentId: "sc-1ltvdnj-4"
-})(["background-color:", ";position:absolute;top:-4rem;right:0rem;width:1rem;height:1rem;border-radius:50%;transition:transform .8s ease-in-out;transform:", ";"], props => props.theme.primary, props => props.isOpen ? trans.scale900 : trans.scale0);
+})(["background-color:", ";position:absolute;top:-4rem;right:0rem;width:5rem;height:5rem;border-radius:50%;transition:transform .8s ease-in-out;transform:", ";"], props => props.theme.primary, props => props.isOpen ? trans.scale900 : trans.scale0);
 const HiddenContainer = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({
   displayName: "NavStyles__HiddenContainer",
   componentId: "sc-1ltvdnj-5"

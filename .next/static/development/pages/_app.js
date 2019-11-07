@@ -683,19 +683,20 @@ function (_Component) {
         },
         __self: this
       }, "Exhibitors List")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_8___default.a, {
-        href: "",
+        href: "/exhibitorsArea",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 38
         },
         __self: this
       }, __jsx("a", {
+        onClick: this.handleClick,
         __source: {
           fileName: _jsxFileName,
           lineNumber: 38
         },
         __self: this
-      }, "This is a link to somewhere on the website")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_8___default.a, {
+      }, "Exhibitors Area")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_8___default.a, {
         href: "",
         __source: {
           fileName: _jsxFileName,
@@ -1019,7 +1020,7 @@ var TopBun = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withC
 var HiddenNavBG = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
   displayName: "NavStyles__HiddenNavBG",
   componentId: "sc-1ltvdnj-4"
-})(["background-color:", ";position:absolute;top:-4rem;right:0rem;width:1rem;height:1rem;border-radius:50%;transition:transform .8s ease-in-out;transform:", ";"], function (props) {
+})(["background-color:", ";position:absolute;top:-4rem;right:0rem;width:5rem;height:5rem;border-radius:50%;transition:transform .8s ease-in-out;transform:", ";"], function (props) {
   return props.theme.primary;
 }, function (props) {
   return props.isOpen ? trans.scale900 : trans.scale0;

@@ -1,7 +1,9 @@
 import React from 'react'
-import FormBuilder from '../components/FormBuilder';
+import Router from 'next/router';
+import nextCookie from 'next-cookies';
 import fetch from 'isomorphic-unfetch';
 import styled from 'styled-components';
+import { withAuthSync, logout } from '../utils/auth'
 
 
 const DemoDiv = styled.form`
@@ -22,64 +24,55 @@ const Demo = styled.h1`
 
 `;
 
-export default class AuthorsLogin extends React.Component {
+
+export default class AuthorsArea extends React.Component {
 constructor(props) {
     super(props);
-    this.state={
-        username: '',
-        password: '',
-    }
-}
-
-    saveToState = (e) => {
-        this.setState({ [e.target.name]: e.target.value });
-    }
-
-    onSubmit = async (e) =>{
-        e.preventDefault()
-        console.log('click');
-        const formData = {
-            username: this.state.username,
-            password: this.state.password
-        }
     
-        const res = await fetch('https://prelude.eurobrake.net/login', {
-                method: 'POST',
-                credentials: 'include',
-                body: JSON.stringify(formData)
-            });
-        const data = await res.json().catch(error => console.log(error));
-        return {
-            loggedIn: data
-            }
-    }
-
-
-
+    const { data } = props;
+}
 render(){
-    console.log(this.props)
-    const {form} = this.props.form;
+    console.log(data);
     return(
-        <DemoDiv onSubmit={this.onSubmit}>
-            <div className="">
-                <label htmlFor="label">{form[0].label}</label>
-                <input type="text" name={form[0].name} onChange={this.saveToState} value={this.state.username}/>
-            </div>
-            <div className="">    
-                <label htmlFor="label">{form[1].label}</label>
-                <input type="password" name={form[1].name} onChange={this.saveToState} value={this.state.password}/>
-            </div>
-            <input type="submit" value="Submit"/>
-        </DemoDiv>
+        <div className="">
+        <h1>
+            you are logged In
+        </h1>
+
+        <button onClick={() => logout}>logout</button>
+        </div>
     )
 }
 }
 
+AuthorsArea.getInitialProps = async ctx => {
+  // We use `nextCookie` to get the cookie and pass the token to the
+  // frontend in the `props`.
+  const { token } = nextCookie(ctx)
 
-  AuthorsLogin.getInitialProps = async function (){
-  const res = await fetch('https://prelude.eurobrake.net/login');
-  const data = await res.json().catch(error => console.log(error));;
-   return {
-   form: data
-  };
-  };
+  const redirectOnError = () =>
+    process.browser
+      ? Router.push('/login')
+      : ctx.res.writeHead(301, { Location: '/login' })
+
+  try {
+    const response = await fetch(apiUrl, {
+      credentials: 'include',
+      headers: {
+        Authorization: JSON.stringify({ token })
+      }
+    })
+
+    if (response.ok) {
+      return await response.json()
+    } else {
+      // https://github.com/developit/unfetch#caveats
+      return redirectOnError()
+    }
+  } catch (error) {
+    // Implementation or Network error
+    return redirectOnError()
+  }
+}
+
+export default withAuthSync(AuthorsArea)

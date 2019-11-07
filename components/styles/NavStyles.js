@@ -105,8 +105,8 @@ export const HiddenNavBG = styled.div`
     position: absolute;
     top: -4rem;
     right: 0rem;
-    width: 1rem;
-    height: 1rem;
+    width: 5rem;
+    height: 5rem;
     border-radius: 50%;
     transition: transform .8s ease-in-out;
     transform: ${props => props.isOpen ?
