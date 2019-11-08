@@ -67,9 +67,7 @@ constructor(props) {
             });
         const data = response.json();
 
-        console.log('status', data.status);
-        console.log('status + json', data.json());
-        console.log('status + json', data.json().status, data.json().logintoken);
+       console.log(data)
         
         if(response.status === 'success') {           
         const {logintoken} = await data.json()
