@@ -7,7 +7,7 @@ import cookie from 'js-cookie';
 
 
 export const login = ({logintoken}) => {
-  cookie.set('logintoken', logintoken, { expires: 1 })
+cookie.set('logintoken', logintoken, { expires: 1 })
  Router.push('/authorsArea')
 }
 
@@ -20,7 +20,7 @@ export const auth = ctx => {
     ctx.res.writeHead(302, { Location: '/login' })
     ctx.res.end()
   }
-
+    console.log('AUTH => ', logintoken)
     if(!logintoken) {
         Router.push('/login')
     }
@@ -65,7 +65,7 @@ export const withAuthSync = WrappedComponent => {
 
   Wrapper.getInitialProps = async ctx => {
     const logintoken = auth(ctx)
-
+    console.log('down to wrap your components')
     const componentProps =
       WrappedComponent.getInitialProps &&
       (await WrappedComponent.getInitialProps(ctx))

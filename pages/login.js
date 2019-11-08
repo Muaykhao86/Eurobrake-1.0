@@ -67,13 +67,13 @@ constructor(props) {
             });
         const data = await response.json();
 
-       console.log({data})
+    //    console.log({data})
         
         if(data.status === 'success') {           
         const {logintoken} = await data;
         await login({logintoken})
     }else{
-        console.log('login failed')
+        // console.log('login failed')
         let error = new Error(data.error)
         error.response = response
        throw error

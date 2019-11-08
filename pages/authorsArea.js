@@ -80,7 +80,7 @@ AuthorsArea.getInitialProps = async ctx => {
             credentials: 'include',
         })
         const data = await response.json();
-
+        console.log('Authprs res Data', data)
         if (data.status === 'success') {
             const js = await response.json()
             console.log('js', js)
