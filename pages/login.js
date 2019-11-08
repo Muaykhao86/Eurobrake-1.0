@@ -65,7 +65,7 @@ constructor(props) {
     try{
         const response = await fetch('https://prelude.eurobrake.net/login', {
                 method: 'POST',
-                credentials: 'include',
+                // ! credentials: 'include' wont allaw due to missing csrf tokens
                 body: JSON.stringify(formData)
             });
         const data = await response.json();
@@ -75,6 +75,7 @@ constructor(props) {
         if(data.status === 'success') {           //todo CAHNGE BACK TO RIGHT SPELLING
         const {logintoken} = await data;
         await login({logintoken})
+        console.log(data)
     }else{
         // console.log('login failed')
         let error = new Error(data.error)

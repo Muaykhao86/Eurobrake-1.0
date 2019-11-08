@@ -79,7 +79,7 @@ AuthorsArea.getInitialProps = async ctx => {
         const response = await fetch(apiUrl, {
             credentials: 'include',
     //          headers: {
-    //         Authorization: JSON.stringify({ logintoken })
+    //         Authorization: JSON.stringify({ logintoken }) // ! WONT ALLOW DUE TO SOME HEADER PROPERTY
     //   }
         })
         const data = await response.json();
