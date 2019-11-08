@@ -24,7 +24,9 @@ const Demo = styled.h1`
 
 export default class Login extends Component {
     static getInitialProps = async function () {
-        const res = await fetch('https://prelude.eurobrake.net/login');
+        const res = await fetch('https://prelude.eurobrake.net/login', {
+            credentials: 'include'
+        });
         const data = await res.json().catch(error => console.log(error));;
         return {
             form: data
@@ -67,9 +69,9 @@ constructor(props) {
             });
         const data = await response.json();
 
-    //    console.log({data})
+       console.log({data})
         
-        if(data.status === 'success') {           
+        if(data.status === 'succs') {           //todo CAHNGE BACK TO RIGHT SPELLING
         const {logintoken} = await data;
         await login({logintoken})
     }else{
