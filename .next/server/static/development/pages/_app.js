@@ -994,8 +994,8 @@ const trans = {
   down: 'translateY(-1.2rem)',
   spin0: 'rotate(0)',
   spin90: 'rotate(-90deg)',
-  spin220: 'rotate(-224deg)',
-  scale900: 'scale(900)',
+  spin315: 'rotate(-315deg)',
+  scale100: 'scale(100)',
   scale0: 'scale(0)',
   in: 'transform .6s cubic-bezier(0.22, 0.61, 0.36, 1) .3s',
   out: 'transform .6s cubic-bezier(.55,.055,.675,.19); .3 '
@@ -1003,11 +1003,11 @@ const trans = {
 const TopBun = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({
   displayName: "NavStyles__TopBun",
   componentId: "sc-1ltvdnj-3"
-})(["position:relative;width:100%;height:.2rem;transition:", ";background-color:", ";transform:", ";&:before{width:100%;height:100%;position:absolute;transition:top .2s ease-out,transform .22s cubic-bezier(.215,.61,.355,1) .12s;top:", ";content:'';transform:", ";border-bottom:2px solid ", ";}&:after{border-bottom:2px solid ", ";width:100%;height:100%;position:absolute;content:'';transition:top .2s ease-out;top:", ";}"], props => props.isOpen ? trans.in : trans.out, props => props.sticky ? props.theme.white : props.theme.secondary, props => props.isOpen ? trans.spin220 : trans.spin0, props => props.isOpen ? 0 : '-1.2rem', props => props.isOpen ? trans.spin90 : trans.spin0, props => props.sticky ? props.theme.white : props.theme.secondary, props => props.sticky ? props.theme.white : props.theme.secondary, props => props.isOpen ? 0 : '1.2rem');
+})(["position:relative;width:100%;height:.2rem;transition:", ";background-color:", ";transform:", ";&:before{width:100%;height:100%;position:absolute;transition:top .2s ease-out,transform .22s cubic-bezier(.215,.61,.355,1) .12s;top:", ";content:'';transform:", ";border-bottom:2px solid ", ";}&:after{border-bottom:2px solid ", ";width:100%;height:100%;position:absolute;content:'';transition:top .2s ease-out;top:", ";}"], props => props.isOpen ? trans.in : trans.out, props => props.sticky ? props.theme.white : props.theme.secondary, props => props.isOpen ? trans.spin315 : trans.spin0, props => props.isOpen ? 0 : '-1.2rem', props => props.isOpen ? trans.spin90 : trans.spin0, props => props.sticky ? props.theme.white : props.theme.secondary, props => props.sticky ? props.theme.white : props.theme.secondary, props => props.isOpen ? 0 : '1.2rem');
 const HiddenNavBG = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({
   displayName: "NavStyles__HiddenNavBG",
   componentId: "sc-1ltvdnj-4"
-})(["background-color:", ";position:absolute;top:-4rem;right:0rem;width:5rem;height:5rem;border-radius:50%;transition:transform .8s ease-in-out;transform:", ";"], props => props.theme.primary, props => props.isOpen ? trans.scale900 : trans.scale0);
+})(["background-color:", ";position:absolute;top:-4rem;right:0rem;width:5rem;height:5rem;border-radius:50%;transition:transform .8s ease-in-out;transform:", ";"], props => props.theme.primary, props => props.isOpen ? trans.scale100 : trans.scale0);
 const HiddenContainer = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({
   displayName: "NavStyles__HiddenContainer",
   componentId: "sc-1ltvdnj-5"

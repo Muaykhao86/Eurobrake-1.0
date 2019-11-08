@@ -991,8 +991,8 @@ var trans = {
   down: 'translateY(-1.2rem)',
   spin0: 'rotate(0)',
   spin90: 'rotate(-90deg)',
-  spin220: 'rotate(-224deg)',
-  scale900: 'scale(900)',
+  spin315: 'rotate(-315deg)',
+  scale100: 'scale(100)',
   scale0: 'scale(0)',
   "in": 'transform .6s cubic-bezier(0.22, 0.61, 0.36, 1) .3s',
   out: 'transform .6s cubic-bezier(.55,.055,.675,.19); .3 '
@@ -1005,7 +1005,7 @@ var TopBun = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withC
 }, function (props) {
   return props.sticky ? props.theme.white : props.theme.secondary;
 }, function (props) {
-  return props.isOpen ? trans.spin220 : trans.spin0;
+  return props.isOpen ? trans.spin315 : trans.spin0;
 }, function (props) {
   return props.isOpen ? 0 : '-1.2rem';
 }, function (props) {
@@ -1023,7 +1023,7 @@ var HiddenNavBG = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.
 })(["background-color:", ";position:absolute;top:-4rem;right:0rem;width:5rem;height:5rem;border-radius:50%;transition:transform .8s ease-in-out;transform:", ";"], function (props) {
   return props.theme.primary;
 }, function (props) {
-  return props.isOpen ? trans.scale900 : trans.scale0;
+  return props.isOpen ? trans.scale100 : trans.scale0;
 });
 var HiddenContainer = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
   displayName: "NavStyles__HiddenContainer",

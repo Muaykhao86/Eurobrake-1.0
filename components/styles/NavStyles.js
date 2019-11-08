@@ -54,8 +54,8 @@ const trans = {
     down: 'translateY(-1.2rem)',
     spin0: 'rotate(0)',
     spin90: 'rotate(-90deg)',
-    spin220: 'rotate(-224deg)',
-    scale900 : 'scale(900)',
+    spin315: 'rotate(-315deg)',
+    scale100 : 'scale(100)',
     scale0 : 'scale(0)',
     in: 'transform .6s cubic-bezier(0.22, 0.61, 0.36, 1) .3s',
     out: 'transform .6s cubic-bezier(.55,.055,.675,.19); .3 '
@@ -70,7 +70,7 @@ export const TopBun = styled.div`
     background-color: ${props => props.sticky ? 
     props.theme.white : props.theme.secondary };
     transform: ${props => props.isOpen ?
-    trans.spin220 : trans.spin0};
+    trans.spin315 : trans.spin0};
             
 &:before {
     width: 100%;
@@ -101,7 +101,7 @@ export const TopBun = styled.div`
 
 
 export const HiddenNavBG = styled.div`
-    background-color: ${props => props.theme.primary}; /* Still not sure o this as it goes transparent on the way back instantly => doesnt look great :/*/
+    background-color: ${props => props.theme.primary}; 
     position: absolute;
     top: -4rem;
     right: 0rem;
@@ -110,7 +110,7 @@ export const HiddenNavBG = styled.div`
     border-radius: 50%;
     transition: transform .8s ease-in-out;
     transform: ${props => props.isOpen ?
-     trans.scale900 : trans.scale0};
+     trans.scale100 : trans.scale0};
 `;
 
 

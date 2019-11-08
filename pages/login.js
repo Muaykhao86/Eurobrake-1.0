@@ -67,8 +67,8 @@ constructor(props) {
                 credentials: 'include',
                 body: JSON.stringify(formData)
             });
-       
-        if(response.status === 200) {
+        console.log(response)
+        if(response.status === 'success') {
         const {logintoken} = await response.json()
         console.log({logintoken})
         await login({logintoken})
