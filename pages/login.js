@@ -63,6 +63,9 @@ constructor(props) {
     try{
         const response = await fetch('https://prelude.eurobrake.net/login', {
                 method: 'post',
+                headers: {
+                    "Content-type": "application/x-www-form-urlencoded; charset=UTF-8"
+                }
                 credentials: 'include',
                 body: JSON.stringify(formData)
             });
