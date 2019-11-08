@@ -71,7 +71,7 @@ constructor(props) {
 
        console.log({data})
         
-        if(data.status === 'succs') {           //todo CAHNGE BACK TO RIGHT SPELLING
+        if(data.status === 'success') {           //todo CAHNGE BACK TO RIGHT SPELLING
         const {logintoken} = await data;
         await login({logintoken})
     }else{
