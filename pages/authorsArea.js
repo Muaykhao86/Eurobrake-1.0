@@ -66,7 +66,7 @@ class AuthorsArea extends Component {
 AuthorsArea.getInitialProps = async ctx => {
     // We use `nextCookie` to get the cookie and pass the token to the
     // frontend in the `props`.
-    const allCookies = cookies(ctx);
+    const {logintoken} = cookies(ctx);
     console.log({allCookies});
     const apiUrl = 'https://prelude.eurobrake.net/dashboard ';
     // console.log({logintoken})
@@ -78,6 +78,9 @@ AuthorsArea.getInitialProps = async ctx => {
     try {
         const response = await fetch(apiUrl, {
             credentials: 'include',
+             headers: {
+            Authorization: JSON.stringify({ token })
+      }
         })
         const data = await response.json();
         console.log('Authprs res Data', data)
@@ -99,9 +102,6 @@ AuthorsArea.getInitialProps = async ctx => {
 
 export default withAuthSync(AuthorsArea)
 
-//   headers: {
-//         Authorization: JSON.stringify({ token })
-//       }
 
 
 // !
