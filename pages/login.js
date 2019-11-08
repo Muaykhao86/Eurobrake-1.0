@@ -67,8 +67,12 @@ constructor(props) {
             });
         
         response.json().then(function(data){
-            console.log(data);
+            console.log({data});
         })
+
+        console.log('status', response.status);
+        console.log('status + json', response.json());
+        console.log('status + json', response.json().status, response.json().logintoken);
         if(response.status === 'success') {             //!Im not getting a status of success or error, im getting a response of 200 for both err and success
         const {logintoken} = await response.json()
         console.log({logintoken})
