@@ -75,7 +75,7 @@ constructor(props) {
         await login({logintoken})
     }else{
         console.log('login failed')
-        let error = new Error(data.statusText)
+        let error = new Error(data.error)
         error.response = response
        throw error
         }

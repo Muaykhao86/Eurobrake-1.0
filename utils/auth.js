@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 import Router from 'next/router';
-import nextCookie from 'next-cookies';
+import cookies from 'next-cookies';
 import cookie from 'js-cookie';
 
 
@@ -14,7 +14,7 @@ export const login = ({logintoken}) => {
 // CHECK TOKEN, IF WE HAVE ONE RETURN TOKEN, IF WE DONT REDIRECT TO LOGIN PAGE
 
 export const auth = ctx => {
-    const {logintoken} = nextCookie(ctx);
+    const {logintoken} = cookies(ctx);
 
      if (ctx.req && !logintoken) {
     ctx.res.writeHead(302, { Location: '/login' })
