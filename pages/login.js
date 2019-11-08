@@ -65,21 +65,19 @@ constructor(props) {
                 method: 'POST',
                 body: JSON.stringify(formData)
             });
-        
-        response.json().then(function(data){
-            console.log({data});
-        })
+        const data = response.json();
 
-        console.log('status', response.status);
-        console.log('status + json', response.json());
-        console.log('status + json', response.json().status, response.json().logintoken);
-        if(response.status === 'success') {             //!Im not getting a status of success or error, im getting a response of 200 for both err and success
-        const {logintoken} = await response.json()
+        console.log('status', data.status);
+        console.log('status + json', data.json());
+        console.log('status + json', data.json().status, data.json().logintoken);
+        
+        if(response.status === 'success') {           
+        const {logintoken} = await data.json()
         console.log({logintoken})
         await login({logintoken})
     }else{
         console.log('login failed')
-        let error = new Error(response.statusText)
+        let error = new Error(data.statusText)
         error.response = response
        throw error
         }
