@@ -71,7 +71,6 @@ constructor(props) {
         
         if(data.status === 'success') {           
         const {logintoken} = await data;
-        console.log({logintoken})
         await login({logintoken})
     }else{
         console.log('login failed')

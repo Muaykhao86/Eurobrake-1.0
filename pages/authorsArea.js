@@ -67,7 +67,7 @@ AuthorsArea.getInitialProps = async ctx => {
     // We use `nextCookie` to get the cookie and pass the token to the
     // frontend in the `props`.
     const allCookies = cookies(ctx);
-    console.log(allCookies);
+    console.log({allCookies});
     const apiUrl = 'https://prelude.eurobrake.net/dashboard ';
     // console.log({logintoken})
     // ? Dont think I need thi as Im not running a seperste server, so i think we can get away wuth just router.push
@@ -79,11 +79,12 @@ AuthorsArea.getInitialProps = async ctx => {
         const response = await fetch(apiUrl, {
             credentials: 'include',
         })
+        const data = await response.json();
 
-        if (response.status === 'success') {
+        if (data.status === 'success') {
             const js = await response.json()
             console.log('js', js)
-            return js
+            return {authorData:  js }
 
         } else {
             // https://github.com/developit/unfetch#caveats
