@@ -61,14 +61,13 @@ constructor(props) {
         }
 
     try{
-
         const response = await fetch(apiUrl, {
                 method: 'POST',
                 credentials: 'include',
                 body: JSON.stringify(formData)
             });
         console.log(response)
-        if(response.status === 'success') {
+        if(response.status === 'success') {             //!Im not getting a status of success or error, im getting a response of 200 for both err and success
         const {logintoken} = await response.json()
         console.log({logintoken})
         await login({logintoken})
