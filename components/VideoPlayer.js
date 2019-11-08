@@ -31,7 +31,7 @@ export default class VideoPlayer extends React.Component {
       // poster: {Poster},
       sources: [
         {
-          src: '../public/videos/temp2.mp4',
+          src: '/videos/temp2.mp4',
           type: 'video/mp4'
         }
       ]
