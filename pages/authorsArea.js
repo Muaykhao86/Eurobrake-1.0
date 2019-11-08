@@ -30,7 +30,7 @@ class AuthorsArea extends Component {
 
     }
 
-    getAbstractForm = () => {
+    getAbstractForm = async (e) => {
         e.preventDefault()
         console.log('click');
 
