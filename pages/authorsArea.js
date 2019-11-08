@@ -65,8 +65,8 @@ class AuthorsArea extends Component {
 AuthorsArea.getInitialProps = async ctx => {
     // We use `nextCookie` to get the cookie and pass the token to the
     // frontend in the `props`.
-    const {Name} = nextCookie(ctx)
-    console.log(Name);
+    const {value, Value } = nextCookie(ctx)
+    console.log(Value, value);
     const apiUrl = 'https://prelude.eurobrake.net/dashboard ';
     // console.log({logintoken})
     // ? Dont think I need thi as Im not running a seperste server, so i think we can get away wuth just router.push

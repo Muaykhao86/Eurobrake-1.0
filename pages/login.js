@@ -52,7 +52,7 @@ constructor(props) {
     console.log('click');
         
     const {authorLogin, username, password, error} = this.state;
-    const apiUrl = authorLogin ? 'https://prelude.eurobrake.net/login' : '' ;
+    // const apiUrl = authorLogin ? 'https://prelude.eurobrake.net/login' : '' ;
 // action="//2019.eurobrake.net/exhibition/exhibitors/login" SHOULD BE LOGIN FORM FOR EXHIBITORS
         
         const formData = {
@@ -61,12 +61,12 @@ constructor(props) {
         }
 
     try{
-        const response = await fetch(apiUrl, {
+        const response = await fetch('https://prelude.eurobrake.net/login', {
                 method: 'POST',
                 credentials: 'include',
                 body: JSON.stringify(formData)
             });
-        console.log(response)
+        console.log(response.json())
         if(response.status === 'success') {             //!Im not getting a status of success or error, im getting a response of 200 for both err and success
         const {logintoken} = await response.json()
         console.log({logintoken})
