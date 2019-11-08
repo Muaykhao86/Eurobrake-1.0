@@ -54,7 +54,11 @@ constructor(props) {
     const {authorLogin, username, password, error} = this.state;
     // const apiUrl = authorLogin ? 'https://prelude.eurobrake.net/login' : '' ;
 // action="//2019.eurobrake.net/exhibition/exhibitors/login" SHOULD BE LOGIN FORM FOR EXHIBITORS
-        
+        const formData = {
+            username: username,
+            password: password,
+        }
+
     
     try{
         const response = await fetch('https://prelude.eurobrake.net/login', {
