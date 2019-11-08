@@ -77,10 +77,9 @@ AuthorsArea.getInitialProps = async ctx => {
     try {
         const response = await fetch(apiUrl, {
             credentials: 'include',
-
         })
 
-        if (response.status !== 'error') {
+        if (response.status === 'success') {
             const js = await response.json()
             console.log('js', js)
             return js

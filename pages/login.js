@@ -55,46 +55,32 @@ constructor(props) {
     // const apiUrl = authorLogin ? 'https://prelude.eurobrake.net/login' : '' ;
 // action="//2019.eurobrake.net/exhibition/exhibitors/login" SHOULD BE LOGIN FORM FOR EXHIBITORS
         
-        const formData = {
-            username: username,
-            password: password,
-        }
-
-        const res = await fetch('https://prelude.eurobrake.net/login', {
-            method: 'POST',
-            body: JSON.stringify(formData)
-        })
-        const data = await res.json();
-        console.log(data);
-    // try{
-    //     const response = await fetch('https://prelude.eurobrake.net/login', {
-    //             method: 'post',
-    //             headers: {
-    //                 "Content-type": "application/x-www-form-urlencoded; charset=UTF-8"
-    //             },
-    //             credentials: 'include',
-    //             body: JSON.stringify(formData)
-    //         });
+    
+    try{
+        const response = await fetch('https://prelude.eurobrake.net/login', {
+                method: 'POST',
+                body: JSON.stringify(formData)
+            });
         
-    //     response.json().then(function(data){
-    //         console.log(data);
-    //     })
-    //     if(response.status === 'success') {             //!Im not getting a status of success or error, im getting a response of 200 for both err and success
-    //     const {logintoken} = await response.json()
-    //     console.log({logintoken})
-    //     await login({logintoken})
-    // }else{
-    //     console.log('login failed')
-    //     let error = new Error(response.statusText)
-    //     error.response = response
-    //    throw error
-    //     }
-    // }catch (error){
-    //     console.error(
-    //         'Failed to login, please try again', error
-    //         )
-    //    this.setState({error: error.message});
-    // }
+        response.json().then(function(data){
+            console.log(data);
+        })
+        if(response.status === 'success') {             //!Im not getting a status of success or error, im getting a response of 200 for both err and success
+        const {logintoken} = await response.json()
+        console.log({logintoken})
+        await login({logintoken})
+    }else{
+        console.log('login failed')
+        let error = new Error(response.statusText)
+        error.response = response
+       throw error
+        }
+    }catch (error){
+        console.error(
+            'Failed to login, please try again', error
+            )
+       this.setState({error: error.message});
+    }
 
 }
 
