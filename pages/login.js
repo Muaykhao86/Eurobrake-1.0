@@ -66,7 +66,10 @@ constructor(props) {
                 credentials: 'include',
                 body: JSON.stringify(formData)
             });
-        console.log(response.json())
+        
+        response.json().then(function(data){
+            console.log(data);
+        })
         if(response.status === 'success') {             //!Im not getting a status of success or error, im getting a response of 200 for both err and success
         const {logintoken} = await response.json()
         console.log({logintoken})
