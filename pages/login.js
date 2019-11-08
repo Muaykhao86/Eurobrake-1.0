@@ -65,12 +65,12 @@ constructor(props) {
                 method: 'POST',
                 body: JSON.stringify(formData)
             });
-        const data = response.json();
+        const data = await response.json();
 
-       console.log(data)
+       console.log({data})
         
-        if(response.status === 'success') {           
-        const {logintoken} = await data.json()
+        if(data.status === 'success') {           
+        const {logintoken} = await data;
         console.log({logintoken})
         await login({logintoken})
     }else{
