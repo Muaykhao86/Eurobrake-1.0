@@ -65,7 +65,7 @@ constructor(props) {
                 method: 'post',
                 headers: {
                     "Content-type": "application/x-www-form-urlencoded; charset=UTF-8"
-                }
+                },
                 credentials: 'include',
                 body: JSON.stringify(formData)
             });
