@@ -32,15 +32,15 @@ export const auth = ctx => {
 
 // LOGOUT FUNCTION
 
-export const logout = () => {
-  cookie.remove('logintoken');
+export const logout = async () => {
+  await cookie.remove('logintoken');
   const res = await fetch('https://prelude.eurobrake.net/logout');
   const data = await res.json().catch(error => console.log(error));
   console.log('logout', data)
   // To trigger the event listener we save some random data into the `logout` key
-  window.localStorage.setItem("logout", Date.now()); 
+  await window.localStorage.setItem("logout", Date.now()); 
 
-  Router.push("/login");
+  await Router.push("/login");
 };
 
 // IF LOGGED IN/ HAS TOKEN RETURN THE COMPONENT 
