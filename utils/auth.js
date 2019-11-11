@@ -38,7 +38,7 @@ export const logout = async () => {
   await cookies.remove('prelude.author_login');
   const res = await fetch('https://prelude.eurobrake.net/logout',
     {
-      credentials: 'include',
+      credentials: 'include'
     });
   const data = await res.json().catch(error => console.log(error));
   console.log('logout', data)
