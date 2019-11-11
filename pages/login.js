@@ -77,7 +77,6 @@ constructor(props) {
         await login({logintoken})
         console.log('login ok', data.status)
     }else{
-        // console.log('login failed')
         let error = new Error(data.error)
         error.response = response
        throw error

@@ -47,8 +47,7 @@ class AuthorsArea extends Component {
         };
     }
     render() {
-        const { data } = this.props.form;
-        console.table(data);
+      
         return (
             <DemoDiv>
                 <h1>
