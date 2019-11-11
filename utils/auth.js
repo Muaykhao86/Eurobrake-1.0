@@ -9,7 +9,7 @@ import fetch from 'isomorphic-unfetch';
 
 
 export const login = ({logintoken} ) => {
-  cookie.set('logintoken', prelude.author_login, { expires: 1 })
+  cookie.set('logintoken', logintoken, { expires: 1 })
   Router.push('/authorsArea')
 }
 
@@ -81,7 +81,7 @@ export const withAuthSync = WrappedComponent => {
     const componentProps =
       WrappedComponent.getInitialProps &&
       (await WrappedComponent.getInitialProps(ctx))
-    console.log('withauthsync', 'ctx => ', ctx, 'prelude.author_login => ', logintoken)
+    console.log('withauthsync', 'ctx => ', ctx, 'logintoken => ', logintoken)
     return { ...componentProps, logintoken }
   }
 
