@@ -51,7 +51,7 @@ constructor(props) {
 
     onSubmit = async (e) =>{
     e.preventDefault()
-    console.log('click');
+    console.log('on submit click');
         
     const {authorLogin, username, password, error} = this.state;
     // const apiUrl = authorLogin ? 'https://prelude.eurobrake.net/login' : '' ;
@@ -75,7 +75,7 @@ constructor(props) {
         if(data.status === 'success') {           
         const {logintoken} = await data;
         await login({logintoken})
-        console.log(data)
+        console.log('login ok', data.status)
     }else{
         // console.log('login failed')
         let error = new Error(data.error)

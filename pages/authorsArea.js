@@ -83,18 +83,20 @@ AuthorsArea.getInitialProps = async ctx => {
     //   }
         })
         const data = await response.json();
-        console.log('Authors response Data =>', data.status, data)
-        if (data.status === 'success') {
+        console.log('Authors response Data =>', data.status, data);
+        if(data.status === 'success') {
             const js = await response.json()
             console.log('js', js)
             return {authorData:  js }
 
-        } else {
+        }else{
+            console.log('not reading success')
             // https://github.com/developit/unfetch#caveats
             return redirectOnError()
         }
-    } catch (error) {
+    }catch(error){
         // Implementation or Network error
+        console.log(error)
         return redirectOnError()
     }
 
