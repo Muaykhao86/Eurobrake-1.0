@@ -53,7 +53,7 @@ class AuthorsArea extends Component {
                 <h1>
                     you are logged In
         </h1>
-                <button>Submit a Abstract</button>
+                <button onClick={this.getAbstractForm}>Submit a Abstract</button>
 
 
                 <button onClick={logout}>logout</button>

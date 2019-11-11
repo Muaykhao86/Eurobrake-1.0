@@ -2,6 +2,8 @@ import { useEffect } from 'react'
 import Router from 'next/router';
 import cookies from 'next-cookies';
 import cookie from 'js-cookie';
+import fetch from 'isomorphic-unfetch';
+
 
 
 
@@ -32,7 +34,9 @@ export const auth = ctx => {
 
 export const logout = () => {
   cookie.remove('logintoken');
-
+  const res = await fetch('https://prelude.eurobrake.net/logout');
+  const data = await res.json().catch(error => console.log(error));
+  console.log('logout', data)
   // To trigger the event listener we save some random data into the `logout` key
   window.localStorage.setItem("logout", Date.now()); 
 
