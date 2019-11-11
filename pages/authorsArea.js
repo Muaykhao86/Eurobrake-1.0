@@ -83,7 +83,7 @@ AuthorsArea.getInitialProps = async ctx => {
     //   }
         })
         const data = await response.json();
-        console.log('Authors response Data =>', data)
+        console.log('Authors response Data =>', data.status, data)
         if (data.status === 'success') {
             const js = await response.json()
             console.log('js', js)
