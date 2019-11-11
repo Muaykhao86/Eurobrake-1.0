@@ -38,9 +38,9 @@ export const logout = async () => {
   const data = await res.json().catch(error => console.log(error));
   console.log('logout', data)
   // To trigger the event listener we save some random data into the `logout` key
-  await window.localStorage.setItem("logout", Date.now()); 
+  // await window.localStorage.setItem("logout", Date.now()); 
 
-  await Router.push("/login");
+  // await Router.push("/login");
 };
 
 // IF LOGGED IN/ HAS TOKEN RETURN THE COMPONENT 
