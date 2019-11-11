@@ -1,48 +1,48 @@
 import { useEffect } from 'react'
 import Router from 'next/router';
 import cookies from 'next-cookies';
-import cookie from 'js-cookie';
+import Cookies from 'js-cookie';
 import fetch from 'isomorphic-unfetch';
 
 
 
 
 
-export const login = ({logintoken}) => {
-cookie.set('logintoken', logintoken, { expires: 1 })
- Router.push('/authorsArea')
+export const login = ({ logintoken }) => {
+  Cookies.set('logintoken', logintoken, { expires: 1 })
+  Router.push('/authorsArea')
 }
 
 // CHECK TOKEN, IF WE HAVE ONE RETURN TOKEN, IF WE DONT REDIRECT TO LOGIN PAGE
 
 export const auth = ctx => {
-    const {logintoken} = cookies(ctx);
+  const { logintoken } = cookies(ctx);
 
-     if (ctx.req && !logintoken) {
+  if (ctx.req && !logintoken) {
     ctx.res.writeHead(302, { Location: '/login' })
     ctx.res.end()
   }
-    console.log('AUTH => ', logintoken)
-    if(!logintoken) {
-        Router.push('/login')
-    }
+  console.log('AUTH => ', logintoken)
+  if (!logintoken) {
+    Router.push('/login')
+  }
 
-    return logintoken
+  return logintoken
 }
 
 // LOGOUT FUNCTION
 
 export const logout = async () => {
- console.log(cookies.get());
-  await cookie.remove('logintoken');
+  Cookies.get()
+  await Cookies.remove('logintoken');
   const res = await fetch('https://prelude.eurobrake.net/logout',
-  {
-    credentials: 'include',
-  });
+    {
+      credentials: 'include',
+    });
   const data = await res.json().catch(error => console.log(error));
   console.log('logout', data)
   // To trigger the event listener we save some random data into the `logout` key
-  await window.localStorage.setItem("logout", Date.now()); 
+  await window.localStorage.setItem("logout", Date.now());
 
   await Router.push("/login");
 };

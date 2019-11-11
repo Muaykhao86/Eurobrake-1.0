@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import Router from 'next/router';
-import nextCookie from 'next-cookies';
 import fetch from 'isomorphic-unfetch';
 import styled from 'styled-components';
 import { withAuthSync, logout } from '../utils/auth'
