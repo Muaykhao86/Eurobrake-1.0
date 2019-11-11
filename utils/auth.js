@@ -9,7 +9,7 @@ import fetch from 'isomorphic-unfetch';
 
 
 export const login = ({logintoken} ) => {
-  // cookie.set('logintoken', prelude.author_login, { expires: 1 })
+  cookie.set('logintoken', prelude.author_login, { expires: 1 })
   Router.push('/authorsArea')
 }
 
@@ -17,9 +17,9 @@ export const login = ({logintoken} ) => {
 
 export const auth = ctx => {
 
-  const preludeToken = 'prelude.author_login';
+  
 
-  const { preludeToken: logintoken } = cookies(ctx);
+  const { logintoken } = cookies(ctx);
 
   if (ctx.req && !logintoken) {
     ctx.res.writeHead(302, { Location: '/login' })
