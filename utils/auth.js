@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 import Router from 'next/router';
 import cookies from 'next-cookies';
-import Cookies from 'js-cookie';
+import cookie from 'js-cookie';
 import fetch from 'isomorphic-unfetch';
 
 
@@ -9,7 +9,7 @@ import fetch from 'isomorphic-unfetch';
 
 
 export const login = ({ logintoken }) => {
-  Cookies.set('logintoken', logintoken, { expires: 1 })
+  cookie.set('logintoken', logintoken, { expires: 1 })
   Router.push('/authorsArea')
 }
 
@@ -33,8 +33,9 @@ export const auth = ctx => {
 // LOGOUT FUNCTION
 
 export const logout = async () => {
-  Cookies.get()
-  await Cookies.remove('logintoken');
+ 
+  await cookies.remove('logintoken');
+  await cookies.remove('prelude.author_login');
   const res = await fetch('https://prelude.eurobrake.net/logout',
     {
       credentials: 'include',
