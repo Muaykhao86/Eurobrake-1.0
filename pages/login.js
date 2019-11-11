@@ -65,14 +65,14 @@ constructor(props) {
     try{
         const response = await fetch('https://prelude.eurobrake.net/login', {
                 method: 'POST',
-                credentials: 'include', // ! wont allaw due to missing csrf tokens
+                credentials: 'include', // ? Is allowing now?? 
                 body: JSON.stringify(formData)
             });
         const data = await response.json();
 
        console.log({data})
         
-        if(data.status === 'success') {           //todo CAHNGE BACK TO RIGHT SPELLING
+        if(data.status === 'success') {           
         const {logintoken} = await data;
         await login({logintoken})
         console.log(data)
@@ -100,12 +100,24 @@ render(){
             <Demo>
 
             <div className="">
-                <label htmlFor="label">{form[0].label}</label>
-                <input type="text" name={form[0].name} onChange={this.saveToState} value={this.state.username}/>
+                <label htmlFor="label">
+                    Username
+                    {/* {form[0].label} */}
+                    </label>
+                <input type="text" 
+                name="username"
+                // {form[0].name} 
+                 onChange={this.saveToState} value={this.state.username}/>
             </div>
             <div className="">    
-                <label htmlFor="label">{form[1].label}</label>
-                <input type="password" name={form[1].name} onChange={this.saveToState} value={this.state.password}/>
+                <label htmlFor="label">
+                    Password
+                    {/* {form[1].label} */}
+                    </label>
+                <input type="password" 
+                name="password"
+                // {form[1].name}  
+                onChange={this.saveToState} value={this.state.password}/>
             </div>
             </Demo>
             <input type="submit" value="Submit"/>
