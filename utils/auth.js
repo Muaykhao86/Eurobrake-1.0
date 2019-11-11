@@ -8,15 +8,18 @@ import fetch from 'isomorphic-unfetch';
 
 
 
-export const login = ({ logintoken }) => {
-  cookie.set('logintoken', logintoken, { expires: 1 })
+export const login = ({logintoken} ) => {
+  // cookie.set('logintoken', prelude.author_login, { expires: 1 })
   Router.push('/authorsArea')
 }
 
 // CHECK TOKEN, IF WE HAVE ONE RETURN TOKEN, IF WE DONT REDIRECT TO LOGIN PAGE
 
 export const auth = ctx => {
-  const { logintoken } = cookies(ctx);
+
+  const preludeToken = 'prelude.author_login';
+
+  const { preludeToken: logintoken } = cookies(ctx);
 
   if (ctx.req && !logintoken) {
     ctx.res.writeHead(302, { Location: '/login' })
@@ -34,7 +37,7 @@ export const auth = ctx => {
 
 export const logout = async () => {
  
-  // await cookie.remove('logintoken');
+  // await cookies.remove('prelude.author_login');
  
   const res = await fetch('https://prelude.eurobrake.net/logout',
     {
@@ -78,7 +81,7 @@ export const withAuthSync = WrappedComponent => {
     const componentProps =
       WrappedComponent.getInitialProps &&
       (await WrappedComponent.getInitialProps(ctx))
-    console.log('withauthsync', 'ctx => ', ctx, 'logintoken => ', logintoken)
+    console.log('withauthsync', 'ctx => ', ctx, 'prelude.author_login => ', logintoken)
     return { ...componentProps, logintoken }
   }
 
