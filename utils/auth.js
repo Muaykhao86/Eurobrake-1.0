@@ -65,7 +65,7 @@ export const withAuthSync = WrappedComponent => {
 
   Wrapper.getInitialProps = async ctx => {
     const logintoken = auth(ctx)                // ! AUTH
-    console.log('down to wrap your components')
+    console.log('down to wrap your components', 'logintoken authors auth sync ', logintoken)
     const componentProps =
       WrappedComponent.getInitialProps &&
       (await WrappedComponent.getInitialProps(ctx))
