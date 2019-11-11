@@ -78,16 +78,12 @@ AuthorsArea.getInitialProps = async ctx => {
     try {
         const response = await fetch(apiUrl, {
             credentials: 'include',
-    //          headers: {
-    //         Authorization: JSON.stringify({ logintoken }) // ! WONT ALLOW DUE TO SOME HEADER PROPERTY
-    //   }
         })
         const data = await response.json();
         console.log('Authors response Data =>', data.status, data);
         if(data.status === 'success') {
-            const js = await response.json()
-            console.log('js', js)
-            return {authorData:  js }
+            console.log('papers', data.papers)
+            return {authorData:  data }
 
         }else{
             console.log('not reading success')
@@ -111,3 +107,6 @@ export default withAuthSync(AuthorsArea)
 // *
 // todo
 // //
+    //          headers: {
+    //         Authorization: JSON.stringify({ logintoken }) // ! WONT ALLOW DUE TO SOME HEADER PROPERTY
+    //   }
