@@ -75,7 +75,9 @@ AuthorsArea.getInitialProps = async ctx => {
             ? Router.push('/login')
             : ctx.res.writeHead(301, { Location: '/login' })
     try {
-        const response = await fetch(apiUrl)
+        const response = await fetch(apiUrl, {
+            credentials: 'include',
+        })
         const data = await response.json();
         console.log('Authors response Data =>', data.status, data);
         if(data.status === 'success') {
