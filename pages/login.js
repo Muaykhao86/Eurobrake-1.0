@@ -65,7 +65,7 @@ constructor(props) {
     try{
         const response = await fetch('https://prelude.eurobrake.net/login', {
                 method: 'POST',
-                credentials: 'include' // ! wont allaw due to missing csrf tokens
+                credentials: 'include', // ! wont allaw due to missing csrf tokens
                 body: JSON.stringify(formData)
             });
         const data = await response.json();
