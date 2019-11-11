@@ -34,7 +34,7 @@ export const auth = ctx => {
 
 export const logout = async () => {
  
-  await cookies.remove('logintoken');
+  await cookie.remove('logintoken');
  
   const res = await fetch('https://prelude.eurobrake.net/logout',
     {
