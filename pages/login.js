@@ -25,7 +25,8 @@ const Demo = styled.h1`
 export default class Login extends Component {
     static getInitialProps = async function () {
         const res = await fetch('https://prelude.eurobrake.net/login');
-        const data = await res.json().catch(error => console.log(error));;
+        const data = await res.json();
+        
         return {
             form: data
         };

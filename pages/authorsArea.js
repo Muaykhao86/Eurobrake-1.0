@@ -27,23 +27,35 @@ const Demo = styled.h1`
 class AuthorsArea extends Component {
     constructor(props) {
         super(props);
-
+        this.state =  {
+            formData: undefined,
+            error: '',
+        }
     }
 
     getAbstractForm = async (e) => {
         e.preventDefault()
         console.log('click');
 
-
-        const apiUrl = 'https://prelude.eurobrake.net/submit';
+try{    const apiUrl = 'https://prelude.eurobrake.net/submit';
         const response = await fetch(apiUrl, {
             credentials: 'include',
         });
-        const data = await response.json().catch(error => console.log(error));
-        console.log(data)
-        return {
-            form: data
-        };
+        const data = await response.json();
+        if(data.status === 'success') {           
+        this.setState({formData: data.form});
+        
+    }else{
+        let error = new Error(data.error)
+        error.response = response
+       throw error
+        }
+    }catch (error){
+        console.error(
+            'Failed to get form, please try again', error
+            )
+       this.setState({error: error.message});
+    }
     }
     render() {
       
@@ -53,9 +65,8 @@ class AuthorsArea extends Component {
                     you are logged In
         </h1>
                 <button onClick={this.getAbstractForm}>Submit a Abstract</button>
-
-
                 <button onClick={logout}>logout</button>
+                {this.state.formData.map(field => <p>{field}</p>)}
             </DemoDiv>
         )
     }
