@@ -66,7 +66,7 @@ try{    const apiUrl = 'https://prelude.eurobrake.net/submit';
         </h1>
                 <button onClick={this.getAbstractForm}>Submit a Abstract</button>
                 <button onClick={logout}>logout</button>
-                {this.state.formData.map(field => <p>{field}</p>)}
+                
             </DemoDiv>
         )
     }
