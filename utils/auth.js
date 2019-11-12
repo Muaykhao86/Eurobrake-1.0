@@ -17,20 +17,33 @@ export const login = ({logintoken} ) => {
 
 export const auth = ctx => {
 
-  
-
   const { logintoken } = cookies(ctx);
-
-  if (ctx.req && !logintoken) {
-    ctx.res.writeHead(302, { Location: '/login' })
-    ctx.res.end()
-  }
-  console.log('AUTH => ', logintoken)
+    // If there's no token, it means the user is not logged in.
   if (!logintoken) {
-    Router.push('/login')
+    if (ctx.req) {
+      // If `ctx.req` is available it means we are on the server.
+      ctx.res.writeHead(302, { Location: '/login' })
+      ctx.res.end()
+    } else {
+      // This should only happen on client.
+      Router.push('/login')
+    }
   }
 
-  return logintoken
+return logintoken;
+
+  // const { logintoken } = cookies(ctx);
+
+  // if (ctx.req && !logintoken) {
+  //   ctx.res.writeHead(302, { Location: '/login' })
+  //   ctx.res.end()
+  // }
+  // console.log('AUTH => ', logintoken)
+  // if (!logintoken) {
+  //   Router.push('/login')
+  // }
+
+  // return logintoken
 }
 
 // LOGOUT FUNCTION
