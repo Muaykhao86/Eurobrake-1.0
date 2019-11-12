@@ -115,43 +115,50 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 const FooterBar = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div.withConfig({
   displayName: "Footer__FooterBar",
   componentId: "sc-1wn18ws-0"
-})(["color:", ";background:", ";min-width:100%;min-height:10rem;display:flex;justify-content:space-between;align-items:flex-end;position:absolute;bottom:0;padding:3rem;.ftr_container-1{padding:.2rem;min-width:30rem;display:flex;flex-flow:column;}.ftr_container-2{padding:.2rem;min-width:20rem;display:flex;flex-flow:column;align-items:center;}.ftr_container-3{padding:.2rem;min-width:15rem;display:flex;flex-flow:column;}.ftr_container-4{padding:1rem;min-width:30rem;display:flex;justify-content:space-around;align-items:center;}.ftr_container-5{padding:1rem;min-width:40rem;border:1px solid white;min-height:20rem;display:flex;flex-flow:column;}.ftr_container-6{padding:1rem;min-width:40rem;border:1px solid white;min-height:20rem;display:flex;flex-flow:column wrap;}.ftr_container-7{padding:1rem;display:flex;justify-content:space-between;min-width:20rem;}.social{color:", ";;margin:1rem;font-size:2rem;}a{color:", ";text-transform:uppercase;font-family:", ";font-size:2rem;}h1{padding:1rem;text-align:center;}input{max-width:70%;margin-left:auto;}label{font-family:", ";font-size:1.6rem;text-transform:uppercase;}"], props => props.theme.white, props => props.theme.primary, props => props.theme.white, props => props.theme.white, props => props.theme.MPBold, props => props.theme.MPBold);
+})(["color:", ";background:", ";min-width:100%;min-height:10rem;display:flex;justify-content:space-between;align-items:flex-end;position:absolute;bottom:0;padding:3rem;.ftr_container-1{padding:.2rem;min-width:30rem;display:flex;flex-flow:column;}.ftr_container-2{padding:.2rem;min-width:20rem;display:flex;flex-flow:column;align-items:center;}.ftr_container-3{display:flex;flex-flow:column;align-items:center;}.ftr_container-4{padding:1rem;min-width:30rem;display:flex;justify-content:space-around;align-items:center;}.ftr_container-5{padding:1rem;min-width:40rem;border:1px solid white;min-height:20rem;display:flex;flex-flow:column;}.ftr_container-6{padding:1rem;min-width:40rem;border:1px solid white;min-height:20rem;display:flex;flex-flow:column wrap;}.ftr_container-7{display:flex;position:relative;}.social{color:", ";;margin:1rem;font-size:2rem;}a{color:", ";text-transform:uppercase;font-family:", ";font-size:2rem;}h1{padding:1rem;text-align:center;}input{max-width:70%;margin-left:auto;}label{font-family:", ";font-size:1.6rem;text-transform:uppercase;}"], props => props.theme.white, props => props.theme.primary, props => props.theme.white, props => props.theme.white, props => props.theme.MPBold, props => props.theme.MPBold);
 
 function Footer() {
   return __jsx(FooterBar, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 126
+      lineNumber: 125
     },
     __self: this
   }, __jsx("div", {
     className: "ftr_container-1",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 127
+      lineNumber: 126
     },
     __self: this
   }, __jsx("h1", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 128
+      lineNumber: 127
     },
     __self: this
   }, "CONFIRMED EUROBRAKE 2020 SPONSORS"), __jsx("div", {
     className: "ftr_container-6",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 129
+      lineNumber: 128
     },
     __self: this
   }, "SPONSOR BOX")), __jsx("div", {
     className: "ftr_container-2",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 131
+      lineNumber: 130
     },
     __self: this
   }, __jsx("a", {
+    href: "",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 131
+    },
+    __self: this
+  }, "links"), __jsx("a", {
     href: "",
     __source: {
       fileName: _jsxFileName,
@@ -179,18 +186,11 @@ function Footer() {
       lineNumber: 135
     },
     __self: this
-  }, "links"), __jsx("a", {
-    href: "",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 136
-    },
-    __self: this
   }, "links"), __jsx("div", {
     className: "ftr_container-7",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 137
+      lineNumber: 136
     },
     __self: this
   }, __jsx("a", {
@@ -198,7 +198,7 @@ function Footer() {
     href: "",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 138
+      lineNumber: 137
     },
     __self: this
   }, "F"), __jsx("a", {
@@ -206,7 +206,7 @@ function Footer() {
     href: "",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 139
+      lineNumber: 138
     },
     __self: this
   }, "T"), __jsx("a", {
@@ -214,28 +214,28 @@ function Footer() {
     href: "",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 140
+      lineNumber: 139
     },
     __self: this
   }, "L"))), __jsx("div", {
     className: "ftr_container-3",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 143
+      lineNumber: 142
     },
     __self: this
   }, __jsx("div", {
     className: "ftr_container-4",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 145
+      lineNumber: 144
     },
     __self: this
   }, __jsx("label", {
     htmlFor: "Newsletter",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 146
+      lineNumber: 145
     },
     __self: this
   }, "Newsletter"), __jsx("input", {
@@ -244,20 +244,29 @@ function Footer() {
     id: "",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 147
+      lineNumber: 146
     },
     __self: this
   })), __jsx("div", {
-    className: "ftr_container-5",
+    className: "ftr_container-7",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 148
+    },
+    __self: this
+  }, __jsx(_GoogleMaps__WEBPACK_IMPORTED_MODULE_2__["default"], {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 149
     },
     __self: this
-  }, "Map Box")));
+  }))));
 }
 
 /* harmony default export */ __webpack_exports__["default"] = (Footer);
+{
+  /* <div className="ftr_container-5">Map Box</div> */
+}
 
 /***/ }),
 
@@ -265,52 +274,75 @@ function Footer() {
 /*!**********************************!*\
   !*** ./components/GoogleMaps.js ***!
   \**********************************/
-/*! no exports provided */
+/*! exports provided: MapContainer, default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MapContainer", function() { return MapContainer; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var google_maps_react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! google-maps-react */ "google-maps-react");
 /* harmony import */ var google_maps_react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(google_maps_react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! styled-components */ "styled-components");
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var path__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! path */ "path");
+/* harmony import */ var path__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(path__WEBPACK_IMPORTED_MODULE_2__);
 var _jsxFileName = "/mnt/c/Users/D.Hardiman/desktop/eurobrake/components/GoogleMaps.js";
-
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
-const Gmap = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div.withConfig({
-  displayName: "GoogleMaps__Gmap",
-  componentId: "sc-15qzys9-0"
-})(["width:100%;height:100%;"]); // Dont know if the above dov will work, will have to test it when i get the api key => tbh dont evenm know if I need to set fixed with
 
-const MapContainer = () => __jsx(Gmap, {
-  google: undefined.props.google,
-  zoom: 8,
-  style: mapStyles,
-  initialCenter: {
-    lat: 41.409588,
-    lng: 2.219364
-  } //Center of map is EB
-  ,
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 13
-  },
-  __self: undefined
-}, __jsx(google_maps_react__WEBPACK_IMPORTED_MODULE_1__["Marker"], {
-  position: {
-    lat: 41.409588,
-    lng: 2.219364
-  },
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 20
-  },
-  __self: undefined
-}), " "); // export default GoogleApiWrapper = ({ apiKey: 'TOKEN HERE PLEASE' })(MapContainer);//Need to get credit card and get API key
+const mapStyles = {
+  width: '40rem',
+  height: '40rem'
+}; // Dont know if the above dov will work, will have to test it when i get the api key => tbh dont evenm know if I need to set fixed with
+
+class MapContainer extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
+  constructor(props) {
+    super(props);
+  }
+
+  render() {
+    if (!this.props.google) {
+      return __jsx("div", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 24
+        },
+        __self: this
+      }, "Loading...");
+    }
+
+    return __jsx(google_maps_react__WEBPACK_IMPORTED_MODULE_1__["Map"], {
+      google: this.props.google,
+      style: mapStyles,
+      zoom: 8,
+      initialCenter: {
+        lat: 41.409588,
+        lng: 2.219364
+      } //Center of map is EB
+      ,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 28
+      },
+      __self: this
+    }, __jsx(google_maps_react__WEBPACK_IMPORTED_MODULE_1__["Marker"], {
+      position: {
+        lat: 41.409588,
+        lng: 2.219364
+      },
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 34
+      },
+      __self: this
+    }));
+  }
+
+}
+/* harmony default export */ __webpack_exports__["default"] = (Object(google_maps_react__WEBPACK_IMPORTED_MODULE_1__["GoogleApiWrapper"])({
+  apiKey: 'AIzaSyDQGa5zZTL0G45-WQ8pn5tbMssAGJHD2xY'
+})(MapContainer)); //Need to get credit card and get API key
 
 /***/ }),
 
@@ -3140,6 +3172,17 @@ module.exports = require("google-maps-react");
 /***/ (function(module, exports) {
 
 module.exports = require("next/head");
+
+/***/ }),
+
+/***/ "path":
+/*!***********************!*\
+  !*** external "path" ***!
+  \***********************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("path");
 
 /***/ }),
 

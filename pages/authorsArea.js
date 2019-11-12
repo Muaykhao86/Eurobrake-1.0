@@ -44,10 +44,10 @@ try{    const apiUrl = 'https://prelude.eurobrake.net/submit';
         const response = await fetch(apiUrl, {
             credentials: 'include',
         });
-        const data = await response.json();
+        const data = await response;
         if(data.status === 'success') {           
-        this.setState({formData: data.form});
-        // this.fillSchema();
+        this.setState({formData: data});
+        console.log(data);
         
     }else{
         let error = new Error(data.error)
@@ -127,7 +127,6 @@ AuthorsArea.getInitialProps = async ctx => {
 }
 
 export default withAuthSync(AuthorsArea)
-
 
 
 // !

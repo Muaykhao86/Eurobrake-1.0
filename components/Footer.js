@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components';
-import GMap from './GoogleMaps';
+import MapContainer from './GoogleMaps';
 
 const FooterBar = styled.div`
     color: ${props => props.theme.white};
@@ -37,14 +37,16 @@ const FooterBar = styled.div`
         align-items: center;
     }
     .ftr_container-3{
-        padding: .2rem;
-        min-width: 15rem;
+        /* padding: .2rem;
+        min-width: 15rem; */
         /* border: 1px solid black; */
         
         /* background-color:goldenrod; */
         
         display: flex;
         flex-flow: column;
+        align-items: center;
+       
     }
     .ftr_container-4{
         padding: 1rem;
@@ -80,12 +82,9 @@ const FooterBar = styled.div`
         flex-flow: column wrap;
     }
     .ftr_container-7{
-        padding: 1rem;
-        /* border: 1px solid black; */
-        /* background-color: hotpink; */
         display: flex;
-        justify-content: space-between;
-        min-width: 20rem;
+        position: relative;
+      
     }
 
     .social{
@@ -145,11 +144,15 @@ function Footer() {
             <div className="ftr_container-4">
                 <label htmlFor="Newsletter">Newsletter</label>
                 <input type="email" name="Newsletter" id=""/>    
+            </div>
+            <div className="ftr_container-7">
+              <MapContainer/>
             </div> 
-              <div className="ftr_container-5">Map Box</div>
             </div>
         </FooterBar>
     )
 }
 
 export default Footer;
+
+              {/* <div className="ftr_container-5">Map Box</div> */}
