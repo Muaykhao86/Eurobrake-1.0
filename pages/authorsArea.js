@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import Router from 'next/router';
 import fetch from 'isomorphic-unfetch';
 import styled from 'styled-components';
+import Form from "react-jsonschema-form";
 import { withAuthSync, logout } from '../utils/auth'
 import cookies from 'next-cookies';
 
@@ -30,7 +31,10 @@ class AuthorsArea extends Component {
         this.state =  {
             formData: undefined,
             error: '',
+            schema: {},
         }
+   
+
     }
 
     getAbstractForm = async (e) => {
@@ -44,6 +48,7 @@ try{    const apiUrl = 'https://prelude.eurobrake.net/submit';
         const data = await response.json();
         if(data.status === 'success') {           
         this.setState({formData: data.form});
+        // this.fillSchema();
         
     }else{
         let error = new Error(data.error)
@@ -57,6 +62,12 @@ try{    const apiUrl = 'https://prelude.eurobrake.net/submit';
        this.setState({error: error.message});
     }
     }
+
+    // fillSchema = () => {
+    //     this.state.formData.map(obj => this.state.schema.push(obj))
+    // }
+
+    
     render() {
       
         return (
@@ -66,6 +77,11 @@ try{    const apiUrl = 'https://prelude.eurobrake.net/submit';
         </h1>
                 <button onClick={this.getAbstractForm}>Submit a Abstract</button>
                 <button onClick={logout}>logout</button>
+                {this.state.formData && 
+                    <Form schema={this.state.formData}/>
+                
+                
+                }
                 
             </DemoDiv>
         )
@@ -81,8 +97,6 @@ AuthorsArea.getInitialProps = async ctx => {
     console.log({logintoken}, 'getIProps');
     console.log({allCookies});
     const apiUrl = 'https://prelude.eurobrake.net/dashboard ';
-    // console.log({logintoken})
-    // ? Dont think I need thi as Im not running a seperste server, so i think we can get away wuth just router.push
     const redirectOnError = () =>
         process.browser
             ? Router.push('/login')
