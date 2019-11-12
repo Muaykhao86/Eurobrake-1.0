@@ -31,7 +31,6 @@ class AuthorsArea extends Component {
         this.state =  {
             formData: undefined,
             error: '',
-            schema: {},
         }
    
 
@@ -63,12 +62,15 @@ try{    const apiUrl = 'https://prelude.eurobrake.net/submit';
     }
     }
 
-    // fillSchema = () => {
-    //     this.state.formData.map(obj => this.state.schema.push(obj))
-    // }
+    fillSchema = () => {
+        const schema = {};
+        this.state.formData.map(obj => schema.push(obj))
+        console.log(schema);
+    }
 
     
     render() {
+        
       
         return (
             <DemoDiv>
@@ -77,11 +79,11 @@ try{    const apiUrl = 'https://prelude.eurobrake.net/submit';
         </h1>
                 <button onClick={this.getAbstractForm}>Submit a Abstract</button>
                 <button onClick={logout}>logout</button>
-                {this.state.formData && 
+                {/* {this.state.formData && 
                     <Form schema={this.state.formData}/>
                 
                 
-                }
+                } */}
                 
             </DemoDiv>
         )

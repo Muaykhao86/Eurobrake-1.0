@@ -12876,81 +12876,86 @@ function (_Component) {
       var _ref = Object(_babel_runtime_corejs2_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__["default"])(
       /*#__PURE__*/
       _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee(e) {
-        var _this$state, authorLogin, username, password, error, apiUrl, formData, response, _ref2, logintoken, _error;
+        var _this$state, authorLogin, username, password, error, formData, response, data, _ref2, logintoken, _error;
 
         return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
           while (1) {
             switch (_context.prev = _context.next) {
               case 0:
                 e.preventDefault();
-                console.log('click');
-                _this$state = _this.state, authorLogin = _this$state.authorLogin, username = _this$state.username, password = _this$state.password, error = _this$state.error;
-                apiUrl = authorLogin ? 'https://prelude.eurobrake.net/login' : ''; // action="//2019.eurobrake.net/exhibition/exhibitors/login" SHOULD BE LOGIN FORM FOR EXHIBITORS
+                console.log('on submit click');
+                _this$state = _this.state, authorLogin = _this$state.authorLogin, username = _this$state.username, password = _this$state.password, error = _this$state.error; // const apiUrl = authorLogin ? 'https://prelude.eurobrake.net/login' : '' ;
+                // action="//2019.eurobrake.net/exhibition/exhibitors/login" SHOULD BE LOGIN FORM FOR EXHIBITORS
 
                 formData = {
                   username: username,
                   password: password
                 };
-                _context.prev = 5;
-                _context.next = 8;
-                return isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_12___default()(apiUrl, {
+                _context.prev = 4;
+                _context.next = 7;
+                return isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_12___default()('https://prelude.eurobrake.net/login', {
                   method: 'POST',
                   credentials: 'include',
+                  // ? Is allowing now?? 
                   body: _babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_1___default()(formData)
                 });
 
-              case 8:
+              case 7:
                 response = _context.sent;
-                console.log(response);
+                _context.next = 10;
+                return response.json();
 
-                if (!(response.status === 'success')) {
-                  _context.next = 20;
+              case 10:
+                data = _context.sent;
+                console.log({
+                  data: data
+                });
+
+                if (!(data.status === 'success')) {
+                  _context.next = 22;
                   break;
                 }
 
-                _context.next = 13;
-                return response.json();
+                _context.next = 15;
+                return data;
 
-              case 13:
+              case 15:
                 _ref2 = _context.sent;
                 logintoken = _ref2.logintoken;
-                console.log({
-                  logintoken: logintoken
-                });
-                _context.next = 18;
+                _context.next = 19;
                 return Object(_utils_auth__WEBPACK_IMPORTED_MODULE_13__["login"])({
                   logintoken: logintoken
                 });
 
-              case 18:
-                _context.next = 24;
+              case 19:
+                console.log('login ok', data.status);
+                _context.next = 25;
                 break;
 
-              case 20:
-                console.log('login failed');
-                _error = new Error(response.statusText);
+              case 22:
+                _error = new Error(data.error);
                 _error.response = response;
                 throw _error;
 
-              case 24:
-                _context.next = 30;
+              case 25:
+                _context.next = 31;
                 break;
 
-              case 26:
-                _context.prev = 26;
-                _context.t0 = _context["catch"](5);
+              case 27:
+                _context.prev = 27;
+                _context.t0 = _context["catch"](4);
                 console.error('Failed to login, please try again', _context.t0);
 
                 _this.setState({
                   error: _context.t0.message
                 });
 
-              case 30:
+              case 31:
               case "end":
                 return _context.stop();
             }
           }
-        }, _callee, null, [[5, 26]]);
+        }, _callee, null, [[4, 27]]);
       }));
 
       return function (_x) {
@@ -12976,61 +12981,63 @@ function (_Component) {
         onSubmit: this.onSubmit,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 95
+          lineNumber: 97
         },
         __self: this
       }, __jsx(Demo, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 96
+          lineNumber: 98
         },
         __self: this
       }, __jsx("div", {
         className: "",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 98
+          lineNumber: 100
         },
         __self: this
       }, __jsx("label", {
         htmlFor: "label",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 99
+          lineNumber: 101
         },
         __self: this
-      }, form[0].label), __jsx("input", {
+      }, "Username"), __jsx("input", {
         type: "text",
-        name: form[0].name,
+        name: "username" // {form[0].name} 
+        ,
         onChange: this.saveToState,
         value: this.state.username,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 100
+          lineNumber: 105
         },
         __self: this
       })), __jsx("div", {
         className: "",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 102
+          lineNumber: 110
         },
         __self: this
       }, __jsx("label", {
         htmlFor: "label",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 103
+          lineNumber: 111
         },
         __self: this
-      }, form[1].label), __jsx("input", {
+      }, "Password"), __jsx("input", {
         type: "password",
-        name: form[1].name,
+        name: "password" // {form[1].name}  
+        ,
         onChange: this.saveToState,
         value: this.state.password,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 104
+          lineNumber: 115
         },
         __self: this
       }))), __jsx("input", {
@@ -13038,7 +13045,7 @@ function (_Component) {
         value: "Submit",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 107
+          lineNumber: 121
         },
         __self: this
       }));
@@ -13065,18 +13072,15 @@ _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(f
         case 2:
           res = _context2.sent;
           _context2.next = 5;
-          return res.json()["catch"](function (error) {
-            return console.log(error);
-          });
+          return res.json();
 
         case 5:
           data = _context2.sent;
-          ;
           return _context2.abrupt("return", {
             form: data
           });
 
-        case 8:
+        case 7:
         case "end":
           return _context2.stop();
       }
@@ -13101,13 +13105,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "auth", function() { return auth; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "logout", function() { return logout; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "withAuthSync", function() { return withAuthSync; });
-/* harmony import */ var _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/regenerator */ "./node_modules/@babel/runtime-corejs2/regenerator/index.js");
-/* harmony import */ var _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_objectSpread__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/objectSpread */ "./node_modules/@babel/runtime-corejs2/helpers/esm/objectSpread.js");
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime-corejs2/helpers/esm/asyncToGenerator.js");
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/extends */ "./node_modules/@babel/runtime-corejs2/helpers/esm/extends.js");
-/* harmony import */ var _babel_runtime_corejs2_core_js_date_now__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime-corejs2/core-js/date/now */ "./node_modules/@babel/runtime-corejs2/core-js/date/now.js");
-/* harmony import */ var _babel_runtime_corejs2_core_js_date_now__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_core_js_date_now__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_objectSpread__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/objectSpread */ "./node_modules/@babel/runtime-corejs2/helpers/esm/objectSpread.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/extends */ "./node_modules/@babel/runtime-corejs2/helpers/esm/extends.js");
+/* harmony import */ var _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime-corejs2/regenerator */ "./node_modules/@babel/runtime-corejs2/regenerator/index.js");
+/* harmony import */ var _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _babel_runtime_corejs2_core_js_date_now__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime-corejs2/core-js/date/now */ "./node_modules/@babel/runtime-corejs2/core-js/date/now.js");
+/* harmony import */ var _babel_runtime_corejs2_core_js_date_now__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_core_js_date_now__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime-corejs2/helpers/esm/asyncToGenerator.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_5__);
 /* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! next/router */ "./node_modules/next/dist/client/router.js");
@@ -13116,6 +13120,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var next_cookies__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(next_cookies__WEBPACK_IMPORTED_MODULE_7__);
 /* harmony import */ var js_cookie__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! js-cookie */ "./node_modules/js-cookie/src/js.cookie.js");
 /* harmony import */ var js_cookie__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(js_cookie__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! isomorphic-unfetch */ "./node_modules/isomorphic-unfetch/browser.js");
+/* harmony import */ var isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_9__);
 
 
 
@@ -13124,6 +13130,7 @@ __webpack_require__.r(__webpack_exports__);
 var _jsxFileName = "/mnt/c/Users/D.Hardiman/desktop/eurobrake/utils/auth.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement;
+
 
 
 
@@ -13137,29 +13144,85 @@ var login = function login(_ref) {
 }; // CHECK TOKEN, IF WE HAVE ONE RETURN TOKEN, IF WE DONT REDIRECT TO LOGIN PAGE
 
 var auth = function auth(ctx) {
-  var _nextCookie = next_cookies__WEBPACK_IMPORTED_MODULE_7___default()(ctx),
-      logintoken = _nextCookie.logintoken;
+  var _cookies = next_cookies__WEBPACK_IMPORTED_MODULE_7___default()(ctx),
+      logintoken = _cookies.logintoken; // If there's no token, it means the user is not logged in.
 
-  if (ctx.req && !logintoken) {
-    ctx.res.writeHead(302, {
-      Location: '/login'
-    });
-    ctx.res.end();
-  }
 
   if (!logintoken) {
-    next_router__WEBPACK_IMPORTED_MODULE_6___default.a.push('/login');
+    if (ctx.req) {
+      // If `ctx.req` is available it means we are on the server.
+      ctx.res.writeHead(302, {
+        Location: '/login'
+      });
+      ctx.res.end();
+    } else {
+      // This should only happen on client.
+      next_router__WEBPACK_IMPORTED_MODULE_6___default.a.push('/login');
+    }
   }
 
-  return logintoken;
+  return logintoken; // const { logintoken } = cookies(ctx);
+  // if (ctx.req && !logintoken) {
+  //   ctx.res.writeHead(302, { Location: '/login' })
+  //   ctx.res.end()
+  // }
+  // console.log('AUTH => ', logintoken)
+  // if (!logintoken) {
+  //   Router.push('/login')
+  // }
+  // return logintoken
 }; // LOGOUT FUNCTION
 
-var logout = function logout() {
-  js_cookie__WEBPACK_IMPORTED_MODULE_8___default.a.remove('logintoken'); // To trigger the event listener we save some random data into the `logout` key
+var logout =
+/*#__PURE__*/
+function () {
+  var _ref2 = Object(_babel_runtime_corejs2_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_4__["default"])(
+  /*#__PURE__*/
+  _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_2___default.a.mark(function _callee() {
+    var res, data;
+    return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_2___default.a.wrap(function _callee$(_context) {
+      while (1) {
+        switch (_context.prev = _context.next) {
+          case 0:
+            _context.next = 2;
+            return js_cookie__WEBPACK_IMPORTED_MODULE_8___default.a.remove('logintoken');
 
-  window.localStorage.setItem("logout", _babel_runtime_corejs2_core_js_date_now__WEBPACK_IMPORTED_MODULE_4___default()());
-  next_router__WEBPACK_IMPORTED_MODULE_6___default.a.push("/login");
-}; // IF LOGGED IN/ HAS TOKEN RETURN THE COMPONENT 
+          case 2:
+            _context.next = 4;
+            return isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_9___default()('https://prelude.eurobrake.net/logout', {
+              credentials: 'include'
+            });
+
+          case 4:
+            res = _context.sent;
+            _context.next = 7;
+            return res.json()["catch"](function (error) {
+              return console.log(error);
+            });
+
+          case 7:
+            data = _context.sent;
+            console.log('logout', data); // To trigger the event listener we save some random data into the `logout` key
+
+            _context.next = 11;
+            return window.localStorage.setItem("logout", _babel_runtime_corejs2_core_js_date_now__WEBPACK_IMPORTED_MODULE_3___default()());
+
+          case 11:
+            _context.next = 13;
+            return next_router__WEBPACK_IMPORTED_MODULE_6___default.a.push("/login");
+
+          case 13:
+          case "end":
+            return _context.stop();
+        }
+      }
+    }, _callee);
+  }));
+
+  return function logout() {
+    return _ref2.apply(this, arguments);
+  };
+}(); // IF LOGGED IN/ HAS TOKEN RETURN THE COMPONENT 
 
 var withAuthSync = function withAuthSync(WrappedComponent) {
   var Wrapper = function Wrapper(props) {
@@ -13177,10 +13240,10 @@ var withAuthSync = function withAuthSync(WrappedComponent) {
         window.localStorage.removeItem('logout');
       };
     }, [null]);
-    return __jsx(WrappedComponent, Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_3__["default"])({}, props, {
+    return __jsx(WrappedComponent, Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_1__["default"])({}, props, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 63
+        lineNumber: 88
       },
       __self: this
     }));
@@ -13189,44 +13252,47 @@ var withAuthSync = function withAuthSync(WrappedComponent) {
   Wrapper.getInitialProps =
   /*#__PURE__*/
   function () {
-    var _ref2 = Object(_babel_runtime_corejs2_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__["default"])(
+    var _ref3 = Object(_babel_runtime_corejs2_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_4__["default"])(
     /*#__PURE__*/
-    _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee(ctx) {
+    _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_2___default.a.mark(function _callee2(ctx) {
       var logintoken, componentProps;
-      return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
+      return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_2___default.a.wrap(function _callee2$(_context2) {
         while (1) {
-          switch (_context.prev = _context.next) {
+          switch (_context2.prev = _context2.next) {
             case 0:
-              logintoken = auth(ctx);
-              _context.t0 = WrappedComponent.getInitialProps;
+              logintoken = auth(ctx); // ! AUTH
 
-              if (!_context.t0) {
-                _context.next = 6;
+              console.log('down to wrap your components', 'logintoken authors auth sync ', logintoken);
+              _context2.t0 = WrappedComponent.getInitialProps;
+
+              if (!_context2.t0) {
+                _context2.next = 7;
                 break;
               }
 
-              _context.next = 5;
+              _context2.next = 6;
               return WrappedComponent.getInitialProps(ctx);
 
-            case 5:
-              _context.t0 = _context.sent;
-
             case 6:
-              componentProps = _context.t0;
-              return _context.abrupt("return", Object(_babel_runtime_corejs2_helpers_esm_objectSpread__WEBPACK_IMPORTED_MODULE_1__["default"])({}, componentProps, {
+              _context2.t0 = _context2.sent;
+
+            case 7:
+              componentProps = _context2.t0;
+              console.log('withauthsync', 'ctx => ', ctx, 'logintoken => ', logintoken);
+              return _context2.abrupt("return", Object(_babel_runtime_corejs2_helpers_esm_objectSpread__WEBPACK_IMPORTED_MODULE_0__["default"])({}, componentProps, {
                 logintoken: logintoken
               }));
 
-            case 8:
+            case 10:
             case "end":
-              return _context.stop();
+              return _context2.stop();
           }
         }
-      }, _callee);
+      }, _callee2);
     }));
 
     return function (_x) {
-      return _ref2.apply(this, arguments);
+      return _ref3.apply(this, arguments);
     };
   }();
 

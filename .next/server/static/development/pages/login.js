@@ -324,14 +324,14 @@ class Login extends react__WEBPACK_IMPORTED_MODULE_2__["Component"] {
 
     Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_1__["default"])(this, "onSubmit", async e => {
       e.preventDefault();
-      console.log('click');
+      console.log('on submit click');
       const {
         authorLogin,
         username,
         password,
         error
-      } = this.state;
-      const apiUrl = authorLogin ? 'https://prelude.eurobrake.net/login' : ''; // action="//2019.eurobrake.net/exhibition/exhibitors/login" SHOULD BE LOGIN FORM FOR EXHIBITORS
+      } = this.state; // const apiUrl = authorLogin ? 'https://prelude.eurobrake.net/login' : '' ;
+      // action="//2019.eurobrake.net/exhibition/exhibitors/login" SHOULD BE LOGIN FORM FOR EXHIBITORS
 
       const formData = {
         username: username,
@@ -339,26 +339,27 @@ class Login extends react__WEBPACK_IMPORTED_MODULE_2__["Component"] {
       };
 
       try {
-        const response = await isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_4___default()(apiUrl, {
+        const response = await isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_4___default()('https://prelude.eurobrake.net/login', {
           method: 'POST',
           credentials: 'include',
+          // ? Is allowing now?? 
           body: _babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_0___default()(formData)
         });
-        console.log(response);
+        const data = await response.json();
+        console.log({
+          data
+        });
 
-        if (response.status === 'success') {
+        if (data.status === 'success') {
           const {
             logintoken
-          } = await response.json();
-          console.log({
-            logintoken
-          });
+          } = await data;
           await Object(_utils_auth__WEBPACK_IMPORTED_MODULE_5__["login"])({
             logintoken
           });
+          console.log('login ok', data.status);
         } else {
-          console.log('login failed');
-          let error = new Error(response.statusText);
+          let error = new Error(data.error);
           error.response = response;
           throw error;
         }
@@ -387,61 +388,63 @@ class Login extends react__WEBPACK_IMPORTED_MODULE_2__["Component"] {
       onSubmit: this.onSubmit,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 95
+        lineNumber: 97
       },
       __self: this
     }, __jsx(Demo, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 96
+        lineNumber: 98
       },
       __self: this
     }, __jsx("div", {
       className: "",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 98
+        lineNumber: 100
       },
       __self: this
     }, __jsx("label", {
       htmlFor: "label",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 99
+        lineNumber: 101
       },
       __self: this
-    }, form[0].label), __jsx("input", {
+    }, "Username"), __jsx("input", {
       type: "text",
-      name: form[0].name,
+      name: "username" // {form[0].name} 
+      ,
       onChange: this.saveToState,
       value: this.state.username,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 100
+        lineNumber: 105
       },
       __self: this
     })), __jsx("div", {
       className: "",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 102
+        lineNumber: 110
       },
       __self: this
     }, __jsx("label", {
       htmlFor: "label",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 103
+        lineNumber: 111
       },
       __self: this
-    }, form[1].label), __jsx("input", {
+    }, "Password"), __jsx("input", {
       type: "password",
-      name: form[1].name,
+      name: "password" // {form[1].name}  
+      ,
       onChange: this.saveToState,
       value: this.state.password,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 104
+        lineNumber: 115
       },
       __self: this
     }))), __jsx("input", {
@@ -449,7 +452,7 @@ class Login extends react__WEBPACK_IMPORTED_MODULE_2__["Component"] {
       value: "Submit",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 107
+        lineNumber: 121
       },
       __self: this
     }));
@@ -459,8 +462,7 @@ class Login extends react__WEBPACK_IMPORTED_MODULE_2__["Component"] {
 
 Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_1__["default"])(Login, "getInitialProps", async function () {
   const res = await isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_4___default()('https://prelude.eurobrake.net/login');
-  const data = await res.json().catch(error => console.log(error));
-  ;
+  const data = await res.json();
   return {
     form: data
   };
@@ -493,12 +495,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var next_cookies__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(next_cookies__WEBPACK_IMPORTED_MODULE_5__);
 /* harmony import */ var js_cookie__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! js-cookie */ "js-cookie");
 /* harmony import */ var js_cookie__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(js_cookie__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! isomorphic-unfetch */ "isomorphic-unfetch");
+/* harmony import */ var isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_7__);
 
 
 
 var _jsxFileName = "/mnt/c/Users/D.Hardiman/desktop/eurobrake/utils/auth.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement;
+
 
 
 
@@ -515,27 +520,43 @@ const login = ({
 const auth = ctx => {
   const {
     logintoken
-  } = next_cookies__WEBPACK_IMPORTED_MODULE_5___default()(ctx);
-
-  if (ctx.req && !logintoken) {
-    ctx.res.writeHead(302, {
-      Location: '/login'
-    });
-    ctx.res.end();
-  }
+  } = next_cookies__WEBPACK_IMPORTED_MODULE_5___default()(ctx); // If there's no token, it means the user is not logged in.
 
   if (!logintoken) {
-    next_router__WEBPACK_IMPORTED_MODULE_4___default.a.push('/login');
+    if (ctx.req) {
+      // If `ctx.req` is available it means we are on the server.
+      ctx.res.writeHead(302, {
+        Location: '/login'
+      });
+      ctx.res.end();
+    } else {
+      // This should only happen on client.
+      next_router__WEBPACK_IMPORTED_MODULE_4___default.a.push('/login');
+    }
   }
 
-  return logintoken;
+  return logintoken; // const { logintoken } = cookies(ctx);
+  // if (ctx.req && !logintoken) {
+  //   ctx.res.writeHead(302, { Location: '/login' })
+  //   ctx.res.end()
+  // }
+  // console.log('AUTH => ', logintoken)
+  // if (!logintoken) {
+  //   Router.push('/login')
+  // }
+  // return logintoken
 }; // LOGOUT FUNCTION
 
-const logout = () => {
-  js_cookie__WEBPACK_IMPORTED_MODULE_6___default.a.remove('logintoken'); // To trigger the event listener we save some random data into the `logout` key
+const logout = async () => {
+  await js_cookie__WEBPACK_IMPORTED_MODULE_6___default.a.remove('logintoken');
+  const res = await isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_7___default()('https://prelude.eurobrake.net/logout', {
+    credentials: 'include'
+  });
+  const data = await res.json().catch(error => console.log(error));
+  console.log('logout', data); // To trigger the event listener we save some random data into the `logout` key
 
-  window.localStorage.setItem("logout", _babel_runtime_corejs2_core_js_date_now__WEBPACK_IMPORTED_MODULE_2___default()());
-  next_router__WEBPACK_IMPORTED_MODULE_4___default.a.push("/login");
+  await window.localStorage.setItem("logout", _babel_runtime_corejs2_core_js_date_now__WEBPACK_IMPORTED_MODULE_2___default()());
+  await next_router__WEBPACK_IMPORTED_MODULE_4___default.a.push("/login");
 }; // IF LOGGED IN/ HAS TOKEN RETURN THE COMPONENT 
 
 const withAuthSync = WrappedComponent => {
@@ -557,15 +578,18 @@ const withAuthSync = WrappedComponent => {
     return __jsx(WrappedComponent, Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_1__["default"])({}, props, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 63
+        lineNumber: 88
       },
       __self: undefined
     }));
   };
 
   Wrapper.getInitialProps = async ctx => {
-    const logintoken = auth(ctx);
+    const logintoken = auth(ctx); // ! AUTH
+
+    console.log('down to wrap your components', 'logintoken authors auth sync ', logintoken);
     const componentProps = WrappedComponent.getInitialProps && (await WrappedComponent.getInitialProps(ctx));
+    console.log('withauthsync', 'ctx => ', ctx, 'logintoken => ', logintoken);
     return Object(_babel_runtime_corejs2_helpers_esm_objectSpread__WEBPACK_IMPORTED_MODULE_0__["default"])({}, componentProps, {
       logintoken
     });
