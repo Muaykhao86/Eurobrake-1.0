@@ -48,7 +48,7 @@ try{    const apiUrl = 'https://prelude.eurobrake.net/submit';
         if(data.status === 'success') {           
         this.setState({formData: data});
         console.log({data});
-        console.log('stringify',JSON.stringyfy(data));
+        console.log('stringify',JSON.stringify(data));
         console.log('parse',JSON.parse(data));
         
     }else{

@@ -4,7 +4,6 @@ import { Map, GoogleApiWrapper, Marker } from 'google-maps-react';
 
 
 const mapStyles = {
-    position: 'fixed',
     bottom: '2rem',
     right: '-4rem',
     width: '40rem',
@@ -28,14 +27,16 @@ export class MapContainer extends Component {
     }
 
     return (
+      <div style={mapStyles}>
         <Map ref={this.myRef}
           google={this.props.google}
-          style={mapStyles}
+          
           zoom={8}
           initialCenter={{ lat: 41.409588, lng: 2.219364}}  //Center of map is EB
         >
         <Marker position={{lat: 41.409588, lng: 2.219364}} /> 
         </Map>
+      </div>
     )
   }
 }
