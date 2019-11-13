@@ -44,10 +44,12 @@ try{    const apiUrl = 'https://prelude.eurobrake.net/submit';
         const response = await fetch(apiUrl, {
             credentials: 'include',
         });
-        const data = await response;
+        const data = await response.json();
         if(data.status === 'success') {           
         this.setState({formData: data});
-        console.log(data);
+        console.log({data});
+        console.log('stringify',JSON.stringyfy(data));
+        console.log('parse',JSON.parse(data));
         
     }else{
         let error = new Error(data.error)
