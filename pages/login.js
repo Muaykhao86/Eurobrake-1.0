@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import styled from 'styled-components';
 import fetch from 'isomorphic-unfetch';
-import { login } from '../utils/auth';
+import { login, logout } from '../utils/auth';
 
 
 
@@ -96,7 +96,13 @@ render(){
         return (
          <DemoDiv onSubmit={this.onSubmit}>
             <Demo>
-
+            { form.logintoken ? (
+            <div className="">
+            <h1>You are already logged in</h1>
+            <button onClick={logout}>logout</button>
+            </div>    
+            ) : (
+            <div className="">
             <div className="">
                 <label htmlFor="label">
                     Username
@@ -117,8 +123,11 @@ render(){
                 // {form[1].name}  
                 onChange={this.saveToState} value={this.state.password}/>
             </div>
-            </Demo>
             <input type="submit" value="Submit"/>
+            </div>
+            )
+            }
+            </Demo>
         </DemoDiv>
         )
     }
