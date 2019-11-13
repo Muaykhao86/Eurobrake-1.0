@@ -3,7 +3,7 @@ import Router from 'next/router';
 import fetch from 'isomorphic-unfetch';
 import styled from 'styled-components';
 import Form from "react-jsonschema-form";
-import { withAuthSync, logout } from '../utils/auth'
+import { withAuthSync, logout, login } from '../utils/auth'
 import cookies from 'next-cookies';
 
 
@@ -39,17 +39,21 @@ class AuthorsArea extends Component {
     getAbstractForm = async (e) => {
         e.preventDefault()
         console.log('click');
+         const {logintoken} = cookies(ctx);
 
 try{    const apiUrl = 'https://prelude.eurobrake.net/submit';
         const response = await fetch(apiUrl, {
             credentials: 'include',
+             headers: {
+            Authorization: `Bearer ${logintoken}`,
+      }
         });
         const data = await response.json();
         if(data.status === 'success') {           
         this.setState({formData: data});
         console.log({data});
         console.log('stringify',JSON.stringify(data.form));
-        console.log('parse',JSON.parse(data.form[0]));
+        
         
     }else{
         let error = new Error(data.error)
@@ -107,7 +111,10 @@ AuthorsArea.getInitialProps = async ctx => {
             : ctx.res.writeHead(301, { Location: '/login' })
     try {
         const response = await fetch(apiUrl, {
-            credentials: 'include'
+            credentials: 'include',
+             headers: {
+            Authorization: `Bearer ${logintoken}`,
+      }
         });
         const data = await response.json();
         console.log('Authors response Data =>', data.status, data);
@@ -136,6 +143,3 @@ export default withAuthSync(AuthorsArea)
 // *
 // todo
 // //
-    //          headers: {
-    //         Authorization: JSON.stringify({ logintoken }) // ! WONT ALLOW DUE TO SOME HEADER PROPERTY
-    //   }

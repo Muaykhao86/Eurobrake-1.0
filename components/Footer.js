@@ -18,46 +18,35 @@ const FooterBar = styled.div`
         padding: .2rem;
         min-width: 30rem;
         
-        /* border: 1px solid black; */
-        
-        /* background-color:salmon; */
-        
         display: flex;
         flex-flow: column;
-        /* align-items: center; */
     }
     .ftr_container-2{
         padding: .2rem;
         min-width: 20rem;
-        /* border: 1px solid black; */
-        
-        /* background-color:orangered; */
-        
+        min-height: 20rem;
+       
         display: flex;
         flex-flow: column;
+        justify-content: space-between;
         align-items: center;
     }
     .ftr_container-3{
-        /* padding: .2rem;
-        min-width: 15rem; */
-        /* border: 1px solid black; */
-        
-        /* background-color:goldenrod; */
-        
+   
         display: flex;
         flex-flow: column;
         align-items: center;
        
     }
     .ftr_newsletter-box{
-        padding: 1rem;
+        padding-bottom: 1rem;
         min-width: 40rem;
         /* border: 1px solid black; */
         
         /* background-color:steelblue; */
         
         display: flex;
-        flex: 1;
+        justify-content: space-between;
        
 
     }
@@ -73,16 +62,25 @@ const FooterBar = styled.div`
         flex-flow: column;
     }
     .ftr_sponsor-box{
+        background-color: white;
         padding: 1rem;
-        min-width: 40rem;
+        max-width: 40rem;
         border: 1px solid white;
         
         /* background-color: hotpink; */
-        min-height: 25rem;
+        height: 25rem;
         
         display: flex;
-        flex-flow: column wrap;
+        flex-flow: wrap;
+    
+    .sponsor{
+        margin: 1rem 1rem;
+        cursor: pointer;
     }
+
+    }
+
+
     .ftr_container-7{
         display: flex;
         position: relative;
@@ -96,11 +94,15 @@ const FooterBar = styled.div`
         
     }
 
+
+
+    
     a{
         color: ${props => props.theme.white};
         text-transform: uppercase;
         font-family: ${props => props.theme.MPBold};
         font-size: 2rem;
+        
     }
 
     h1{
@@ -109,13 +111,13 @@ const FooterBar = styled.div`
     }
 
     input{
-        
+        width: 65%;
         margin-left: auto;
     }
 
     label{
         font-family: ${props => props.theme.MPBold};
-        font-size: 1.6rem;
+        font-size: 2rem;
         text-transform: uppercase;
     }
 
@@ -126,19 +128,39 @@ function Footer() {
     return (
         <FooterBar>
             <div className="ftr_container-1">
-                <h1>CONFIRMED EUROBRAKE 2020 SPONSORS</h1>
-                <div className="ftr_sponsor-box">SPONSOR BOX</div>
+                <h1>CONFIRMED EUROBRAKE 2020 SPONSORS</h1>      // ! STILL NEED TO ADJUST SIZING ETC
+                <div className="ftr_sponsor-box">
+                    <div className="sponsor"><a href="http://www.applusidiada.com/en/"><img src="https://www.eurobrake.net/res/display/default/chrome/logos/applus-idiada2.png" alt="" style={{maxHeight: '5rem', width: '5rem'}}/></a></div>
+                    <div className="sponsor"><a href="http://www.applusidiada.com/en/"><img src="https://www.eurobrake.net/res/display/default/chrome/logos/itt.png" alt="" style={{maxHeight: '5rem', width: '5rem'}}/></a></div>
+                    <div className="sponsor"><a href="http://www.applusidiada.com/en/"><img src="https://www.eurobrake.net/res/display/default/chrome/logos/horiba2.png" alt="" style={{maxHeight: '5rem', width: '5rem'}}/></a></div>
+                    <div className="sponsor"><a href="http://www.applusidiada.com/en/"><img src="https://www.eurobrake.net/res/display/default/chrome/logos/nof2.png" alt="" style={{maxheight: '5rem', width: '9rem'}}/></a></div>
+                    <div className="sponsor"><a href="http://www.applusidiada.com/en/"><img src="https://www.eurobrake.net/res/display/default/chrome/logos/itaprochim3.png" alt="" style={{maxHeight: '5rem', width: '9rem'}}/></a></div>
+                    <div className="sponsor"><a href="http://www.applusidiada.com/en/"><img src="https://www.eurobrake.net/res/display/default/chrome/logos/link3.png" alt="" style={{maxHeight: '5rem', width: '5rem'}}/></a></div>
+                    <div className="sponsor"><a href="http://www.applusidiada.com/en/"><img src="https://www.eurobrake.net/res/display/default/chrome/logos/fagorederlangroup.png" alt="" style={{maxHeight: '5rem', width: '9rem'}}/></a></div>
+                    <div className="sponsor"><a href="http://www.applusidiada.com/en/"><img src="https://www.eurobrake.net/res/display/default/chrome/logos/lapinus2.png" alt="" style={{maxHeight: '5rem', width: '5rem'}}/></a></div>
+                    <div className="sponsor"><a href="http://www.applusidiada.com/en/"><img src="https://www.eurobrake.net/res/display/default/chrome/logos/sadeca2.png" alt="" style={{maxHeight: '5rem', width: '5rem'}}/></a></div>
+                    <div className="sponsor"><a href="http://www.applusidiada.com/en/"><img src="https://www.eurobrake.net/res/display/default/chrome/logos/alroko.png" alt="" style={{maxHeight: '5rem', width: '5rem'}}/></a></div>
+                </div>
             </div>
             <div className="ftr_container-2">
-                <a href="">links</a>
-                <a href="">links</a>
-                <a href="">links</a>
-                <a href="">links</a>
-                <a href="">links</a>
+                <a href="https://www.eurobrake.net/privacy">Privacy Policy</a>
+                <a href="https://www.eurobrake.net/disclaimer">Disclaimer</a>
+                <a href="">Contact Us</a>
+                {/* <a href="">Site Map</a>
+                <a href="">links</a> */}
             <div className="ftr_container-7">
-                <a className="social" href="">F</a>
-                <a  className="social" href="">T</a>
-                <a  className="social" href="">L</a>
+                <a className="social" href="http://www.linkedin.com/groups/EuroBrake-4282205?trk=myg_ugrp_ovr">
+                <img src="/images/Linkedin@2000x.png" alt="Linkedin" style={{width: '5rem'}}/>
+                </a>
+                <a  className="social" href="http://www.facebook.com/pages/FISITA-International-Federation-of-Automotive-Engineering-Societies/123022704532">
+                    <img src="/images/Facebook@2000x.png" alt="Facebook" style={{width: '5rem'}}/>
+                </a>
+                <a  className="social" href="http://twitter.com/FISITAhq">
+                    <img src="/images/Twitter@2000x.png" alt="Twitter" style={{width: '5rem'}}/>
+                </a>
+                <a  className="social" href="https://www.flickr.com/photos/eurobrake/albums/72157681368290774">
+                    <img src="/images/flickr-icon@2000w.png" alt="Flickr" style={{width: '5rem'}}/>
+                </a>
             </div>
             </div>
             <div className="ftr_container-3">

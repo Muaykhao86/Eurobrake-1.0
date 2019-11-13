@@ -49,12 +49,15 @@ return logintoken;
 // LOGOUT FUNCTION
 
 export const logout = async () => {
- 
+  const {logintoken} = cookies(ctx);
   await cookie.remove('logintoken')
  
   const res = await fetch('https://prelude.eurobrake.net/logout',
     {
-      credentials: 'include'
+      credentials: 'include',
+       headers: {
+            Authorization: `Bearer ${logintoken}`,
+      }
     });
   const data = await res.json().catch(error => console.log(error));
   console.log('logout', data);
