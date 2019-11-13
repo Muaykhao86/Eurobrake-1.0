@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
 import { Map, GoogleApiWrapper, Marker } from 'google-maps-react';
-import { relative } from 'path';
-import { Z_FIXED } from 'zlib';
+
 
 
 const mapStyles = {
-    position: 'fixed';
+    position: 'fixed',
     bottom: '2rem',
     right: '-4rem',
     width: '40rem',
