@@ -31,7 +31,7 @@ export class MapContainer extends Component {
         <Map ref={this.myRef}
           google={this.props.google}
           
-          zoom={8}
+          zoom={14}
           initialCenter={{ lat: 41.409588, lng: 2.219364}}  //Center of map is EB
         >
         <Marker position={{lat: 41.409588, lng: 2.219364}} /> 
