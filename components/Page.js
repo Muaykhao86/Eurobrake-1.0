@@ -69,7 +69,7 @@ const GlobalStyle = createGlobalStyle`
         /* To set the footer at the bottom we have to leave space for it in the parent container */
         position: relative;
         min-height: 100%;
-        padding-bottom: 30rem;
+        padding-bottom: 40rem;
         font-family: ${props => props.theme.MPRegular};
         color: black;
         line-height: 1.6;

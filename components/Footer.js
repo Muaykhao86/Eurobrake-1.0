@@ -12,11 +12,12 @@ const FooterBar = styled.div`
     align-items: flex-end;
     position: absolute;
     bottom: 0;
-    padding: 3rem;
+    padding: 2rem;
 
     .ftr_container-1{
         padding: .2rem;
         min-width: 30rem;
+        
         /* border: 1px solid black; */
         
         /* background-color:salmon; */
@@ -48,16 +49,17 @@ const FooterBar = styled.div`
         align-items: center;
        
     }
-    .ftr_container-4{
+    .ftr_newsletter-box{
         padding: 1rem;
-        min-width: 30rem;
+        min-width: 40rem;
         /* border: 1px solid black; */
         
         /* background-color:steelblue; */
         
         display: flex;
-        justify-content: space-around;
-        align-items: center;
+        flex: 1;
+       
+
     }
     .ftr_container-5{
         padding: 1rem;
@@ -70,13 +72,13 @@ const FooterBar = styled.div`
         display: flex;
         flex-flow: column;
     }
-    .ftr_container-6{
+    .ftr_sponsor-box{
         padding: 1rem;
         min-width: 40rem;
         border: 1px solid white;
         
         /* background-color: hotpink; */
-        min-height: 20rem;
+        min-height: 25rem;
         
         display: flex;
         flex-flow: column wrap;
@@ -107,7 +109,7 @@ const FooterBar = styled.div`
     }
 
     input{
-        max-width: 70%;
+        
         margin-left: auto;
     }
 
@@ -125,7 +127,7 @@ function Footer() {
         <FooterBar>
             <div className="ftr_container-1">
                 <h1>CONFIRMED EUROBRAKE 2020 SPONSORS</h1>
-                <div className="ftr_container-6">SPONSOR BOX</div>
+                <div className="ftr_sponsor-box">SPONSOR BOX</div>
             </div>
             <div className="ftr_container-2">
                 <a href="">links</a>
@@ -141,7 +143,7 @@ function Footer() {
             </div>
             <div className="ftr_container-3">
 
-            <div className="ftr_container-4">
+            <div className="ftr_newsletter-box">
                 <label htmlFor="Newsletter">Newsletter</label>
                 <input type="email" name="Newsletter" id=""/>    
             </div>

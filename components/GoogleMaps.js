@@ -7,7 +7,7 @@ const mapStyles = {
     bottom: '2rem',
     right: '-4rem',
     width: '40rem',
-    height: '40rem',
+    height: '25rem',
 };
 
 // Dont know if the above dov will work, will have to test it when i get the api key => tbh dont evenm know if I need to set fixed with

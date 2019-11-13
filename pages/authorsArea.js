@@ -49,7 +49,7 @@ try{    const apiUrl = 'https://prelude.eurobrake.net/submit';
         this.setState({formData: data});
         console.log({data});
         console.log('stringify',JSON.stringify(data.form));
-        console.log('parse',JSON.parse(data.form));
+        console.log('parse',JSON.parse(data.form[0]));
         
     }else{
         let error = new Error(data.error)
