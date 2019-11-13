@@ -124,6 +124,7 @@ render(){
                 onChange={this.saveToState} value={this.state.password}/>
             </div>
             <input type="submit" value="Submit"/>
+            <button onClick={logout}>logout</button>
             </div>
             )
             }
