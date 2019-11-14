@@ -85,7 +85,7 @@ constructor(props) {
         console.log('login ok', data.status)
 
     return {
-        login: data
+        logintoken: logintoken
 }// todo CACHE DATA HERE
 
     }else{

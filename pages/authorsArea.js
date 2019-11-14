@@ -5,6 +5,7 @@ import styled from 'styled-components';
 import { withAuthSync, logout, login } from '../utils/auth'
 import cookies from 'next-cookies';
 import cookie from 'js-cookie';
+import { type } from 'os';
 
 
 
@@ -80,7 +81,25 @@ try{    const apiUrl = 'https://prelude.eurobrake.net/submit';
         </h1>
                 <button onClick={this.getAbstractForm}>Submit a Abstract</button>
                 <button onClick={logout}>logout</button>
-               
+                {this.state.formdata &&
+              this.state.formdata.map(component => {
+                 
+                        <div>
+                        <title>component.title</title>
+                        <type>component.type</type>
+                        <options>
+                            component.options
+                        </options>
+                        <name>component.name</name>
+                        <default>component.default</default>
+                        </div>
+
+
+
+
+                    }
+                )
+                }
                 
             </DemoDiv>
         )
