@@ -48,7 +48,7 @@ return logintoken;
 
 // LOGOUT FUNCTION
 
-export const logout = async () => {
+export const logout = async (ctx) => {
   const {logintoken} = cookies(ctx);
   await cookie.remove('logintoken')
  
