@@ -104,8 +104,8 @@ constructor(props) {
 
 
 render(){
-    
-    const {form, logintoken} = this.props.form;
+    const logintoken = this.props.logintoken;
+    const {form} = this.props.form;
   console.log({form, logintoken})
         return (
          <DemoDiv onSubmit={this.onSubmit}>
