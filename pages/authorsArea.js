@@ -102,7 +102,6 @@ AuthorsArea.getInitialProps = async ctx => {
 
     const {logintoken} = cookies(ctx);
     const allCookies = cookies(ctx);
-    console.log({logintoken}, 'getIProps');
     console.log({allCookies});
     const apiUrl = 'https://prelude.eurobrake.net/dashboard ';
     const redirectOnError = () =>
@@ -110,20 +109,21 @@ AuthorsArea.getInitialProps = async ctx => {
             ? Router.push('/login')
             : ctx.res.writeHead(301, { Location: '/login' })
     try {
+    console.log({logintoken}, 'getIProps right before fetch call')
         const response = await fetch(apiUrl, {
             credentials: 'include',
              headers: {
             Authorization: 'Bearer ' + logintoken,
       }
         })
-        const data = await response.json()
         console.log('Authors response Data =>', data.status, data);
         if(response.ok){
+        const data = await response.json()
             console.log('res.ok', data)
-        }
-        if(data.status === 'success') {
-            console.log('papers', data.papers)
             return {authorData:  data }
+        // }
+        // if(data.status === 'success') {
+        //     console.log('papers', data.papers)
 
         }else{
             console.log('not reading success')

@@ -10,7 +10,7 @@ import fetch from 'isomorphic-unfetch';
 
 export const login = ({logintoken} ) => {
   cookie.set('logintoken', logintoken, { expires: 1 })
-  Router.push('/authorsArea')
+  // Router.push('/authorsArea')
 }
 
 // CHECK TOKEN, IF WE HAVE ONE RETURN TOKEN, IF WE DONT REDIRECT TO LOGIN PAGE
