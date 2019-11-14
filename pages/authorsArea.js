@@ -36,11 +36,11 @@ class AuthorsArea extends Component {
 
     }
 
-    getAbstractForm = async (e, ctx) => {
+    getAbstractForm = async (e) => {
         e.preventDefault()
         console.log('click');
          const {logintoken} = cookies(ctx);
-        console.log({ctx})
+        console.log([logintoken])
 try{    const apiUrl = 'https://prelude.eurobrake.net/submit';
         const response = await fetch(apiUrl, {
             credentials: 'include',

@@ -77,7 +77,7 @@ constructor(props) {
         console.log('login ok', data.status)
 
     return {
-        form: data
+        login: data
 }// todo CACHE DATA HERE
 
     }else{
@@ -97,12 +97,12 @@ constructor(props) {
 
 render(){
     
-    const {form} = this.props.form;
-  console.log({form})
+    const {form, login} = this.props.form;
+  console.log({form, login})
         return (
          <DemoDiv onSubmit={this.onSubmit}>
             <Demo>
-            { form.logintoken ? (
+            {login.logintoken ? (
             <div className="">
             <h1>You are already logged in</h1>
             <button onClick={logout}>logout</button>
