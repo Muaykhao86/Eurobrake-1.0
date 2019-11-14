@@ -110,7 +110,7 @@ render(){
         return (
          <DemoDiv onSubmit={this.onSubmit}>
             <Demo>
-            {login ? (
+            {logintoken ? (
             <div className="">
             <h1>You are already logged in</h1>
             <button onClick={logout}>logout</button>
