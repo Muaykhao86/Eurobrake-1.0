@@ -52,15 +52,15 @@ export const logout = async () => {
   const {logintoken} = cookies(ctx);
   await cookie.remove('logintoken')
  
-  const res = await fetch('https://prelude.eurobrake.net/logout',
-    {
-      credentials: 'include',
-       headers: {
-            Authorization: `Bearer ${logintoken}`,
-      }
-    });
-  const data = await res.json().catch(error => console.log(error));
-  console.log('logout', data);
+  // const res = await fetch('https://prelude.eurobrake.net/logout',
+  //   {
+  //     credentials: 'include',
+  //      headers: {
+  //           Authorization: `Bearer ${logintoken}`,
+  //     }
+  //   });
+  // const data = await res.json().catch(error => console.log(error));
+  // console.log('logout', data);
   // To trigger the event listener we save some random data into the `logout` key
   await window.localStorage.setItem("logout", Date.now());
 

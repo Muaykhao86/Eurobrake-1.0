@@ -113,11 +113,14 @@ AuthorsArea.getInitialProps = async ctx => {
         const response = await fetch(apiUrl, {
             credentials: 'include',
              headers: {
-            Authorization: `Bearer ${logintoken}`,
+            Authorization: 'Bearer' + logintoken,
       }
         });
         const data = await response.json();
         console.log('Authors response Data =>', data.status, data);
+        if(response.ok){
+            console.log('res.ok', data)
+        }
         if(data.status === 'success') {
             console.log('papers', data.papers)
             return {authorData:  data }

@@ -150,7 +150,7 @@ function Footer() {
                 <a href="">links</a> */}
             <div className="ftr_container-7">
                 <a className="social" href="http://www.linkedin.com/groups/EuroBrake-4282205?trk=myg_ugrp_ovr">
-                <img src="/images/Linkedin@2000x.png" alt="Linkedin" style={{width: '5rem'}}/>
+                <img src="/images/LinkedIn@2000x.png" alt="Linkedin" style={{width: '5rem'}}/>
                 </a>
                 <a  className="social" href="http://www.facebook.com/pages/FISITA-International-Federation-of-Automotive-Engineering-Societies/123022704532">
                     <img src="/images/Facebook@2000x.png" alt="Facebook" style={{width: '5rem'}}/>
