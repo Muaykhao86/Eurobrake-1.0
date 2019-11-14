@@ -91,8 +91,9 @@ constructor(props) {
 
 
 render(){
-  console.log(this.props)
+    
     const {form} = this.props.form;
+  console.log({form})
         return (
          <DemoDiv onSubmit={this.onSubmit}>
             <Demo>

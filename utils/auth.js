@@ -18,6 +18,7 @@ export const login = ({logintoken} ) => {
 export const auth = ctx => {
 
   const { logintoken } = cookies(ctx);
+  console.log('auth', logintoken)
     // If there's no token, it means the user is not logged in.
   if (!logintoken) {
     if (ctx.req) {

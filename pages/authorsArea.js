@@ -116,9 +116,9 @@ AuthorsArea.getInitialProps = async ctx => {
             Authorization: 'Bearer ' + logintoken,
       }
         })
+        const data = await response.json()
         console.log('Authors response Data =>', data.status, data);
         if(response.ok){
-        const data = await response.json()
             console.log('res.ok', data)
             return {authorData:  data }
         // }
