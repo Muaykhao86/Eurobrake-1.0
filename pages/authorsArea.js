@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import Router from 'next/router';
 import fetch from 'isomorphic-unfetch';
 import styled from 'styled-components';
-import Form from "react-jsonschema-form";
 import { withAuthSync, logout, login } from '../utils/auth'
 import cookies from 'next-cookies';
 import cookie from 'js-cookie';
@@ -53,7 +52,7 @@ try{    const apiUrl = 'https://prelude.eurobrake.net/submit';
         const data = await response.json();
         if(data.status === 'success') {           
         this.setState({formData: data});
-        console.log({data});
+        console.log(data.form);
         console.log('stringify',JSON.stringify(data.form));
         
         
@@ -70,13 +69,6 @@ try{    const apiUrl = 'https://prelude.eurobrake.net/submit';
     }
     }
 
-    fillSchema = () => {
-        const schema = {};
-        this.state.formData.map(obj => schema.push(obj))
-        console.log(schema);
-    }
-
-    
     render() {
         
       
@@ -87,11 +79,7 @@ try{    const apiUrl = 'https://prelude.eurobrake.net/submit';
         </h1>
                 <button onClick={this.getAbstractForm}>Submit a Abstract</button>
                 <button onClick={logout}>logout</button>
-                {/* {this.state.formData && 
-                    <Form schema={this.state.formData}/>
-                
-                
-                } */}
+               
                 
             </DemoDiv>
         )
@@ -124,9 +112,9 @@ AuthorsArea.getInitialProps = async ctx => {
         if(response.ok){
             console.log('res.ok', data)
             return {authorData:  data }
-        // }
-        // if(data.status === 'success') {
-        //     console.log('papers', data.papers)
+        }
+        if(data.status === 'success') {
+            console.log('papers', data.papers)
 
         }else{
             console.log('not reading success')
