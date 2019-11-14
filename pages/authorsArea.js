@@ -112,6 +112,7 @@ AuthorsArea.getInitialProps = async ctx => {
     console.log({logintoken}, 'getIProps right before fetch call')
         const response = await fetch(apiUrl, {
             credentials: 'include',
+            cache: 'no-cache',
              headers: {
             Authorization: 'Bearer ' + logintoken,
       }
