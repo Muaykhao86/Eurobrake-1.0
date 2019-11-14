@@ -5,6 +5,8 @@ import styled from 'styled-components';
 import Form from "react-jsonschema-form";
 import { withAuthSync, logout, login } from '../utils/auth'
 import cookies from 'next-cookies';
+import cookie from 'js-cookie';
+
 
 
 const DemoDiv = styled.form`
@@ -39,7 +41,7 @@ class AuthorsArea extends Component {
     getAbstractForm = async (e) => {
         e.preventDefault()
         console.log('click');
-         const {logintoken} = cookies(ctx);
+         const {logintoken} = cookie.get();
         console.log([logintoken])
 try{    const apiUrl = 'https://prelude.eurobrake.net/submit';
         const response = await fetch(apiUrl, {
