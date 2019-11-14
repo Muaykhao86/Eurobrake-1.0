@@ -104,7 +104,7 @@ constructor(props) {
 
 
 render(){
-    const logintoken = this.props.logintoken;
+    const logintoken = this.props.form.logintoken;
     const {form} = this.props.form;
   console.log({form, logintoken})
         return (
