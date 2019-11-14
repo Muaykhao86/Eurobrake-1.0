@@ -448,7 +448,7 @@ function Footer() {
     },
     __self: this
   }, __jsx("img", {
-    src: "/images/Linkedin@2000x.png",
+    src: "/images/LinkedIn@2000x.png",
     alt: "Linkedin",
     style: {
       width: '5rem'
