@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import styled from 'styled-components';
 import fetch from 'isomorphic-unfetch';
+import cookie from 'js-cookie';
 import { login, logout } from '../utils/auth';
 
 
@@ -24,6 +25,8 @@ const Demo = styled.h1`
 
 export default class Login extends Component {
     static getInitialProps = async function () {
+         const {logintoken} = cookie.get();
+
         const res = await fetch('https://prelude.eurobrake.net/login',{
              credentials: 'include',
              headers: {
