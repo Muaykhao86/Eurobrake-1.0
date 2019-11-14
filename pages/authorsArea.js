@@ -42,7 +42,7 @@ class AuthorsArea extends Component {
         e.preventDefault()
         console.log('click');
          const {logintoken} = cookie.get();
-        console.log([logintoken])
+        console.log(logintoken)
 try{    const apiUrl = 'https://prelude.eurobrake.net/submit';
         const response = await fetch(apiUrl, {
             credentials: 'include',
