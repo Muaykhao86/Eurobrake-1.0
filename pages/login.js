@@ -75,6 +75,11 @@ constructor(props) {
         const {logintoken} = await data;
         await login({logintoken})
         console.log('login ok', data.status)
+
+    return {
+        form: data
+}// todo CACHE DATA HERE
+
     }else{
         let error = new Error(data.error)
         error.response = response
