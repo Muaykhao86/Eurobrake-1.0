@@ -25,126 +25,126 @@ const Demo = styled.h1`
 
 export default class Login extends Component {
     static getInitialProps = async function () {
-         const {logintoken} = cookie.get();
+        const { logintoken } = cookie.get();
 
-        const res = await fetch('https://prelude.eurobrake.net/login',{
-             credentials: 'include',
-             headers: {
-            Authorization: `Bearer ${logintoken}`,
-      }
+        const res = await fetch('https://prelude.eurobrake.net/login', {
+            credentials: 'include',
+            headers: {
+                Authorization: `Bearer ${logintoken}`,
+            }
         });
         const data = await res.json();
-        
+
         return {
             form: data
         };
     };
 
-   
-constructor(props) {
-    super(props);
-    this.state={
-        username: '',
-        password: '',
-        userLoggedIn: true,
-        error: ''
+
+    constructor(props) {
+        super(props);
+        this.state = {
+            username: '',
+            password: '',
+            userLoggedIn: true,
+            error: ''
+        }
     }
-}
 
     saveToState = (e) => {
         this.setState({ [e.target.name]: e.target.value });
     }
-   
 
-    onSubmit = async (e) =>{
-    e.preventDefault()
-    console.log('on submit click');
-        
-    const {authorLogin, username, password, error} = this.state;
-    // const apiUrl = authorLogin ? 'https://prelude.eurobrake.net/login' : '' ;
-// action="//2019.eurobrake.net/exhibition/exhibitors/login" SHOULD BE LOGIN FORM FOR EXHIBITORS
+
+    onSubmit = async (e) => {
+        e.preventDefault()
+        console.log('on submit click');
+
+        const { authorLogin, username, password, error } = this.state;
+        // const apiUrl = authorLogin ? 'https://prelude.eurobrake.net/login' : '' ;
+        // action="//2019.eurobrake.net/exhibition/exhibitors/login" SHOULD BE LOGIN FORM FOR EXHIBITORS
         const formData = {
             username: username,
             password: password,
         }
 
-    
-    try{
-        const response = await fetch('https://prelude.eurobrake.net/login', {
+
+        try {
+            const response = await fetch('https://prelude.eurobrake.net/login', {
                 method: 'POST',
                 credentials: 'include', // ? Is allowing now?? 
                 body: JSON.stringify(formData)
             });
-        const data = await response.json();
+            const data = await response.json();
 
-       console.log({data})
-        
-        if(data.status === 'success') {           
-        const {logintoken} = await data;
-        await login({logintoken})
-        console.log('login ok', data.status)
-        this.setState(prev => ({userLoggedIn : !prev}))
+            console.log({ data })
 
-    return {
-        logintoken: logintoken
-}// todo CACHE DATA HERE
+            if (data.status === 'success') {
+                const { logintoken } = await data;
+                await login({ logintoken })
+                console.log('login ok', data.status)
+                this.setState(prev => ({ userLoggedIn: !prev }))
 
-    }else{
-        let error = new Error(data.error)
-        error.response = response
-       throw error
-        }
-    }catch (error){
-        console.error(
-            'Failed to login, please try again', error
+                return {
+                    logintoken: logintoken
+                }// todo CACHE DATA HERE
+
+            } else {
+                let error = new Error(data.error)
+                error.response = response
+                throw error
+            }
+        } catch (error) {
+            console.error(
+                'Failed to login, please try again', error
             )
-       this.setState({error: error.message});
+            this.setState({ error: error.message });
+        }
+
     }
 
-}
 
-
-render(){
-    const {uesrLoggedIn} = this.state;
-    const {form} = this.props.form;
-  console.log({form, logintoken})
+    render() {
+        const { uesrLoggedIn } = this.state;
+        const { form } = this.props.form;
+        console.log({ form  })
         return (
-         <DemoDiv onSubmit={this.onSubmit}>
-            <Demo>
-            {userLoggedIn ? (
-            <div className="">
-            <h1>You are already logged in</h1>
-            <button onClick={logout}>logout</button>
-            </div>    
-            ) : (
-            <div className="">
-            <div className="">
-                <label htmlFor="label">
-                    Username
+            <DemoDiv onSubmit={this.onSubmit}>
+                <Demo>
+                    {userLoggedIn ? (
+                        <div className="">
+                            <h1>You are already logged in</h1>
+                            <button onClick={logout}>logout</button>
+                        </div>
+                    ) : (
+                            <div className="">
+                                <div className="">
+                                    <label htmlFor="label">
+                                        Username
                     {/* {form[0].label} */}
-                    </label>
-                <input type="text" 
-                name="username"
-                // {form[0].name} 
-                 onChange={this.saveToState} value={this.state.username}/>
-            </div>
-            <div className="">    
-                <label htmlFor="label">
-                    Password
+                                    </label>
+                                    <input type="text"
+                                        name="username"
+                                        // {form[0].name} 
+                                        onChange={this.saveToState} value={this.state.username} />
+                                </div>
+                                <div className="">
+                                    <label htmlFor="label">
+                                        Password
                     {/* {form[1].label} */}
-                    </label>
-                <input type="password" 
-                name="password"
-                // {form[1].name}  
-                onChange={this.saveToState} value={this.state.password}/>
-            </div>
-            <input type="submit" value="Submit"/>
-            <button onClick={logout}>logout</button>
-            </div>
-            )
-            }
-            </Demo>
-        </DemoDiv>
+                                    </label>
+                                    <input type="password"
+                                        name="password"
+                                        // {form[1].name}  
+                                        onChange={this.saveToState} value={this.state.password} />
+                                </div>
+                                <input type="submit" value="Submit" />
+                                <button onClick={logout}>logout</button>
+                            </div>
+                        )
+                    }
+                </Demo>
+            </DemoDiv>
         )
     }
 }
