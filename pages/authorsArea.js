@@ -5,7 +5,6 @@ import styled from 'styled-components';
 import { withAuthSync, logout, login } from '../utils/auth'
 import cookies from 'next-cookies';
 import cookie from 'js-cookie';
-import login from '../components/login';
 import Login from '../components/login';
 
 
