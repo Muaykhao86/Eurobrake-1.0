@@ -26,7 +26,7 @@ const Demo = styled.h1`
 export default class Login extends Component {
     static getInitialProps = async function () {
         const { logintoken } = cookie.get();
-
+        {logintoken ? this.setState(prev => ({userLoggedIn: !prev})) : null}
         const res = await fetch('https://prelude.eurobrake.net/login', {
             credentials: 'include',
             headers: {
