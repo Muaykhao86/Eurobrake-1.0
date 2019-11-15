@@ -118,12 +118,10 @@ AuthorsArea.getInitialProps = async ctx => {
 
     const { logintoken } = cookies(ctx);
     if (logintoken){
-     return {
-         login(logintoken)
-         }
+     return login(logintoken)
      
     }else{
-        return {}
+        return 
     }
     }
 
