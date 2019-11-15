@@ -117,12 +117,17 @@ AuthorsArea.getInitialProps = async ctx => {
     // frontend in the `props`.
 
     const { logintoken } = cookies(ctx);
-    if (logintoken) return { login(logintoken) }
-     
-    else{
-        return {}
+    if (logintoken){
+    if (ctx.req) {
+      // If `ctx.req` is available it means we are on the server.
+      ctx.res.writeHead(302, { Location: '/authorsAreaDash' })
+      ctx.res.end()
+    } else {
+      // This should only happen on client.
+      Router.push('/authorsAreaDash')
     }
     }
+}
 
 
 
