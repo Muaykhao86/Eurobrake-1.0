@@ -29,7 +29,7 @@ const Demo = styled.h1`
 class AuthorsArea extends Component {
  static async getInitialProps({ res }) {
      
-    const { logintoken } = cookies(ctx);
+    const { logintoken } = cookie.get();
     if (logintoken){
     if (res) {
       res.writeHead(302, {
