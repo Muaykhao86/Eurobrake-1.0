@@ -21,14 +21,14 @@ export const auth = ctx => {
   console.log('auth', logintoken)
     // If there's no token, it means the user is not logged in.
   if (!logintoken) {
-    if (ctx.req) {
-      // If `ctx.req` is available it means we are on the server.
-      ctx.res.writeHead(302, { Location: '/login' })
-      ctx.res.end()
-    } else {
-      // This should only happen on client.
-      Router.push('/login')
-    }
+    // if (ctx.req) {
+    //   // If `ctx.req` is available it means we are on the server.
+    //   ctx.res.writeHead(302, { Location: '/login' })
+    //   ctx.res.end()
+    // } else {
+    //   // This should only happen on client.
+    //   Router.push('/login')
+    // }
   }
 
 return logintoken;
@@ -50,7 +50,7 @@ return logintoken;
 // LOGOUT FUNCTION
 
 export const logout = async (ctx) => {
-  const {logintoken} = cookies(ctx);
+  
   await cookie.remove('logintoken')
  
   // const res = await fetch('https://prelude.eurobrake.net/logout',

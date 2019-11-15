@@ -5,8 +5,8 @@ import styled from 'styled-components';
 import { withAuthSync, logout, login } from '../utils/auth'
 import cookies from 'next-cookies';
 import cookie from 'js-cookie';
-import { type } from 'os';
-
+import login from '../components/login';
+import Login from '../components/login';
 
 
 const DemoDiv = styled.form`
@@ -34,9 +34,19 @@ class AuthorsArea extends Component {
             hasForm: false,
             formData: undefined,
             error: '',
+            userLoggedIn: false,
         }
    
 
+    }
+
+    
+    componentDidMount = () => {
+    const {userLoggedIn} = this.state;
+       const {logintoken} = cookie.get();
+    console.log('cdm', logintoken)
+        logintoken && !userLoggedIn  ? this.setState(prev => ({
+            userLoggedIn: !prev })) : null
     }
 
     getAbstractForm = async (e) => {
@@ -88,15 +98,74 @@ try{    const apiUrl = 'https://prelude.eurobrake.net/submit';
 
     render() {
         
-      
-        return (
-            <DemoDiv>
+    const {userLoggedIn, hasForm} = this.state;
+    console.log({userLoggedIn, hasForm});
+        return 
+           {userLoggedIn ? 
+        (
+        <DemoDiv>
                 <h1>
                     you are logged In
-        </h1>
+                 </h1>
                 <button onClick={this.getAbstractForm}>Submit a Abstract</button>
                 <button onClick={logout}>logout</button>
-                <div className="form-container">
+        </DemoDiv> ) :
+        (
+        <DemoDiv>
+                <Login/>
+        </DemoDiv>
+        )
+           }
+    }
+}
+
+AuthorsArea.getInitialProps = async ctx => {
+    // We use `nextCookie` to get the cookie and pass the token to the
+    // frontend in the `props`.
+
+    const {logintoken} = cookies(ctx);
+    const apiUrl = 'https://prelude.eurobrake.net/dashboard ';
+    // const redirectOnError = () =>
+    //     process.browser
+    //         ? Router.push('/login')
+    //         : ctx.res.writeHead(301, { Location: '/login' })
+    try {
+    // console.log({logintoken}, 'getIProps right before fetch call')
+        const response = await fetch(apiUrl, {
+            credentials: 'include',
+            cache: 'no-cache',
+             headers: {
+            Authorization: 'Bearer ' + logintoken,
+      }
+        })
+        const data = await response.json()
+        // console.log('Authors response Data =>', data.status, data);
+        if(response.status === 'success'){
+            console.log('res.ok', data)
+            return {authorData:  data }
+        }
+       else{
+            console.log('not reading success')
+            // https://github.com/developit/unfetch#caveats
+            // return redirectOnError()
+        }
+    }catch(error){
+        // Implementation or Network error
+        console.log(error)
+        // return redirectOnError()
+    }
+
+}
+
+// export default withAuthSync(AuthorsArea)
+export default AuthorsArea;
+
+
+// !
+// ?
+// *
+// todo
+                {/* <div className="form-container">
                 <form>
                 {this.state.hasForm &&
                 
@@ -138,61 +207,5 @@ try{    const apiUrl = 'https://prelude.eurobrake.net/submit';
                 )
                 }
                 </form>
-                </div>
-                
-            </DemoDiv>
-        )
-    }
-}
-
-AuthorsArea.getInitialProps = async ctx => {
-    // We use `nextCookie` to get the cookie and pass the token to the
-    // frontend in the `props`.
-
-    const {logintoken} = cookies(ctx);
-    const allCookies = cookies(ctx);
-    console.log({allCookies});
-    const apiUrl = 'https://prelude.eurobrake.net/dashboard ';
-    const redirectOnError = () =>
-        process.browser
-            ? Router.push('/login')
-            : ctx.res.writeHead(301, { Location: '/login' })
-    try {
-    console.log({logintoken}, 'getIProps right before fetch call')
-        const response = await fetch(apiUrl, {
-            credentials: 'include',
-            cache: 'no-cache',
-             headers: {
-            Authorization: 'Bearer ' + logintoken,
-      }
-        })
-        const data = await response.json()
-        console.log('Authors response Data =>', data.status, data);
-        if(response.ok){
-            console.log('res.ok', data)
-            return {authorData:  data }
-        }
-        if(data.status === 'success') {
-            console.log('papers', data.papers)
-
-        }else{
-            console.log('not reading success')
-            // https://github.com/developit/unfetch#caveats
-            return redirectOnError()
-        }
-    }catch(error){
-        // Implementation or Network error
-        console.log(error)
-        return redirectOnError()
-    }
-
-}
-
-export default withAuthSync(AuthorsArea)
-
-
-// !
-// ?
-// *
-// todo
+                </div> */}
 // //

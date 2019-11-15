@@ -50,13 +50,7 @@ export default class Login extends Component {
         }
     }
 
-    componentDidMount = () => {
-       const {logintoken} = cookie.get();
-
-        logintoken ? this.setState(prev => ({
-            userLoggedIn: !prev })) : null
-
-    }
+   
 
     saveToState = (e) => {
         this.setState({ [e.target.name]: e.target.value });
@@ -79,22 +73,22 @@ export default class Login extends Component {
         try {
             const response = await fetch('https://prelude.eurobrake.net/login', {
                 method: 'POST',
-                credentials: 'include', // ? Is allowing now?? 
+                credentials: 'include', 
                 body: JSON.stringify(formData)
             });
             const data = await response.json();
 
-            console.log({ data })
+            // console.log({ data })
 
             if (data.status === 'success') {
-                const { logintoken } = await data;
+                const { logintoken } = data;
                 await login({ logintoken })
                 console.log('login ok', data.status)
                 this.setState(prev => ({ userLoggedIn: !prev }))
 
                 return {
                     logintoken: logintoken
-                }// todo CACHE DATA HERE
+                }
 
             } else {
                 let error = new Error(data.error)
@@ -128,7 +122,6 @@ export default class Login extends Component {
                                 <div className="">
                                     <label htmlFor="label">
                                         Username
-                    {/* {form[0].label} */}
                                     </label>
                                     <input type="text"
                                         name="username"
@@ -138,7 +131,6 @@ export default class Login extends Component {
                                 <div className="">
                                     <label htmlFor="label">
                                         Password
-                    {/* {form[1].label} */}
                                     </label>
                                     <input type="password"
                                         name="password"
@@ -158,4 +150,3 @@ export default class Login extends Component {
 
 
 
-// !!! NOTE IF I GO TO '/' IT GETS RID OF THE LOGGED IN COOKIE !!!
