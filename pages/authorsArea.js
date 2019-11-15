@@ -31,6 +31,7 @@ class AuthorsArea extends Component {
     constructor(props) {
         super(props);
         this.state =  {
+            hasForm: false,
             formData: undefined,
             error: '',
         }
@@ -53,6 +54,7 @@ try{    const apiUrl = 'https://prelude.eurobrake.net/submit';
         const data = await response.json();
         if(data.status === 'success') {           
         this.setState({formData: data.form});
+        this.setState(prev => ({hasForm: !prev}))
         console.log(data.form);
         console.log('stringify',JSON.stringify(data.form));
         console.log(data)
@@ -94,7 +96,7 @@ try{    const apiUrl = 'https://prelude.eurobrake.net/submit';
                 <button onClick={logout}>logout</button>
                 <div className="form-container">
                 <form>
-                {this.state.formdata &&
+                {this.state.hasForm &&
                 
 
               this.state.formdata.map(component => {

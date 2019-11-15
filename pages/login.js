@@ -46,7 +46,7 @@ constructor(props) {
     this.state={
         username: '',
         password: '',
-        authorLogin: true,
+        userLoggedIn: true,
         error: ''
     }
 }
@@ -83,6 +83,7 @@ constructor(props) {
         const {logintoken} = await data;
         await login({logintoken})
         console.log('login ok', data.status)
+        this.setState(prev => ({userLoggedIn : !prev}))
 
     return {
         logintoken: logintoken
@@ -104,13 +105,13 @@ constructor(props) {
 
 
 render(){
-    const logintoken = this.props.form.logintoken;
+    const {uesrLoggedIn} = this.state;
     const {form} = this.props.form;
   console.log({form, logintoken})
         return (
          <DemoDiv onSubmit={this.onSubmit}>
             <Demo>
-            {logintoken ? (
+            {userLoggedIn ? (
             <div className="">
             <h1>You are already logged in</h1>
             <button onClick={logout}>logout</button>
