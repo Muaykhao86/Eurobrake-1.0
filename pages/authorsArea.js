@@ -120,13 +120,15 @@ AuthorsArea.getInitialProps = async ctx => {
     if (logintoken){
     if (ctx.req) {
       // If `ctx.req` is available it means we are on the server.
-      ctx.res.writeHead(302, { Location: '/authorsAreaDash' })
+      ctx.res.writeHead(302, { 
+          Location: '/authorsAreaDash' 
+          })
       ctx.res.end()
     } else {
       // This should only happen on client.
       Router.push('/authorsAreaDash')
     }
-    return{}
+    return {}
     }
 }
 
