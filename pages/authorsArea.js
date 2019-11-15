@@ -126,6 +126,7 @@ AuthorsArea.getInitialProps = async ctx => {
       // This should only happen on client.
       Router.push('/authorsAreaDash')
     }
+    return{}
     }
 }
 
