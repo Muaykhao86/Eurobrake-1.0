@@ -117,8 +117,14 @@ AuthorsArea.getInitialProps = async ctx => {
     // frontend in the `props`.
 
     const { logintoken } = cookies(ctx);
-    if (logintoken)
-        login(logintoken)
+    if (logintoken){
+     return {
+         login(logintoken)
+         }
+     
+    }else{
+        return {}
+    }
     }
 
 
