@@ -118,7 +118,7 @@ class AuthorsAreaDash extends Component {
     }
 }
 
-AuthorsArea.getInitialProps = async ctx => {
+AuthorsAreaDash.getInitialProps = async ctx => {
     // We use `nextCookie` to get the cookie and pass the token to the frontend in the `props`.
     const { logintoken } = cookies(ctx);
     const apiUrl = 'https://prelude.eurobrake.net/dashboard ';
