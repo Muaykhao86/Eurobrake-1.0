@@ -24,20 +24,20 @@ const Demo = styled.h1`
 
 
 export default class Login extends Component {
-    static getInitialProps = async function () {
-        const { logintoken } = cookie.get();
-        const res = await fetch('https://prelude.eurobrake.net/login', {
-            credentials: 'include',
-            headers: {
-                Authorization: `Bearer ${logintoken}`,
-            }
-        });
-        const data = await res.json();
+    // static getInitialProps = async function () {
+    //     const { logintoken } = cookie.get();
+    //     const res = await fetch('https://prelude.eurobrake.net/login', {
+    //         credentials: 'include',
+    //         headers: {
+    //             Authorization: `Bearer ${logintoken}`,
+    //         }
+    //     });
+    //     const data = await res.json();
 
-        return {
-            form: data
-        };
-    };
+    //     return {
+    //         form: data
+    //     };
+    // };
 
 
     constructor(props) {
@@ -84,11 +84,11 @@ export default class Login extends Component {
                 const { logintoken } = data;
                 await login({ logintoken })
                 console.log('login ok', data.status)
-                this.setState(prev => ({ userLoggedIn: !prev }))
+                // this.setState(prev => ({ userLoggedIn: !prev }))
 
-                return {
-                    logintoken: logintoken
-                }
+                return {}
+                    // logintoken: logintoken
+                
 
             } else {
                 let error = new Error(data.error)
@@ -112,7 +112,6 @@ export default class Login extends Component {
         return (
             <DemoDiv onSubmit={this.onSubmit}>
                 <Demo>
-                 
                             <div className="">
                                 <div className="">
                                     <label htmlFor="label">
@@ -135,8 +134,6 @@ export default class Login extends Component {
                                 <input type="submit" value="Submit" />
                                 <button onClick={logout}>logout</button>
                             </div>
-                        
-                    }
                 </Demo>
             </DemoDiv>
         )
