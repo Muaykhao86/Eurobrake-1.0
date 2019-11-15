@@ -26,7 +26,6 @@ const Demo = styled.h1`
 export default class Login extends Component {
     static getInitialProps = async function () {
         const { logintoken } = cookie.get();
-        {logintoken ? this.setState(prev => ({userLoggedIn: !prev})) : null}
         const res = await fetch('https://prelude.eurobrake.net/login', {
             credentials: 'include',
             headers: {
@@ -49,6 +48,14 @@ export default class Login extends Component {
             userLoggedIn: false,
             error: ''
         }
+    }
+
+    componentDidMount = () => {
+       const {logintoken} = cookies.get();
+
+        logintoken ? this.setState(prev => ({
+            userLoggedIn: !prev })) : null
+
     }
 
     saveToState = (e) => {
@@ -106,7 +113,6 @@ export default class Login extends Component {
 
     render() {
         const { userLoggedIn } = this.state;
-        const { form } = this.props.form;
         console.log({ form  })
         return (
             <DemoDiv onSubmit={this.onSubmit}>
