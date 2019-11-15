@@ -105,7 +105,7 @@ export default class Login extends Component {
 
 
     render() {
-        const { uesrLoggedIn } = this.state;
+        const { userLoggedIn } = this.state;
         const { form } = this.props.form;
         console.log({ form  })
         return (
