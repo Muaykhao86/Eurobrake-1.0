@@ -46,7 +46,7 @@ export default class Login extends Component {
         this.state = {
             username: '',
             password: '',
-            userLoggedIn: true,
+            userLoggedIn: false,
             error: ''
         }
     }
