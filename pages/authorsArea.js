@@ -27,6 +27,21 @@ const Demo = styled.h1`
 
 
 class AuthorsArea extends Component {
+ static async getInitialProps({ res }) {
+     
+    const { logintoken } = cookies(ctx);
+    if (logintoken){
+    if (res) {
+      res.writeHead(302, {
+        Location: '/authorsAreaDash'
+      })
+      res.end()
+    } else {
+      Router.push('/authorsAreaDash')
+    }
+    return {}
+  }}
+
     constructor(props) {
         super(props);
         this.state = {
@@ -111,28 +126,6 @@ class AuthorsArea extends Component {
 
     }
 }
-
-AuthorsArea.getInitialProps = async ctx => {
-    // We use `nextCookie` to get the cookie and pass the token to the
-    // frontend in the `props`.
-
-    const { logintoken } = cookies(ctx);
-    if (logintoken){
-    if (ctx.req) {
-      // If `ctx.req` is available it means we are on the server.
-      ctx.res.writeHead(302, { 
-          Location: '/authorsAreaDash' 
-          })
-      ctx.res.end()
-    } else {
-      // This should only happen on client.
-      Router.push('/authorsAreaDash')
-    }
-    return {}
-    }
-}
-
-
 
 // export default withAuthSync(AuthorsArea)
 export default AuthorsArea;
