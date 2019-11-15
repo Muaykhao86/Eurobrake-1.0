@@ -152,7 +152,7 @@ AuthorsArea.getInitialProps = async ctx => {
     }catch(error){
         // Implementation or Network error
        
-        return redirectOnError()
+        return redirectOnError(error)
     }
 
 }
