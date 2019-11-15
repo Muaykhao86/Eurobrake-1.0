@@ -26,7 +26,7 @@ const Demo = styled.h1`
 `;
 
 
-class AuthorsArea extends Component {
+class AuthorsAreaDash extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -47,6 +47,7 @@ class AuthorsArea extends Component {
         logintoken && !userLoggedIn ? this.setState(prev => ({
             userLoggedIn: !prev
         })) : null
+
     }
 
     getAbstractForm = async (e) => {
@@ -103,28 +104,60 @@ class AuthorsArea extends Component {
         const { userLoggedIn, hasForm } = this.state;
         console.log({ userLoggedIn, hasForm });
         return (
-
             <DemoDiv>
-                <Login />
+
+            <h1>
+                you are logged In
+            </h1>
+            <button onClick={this.getAbstractForm}>Submit a Abstract</button>
+            <button onClick={logout}>logout</button>
             </DemoDiv>
-        )
+
+           )
 
     }
 }
 
 AuthorsArea.getInitialProps = async ctx => {
-    // We use `nextCookie` to get the cookie and pass the token to the
-    // frontend in the `props`.
-
+    // We use `nextCookie` to get the cookie and pass the token to the frontend in the `props`.
     const { logintoken } = cookies(ctx);
-    if (logintoken)
-        login(logintoken)
+    const apiUrl = 'https://prelude.eurobrake.net/dashboard ';
+    const redirectOnError = () =>
+    process.browser
+        ? Router.push('/authorsArea')
+        : ctx.res.writeHead(301, { Location: '/authorsArea' })
+    if (logintoken) {
+        try {
+            // console.log({logintoken}, 'getIProps right before fetch call')
+            const response = await fetch(apiUrl, {
+                credentials: 'include',
+                cache: 'no-cache',
+                headers: {
+                    Authorization: 'Bearer ' + logintoken,
+                }
+            })
+            const data = await response.json()
+            // console.log('Authors response Data =>', data.status, data);
+            if (response.status === 'success') {
+                console.log('res.ok', data)
+                return { authorData: data }
+            }
+            else {
+                console.log('not reading success')
+                // https://github.com/developit/unfetch#caveats
+                return redirectOnError()
+            }
+        } catch (error) {
+            // Implementation or Network error
+            console.log(error)
+            return redirectOnError()
+        }
     }
 
+}
 
-
-// export default withAuthSync(AuthorsArea)
-export default AuthorsArea;
+export default withAuthSync(AuthorsAreaDash)
+// export default AuthorsArea;
 
 
 // !

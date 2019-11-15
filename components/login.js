@@ -112,12 +112,7 @@ export default class Login extends Component {
         return (
             <DemoDiv onSubmit={this.onSubmit}>
                 <Demo>
-                    {userLoggedIn ? (
-                        <div className="">
-                            <h1>You are already logged in</h1>
-                            <button onClick={logout}>logout</button>
-                        </div>
-                    ) : (
+                 
                             <div className="">
                                 <div className="">
                                     <label htmlFor="label">
@@ -140,7 +135,7 @@ export default class Login extends Component {
                                 <input type="submit" value="Submit" />
                                 <button onClick={logout}>logout</button>
                             </div>
-                        )
+                        
                     }
                 </Demo>
             </DemoDiv>
