@@ -33,7 +33,7 @@ export default class Nav extends Component {
                     <div className="nav_box-2">
                         <h1>Heading if needed</h1>
                         <Link href="/welcome"><a onClick={this.handleClick}>Welcome</a></Link>
-                        <Link href="/login"><a onClick={this.handleClick}>Login</a></Link>
+                        {/* <Link href="/login"><a onClick={this.handleClick}>Login</a></Link> */}
                         <Link href="/exhibitors"><a onClick={this.handleClick}>Exhibitors List</a></Link>
                         <Link href="/exhibitorsArea"><a onClick={this.handleClick}>Exhibitors Area</a></Link>
                         <Link href=""><a >This is a link to somewhere on the website</a></Link>
