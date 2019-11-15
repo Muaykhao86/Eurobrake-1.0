@@ -137,7 +137,7 @@ AuthorsAreaDash.getInitialProps = async ctx => {
                 }
             })
             const data = await response.json()
-            // console.log('Authors response Data =>', data.status, data);
+            console.log('Authors response Data =>', data.status, data);
             if (response.status === 'success') {
                 console.log('res.ok', data)
                 return { authorData: data }

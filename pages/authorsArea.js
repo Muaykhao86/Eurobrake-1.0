@@ -119,7 +119,6 @@ class AuthorsArea extends Component {
         const { userLoggedIn, hasForm } = this.state;
         console.log({ userLoggedIn, hasForm });
         return (
-
             <DemoDiv>
                 <Login />
             </DemoDiv>
