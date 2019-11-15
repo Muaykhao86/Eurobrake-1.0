@@ -51,7 +51,7 @@ export default class Login extends Component {
     }
 
     componentDidMount = () => {
-       const {logintoken} = cookies.get();
+       const {logintoken} = cookie.get();
 
         logintoken ? this.setState(prev => ({
             userLoggedIn: !prev })) : null
