@@ -112,7 +112,8 @@ export default class Login extends Component {
 
 
     render() {
-        const { userLoggedIn } = this.state;
+        const { userLoggedIn} = this.state;
+        const {form } = this.props
         console.log({ form  })
         return (
             <DemoDiv onSubmit={this.onSubmit}>
