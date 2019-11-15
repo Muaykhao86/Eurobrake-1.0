@@ -39,8 +39,9 @@ class AuthorsArea extends Component {
     } else {
       Router.push('/authorsAreaDash')
     }
+  }
     return {}
-  }}
+  }
 
     constructor(props) {
         super(props);

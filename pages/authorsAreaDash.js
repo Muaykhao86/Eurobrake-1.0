@@ -153,6 +153,7 @@ AuthorsAreaDash.getInitialProps = async ctx => {
             return redirectOnError()
         }
     }
+    // return {}
 
 }
 
