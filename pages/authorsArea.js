@@ -52,7 +52,7 @@ try{    const apiUrl = 'https://prelude.eurobrake.net/submit';
         });
         const data = await response.json();
         if(data.status === 'success') {           
-        this.setState({formData: data});
+        this.setState({formData: data.form});
         console.log(data.form);
         console.log('stringify',JSON.stringify(data.form));
         console.log(data)
@@ -71,6 +71,17 @@ try{    const apiUrl = 'https://prelude.eurobrake.net/submit';
     }
     }
 
+    
+  handleInputChange= (event) => {
+    const target = event.target;
+    const value = target.type === 'checkbox' ? target.checked : target.value;
+    const name = target.name;
+
+    this.setState({
+      [name]: value
+    });
+  }
+
     render() {
         
       
@@ -81,25 +92,49 @@ try{    const apiUrl = 'https://prelude.eurobrake.net/submit';
         </h1>
                 <button onClick={this.getAbstractForm}>Submit a Abstract</button>
                 <button onClick={logout}>logout</button>
+                <div className="form-container">
+                <form>
                 {this.state.formdata &&
+                
+
               this.state.formdata.map(component => {
-                 
-                        <div>
-                        <title>component.title</title>
-                        <type>component.type</type>
-                        <options>
-                            component.options
-                        </options>
-                        <name>component.name</name>
-                        <default>component.default</default>
+                 return(
+                        <div className="form-item">
+                        {component.title ? <title>{component.title}</title> : null }
+                        {component.type ? 
+                        <label>
+                        {component.options ? null : component.label}
+                        <input
+                        required={component.options ?  null : component.required ? component.required : null}
+                         name={component.name}
+                         type={component.type}
+                         value={this.state.name}
+                         onChange={this.handleInputChange}
+                        /> 
+                        </label>
+                        : null
+                        }
+                        {component.options ? 
+                        <label>
+                            {component.label}
+                        <select name={component.name} >
+                            {component.options.map( option => {
+                                return( 
+                                        <option value={option.value}>{option.label}</option>
+                                )
+                            })}
+                        </select> 
+                        </label>    
+                        : null}
+                        {component.default ? <default>{component.default}</default> : null}
+
                         </div>
-
-
-
-
+                 )
                     }
                 )
                 }
+                </form>
+                </div>
                 
             </DemoDiv>
         )
