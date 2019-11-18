@@ -6,6 +6,8 @@ import { withAuthSync, logout, login } from '../utils/auth'
 import cookies from 'next-cookies';
 import cookie from 'js-cookie';
 import Login from '../components/login';
+import PopupLogin from '../components/PopupLogin';
+
 
 
 const DemoDiv = styled.form`
@@ -120,6 +122,7 @@ class AuthorsArea extends Component {
         console.log({ userLoggedIn, hasForm });
         return (
             <DemoDiv>
+                <PopupLogin/>
                 <Login />
             </DemoDiv>
         )
@@ -179,3 +182,4 @@ export default AuthorsArea;
                 </form>
                 </div> */}
 // //
+
