@@ -17,6 +17,7 @@ export default function ImgMediaCard(props) {
       <CardActionArea>
         <CardMedia
           component="img"
+          width={props.width}
           alt={props.name}
           height={props.height}
           image={props.img}

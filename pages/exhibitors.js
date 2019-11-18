@@ -9,15 +9,16 @@ const Hero = styled.div`
     height: 100vh;
 
     img{
-        width: 100%;
         position: fixed;
+        top: 0;
+        left: 0;
     }
 
     h1{ 
         max-width: ${props => props.theme.maxWidth};
         color: ${props => props.theme.white};
         font-family: ${props => props.theme.MPRegular};
-        font-size: 80rem;
+        font-size: 20rem;
         text-shadow: 0px 3px 50px #0000008C; 
     }
 
@@ -93,6 +94,7 @@ export default class ExhibitorList extends Component {
                             key={i} 
                             name={company.company} 
                             img={company.logo}
+                            width="120"
                             height="120"
                             booth={company.booth}
                             country={company.country}
