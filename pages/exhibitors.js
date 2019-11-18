@@ -1,10 +1,29 @@
-import React, { Component } from 'react'
+import React, { Component, Fragment } from 'react'
 import styled from 'styled-components';
 import fetch from 'isomorphic-unfetch';
 import CountDownBanner from '../components/CountDownBanner';
-import ExhibitorsCard from '../components/ExhibitorCard';
+import ExhibitorCard from '../components/ExhibitorCard';
+import { hexToRgb } from '@material-ui/core/styles';
+
+const Hero = styled.div`
+    width: 100vw;
+    height: 100vh;
+
+    img{
+        width: 100%;
+        position: fixed;
+    }
+
+    h1{ 
+        max-width: ${props => props.theme.maxWidth};
+        color: ${props => props.theme.white};
+        font-family: ${props => props.theme.MPRegular};
+        font-size: 80rem;
+        text-shadow: 0px 3px 50px #0000008C; 
+    }
 
 
+`;
 
 const StyledPage = styled.div`
     display: flex;
@@ -61,12 +80,13 @@ export default class ExhibitorList extends Component {
     render() {
         const exhibitors = this.props.exhibitors.exhibitors;
         return (
+            <Fragment>
+            <Hero>
+                <h1>EuroBrake 2020 Exhibitor Directory</h1>
+                <img src="/images/pic1.png" alt="EuroBrake Greating" style={{ width: '100%', height: '100%' }} />
+                <CountDownBanner />
+            </Hero>
             <StyledPage>
-                <div className="">
-                    <h1>EuroBrake 2020 Exhibitor Directory</h1>
-                    <img src="/images/pic1.png" alt="EuroBrake Greating" style={{ width: '100%', height: '100%' }} />
-                    <CountDownBanner />
-                </div>
                 <StyledExhibitors>
                     {exhibitors.map((company, i) => {
                         return (
@@ -78,12 +98,11 @@ export default class ExhibitorList extends Component {
                             booth={company.booth}
                             country={company.country}
                             />
-                                
-                           
                         )
                     })}
                 </StyledExhibitors>
             </StyledPage>
+            </Fragment>
         )
     }
 }
