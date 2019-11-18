@@ -17,20 +17,20 @@ export default function ImgMediaCard(props) {
       <CardActionArea>
         <CardMedia
           component="img"
-          alt={this.props.name}
-          height={this.props.height}
-          image={this.props.img}
-          title={this.props.name}
+          alt={props.name}
+          height={props.height}
+          image={props.img}
+          title={props.name}
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="h2">
-            {this.props.name}
+            {props.name}
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
-            {this.props.booth}
+            {props.booth}
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
-            Based in {this.props.country}
+            Based in {props.country}
           </Typography>
         </CardContent>
       </CardActionArea>
