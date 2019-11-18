@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import fetch from 'isomorphic-unfetch';
 import CountDownBanner from '../components/CountDownBanner';
 import ExhibitorCard from '../components/ExhibitorCard';
-import { hexToRgb } from '@material-ui/core/styles';
 
 const Hero = styled.div`
     width: 100vw;

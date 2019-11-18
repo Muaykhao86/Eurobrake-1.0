@@ -11,7 +11,7 @@ const StyledCard = styled(Card)`
     max-width: 20rem;
 `;
 
-export default function ImgMediaCard() {
+export default function ImgMediaCard(props) {
   return (
     <StyledCard>
       <CardActionArea>
