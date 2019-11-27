@@ -1337,6 +1337,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var next_document__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(next_document__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! styled-components */ "styled-components");
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _material_ui_styles__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @material-ui/styles */ "@material-ui/styles");
+/* harmony import */ var _material_ui_styles__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_material_ui_styles__WEBPACK_IMPORTED_MODULE_5__);
 
 
 var _jsxFileName = "/mnt/c/Users/D.Hardiman/desktop/eurobrake/pages/_document.js";
@@ -1344,28 +1346,30 @@ var _jsxFileName = "/mnt/c/Users/D.Hardiman/desktop/eurobrake/pages/_document.js
 var __jsx = react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement;
 
 
+
 class MyDocument extends next_document__WEBPACK_IMPORTED_MODULE_3___default.a {
   static async getInitialProps(ctx) {
-    const sheet = new styled_components__WEBPACK_IMPORTED_MODULE_4__["ServerStyleSheet"]();
+    const styledComponentSheet = new styled_components__WEBPACK_IMPORTED_MODULE_4__["ServerStyleSheet"]();
+    const materialUiSheets = new _material_ui_styles__WEBPACK_IMPORTED_MODULE_5__["ServerStyleSheets"]();
     const originalRenderPage = ctx.renderPage;
 
     try {
       ctx.renderPage = () => originalRenderPage({
-        enhanceApp: App => props => sheet.collectStyles(__jsx(App, Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_1__["default"])({}, props, {
+        enhanceApp: App => props => styledComponentSheet.collectStyles(materialUiSheets.collect(__jsx(App, Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_1__["default"])({}, props, {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 13
+            lineNumber: 17
           },
           __self: this
-        })))
+        }))))
       });
 
       const initialProps = await next_document__WEBPACK_IMPORTED_MODULE_3___default.a.getInitialProps(ctx);
       return Object(_babel_runtime_corejs2_helpers_esm_objectSpread__WEBPACK_IMPORTED_MODULE_0__["default"])({}, initialProps, {
-        styles: __jsx(react__WEBPACK_IMPORTED_MODULE_2___default.a.Fragment, null, initialProps.styles, sheet.getStyleElement())
+        styles: __jsx(react__WEBPACK_IMPORTED_MODULE_2___default.a.Fragment, null, initialProps.styles, materialUiSheets.getStyleElement(), styledComponentSheet.getStyleElement())
       });
     } finally {
-      sheet.seal();
+      styledComponentSheet.seal();
     }
   }
 
@@ -1382,6 +1386,17 @@ class MyDocument extends next_document__WEBPACK_IMPORTED_MODULE_3___default.a {
 
 module.exports = __webpack_require__(/*! private-next-pages/_document.js */"./pages/_document.js");
 
+
+/***/ }),
+
+/***/ "@material-ui/styles":
+/*!**************************************!*\
+  !*** external "@material-ui/styles" ***!
+  \**************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("@material-ui/styles");
 
 /***/ }),
 

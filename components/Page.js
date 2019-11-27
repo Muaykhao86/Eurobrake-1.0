@@ -13,7 +13,10 @@ const theme = {
     MPBold: 'MyriadPro-Bold',
     MPSemibold: 'MyriadPro-Semibold',
     MPLight: 'MyriadPro-Light',
-    maxWidth: '70%',
+    MPLightIt: 'MyriadPro-LightIt',
+    MPIt: 'MyriadPro-It',
+    MPBlack: 'MyriadPro-Black',
+    maxWidth: '55%',
     bs: '0 1.2rem 2.4rem rgba(0, 0, 0, .09)',
 
 }
@@ -49,6 +52,26 @@ const GlobalStyle = createGlobalStyle`
     @font-face {
     font-family: 'MyriadPro-Light';
     src: url('/fonts/MyriadPro-Light.otf');
+    font-weight: 300;
+    font-display: auto;
+    font-style: normal;
+    };
+    @font-face {
+    font-family: 'MyriadPro-LightIt';
+    src: url('/fonts/MyriadPro-LightIt.otf');
+    font-weight: lighter;
+    font-display: auto;
+    font-style: normal;
+    };
+    @font-face {
+    font-family: 'MyriadPro-It';
+    src: url('/fonts/MyriadPro-It.otf');
+    font-display: auto;
+    font-style: normal;
+    };
+    @font-face {
+    font-family: 'MyriadPro-Black';
+    src: url('/fonts/MyriadPro-Black.otf');
     font-weight: 300;
     font-display: auto;
     font-style: normal;

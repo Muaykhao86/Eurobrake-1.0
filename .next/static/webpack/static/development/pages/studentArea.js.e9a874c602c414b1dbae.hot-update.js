@@ -1,0 +1,218 @@
+webpackHotUpdate("static/development/pages/studentArea.js",{
+
+/***/ "./components/HeroSection.js":
+/*!***********************************!*\
+  !*** ./components/HeroSection.js ***!
+  \***********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return HeroSection; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
+/* harmony import */ var _material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @material-ui/core/Typography */ "./node_modules/@material-ui/core/esm/Typography/index.js");
+/* harmony import */ var _components_CountDownBanner__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/CountDownBanner */ "./components/CountDownBanner.js");
+var _jsxFileName = "/mnt/c/Users/D.Hardiman/desktop/eurobrake/components/HeroSection.js";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
+
+
+var StyledHero = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div.withConfig({
+  displayName: "HeroSection__StyledHero",
+  componentId: "sc-1rt21yv-0"
+})(["height:100vh;display:flex;flex-flow:column;img{flex:1;object-fit:cover;}"]);
+var StyledText = Object(styled_components__WEBPACK_IMPORTED_MODULE_1__["default"])(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_2__["default"]).withConfig({
+  displayName: "HeroSection__StyledText",
+  componentId: "sc-1rt21yv-1"
+})(["&&.MuiTypography-body1{font-size:", ";font-family:", ";line-height:1;}align-self:center;max-width:", ";position:absolute;line-height:1;top:", ";color:", ";text-align:left;text-shadow:0px 3px 50px #0000008C;"], function (props) {
+  return props.fs || '11rem';
+}, function (props) {
+  return props.theme.MPBlack;
+}, function (props) {
+  return props.max || props.theme.maxWidth;
+}, function (props) {
+  return props.t || '20rem';
+}, function (props) {
+  return props.theme.white;
+});
+function HeroSection(props) {
+  var t = props.t,
+      max = props.max,
+      fs = props.fs;
+  console.log(props);
+  return __jsx(StyledHero, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 43
+    },
+    __self: this
+  }, __jsx("img", {
+    src: props.src ? props.src : "/images/pic1.png",
+    alt: "EuroBrake Greating",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 44
+    },
+    __self: this
+  }), __jsx(StyledText, {
+    t: t,
+    max: max,
+    fs: fs,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 45
+    },
+    __self: this
+  }, props.children), props.banner ? __jsx(props.banner, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 48
+    },
+    __self: this
+  }) : __jsx(_components_CountDownBanner__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 48
+    },
+    __self: this
+  }));
+}
+
+/***/ }),
+
+/***/ "./pages/studentArea.js":
+/*!******************************!*\
+  !*** ./pages/studentArea.js ***!
+  \******************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
+/* harmony import */ var _components_HeroSection__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/HeroSection */ "./components/HeroSection.js");
+/* harmony import */ var _material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @material-ui/core/Typography */ "./node_modules/@material-ui/core/esm/Typography/index.js");
+/* harmony import */ var _material_ui_icons_ExpandMoreOutlined__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @material-ui/icons/ExpandMoreOutlined */ "./node_modules/@material-ui/icons/ExpandMoreOutlined.js");
+/* harmony import */ var _material_ui_icons_ExpandMoreOutlined__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_material_ui_icons_ExpandMoreOutlined__WEBPACK_IMPORTED_MODULE_4__);
+var _jsxFileName = "/mnt/c/Users/D.Hardiman/desktop/eurobrake/pages/studentArea.js";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
+
+
+
+var StyledPage = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div.withConfig({
+  displayName: "studentArea__StyledPage",
+  componentId: "cw3klr-0"
+})(["display:flex;flex-direction:column;align-self:center;margin-top:10rem;max-width:", ";background-color:", ";h1{font-family:", ";color:", ";font-size:4.4rem;}"], function (props) {
+  return props.theme.maxWidth;
+}, function (props) {
+  return props.theme.white;
+}, function (props) {
+  return props.theme.MPBlack;
+}, function (props) {
+  return props.theme.primary;
+});
+var StyledBanner = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div.withConfig({
+  displayName: "studentArea__StyledBanner",
+  componentId: "cw3klr-1"
+})(["background-color:#134381;min-width:100%;display:flex;justify-content:center;align-items:center;color:white;"]);
+var StyledContainer = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div.withConfig({
+  displayName: "studentArea__StyledContainer",
+  componentId: "cw3klr-2"
+})(["display:flex;flex-flow:column;width:", ";padding:3rem 0;.banner-heading{font-family:", ";font-size:5.7rem;padding-bottom:.5rem;margin-bottom:.5rem;border-bottom:2px solid ", ";}.banner-sub{font-family:", ";font-size:3.8rem;font-weight:50;}.banner_bottom{display:flex;align-self:flex-end;&-icon{color:", ";font-size:1.5rem;background-color:white;border:1px solid white;border-radius:50%;margin:.5rem;}&-details{font-family:", ";font-size:1.6rem;}}"], function (props) {
+  return props.theme.maxWidth;
+}, function (props) {
+  return props.theme.MPBlack;
+}, function (props) {
+  return props.theme.white;
+}, function (props) {
+  return props.theme.MPLightIt;
+}, function (props) {
+  return props.theme.primary;
+}, function (props) {
+  return props.theme.MPSemibold;
+});
+
+var FilledBanner = function FilledBanner() {
+  return __jsx(StyledBanner, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 77
+    },
+    __self: this
+  }, __jsx(StyledContainer, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 78
+    },
+    __self: this
+  }, __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    className: "banner-heading",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 80
+    },
+    __self: this
+  }, "Earlybird registration is open"), __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    className: "banner-sub",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 81
+    },
+    __self: this
+  }, "Book before 1 April 2020 to secure discount ticket prices"), __jsx("div", {
+    className: "banner_bottom",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 82
+    },
+    __self: this
+  }, __jsx(_material_ui_icons_ExpandMoreOutlined__WEBPACK_IMPORTED_MODULE_4___default.a, {
+    className: "banner_bottom-icon",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 83
+    },
+    __self: this
+  }), __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    varient: "h3",
+    className: "banner_bottom-details",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 84
+    },
+    __self: this
+  }, "See below for more details"))));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (function () {
+  return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx(_components_HeroSection__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    t: "15rem",
+    max: "65%",
+    banner: FilledBanner,
+    fs: "8.9rem",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 92
+    },
+    __self: this
+  }, "EuroBrake Student Opportunities Programme (ESOP)"), __jsx(StyledPage, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 95
+    },
+    __self: this
+  }));
+});
+
+/***/ })
+
+})
+//# sourceMappingURL=studentArea.js.e9a874c602c414b1dbae.hot-update.js.map

@@ -23,20 +23,22 @@ export default class Nav extends Component {
                  <HiddenNavBG isOpen={this.state.isOpen} />
                 <HiddenContainer isOpen={this.state.isOpen}>
                     <div className="nav_box-1">
-                        <h1>Heading if needed</h1>
+                        <h1>Main</h1>
+                        <Link href="/"><a onClick={this.handleClick} >Home</a></Link>
                         <Link href="/about"><a onClick={this.handleClick} >About</a></Link>
                         <Link href="/authorsArea"><a onClick={this.handleClick}>Authors Area</a></Link>
-                        <Link href="/expoAndSponsor"><a onClick={this.handleClick}>Exhibition And Sponsorship </a></Link>
+                        <Link href="/exhibitorsArea"><a onClick={this.handleClick}>Exhibitors Area</a></Link>
                         <Link href="/studentArea"><a onClick={this.handleClick}>Student Area</a></Link>
+                        <Link href="/exhibitAndSponsor"><a onClick={this.handleClick}>Exhibition And Sponsorship</a></Link>
                         <Link href="/ticketPortal"><a onClick={this.handleClick}>Ticket Portal</a></Link>
                     </div>
                     <div className="nav_box-2">
-                        <h1>Heading if needed</h1>
-                        <Link href="/welcome"><a onClick={this.handleClick}>Welcome</a></Link>
+                        <h1>Quick Links</h1>
+                        <Link href="/welcome"><a onClick={this.handleClick}>Welcome to Barcelona</a></Link>
                         {/* <Link href="/login"><a onClick={this.handleClick}>Login</a></Link> */}
                         <Link href="/exhibitors"><a onClick={this.handleClick}>Exhibitors List</a></Link>
-                        <Link href="/exhibitorsArea"><a onClick={this.handleClick}>Exhibitors Area</a></Link>
-                        <Link href=""><a >This is a link to somewhere on the website</a></Link>
+                        <Link href="/exhibitorsRegistration"><a onClick={this.handleClick}>Exhibitors Registration</a></Link>
+                        <Link href=""><a >Technical Program</a></Link>
                     </div>
                     <div className="nav_box-3">
                         <div className="nav_box-4">

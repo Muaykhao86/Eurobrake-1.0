@@ -7,6 +7,8 @@ import cookies from 'next-cookies';
 import cookie from 'js-cookie';
 import Login from '../components/login';
 import PopupLogin from '../components/PopupLogin';
+import HeroSection from '../components/HeroSection';
+
 
 
 
@@ -121,10 +123,15 @@ class AuthorsArea extends Component {
         const { userLoggedIn, hasForm } = this.state;
         console.log({ userLoggedIn, hasForm });
         return (
+            <>
+            <HeroSection>
+                AuthorsArea
+            </HeroSection>
             <DemoDiv>
                 <PopupLogin/>
                 <Login />
             </DemoDiv>
+            </>
         )
 
     }

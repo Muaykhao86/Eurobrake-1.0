@@ -5,7 +5,7 @@ import { StyledContainer } from '../components/styles/HomeStyles';
 import AboutSection from '../components/AboutSection';
 import LocationSection from '../components/LocationSection';
 import AttendeesSection from '../components/AttendeesSection';
-import ExhibitionSection from '../components/ExhibitionSection';
+import ExhibitionSection from '../components/exhibitors/ExhibitionSection';
 import StudentSection from '../components/StudentSection';
 import AuthorSection from '../components/AuthorSection';
 

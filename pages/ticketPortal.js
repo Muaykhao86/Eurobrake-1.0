@@ -1,51 +1,45 @@
 import React from 'react'
 import styled from 'styled-components';
+import HeroSection from '../components/HeroSection';
 
 
-const DemoDiv = styled.div`
+
+const StyledPage = styled.div`
     display: flex;
     flex-flow: column;
     align-self: center;
-    justify-content: center;
+    margin-top: 5rem;
     max-width: ${props => props.theme.maxWidth};
-`;
+    background-color: ${props => props.theme.white};
 
-
-const Demo = styled.h1`
-    padding: 10rem;
-    margin: 5rem; 
-    color: orangered;
-
+    h1{
+        font-family: ${props => props.theme.MPBlack};
+        color: ${props => props.theme.primary};
+        font-size: 4.4rem;
+    }
 `;
 
 const Content = styled.iframe`
-
+    align-self: center;
     margin-top: 2rem;
-    width: 100%;
-    height: 100rem;
+    min-width: 100rem;
+    min-height: 100rem;
     border: none;
     background-color: transparent;
-    overflow: hidden;
+    /* overflow: hidden; */
     text-decoration: none;
 `;
 
-const Bar = styled.div`
-    position: fixed;
-    width: 100%;
-    height: 10rem;
-    background-color: ${props => props.theme.primary};
-    z-index: 0;
-    
-`;
 
 export default () => (
-<DemoDiv>
-    <Demo> Ticket Portal</Demo>
+    <>
+     <HeroSection t="25rem">
+                Book Now
+    </HeroSection>
+<StyledPage>
+    <h1>Book your tickets now</h1>
     <Content src="https://www.eventsforce.net/fisita/14/register" />
-    <Demo>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-        Saepe asperiores quibusdam facere ipsa reprehenderit possimus necessitatibus id, 
-        quisquam sed tempore vel, maiores cupiditate facilis accusamus sunt dolorem amet repellat labore.
-    </Demo>
-</DemoDiv>    
+</StyledPage>    
+</>
 
 ) 

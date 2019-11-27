@@ -45,12 +45,11 @@ export default class Login extends Component {
         this.state = {
             username: '',
             password: '',
-            userLoggedIn: false,
             error: ''
         }
     }
 
-   
+
 
     saveToState = (e) => {
         this.setState({ [e.target.name]: e.target.value });
@@ -61,7 +60,7 @@ export default class Login extends Component {
         e.preventDefault()
         console.log('on submit click');
 
-        const { authorLogin, username, password, error } = this.state;
+        const { username, password, error } = this.state;
         // const apiUrl = authorLogin ? 'https://prelude.eurobrake.net/login' : '' ;
         // action="//2019.eurobrake.net/exhibition/exhibitors/login" SHOULD BE LOGIN FORM FOR EXHIBITORS
         const formData = {
@@ -73,7 +72,7 @@ export default class Login extends Component {
         try {
             const response = await fetch('https://prelude.eurobrake.net/login', {
                 method: 'POST',
-                credentials: 'include', 
+                credentials: 'include',
                 body: JSON.stringify(formData)
             });
             const data = await response.json();
@@ -83,12 +82,12 @@ export default class Login extends Component {
             if (data.status === 'success') {
                 const { logintoken } = data;
                 await login({ logintoken })
-                console.log('login ok', data.status)
+                // console.log('login ok', data.status)
                 // this.setState(prev => ({ userLoggedIn: !prev }))
 
                 return {}
-                    // logintoken: logintoken
-                
+                // logintoken: logintoken
+
 
             } else {
                 let error = new Error(data.error)
@@ -101,39 +100,34 @@ export default class Login extends Component {
             )
             this.setState({ error: error.message });
         }
-
     }
-
-
     render() {
-        const { userLoggedIn} = this.state;
-        const {form } = this.props
-        console.log({ form  })
+        const { userLoggedIn } = this.state;
+        const { form } = this.props
+        console.log({ form })
         return (
             <DemoDiv onSubmit={this.onSubmit}>
                 <Demo>
-                            <div className="">
-                                <div className="">
-                                    <label htmlFor="label">
-                                        Username
-                                    </label>
-                                    <input type="text"
-                                        name="username"
-                                        // {form[0].name} 
-                                        onChange={this.saveToState} value={this.state.username} />
-                                </div>
-                                <div className="">
-                                    <label htmlFor="label">
-                                        Password
-                                    </label>
-                                    <input type="password"
-                                        name="password"
-                                        // {form[1].name}  
-                                        onChange={this.saveToState} value={this.state.password} />
-                                </div>
-                                <input type="submit" value="Submit" />
-                                <button onClick={logout}>logout</button>
-                            </div>
+                    <div className="">
+                        <div className="">
+                            <label htmlFor="label">
+                                Username
+                            </label>
+                            <input type="text"
+                                name="username"
+                                onChange={this.saveToState} value={this.state.username} />
+                        </div>
+                        <div className="">
+                            <label htmlFor="label">
+                                Password
+                            </label>
+                            <input type="password"
+                                name="password"
+                                onChange={this.saveToState} value={this.state.password} />
+                        </div>
+                        <input type="submit" value="Submit" />
+                        <button onClick={logout}>logout</button>
+                    </div>
                 </Demo>
             </DemoDiv>
         )

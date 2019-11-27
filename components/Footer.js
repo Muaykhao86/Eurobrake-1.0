@@ -63,7 +63,7 @@ const FooterBar = styled.div`
     }
     .ftr_sponsor-box{
         background-color: white;
-        padding: 1rem;
+        padding: .5rem;
         max-width: 40rem;
         border: 1px solid white;
         
@@ -72,12 +72,14 @@ const FooterBar = styled.div`
         
         display: flex;
         flex-flow: wrap;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
     
     .sponsor{
-        margin: 1rem 1rem;
+        margin: 0 1rem;
         cursor: pointer;
     }
-
     }
 
 
@@ -128,18 +130,18 @@ function Footer() {
     return (
         <FooterBar>
             <div className="ftr_container-1">
-                <h1>CONFIRMED EUROBRAKE 2020 SPONSORS</h1>      // ! STILL NEED TO ADJUST SIZING ETC
+                <h1>CONFIRMED EUROBRAKE 2020 SPONSORS</h1>      
                 <div className="ftr_sponsor-box">
-                    <div className="sponsor"><a href="http://www.applusidiada.com/en/"><img src="https://www.eurobrake.net/res/display/default/chrome/logos/applus-idiada2.png" alt="" style={{maxHeight: '5rem', width: '5rem'}}/></a></div>
-                    <div className="sponsor"><a href="http://www.applusidiada.com/en/"><img src="https://www.eurobrake.net/res/display/default/chrome/logos/itt.png" alt="" style={{maxHeight: '5rem', width: '5rem'}}/></a></div>
-                    <div className="sponsor"><a href="http://www.applusidiada.com/en/"><img src="https://www.eurobrake.net/res/display/default/chrome/logos/horiba2.png" alt="" style={{maxHeight: '5rem', width: '5rem'}}/></a></div>
-                    <div className="sponsor"><a href="http://www.applusidiada.com/en/"><img src="https://www.eurobrake.net/res/display/default/chrome/logos/nof2.png" alt="" style={{maxheight: '5rem', width: '9rem'}}/></a></div>
-                    <div className="sponsor"><a href="http://www.applusidiada.com/en/"><img src="https://www.eurobrake.net/res/display/default/chrome/logos/itaprochim3.png" alt="" style={{maxHeight: '5rem', width: '9rem'}}/></a></div>
-                    <div className="sponsor"><a href="http://www.applusidiada.com/en/"><img src="https://www.eurobrake.net/res/display/default/chrome/logos/link3.png" alt="" style={{maxHeight: '5rem', width: '5rem'}}/></a></div>
-                    <div className="sponsor"><a href="http://www.applusidiada.com/en/"><img src="https://www.eurobrake.net/res/display/default/chrome/logos/fagorederlangroup.png" alt="" style={{maxHeight: '5rem', width: '9rem'}}/></a></div>
-                    <div className="sponsor"><a href="http://www.applusidiada.com/en/"><img src="https://www.eurobrake.net/res/display/default/chrome/logos/lapinus2.png" alt="" style={{maxHeight: '5rem', width: '5rem'}}/></a></div>
-                    <div className="sponsor"><a href="http://www.applusidiada.com/en/"><img src="https://www.eurobrake.net/res/display/default/chrome/logos/sadeca2.png" alt="" style={{maxHeight: '5rem', width: '5rem'}}/></a></div>
-                    <div className="sponsor"><a href="http://www.applusidiada.com/en/"><img src="https://www.eurobrake.net/res/display/default/chrome/logos/alroko.png" alt="" style={{maxHeight: '5rem', width: '5rem'}}/></a></div>
+                    <div className="sponsor"><a href="http://www.applusidiada.com/en/"><img src="https://www.eurobrake.net/res/display/default/chrome/logos/applus-idiada2.png" alt="" style={{maxHeight: '5rem', width: '10rem'}}/></a></div>
+                    <div className="sponsor"><a href="http://www.applusidiada.com/en/"><img src="https://www.eurobrake.net/res/display/default/chrome/logos/itt.png" alt="" style={{maxHeight: '5rem', width: '10rem'}}/></a></div>
+                    <div className="sponsor"><a href="http://www.applusidiada.com/en/"><img src="https://www.eurobrake.net/res/display/default/chrome/logos/horiba2.png" alt="" style={{maxHeight: '5rem', width: '10rem'}}/></a></div>
+                    <div className="sponsor"><a href="http://www.applusidiada.com/en/"><img src="https://www.eurobrake.net/res/display/default/chrome/logos/nof2.png" alt="" style={{maxheight: '5rem', width: '10rem'}}/></a></div>
+                    <div className="sponsor"><a href="http://www.applusidiada.com/en/"><img src="https://www.eurobrake.net/res/display/default/chrome/logos/itaprochim3.png" alt="" style={{maxHeight: '5rem', width: '10rem'}}/></a></div>
+                    <div className="sponsor"><a href="http://www.applusidiada.com/en/"><img src="https://www.eurobrake.net/res/display/default/chrome/logos/link3.png" alt="" style={{maxHeight: '5rem', width: '10rem'}}/></a></div>
+                    <div className="sponsor"><a href="http://www.applusidiada.com/en/"><img src="https://www.eurobrake.net/res/display/default/chrome/logos/fagorederlangroup.png" alt="" style={{maxHeight: '5rem', width: '10rem'}}/></a></div>
+                    <div className="sponsor"><a href="http://www.applusidiada.com/en/"><img src="https://www.eurobrake.net/res/display/default/chrome/logos/lapinus2.png" alt="" style={{maxHeight: '5rem', width: '10rem'}}/></a></div>
+                    <div className="sponsor"><a href="http://www.applusidiada.com/en/"><img src="https://www.eurobrake.net/res/display/default/chrome/logos/sadeca2.png" alt="" style={{maxHeight: '5rem', width: '10rem'}}/></a></div>
+                    <div className="sponsor"><a href="http://www.applusidiada.com/en/"><img src="https://www.eurobrake.net/res/display/default/chrome/logos/alroko.png" alt="" style={{maxHeight: '5rem', width: '10rem'}}/></a></div>
                 </div>
             </div>
             <div className="ftr_container-2">

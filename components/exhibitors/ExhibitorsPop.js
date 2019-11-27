@@ -1,0 +1,220 @@
+import React from 'react';
+import Modal from '@material-ui/core/Modal';
+import Backdrop from '@material-ui/core/Backdrop';
+import Fade from '@material-ui/core/Fade';
+import Paper from '@material-ui/core/Paper';
+import Grid from '@material-ui/core/Grid';
+import styled from 'styled-components';
+import { Button } from '../Button';
+import IconButton from '@material-ui/core/IconButton';
+import AddCircleOutlineIcon from '@material-ui/icons/AddCircleOutline';
+import Typography from '@material-ui/core/Typography';
+import { MailIcon, PhoneIcon, GlobeIcon, FloorPlan } from '../Icons';
+
+
+const StyledModal = styled.div`
+
+display: flex;
+flex: 1;
+flex-flow: column;
+justify-content: center;
+align-items: center;
+margin-top: 9rem;
+
+.paper{
+max-width: 42rem;
+max-height: 62.5rem;
+padding: 2rem;
+
+
+}
+
+.closeBtn{
+  transform: rotate(45deg);
+  font-size: 2.5rem;
+
+}
+
+.ModalLogo{
+  width: 50%;
+  margin-bottom: 2rem;
+}
+
+.ModalTitle{
+  font-family: ${props => props.theme.MPSemibold};
+  font-size: 3.1rem;
+  color: ${props => props.theme.primary};
+
+}
+ .ModalContact{
+  font-family: ${props => props.theme.MPSemiLight};
+  font-size: 1.1rem;
+  margin-right: .5rem;
+  
+ }
+
+ .ModalIcon{
+   transform: translateY(-1rem);
+   width: 80%;
+ }
+
+ .ModalSummary{
+  font-family: ${props => props.theme.MPSemiLight};
+  font-size: 1.1rem;
+  padding-top: 1rem;
+  /* overflow: scroll; */
+
+
+ }
+ .ModalBooth{
+
+  font-family: ${props => props.theme.MPBlack};
+  font-size: 1.7rem;
+  color: ${props => props.theme.primary};
+  padding: 1rem 0 ;
+
+ }
+ .ModalMapTitle{
+  font-family: ${props => props.theme.MPLightIt};
+  font-size: 1.7rem;
+  color: ${props => props.theme.primary};
+  padding: 1rem 0 ;
+
+
+ }
+ .ModalMapBox{
+
+
+ }
+
+`;
+
+const StyledMapBox = styled.div`
+  width: 37.9rem;
+  height: 22.9rem;
+  background-color: goldenrod;
+  align-self: center;
+
+`;
+
+
+
+export default function ServerModal(props) {
+  const rootRef = React.useRef(null);
+  const [open, setOpen] = React.useState(false);
+
+  const {
+    name,
+    img,
+    booth,
+    country,
+    height,
+    summary,
+    website,
+    phone,
+    email,
+  } = props;
+
+  const handleOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
+
+  //Image handler Component
+  const addDefaultSrc = (e) => {
+    e.target.src = "/images/logo.png"
+    e.target.onerror = null;
+    return
+  }
+
+  return (
+    <div className="" ref={rootRef}>
+      <Button
+        fontSize="1.1rem" background="#134381" bcolor="#134381" padding=".8rem " type="button" onClick={handleOpen}>
+        Learn more
+      </Button>
+      <Modal
+        closeAfterTransition
+        BackdropComponent={Backdrop}
+        BackdropProps={{
+          timeout: 500,
+        }}
+        open={open}
+        onClose={handleClose}
+        disablePortal
+        disableEnforceFocus
+        disableAutoFocus
+        aria-labelledby="server-modal-title"
+        aria-describedby="server-modal-description"
+        className=""
+        container={() => rootRef.current}
+      >
+        <Fade in={open}>
+          <StyledModal>
+            <Paper className="paper">
+              <Grid
+                container
+                spacing={12}
+                direction="row"
+                wrap= "wrap"
+                justify="flex-start"
+              >
+
+                <Grid item xs={6}>
+                  <img className="ModalLogo" src={img} alt="logo" onError={addDefaultSrc} />
+                </Grid>
+                <Grid item xs={6} style={{ textAlign: 'end' }}>
+                  <IconButton aria-label="close" onClick={handleClose} style={{ padding: '0' }}>
+                    <AddCircleOutlineIcon fontSize="large" className="closeBtn" />
+                  </IconButton>
+                </Grid>
+                <Grid gutterbottom item xs={12}>
+                  <Typography className="ModalTitle" id="server-modal-title">{name}</Typography>
+                </Grid>
+                <Grid  gutterbottom item xs={1}  style={{}}>
+                  <PhoneIcon className="ModalIcon" />
+                </Grid>
+                <Grid  gutterbottom item xs={5} >
+                  <Typography className="ModalContact" id="server-modal-description">{phone}</Typography>
+                </Grid>
+                <Grid gutterbottom item xs={1}  style={{}}>
+                  <GlobeIcon className="ModalIcon"/>
+                </Grid>
+                <Grid  gutterbottom item xs={5} >
+                  <Typography className="ModalContact" id="server-modal-description">{website}</Typography>
+                </Grid>
+                <Grid  gutterbottom item xs={1}  style={{transform: 'translateY(.3rem)'}}>
+                  <MailIcon className="ModalIcon" />
+                </Grid>
+                <Grid  gutterbottom item xs={5} >
+                  <Typography className="ModalContact" id="server-modal-description">{email}</Typography>
+                </Grid>
+                <Grid item xs={12}>
+                  <Typography className="ModalSummary" id="server-modal-description">{summary}</Typography>
+                </Grid>
+                <Grid item xs={6}>
+                  <Typography className="ModalBooth" id="server-modal-description">Booth #{booth}</Typography>
+                </Grid>
+                <Grid item xs={6}>
+                  <Typography className="ModalMapTitle" id="server-modal-description" style={{ textAlign: 'end' }}>View on map below</Typography>
+                </Grid>
+                <Grid item xs={12}>
+                  <StyledMapBox className="">
+                    {/* <FloorPlan/>cd */}
+                  </StyledMapBox>
+                </Grid>
+              </Grid>
+            </Paper>
+          </StyledModal>
+        </Fade>
+      </Modal>
+    </div>
+  );
+}
+
+
+
+

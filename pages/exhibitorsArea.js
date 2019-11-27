@@ -2,6 +2,7 @@ import React from 'react'
 import FormBuilder from '../components/FormBuilder';
 import fetch from 'isomorphic-unfetch';
 import styled from 'styled-components';
+import HeroSection from '../components/HeroSection';
 
 
 const DemoDiv = styled.form`
@@ -64,6 +65,10 @@ export default class ExhibitorsArea extends React.Component {
         const {loggedIn} = this.state;
         const { form } = this.props.form;
         return (
+            <>
+             <HeroSection>
+                Exhibitors Area
+            </HeroSection>
                 <DemoDiv>
 
             { loggedIn ?
@@ -75,18 +80,23 @@ export default class ExhibitorsArea extends React.Component {
                     (
                     <DemoDiv onSubmit={this.onSubmit}>
                         <div className="">
-                            <label htmlFor="label">{form[0].label}</label>
-                            <input type="text" name={form[0].name} onChange={this.saveToState} value={this.state.username} />
+                            <label htmlFor="label">Username
+                                {/* {form[0].label} */}
+                                </label>
+                            <input type="text" name="username" onChange={this.saveToState} value={this.state.username} />
                         </div>
                         <div className="">
-                            <label htmlFor="label">{form[1].label}</label>
-                            <input type="password" name={form[1].name} onChange={this.saveToState} value={this.state.password} />
+                            <label htmlFor="label">Password
+                                {/* {form[1].label} */}
+                                </label>
+                            <input type="password" name="password" onChange={this.saveToState} value={this.state.password} />
                         </div>
                         <input type="submit" value="Submit" />
                     </DemoDiv>
                     )
             }
                 </DemoDiv>
+                </>
             )
         
     }

@@ -1,69 +1,39 @@
 import React from 'react'
 import styled from 'styled-components';
+import HeroSection from '../components/HeroSection';
+import Typography from '@material-ui/core/Typography';
+import ExpandMoreOutlinedIcon from '@material-ui/icons/ExpandMoreOutlined';
+import {StyledPage, StyledBanner, StyledContainer} from '../components/styles/PageStyles';
 
 
-const DemoDiv = styled.div`
-    display: flex;
-    flex-direction: column;
-    align-self: center;
-    max-width: ${props => props.theme.maxWidth};
-`;
+const FilledBanner = () => (
 
+    <StyledBanner>
+        <StyledContainer>
 
-const Demo = styled.h1`
-    padding: 10rem;
-    margin: 5rem;
-    color: orangered;
-
-`;
-
+            <Typography className="banner-heading" >Book your tours and accomodation here</Typography>
+            <Typography className="banner-sub" >Find out about Barcelona</Typography>
+            <div className="banner_bottom">
+                <ExpandMoreOutlinedIcon className="banner_bottom-icon" />
+                <Typography varient="h3" className="banner_bottom-details">See below for more details</Typography>
+            </div>
+        </StyledContainer>
+    </StyledBanner>
+)
+   
 export default () => (
-<DemoDiv>
-    <Demo>About</Demo>
-    <Demo>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-        Saepe asperiores quibusdam facere ipsa reprehenderit possimus necessitatibus id, 
-        quisquam sed tempore vel, maiores cupiditate facilis accusamus sunt dolorem amet repellat labore.
-    </Demo>
-    <Demo>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-        Saepe asperiores quibusdam facere ipsa reprehenderit possimus necessitatibus id, 
-        quisquam sed tempore vel, maiores cupiditate facilis accusamus sunt dolorem amet repellat labore.
-    </Demo>
-    <Demo>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-        Saepe asperiores quibusdam facere ipsa reprehenderit possimus necessitatibus id, 
-        quisquam sed tempore vel, maiores cupiditate facilis accusamus sunt dolorem amet repellat labore.
-    </Demo>
-    <Demo>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-        Saepe asperiores quibusdam facere ipsa reprehenderit possimus necessitatibus id, 
-        quisquam sed tempore vel, maiores cupiditate facilis accusamus sunt dolorem amet repellat labore.
-    </Demo>
-    <Demo>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-        Saepe asperiores quibusdam facere ipsa reprehenderit possimus necessitatibus id, 
-        quisquam sed tempore vel, maiores cupiditate facilis accusamus sunt dolorem amet repellat labore.
-    </Demo>
-    <Demo>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-        Saepe asperiores quibusdam facere ipsa reprehenderit possimus necessitatibus id, 
-        quisquam sed tempore vel, maiores cupiditate facilis accusamus sunt dolorem amet repellat labore.
-    </Demo>
-    <Demo>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-        Saepe asperiores quibusdam facere ipsa reprehenderit possimus necessitatibus id, 
-        quisquam sed tempore vel, maiores cupiditate facilis accusamus sunt dolorem amet repellat labore.
-    </Demo>
-    <Demo>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-        Saepe asperiores quibusdam facere ipsa reprehenderit possimus necessitatibus id, 
-        quisquam sed tempore vel, maiores cupiditate facilis accusamus sunt dolorem amet repellat labore.
-    </Demo>
-    <Demo>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-        Saepe asperiores quibusdam facere ipsa reprehenderit possimus necessitatibus id, 
-        quisquam sed tempore vel, maiores cupiditate facilis accusamus sunt dolorem amet repellat labore.
-    </Demo>
-    <Demo>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-        Saepe asperiores quibusdam facere ipsa reprehenderit possimus necessitatibus id, 
-        quisquam sed tempore vel, maiores cupiditate facilis accusamus sunt dolorem amet repellat labore.
-    </Demo>
-    <Demo>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-        Saepe asperiores quibusdam facere ipsa reprehenderit possimus necessitatibus id, 
-        quisquam sed tempore vel, maiores cupiditate facilis accusamus sunt dolorem amet repellat labore.
-    </Demo>
-</DemoDiv>    
+<>
+    <HeroSection t="15rem"  banner={FilledBanner} fs="8.9rem">
+        This is the about section
+    </HeroSection>
+    <StyledPage>
+<h1> In here there will be :
+        General information
+        Information about barcelona
+        Acomodation 
+        and tours</h1>
+    </StyledPage>
+</>
+
 
 ) 

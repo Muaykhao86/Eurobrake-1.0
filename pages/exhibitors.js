@@ -1,56 +1,18 @@
 import React, { Component, Fragment } from 'react'
-import styled from 'styled-components';
 import fetch from 'isomorphic-unfetch';
-import CountDownBanner from '../components/CountDownBanner';
-import ExhibitorCard from '../components/ExhibitorCard';
-
-const Hero = styled.div`
-    width: 100vw;
-    height: 100vh;
-
-    img{
-        position: fixed;
-        top: 0;
-        left: 0;
-    }
-
-    h1{ 
-        max-width: ${props => props.theme.maxWidth};
-        color: ${props => props.theme.white};
-        font-family: ${props => props.theme.MPRegular};
-        font-size: 20rem;
-        text-shadow: 0px 3px 50px #0000008C; 
-    }
-
-
-`;
-
-const StyledPage = styled.div`
-    display: flex;
-    flex-direction: column;
-    align-self: center;
-    margin-top: 10rem;
-    max-width: ${props => props.theme.maxWidth};
-`;
+import styled from 'styled-components';
+import ExhibitorCard from '../components/exhibitors/ExhibitorCard';
+// import {expo} from '../components/exhibitors/testexpo';
+import HeroSection from '../components/HeroSection';
+import {StyledPage} from '../components/styles/PageStyles';
 
 
 const StyledExhibitors = styled.div`
     display: flex;
     flex-flow: wrap; 
+    justify-content: center;
 `;
 
-
-const StyledCard = styled.div`
-    display: flex; 
-    flex-direction: column;
-    max-height: 50rem;
-    max-width: 35rem;
-    justify-content: space-between;
-    padding: 2rem;
-    border: 1px solid black;
-    margin: 2rem;
-    
-`;
 
 
 export default class ExhibitorList extends Component {
@@ -72,32 +34,38 @@ export default class ExhibitorList extends Component {
     };
 
     componentDidMount() {
+
+        // const exhibitors = expo;
         const exhibitors = this.props.exhibitors.exhibitors;
         const company = exhibitors.map((ex, i) => ex.company);
         this.setState({ companies: company });
     }
 
     render() {
+        // const exhibitors = expo;
+        
         const exhibitors = this.props.exhibitors.exhibitors;
         return (
             <Fragment>
-            <Hero>
-                <h1>EuroBrake 2020 Exhibitor Directory</h1>
-                <img src="/images/pic1.png" alt="EuroBrake Greating" style={{ width: '100%', height: '100%' }} />
-                <CountDownBanner />
-            </Hero>
-            <StyledPage>
+            <HeroSection  max="65%">
+                EuroBrake 2020 Exhibitor Directory
+            </HeroSection>
+            <StyledPage mt="10rem" >
+                <h1>Get to know the exhibitors</h1>
                 <StyledExhibitors>
                     {exhibitors.map((company, i) => {
                         return (
                             <ExhibitorCard 
                             key={i} 
                             name={company.company} 
-                            img={company.logo}
-                            width="120"
-                            height="120"
+                            image={company.logo}
                             booth={company.booth}
                             country={company.country}
+                            height={100}
+                            summary={company.description}
+                            website={company.website}
+                            phone={company.phone}
+                            email={company.email}
                             />
                         )
                     })}

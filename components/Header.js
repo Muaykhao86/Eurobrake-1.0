@@ -8,7 +8,7 @@ const HeaderBar = styled.div`
     position: fixed;
     background-color: ${props => props.sticky ? 
     "#134381" : "transparent"};
-    min-width: 100vw;
+    min-width: 100%;
     height: 10rem;
     display: flex;
     justify-content: flex-end;

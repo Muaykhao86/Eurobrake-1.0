@@ -7,14 +7,15 @@ export const Button = styled.button`
     text-align: center;
     text-transform: uppercase;
     text-decoration: none;
-    font-size: 2.1rem;
+    font-size: ${props => props.fontSize ||
+    '2.1rem'};
     color: ${props => 
     props.color || 
     props.theme.white};
     background: ${props => 
     props.background || 
     'transparent'};
-    border: 1px solid ${props => props.color 
+    border: 1px solid ${props => props.bcolor 
     ||props.theme.white};
     border-radius: ${props => props.br ||
     '0'};
@@ -49,7 +50,7 @@ export const Button = styled.button`
         transform: translateY(-.1rem);
         box-shadow: 0 2rem 2rem rgba(0, 0, 0, 0.5);
     }
-    
-
 
 `;
+
+//TODO ADJUST BOX SHADOWS FOR DIFFERENT BUTTONS

@@ -21,7 +21,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 var FooterBar = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div.withConfig({
   displayName: "Footer__FooterBar",
   componentId: "sc-1wn18ws-0"
-})(["color:", ";background:", ";min-width:100%;min-height:10rem;display:flex;justify-content:space-between;align-items:flex-end;position:absolute;bottom:0;padding:2rem;.ftr_container-1{padding:.2rem;min-width:30rem;display:flex;flex-flow:column;}.ftr_container-2{padding:.2rem;min-width:20rem;min-height:20rem;display:flex;flex-flow:column;justify-content:space-between;align-items:center;}.ftr_container-3{display:flex;flex-flow:column;align-items:center;}.ftr_newsletter-box{padding-bottom:1rem;min-width:40rem;display:flex;justify-content:space-between;}.ftr_container-5{padding:1rem;min-width:40rem;border:1px solid white;min-height:20rem;display:flex;flex-flow:column;}.ftr_sponsor-box{background-color:white;padding:1rem;max-width:40rem;border:1px solid white;height:25rem;display:flex;flex-flow:wrap;.sponsor{margin:1rem 1rem;cursor:pointer;}}.ftr_container-7{display:flex;position:relative;}.social{color:", ";;margin:1rem;font-size:2rem;}a{color:", ";text-transform:uppercase;font-family:", ";font-size:2rem;}h1{padding:1rem;text-align:center;}input{width:65%;margin-left:auto;}label{font-family:", ";font-size:2rem;text-transform:uppercase;}"], function (props) {
+})(["color:", ";background:", ";min-width:100%;min-height:10rem;display:flex;justify-content:space-between;align-items:flex-end;position:absolute;bottom:0;padding:2rem;.ftr_container-1{padding:.2rem;min-width:30rem;display:flex;flex-flow:column;}.ftr_container-2{padding:.2rem;min-width:20rem;min-height:20rem;display:flex;flex-flow:column;justify-content:space-between;align-items:center;}.ftr_container-3{display:flex;flex-flow:column;align-items:center;}.ftr_newsletter-box{padding-bottom:1rem;min-width:40rem;display:flex;justify-content:space-between;}.ftr_container-5{padding:1rem;min-width:40rem;border:1px solid white;min-height:20rem;display:flex;flex-flow:column;}.ftr_sponsor-box{background-color:white;padding:.5rem;max-width:40rem;border:1px solid white;height:25rem;display:flex;flex-flow:wrap;justify-content:center;align-items:center;align-content:center;.sponsor{margin:0 1rem;cursor:pointer;}}.ftr_container-7{display:flex;position:relative;}.social{color:", ";;margin:1rem;font-size:2rem;}a{color:", ";text-transform:uppercase;font-family:", ";font-size:2rem;}h1{padding:1rem;text-align:center;}input{width:65%;margin-left:auto;}label{font-family:", ";font-size:2rem;text-transform:uppercase;}"], function (props) {
   return props.theme.white;
 }, function (props) {
   return props.theme.primary;
@@ -39,41 +39,41 @@ function Footer() {
   return __jsx(FooterBar, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 129
+      lineNumber: 131
     },
     __self: this
   }, __jsx("div", {
     className: "ftr_container-1",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 130
+      lineNumber: 132
     },
     __self: this
   }, __jsx("h1", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 131
+      lineNumber: 133
     },
     __self: this
-  }, "CONFIRMED EUROBRAKE 2020 SPONSORS"), "      // ! STILL NEED TO ADJUST SIZING ETC", __jsx("div", {
+  }, "CONFIRMED EUROBRAKE 2020 SPONSORS"), __jsx("div", {
     className: "ftr_sponsor-box",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 132
+      lineNumber: 134
     },
     __self: this
   }, __jsx("div", {
     className: "sponsor",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 133
+      lineNumber: 135
     },
     __self: this
   }, __jsx("a", {
     href: "http://www.applusidiada.com/en/",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 133
+      lineNumber: 135
     },
     __self: this
   }, __jsx("img", {
@@ -81,25 +81,25 @@ function Footer() {
     alt: "",
     style: {
       maxHeight: '5rem',
-      width: '5rem'
+      width: '10rem'
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 133
+      lineNumber: 135
     },
     __self: this
   }))), __jsx("div", {
     className: "sponsor",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 134
+      lineNumber: 136
     },
     __self: this
   }, __jsx("a", {
     href: "http://www.applusidiada.com/en/",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 134
+      lineNumber: 136
     },
     __self: this
   }, __jsx("img", {
@@ -107,25 +107,25 @@ function Footer() {
     alt: "",
     style: {
       maxHeight: '5rem',
-      width: '5rem'
+      width: '10rem'
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 134
+      lineNumber: 136
     },
     __self: this
   }))), __jsx("div", {
     className: "sponsor",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 135
+      lineNumber: 137
     },
     __self: this
   }, __jsx("a", {
     href: "http://www.applusidiada.com/en/",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 135
+      lineNumber: 137
     },
     __self: this
   }, __jsx("img", {
@@ -133,25 +133,25 @@ function Footer() {
     alt: "",
     style: {
       maxHeight: '5rem',
-      width: '5rem'
+      width: '10rem'
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 135
+      lineNumber: 137
     },
     __self: this
   }))), __jsx("div", {
     className: "sponsor",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 136
+      lineNumber: 138
     },
     __self: this
   }, __jsx("a", {
     href: "http://www.applusidiada.com/en/",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 136
+      lineNumber: 138
     },
     __self: this
   }, __jsx("img", {
@@ -159,25 +159,25 @@ function Footer() {
     alt: "",
     style: {
       maxheight: '5rem',
-      width: '9rem'
+      width: '10rem'
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 136
+      lineNumber: 138
     },
     __self: this
   }))), __jsx("div", {
     className: "sponsor",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 137
+      lineNumber: 139
     },
     __self: this
   }, __jsx("a", {
     href: "http://www.applusidiada.com/en/",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 137
+      lineNumber: 139
     },
     __self: this
   }, __jsx("img", {
@@ -185,25 +185,25 @@ function Footer() {
     alt: "",
     style: {
       maxHeight: '5rem',
-      width: '9rem'
+      width: '10rem'
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 137
+      lineNumber: 139
     },
     __self: this
   }))), __jsx("div", {
     className: "sponsor",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 138
+      lineNumber: 140
     },
     __self: this
   }, __jsx("a", {
     href: "http://www.applusidiada.com/en/",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 138
+      lineNumber: 140
     },
     __self: this
   }, __jsx("img", {
@@ -211,25 +211,25 @@ function Footer() {
     alt: "",
     style: {
       maxHeight: '5rem',
-      width: '5rem'
+      width: '10rem'
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 138
+      lineNumber: 140
     },
     __self: this
   }))), __jsx("div", {
     className: "sponsor",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 139
+      lineNumber: 141
     },
     __self: this
   }, __jsx("a", {
     href: "http://www.applusidiada.com/en/",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 139
+      lineNumber: 141
     },
     __self: this
   }, __jsx("img", {
@@ -237,25 +237,25 @@ function Footer() {
     alt: "",
     style: {
       maxHeight: '5rem',
-      width: '9rem'
+      width: '10rem'
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 139
+      lineNumber: 141
     },
     __self: this
   }))), __jsx("div", {
     className: "sponsor",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 140
+      lineNumber: 142
     },
     __self: this
   }, __jsx("a", {
     href: "http://www.applusidiada.com/en/",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 140
+      lineNumber: 142
     },
     __self: this
   }, __jsx("img", {
@@ -263,25 +263,25 @@ function Footer() {
     alt: "",
     style: {
       maxHeight: '5rem',
-      width: '5rem'
+      width: '10rem'
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 140
+      lineNumber: 142
     },
     __self: this
   }))), __jsx("div", {
     className: "sponsor",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 141
+      lineNumber: 143
     },
     __self: this
   }, __jsx("a", {
     href: "http://www.applusidiada.com/en/",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 141
+      lineNumber: 143
     },
     __self: this
   }, __jsx("img", {
@@ -289,25 +289,25 @@ function Footer() {
     alt: "",
     style: {
       maxHeight: '5rem',
-      width: '5rem'
+      width: '10rem'
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 141
+      lineNumber: 143
     },
     __self: this
   }))), __jsx("div", {
     className: "sponsor",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 142
+      lineNumber: 144
     },
     __self: this
   }, __jsx("a", {
     href: "http://www.applusidiada.com/en/",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 142
+      lineNumber: 144
     },
     __self: this
   }, __jsx("img", {
@@ -315,46 +315,46 @@ function Footer() {
     alt: "",
     style: {
       maxHeight: '5rem',
-      width: '5rem'
+      width: '10rem'
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 142
+      lineNumber: 144
     },
     __self: this
   }))))), __jsx("div", {
     className: "ftr_container-2",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 145
+      lineNumber: 147
     },
     __self: this
   }, __jsx("a", {
     href: "https://www.eurobrake.net/privacy",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 146
+      lineNumber: 148
     },
     __self: this
   }, "Privacy Policy"), __jsx("a", {
     href: "https://www.eurobrake.net/disclaimer",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 147
+      lineNumber: 149
     },
     __self: this
   }, "Disclaimer"), __jsx("a", {
     href: "",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 148
+      lineNumber: 150
     },
     __self: this
   }, "Contact Us"), __jsx("div", {
     className: "ftr_container-7",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 151
+      lineNumber: 153
     },
     __self: this
   }, __jsx("a", {
@@ -362,7 +362,7 @@ function Footer() {
     href: "http://www.linkedin.com/groups/EuroBrake-4282205?trk=myg_ugrp_ovr",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 152
+      lineNumber: 154
     },
     __self: this
   }, __jsx("img", {
@@ -373,7 +373,7 @@ function Footer() {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 153
+      lineNumber: 155
     },
     __self: this
   })), __jsx("a", {
@@ -381,7 +381,7 @@ function Footer() {
     href: "http://www.facebook.com/pages/FISITA-International-Federation-of-Automotive-Engineering-Societies/123022704532",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 155
+      lineNumber: 157
     },
     __self: this
   }, __jsx("img", {
@@ -392,7 +392,7 @@ function Footer() {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 156
+      lineNumber: 158
     },
     __self: this
   })), __jsx("a", {
@@ -400,7 +400,7 @@ function Footer() {
     href: "http://twitter.com/FISITAhq",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 158
+      lineNumber: 160
     },
     __self: this
   }, __jsx("img", {
@@ -411,7 +411,7 @@ function Footer() {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 159
+      lineNumber: 161
     },
     __self: this
   })), __jsx("a", {
@@ -419,7 +419,7 @@ function Footer() {
     href: "https://www.flickr.com/photos/eurobrake/albums/72157681368290774",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 161
+      lineNumber: 163
     },
     __self: this
   }, __jsx("img", {
@@ -430,28 +430,28 @@ function Footer() {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 162
+      lineNumber: 164
     },
     __self: this
   })))), __jsx("div", {
     className: "ftr_container-3",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 166
+      lineNumber: 168
     },
     __self: this
   }, __jsx("div", {
     className: "ftr_newsletter-box",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 168
+      lineNumber: 170
     },
     __self: this
   }, __jsx("label", {
     htmlFor: "Newsletter",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 169
+      lineNumber: 171
     },
     __self: this
   }, "Newsletter"), __jsx("input", {
@@ -460,20 +460,20 @@ function Footer() {
     id: "",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 170
+      lineNumber: 172
     },
     __self: this
   })), __jsx("div", {
     className: "ftr_container-7",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 172
+      lineNumber: 174
     },
     __self: this
   }, __jsx(_GoogleMaps__WEBPACK_IMPORTED_MODULE_2__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 173
+      lineNumber: 175
     },
     __self: this
   }))));
@@ -630,7 +630,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement;
 var HeaderBar = styled_components__WEBPACK_IMPORTED_MODULE_9__["default"].div.withConfig({
   displayName: "Header__HeaderBar",
   componentId: "zfe6h7-0"
-})(["color:white;position:fixed;background-color:", ";min-width:100vw;height:10rem;display:flex;justify-content:flex-end;align-items:center;z-index:100;.logo{margin-left:10rem;margin-right:auto;}"], function (props) {
+})(["color:white;position:fixed;background-color:", ";min-width:100%;height:10rem;display:flex;justify-content:flex-end;align-items:center;z-index:100;.logo{margin-left:10rem;margin-right:auto;}"], function (props) {
   return props.sticky ? "#134381" : "transparent";
 });
 var HeaderLogo = styled_components__WEBPACK_IMPORTED_MODULE_9__["default"].img.attrs(function (props) {
@@ -914,8 +914,8 @@ function (_Component) {
           lineNumber: 26
         },
         __self: this
-      }, "Heading if needed"), __jsx(next_link__WEBPACK_IMPORTED_MODULE_8___default.a, {
-        href: "/about",
+      }, "Main"), __jsx(next_link__WEBPACK_IMPORTED_MODULE_8___default.a, {
+        href: "/",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 27
@@ -926,185 +926,199 @@ function (_Component) {
         __source: {
           fileName: _jsxFileName,
           lineNumber: 27
+        },
+        __self: this
+      }, "Home")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_8___default.a, {
+        href: "/about",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 28
+        },
+        __self: this
+      }, __jsx("a", {
+        onClick: this.handleClick,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 28
         },
         __self: this
       }, "About")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_8___default.a, {
         href: "/authorsArea",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 28
+          lineNumber: 29
         },
         __self: this
       }, __jsx("a", {
         onClick: this.handleClick,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 28
+          lineNumber: 29
         },
         __self: this
       }, "Authors Area")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_8___default.a, {
-        href: "/expoAndSponsor",
+        href: "/exhibitorsArea",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 29
+          lineNumber: 30
         },
         __self: this
       }, __jsx("a", {
         onClick: this.handleClick,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 29
+          lineNumber: 30
         },
         __self: this
-      }, "Exhibition And Sponsorship ")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_8___default.a, {
+      }, "Exhibitors Area")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_8___default.a, {
         href: "/studentArea",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 30
+          lineNumber: 31
         },
         __self: this
       }, __jsx("a", {
         onClick: this.handleClick,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 30
+          lineNumber: 31
         },
         __self: this
       }, "Student Area")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_8___default.a, {
-        href: "/ticketPortal",
+        href: "/exhibitAndSponsor",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 31
+          lineNumber: 32
         },
         __self: this
       }, __jsx("a", {
         onClick: this.handleClick,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 31
+          lineNumber: 32
+        },
+        __self: this
+      }, "Exhibition And Sponsorship")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_8___default.a, {
+        href: "/ticketPortal",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 33
+        },
+        __self: this
+      }, __jsx("a", {
+        onClick: this.handleClick,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 33
         },
         __self: this
       }, "Ticket Portal"))), __jsx("div", {
         className: "nav_box-2",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 33
+          lineNumber: 35
         },
         __self: this
       }, __jsx("h1", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 34
+          lineNumber: 36
         },
         __self: this
-      }, "Heading if needed"), __jsx(next_link__WEBPACK_IMPORTED_MODULE_8___default.a, {
+      }, "Quick Links"), __jsx(next_link__WEBPACK_IMPORTED_MODULE_8___default.a, {
         href: "/welcome",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 35
+          lineNumber: 37
         },
         __self: this
       }, __jsx("a", {
         onClick: this.handleClick,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 35
+          lineNumber: 37
         },
         __self: this
-      }, "Welcome")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_8___default.a, {
-        href: "/login",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 36
-        },
-        __self: this
-      }, __jsx("a", {
-        onClick: this.handleClick,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 36
-        },
-        __self: this
-      }, "Login")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_8___default.a, {
+      }, "Welcome to Barcelona")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_8___default.a, {
         href: "/exhibitors",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 37
+          lineNumber: 39
         },
         __self: this
       }, __jsx("a", {
         onClick: this.handleClick,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 37
+          lineNumber: 39
         },
         __self: this
       }, "Exhibitors List")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_8___default.a, {
-        href: "/exhibitorsArea",
+        href: "/exhibitorsRegistration",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 38
+          lineNumber: 40
         },
         __self: this
       }, __jsx("a", {
         onClick: this.handleClick,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 38
+          lineNumber: 40
         },
         __self: this
-      }, "Exhibitors Area")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_8___default.a, {
+      }, "Exhibitors Registration")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_8___default.a, {
         href: "",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 39
+          lineNumber: 41
         },
         __self: this
       }, __jsx("a", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 39
+          lineNumber: 41
         },
         __self: this
-      }, "This is a link to somewhere on the website"))), __jsx("div", {
+      }, "Technical Program"))), __jsx("div", {
         className: "nav_box-3",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 41
+          lineNumber: 43
         },
         __self: this
       }, __jsx("div", {
         className: "nav_box-4",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 42
+          lineNumber: 44
         },
         __self: this
       }, "BOOK NOW"), __jsx("div", {
         className: "nav_box-5",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 45
+          lineNumber: 47
         },
         __self: this
       }, "IMPORTANT DATES"), __jsx("div", {
         className: "nav_box-6",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 48
+          lineNumber: 50
         },
         __self: this
       }, "SOMTHING ELSE IMPORTANT"))), __jsx(next_link__WEBPACK_IMPORTED_MODULE_8___default.a, {
         href: "/about",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 54
+          lineNumber: 56
         },
         __self: this
       }, __jsx("a", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 56
+          lineNumber: 58
         },
         __self: this
       }, "Menu")), __jsx(_styles_NavStyles__WEBPACK_IMPORTED_MODULE_9__["Burger"], {
@@ -1112,7 +1126,7 @@ function (_Component) {
         onClick: this.handleClick,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 60
+          lineNumber: 62
         },
         __self: this
       }, __jsx(_styles_NavStyles__WEBPACK_IMPORTED_MODULE_9__["TopBun"], {
@@ -1120,7 +1134,7 @@ function (_Component) {
         sticky: this.props.sticky,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 61
+          lineNumber: 63
         },
         __self: this
       })));
@@ -1166,7 +1180,7 @@ var _jsxFileName = "/mnt/c/Users/D.Hardiman/desktop/eurobrake/components/Page.js
 var __jsx = react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement;
 
 function _templateObject() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_5__["default"])(["\n    @font-face {\n    font-family: 'MyriadPro-Regular';\n    src: url('/fonts/MyriadPro-Regular.otf');\n    font-weight: normal;\n    font-display: auto;\n    font-style: normal;\n    };\n    @font-face {\n    font-family: 'MyriadPro-Bold';\n    src: url('/fonts/MyriadPro-Bold.otf');\n    font-weight: bold;\n    font-display: auto;\n    font-style: normal;\n    };\n    @font-face {\n    font-family: 'MyriadPro-Semibold';\n    src: url('/fonts/MyriadPro-Semibold.otf');\n    font-weight: 600;\n    font-display: auto;\n    font-style: normal;\n    };\n    @font-face {\n    font-family: 'MyriadPro-Light';\n    src: url('/fonts/MyriadPro-Light.otf');\n    font-weight: 300;\n    font-display: auto;\n    font-style: normal;\n    };\n    *,\n    *::before,\n    *::after{\n        margin: 0;\n        padding: 0;\n        box-sizing: inherit;\n    };\n    html{\n        height: 100%;\n        box-sizing:  border-box;\n        font-size: 62.5%;\n    };\n    body{\n        /* To set the footer at the bottom we have to leave space for it in the parent container */\n        position: relative;\n        min-height: 100%;\n        padding-bottom: 40rem;\n        font-family: ", ";\n        color: black;\n        line-height: 1.6;\n    }\n    \n    a{\n        text-decoration: none;\n        color: black;\n    }\n    ;\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_5__["default"])(["\n    @font-face {\n    font-family: 'MyriadPro-Regular';\n    src: url('/fonts/MyriadPro-Regular.otf');\n    font-weight: normal;\n    font-display: auto;\n    font-style: normal;\n    };\n    @font-face {\n    font-family: 'MyriadPro-Bold';\n    src: url('/fonts/MyriadPro-Bold.otf');\n    font-weight: bold;\n    font-display: auto;\n    font-style: normal;\n    };\n    @font-face {\n    font-family: 'MyriadPro-Semibold';\n    src: url('/fonts/MyriadPro-Semibold.otf');\n    font-weight: 600;\n    font-display: auto;\n    font-style: normal;\n    };\n    @font-face {\n    font-family: 'MyriadPro-Light';\n    src: url('/fonts/MyriadPro-Light.otf');\n    font-weight: 300;\n    font-display: auto;\n    font-style: normal;\n    };\n    @font-face {\n    font-family: 'MyriadPro-LightIt';\n    src: url('/fonts/MyriadPro-LightIt.otf');\n    font-weight: lighter;\n    font-display: auto;\n    font-style: normal;\n    };\n    @font-face {\n    font-family: 'MyriadPro-It';\n    src: url('/fonts/MyriadPro-It.otf');\n    font-display: auto;\n    font-style: normal;\n    };\n    @font-face {\n    font-family: 'MyriadPro-Black';\n    src: url('/fonts/MyriadPro-Black.otf');\n    font-weight: 300;\n    font-display: auto;\n    font-style: normal;\n    };\n    *,\n    *::before,\n    *::after{\n        margin: 0;\n        padding: 0;\n        box-sizing: inherit;\n    };\n    html{\n        height: 100%;\n        box-sizing:  border-box;\n        font-size: 62.5%;\n    };\n    body{\n        /* To set the footer at the bottom we have to leave space for it in the parent container */\n        position: relative;\n        min-height: 100%;\n        padding-bottom: 40rem;\n        font-family: ", ";\n        color: black;\n        line-height: 1.6;\n    }\n    \n    a{\n        text-decoration: none;\n        color: black;\n    }\n    ;\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -1188,7 +1202,10 @@ var theme = {
   MPBold: 'MyriadPro-Bold',
   MPSemibold: 'MyriadPro-Semibold',
   MPLight: 'MyriadPro-Light',
-  maxWidth: '70%',
+  MPLightIt: 'MyriadPro-LightIt',
+  MPIt: 'MyriadPro-It',
+  MPBlack: 'MyriadPro-Black',
+  maxWidth: '55%',
   bs: '0 1.2rem 2.4rem rgba(0, 0, 0, .09)'
 };
 var StyledPage = styled_components__WEBPACK_IMPORTED_MODULE_10__["default"].div.withConfig({
@@ -1217,37 +1234,37 @@ function (_Component) {
         theme: theme,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 89
+          lineNumber: 112
         },
         __self: this
       }, __jsx(GlobalStyle, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 90
+          lineNumber: 113
         },
         __self: this
       }), __jsx(StyledPage, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 91
+          lineNumber: 114
         },
         __self: this
       }, __jsx(_Meta__WEBPACK_IMPORTED_MODULE_9__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 92
+          lineNumber: 115
         },
         __self: this
       }), __jsx(_Header__WEBPACK_IMPORTED_MODULE_7__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 93
+          lineNumber: 116
         },
         __self: this
       }), this.props.children, __jsx(_Footer__WEBPACK_IMPORTED_MODULE_8__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 95
+          lineNumber: 118
         },
         __self: this
       })));
@@ -22644,6 +22661,13 @@ function (_App) {
   }
 
   Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_2__["default"])(MyApp, [{
+    key: "componentDidMount",
+    // need to remove the server-side injected CSS on the client side because of avoiding duplicated injection of CSS. as per material ui docs
+    value: function componentDidMount() {
+      var jssStyles = document.querySelector('#jss-server-side');
+      if (jssStyles && jssStyles.parentNode) jssStyles.parentNode.removeChild(jssStyles);
+    }
+  }, {
     key: "render",
     value: function render() {
       var _this$props = this.props,
@@ -22652,13 +22676,13 @@ function (_App) {
       return __jsx(_components_Page__WEBPACK_IMPORTED_MODULE_8__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 11
+          lineNumber: 17
         },
         __self: this
       }, __jsx(Component, Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, pageProps, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 12
+          lineNumber: 18
         },
         __self: this
       })));
