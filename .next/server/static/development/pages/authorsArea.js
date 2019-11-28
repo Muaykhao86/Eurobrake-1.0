@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 4);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -1299,7 +1299,13 @@ class AuthorsArea extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
         lineNumber: 103
       },
       __self: this
-    }, __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_7___default.a, {
+    }, __jsx(_components_PopupLogin__WEBPACK_IMPORTED_MODULE_9__["default"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 104
+      },
+      __self: this
+    }), __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_7___default.a, {
       className: "authors-title",
       __source: {
         fileName: _jsxFileName,
@@ -1512,7 +1518,7 @@ const withAuthSync = WrappedComponent => {
 
 /***/ }),
 
-/***/ 3:
+/***/ 4:
 /*!************************************!*\
   !*** multi ./pages/authorsArea.js ***!
   \************************************/

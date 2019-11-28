@@ -5,7 +5,10 @@ import styled from 'styled-components';
 import { withAuthSync, logout, login } from '../utils/auth'
 import cookies from 'next-cookies';
 import cookie from 'js-cookie';
-import Login from '../components/login';
+import HeroSection from '../components/HeroSection';
+import Typography from '@material-ui/core/Typography';
+
+
 
 const StyledPage = styled.div`
     display: flex;
@@ -122,7 +125,7 @@ class AuthorsAreaDash extends Component {
         console.log({ userLoggedIn, hasForm });
         return (
             <>
-            <HeroSection banner={FilledBanner}>
+                <HeroSection banner={FilledBanner}>
                     AuthorsArea
             </HeroSection>
                 <StyledPage>
@@ -132,12 +135,26 @@ class AuthorsAreaDash extends Component {
                     <Typography gutterBottom className="authors">Once you have created your author account you can login at any time to amend your details and access important information. </Typography>
                     <Typography gutterBottom className="authors authors-it">Please note that all submitting authors will need to create a new author account for EuroBrake 2020 as account are not copied from year to year.</Typography>
                     <Typography className="authors_sub-title">Submit your review ready papers by 26 January 2020.</Typography>
-            <button onClick={this.getAbstractForm}>Submit a Abstract</button>
-            <button onClick={logout}>logout</button>
-            </StyledPage>
+                    <Button
+                        bcolor="#134381"
+                        background="#134381"
+                        br="100rem"
+                        style={{ margin: "3rem 0" }}
+                        fs="1.8rem"
+                        padding=".5rem 6rem"
+                        onClick={this.getAbstractForm}>Submit a Abstract</Button>
+                    <Button
+                        bcolor="#134381"
+                        background="#134381"
+                        br="100rem"
+                        style={{ margin: "3rem 0" }}
+                        fs="1.8rem"
+                        padding=".5rem 6rem"
+                        onClick={logout}>logout</Button>
+                </StyledPage>
             </>
 
-           )
+        )
 
     }
 }
@@ -147,9 +164,9 @@ AuthorsAreaDash.getInitialProps = async ctx => {
     const { logintoken } = cookies(ctx);
     const apiUrl = 'https://prelude.eurobrake.net/dashboard ';
     const redirectOnError = () =>
-    process.browser
-        ? Router.push('/authorsArea')
-        : ctx.res.writeHead(301, { Location: '/authorsArea' })
+        process.browser
+            ? Router.push('/authorsArea')
+            : ctx.res.writeHead(301, { Location: '/authorsArea' })
     if (logintoken) {
         try {
             // console.log({logintoken}, 'getIProps right before fetch call')
