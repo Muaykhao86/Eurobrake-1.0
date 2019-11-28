@@ -25,7 +25,7 @@ export default class VideoPlayer extends React.Component {
   render () {
     const videoJsOptions = {
       loop: true,
-      autoplay: 'any',
+      autoplay: 'true', //! doesnnt work in firefox
       fluid: true,
       controls: false,
       // poster: {Poster},

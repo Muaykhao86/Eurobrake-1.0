@@ -150,7 +150,7 @@ export default function ExpandTable() {
           <Table className="" aria-label="simple table">
             <TableBody>
               {delegateRows.map(row => (
-                <TableRow key={delegateRows.days}>
+                <TableRow key={row.days}>
                   <StyledCell component="th" scope="row" className="StyledCell-title">{row.days}</StyledCell>
                   <StyledCell align="left" className="StyledCell-title">Earlybird price</StyledCell>
                   <StyledCell align="left" className="StyledCell-data">&euro; {row.Early.toFixed(2)}</StyledCell>
@@ -176,7 +176,7 @@ export default function ExpandTable() {
            <Table className="" aria-label="simple table">
             <TableBody>
               {delegateMemberRows.map(row => (
-                <TableRow key={delegateRows.days}>
+                <TableRow key={row.days}>
                   <StyledCell component="th" scope="row" className="StyledCell-title">{row.days}</StyledCell>
                   <StyledCell align="left" className="StyledCell-title">Earlybird price</StyledCell>
                   <StyledCell align="left" className="StyledCell-data">&euro; {row.Early.toFixed(2)}</StyledCell>
@@ -202,7 +202,7 @@ export default function ExpandTable() {
             <Table className="" aria-label="simple table">
             <TableBody>
               {studentRows.map(row => (
-                <TableRow key={delegateRows.days}>
+                <TableRow key={row.days}>
                   <StyledCell component="th" scope="row" className="StyledCell-title">{row.days}</StyledCell>
                   <StyledCell align="left" className="StyledCell-title">Earlybird price</StyledCell>
                   <StyledCell align="left" className="StyledCell-data">&euro; {row.Early.toFixed(2)}</StyledCell>
@@ -228,7 +228,7 @@ export default function ExpandTable() {
             <Table className="" aria-label="simple table">
             <TableBody>
               {expoRows.map(row => (
-                <TableRow key={delegateRows.days}>
+                <TableRow key={row.days}>
                   <StyledCell component="th" scope="row" className="StyledCell-title">{row.days}</StyledCell>
                   <StyledCell align="left" className="StyledCell-title">Earlybird price</StyledCell>
                   <StyledCell align="left" className="StyledCell-data">&euro; {row.Early.toFixed(2)}</StyledCell>
@@ -254,7 +254,7 @@ export default function ExpandTable() {
             <Table className="" aria-label="simple table">
             <TableBody>
               {academicRows.map(row => (
-                <TableRow key={delegateRows.days}>
+                <TableRow key={row.days}>
                   <StyledCell component="th" scope="row" className="StyledCell-title">{row.days}</StyledCell>
                   <StyledCell align="left" className="StyledCell-title">Earlybird price</StyledCell>
                   <StyledCell align="left" className="StyledCell-data">&euro; {row.Early.toFixed(2)}</StyledCell>
@@ -280,7 +280,7 @@ export default function ExpandTable() {
             <Table className="" aria-label="simple table">
             <TableBody>
               {academicSessionRows.map(row => (
-                <TableRow key={delegateRows.days}>
+                <TableRow key={row.days}>
                   <StyledCell component="th" scope="row" className="StyledCell-title">{row.days}</StyledCell>
                   <StyledCell align="left" className="StyledCell-title">Earlybird price</StyledCell>
                   <StyledCell align="left" className="StyledCell-data">&euro; {row.Early.toFixed(2)}</StyledCell>
@@ -306,7 +306,7 @@ export default function ExpandTable() {
             <Table className="" aria-label="simple table">
             <TableBody>
               {sessionRows.map(row => (
-                <TableRow key={delegateRows.days}>
+                <TableRow key={row.days}>
                   <StyledCell component="th" scope="row" className="StyledCell-title">{row.days}</StyledCell>
                   <StyledCell align="left" className="StyledCell-title">Earlybird price</StyledCell>
                   <StyledCell align="left" className="StyledCell-data">&euro; {row.Early.toFixed(2)}</StyledCell>

@@ -12,11 +12,7 @@
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],
-    "/about": [
-      "static/runtime/webpack.js",
-      "static/runtime/main.js"
-    ],
-    "/exhibitorsRegistration": [
+    "/authorsArea": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ]

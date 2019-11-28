@@ -7,24 +7,41 @@ import cookies from 'next-cookies';
 import cookie from 'js-cookie';
 import Login from '../components/login';
 
-
-const DemoDiv = styled.form`
-
+const StyledPage = styled.div`
     display: flex;
     flex-direction: column;
     align-self: center;
-    margin-top: 10rem;
     max-width: ${props => props.theme.maxWidth};
+    background-color: ${props => props.theme.white};
 
+    .authors{
+        color: ${props => props.theme.primary};
+        font-family: ${props => props.theme.MPLight};
+        font-size: 2rem;
+   
+    &-title{
+        color: ${props => props.theme.primary};
+        font-family: ${props => props.theme.MPSemibold};
+        font-size: 4.4rem;
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+    }
+   
+    &_sub-title{
+        color: ${props => props.theme.primary};
+        font-size: 3.5rem;
+        font-family: ${props => props.theme.MPLightIt};
+        padding-bottom: .5rem;
+        margin-bottom: 3rem;
+    }
+    &-bold{
+        font-family: ${props => props.theme.MPBold};
+    }
+    &-it{
+        font-family: ${props => props.theme.MPLightIt};
+    }
+}
 `;
-
-
-const Demo = styled.h1`
-    padding: 10rem;
-    margin: 5rem;
-    color: orangered;
-`;
-
 
 class AuthorsAreaDash extends Component {
     constructor(props) {
@@ -104,14 +121,21 @@ class AuthorsAreaDash extends Component {
         const { userLoggedIn, hasForm } = this.state;
         console.log({ userLoggedIn, hasForm });
         return (
-            <DemoDiv>
-
-            <h1>
-                you are logged In
-            </h1>
+            <>
+            <HeroSection banner={FilledBanner}>
+                    AuthorsArea
+            </HeroSection>
+                <StyledPage>
+                    {/* <PopupLogin/> */}
+                    <Typography className="authors-title">Welcome to the Author's Area</Typography>
+                    <Typography gutterBottom className="authors">Presenting a paper at EuroBrake gives you the opportunity to share your latest technical ideas and achievements with influential specialists from around the world and to discuss your work with colleagues throughout the industrial and academic communities.</Typography>
+                    <Typography gutterBottom className="authors">Once you have created your author account you can login at any time to amend your details and access important information. </Typography>
+                    <Typography gutterBottom className="authors authors-it">Please note that all submitting authors will need to create a new author account for EuroBrake 2020 as account are not copied from year to year.</Typography>
+                    <Typography className="authors_sub-title">Submit your review ready papers by 26 January 2020.</Typography>
             <button onClick={this.getAbstractForm}>Submit a Abstract</button>
             <button onClick={logout}>logout</button>
-            </DemoDiv>
+            </StyledPage>
+            </>
 
            )
 

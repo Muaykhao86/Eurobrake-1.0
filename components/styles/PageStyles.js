@@ -45,7 +45,7 @@ export const StyledContainer = styled.div`
     
     .banner-heading{
         font-family: ${props => props.theme.MPBlack};
-        font-size: 4.4rem;
+        font-size: ${props => props.hfs || '4.4rem'};
         padding-bottom: .5rem;
         margin-bottom: .5rem;
         border-bottom: 2px solid ${props => props.theme.white};

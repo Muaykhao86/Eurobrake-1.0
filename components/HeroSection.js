@@ -6,15 +6,18 @@ import CountDownBanner from '../components/CountDownBanner';
 
 const StyledHero = styled.div`
     min-width: 100%;
-    height: 100vh;  
+    /* height: 100vh;   */
     display: flex;
     flex-flow: column;
     
     img{
-        flex: 1;
+        flex: 2 1 80%;
         object-fit: cover;
     }
-
+     
+    .banner{
+        flex: 1 1 20%;
+    }
     
 `;
 
@@ -45,7 +48,9 @@ export default function HeroSection(props) {
             <StyledText t={t} max={max} fs={fs}>
                 {props.children}
             </StyledText>
-            {props.banner ? <props.banner /> : <CountDownBanner />}
+            <div className="banner">
+            {props.banner ? <props.banner  /> : <CountDownBanner />}
+            </div>
         </StyledHero>
     )
 }

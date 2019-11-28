@@ -18,14 +18,14 @@ const FooterBar = styled.div`
         padding: .2rem;
         min-width: 30rem;
         
-        display: flex;
+        display: flex;  
         flex-flow: column;
     }
-    .ftr_container-2{
+    .ftr_middle-links{
         padding: .2rem;
         min-width: 20rem;
         min-height: 20rem;
-       
+       flex: 1 1 auto;
         display: flex;
         flex-flow: column;
         justify-content: space-between;
@@ -85,6 +85,8 @@ const FooterBar = styled.div`
 
     .ftr_container-7{
         display: flex;
+        flex-wrap: wrap;
+        justify-content:space-between;
         position: relative;
       
     }
@@ -93,7 +95,6 @@ const FooterBar = styled.div`
         color: ${props => props.theme.white};;
         margin: 1rem;
         font-size: 2rem;
-        
     }
 
 
@@ -144,7 +145,7 @@ function Footer() {
                     <div className="sponsor"><a href="http://www.applusidiada.com/en/"><img src="https://www.eurobrake.net/res/display/default/chrome/logos/alroko.png" alt="" style={{maxHeight: '5rem', width: '10rem'}}/></a></div>
                 </div>
             </div>
-            <div className="ftr_container-2">
+            <div className="ftr_middle-links">
                 <a href="https://www.eurobrake.net/privacy">Privacy Policy</a>
                 <a href="https://www.eurobrake.net/disclaimer">Disclaimer</a>
                 <a href="">Contact Us</a>
@@ -152,16 +153,16 @@ function Footer() {
                 <a href="">links</a> */}
             <div className="ftr_container-7">
                 <a className="social" href="http://www.linkedin.com/groups/EuroBrake-4282205?trk=myg_ugrp_ovr">
-                <img src="/images/LinkedIn@2000x.png" alt="Linkedin" style={{width: '5rem'}}/>
+                <img src="/images/LinkedIn@2000x.png" alt="Linkedin" style={{maxWidth: '5rem'}}/>
                 </a>
                 <a  className="social" href="http://www.facebook.com/pages/FISITA-International-Federation-of-Automotive-Engineering-Societies/123022704532">
-                    <img src="/images/Facebook@2000x.png" alt="Facebook" style={{width: '5rem'}}/>
+                    <img src="/images/Facebook@2000x.png" alt="Facebook" style={{maxWidth: '5rem'}}/>
                 </a>
                 <a  className="social" href="http://twitter.com/FISITAhq">
-                    <img src="/images/Twitter@2000x.png" alt="Twitter" style={{width: '5rem'}}/>
+                    <img src="/images/Twitter@2000x.png" alt="Twitter" style={{maxWidth: '5rem'}}/>
                 </a>
                 <a  className="social" href="https://www.flickr.com/photos/eurobrake/albums/72157681368290774">
-                    <img src="/images/flickr-icon@2000w.png" alt="Flickr" style={{width: '5rem'}}/>
+                    <img src="/images/flickr-icon@2000w.png" alt="Flickr" style={{maxWidth: '5rem'}}/>
                 </a>
             </div>
             </div>

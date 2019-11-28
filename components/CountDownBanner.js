@@ -17,9 +17,9 @@ const CDBanner = styled.div`
 
 const CDContainer = styled.div`
     display: flex;
-    max-width: ${props => props.theme.maxWidth};
     align-items: center;
     margin-right: 2rem; 
+
 `;
 
 const CDItem = styled.div`
@@ -31,6 +31,7 @@ const CDItem = styled.div`
     align-items: flex-start;
 
 .timer{
+    position: relative;
     font-size: 7rem;
     font-family: ${props => props.theme.MPBlack};
     margin: 0 1rem ;
@@ -38,7 +39,7 @@ const CDItem = styled.div`
 
     span{
     position: absolute;
-    top: 9rem;
+    top: 8.8rem;
     font-size: 1.7rem;
     font-family: ${props => props.theme.MPLight};
     padding-left: 2rem;
@@ -54,10 +55,10 @@ class CountDownBanner extends Component {
         super(props);
 
         this.state = {
-            days: undefined,
-            hours: undefined,
-            minutes: undefined,
-            seconds: undefined,
+            days: '',
+            hours: '',
+            minutes: '',
+            seconds: '',
 
         }
     }

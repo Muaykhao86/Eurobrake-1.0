@@ -11,6 +11,7 @@ const theme = {
     secondary: '#F9B721',
     MPRegular: 'MyriadPro-Regular',
     MPBold: 'MyriadPro-Bold',
+    MPBoldIt: 'MyriadPro-BoldIt',
     MPSemibold: 'MyriadPro-Semibold',
     MPLight: 'MyriadPro-Light',
     MPLightIt: 'MyriadPro-LightIt',
@@ -38,6 +39,13 @@ const GlobalStyle = createGlobalStyle`
     @font-face {
     font-family: 'MyriadPro-Bold';
     src: url('/fonts/MyriadPro-Bold.otf');
+    font-weight: bold;
+    font-display: auto;
+    font-style: normal;
+    };
+    @font-face {
+    font-family: 'MyriadPro-BoldIt';
+    src: url('/fonts/MyriadPro-BoldIt.otf');
     font-weight: bold;
     font-display: auto;
     font-style: normal;
@@ -86,7 +94,8 @@ const GlobalStyle = createGlobalStyle`
     html{
         height: 100%;
         box-sizing:  border-box;
-        font-size: 62.5%;
+        font-size: 62.5%; 
+        /* 60% */
     };
     body{
         /* To set the footer at the bottom we have to leave space for it in the parent container */
@@ -96,6 +105,7 @@ const GlobalStyle = createGlobalStyle`
         font-family: ${props => props.theme.MPRegular};
         color: black;
         line-height: 1.6;
+        /* 1.2 */
     }
     
     a{

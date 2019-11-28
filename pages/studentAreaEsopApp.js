@@ -27,6 +27,10 @@ export default () => (
         EuroBrake Student Opportunities Programme (ESOP)
     </HeroSection>
     <StyledPage mt="10rem">
+        This is going to have options for students
+        -esop applications
+        - qoutes
+        - sponsorship costs etc
 
     </StyledPage>
 </>

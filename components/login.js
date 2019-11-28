@@ -1,27 +1,63 @@
 import React, { Component } from 'react'
 import styled from 'styled-components';
 import fetch from 'isomorphic-unfetch';
-import cookie from 'js-cookie';
+import TextField from '@material-ui/core/TextField';
 import { login, logout } from '../utils/auth';
+import {Button} from './Button';
 
 
-
-const DemoDiv = styled.form`
+const StyledForm = styled.form`
     display: flex;
-    flex-direction: column;
-    align-self: center; 
-    max-width: ${props => props.theme.maxWidth};
+    flex-flow: column;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 100%;
+
+    
+.MuiInput-underline:after {
+    color: ${props => props.theme.primary};
+}
+
+.MuiInputBase-root {
+    font-family: ${props => props.theme.MPBoldIt};
+        font-size: 2rem;
+        color: ${props => props.theme.primary};
+}
+
+input:-internal-autofill-selected {
+
+}
+    .login_form{
+
+    &-field{
+        margin: 1rem 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+    &-label{
+        font-family: ${props => props.theme.MPLight};
+        font-size: 2.6rem;
+        color: ${props => props.theme.primary};
+    }
+    &-input{
+        min-width: 40rem;
+        font-family: ${props => props.theme.MPBoldIt};
+        font-size: 5rem;
+        color: ${props => props.theme.primary};
+
+    }
+
+    &-link{
+        font-family: ${props => props.theme.MPBoldIt};
+        font-size: 1.7rem;
+        color: ${props => props.theme.primary};
+    }
+    }
+
+
 `;
-
-
-const Demo = styled.h1`
-    padding: 10rem;
-    margin: 5rem;
-    color: orangered;
-
-`;
-
-
 
 export default class Login extends Component {
     // static getInitialProps = async function () {
@@ -38,8 +74,6 @@ export default class Login extends Component {
     //         form: data
     //     };
     // };
-
-
     constructor(props) {
         super(props);
         this.state = {
@@ -49,17 +83,12 @@ export default class Login extends Component {
         }
     }
 
-
-
     saveToState = (e) => {
         this.setState({ [e.target.name]: e.target.value });
     }
 
-
     onSubmit = async (e) => {
         e.preventDefault()
-        console.log('on submit click');
-
         const { username, password, error } = this.state;
         // const apiUrl = authorLogin ? 'https://prelude.eurobrake.net/login' : '' ;
         // action="//2019.eurobrake.net/exhibition/exhibitors/login" SHOULD BE LOGIN FORM FOR EXHIBITORS
@@ -67,8 +96,6 @@ export default class Login extends Component {
             username: username,
             password: password,
         }
-
-
         try {
             const response = await fetch('https://prelude.eurobrake.net/login', {
                 method: 'POST',
@@ -76,18 +103,11 @@ export default class Login extends Component {
                 body: JSON.stringify(formData)
             });
             const data = await response.json();
-
-            // console.log({ data })
-
             if (data.status === 'success') {
                 const { logintoken } = data;
                 await login({ logintoken })
-                // console.log('login ok', data.status)
                 // this.setState(prev => ({ userLoggedIn: !prev }))
-
                 return {}
-                // logintoken: logintoken
-
 
             } else {
                 let error = new Error(data.error)
@@ -102,37 +122,55 @@ export default class Login extends Component {
         }
     }
     render() {
-        const { userLoggedIn } = this.state;
-        const { form } = this.props
-        console.log({ form })
         return (
-            <DemoDiv onSubmit={this.onSubmit}>
-                <Demo>
-                    <div className="">
-                        <div className="">
-                            <label htmlFor="label">
-                                Username
+           
+                   <StyledForm className="login_form">
+                        <div className="login_form-field">
+                            <label 
+                            htmlFor="label" 
+                            className="login_form-label">
+                                Email:
                             </label>
-                            <input type="text"
-                                name="username"
-                                onChange={this.saveToState} value={this.state.username} />
+                            <TextField
+                            style={{color: '#134381'}}
+                            id="standard-required"
+                            label="Required"
+                            className="login_form-input" 
+                            type="text"
+                            name="username"
+                            onChange={this.saveToState} 
+                            value={this.state.username} />
                         </div>
-                        <div className="">
-                            <label htmlFor="label">
-                                Password
+                        <div className="login_form-field">
+                            <label 
+                            className="login_form-label"
+                             htmlFor="label">
+                                Password:
                             </label>
-                            <input type="password"
-                                name="password"
-                                onChange={this.saveToState} value={this.state.password} />
+                            <TextField
+                            id="standard-required"
+                            label="Required"
+                            className="login_form-input" 
+                            type="password"
+                            name="password"
+                            onChange={this.saveToState} 
+                            value={this.state.password} />
                         </div>
-                        <input type="submit" value="Submit" />
-                        <button onClick={logout}>logout</button>
-                    </div>
-                </Demo>
-            </DemoDiv>
+                        <Button 
+                        onClick={this.onSubmit} 
+                        value="Submit" 
+                        bcolor="#134381"
+                        background="#134381"
+                        br="100rem"
+                        style={{ margin: "3rem 0"}}
+                        fs="1.8rem"
+                        padding=".5rem 6rem"
+                        >Login</Button>
+                        <a className="login_form-link" href="">Forgotten your password?</a>
+                   </StyledForm>
+          
+             
         )
     }
 }
-
-
 
