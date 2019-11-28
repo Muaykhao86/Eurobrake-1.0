@@ -119,7 +119,6 @@ class AuthorsAreaDash extends Component {
         });
     }
 
-                    {/* <PopupLogin/> */}
     render() {
 
         const { userLoggedIn, hasForm } = this.state;
@@ -207,6 +206,7 @@ export default withAuthSync(AuthorsAreaDash)
 // *
 // todo
 {/* <div className="form-container">
+                    <PopupLogin/>
                 <form>
                 {this.state.hasForm &&
                 
