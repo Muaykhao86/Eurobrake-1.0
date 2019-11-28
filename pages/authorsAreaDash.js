@@ -7,6 +7,8 @@ import cookies from 'next-cookies';
 import cookie from 'js-cookie';
 import HeroSection from '../components/HeroSection';
 import Typography from '@material-ui/core/Typography';
+import { Button } from '../components/Button';
+
 
 
 
