@@ -54,7 +54,7 @@ export default class ExhibitorList extends Component {
             <StyledPage mt="10rem" >
                 <h1>Get to know the exhibitors</h1>
                 <StyledExhibitors>
-                    {this.exhibitors.map((company, i) => {
+                    {exhibitors.map((company, i) => {
                         return (
                             <ExhibitorCard 
                             key={i} 
