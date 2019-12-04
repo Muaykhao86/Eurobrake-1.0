@@ -195,60 +195,13 @@ AuthorsAreaDash.getInitialProps = async ctx => {
             return redirectOnError()
         }
     }
-    // return {}
 
 }
 
 export default withAuthSync(AuthorsAreaDash)
-// export default AuthorsArea;
 
 
 // !
 // ?
 // *
 // todo
-{/* <div className="form-container">
-                    <PopupLogin/>
-                <form>
-                {this.state.hasForm &&
-                
-
-              this.state.formdata.map(component => {
-                 return(
-                        <div className="form-item">
-                        {component.title ? <title>{component.title}</title> : null }
-                        {component.type ? 
-                        <label>
-                        {component.options ? null : component.label}
-                        <input
-                        required={component.options ?  null : component.required ? component.required : null}
-                         name={component.name}
-                         type={component.type}
-                         value={this.state.name}
-                         onChange={this.handleInputChange}
-                        /> 
-                        </label>
-                        : null
-                        }
-                        {component.options ? 
-                        <label>
-                            {component.label}
-                        <select name={component.name} >
-                            {component.options.map( option => {
-                                return( 
-                                        <option value={option.value}>{option.label}</option>
-                                )
-                            })}
-                        </select> 
-                        </label>    
-                        : null}
-                        {component.default ? <default>{component.default}</default> : null}
-
-                        </div>
-                 )
-                    }
-                )
-                }
-                </form>
-                </div> */}
-// //

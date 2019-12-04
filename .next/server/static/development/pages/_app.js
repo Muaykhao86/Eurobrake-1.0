@@ -1058,57 +1058,71 @@ class Nav extends react__WEBPACK_IMPORTED_MODULE_1__["Component"] {
       },
       __self: this
     }, "Exhibitors Registration")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
-      href: "",
+      href: "/authorsAreaInstructions",
       __source: {
         fileName: _jsxFileName,
         lineNumber: 41
       },
       __self: this
     }, __jsx("a", {
+      onClick: this.handleClick,
       __source: {
         fileName: _jsxFileName,
         lineNumber: 41
+      },
+      __self: this
+    }, "Authors Area Instructions & Templates")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
+      href: "",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 42
+      },
+      __self: this
+    }, __jsx("a", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 42
       },
       __self: this
     }, "Technical Program"))), __jsx("div", {
       className: "nav_box-3",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 43
+        lineNumber: 44
       },
       __self: this
     }, __jsx("div", {
       className: "nav_box-4",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 44
+        lineNumber: 45
       },
       __self: this
     }, "BOOK NOW"), __jsx("div", {
       className: "nav_box-5",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 47
+        lineNumber: 48
       },
       __self: this
     }, "IMPORTANT DATES"), __jsx("div", {
       className: "nav_box-6",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 50
+        lineNumber: 51
       },
       __self: this
     }, "SOMTHING ELSE IMPORTANT"))), __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
       href: "/about",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 56
+        lineNumber: 57
       },
       __self: this
     }, __jsx("a", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 58
+        lineNumber: 59
       },
       __self: this
     }, "Menu")), __jsx(_styles_NavStyles__WEBPACK_IMPORTED_MODULE_3__["Burger"], {
@@ -1116,7 +1130,7 @@ class Nav extends react__WEBPACK_IMPORTED_MODULE_1__["Component"] {
       onClick: this.handleClick,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 62
+        lineNumber: 63
       },
       __self: this
     }, __jsx(_styles_NavStyles__WEBPACK_IMPORTED_MODULE_3__["TopBun"], {
@@ -1124,7 +1138,7 @@ class Nav extends react__WEBPACK_IMPORTED_MODULE_1__["Component"] {
       sticky: this.props.sticky,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 63
+        lineNumber: 64
       },
       __self: this
     })));
@@ -1170,7 +1184,7 @@ const theme = {
   MPLightIt: 'MyriadPro-LightIt',
   MPIt: 'MyriadPro-It',
   MPBlack: 'MyriadPro-Black',
-  maxWidth: '55%',
+  maxWidth: '50%',
   bs: '0 1.2rem 2.4rem rgba(0, 0, 0, .09)'
 };
 const StyledPage = styled_components__WEBPACK_IMPORTED_MODULE_4___default.a.div.withConfig({

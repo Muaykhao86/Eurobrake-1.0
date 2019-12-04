@@ -9,7 +9,7 @@ import { Button } from '../Button';
 import IconButton from '@material-ui/core/IconButton';
 import AddCircleOutlineIcon from '@material-ui/icons/AddCircleOutline';
 import Typography from '@material-ui/core/Typography';
-import { MailIcon, PhoneIcon, GlobeIcon, FloorPlan } from '../Icons';
+import { MailIcon, PhoneIcon, GlobeIcon, EBFloorPlan } from '../Icons';
 
 
 const StyledModal = styled.div`
@@ -23,7 +23,7 @@ margin-top: 9rem;
 
 .paper{
 max-width: 42rem;
-max-height: 62.5rem;
+max-height: 70rem;
 padding: 2rem;
 
 
@@ -84,23 +84,47 @@ padding: 2rem;
  }
  .ModalMapBox{
 
-
  }
 
 `;
 
+
 const StyledMapBox = styled.div`
-  width: 37.9rem;
-  height: 22.9rem;
-  background-color: goldenrod;
+ min-width: 37.9rem;
+  min-height: 22.9rem;
+   border: 1px solid ${props => props.theme.primary};
+  /* background-color: goldenrod; */
   align-self: center;
+
+  
+  
+  svg{
+    	.findMe{
+      fill: #134381;
+/*       ? ???
+      &:before{
+        content: 'look at me!';
+        font-size: 3rem;
+        display: inline-block;
+        color: goldenrod;
+        
+      } */
+    }
+  }
 
 `;
 
 
 
 export default function ServerModal(props) {
+  
+  
+  
   const rootRef = React.useRef(null);
+  
+  
+  
+  
   const [open, setOpen] = React.useState(false);
 
   const {
@@ -115,14 +139,29 @@ export default function ServerModal(props) {
     email,
   } = props;
 
-  const handleOpen = () => {
+
+const selectedSvg = `#prefix__booth-${booth}`;
+
+  const handleOpen = (e) => {
     setOpen(true);
+    handleSvg(e)
   };
 
   const handleClose = () => {
     setOpen(false);
   };
 
+  const handleSvg = (e) => {
+    console.log({booth});
+    // console.log(rootRef);
+    // const selectedBooth = document.querySelector("#prefix__booth-75");
+    const svg = document.querySelector("#MapBox");
+    
+    // const selectedBooth = svg.querySelector("#prefix__booth-75 > path.prefix__cls-11");
+    // console.log({selectedBooth})
+    // selectedBooth.classList.add('fillMe')
+
+  }
   //Image handler Component
   const addDefaultSrc = (e) => {
     e.target.src = "/images/logo.png"
@@ -133,7 +172,7 @@ export default function ServerModal(props) {
   return (
     <div className="" ref={rootRef}>
       <Button
-        fontSize="1.1rem" background="#134381" bcolor="#134381" padding=".8rem " type="button" onClick={handleOpen}>
+        fontSize="1.1rem" background="#134381" bcolor="#134381" padding=".8rem " type="button" onClick={handleOpen} >
         Learn more
       </Button>
       <Modal
@@ -149,7 +188,7 @@ export default function ServerModal(props) {
         disableAutoFocus
         aria-labelledby="server-modal-title"
         aria-describedby="server-modal-description"
-        className=""
+        className="modal"
         container={() => rootRef.current}
       >
         <Fade in={open}>
@@ -171,26 +210,26 @@ export default function ServerModal(props) {
                     <AddCircleOutlineIcon fontSize="large" className="closeBtn" />
                   </IconButton>
                 </Grid>
-                <Grid gutterbottom item xs={12}>
-                  <Typography className="ModalTitle" id="server-modal-title">{name}</Typography>
+                <Grid  item xs={12}>
+                  <Typography gutterbottom className="ModalTitle" id="server-modal-title">{name}</Typography>
                 </Grid>
-                <Grid  gutterbottom item xs={1}  style={{}}>
-                  <PhoneIcon className="ModalIcon" />
+                <Grid  item xs={1}  style={{}}>
+                  <PhoneIcon gutterbottom className="ModalIcon" />
                 </Grid>
-                <Grid  gutterbottom item xs={5} >
-                  <Typography className="ModalContact" id="server-modal-description">{phone}</Typography>
+                <Grid  item xs={5} >
+                  <Typography gutterbottom className="ModalContact" id="server-modal-description">{phone}</Typography>
                 </Grid>
-                <Grid gutterbottom item xs={1}  style={{}}>
-                  <GlobeIcon className="ModalIcon"/>
+                <Grid item xs={1}  style={{}}>
+                  <GlobeIcon gutterbottom className="ModalIcon"/>
                 </Grid>
-                <Grid  gutterbottom item xs={5} >
-                  <Typography className="ModalContact" id="server-modal-description">{website}</Typography>
+                <Grid  item xs={5} >
+                  <Typography gutterbottom className="ModalContact" id="server-modal-description">{website}</Typography>
                 </Grid>
-                <Grid  gutterbottom item xs={1}  style={{transform: 'translateY(.3rem)'}}>
-                  <MailIcon className="ModalIcon" />
+                <Grid  item xs={1}  style={{transform: 'translateY(.3rem)'}}>
+                  <MailIcon gutterbottom className="ModalIcon" />
                 </Grid>
-                <Grid  gutterbottom item xs={5} >
-                  <Typography className="ModalContact" id="server-modal-description">{email}</Typography>
+                <Grid  item xs={5} >
+                  <Typography gutterbottom className="ModalContact" id="server-modal-description">{email}</Typography>
                 </Grid>
                 <Grid item xs={12}>
                   <Typography className="ModalSummary" id="server-modal-description">{summary}</Typography>
@@ -202,8 +241,8 @@ export default function ServerModal(props) {
                   <Typography className="ModalMapTitle" id="server-modal-description" style={{ textAlign: 'end' }}>View on map below</Typography>
                 </Grid>
                 <Grid item xs={12}>
-                  <StyledMapBox className="">
-                    {/* <FloorPlan/>cd */}
+                  <StyledMapBox >
+                    <EBFloorPlan booth={booth} open />
                   </StyledMapBox>
                 </Grid>
               </Grid>

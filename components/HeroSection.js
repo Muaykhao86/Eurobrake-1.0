@@ -6,7 +6,7 @@ import CountDownBanner from '../components/CountDownBanner';
 
 const StyledHero = styled.div`
     min-width: 100%;
-    /* height: 100vh;   */
+    height: 100vh;  
     display: flex;
     flex-flow: column;
     
@@ -16,6 +16,7 @@ const StyledHero = styled.div`
     }
      
     .banner{
+        display: flex;
         flex: 1 1 20%;
     }
     

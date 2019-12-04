@@ -8,6 +8,7 @@ export const StyledPage = styled.div`
     margin-top: ${props => props.mt || '5rem'};
     max-width: ${props => props.theme.maxWidth};
     background-color: ${props => props.theme.white};
+   
 
     h1{
         font-family: ${props => props.theme.MPBlack};

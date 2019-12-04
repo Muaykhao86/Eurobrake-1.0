@@ -17,7 +17,7 @@ const theme = {
     MPLightIt: 'MyriadPro-LightIt',
     MPIt: 'MyriadPro-It',
     MPBlack: 'MyriadPro-Black',
-    maxWidth: '55%',
+    maxWidth: '50%',
     bs: '0 1.2rem 2.4rem rgba(0, 0, 0, .09)',
 
 }

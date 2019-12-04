@@ -16,7 +16,7 @@ import LoginExpandTable from '../components/LoginExpandTable';
 const FilledBanner = () => (
 
     <StyledBanner>
-        <StyledContainer hfs="5rem">
+        <StyledContainer >
 
             <Typography className="banner-heading"  >Submit your review ready papers</Typography>
             <Typography className="banner-sub" >Deadline for submissions is 26 January 2020</Typography>
@@ -67,22 +67,7 @@ const StyledPage = styled.div`
 
 
 class AuthorsArea extends Component {
-    //  static async getInitialProps({ res }) {
-
-    //     const { logintoken } = cookie.get();
-    //     if (logintoken){
-    //     if (res) {
-    //       res.writeHead(302, {
-    //         Location: '/authorsAreaDash'
-    //       })
-    //       res.end()
-    //     } else {
-    //       Router.push('/authorsAreaDash')
-    //     }
-    //   }
-    //     return {}
-    //   }
-
+    
     constructor(props) {
         super(props);
         this.state = {
@@ -106,7 +91,7 @@ class AuthorsArea extends Component {
                     <Typography gutterBottom className="authors">Once you have created your author account you can login at any time to amend your details and access important information. </Typography>
                     <Typography gutterBottom className="authors authors-it">Please note that all submitting authors will need to create a new author account for EuroBrake 2020 as account are not copied from year to year.</Typography>
                     <Typography className="authors_sub-title">Submit your review ready papers by 26 January 2020.</Typography>
-                    <LoginExpandTable/>>
+                    <LoginExpandTable/>
             </StyledPage>
             </>
                 )
@@ -114,7 +99,7 @@ class AuthorsArea extends Component {
             }
         }
         
-        // export default withAuthSync(AuthorsArea)
+       
         export default AuthorsArea;
         
         
@@ -122,48 +107,5 @@ class AuthorsArea extends Component {
         // ?
         // *
         // todo
-{/* <div className="form-container">
-                <form>
-                {this.state.hasForm &&
-                
 
-              this.state.formdata.map(component => {
-                 return(
-                        <div className="form-item">
-                        {component.title ? <title>{component.title}</title> : null }
-                        {component.type ? 
-                        <label>
-                        {component.options ? null : component.label}
-                        <input
-                        required={component.options ?  null : component.required ? component.required : null}
-                         name={component.name}
-                         type={component.type}
-                         value={this.state.name}
-                         onChange={this.handleInputChange}
-                        /> 
-                        </label>
-                        : null
-                        }
-                        {component.options ? 
-                        <label>
-                            {component.label}
-                        <select name={component.name} >
-                            {component.options.map( option => {
-                                return( 
-                                        <option value={option.value}>{option.label}</option>
-                                )
-                            })}
-                        </select> 
-                        </label>    
-                        : null}
-                        {component.default ? <default>{component.default}</default> : null}
-
-                        </div>
-                 )
-                    }
-                )
-                }
-                </form>
-                </div> */}
-// //
 

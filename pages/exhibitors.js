@@ -2,7 +2,7 @@ import React, { Component, Fragment } from 'react'
 import fetch from 'isomorphic-unfetch';
 import styled from 'styled-components';
 import ExhibitorCard from '../components/exhibitors/ExhibitorCard';
-// import {expo} from '../components/exhibitors/testexpo';
+import {expo} from '../components/exhibitors/testexpo';
 import HeroSection from '../components/HeroSection';
 import {StyledPage} from '../components/styles/PageStyles';
 
@@ -10,7 +10,7 @@ import {StyledPage} from '../components/styles/PageStyles';
 const StyledExhibitors = styled.div`
     display: flex;
     flex-flow: wrap; 
-    justify-content: center;
+    
 `;
 
 
@@ -23,26 +23,27 @@ export default class ExhibitorList extends Component {
             exhibitors: [],
             companies: [],
         }
+        // this.exhibitors = expo;
     }
 
-    static async getInitialProps() {
-        const res = await fetch('https://prelude.eurobrake.net/exhibitors');
-        const data = await res.json().catch(error => console.log(error));
-        return {
-            exhibitors: data
-        };
-    };
+    // static async getInitialProps() {
+    //     const res = await fetch('https://prelude.eurobrake.net/exhibitors');
+    //     const data = await res.json().catch(error => console.log(error));
+    //     return {
+    //         exhibitors: data
+    //     };
+    // };
 
     componentDidMount() {
 
-        // const exhibitors = expo;
         const exhibitors = this.props.exhibitors.exhibitors;
         const company = exhibitors.map((ex, i) => ex.company);
-        this.setState({ companies: company });
+
+        // this.setState({ companies: company });
     }
 
     render() {
-        // const exhibitors = expo;
+        
         
         const exhibitors = this.props.exhibitors.exhibitors;
         return (
@@ -53,7 +54,7 @@ export default class ExhibitorList extends Component {
             <StyledPage mt="10rem" >
                 <h1>Get to know the exhibitors</h1>
                 <StyledExhibitors>
-                    {exhibitors.map((company, i) => {
+                    {this.exhibitors.map((company, i) => {
                         return (
                             <ExhibitorCard 
                             key={i} 
@@ -76,8 +77,5 @@ export default class ExhibitorList extends Component {
     }
 }
 
-// ON THIS PAGE!!!
-// HAVE A BIG CARD LIST OF ALL EXHIBITORS
-// DISPLAY LOGO NAME AND BOOTH
-// THEN ON CLICK SHOW POPUP PORTAL WITH THE REST OPF THEIR DETAILS
+
 

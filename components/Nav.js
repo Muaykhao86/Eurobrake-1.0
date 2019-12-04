@@ -20,7 +20,7 @@ export default class Nav extends Component {
     render() {
         return (
             <NavStyles>
-                 <HiddenNavBG isOpen={this.state.isOpen} />
+                <HiddenNavBG isOpen={this.state.isOpen} />
                 <HiddenContainer isOpen={this.state.isOpen}>
                     <div className="nav_box-1">
                         <h1>Main</h1>
@@ -38,6 +38,7 @@ export default class Nav extends Component {
                         {/* <Link href="/login"><a onClick={this.handleClick}>Login</a></Link> */}
                         <Link href="/exhibitors"><a onClick={this.handleClick}>Exhibitors List</a></Link>
                         <Link href="/exhibitorsRegistration"><a onClick={this.handleClick}>Exhibitors Registration</a></Link>
+                        <Link href="/authorsAreaInstructions"><a onClick={this.handleClick}>Authors Area Instructions & Templates</a></Link>
                         <Link href=""><a >Technical Program</a></Link>
                     </div>
                     <div className="nav_box-3">
@@ -53,14 +54,14 @@ export default class Nav extends Component {
 
                     </div>
                 </HiddenContainer>
-                <Link  href="/about">
+                <Link href="/about">
                     {/* This is a link but it wont be / it will be just a label for the menu... maybe a button with the burger */}
                     <a >
                         Menu
                     </a>
                 </Link>
                 <Burger isOpen={this.state.isOpen} onClick={this.handleClick}>
-                    <TopBun  isOpen={this.state.isOpen} sticky={this.props.sticky}  />
+                    <TopBun isOpen={this.state.isOpen} sticky={this.props.sticky} />
                 </Burger>
             </NavStyles>
         )

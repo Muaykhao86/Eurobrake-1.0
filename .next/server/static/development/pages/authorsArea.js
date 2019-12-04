@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 4);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -326,7 +326,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 const StyledHero = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div.withConfig({
   displayName: "HeroSection__StyledHero",
   componentId: "sc-1rt21yv-0"
-})(["min-width:100%;display:flex;flex-flow:column;img{flex:2 1 80%;object-fit:cover;}.banner{flex:1 1 20%;}"]);
+})(["min-width:100%;height:100vh;display:flex;flex-flow:column;img{flex:2 1 80%;object-fit:cover;}.banner{display:flex;flex:1 1 20%;}"]);
 const StyledText = styled_components__WEBPACK_IMPORTED_MODULE_1___default()(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_2___default.a).withConfig({
   displayName: "HeroSection__StyledText",
   componentId: "sc-1rt21yv-1"
@@ -340,7 +340,7 @@ function HeroSection(props) {
   return __jsx(StyledHero, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 46
+      lineNumber: 47
     },
     __self: this
   }, __jsx("img", {
@@ -348,7 +348,7 @@ function HeroSection(props) {
     alt: "EuroBrake Greating",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 47
+      lineNumber: 48
     },
     __self: this
   }), __jsx(StyledText, {
@@ -357,26 +357,26 @@ function HeroSection(props) {
     fs: fs,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 48
+      lineNumber: 49
     },
     __self: this
   }, props.children), __jsx("div", {
     className: "banner",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 51
+      lineNumber: 52
     },
     __self: this
   }, props.banner ? __jsx(props.banner, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 52
+      lineNumber: 53
     },
     __self: this
   }) : __jsx(_components_CountDownBanner__WEBPACK_IMPORTED_MODULE_3__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 52
+      lineNumber: 53
     },
     __self: this
   })));
@@ -1210,7 +1210,6 @@ const FilledBanner = () => __jsx(_components_styles_PageStyles__WEBPACK_IMPORTED
   },
   __self: undefined
 }, __jsx(_components_styles_PageStyles__WEBPACK_IMPORTED_MODULE_11__["StyledContainer"], {
-  hfs: "5rem",
   __source: {
     fileName: _jsxFileName,
     lineNumber: 19
@@ -1260,20 +1259,6 @@ const StyledPage = styled_components__WEBPACK_IMPORTED_MODULE_3___default.a.div.
 })(["display:flex;flex-direction:column;align-self:center;max-width:", ";background-color:", ";.authors{color:", ";font-family:", ";font-size:2rem;&-title{color:", ";font-family:", ";font-size:4.4rem;margin-top:3rem;margin-bottom:3rem;}&_sub-title{color:", ";font-size:3.5rem;font-family:", ";padding-bottom:.5rem;margin-bottom:3rem;}&-bold{font-family:", ";}&-it{font-family:", ";}}"], props => props.theme.maxWidth, props => props.theme.white, props => props.theme.primary, props => props.theme.MPLight, props => props.theme.primary, props => props.theme.MPSemibold, props => props.theme.primary, props => props.theme.MPLightIt, props => props.theme.MPBold, props => props.theme.MPLightIt);
 
 class AuthorsArea extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
-  //  static async getInitialProps({ res }) {
-  //     const { logintoken } = cookie.get();
-  //     if (logintoken){
-  //     if (res) {
-  //       res.writeHead(302, {
-  //         Location: '/authorsAreaDash'
-  //       })
-  //       res.end()
-  //     } else {
-  //       Router.push('/authorsAreaDash')
-  //     }
-  //   }
-  //     return {}
-  //   }
   constructor(props) {
     super(props);
     this.state = {
@@ -1290,26 +1275,20 @@ class AuthorsArea extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       banner: FilledBanner,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 100
+        lineNumber: 85
       },
       __self: this
     }, "AuthorsArea"), __jsx(StyledPage, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 103
+        lineNumber: 88
       },
       __self: this
-    }, __jsx(_components_PopupLogin__WEBPACK_IMPORTED_MODULE_9__["default"], {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 104
-      },
-      __self: this
-    }), __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_7___default.a, {
+    }, __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_7___default.a, {
       className: "authors-title",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 105
+        lineNumber: 89
       },
       __self: this
     }, "Welcome to the Author's Area"), __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_7___default.a, {
@@ -1317,7 +1296,7 @@ class AuthorsArea extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       className: "authors",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 106
+        lineNumber: 90
       },
       __self: this
     }, "Presenting a paper at EuroBrake gives you the opportunity to share your latest technical ideas and achievements with influential specialists from around the world and to discuss your work with colleagues throughout the industrial and academic communities."), __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_7___default.a, {
@@ -1325,7 +1304,7 @@ class AuthorsArea extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       className: "authors",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 107
+        lineNumber: 91
       },
       __self: this
     }, "Once you have created your author account you can login at any time to amend your details and access important information. "), __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_7___default.a, {
@@ -1333,76 +1312,31 @@ class AuthorsArea extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       className: "authors authors-it",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 108
+        lineNumber: 92
       },
       __self: this
     }, "Please note that all submitting authors will need to create a new author account for EuroBrake 2020 as account are not copied from year to year."), __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_7___default.a, {
       className: "authors_sub-title",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 109
+        lineNumber: 93
       },
       __self: this
     }, "Submit your review ready papers by 26 January 2020."), __jsx(_components_LoginExpandTable__WEBPACK_IMPORTED_MODULE_12__["default"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 110
+        lineNumber: 94
       },
       __self: this
-    }), ">"));
+    })));
   }
 
-} // export default withAuthSync(AuthorsArea)
-
+}
 
 /* harmony default export */ __webpack_exports__["default"] = (AuthorsArea); // !
 // ?
 // *
 // todo
-
-{}
-/* <div className="form-container">
-               <form>
-               {this.state.hasForm &&
-               
-              this.state.formdata.map(component => {
-                return(
-                       <div className="form-item">
-                       {component.title ? <title>{component.title}</title> : null }
-                       {component.type ? 
-                       <label>
-                       {component.options ? null : component.label}
-                       <input
-                       required={component.options ?  null : component.required ? component.required : null}
-                        name={component.name}
-                        type={component.type}
-                        value={this.state.name}
-                        onChange={this.handleInputChange}
-                       /> 
-                       </label>
-                       : null
-                       }
-                       {component.options ? 
-                       <label>
-                           {component.label}
-                       <select name={component.name} >
-                           {component.options.map( option => {
-                               return( 
-                                       <option value={option.value}>{option.label}</option>
-                               )
-                           })}
-                       </select> 
-                       </label>    
-                       : null}
-                       {component.default ? <default>{component.default}</default> : null}
-                        </div>
-                )
-                   }
-               )
-               }
-               </form>
-               </div> */
-// //
 
 /***/ }),
 
@@ -1518,7 +1452,7 @@ const withAuthSync = WrappedComponent => {
 
 /***/ }),
 
-/***/ 4:
+/***/ 3:
 /*!************************************!*\
   !*** multi ./pages/authorsArea.js ***!
   \************************************/

@@ -15,7 +15,7 @@ const StyledCard = styled(Card)`
   flex-flow: column;
   justify-content: space-between;
   margin: 1rem;
-  width: 25rem;
+  width: 23rem;
   height: 35rem;
   padding: 0 1rem;
 `;
@@ -149,7 +149,9 @@ const {
 
           />
           <Country >
-            Based in {country}
+            Based in {country === 'United States' ? 'US' : 
+                      country === 'United Kingdom' ? 'UK' :
+                      country}
           </Country>
         </StyledBottom>
     </StyledCard>
