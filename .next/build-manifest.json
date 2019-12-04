@@ -11,14 +11,6 @@
     "/_error": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
-    ],
-    "/authorsArea": [
-      "static/runtime/webpack.js",
-      "static/runtime/main.js"
-    ],
-    "/authorsAreaInstructions": [
-      "static/runtime/webpack.js",
-      "static/runtime/main.js"
     ]
   }
 }

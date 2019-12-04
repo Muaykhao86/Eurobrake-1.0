@@ -26,13 +26,13 @@ export default class ExhibitorList extends Component {
         // this.exhibitors = expo;
     }
 
-    // static async getInitialProps() {
-    //     const res = await fetch('https://prelude.eurobrake.net/exhibitors');
-    //     const data = await res.json().catch(error => console.log(error));
-    //     return {
-    //         exhibitors: data
-    //     };
-    // };
+    static async getInitialProps() {
+        const res = await fetch('https://prelude.eurobrake.net/exhibitors');
+        const data = await res.json().catch(error => console.log(error));
+        return {
+            exhibitors: data
+        };
+    };
 
     componentDidMount() {
 
