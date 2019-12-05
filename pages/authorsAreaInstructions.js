@@ -32,7 +32,7 @@ const StyledPage = styled.div`
     display: flex;
     flex-direction: column;
     align-self: center;
-    max-width: ${props => props.theme.maxWidth};
+    width: ${props => props.theme.minWidth};
     background-color: ${props => props.theme.white};
      margin-top: 3rem;
 
@@ -82,7 +82,7 @@ class AuthorsAreaInstructions extends Component {
     render() {
         return (
             <>
-                <HeroSection banner={FilledBanner} t="15rem">
+                <HeroSection banner={FilledBanner} t="15rem" max="55%">
                     Author's Area Instructions & Templates
             </HeroSection>
                 <StyledPage mt="10rem">

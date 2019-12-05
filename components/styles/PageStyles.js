@@ -6,9 +6,9 @@ export const StyledPage = styled.div`
     flex-flow: column;
     align-self: center;
     margin-top: ${props => props.mt || '5rem'};
-    max-width: ${props => props.theme.maxWidth};
+    width: ${props => props.theme.minWidth};
     background-color: ${props => props.theme.white};
-   
+    margin-top: 7rem;
 
     h1{
         font-family: ${props => props.theme.MPBlack};
@@ -41,7 +41,7 @@ export const StyledBanner = styled.div`
 export const StyledContainer = styled.div`
     display: flex;
     flex-flow: column;
-    width: ${props => props.theme.maxWidth};
+    min-width: ${props => props.theme.minWidth};
     padding: 3rem 0;
     
     .banner-heading{
@@ -54,7 +54,7 @@ export const StyledContainer = styled.div`
 
     .banner-sub{
         font-family: ${props => props.theme.MPLightIt};
-        font-size: 3.8rem;
+        font-size: ${props => props.sfs || '3.8rem'};
         font-weight: 50;
 
     }

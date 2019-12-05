@@ -9,7 +9,7 @@ const StyledPage = styled.div`
     flex-flow: column;
     align-self: center;
     margin-top: 5rem;
-    max-width: ${props => props.theme.maxWidth};
+    width: ${props => props.theme.minWidth};
     background-color: ${props => props.theme.white};
 
     h1{

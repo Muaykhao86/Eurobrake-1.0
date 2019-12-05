@@ -6,6 +6,7 @@ import styled, {ThemeProvider, createGlobalStyle} from 'styled-components';
 
 
 const theme = {
+    black: '#000',
     white: '#FFF',
     primary: '#134381',
     secondary: '#F9B721',
@@ -17,7 +18,7 @@ const theme = {
     MPLightIt: 'MyriadPro-LightIt',
     MPIt: 'MyriadPro-It',
     MPBlack: 'MyriadPro-Black',
-    maxWidth: '50%',
+    minWidth: '50%',
     bs: '0 1.2rem 2.4rem rgba(0, 0, 0, .09)',
 
 }
@@ -25,6 +26,7 @@ const theme = {
 const StyledPage = styled.div`
     display: flex;
     flex-flow: column;
+    justify-content: space-between;
     background: white;
 `;
 
@@ -101,7 +103,7 @@ const GlobalStyle = createGlobalStyle`
         /* To set the footer at the bottom we have to leave space for it in the parent container */
         position: relative;
         min-height: 100%;
-        padding-bottom: 40rem;
+        padding-bottom: 40rem; /* ! FOOTER PADDING , HAS BEEN KNOW TO PUSH PAGE UP
         font-family: ${props => props.theme.MPRegular};
         color: black;
         line-height: 1.6;

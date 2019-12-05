@@ -33,8 +33,9 @@ const StyledPage = styled.div`
     display: flex;
     flex-direction: column;
     align-self: center;
-    max-width: ${props => props.theme.maxWidth};
+    width: ${props => props.theme.minWidth};
     background-color: ${props => props.theme.white};
+    margin-top: 7rem;
 
     .authors{
         color: ${props => props.theme.primary};

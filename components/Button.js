@@ -1,9 +1,14 @@
+import React from 'react'
 import styled from 'styled-components';
+import Link from 'next/link';
 
-export const Button = styled.button`
+export const Button = styled.a`
 &,
 &:link, 
 &:visited{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
     text-transform: uppercase;
     text-decoration: none;
@@ -26,14 +31,12 @@ export const Button = styled.button`
     transition: all .2s;
     cursor: pointer;
 }
-
 &:hover{
     box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.5);
     color: #FFF;
     background-color: #12377D;
     transform: translateY(-.3rem);
 }
-
 &::after{
     transform: scalex(1.4) scaleY(1.6);
      opacity: 0;
@@ -44,13 +47,19 @@ export const Button = styled.button`
 &:focus{
         outline: none;
     }
-
 &:active{
         outline: none; 
         transform: translateY(-.1rem);
         box-shadow: 0 2rem 2rem rgba(0, 0, 0, 0.5);
     }
-
 `;
+
+// const ButtonLink = React.forwardRef(({ className, href, hrefAs, children, prefetch }, ref) => (
+//     <Link href={href} as={hrefAs} prefetch ref={ref}>
+//         <a className={className}>
+//             {children}
+//         </a>
+//     </Link>
+// ));
 
 //TODO ADJUST BOX SHADOWS FOR DIFFERENT BUTTONS

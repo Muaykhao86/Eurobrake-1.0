@@ -1,52 +1,175 @@
 import React, { Component } from 'react'
 import Router from 'next/router';
-import fetch from 'isomorphic-unfetch';
-import styled from 'styled-components';
-import { withAuthSync, logout, login } from '../utils/auth'
 import cookies from 'next-cookies';
 import cookie from 'js-cookie';
-import HeroSection from '../components/HeroSection';
+import { Link } from '@material-ui/core';
+import fetch from 'isomorphic-unfetch';
+import styled from 'styled-components';
 import Typography from '@material-ui/core/Typography';
+import ExpandMoreOutlinedIcon from '@material-ui/icons/ExpandMoreOutlined';
+import CreateIcon from '@material-ui/icons/Create';
+import AssignmentIcon from '@material-ui/icons/Assignment';
+import ExitToAppIcon from '@material-ui/icons/ExitToApp';
+import CheckCircleIcon from '@material-ui/icons/CheckCircle';
+import CancelIcon from '@material-ui/icons/Cancel';
+import { withAuthSync, logout, login } from '../utils/auth'
+import HeroSection from '../components/HeroSection';
 import { Button } from '../components/Button';
+import { StyledBanner, StyledContainer } from '../components/styles/PageStyles';
+import { Abstracts } from '../components/testAuthors';
 
-
-
+const AreAbstracts = null || Abstracts;
 
 const StyledPage = styled.div`
     display: flex;
+    
     flex-direction: column;
     align-self: center;
-    max-width: ${props => props.theme.maxWidth};
+    width: ${props => props.theme.minWidth};
     background-color: ${props => props.theme.white};
-
+    margin-top: 7rem;
     .authors{
+            
+        
         color: ${props => props.theme.primary};
         font-family: ${props => props.theme.MPLight};
         font-size: 2rem;
-   
     &-title{
         color: ${props => props.theme.primary};
         font-family: ${props => props.theme.MPSemibold};
         font-size: 4.4rem;
-        margin-top: 3rem;
-        margin-bottom: 3rem;
+        
     }
-   
     &_sub-title{
         color: ${props => props.theme.primary};
         font-size: 3.5rem;
         font-family: ${props => props.theme.MPLightIt};
         padding-bottom: .5rem;
-        margin-bottom: 3rem;
     }
     &-bold{
+        color: ${props => props.theme.primary};
         font-family: ${props => props.theme.MPBold};
     }
     &-it{
         font-family: ${props => props.theme.MPLightIt};
     }
+    &_action-box{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 3rem;
+    }
 }
 `;
+
+const StyledBox = styled.div`
+    display: flex;
+    justify-content: space-between;
+    min-height: 15rem;
+    background-color: #D4DDE8;
+    padding: 1rem;
+    margin-bottom: 2rem;
+
+`;
+
+const StyledActionArea = styled.div`
+    flex: 1 1 33.33%;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    .action-paper{
+        color: ${props => props.theme.black};
+        font-family: ${props => props.theme.MPBold};
+        font-size: 2rem;
+    }
+`;
+
+const StyledInfoArea = styled.div`
+    flex: 1 1 66.66%;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    .paper-title{
+    font-size: 2rem;
+    color: ${props => props.theme.black};
+
+    }
+    .paper-type{
+    font-size: 2rem;
+    color: ${props => props.theme.black};
+    font-family: ${props => props.theme.MPLightIt};
+
+    }
+    .paper_task{
+    color: ${props => props.theme.black};
+    font-size: 1.5rem;
+
+    &-box{
+        display: flex;
+        align-items: flex-start;
+    }}
+`;
+
+
+const FilledBanner = () => (
+
+    <StyledBanner>
+        <StyledContainer >
+            <Typography className="banner-heading"  >Welcome to the Author's Area</Typography>
+            <Typography className="banner-sub" sfs="3rem">Submit your review ready papers by 26 January 2020</Typography>
+            <div className="banner_bottom">
+                <ExpandMoreOutlinedIcon className="banner_bottom-icon" />
+                <Typography varient="h3" className="banner_bottom-details">Submit your review ready papers by 26 January 2020</Typography>
+            </div>
+        </StyledContainer>
+    </StyledBanner>
+)
+
+
+const Abstract = () => (
+
+    <StyledBox>
+        <StyledActionArea>
+            <Typography gutterBottom className="action-paper">{Abstracts[0].papercode}</Typography>
+            <Button
+                bcolor="#134381"
+                background="#134381"
+                br="100rem"
+                padding="0.5rem 2rem"
+                style={{ margin: ".5rem 0" }}
+                fontSize="1.7rem"
+            >
+                <CreateIcon style={{ fontSize: '3rem', marginRight: '1rem' }} />
+                EDIT PAPER
+            </Button>
+            <Button
+                bcolor="#134381"
+                background="#134381"
+                br="100rem"
+                padding="0.5rem 2rem"
+                style={{ margin: ".5rem 0" }}
+                fontSize="1.7rem"
+            >
+                <CancelIcon style={{ fontSize: '3rem', marginRight: '1rem' }} />
+                WITHDRAW
+            </Button>
+        </StyledActionArea>
+        <StyledInfoArea>
+            <Typography  className="paper-title">{Abstracts[2].title}</Typography>
+            <Typography gutterBottom className="paper-type">{Abstracts[2].paper_type.toUpperCase()}</Typography>
+           {Abstracts[2].tasks && Abstracts[2].tasks.map(task => {
+                  return ( <div className="paper_task-box">
+                    {task.done === null ? <CheckCircleIcon style={{fontSize: '2rem', color: 'green', marginRight: '1rem'}}/> : <CancelIcon style={{fontSize: '2rem',color: 'red',  marginRight: '1rem'}}/>}
+                    <Typography gutterBottom className="paper_task">{task.task}</Typography>
+                    </div> )
+                })}
+        </StyledInfoArea>
+    </StyledBox>
+)
+
 
 class AuthorsAreaDash extends Component {
     constructor(props) {
@@ -61,7 +184,6 @@ class AuthorsAreaDash extends Component {
 
     }
 
-
     componentDidMount = () => {
         const { userLoggedIn } = this.state;
         const { logintoken } = cookie.get();
@@ -69,7 +191,6 @@ class AuthorsAreaDash extends Component {
         logintoken && !userLoggedIn ? this.setState(prev => ({
             userLoggedIn: !prev
         })) : null
-
     }
 
     getAbstractForm = async (e) => {
@@ -122,36 +243,66 @@ class AuthorsAreaDash extends Component {
     }
 
     render() {
-
+        // const {name} = this.props.authorData;
         const { userLoggedIn, hasForm } = this.state;
         console.log({ userLoggedIn, hasForm });
         return (
             <>
-                <HeroSection>
-                    AuthorsArea
+                <HeroSection banner={FilledBanner}>
+                    Author's Area Dashboard
             </HeroSection>
                 <StyledPage>
-                    <Typography className="authors-title">Welcome to the Author's Area</Typography>
-                    <Typography gutterBottom className="authors">Presenting a paper at EuroBrake gives you the opportunity to share your latest technical ideas and achievements with influential specialists from around the world and to discuss your work with colleagues throughout the industrial and academic communities.</Typography>
-                    <Typography gutterBottom className="authors">Once you have created your author account you can login at any time to amend your details and access important information. </Typography>
-                    <Typography gutterBottom className="authors authors-it">Please note that all submitting authors will need to create a new author account for EuroBrake 2020 as account are not copied from year to year.</Typography>
-                    <Typography className="authors_sub-title">Submit your review ready papers by 26 January 2020.</Typography>
-                    <Button
-                        bcolor="#134381"
-                        background="#134381"
-                        br="100rem"
-                        style={{ margin: "3rem 0" }}
-                        fs="1.8rem"
-                        padding=".5rem 6rem"
-                        onClick={this.getAbstractForm}>Submit a Abstract</Button>
-                    <Button
-                        bcolor="#134381"
-                        background="#134381"
-                        br="100rem"
-                        style={{ margin: "3rem 0" }}
-                        fs="1.8rem"
-                        padding=".5rem 6rem"
-                        onClick={logout}>logout</Button>
+                    <div className="authors">
+
+                        <Typography className="authors-title">Hi {'*USERNAME*'}</Typography>
+                        <Typography gutterBottom className="authors_sub-title">Welcome to the Author's Area</Typography>
+                        <div className="authors_action-box">
+                            <Button
+                                bcolor="#134381"
+                                background="#134381"
+                                br="100rem"
+                                padding="0.5rem 2rem"
+                                style={{ margin: ".5rem 0" }}
+                                fontSize="1.7rem"
+                            >
+                                <CreateIcon style={{ fontSize: '3rem', marginRight: '1rem' }} />
+                                EDIT PROFILE
+                    </Button>
+                            <Link href="/authorsAreaInstructions">
+                                <Button
+                                    bcolor="#134381"
+                                    padding="0.5rem 2rem"
+                                    background="#134381"
+                                    br="100rem"
+                                    style={{ margin: ".5rem" }}
+                                    fontSize="1.7rem"
+                                >
+                                    <AssignmentIcon style={{ fontSize: '3rem', marginRight: '.5rem' }} />
+                                    INSTRUCTIONS & TEMPLATES
+                    </Button>
+                            </Link>
+                            <Button
+                                bcolor="#134381"
+                                padding="0.5rem 2rem"
+                                background="#134381"
+                                br="100rem"
+                                style={{ margin: ".5rem 0" }}
+                                fontSize="1.7rem"
+                                onClick={logout}>
+                                <ExitToAppIcon style={{ fontSize: '3rem', marginRight: '.5rem' }} />
+                                logout
+                    </Button>
+                        </div>
+                        <Typography gutterBottom className="authors-title" style={{ fontSize: '3rem', borderTop: '2px solid #134381', borderBottom: '2px solid #134381' }}>Your Abstracts</Typography>
+                        { AreAbstracts ? 
+                        <Abstract/> :
+                        <StyledBox>
+                            <Typography gutterBottom className="authors-it" style={{ fontSize: '2rem' }}>You haven't submitted any abstracts yet</Typography>
+                        </StyledBox>
+                        }
+                        <Typography gutterBottom className="authors" style={{ fontSize: '2rem' }}>For more information, please visit <Link href="/authorsAreaInstructions" ><a className="authors-bold">Instructions & Templates</a></Link> or email <a className="authors-bold" href="mailto:info@fisita.com">info@eurobrake.net</a></Typography>
+
+                    </div>
                 </StyledPage>
             </>
 
@@ -199,6 +350,7 @@ AuthorsAreaDash.getInitialProps = async ctx => {
 }
 
 export default withAuthSync(AuthorsAreaDash)
+// export default AuthorsAreaDash
 
 
 // !

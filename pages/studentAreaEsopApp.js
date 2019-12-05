@@ -23,7 +23,7 @@ const FilledBanner = () => (
    
 export default () => (
 <>
-    <HeroSection t="15rem"  banner={FilledBanner} fs="8.9rem">
+    <HeroSection >
         EuroBrake Student Opportunities Programme (ESOP)
     </HeroSection>
     <StyledPage mt="10rem">

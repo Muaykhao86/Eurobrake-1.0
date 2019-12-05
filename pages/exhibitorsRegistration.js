@@ -15,9 +15,9 @@ const StyledPage = styled.div`
     display: flex;
     flex-direction: column;
     align-self: center;
-    max-width: ${props => props.theme.maxWidth};
+    width: ${props => props.theme.minWidth};
     background-color: ${props => props.theme.white};
-    margin-top: 3rem;
+    margin-top: 7rem;
 
     .Registration{
         color: ${props => props.theme.primary};
@@ -70,7 +70,7 @@ const FilledBanner = () => (
 
 export default () => (
     <>
-        <HeroSection banner={FilledBanner}>
+        <HeroSection banner={FilledBanner} max="55%">
             EuroBrake 2020 Registration
             </HeroSection>
         <StyledPage mt="10rem">

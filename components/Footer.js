@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'next/link';
 import styled from 'styled-components';
 import MapContainer from './GoogleMaps';
 
@@ -146,8 +147,8 @@ function Footer() {
                 </div>
             </div>
             <div className="ftr_middle-links">
-                <a href="https://www.eurobrake.net/privacy">Privacy Policy</a>
-                <a href="https://www.eurobrake.net/disclaimer">Disclaimer</a>
+                <Link href="/privacyPolicy"><a>Privacy Policy</a></Link>
+                <Link href="/disclaimer"><a>Disclaimer</a></Link>
                 <a href="">Contact Us</a>
                 {/* <a href="">Site Map</a>
                 <a href="">links</a> */}

@@ -31,7 +31,7 @@ const StyledText = styled(Typography)`
         line-height: 1;
 }
         align-self: center;
-        max-width: ${props => props.max || props.theme.maxWidth};
+        width: ${props => props.max || props.theme.minWidth};
         position: absolute;
         line-height: 1;
         top: ${props => props.t || '20rem'};

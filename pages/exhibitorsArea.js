@@ -11,7 +11,7 @@ const DemoDiv = styled.form`
     flex-direction: column;
     align-self: center;
     margin-top: 10rem;
-    max-width: ${props => props.theme.maxWidth};
+    width: ${props => props.theme.minWidth};
 
 `;
 
