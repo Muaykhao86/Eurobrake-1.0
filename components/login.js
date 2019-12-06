@@ -102,7 +102,10 @@ export default class Login extends Component {
                 credentials: 'include',
                 body: JSON.stringify(formData),
             });
-            const data = await response.json();
+            const data = await response
+
+            console.log(data)
+            // .json();
             if (data.status === 'success') {
                 const { logintoken } = data;
                 await login({ logintoken })
