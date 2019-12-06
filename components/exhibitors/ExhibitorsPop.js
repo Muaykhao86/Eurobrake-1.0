@@ -59,10 +59,11 @@ padding: 2rem;
  }
 
  .ModalSummary{
+  max-height: 15rem;
   font-family: ${props => props.theme.MPSemiLight};
   font-size: 1.1rem;
   padding-top: 1rem;
-  /* overflow: scroll; */
+  overflow: scroll;
 
 
  }
@@ -211,25 +212,25 @@ const selectedSvg = `#prefix__booth-${booth}`;
                   </IconButton>
                 </Grid>
                 <Grid  item xs={12}>
-                  <Typography gutterbottom className="ModalTitle" id="server-modal-title">{name}</Typography>
+                  <Typography gutterBottom className="ModalTitle" id="server-modal-title">{name}</Typography>
                 </Grid>
                 <Grid  item xs={1}  style={{}}>
-                  <PhoneIcon gutterbottom className="ModalIcon" />
+                  <PhoneIcon gutterBottom className="ModalIcon" />
                 </Grid>
                 <Grid  item xs={5} >
-                  <Typography gutterbottom className="ModalContact" id="server-modal-description">{phone}</Typography>
+                  <Typography gutterBottom className="ModalContact" id="server-modal-description">{phone}</Typography>
                 </Grid>
                 <Grid item xs={1}  style={{}}>
-                  <GlobeIcon gutterbottom className="ModalIcon"/>
+                  <GlobeIcon gutterBottom className="ModalIcon"/>
                 </Grid>
                 <Grid  item xs={5} >
-                  <Typography gutterbottom className="ModalContact" id="server-modal-description">{website}</Typography>
+                  <Typography gutterBottom className="ModalContact" id="server-modal-description">{website}</Typography>
                 </Grid>
                 <Grid  item xs={1}  style={{transform: 'translateY(.3rem)'}}>
-                  <MailIcon gutterbottom className="ModalIcon" />
+                  <MailIcon gutterBottom className="ModalIcon" />
                 </Grid>
                 <Grid  item xs={5} >
-                  <Typography gutterbottom className="ModalContact" id="server-modal-description">{email}</Typography>
+                  <Typography gutterBottom className="ModalContact" id="server-modal-description">{email}</Typography>
                 </Grid>
                 <Grid item xs={12}>
                   <Typography className="ModalSummary" id="server-modal-description">{summary}</Typography>
