@@ -64,9 +64,9 @@ export default class Login extends Component {
     //     const { logintoken } = cookie.get();
     //     const res = await fetch('https://prelude.eurobrake.net/login', {
     //         credentials: 'include',
-    //         headers: {
-    //             Authorization: `Bearer ${logintoken}`,
-    //         }
+            // headers: {
+            //     Authorization: `Bearer ${logintoken}`,
+            // }
     //     });
     //     const data = await res.json();
 
@@ -103,8 +103,10 @@ export default class Login extends Component {
                 body: JSON.stringify(formData),
             });
             const data = await response
+            const data2 = await response.json()
 
-            console.log(data)
+            console.log(data.json())
+            console.log(data2.json())
             // .json();
             if (data.status === 'success') {
                 const { logintoken } = data;
