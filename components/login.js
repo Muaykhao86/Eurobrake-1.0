@@ -92,7 +92,6 @@ export default class Login extends Component {
         const { username, password, error } = this.state;
         // const apiUrl = authorLogin ? 'https://prelude.eurobrake.net/login' : '' ;
         // action="//2019.eurobrake.net/exhibition/exhibitors/login" SHOULD BE LOGIN FORM FOR EXHIBITORS
-                // body: JSON.stringify(formData)
         const formData = {
             username: username,
             password: password,
@@ -101,9 +100,7 @@ export default class Login extends Component {
             const response = await fetch('https://prelude.eurobrake.net/login', {
                 method: 'POST',
                 credentials: 'include',
-                headers: {
-                Authorization: `Bearer ${formData}`,
-            }
+                body: JSON.stringify(formData)
             });
             const data = await response.json();
             if (data.status === 'success') {
