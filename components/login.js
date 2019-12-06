@@ -101,6 +101,9 @@ export default class Login extends Component {
                 method: 'POST',
                 credentials: 'include',
                 body: JSON.stringify(formData),
+                headers: {
+                            'Content-Type': 'application/json'
+                }
             });
             const data = await response
             const data2 = await response.json()
