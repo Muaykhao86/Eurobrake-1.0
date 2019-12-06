@@ -41,8 +41,9 @@ export const GlobeIcon = () =>
 export class EBFloorPlan extends React.Component {
   constructor(props) {
     super(props);
-    
-  this.Snap = undefined;
+ Snap = this.Snap   
+
+ this.Snap = null;
   }
   
     
