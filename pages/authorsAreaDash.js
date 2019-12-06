@@ -323,13 +323,13 @@ AuthorsAreaDash.getInitialProps = async ctx => {
         try {
             // console.log({logintoken}, 'getIProps right before fetch call')
                 // headers: {
-                //     Authorization: 'Bearer ' + logintoken,
+                    // Authorization:JSON.stringify(logintoken)
                 // }
             const response = await fetch(apiUrl, {
                 credentials: 'include',
                 cache: 'no-cache',
                 headers: {
-                    Authorization:JSON.stringify(logintoken)
+                    Authorization: 'Bearer ' + logintoken,
                 }
                  
             })
