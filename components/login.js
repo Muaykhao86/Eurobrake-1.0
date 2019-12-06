@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import fetch from 'isomorphic-unfetch';
 import TextField from '@material-ui/core/TextField';
 import { login, logout } from '../utils/auth';
-import {Button} from './Button';
+import { Button } from './Button';
 
 
 const StyledForm = styled.form`
@@ -64,9 +64,9 @@ export default class Login extends Component {
     //     const { logintoken } = cookie.get();
     //     const res = await fetch('https://prelude.eurobrake.net/login', {
     //         credentials: 'include',
-            // headers: {
-            //     Authorization: `Bearer ${logintoken}`,
-            // }
+    // headers: {
+    //     Authorization: `Bearer ${logintoken}`,
+    // }
     //     });
     //     const data = await res.json();
 
@@ -101,11 +101,14 @@ export default class Login extends Component {
                 method: 'POST',
                 credentials: 'include',
                 body: JSON.stringify(formData),
+                headers: {
+                    'Content-Type': 'application/json'
+                }
             });
             const data = await response.json();
 
             console.log(JSON.stringify(data))
-            
+
             if (data.status === 'success') {
                 const { logintoken } = data;
                 await login({ logintoken })
@@ -126,53 +129,53 @@ export default class Login extends Component {
     }
     render() {
         return (
-           
-                   <StyledForm className="login_form">
-                        <div className="login_form-field">
-                            <label 
-                            htmlFor="label" 
-                            className="login_form-label">
-                                Email:
+
+            <StyledForm className="login_form">
+                <div className="login_form-field">
+                    <label
+                        htmlFor="label"
+                        className="login_form-label">
+                        Email:
                             </label>
-                            <TextField
-                            style={{color: '#134381'}}
-                            id="standard-required"
-                            label="Required"
-                            className="login_form-input" 
-                            type="text"
-                            name="username"
-                            onChange={this.saveToState} 
-                            value={this.state.username} />
-                        </div>
-                        <div className="login_form-field">
-                            <label 
-                            className="login_form-label"
-                             htmlFor="label">
-                                Password:
+                    <TextField
+                        style={{ color: '#134381' }}
+                        id="standard-required"
+                        label="Required"
+                        className="login_form-input"
+                        type="text"
+                        name="username"
+                        onChange={this.saveToState}
+                        value={this.state.username} />
+                </div>
+                <div className="login_form-field">
+                    <label
+                        className="login_form-label"
+                        htmlFor="label">
+                        Password:
                             </label>
-                            <TextField
-                            id="standard-required"
-                            label="Required"
-                            className="login_form-input" 
-                            type="password"
-                            name="password"
-                            onChange={this.saveToState} 
-                            value={this.state.password} />
-                        </div>
-                        <Button 
-                        onClick={this.onSubmit} 
-                        value="Submit" 
-                        bcolor="#134381"
-                        background="#134381"
-                        br="100rem"
-                        style={{ margin: "3rem 0"}}
-                        fs="1.8rem"
-                        padding=".5rem 6rem"
-                        >Login</Button>
-                        <a className="login_form-link" href="">Forgotten your password?</a>
-                   </StyledForm>
-          
-             
+                    <TextField
+                        id="standard-required"
+                        label="Required"
+                        className="login_form-input"
+                        type="password"
+                        name="password"
+                        onChange={this.saveToState}
+                        value={this.state.password} />
+                </div>
+                <Button
+                    onClick={this.onSubmit}
+                    value="Submit"
+                    bcolor="#134381"
+                    background="#134381"
+                    br="100rem"
+                    style={{ margin: "3rem 0" }}
+                    fs="1.8rem"
+                    padding=".5rem 6rem"
+                >Login</Button>
+                <a className="login_form-link" href="">Forgotten your password?</a>
+            </StyledForm>
+
+
         )
     }
 }
