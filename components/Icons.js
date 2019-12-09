@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, Component } from 'react';
 import styled from 'styled-components';
 import Snap from 'snapsvg-cjs';
 
@@ -38,7 +38,7 @@ export const GlobeIcon = () =>
 
 
 
-export class EBFloorPlan extends React.Component {
+export class EBFloorPlan extends Component {
     constructor(props) {
       super(props);
       
@@ -56,7 +56,7 @@ export class EBFloorPlan extends React.Component {
   // ! I HAD TO TAKE THE QUERY SELECTORS INTO USE EFFECT AS THAT IS WHAT IS FIRING FIRST 
   // ! SORT YOUR SELECTORS THEN YOUR LOGIC!
   componentDidMount = () => {
-    let s = Snap('#svgShell')
+    var s = Snap('#svgShell')
     console.log({s});
     let booth = this.props.booth.length > 3 ? this.props.booth.slice(0, 2) : this.props.booth;
     let propBooth3 = document.querySelector(`#prefix__booth-${booth}`);
