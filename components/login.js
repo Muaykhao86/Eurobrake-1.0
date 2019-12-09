@@ -98,12 +98,10 @@ export default class Login extends Component {
         }
         try {
             const response = await fetch('https://prelude.eurobrake.net/login', {
-                method: 'POST',
-                mode: 'cors',
-                body: JSON.stringify(formData),
                 headers: {
-                            'Content-Type': 'application/json'
-                }
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(formData),
             });
             const data = await response
             const data2 = await response.json()
