@@ -14,7 +14,7 @@ module.exports = withCss({
         }
       }
     }, {
-      test: require.resolve('snapsvg'),
+      test: require.resolve('snapsvg-cjs'),
       loader: 'imports-loader?this=>window,fix=>module.exports=0'
     }
     );
