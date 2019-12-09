@@ -93,6 +93,7 @@ export default function ServerModal(props) {
   const mapRef = useRef(null);
   const [snap, setSnap] = useState();
   const [open, setOpen] = useState(false);
+
   const {
     name,
     img,
@@ -104,6 +105,10 @@ export default function ServerModal(props) {
     phone,
     email,
   } = props;
+
+  useEffect(() => {
+  console.log({Snap})
+  }, [])
 
 const selectedSvg = `#prefix__booth-${booth}`;
 
@@ -128,7 +133,7 @@ const selectedSvg = `#prefix__booth-${booth}`;
     return
   }
 
-console.log({Snap})
+
   
 
   return (
