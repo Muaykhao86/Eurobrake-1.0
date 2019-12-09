@@ -341,6 +341,7 @@ AuthorsAreaDash.getInitialProps = async ctx => {
             }
             else {
                 console.log('not reading success')
+                console.log('stringyfied', JSON.stringify(data))
                 // https://github.com/developit/unfetch#caveats
                 return redirectOnError()
             }
