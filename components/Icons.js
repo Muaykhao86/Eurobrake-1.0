@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, Component } from 'react';
 import styled from 'styled-components';
-import Snap from 'snapsvg-cjs';
+import dynamic from 'next/dynamic'
 
 export const MailIcon = () =>
   <svg
@@ -37,7 +37,10 @@ export const GlobeIcon = () =>
   ;
 
 
-
+const DynamicComponentWithNoSSR = dynamic(
+  () => import('snapsvg-cjs'),
+  { ssr: false }
+)
 export class EBFloorPlan extends Component {
     constructor(props) {
       super(props);
@@ -45,7 +48,7 @@ export class EBFloorPlan extends Component {
     
     }
     
-  
+
 
 
 
@@ -56,8 +59,7 @@ export class EBFloorPlan extends Component {
   // ! I HAD TO TAKE THE QUERY SELECTORS INTO USE EFFECT AS THAT IS WHAT IS FIRING FIRST 
   // ! SORT YOUR SELECTORS THEN YOUR LOGIC!
   componentDidMount = () => {
-    var s = Snap('#svgShell')
-    console.log({s});
+  
     let booth = this.props.booth.length > 3 ? this.props.booth.slice(0, 2) : this.props.booth;
     let propBooth3 = document.querySelector(`#prefix__booth-${booth}`);
     let propBooth4 = propBooth3.firstChild;// * IT WORKS!!!
@@ -70,6 +72,7 @@ export class EBFloorPlan extends Component {
 
    
 render(){
+  console.log(DynamicComponentWithNoSSR)
 
 // const {Snap} = this.state;
 // const map = Snap.select('#svgShell');
