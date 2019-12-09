@@ -1,16 +1,23 @@
-import React, { Component } from 'react'
+import React from 'react'
 
-export default class GetSnap extends Component {
-    state= {
-        Snap: null,
+export default class Snap extends React.Component {
+constructor(props) {
+    super(props);
+    this.state ={
+       Snap: null
+
     }
+}
 
     componentDidMount() {
         this.setState({Snap: require('snapsvg')})
     }
     
-    Snap = () => {
-        return this.state.Snap
-    }
+   render(){
+      const {svgProp} = props;
+        const StateSnap = (svgProp) => this.state.Snap({svgProp});
+       return new StateSnap(svgProp)
+   }
+   
     
 }

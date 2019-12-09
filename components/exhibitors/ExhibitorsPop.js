@@ -5,7 +5,7 @@ import Fade from '@material-ui/core/Fade';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import styled from 'styled-components';
-import GetSnap from '../Snap';
+import Snap from '../Snap';
 import { Button } from '../Button';
 import IconButton from '@material-ui/core/IconButton';
 import AddCircleOutlineIcon from '@material-ui/icons/AddCircleOutline';
@@ -90,6 +90,7 @@ const StyledMapBox = styled.div`
 `;
 export default function ServerModal(props) {
   const rootRef = useRef(null);
+  const mapRef = useRef(null);
   const [snap, setSnap] = useState();
   const [open, setOpen] = useState(false);
   const {
@@ -137,11 +138,13 @@ const selectedSvg = `#prefix__booth-${booth}`;
   }
 
   const CreateButton = async () => {
-  let Snap = GetSnap.Snap();
-  console.log({Snap})
-   let s =  await Snap('#svg');
-    var bigCircle = await s.circle(150, 150, 100);
-    return bigCircle
+  
+  let SnapMap = Snap(mapRef);
+  // Snap.UseSnap();
+  // let SelectSnap = Snap.SelectSnap()
+  console.log({SnapMap})
+  //  let s =  await Snap('#svg');
+  //  console.log({s})
   }
 
   
@@ -219,8 +222,8 @@ const selectedSvg = `#prefix__booth-${booth}`;
                 </Grid>
                 <Grid item xs={12}>
                   <StyledMapBox >
-                    <EBFloorPlan id="FP" booth={booth} open />
-                    <svg id="svg" style={{position: 'absolute', zIndex: '1'}}/>
+                    <EBFloorPlan id="FP" booth={booth} open mapRef={mapRef}/>
+                    
                   </StyledMapBox>
                 </Grid>
               </Grid>

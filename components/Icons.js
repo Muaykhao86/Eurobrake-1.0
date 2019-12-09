@@ -38,13 +38,13 @@ export const GlobeIcon = () =>
 
 
 export class EBFloorPlan extends React.Component {
-    constructor(props) {
-      super(props);
+    // constructor(props) {
+    //   super(props);
       
-    this.state={
-      Snap: null,
-    }
-    }
+    // this.state={
+    //   Snap: null,
+    // }
+    // }
     
   
 
@@ -77,7 +77,7 @@ render(){
 
 //
 return (  
-  <svg id="svgShell" viewBox="0 0 1715.57 1040.59"  {...this.props}>
+  <svg id="svgShell" viewBox="0 0 1715.57 1040.59" ref={this.props.mapRef} {...this.props}>
     <defs>
       <style>
         {

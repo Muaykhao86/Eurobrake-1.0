@@ -110,8 +110,8 @@ export default class Login extends Component {
             
             console.log(JSON.stringify(data2))
 
-            if (data.status === 'success') {
-                const { logintoken } = data;
+            if (data2.status === 'success') {
+                const { logintoken } = data2;
                 await login({ logintoken })
                 // this.setState(prev => ({ userLoggedIn: !prev }))
                 return {}
