@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 4);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -543,7 +543,7 @@ class EBFloorPlan extends react__WEBPACK_IMPORTED_MODULE_2___default.a.Component
     return __jsx("svg", Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
       id: "svgShell",
       viewBox: "0 0 1715.57 1040.59",
-      ref: this.props.mapRef
+      ref: this.props.mapref
     }, this.props, {
       __source: {
         fileName: _jsxFileName,
@@ -4290,34 +4290,38 @@ class EBFloorPlan extends react__WEBPACK_IMPORTED_MODULE_2___default.a.Component
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Snap; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return SnapMap; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _jsxFileName = "/mnt/c/Users/D.Hardiman/desktop/eurobrake/components/Snap.js";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
-class Snap extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
+class SnapMap extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      Snap: null
-    };
   }
 
   componentDidMount() {
-    this.setState({
-      Snap: __webpack_require__(/*! snapsvg */ "snapsvg")
+    let Snap = __webpack_require__(/*! snapsvg */ "snapsvg");
+
+    Snap(props.mapref);
+    let myCircle = Snap.circle(20, 20, 20);
+    myCircle.attr({
+      stroke: '#123456',
+      'strokeWidth': 3,
+      fill: '#123456',
+      'opacity': 0.2
     });
   }
 
   render() {
-    const {
-      svgProp
-    } = props;
-
-    const StateSnap = svgProp => this.state.Snap({
-      svgProp
+    return __jsx("svg", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 22
+      },
+      __self: this
     });
-
-    return new StateSnap(svgProp);
   }
 
 }
@@ -4589,9 +4593,6 @@ function ServerModal(props) {
     phone,
     email
   } = props;
-  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(() => {
-    CreateButton();
-  }, [open]);
   const selectedSvg = `#prefix__booth-${booth}`;
 
   const handleOpen = e => {
@@ -4608,7 +4609,6 @@ function ServerModal(props) {
       booth
     });
     const svg = document.querySelector("#MapBox");
-    CreateButton();
   }; //Image handler Component
 
 
@@ -4616,24 +4616,15 @@ function ServerModal(props) {
     e.target.src = "/images/logo.png";
     e.target.onerror = null;
     return;
-  };
+  }; // 
 
-  const CreateButton = async () => {
-    let SnapMap = Object(_Snap__WEBPACK_IMPORTED_MODULE_7__["default"])(mapRef); // Snap.UseSnap();
-    // let SelectSnap = Snap.SelectSnap()
-
-    console.log({
-      SnapMap
-    }); //  let s =  await Snap('#svg');
-    //  console.log({s})
-  };
 
   return __jsx("div", {
     className: "",
     ref: rootRef,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 153
+      lineNumber: 135
     },
     __self: this
   }, __jsx(_Button__WEBPACK_IMPORTED_MODULE_8__["Button"], {
@@ -4645,7 +4636,7 @@ function ServerModal(props) {
     onClick: handleOpen,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 154
+      lineNumber: 136
     },
     __self: this
   }, "Learn more"), __jsx(_material_ui_core_Modal__WEBPACK_IMPORTED_MODULE_1___default.a, {
@@ -4665,27 +4656,27 @@ function ServerModal(props) {
     container: () => rootRef.current,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 158
+      lineNumber: 140
     },
     __self: this
   }, __jsx(_material_ui_core_Fade__WEBPACK_IMPORTED_MODULE_3___default.a, {
     in: open,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 174
+      lineNumber: 156
     },
     __self: this
   }, __jsx(StyledModal, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 175
+      lineNumber: 157
     },
     __self: this
   }, __jsx(_material_ui_core_Paper__WEBPACK_IMPORTED_MODULE_4___default.a, {
     className: "paper",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 176
+      lineNumber: 158
     },
     __self: this
   }, __jsx(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_5___default.a, {
@@ -4696,7 +4687,7 @@ function ServerModal(props) {
     justify: "flex-start",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 177
+      lineNumber: 159
     },
     __self: this
   }, __jsx(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_5___default.a, {
@@ -4704,7 +4695,7 @@ function ServerModal(props) {
     xs: 6,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 185
+      lineNumber: 167
     },
     __self: this
   }, __jsx("img", {
@@ -4714,7 +4705,7 @@ function ServerModal(props) {
     onError: addDefaultSrc,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 186
+      lineNumber: 168
     },
     __self: this
   })), __jsx(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_5___default.a, {
@@ -4725,7 +4716,7 @@ function ServerModal(props) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 188
+      lineNumber: 170
     },
     __self: this
   }, __jsx(_material_ui_core_IconButton__WEBPACK_IMPORTED_MODULE_9___default.a, {
@@ -4736,7 +4727,7 @@ function ServerModal(props) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 189
+      lineNumber: 171
     },
     __self: this
   }, __jsx(_material_ui_icons_AddCircleOutline__WEBPACK_IMPORTED_MODULE_10___default.a, {
@@ -4744,7 +4735,7 @@ function ServerModal(props) {
     className: "closeBtn",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 190
+      lineNumber: 172
     },
     __self: this
   }))), __jsx(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_5___default.a, {
@@ -4752,7 +4743,7 @@ function ServerModal(props) {
     xs: 12,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 193
+      lineNumber: 175
     },
     __self: this
   }, __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_11___default.a, {
@@ -4761,7 +4752,7 @@ function ServerModal(props) {
     id: "server-modal-title",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 194
+      lineNumber: 176
     },
     __self: this
   }, name)), __jsx(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_5___default.a, {
@@ -4770,7 +4761,7 @@ function ServerModal(props) {
     style: {},
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 196
+      lineNumber: 178
     },
     __self: this
   }, __jsx(_Icons__WEBPACK_IMPORTED_MODULE_12__["PhoneIcon"], {
@@ -4778,7 +4769,7 @@ function ServerModal(props) {
     className: "ModalIcon",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 197
+      lineNumber: 179
     },
     __self: this
   })), __jsx(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_5___default.a, {
@@ -4786,7 +4777,7 @@ function ServerModal(props) {
     xs: 5,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 199
+      lineNumber: 181
     },
     __self: this
   }, __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_11___default.a, {
@@ -4795,7 +4786,7 @@ function ServerModal(props) {
     id: "server-modal-description",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 200
+      lineNumber: 182
     },
     __self: this
   }, phone)), __jsx(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_5___default.a, {
@@ -4804,7 +4795,7 @@ function ServerModal(props) {
     style: {},
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 202
+      lineNumber: 184
     },
     __self: this
   }, __jsx(_Icons__WEBPACK_IMPORTED_MODULE_12__["GlobeIcon"], {
@@ -4812,7 +4803,7 @@ function ServerModal(props) {
     className: "ModalIcon",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 203
+      lineNumber: 185
     },
     __self: this
   })), __jsx(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_5___default.a, {
@@ -4820,7 +4811,7 @@ function ServerModal(props) {
     xs: 5,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 205
+      lineNumber: 187
     },
     __self: this
   }, __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_11___default.a, {
@@ -4829,7 +4820,7 @@ function ServerModal(props) {
     id: "server-modal-description",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 206
+      lineNumber: 188
     },
     __self: this
   }, website)), __jsx(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_5___default.a, {
@@ -4840,7 +4831,7 @@ function ServerModal(props) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 208
+      lineNumber: 190
     },
     __self: this
   }, __jsx(_Icons__WEBPACK_IMPORTED_MODULE_12__["MailIcon"], {
@@ -4848,7 +4839,7 @@ function ServerModal(props) {
     className: "ModalIcon",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 209
+      lineNumber: 191
     },
     __self: this
   })), __jsx(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_5___default.a, {
@@ -4856,7 +4847,7 @@ function ServerModal(props) {
     xs: 5,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 211
+      lineNumber: 193
     },
     __self: this
   }, __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_11___default.a, {
@@ -4865,7 +4856,7 @@ function ServerModal(props) {
     id: "server-modal-description",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 212
+      lineNumber: 194
     },
     __self: this
   }, email)), __jsx(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_5___default.a, {
@@ -4873,7 +4864,7 @@ function ServerModal(props) {
     xs: 12,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 214
+      lineNumber: 196
     },
     __self: this
   }, __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_11___default.a, {
@@ -4881,7 +4872,7 @@ function ServerModal(props) {
     id: "server-modal-description",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 215
+      lineNumber: 197
     },
     __self: this
   }, summary)), __jsx(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_5___default.a, {
@@ -4889,7 +4880,7 @@ function ServerModal(props) {
     xs: 6,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 217
+      lineNumber: 199
     },
     __self: this
   }, __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_11___default.a, {
@@ -4897,7 +4888,7 @@ function ServerModal(props) {
     id: "server-modal-description",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 218
+      lineNumber: 200
     },
     __self: this
   }, "Booth #", booth)), __jsx(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_5___default.a, {
@@ -4905,7 +4896,7 @@ function ServerModal(props) {
     xs: 6,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 220
+      lineNumber: 202
     },
     __self: this
   }, __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_11___default.a, {
@@ -4916,7 +4907,7 @@ function ServerModal(props) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 221
+      lineNumber: 203
     },
     __self: this
   }, "View on map below")), __jsx(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_5___default.a, {
@@ -4924,23 +4915,22 @@ function ServerModal(props) {
     xs: 12,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 223
+      lineNumber: 205
     },
     __self: this
   }, __jsx(StyledMapBox, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 224
+      lineNumber: 206
     },
     __self: this
-  }, __jsx(_Icons__WEBPACK_IMPORTED_MODULE_12__["EBFloorPlan"], {
-    id: "FP",
+  }, __jsx(_Snap__WEBPACK_IMPORTED_MODULE_7__["default"], {
     booth: booth,
     open: true,
-    mapRef: mapRef,
+    mapref: mapRef,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 225
+      lineNumber: 208
     },
     __self: this
   })))))))));
@@ -7853,7 +7843,7 @@ class ExhibitorList extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
 
 /***/ }),
 
-/***/ 4:
+/***/ 3:
 /*!***********************************!*\
   !*** multi ./pages/exhibitors.js ***!
   \***********************************/

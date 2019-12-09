@@ -13,10 +13,6 @@ module.exports = withCss({
           name: '[name].[ext]'
         }
       }
-    },
-    {
-      test: require.resolve('snapsvg'),
-      loader: 'imports-loader?this=>window,fix=>module.exports=0'
     });
     return config
   }

@@ -5,7 +5,7 @@ import Fade from '@material-ui/core/Fade';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import styled from 'styled-components';
-import Snap from '../Snap';
+import Snap from 'snapsvg-cjs';
 import { Button } from '../Button';
 import IconButton from '@material-ui/core/IconButton';
 import AddCircleOutlineIcon from '@material-ui/icons/AddCircleOutline';
@@ -104,14 +104,6 @@ export default function ServerModal(props) {
     phone,
     email,
   } = props;
-  
-  useEffect(() => {
-   CreateButton();
-  }, [open])
-  
-  
-
-
 
 const selectedSvg = `#prefix__booth-${booth}`;
 
@@ -128,8 +120,7 @@ const selectedSvg = `#prefix__booth-${booth}`;
     console.log({booth});
     const svg = document.querySelector("#MapBox");
 
-    CreateButton();
-  }
+    }
   //Image handler Component
   const addDefaultSrc = (e) => {
     e.target.src = "/images/logo.png"
@@ -137,16 +128,7 @@ const selectedSvg = `#prefix__booth-${booth}`;
     return
   }
 
-  const CreateButton = async () => {
-  
-  let SnapMap = Snap(mapRef);
-  // Snap.UseSnap();
-  // let SelectSnap = Snap.SelectSnap()
-  console.log({SnapMap})
-  //  let s =  await Snap('#svg');
-  //  console.log({s})
-  }
-
+console.log({Snap})
   
 
   return (
@@ -222,8 +204,8 @@ const selectedSvg = `#prefix__booth-${booth}`;
                 </Grid>
                 <Grid item xs={12}>
                   <StyledMapBox >
-                    <EBFloorPlan id="FP" booth={booth} open mapRef={mapRef}/>
-                    
+                    {/* <EBFloorPlan id="FP" booth={booth} open mapref={mapRef}/> */}
+                    <SnapMap booth={booth} open mapref={mapRef}/>
                   </StyledMapBox>
                 </Grid>
               </Grid>
