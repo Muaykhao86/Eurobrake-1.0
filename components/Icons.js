@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, Component } from 'react';
 import styled from 'styled-components';
-import dynamic from 'next/dynamic'
+import Snap from 'snapsvg-cjs';
 
 export const MailIcon = () =>
   <svg
@@ -37,10 +37,6 @@ export const GlobeIcon = () =>
   ;
 
 
-const DynamicComponentWithNoSSR = dynamic(
-  () => import('snapsvg-cjs'),
-  { ssr: false }
-)
 export class EBFloorPlan extends Component {
     constructor(props) {
       super(props);
@@ -72,7 +68,7 @@ export class EBFloorPlan extends Component {
 
    
 render(){
-  console.log(DynamicComponentWithNoSSR)
+  console.log({Snap})
 
 // const {Snap} = this.state;
 // const map = Snap.select('#svgShell');
