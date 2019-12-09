@@ -99,6 +99,7 @@ export default class Login extends Component {
         try {
             const response = await fetch('https://prelude.eurobrake.net/login', {
                 method: 'POST', 
+                credentials: 'include',
                 body: JSON.stringify(formData),
                 headers: {
                     'Content-Type': 'application/json'
