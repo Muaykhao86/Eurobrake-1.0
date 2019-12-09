@@ -329,7 +329,7 @@ AuthorsAreaDash.getInitialProps = async ctx => {
                 credentials: 'include',
                 cache: 'no-cache',
                 headers: {
-                    Authorization: `Bearer  ${logintoken}`
+                    Authorization: 'Bearer ' + logintoken,
                 }
                  
             })
