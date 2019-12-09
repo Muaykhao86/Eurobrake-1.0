@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import styled from 'styled-components';
+import Snap from 'snapsvg-cjs';
 
 export const MailIcon = () =>
   <svg
@@ -41,9 +42,7 @@ export class EBFloorPlan extends React.Component {
     constructor(props) {
       super(props);
       
-    this.state={
-      Snap: null,
-    }
+    
     }
     
   
@@ -57,7 +56,8 @@ export class EBFloorPlan extends React.Component {
   // ! I HAD TO TAKE THE QUERY SELECTORS INTO USE EFFECT AS THAT IS WHAT IS FIRING FIRST 
   // ! SORT YOUR SELECTORS THEN YOUR LOGIC!
   componentDidMount = () => {
-    this.setState({Snap: require('snapsvg')});
+    let s = Snap('#svgShell')
+    console.log({s});
     let booth = this.props.booth.length > 3 ? this.props.booth.slice(0, 2) : this.props.booth;
     let propBooth3 = document.querySelector(`#prefix__booth-${booth}`);
     let propBooth4 = propBooth3.firstChild;// * IT WORKS!!!

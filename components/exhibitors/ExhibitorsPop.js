@@ -5,7 +5,6 @@ import Fade from '@material-ui/core/Fade';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import styled from 'styled-components';
-import Snap from 'snapsvg-cjs';
 import { Button } from '../Button';
 import IconButton from '@material-ui/core/IconButton';
 import AddCircleOutlineIcon from '@material-ui/icons/AddCircleOutline';
@@ -106,9 +105,7 @@ export default function ServerModal(props) {
     email,
   } = props;
 
-  useEffect(() => {
-  console.log({Snap})
-  }, [])
+
 
 const selectedSvg = `#prefix__booth-${booth}`;
 
@@ -209,8 +206,7 @@ const selectedSvg = `#prefix__booth-${booth}`;
                 </Grid>
                 <Grid item xs={12}>
                   <StyledMapBox >
-                    {/* <EBFloorPlan id="FP" booth={booth} open mapref={mapRef}/> */}
-                    <SnapMap booth={booth} open mapref={mapRef}/>
+                    <EBFloorPlan id="FP" booth={booth} open mapref={mapRef}/>
                   </StyledMapBox>
                 </Grid>
               </Grid>
