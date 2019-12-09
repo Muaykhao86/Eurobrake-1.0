@@ -24,7 +24,6 @@ export const PhoneIcon = () =>
 export const GlobeIcon = () =>
 
   <svg
-    id="myMap"
     xmlns="http://www.w3.org/2000/svg"
     width="18.488"
     height="18.488"
@@ -39,13 +38,13 @@ export const GlobeIcon = () =>
 
 
 export class EBFloorPlan extends React.Component {
-  constructor(props) {
-    super(props);
- Snap = this.Snap   
-
- this.Snap = null;
-  }
-  
+    constructor(props) {
+      super(props);
+      
+    this.state={
+      Snap: null,
+    }
+    }
     
   
 
@@ -58,7 +57,7 @@ export class EBFloorPlan extends React.Component {
   // ! I HAD TO TAKE THE QUERY SELECTORS INTO USE EFFECT AS THAT IS WHAT IS FIRING FIRST 
   // ! SORT YOUR SELECTORS THEN YOUR LOGIC!
   componentDidMount = () => {
-    this.Snap = require('snapsvg');
+    this.setState({Snap: require('snapsvg')});
     let booth = this.props.booth.length > 3 ? this.props.booth.slice(0, 2) : this.props.booth;
     let propBooth3 = document.querySelector(`#prefix__booth-${booth}`);
     let propBooth4 = propBooth3.firstChild;// * IT WORKS!!!
@@ -68,15 +67,16 @@ export class EBFloorPlan extends React.Component {
   
   }
 
-    
+
    
 render(){
-const map = Snap.select('#prefix__Entrance');
-console.log({map});
 
+// const {Snap} = this.state;
+// const map = Snap.select('#svgShell');
+// console.log('render', Snap);
 
-return (
-
+//
+return (  
   <svg id="svgShell" viewBox="0 0 1715.57 1040.59"  {...this.props}>
     <defs>
       <style>
@@ -107,7 +107,7 @@ return (
         d="M144.32 656.24H27.92v320.69h116.45v-5.18"
       />
     </g>
-
+ 
     <g id="prefix__Layer_5" data-name="Layer 5">
       <path
         id="prefix__exhibition-floor"

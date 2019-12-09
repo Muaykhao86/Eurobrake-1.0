@@ -1,10 +1,11 @@
-import React from 'react';
+import React , {useEffect, useState, useRef} from 'react';
 import Modal from '@material-ui/core/Modal';
 import Backdrop from '@material-ui/core/Backdrop';
 import Fade from '@material-ui/core/Fade';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import styled from 'styled-components';
+import GetSnap from '../Snap';
 import { Button } from '../Button';
 import IconButton from '@material-ui/core/IconButton';
 import AddCircleOutlineIcon from '@material-ui/icons/AddCircleOutline';
@@ -13,121 +14,84 @@ import { MailIcon, PhoneIcon, GlobeIcon, EBFloorPlan } from '../Icons';
 
 
 const StyledModal = styled.div`
-
 display: flex;
 flex: 1;
 flex-flow: column;
 justify-content: center;
 align-items: center;
 margin-top: 9rem;
-
 .paper{
 max-width: 42rem;
 max-height: 70rem;
 padding: 2rem;
-
-
 }
-
 .closeBtn{
   transform: rotate(45deg);
   font-size: 2.5rem;
-
 }
-
 .ModalLogo{
   width: 50%;
   margin-bottom: 2rem;
 }
-
 .ModalTitle{
   font-family: ${props => props.theme.MPSemibold};
   font-size: 3.1rem;
   color: ${props => props.theme.primary};
-
 }
  .ModalContact{
   font-family: ${props => props.theme.MPSemiLight};
   font-size: 1.1rem;
   margin-right: .5rem;
-  
  }
-
  .ModalIcon{
    transform: translateY(-1rem);
    width: 80%;
  }
-
  .ModalSummary{
   max-height: 15rem;
   font-family: ${props => props.theme.MPSemiLight};
   font-size: 1.1rem;
   padding-top: 1rem;
   overflow: scroll;
-
-
  }
  .ModalBooth{
-
   font-family: ${props => props.theme.MPBlack};
   font-size: 1.7rem;
   color: ${props => props.theme.primary};
   padding: 1rem 0 ;
-
  }
  .ModalMapTitle{
   font-family: ${props => props.theme.MPLightIt};
   font-size: 1.7rem;
   color: ${props => props.theme.primary};
   padding: 1rem 0 ;
-
-
  }
  .ModalMapBox{
-
  }
-
 `;
-
-
 const StyledMapBox = styled.div`
  min-width: 37.9rem;
   min-height: 22.9rem;
    border: 1px solid ${props => props.theme.primary};
   /* background-color: goldenrod; */
   align-self: center;
-
-  
-  
   svg{
     	.findMe{
       fill: #134381;
-/*       ? ???
-      &:before{
+      /* &:before{
         content: 'look at me!';
-        font-size: 3rem;
-        display: inline-block;
-        color: goldenrod;
-        
+        font-size: 10rem;
+        border: 2px solid black;
+        display: absolute;
+        color: goldenrod;     
       } */
     }
   }
-
 `;
-
-
-
 export default function ServerModal(props) {
-  
-  
-  
-  const rootRef = React.useRef(null);
-  
-  
-  
-  
-  const [open, setOpen] = React.useState(false);
-
+  const rootRef = useRef(null);
+  const [snap, setSnap] = useState();
+  const [open, setOpen] = useState(false);
   const {
     name,
     img,
@@ -139,6 +103,13 @@ export default function ServerModal(props) {
     phone,
     email,
   } = props;
+  
+  useEffect(() => {
+   CreateButton();
+  }, [open])
+  
+  
+
 
 
 const selectedSvg = `#prefix__booth-${booth}`;
@@ -154,14 +125,9 @@ const selectedSvg = `#prefix__booth-${booth}`;
 
   const handleSvg = (e) => {
     console.log({booth});
-    // console.log(rootRef);
-    // const selectedBooth = document.querySelector("#prefix__booth-75");
     const svg = document.querySelector("#MapBox");
-    
-    // const selectedBooth = svg.querySelector("#prefix__booth-75 > path.prefix__cls-11");
-    // console.log({selectedBooth})
-    // selectedBooth.classList.add('fillMe')
 
+    CreateButton();
   }
   //Image handler Component
   const addDefaultSrc = (e) => {
@@ -169,6 +135,16 @@ const selectedSvg = `#prefix__booth-${booth}`;
     e.target.onerror = null;
     return
   }
+
+  const CreateButton = async () => {
+  let Snap = GetSnap.Snap();
+  console.log({Snap})
+   let s =  await Snap('#svg');
+    var bigCircle = await s.circle(150, 150, 100);
+    return bigCircle
+  }
+
+  
 
   return (
     <div className="" ref={rootRef}>
@@ -243,7 +219,8 @@ const selectedSvg = `#prefix__booth-${booth}`;
                 </Grid>
                 <Grid item xs={12}>
                   <StyledMapBox >
-                    <EBFloorPlan booth={booth} open />
+                    <EBFloorPlan id="FP" booth={booth} open />
+                    <svg id="svg" style={{position: 'absolute', zIndex: '1'}}/>
                   </StyledMapBox>
                 </Grid>
               </Grid>
