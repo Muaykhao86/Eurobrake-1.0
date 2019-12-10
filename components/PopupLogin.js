@@ -1,5 +1,5 @@
 import React, {createRef} from 'react';
-import { Button } from '../Button';
+import { Button } from './Button';
 import Dialog from '@material-ui/core/Dialog';
 import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
