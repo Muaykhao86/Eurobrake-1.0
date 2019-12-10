@@ -134,8 +134,6 @@ const url = {
     upload:  'https://prelude.eurobrake.net/upload',
     csrf:  'https://prelude.eurobrake.net/csrf',
     csrfDef: 'https://prelude.eurobrake.net/csrf?definition=1'
-
-
 }
 const Abstract = () => (
 
@@ -216,6 +214,12 @@ class AuthorsAreaDash extends Component {
     }
 
     render() {
+//         const url = {
+//     edit: 'https://prelude.eurobrake.net/edit/EB2020-MDS-002',
+//     upload:  'https://prelude.eurobrake.net/upload',
+//     csrf:  'https://prelude.eurobrake.net/csrf',
+//     csrfDef: 'https://prelude.eurobrake.net/csrf?definition=1'
+// }
         // const {name} = this.props.authorData;
         const { userLoggedIn, hasForm } = this.state;
         console.log({ userLoggedIn, hasForm });
@@ -237,7 +241,7 @@ class AuthorsAreaDash extends Component {
                                 padding="0.5rem 2rem"
                                 style={{ margin: ".5rem 0" }}
                                 fontSize="1.7rem"
-                                onClick={() => GetForm(e, url.upload)}
+                                onClick={() => GetForm(url.upload)}
                             >
                                 <CreateIcon style={{ fontSize: '3rem', marginRight: '1rem' }} />
                                 UPLOAD FILE TEST
@@ -262,7 +266,7 @@ class AuthorsAreaDash extends Component {
                                 br="100rem"
                                 style={{ margin: ".5rem 0" }}
                                 fontSize="1.7rem"
-                                onClick={() => GetForm(e, url.csrf)}>
+                                onClick={() => GetForm(url.csrf)}>
                                 <ExitToAppIcon style={{ fontSize: '3rem', marginRight: '.5rem' }} />
                                 testcsrf
                     </Button>
@@ -273,7 +277,7 @@ class AuthorsAreaDash extends Component {
                                 br="100rem"
                                 style={{ margin: ".5rem 0" }}
                                 fontSize="1.7rem"
-                                onClick={() => GetForm(e, url.csrfDef)}>
+                                onClick={() => GetForm(url.csrfDef)}>
                                 <ExitToAppIcon style={{ fontSize: '3rem', marginRight: '.5rem' }} />
                                 testcsrfdefinition
                     </Button>

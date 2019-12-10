@@ -1,7 +1,7 @@
 import React from 'react'
 
-export default async function GetForm(e, url) {
-        e.preventDefault()
+export default async function GetForm(url) {
+        // e.preventDefault()
         console.log('click');
         const { logintoken } = cookie.get();
         console.log(logintoken)
