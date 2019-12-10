@@ -1,4 +1,4 @@
-const GetForm = async (e, {url}) => {
+const GetForm = async (e, url) => {
         e.preventDefault()
         console.log('click');
         const { logintoken } = cookie.get();
