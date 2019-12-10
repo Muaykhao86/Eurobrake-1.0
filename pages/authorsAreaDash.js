@@ -149,7 +149,7 @@ const Abstract = () => (
                 padding="0.5rem 2rem"
                 style={{ margin: ".5rem 0" }}
                 fontSize="1.7rem"
-                onClick={GetForm(url.edit)}
+                onClick={() => GetForm(e, url.edit)}
             >
                 <CreateIcon style={{ fontSize: '3rem', marginRight: '1rem' }} />
                 EDIT PAPER TEST
@@ -237,7 +237,7 @@ class AuthorsAreaDash extends Component {
                                 padding="0.5rem 2rem"
                                 style={{ margin: ".5rem 0" }}
                                 fontSize="1.7rem"
-                                onClick={GetForm(url.upload)}
+                                onClick={() => GetForm(e, url.upload)}
                             >
                                 <CreateIcon style={{ fontSize: '3rem', marginRight: '1rem' }} />
                                 UPLOAD FILE TEST
@@ -262,7 +262,7 @@ class AuthorsAreaDash extends Component {
                                 br="100rem"
                                 style={{ margin: ".5rem 0" }}
                                 fontSize="1.7rem"
-                                onClick={GetForm(url.csrf)}>
+                                onClick={() => GetForm(e, url.csrf)}>
                                 <ExitToAppIcon style={{ fontSize: '3rem', marginRight: '.5rem' }} />
                                 testcsrf
                     </Button>
@@ -273,7 +273,7 @@ class AuthorsAreaDash extends Component {
                                 br="100rem"
                                 style={{ margin: ".5rem 0" }}
                                 fontSize="1.7rem"
-                                onClick={GetForm(url.csrfDef)}>
+                                onClick={() => GetForm(e, url.csrfDef)}>
                                 <ExitToAppIcon style={{ fontSize: '3rem', marginRight: '.5rem' }} />
                                 testcsrfdefinition
                     </Button>
