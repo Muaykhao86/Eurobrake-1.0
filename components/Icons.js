@@ -55,7 +55,7 @@ export class EBFloorPlan extends Component {
   // ! I HAD TO TAKE THE QUERY SELECTORS INTO USE EFFECT AS THAT IS WHAT IS FIRING FIRST 
   // ! SORT YOUR SELECTORS THEN YOUR LOGIC!
   componentDidMount = () => {
-    let s = require('snapsvg-cjs');
+    let s = require('snapsvg');
     let Snap = s('#svgShell')
     console.log({Snap})
     let booth = this.props.booth.length > 3 ? this.props.booth.slice(0, 2) : this.props.booth;
