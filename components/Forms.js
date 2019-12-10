@@ -36,4 +36,4 @@ GetForm = async (e, url) => {
         }
     }
 
-    export default GetForm;
+    export default GetForm();
