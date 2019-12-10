@@ -54,10 +54,10 @@ export default function Popup() {
             <input type="file" ref={fileInput}/>
           </DialogContent>
           <DialogActions>
-            <Button onClick={handleClose} value="cancel" color="#134381">
+            <Button onClick={handleClose} value="cancel" color="#134381" bcolor="#134381">
               Cancel
           </Button>
-            <Button type="submit" onClick={handleSubmit} color="#134381">
+            <Button type="submit" onClick={handleSubmit} color="#134381" bcolor="#134381">
               Submit
           </Button>
           </DialogActions>

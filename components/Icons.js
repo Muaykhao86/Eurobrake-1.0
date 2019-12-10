@@ -46,10 +46,8 @@ export class EBFloorPlan extends Component {
   componentDidMount = () => {
     let Snap = require('snapsvg'); 
     console.log({Snap})
-    let mapSVG = Snap("#svgShell");
-    console.log({mapSVG})
-    let SnapSelect = Snap.select('#snapShell');
-    console.log({SnapSelect})
+    let mapSVG = Snap(this.props.mapref);
+    console.log(mapSVG);
     let booth = this.props.booth.length > 3 ? this.props.booth.slice(0, 2) : this.props.booth;
     let propBooth3 = document.querySelector(`#prefix__booth-${booth}`);
     let propBooth4 = propBooth3.firstChild;// * IT WORKS!!!

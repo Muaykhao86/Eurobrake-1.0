@@ -2,31 +2,21 @@ import React from 'react'
 import cookie from 'js-cookie';
 
 
-export default async function GetForm(url) {
+export async function GetForm(url) {
         // e.preventDefault()
-        console.log('click');
         const { logintoken } = cookie.get();
-        console.log(logintoken)
+        console.log({logintoken})
         try {
             const apiUrl = url;
             const response = await fetch(apiUrl, {
                 credentials: 'include',
                 headers: {
-                    Authorization: `Bearer ${logintoken}`,
+                    Authorization: 'Bearer ' + logintoken,
                 }
             });
             const data = await response.json();
             if (data.status === 'success') {
-                // this.setState(prev => (
-                //     {
-                //         hasForm: !prev,
-                //         formData: data.form
-                //     }));
-                // console.log(data.form);
-                // console.log('stringify',JSON.stringify(data.form));
                 console.log('getForm', data);
-
-
             } else {
                 let error = new Error(data.error)
                 error.response = response
@@ -38,6 +28,40 @@ export default async function GetForm(url) {
             )
             // this.setState({ error: error.message });
         }
+
+        return
+    }
+export async function SendFile({csrf, file}) {
+        const formData = new FormData();
+        const { logintoken } = cookie.get();
+        formData.append('__csrf_token', {csrf});
+        formData.append('filename', {file});
+        console.log({logintoken, csrf, file})
+        if(logintoken && csrf && file){
+        try {
+            const apiUrl = 'https://prelude.eurobrake.net/upload';
+            const response = await fetch(apiUrl, {
+                method: 'PUT', 
+                body: formData,
+                credentials: 'include',
+                headers: {
+                    Authorization: 'Bearer ' + logintoken,
+                }
+            });
+            const data = await response.json();
+            if (data.status === 'success') {
+                console.log('getForm', data);
+            } else {
+                let error = new Error(data.error)
+                error.response = response
+                throw error
+            }
+        } catch (error) {
+            console.error(
+                'Failed to get form, please try again', error
+            )
+            // this.setState({ error: error.message });
+        }}
 
         return
     }
