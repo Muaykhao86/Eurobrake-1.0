@@ -1,6 +1,5 @@
-import React from 'react';
-import Button from '@material-ui/core/Button';
-import TextField from '@material-ui/core/TextField';
+import React, {createRef} from 'react';
+import Button from './Button';
 import Dialog from '@material-ui/core/Dialog';
 import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
@@ -9,6 +8,7 @@ import DialogTitle from '@material-ui/core/DialogTitle';
 
 export default function PopupLogin() {
   const [open, setOpen] = React.useState(false);
+  const fileInput = React.createRef();
 
   const handleClickOpen = () => {
     setOpen(true);
@@ -18,35 +18,40 @@ export default function PopupLogin() {
     setOpen(false);
   };
 
+  
+  handleSubmit = (event) => {
+    event.preventDefault();
+    alert(
+      `Selected file - ${
+        fileInput.current.files[0].name
+      }`
+    );
+  }
+
   return (
     <div>
-      <Button variant="outlined" color="primary" onClick={handleClickOpen}>
-        Open form dialog
+      <form onSubmit={handleSubmit}>
+      <Button onClick={handleClickOpen}>
+        Upload File
       </Button>
       <Dialog open={open} onClose={handleClose} aria-labelledby="form-dialog-title">
-        <DialogTitle id="form-dialog-title">Subscribe</DialogTitle>
+        <DialogTitle id="form-dialog-title">Upload File</DialogTitle>
         <DialogContent>
           <DialogContentText>
-            Please log in to view your Profile
+            Please do not .......
           </DialogContentText>
-          <TextField
-            autoFocus
-            margin="dense"
-            id="name"
-            label="Email Address"
-            type="email"
-            fullWidth
-          />
+         <input type="file" />
         </DialogContent>
         <DialogActions>
-          <Button onClick={handleClose} color="primary">
+          <Button onClick={handleClose} color="#134381;">
             Cancel
           </Button>
-          <Button onClick={handleClose} color="primary">
-            Login
+          <Button type="submit" color="#134381;">
+           Submit
           </Button>
         </DialogActions>
       </Dialog>
+      </form>
     </div>
   );
 }
