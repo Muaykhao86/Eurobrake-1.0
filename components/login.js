@@ -108,7 +108,7 @@ export default class Login extends Component {
             const data = await response
             const data2 = await response.json()
             
-            console.log(JSON.stringify(data2))
+            console.log('login', JSON.stringify(data2))
 
             if (data2.status === 'success') {
                 const { logintoken } = data2;

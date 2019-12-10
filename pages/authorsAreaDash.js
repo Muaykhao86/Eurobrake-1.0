@@ -17,6 +17,7 @@ import HeroSection from '../components/HeroSection';
 import { Button } from '../components/Button';
 import { StyledBanner, StyledContainer } from '../components/styles/PageStyles';
 import { Abstracts } from '../components/testAuthors';
+import GetForm from '../components/Forms';
 
 const AreAbstracts = null || Abstracts;
 
@@ -141,9 +142,10 @@ const Abstract = () => (
                 padding="0.5rem 2rem"
                 style={{ margin: ".5rem 0" }}
                 fontSize="1.7rem"
+                onClick={GetForm('https://prelude.eurobrake.net/edit/EB2020-MDS-002')}
             >
                 <CreateIcon style={{ fontSize: '3rem', marginRight: '1rem' }} />
-                EDIT PAPER
+                EDIT PAPER TEST
             </Button>
             <Button
                 bcolor="#134381"
@@ -193,43 +195,7 @@ class AuthorsAreaDash extends Component {
         })) : null
     }
 
-    getAbstractForm = async (e) => {
-        e.preventDefault()
-        console.log('click');
-        const { logintoken } = cookie.get();
-        console.log(logintoken)
-        try {
-            const apiUrl = 'https://prelude.eurobrake.net/submit';
-            const response = await fetch(apiUrl, {
-                credentials: 'include',
-                headers: {
-                    Authorization: `Bearer ${logintoken}`,
-                }
-            });
-            const data = await response.json();
-            if (data.status === 'success') {
-                this.setState(prev => (
-                    {
-                        hasForm: !prev,
-                        formData: data.form
-                    }));
-                // console.log(data.form);
-                // console.log('stringify',JSON.stringify(data.form));
-                console.log(data)
-
-
-            } else {
-                let error = new Error(data.error)
-                error.response = response
-                throw error
-            }
-        } catch (error) {
-            console.error(
-                'Failed to get form, please try again', error
-            )
-            this.setState({ error: error.message });
-        }
-    }
+   
 
 
     handleInputChange = (event) => {
@@ -264,9 +230,10 @@ class AuthorsAreaDash extends Component {
                                 padding="0.5rem 2rem"
                                 style={{ margin: ".5rem 0" }}
                                 fontSize="1.7rem"
+                                onClick={GetForm('https://prelude.eurobrake.net/upload')}
                             >
                                 <CreateIcon style={{ fontSize: '3rem', marginRight: '1rem' }} />
-                                EDIT PROFILE
+                                UPLOAD FILE TEST
                     </Button>
                             <Link href="/authorsAreaInstructions">
                                 <Button
@@ -281,6 +248,28 @@ class AuthorsAreaDash extends Component {
                                     INSTRUCTIONS & TEMPLATES
                     </Button>
                             </Link>
+                            <Button
+                                bcolor="#134381"
+                                padding="0.5rem 2rem"
+                                background="#134381"
+                                br="100rem"
+                                style={{ margin: ".5rem 0" }}
+                                fontSize="1.7rem"
+                                onClick={GetForm('https://prelude.eurobrake.net/csrf')}>
+                                <ExitToAppIcon style={{ fontSize: '3rem', marginRight: '.5rem' }} />
+                                testcsrf
+                    </Button>
+                            <Button
+                                bcolor="#134381"
+                                padding="0.5rem 2rem"
+                                background="#134381"
+                                br="100rem"
+                                style={{ margin: ".5rem 0" }}
+                                fontSize="1.7rem"
+                                onClick={GetForm('https://prelude.eurobrake.net/csrf?definition=1')}>
+                                <ExitToAppIcon style={{ fontSize: '3rem', marginRight: '.5rem' }} />
+                                testcsrfdefinition
+                    </Button>
                             <Button
                                 bcolor="#134381"
                                 padding="0.5rem 2rem"
