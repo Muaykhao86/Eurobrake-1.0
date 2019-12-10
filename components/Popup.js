@@ -5,10 +5,10 @@ import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
-import GetForm from './Forms';
+import {GetForm, SendFile} from './Forms';
 
 
-export default function Popup() {
+export default function Popup(props) {
   const [open, setOpen] = React.useState(false);
   const fileInput = React.createRef();
 
@@ -24,7 +24,10 @@ export default function Popup() {
 
   const handleSubmit = (event) => { 
     event.preventDefault();
-    console.log(fileInput.current.files[0].name);
+    const file = fileInput.current.files[0].name;
+    const csrf = this.props.csrf;
+    console.log({file, csrf});
+    SendFile({file, csrf});
     alert(
       `Selected file - ${
       fileInput.current.files[0].name
@@ -57,7 +60,7 @@ export default function Popup() {
             <Button onClick={handleClose} value="cancel" color="#134381" bcolor="#134381">
               Cancel
           </Button>
-            <Button type="submit" onClick={handleSubmit} color="#134381" bcolor="#134381">
+            <Button type="submit" onClick={() => handleSubmit()} color="#134381" bcolor="#134381">
               Submit
           </Button>
           </DialogActions>

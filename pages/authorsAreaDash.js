@@ -17,7 +17,7 @@ import HeroSection from '../components/HeroSection';
 import { Button } from '../components/Button';
 import { StyledBanner, StyledContainer } from '../components/styles/PageStyles';
 import { Abstracts } from '../components/testAuthors';
-import GetForm from '../components/Forms';
+import {GetForm, SendFile} from '../components/Forms';
 import Popup from '../components/Popup';
 
 const AreAbstracts = null || Abstracts;
