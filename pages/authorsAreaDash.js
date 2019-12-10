@@ -18,7 +18,7 @@ import { Button } from '../components/Button';
 import { StyledBanner, StyledContainer } from '../components/styles/PageStyles';
 import { Abstracts } from '../components/testAuthors';
 import GetForm from '../components/Forms';
-import PopupLogin from '../components/PopupLogin';
+import Popup from '../components/Popup';
 
 const AreAbstracts = null || Abstracts;
 
@@ -229,10 +229,10 @@ class AuthorsAreaDash extends Component {
                         <Typography className="authors-title">Hi {'*USERNAME*'}</Typography>
                         <Typography gutterBottom className="authors_sub-title">Welcome to the Author's Area</Typography>
                         <div className="authors_action-box">
-                            <PopupLogin>
+                            <Popup>
                                 <CreateIcon style={{ fontSize: '3rem', marginRight: '1rem' }} />
                                 UPLOAD FILE TEST
-                            </PopupLogin>
+                            </Popup>
                             <Link href="/authorsAreaInstructions">
                                 <Button
                                     bcolor="#134381"

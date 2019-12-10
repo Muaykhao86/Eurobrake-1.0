@@ -7,7 +7,7 @@ import cookies from 'next-cookies';
 import cookie from 'js-cookie';
 import Typography from '@material-ui/core/Typography';
 import ExpandMoreOutlinedIcon from '@material-ui/icons/ExpandMoreOutlined';
-import PopupLogin from '../components/PopupLogin';
+import PopupLogin from '../components/Popup';
 import HeroSection from '../components/HeroSection';
 import { StyledBanner, StyledContainer } from '../components/styles/PageStyles';
 import LoginExpandTable from '../components/LoginExpandTable';

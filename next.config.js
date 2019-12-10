@@ -2,21 +2,34 @@ const withCss = require('@zeit/next-css')
 
 
 module.exports = withCss({
-  webpack (config) {
+  webpack(config) {
     config.module.rules.push(
-    {
-      test: /\.(png|jpg|gif|svg|eot|otf|ttf|woff|woff2)$/,
-      use: {
-        loader: 'url-loader',
-        options: {
-          limit: 100000,
-          name: '[name].[ext]'
+      {
+        test: /\.(png|jpg|gif|svg|eot|otf|ttf|woff|woff2)$/,
+        use: {
+          loader: 'url-loader',
+          options: {
+            limit: 100000,
+            name: '[name].[ext]'
+          }
+        }
+      });
+    config.module.rules.push(
+      {
+        test: require.resolve('snapsvg/dist/snap.svg.js'),
+        use: 'imports-loader?this=>window,fix=>module.exports=0'
+      });
+    config.module.push(
+      {
+        resolve: {
+          alias: {
+            snapsvg: 'snapsvg/dist/snap.svg.js',
+          }
         }
       }
-    });
+    );
     return config
-  }
-});
+  }});
 
 // NEEDED??
 // publicPath: './',

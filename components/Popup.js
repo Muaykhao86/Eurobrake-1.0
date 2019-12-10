@@ -5,10 +5,10 @@ import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
-import GetForm from '../components/Forms';
+import GetForm from './Forms';
 
 
-export default function PopupLogin() {
+export default function Popup() {
   const [open, setOpen] = React.useState(false);
   const fileInput = React.createRef();
 
@@ -34,7 +34,6 @@ export default function PopupLogin() {
 
   return (
     <div>
-      <form>
         <Button
           bcolor="#134381"
           background="#134381"
@@ -46,23 +45,24 @@ export default function PopupLogin() {
           Upload File
       </Button>
         <Dialog open={open} onClose={handleClose} aria-labelledby="form-dialog-title">
+      <form onSubmit={handleSubmit}>
           <DialogTitle id="form-dialog-title">Upload File</DialogTitle>
           <DialogContent>
             <DialogContentText>
               Please do not exceed 50mb file size example
           </DialogContentText>
-            <input type="file" />
+            <input type="file" ref={fileInput}/>
           </DialogContent>
           <DialogActions>
             <Button onClick={handleClose} value="cancel" color="#134381">
               Cancel
           </Button>
-            <Button onClick={handleSubmit} type="submit" value="submit" color="#134381">
+            <Button type="submit" color="#134381">
               Submit
           </Button>
           </DialogActions>
-        </Dialog>
       </form>
+        </Dialog>
     </div>
   );
 }
