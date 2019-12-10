@@ -18,6 +18,7 @@ import { Button } from '../components/Button';
 import { StyledBanner, StyledContainer } from '../components/styles/PageStyles';
 import { Abstracts } from '../components/testAuthors';
 import GetForm from '../components/Forms';
+import PopupLogin from '../components/PopupLogin';
 
 const AreAbstracts = null || Abstracts;
 
@@ -214,12 +215,6 @@ class AuthorsAreaDash extends Component {
     }
 
     render() {
-//         const url = {
-//     edit: 'https://prelude.eurobrake.net/edit/EB2020-MDS-002',
-//     upload:  'https://prelude.eurobrake.net/upload',
-//     csrf:  'https://prelude.eurobrake.net/csrf',
-//     csrfDef: 'https://prelude.eurobrake.net/csrf?definition=1'
-// }
         // const {name} = this.props.authorData;
         const { userLoggedIn, hasForm } = this.state;
         console.log({ userLoggedIn, hasForm });
@@ -234,18 +229,10 @@ class AuthorsAreaDash extends Component {
                         <Typography className="authors-title">Hi {'*USERNAME*'}</Typography>
                         <Typography gutterBottom className="authors_sub-title">Welcome to the Author's Area</Typography>
                         <div className="authors_action-box">
-                            <Button
-                                bcolor="#134381"
-                                background="#134381"
-                                br="100rem"
-                                padding="0.5rem 2rem"
-                                style={{ margin: ".5rem 0" }}
-                                fontSize="1.7rem"
-                                onClick={() => GetForm(url.upload)}
-                            >
+                            <PopupLogin>
                                 <CreateIcon style={{ fontSize: '3rem', marginRight: '1rem' }} />
                                 UPLOAD FILE TEST
-                    </Button>
+                            </PopupLogin>
                             <Link href="/authorsAreaInstructions">
                                 <Button
                                     bcolor="#134381"

@@ -2,7 +2,7 @@ import React, { useEffect, useRef, Component } from 'react';
 import styled from 'styled-components';
 import dynamic from 'next/dynamic'
 
-const Dyn = dynamic(
+const Snap = dynamic(
   () => import('snapsvg'),
   { ssr: false }
 )
@@ -57,7 +57,8 @@ export class EBFloorPlan extends Component {
   // ! I HAD TO TAKE THE QUERY SELECTORS INTO USE EFFECT AS THAT IS WHAT IS FIRING FIRST 
   // ! SORT YOUR SELECTORS THEN YOUR LOGIC!
   componentDidMount = () => {
-    console.log(<Dyn/>)
+    console.log('Dynamic import', Snap)
+    console.log({Snap})
     let booth = this.props.booth.length > 3 ? this.props.booth.slice(0, 2) : this.props.booth;
     let propBooth3 = document.querySelector(`#prefix__booth-${booth}`);
     let propBooth4 = propBooth3.firstChild;// * IT WORKS!!!

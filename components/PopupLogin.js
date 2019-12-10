@@ -1,29 +1,32 @@
-import React, {createRef} from 'react';
+import React, { createRef } from 'react';
 import { Button } from './Button';
 import Dialog from '@material-ui/core/Dialog';
 import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
+import GetForm from '../components/Forms';
 
-export default function PopupLogin() {
+
+export default function PopupLogin(props) {
   const [open, setOpen] = React.useState(false);
   const fileInput = React.createRef();
 
   const handleClickOpen = () => {
     setOpen(true);
+    GetForm('https://prelude.eurobrake.net/upload');
   };
 
   const handleClose = () => {
     setOpen(false);
   };
 
-  
+
   handleSubmit = (event) => {
     event.preventDefault();
     alert(
       `Selected file - ${
-        fileInput.current.files[0].name
+      fileInput.current.files[0].name
       }`
     );
   }
@@ -31,26 +34,33 @@ export default function PopupLogin() {
   return (
     <div>
       <form onSubmit={handleSubmit}>
-      <Button onClick={handleClickOpen}>
-        Upload File
+        <Button
+          bcolor="#134381"
+          background="#134381"
+          br="100rem"
+          padding="0.5rem 2rem"
+          style={{ margin: ".5rem 0" }}
+          fontSize="1.7rem"
+          onClick={handleClickOpen}>
+          Upload File
       </Button>
-      <Dialog open={open} onClose={handleClose} aria-labelledby="form-dialog-title">
-        <DialogTitle id="form-dialog-title">Upload File</DialogTitle>
-        <DialogContent>
-          <DialogContentText>
-            Please do not .......
+        <Dialog open={open} onClose={handleClose} aria-labelledby="form-dialog-title">
+          <DialogTitle id="form-dialog-title">Upload File</DialogTitle>
+          <DialogContent>
+            <DialogContentText>
+              Please do not example
           </DialogContentText>
-         <input type="file" />
-        </DialogContent>
-        <DialogActions>
-          <Button onClick={handleClose} color="#134381;">
-            Cancel
+            <input type="file" />
+          </DialogContent>
+          <DialogActions>
+            <Button onClick={handleClose} color="#134381;">
+              Cancel
           </Button>
-          <Button type="submit" color="#134381;">
-           Submit
+            <Button type="submit" color="#134381;">
+              Submit
           </Button>
-        </DialogActions>
-      </Dialog>
+          </DialogActions>
+        </Dialog>
       </form>
     </div>
   );
