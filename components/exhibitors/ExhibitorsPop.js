@@ -109,22 +109,22 @@ export default function ServerModal(props) {
 
 const selectedSvg = `#prefix__booth-${booth}`;
 
-  const handleOpen = (e) => {
+  const handleOpen = () => {
     setOpen(true);
-    handleSvg(e)
+    handleSvg()
   };
 
   const handleClose = () => {
     setOpen(false);
   };
 
-  const handleSvg = (e) => {
+  const handleSvg = () => {
     console.log({booth});
     // const svg = document.querySelector("#MapBox");
 
     }
   //Image handler Component
-  const addDefaultSrc = (e) => {
+  const addDefaultSrc = () => {
     e.target.src = "/images/logo.png"
     e.target.onerror = null;
     return
