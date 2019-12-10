@@ -45,7 +45,7 @@ export default function Popup() {
           Upload File
       </Button>
         <Dialog open={open} onClose={handleClose} aria-labelledby="form-dialog-title">
-      <form onSubmit={handleSubmit}>
+      <form>
           <DialogTitle id="form-dialog-title">Upload File</DialogTitle>
           <DialogContent>
             <DialogContentText>
@@ -57,7 +57,7 @@ export default function Popup() {
             <Button onClick={handleClose} value="cancel" color="#134381">
               Cancel
           </Button>
-            <Button type="submit" color="#134381">
+            <Button type="submit" onClick={handleSubmit} color="#134381">
               Submit
           </Button>
           </DialogActions>
