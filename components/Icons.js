@@ -44,14 +44,7 @@ export const GlobeIcon = () =>
 
 
 export class EBFloorPlan extends Component {
-  
-    
-
-
-
-
   // * BELOW : for mulitple booths target only the first one
-
 
   // ! NOTE TO SELF USE EFFECT IS LIKE COMOPNENT DID MOUNT, SHOULD UPDATE AND UNMOUNT IN ONE
   // ! I HAD TO TAKE THE QUERY SELECTORS INTO USE EFFECT AS THAT IS WHAT IS FIRING FIRST 

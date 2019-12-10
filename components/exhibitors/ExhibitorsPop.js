@@ -77,13 +77,16 @@ const StyledMapBox = styled.div`
   svg{
     	.findMe{
       fill: #134381;
-      /* &:before{
+      &::before{
         content: 'look at me!';
+        position: absolute;
         font-size: 10rem;
         border: 2px solid black;
-        display: absolute;
-        color: goldenrod;     
-      } */
+        color: goldenrod;  
+        width: 2rem;   
+        top: 1.3em;
+        left: 0.6em;
+      }
     }
   }
 `;
