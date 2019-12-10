@@ -142,7 +142,7 @@ const Abstract = () => (
                 padding="0.5rem 2rem"
                 style={{ margin: ".5rem 0" }}
                 fontSize="1.7rem"
-                onClick={GetForm({url = 'https://prelude.eurobrake.net/edit/EB2020-MDS-002'})}
+                onClick={GetForm(url = 'https://prelude.eurobrake.net/edit/EB2020-MDS-002')}
             >
                 <CreateIcon style={{ fontSize: '3rem', marginRight: '1rem' }} />
                 EDIT PAPER TEST
@@ -230,7 +230,7 @@ class AuthorsAreaDash extends Component {
                                 padding="0.5rem 2rem"
                                 style={{ margin: ".5rem 0" }}
                                 fontSize="1.7rem"
-                                onClick={GetForm({url = 'https://prelude.eurobrake.net/upload'})}
+                                onClick={GetForm(url = 'https://prelude.eurobrake.net/upload')}
                             >
                                 <CreateIcon style={{ fontSize: '3rem', marginRight: '1rem' }} />
                                 UPLOAD FILE TEST
@@ -255,7 +255,7 @@ class AuthorsAreaDash extends Component {
                                 br="100rem"
                                 style={{ margin: ".5rem 0" }}
                                 fontSize="1.7rem"
-                                onClick={GetForm({url = 'https://prelude.eurobrake.net/csrf'})}>
+                                onClick={GetForm(url = 'https://prelude.eurobrake.net/csrf')}>
                                 <ExitToAppIcon style={{ fontSize: '3rem', marginRight: '.5rem' }} />
                                 testcsrf
                     </Button>
@@ -266,7 +266,7 @@ class AuthorsAreaDash extends Component {
                                 br="100rem"
                                 style={{ margin: ".5rem 0" }}
                                 fontSize="1.7rem"
-                                onClick={GetForm({url = 'https://prelude.eurobrake.net/csrf?definition=1'})}>
+                                onClick={GetForm(url = 'https://prelude.eurobrake.net/csrf?definition=1')}>
                                 <ExitToAppIcon style={{ fontSize: '3rem', marginRight: '.5rem' }} />
                                 testcsrfdefinition
                     </Button>
