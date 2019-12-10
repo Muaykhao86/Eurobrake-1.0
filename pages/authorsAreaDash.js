@@ -147,7 +147,7 @@ const Abstract = () => (
                 padding="0.5rem 2rem"
                 style={{ margin: ".5rem 0" }}
                 fontSize="1.7rem"
-                onClick={() => GetForm(e, url.edit)}
+                onClick={() => GetForm(url.edit)}
             >
                 <CreateIcon style={{ fontSize: '3rem', marginRight: '1rem' }} />
                 EDIT PAPER TEST

@@ -120,7 +120,7 @@ const selectedSvg = `#prefix__booth-${booth}`;
 
   const handleSvg = (e) => {
     console.log({booth});
-    const svg = document.querySelector("#MapBox");
+    // const svg = document.querySelector("#MapBox");
 
     }
   //Image handler Component
