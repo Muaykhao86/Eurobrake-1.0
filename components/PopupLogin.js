@@ -22,8 +22,9 @@ export default function PopupLogin() {
   };
 
 
-  const handleSubmit = (event) => {
+  const handleSubmit = (event) => { 
     event.preventDefault();
+    console.log(fileInput.current.files[0].name);
     alert(
       `Selected file - ${
       fileInput.current.files[0].name
@@ -48,7 +49,7 @@ export default function PopupLogin() {
           <DialogTitle id="form-dialog-title">Upload File</DialogTitle>
           <DialogContent>
             <DialogContentText>
-              Please do not example
+              Please do not exceed 50mb file size example
           </DialogContentText>
             <input type="file" />
           </DialogContent>
