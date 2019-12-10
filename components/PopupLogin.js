@@ -34,7 +34,7 @@ export default function PopupLogin() {
 
   return (
     <div>
-      <form onSubmit={handleSubmit}>
+      <form>
         <Button
           bcolor="#134381"
           background="#134381"
@@ -54,10 +54,10 @@ export default function PopupLogin() {
             <input type="file" />
           </DialogContent>
           <DialogActions>
-            <Button onClick={handleClose} color="#134381;">
+            <Button onClick={handleClose} value="cancel" color="#134381">
               Cancel
           </Button>
-            <Button type="submit" color="#134381;">
+            <Button onClick={handleSubmit} type="submit" value="submit" color="#134381">
               Submit
           </Button>
           </DialogActions>

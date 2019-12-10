@@ -1,11 +1,5 @@
 import React, { useEffect, useRef, Component } from 'react';
 import styled from 'styled-components';
-import dynamic from 'next/dynamic'
-
-// const Snap = dynamic(
-//   () => import('snapsvg'),
-//   { ssr: false }
-// )
 
 
 export const MailIcon = () =>
@@ -52,6 +46,8 @@ export class EBFloorPlan extends Component {
   componentDidMount = () => {
     let Snap = require('snapsvg'); 
     console.log({Snap})
+    let mapSVG = Snap('#svgShell');
+    console.log({mapSVG})
     let booth = this.props.booth.length > 3 ? this.props.booth.slice(0, 2) : this.props.booth;
     let propBooth3 = document.querySelector(`#prefix__booth-${booth}`);
     let propBooth4 = propBooth3.firstChild;// * IT WORKS!!!
