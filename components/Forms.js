@@ -1,4 +1,6 @@
 import React from 'react'
+import cookie from 'js-cookie';
+
 
 export default async function GetForm(url) {
         // e.preventDefault()
@@ -34,7 +36,7 @@ export default async function GetForm(url) {
             console.error(
                 'Failed to get form, please try again', error
             )
-            this.setState({ error: error.message });
+            // this.setState({ error: error.message });
         }
 
         return
