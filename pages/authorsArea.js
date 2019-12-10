@@ -17,7 +17,6 @@ const FilledBanner = () => (
 
     <StyledBanner>
         <StyledContainer >
-
             <Typography className="banner-heading"  >Submit your review ready papers</Typography>
             <Typography className="banner-sub" >Deadline for submissions is 26 January 2020</Typography>
             <div className="banner_bottom">

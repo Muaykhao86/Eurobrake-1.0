@@ -8,7 +8,7 @@ import DialogTitle from '@material-ui/core/DialogTitle';
 import GetForm from '../components/Forms';
 
 
-export default function PopupLogin(props) {
+export default function PopupLogin() {
   const [open, setOpen] = React.useState(false);
   const fileInput = React.createRef();
 
@@ -22,7 +22,7 @@ export default function PopupLogin(props) {
   };
 
 
-  handleSubmit = (event) => {
+  const handleSubmit = (event) => {
     event.preventDefault();
     alert(
       `Selected file - ${
