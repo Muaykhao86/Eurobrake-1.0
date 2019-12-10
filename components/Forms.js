@@ -24,7 +24,7 @@ export default async function GetForm(url) {
                 //     }));
                 // console.log(data.form);
                 // console.log('stringify',JSON.stringify(data.form));
-                console.log('getForm', stringyfy(data));
+                console.log('getForm', JSON.stringyfy(data));
 
 
             } else {
