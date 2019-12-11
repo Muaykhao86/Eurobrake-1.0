@@ -72,13 +72,13 @@ export async function SendFile({csrf, file}) {
 
 
 export async function SendForm({csrf, formData, url}) {
-        const formData = JSON.stringify(formData);
+        const form = JSON.stringify(formData);
         const { logintoken } = cookie.get();
         if(logintoken && csrf && formData){
         try {
             const apiUrl = url;
             const response = await fetch(apiUrl, {
-                body: formData,
+                body: form,
                 credentials: 'include',
                 headers: {
                     Authorization: 'Bearer ' + logintoken,
