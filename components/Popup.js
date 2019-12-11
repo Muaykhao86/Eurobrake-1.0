@@ -10,11 +10,14 @@ import {GetForm, SendFile} from './Forms';
 
 export default function Popup(props) {
   const [open, setOpen] = React.useState(false);
+  const [csrf, setCsrf] = React.useState();
   const fileInput = React.createRef();
 
-  const handleClickOpen = () => {
-    setOpen(true);
-    GetForm('https://prelude.eurobrake.net/upload');
+  const handleClickOpen = async () => {
+   await setOpen(true);
+    const getCsrf = await GetForm('https://prelude.eurobrake.net/upload');
+   await  setCsrf(getCsrf);
+
   };
 
   const handleClose = () => {
@@ -22,17 +25,17 @@ export default function Popup(props) {
   };
 
 
-  const handleSubmit = (event) => { 
-    event.preventDefault();
-    const file = fileInput.current.files[0].name;
-    const csrf = this.props.csrf;
-    console.log({file, csrf});
-    SendFile({file, csrf});
-    alert(
+  const handleSubmit = async () => { 
+    // event.preventDefault();
+    const file = await fileInput.current.files[0].name;
+    await console.log({file, csrf});
+    await SendFile({file, csrf});
+    await alert(
       `Selected file - ${
       fileInput.current.files[0].name
       }`
     );
+    
   }
 
   return (
@@ -60,7 +63,7 @@ export default function Popup(props) {
             <Button onClick={handleClose} value="cancel" color="#134381" bcolor="#134381">
               Cancel
           </Button>
-            <Button type="submit" onClick={() => handleSubmit()} color="#134381" bcolor="#134381">
+            <Button  onClick={() => handleSubmit()} color="#134381" bcolor="#134381">
               Submit
           </Button>
           </DialogActions>

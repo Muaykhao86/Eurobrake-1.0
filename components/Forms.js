@@ -17,7 +17,7 @@ export async function GetForm(url) {
             const data = await response.json();
             if (data.status === 'success') {
                 console.log('getForm', data);
-            return {csrf: data.__csrf_} 
+            return data.__csrf_ 
             } else {
                 let error = new Error(data.error)
                 error.response = response
@@ -50,8 +50,10 @@ export async function SendFile({csrf, file}) {
                 }
             });
             const data = await response.json();
+            const data2 = await response;
             if (data.status === 'success') {
                 console.log('getForm', data);
+                console.log('getForm2', data2);
             } else {
                 let error = new Error(data.error)
                 error.response = response
