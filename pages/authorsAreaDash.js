@@ -274,9 +274,9 @@ class AuthorsAreaDash extends Component {
                         <Typography gutterBottom className="authors-title" style={{ fontSize: '3rem', borderTop: '2px solid #134381', borderBottom: '2px solid #134381' }}>Your Abstracts</Typography>
                         {AreAbstracts ?
                             <StyledBox>
-                                <Typography gutterBottom className="authors-it" style={{ fontSize: '2rem' }}>You got abstracts i got errors</Typography>
+                                <Typography gutterBottom className="authors-it" style={{ fontSize: '2rem' }}>You got some abstracts but I got some errors!</Typography>
                             </StyledBox>
-                            :
+                             :
                             <StyledBox>
                                 <Typography gutterBottom className="authors-it" style={{ fontSize: '2rem' }}>You haven't submitted any abstracts yet</Typography>
                             </StyledBox>
@@ -291,6 +291,7 @@ class AuthorsAreaDash extends Component {
 
     }
 }
+                            {/* <Abstract /> */}
 
 AuthorsAreaDash.getInitialProps = async ctx => {
     // We use `nextCookie` to get the cookie and pass the token to the frontend in the `props`.
