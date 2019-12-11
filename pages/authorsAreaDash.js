@@ -273,7 +273,10 @@ class AuthorsAreaDash extends Component {
                         </div>
                         <Typography gutterBottom className="authors-title" style={{ fontSize: '3rem', borderTop: '2px solid #134381', borderBottom: '2px solid #134381' }}>Your Abstracts</Typography>
                         {AreAbstracts ?
-                            <Abstract /> :
+                            <StyledBox>
+                                <Typography gutterBottom className="authors-it" style={{ fontSize: '2rem' }}>You got abstracts i got errors</Typography>
+                            </StyledBox>
+                            :
                             <StyledBox>
                                 <Typography gutterBottom className="authors-it" style={{ fontSize: '2rem' }}>You haven't submitted any abstracts yet</Typography>
                             </StyledBox>
