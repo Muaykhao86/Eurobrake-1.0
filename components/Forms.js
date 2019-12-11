@@ -17,7 +17,8 @@ export async function GetForm(url) {
             const data = await response.json();
             if (data.status === 'success') {
                 console.log('getForm', data);
-            return data.__csrf_ 
+                console.log('tkn', data.__csrf_token)
+            return data.__csrf_token ;
             } else {
                 let error = new Error(data.error)
                 error.response = response

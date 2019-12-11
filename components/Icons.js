@@ -44,7 +44,7 @@ export class EBFloorPlan extends Component {
   // ! I HAD TO TAKE THE QUERY SELECTORS INTO USE EFFECT AS THAT IS WHAT IS FIRING FIRST 
   // ! SORT YOUR SELECTORS THEN YOUR LOGIC!
   componentDidMount = () => {
-    let Snap = require('snapsvg'); 
+    let Snap = import('snapsvg'); 
     console.log({Snap})
     let mapSVG = Snap(this.props.mapref);
     console.log(mapSVG);
