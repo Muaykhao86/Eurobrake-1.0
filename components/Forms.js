@@ -3,7 +3,6 @@ import cookie from 'js-cookie';
 
 
 export async function GetForm(url) {
-        // e.preventDefault()
         const { logintoken } = cookie.get();
         console.log({logintoken})
         try {
@@ -28,11 +27,12 @@ export async function GetForm(url) {
             console.error(
                 'Failed to get form, please try again', error
             )
-            // this.setState({ error: error.message });
+            // return error.message
         }
 
         return
     }
+
 export async function SendFile({csrf, file}) {
         const formData = new FormData();
         const { logintoken } = cookie.get();
@@ -51,10 +51,43 @@ export async function SendFile({csrf, file}) {
                 }
             });
             const data = await response.json();
-            const data2 = await response;
+         
             if (data.status === 'success') {
                 console.log('getForm', data);
-                console.log('getForm2', data2);
+                
+            } else {
+                let error = new Error(data.error)
+                error.response = response
+                throw error
+            }
+        } catch (error) {
+            console.error(
+                'Failed to get form, please try again', error
+            )
+            // this.setState({ error: error.message });
+        }}
+
+        return
+    }
+
+
+export async function SendForm({csrf, formData, url}) {
+        const formData = JSON.stringify(formData);
+        const { logintoken } = cookie.get();
+        if(logintoken && csrf && formData){
+        try {
+            const apiUrl = url;
+            const response = await fetch(apiUrl, {
+                body: formData,
+                credentials: 'include',
+                headers: {
+                    Authorization: 'Bearer ' + logintoken,
+                }
+            });
+            const data = await response.json();
+           
+            if (data.status === 'success') {
+                console.log('getForm', data);
             } else {
                 let error = new Error(data.error)
                 error.response = response

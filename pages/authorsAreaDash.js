@@ -17,7 +17,7 @@ import HeroSection from '../components/HeroSection';
 import { Button } from '../components/Button';
 import { StyledBanner, StyledContainer } from '../components/styles/PageStyles';
 import { Abstracts } from '../components/testAuthors';
-import {GetForm, SendFile} from '../components/Forms';
+import { GetForm, SendFile } from '../components/Forms';
 import Popup from '../components/Popup';
 
 const AreAbstracts = null || Abstracts;
@@ -132,51 +132,58 @@ const FilledBanner = () => (
 
 const url = {
     edit: 'https://prelude.eurobrake.net/edit/EB2020-MDS-002',
-    upload:  'https://prelude.eurobrake.net/upload',
-    csrf:  'https://prelude.eurobrake.net/csrf',
-    csrfDef: 'https://prelude.eurobrake.net/csrf?definition=1'
-}
-const Abstract = () => (
+    editdef: 'https://prelude.eurobrake.net/edit/EB2020-MDS-002?definition=1',
+    upload: 'https://prelude.eurobrake.net/upload',
 
-    <StyledBox>
-        <StyledActionArea>
-            <Typography gutterBottom className="action-paper">{Abstracts[0].papercode}</Typography>
-            <Button
-                bcolor="#134381"
-                background="#134381"
-                br="100rem"
-                padding="0.5rem 2rem"
-                style={{ margin: ".5rem 0" }}
-                fontSize="1.7rem"
-                onClick={() => GetForm(url.edit)}
-            >
-                <CreateIcon style={{ fontSize: '3rem', marginRight: '1rem' }} />
-                EDIT PAPER TEST
+}
+const Abstract =
+    Abstracts.map(paper => {
+
+        <StyledBox>
+            <StyledActionArea>
+                <Typography gutterBottom className="action-paper">{paper.papercode}</Typography>
+                {paper.withdrawn ?
+                    <Typography gutterBottom className="action-paper">WITHDRAWN</Typography>
+                    :
+                    <>
+                        <Link href="/edit">
+                            <Button
+                                bcolor="#134381"
+                                padding="0.5rem 2rem"
+                                background="#134381"
+                                br="100rem"
+                                style={{ margin: ".5rem 0" }}
+                                fontSize="1.7rem"
+                            >
+                                <AssignmentIcon style={{ fontSize: '3rem', marginRight: '.5rem' }} />
+                                Edit Paper
+                    </Button>
+                        </Link>
+                        <Button
+                            bcolor="#134381"
+                            background="#134381"
+                            br="100rem"
+                            padding="0.5rem 2rem"
+                            style={{ margin: ".5rem 0" }}
+                            fontSize="1.7rem"
+                        >
+                            <CancelIcon style={{ fontSize: '3rem', marginRight: '1rem' }} />
+                            WITHDRAW
             </Button>
-            <Button
-                bcolor="#134381"
-                background="#134381"
-                br="100rem"
-                padding="0.5rem 2rem"
-                style={{ margin: ".5rem 0" }}
-                fontSize="1.7rem"
-            >
-                <CancelIcon style={{ fontSize: '3rem', marginRight: '1rem' }} />
-                WITHDRAW
-            </Button>
-        </StyledActionArea>
-        <StyledInfoArea>
-            <Typography  className="paper-title">{Abstracts[2].title}</Typography>
-            <Typography gutterBottom className="paper-type">{Abstracts[2].paper_type.toUpperCase()}</Typography>
-           {Abstracts[2].tasks && Abstracts[2].tasks.map(task => {
-                  return ( <div className="paper_task-box">
-                    {task.done === null ? <CheckCircleIcon style={{fontSize: '2rem', color: 'green', marginRight: '1rem'}}/> : <CancelIcon style={{fontSize: '2rem',color: 'red',  marginRight: '1rem'}}/>}
-                    <Typography gutterBottom className="paper_task">{task.task}</Typography>
-                    </div> )
+                    </>}
+            </StyledActionArea>
+            <StyledInfoArea>
+                <Typography className="paper-title">{paper.title}</Typography>
+                <Typography gutterBottom className="paper-type">{paper.paper_type.toUpperCase()}</Typography>
+                {paper.tasks && paper.tasks.map(task => {
+                    return (<div className="paper_task-box">
+                        {task.done === null ? <CheckCircleIcon style={{ fontSize: '2rem', color: 'green', marginRight: '1rem' }} /> : <CancelIcon style={{ fontSize: '2rem', color: 'red', marginRight: '1rem' }} />}
+                        <Typography gutterBottom className="paper_task">{task.task}</Typography>
+                    </div>)
                 })}
-        </StyledInfoArea>
-    </StyledBox>
-)
+            </StyledInfoArea>
+        </StyledBox>
+    });
 
 
 class AuthorsAreaDash extends Component {
@@ -188,8 +195,6 @@ class AuthorsAreaDash extends Component {
             error: '',
             userLoggedIn: false,
         }
-
-
     }
 
     componentDidMount = () => {
@@ -200,9 +205,6 @@ class AuthorsAreaDash extends Component {
             userLoggedIn: !prev
         })) : null
     }
-
-   
-
 
     handleInputChange = (event) => {
         const target = event.target;
@@ -253,21 +255,11 @@ class AuthorsAreaDash extends Component {
                                 br="100rem"
                                 style={{ margin: ".5rem 0" }}
                                 fontSize="1.7rem"
-                                onClick={() => GetForm(url.csrf)}>
+                                onClick={() => GetForm(url.editdef)}>
                                 <ExitToAppIcon style={{ fontSize: '3rem', marginRight: '.5rem' }} />
-                                testcsrf
+                                Edit Definition
                     </Button>
-                            <Button
-                                bcolor="#134381"
-                                padding="0.5rem 2rem"
-                                background="#134381"
-                                br="100rem"
-                                style={{ margin: ".5rem 0" }}
-                                fontSize="1.7rem"
-                                onClick={() => GetForm(url.csrfDef)}>
-                                <ExitToAppIcon style={{ fontSize: '3rem', marginRight: '.5rem' }} />
-                                testcsrfdefinition
-                    </Button>
+
                             <Button
                                 bcolor="#134381"
                                 padding="0.5rem 2rem"
@@ -281,11 +273,11 @@ class AuthorsAreaDash extends Component {
                     </Button>
                         </div>
                         <Typography gutterBottom className="authors-title" style={{ fontSize: '3rem', borderTop: '2px solid #134381', borderBottom: '2px solid #134381' }}>Your Abstracts</Typography>
-                        { AreAbstracts ? 
-                        <Abstract/> :
-                        <StyledBox>
-                            <Typography gutterBottom className="authors-it" style={{ fontSize: '2rem' }}>You haven't submitted any abstracts yet</Typography>
-                        </StyledBox>
+                        {AreAbstracts ?
+                            <Abstract /> :
+                            <StyledBox>
+                                <Typography gutterBottom className="authors-it" style={{ fontSize: '2rem' }}>You haven't submitted any abstracts yet</Typography>
+                            </StyledBox>
                         }
                         <Typography gutterBottom className="authors" style={{ fontSize: '2rem' }}>For more information, please visit <Link href="/authorsAreaInstructions" ><a className="authors-bold">Instructions & Templates</a></Link> or email <a className="authors-bold" href="mailto:info@fisita.com">info@eurobrake.net</a></Typography>
 
@@ -309,16 +301,16 @@ AuthorsAreaDash.getInitialProps = async ctx => {
     if (logintoken) {
         try {
             // console.log({logintoken}, 'getIProps right before fetch call')
-                // headers: {
-                //     Authorization: 'Bearer ' + logintoken,
-                // }
+            // headers: {
+            //     Authorization: 'Bearer ' + logintoken,
+            // }
             const response = await fetch(apiUrl, {
                 credentials: 'include',
                 cache: 'no-cache',
                 headers: {
                     Authorization: 'Bearer ' + logintoken,
                 }
-                 
+
             })
             const data = await response.json()
             // console.log('Authors response Data =>', data.status, data);

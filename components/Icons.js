@@ -46,14 +46,16 @@ export class EBFloorPlan extends Component {
   componentDidMount = () => {
     let Snap = import('snapsvg'); 
     console.log({Snap})
-    let mapSVG = Snap(this.props.mapref);
-    console.log(mapSVG);
-  //   let booth = this.props.booth.length > 3 ? this.props.booth.slice(0, 2) : this.props.booth;
-  //   let propBooth3 = document.querySelector(`#prefix__booth-${booth}`);
-  //   let propBooth4 = propBooth3.firstChild;// * IT WORKS!!!
-  //   let selectedBooth = propBooth4 || null;
-  //   console.log({ selectedBooth })
-  // if (selectedBooth !== null) selectedBooth.classList.toggle("findMe");
+    let map = this.props.mapref;
+    console.log({map});
+    // let getMap = Snap.select(map);
+    // console.log({getMap});
+    let booth = this.props.booth.length > 3 ? this.props.booth.slice(0, 2) : this.props.booth;
+    let propBooth3 = document.querySelector(`#prefix__booth-${booth}`);
+    let propBooth4 = propBooth3.firstChild;// * IT WORKS!!!
+    let selectedBooth = propBooth4 || null;
+    console.log({ selectedBooth })
+  if (selectedBooth !== null) selectedBooth.classList.toggle("findMe");
   
   }
 
