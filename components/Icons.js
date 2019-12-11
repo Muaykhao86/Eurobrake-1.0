@@ -48,6 +48,7 @@ export class EBFloorPlan extends Component {
     console.log({Snap})
     let map = this.props.mapref;
     console.log({map});
+    console.log('please fucking work')
 
     Snap.then(snap => console.log(snap));
 
