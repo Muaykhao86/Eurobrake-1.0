@@ -136,53 +136,53 @@ const url = {
     upload: 'https://prelude.eurobrake.net/upload',
 
 }
-const Abstract =
-    Abstracts.map(paper => (
-        <StyledBox>
-            <StyledActionArea>
-                <Typography gutterBottom className="action-paper">{paper.papercode}</Typography>
-                {paper.withdrawn ?
-                    <Typography gutterBottom className="action-paper">WITHDRAWN</Typography>
-                    :
-                    <>
-                        <Link href="/edit">
-                            <Button
-                                bcolor="#134381"
-                                padding="0.5rem 2rem"
-                                background="#134381"
-                                br="100rem"
-                                style={{ margin: ".5rem 0" }}
-                                fontSize="1.7rem"
-                            >
-                                <AssignmentIcon style={{ fontSize: '3rem', marginRight: '.5rem' }} />
-                                Edit Paper
-                    </Button>
-                        </Link>
-                        <Button
-                            bcolor="#134381"
-                            background="#134381"
-                            br="100rem"
-                            padding="0.5rem 2rem"
-                            style={{ margin: ".5rem 0" }}
-                            fontSize="1.7rem"
-                        >
-                            <CancelIcon style={{ fontSize: '3rem', marginRight: '1rem' }} />
-                            WITHDRAW
-            </Button>
-                    </>}
-            </StyledActionArea>
-            <StyledInfoArea>
-                <Typography className="paper-title">{paper.title}</Typography>
-                <Typography gutterBottom className="paper-type">{paper.paper_type.toUpperCase()}</Typography>
-                {paper.tasks && paper.tasks.map(task => {
-                    return (<div className="paper_task-box">
-                        {task.done === null ? <CheckCircleIcon style={{ fontSize: '2rem', color: 'green', marginRight: '1rem' }} /> : <CancelIcon style={{ fontSize: '2rem', color: 'red', marginRight: '1rem' }} />}
-                        <Typography gutterBottom className="paper_task">{task.task}</Typography>
-                    </div>)
-                })}
-            </StyledInfoArea>
-        </StyledBox>
-    ));
+// const Abstract =
+//     Abstracts.map(paper => (
+//         <StyledBox>
+//             <StyledActionArea>
+//                 <Typography gutterBottom className="action-paper">{paper.papercode}</Typography>
+//                 {paper.withdrawn ?
+//                     <Typography gutterBottom className="action-paper">WITHDRAWN</Typography>
+//                     :
+//                     <>
+//                         <Link href="/edit">
+//                             <Button
+//                                 bcolor="#134381"
+//                                 padding="0.5rem 2rem"
+//                                 background="#134381"
+//                                 br="100rem"
+//                                 style={{ margin: ".5rem 0" }}
+//                                 fontSize="1.7rem"
+//                             >
+//                                 <AssignmentIcon style={{ fontSize: '3rem', marginRight: '.5rem' }} />
+//                                 Edit Paper
+//                     </Button>
+//                         </Link>
+//                         <Button
+//                             bcolor="#134381"
+//                             background="#134381"
+//                             br="100rem"
+//                             padding="0.5rem 2rem"
+//                             style={{ margin: ".5rem 0" }}
+//                             fontSize="1.7rem"
+//                         >
+//                             <CancelIcon style={{ fontSize: '3rem', marginRight: '1rem' }} />
+//                             WITHDRAW
+//             </Button>
+//                     </>}
+//             </StyledActionArea>
+//             <StyledInfoArea>
+//                 <Typography className="paper-title">{paper.title}</Typography>
+//                 <Typography gutterBottom className="paper-type">{paper.paper_type.toUpperCase()}</Typography>
+//                 {paper.tasks && paper.tasks.map(task => {
+//                     return (<div className="paper_task-box">
+//                         {task.done === null ? <CheckCircleIcon style={{ fontSize: '2rem', color: 'green', marginRight: '1rem' }} /> : <CancelIcon style={{ fontSize: '2rem', color: 'red', marginRight: '1rem' }} />}
+//                         <Typography gutterBottom className="paper_task">{task.task}</Typography>
+//                     </div>)
+//                 })}
+//             </StyledInfoArea>
+//         </StyledBox>
+//     ));
 
 
 class AuthorsAreaDash extends Component {
