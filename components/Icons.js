@@ -48,8 +48,8 @@ export class EBFloorPlan extends Component {
     console.log({Snap})
     let map = this.props.mapref;
     console.log({map});
-    // let getMap = Snap.select(map);
-    // console.log({getMap});
+    let getMap = Snap(map);
+    console.log({getMap});
     let booth = this.props.booth.length > 3 ? this.props.booth.slice(0, 2) : this.props.booth;
     let propBooth3 = document.querySelector(`#prefix__booth-${booth}`);
     let propBooth4 = propBooth3.firstChild;// * IT WORKS!!!

@@ -20,7 +20,7 @@ import { Abstracts } from '../components/testAuthors';
 import { GetForm, SendFile } from '../components/Forms';
 import Popup from '../components/Popup';
 
-const AreAbstracts = null || Abstracts;
+const AreAbstracts = null || Abstracts ;
 
 const StyledPage = styled.div`
     display: flex;
@@ -137,8 +137,7 @@ const url = {
 
 }
 const Abstract =
-    Abstracts.map(paper => {
-
+    Abstracts.map(paper => (
         <StyledBox>
             <StyledActionArea>
                 <Typography gutterBottom className="action-paper">{paper.papercode}</Typography>
@@ -183,7 +182,7 @@ const Abstract =
                 })}
             </StyledInfoArea>
         </StyledBox>
-    });
+    ));
 
 
 class AuthorsAreaDash extends Component {
