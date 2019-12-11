@@ -16,7 +16,6 @@ import { Abstracts } from '../components/testAuthors';
 import {GetForm, SendFile} from '../components/Forms';
 import Popup from '../components/Popup';
 
-const AreAbstracts = null || Abstracts;
 
 const StyledPage = styled.div`
     display: flex;
