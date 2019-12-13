@@ -55,8 +55,8 @@ export async function SendFile({csrf, file }) {
                     Authorization: 'Bearer ' + logintoken,
                 }
             });
-            const data = response.json();
-
+            const data = await response.json();
+            await console.log({data})
             if (data.status === 'success') {
                 console.log('getForm', data);
 

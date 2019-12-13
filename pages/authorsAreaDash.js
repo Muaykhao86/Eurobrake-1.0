@@ -216,6 +216,7 @@ class AuthorsAreaDash extends Component {
     }
 
     render() {
+        console.log(this.props)
         const {firstname} = this.props.authorData;
         const { userLoggedIn, hasForm } = this.state;
         console.log({ userLoggedIn, hasForm });
