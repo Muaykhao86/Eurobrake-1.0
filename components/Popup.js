@@ -29,7 +29,7 @@ export default function Popup(props) {
     // event.preventDefault();
     const file = await fileInput.current.files[0].name;
     await console.log({file, csrf});
-    await SendFile(file, csrf);
+    await SendFile({file, csrf});
     await alert(
       `Selected file - ${
       fileInput.current.files[0].name
