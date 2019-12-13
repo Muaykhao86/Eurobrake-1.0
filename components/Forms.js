@@ -38,7 +38,7 @@ export async function GetForm(url) {
     return
 }
 
-export async function SendFile({ csrf, file }) {
+export async function SendFile( csrf, file ) {
     const formData = new FormData();
     const { logintoken } = cookie.get();
     formData.append('__csrf_token', csrf );
