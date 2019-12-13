@@ -1,10 +1,10 @@
 {
-  "snapsvg": [
+  "./dev/noop": [
     {
-      "id": "wVUB",
-      "name": "./node_modules/snapsvg/dist/snap.svg.js",
-      "file": "static/chunks/23.4c490209e06c1ab80b7f.js",
-      "publicPath": "static/chunks/23.4c490209e06c1ab80b7f.js"
+      "id": "./node_modules/next/dist/client/dev/noop.js",
+      "name": "./node_modules/next/dist/client/dev/noop.js",
+      "file": "static/chunks/0.js",
+      "publicPath": "static/chunks/0.js"
     }
   ]
 }

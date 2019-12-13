@@ -67,20 +67,20 @@ const StyledPage = styled.div`
 
 
 class AuthorsArea extends Component {
-        static async getInitialProps({ res }) {
-        const { logintoken } = cookie.get();
-        if (logintoken){
-        if (res) {
-          res.writeHead(302, {
-            Location: '/authorsAreaDash'
-          })
-          res.end()
-        } else {
-          Router.push('/authorsAreaDash')
-        }
-      }
-        return {}
-      }
+    //     static async getInitialProps({ res }) {
+    //     const { logintoken } = cookie.get();
+    //     if (logintoken){
+    //     if (res) {
+    //       res.writeHead(302, {
+    //         Location: '/authorsAreaDash'
+    //       })
+    //       res.end()
+    //     } else {
+    //       Router.push('/authorsAreaDash')
+    //     }
+    //   }
+    //     return {}
+    //   }
     
     constructor(props) {
         super(props);

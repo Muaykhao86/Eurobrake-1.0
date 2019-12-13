@@ -50,7 +50,7 @@ export class EBFloorPlan extends Component {
     console.log({map});
     console.log('please fucking work')
 
-    Snap.then(snap => console.log(snap));
+    Snap.then(snap => console.log(snap(map)));
 
     let booth = this.props.booth.length > 3 ? this.props.booth.slice(0, 2) : this.props.booth;
     let propBooth3 = document.querySelector(`#prefix__booth-${booth}`);

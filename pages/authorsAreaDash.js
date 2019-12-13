@@ -216,7 +216,7 @@ class AuthorsAreaDash extends Component {
     }
 
     render() {
-        // const {name} = this.props.authorData;
+        const {firstname} = this.props.authorData;
         const { userLoggedIn, hasForm } = this.state;
         console.log({ userLoggedIn, hasForm });
         return (
@@ -227,7 +227,7 @@ class AuthorsAreaDash extends Component {
                 <StyledPage>
                     <div className="authors">
 
-                        <Typography className="authors-title">Hi {'*USERNAME*'}</Typography>
+                        <Typography className="authors-title">Hi {`${firstname}`}</Typography>
                         <Typography gutterBottom className="authors_sub-title">Welcome to the Author's Area</Typography>
                         <div className="authors_action-box">
                             <Popup>

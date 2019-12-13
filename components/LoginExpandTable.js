@@ -10,6 +10,8 @@ import TableBody from '@material-ui/core/TableBody';
 import TableCell from '@material-ui/core/TableCell';
 import TableRow from '@material-ui/core/TableRow';
 import Login from '../components/login';
+import {AbstractForm} from '../components/Forms';
+
 
 
 const ExpansionPanel = styled(MuiExpansionPanel)`
@@ -127,7 +129,7 @@ export default function LoginExpandTable() {
             : null}
         </ExpansionPanelSummary>
         <ExpansionPanelDetails>
-          
+          <AbstractForm/>
         </ExpansionPanelDetails>
       </ExpansionPanel>
     </div>
