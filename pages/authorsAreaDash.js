@@ -227,7 +227,7 @@ class AuthorsAreaDash extends Component {
                 <StyledPage>
                     <div className="authors">
 
-                        <Typography className="authors-title">Hi {`${firstname}`}</Typography>
+                        <Typography className="authors-title">{`Hi ${firstname}`}</Typography>
                         <Typography gutterBottom className="authors_sub-title">Welcome to the Author's Area</Typography>
                         <div className="authors_action-box">
                             <Popup>

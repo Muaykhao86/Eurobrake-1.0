@@ -27,7 +27,7 @@ export default function Popup(props) {
 
   const handleSubmit = async () => { 
     // event.preventDefault();
-    const file = await fileInput.current.files[0].name;
+    const file = await fileInput.current.files[0];
     await console.log({file, csrf});
     await SendFile({file, csrf});
     await alert(
