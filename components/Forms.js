@@ -41,8 +41,8 @@ export async function GetForm(url) {
 export async function SendFile({ csrf, file }) {
     const formData = new FormData();
     const { logintoken } = cookie.get();
-    formData.append('__csrf_token', { csrf });
-    formData.append('filename', { file });
+    formData.append('__csrf_token', csrf );
+    formData.append('filename',  file);
     console.log({ logintoken, csrf, file })
     if (logintoken && csrf && file) {
         try {
@@ -223,6 +223,23 @@ export const AbstractForm = () => (
     >
         {({ values, isSubmitting, isValidating, handleChange }) => (
             <StyledForm>
+                <div className="login_form-field">
+                    <label
+                        htmlFor="label"
+                        className="login_form-label">
+                        First Name:
+                    </label>
+                    <Field
+                        className="login_form-input"
+                        onChange={handleChange}
+                        value={values.author_email}
+                        style={{ color: '#134381' }}
+                        id="standard-required"
+                        name="firstName"
+                        component={TextField}
+                    />
+                    <ErrorMessage name="firstName" />
+                </div>
                 <div className="login_form-field">
                     <label
                         htmlFor="label"

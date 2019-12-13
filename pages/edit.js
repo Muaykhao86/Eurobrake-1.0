@@ -7,7 +7,7 @@ import fetch from 'isomorphic-unfetch';
 import styled from 'styled-components';
 import Typography from '@material-ui/core/Typography';
 import ExpandMoreOutlinedIcon from '@material-ui/icons/ExpandMoreOutlined';
-
+import {AbstractForm} from '../components/Forms';
 import { withAuthSync, logout, login } from '../utils/auth'
 import HeroSection from '../components/HeroSection';
 import { Button } from '../components/Button';
@@ -125,41 +125,28 @@ const FilledBanner = () => (
     </StyledBanner>
 )
 
-const url = {
-    edit: 'https://prelude.eurobrake.net/edit/EB2020-MDS-002',
-    editdef: 'https://prelude.eurobrake.net/edit/EB2020-MDS-002?definition=1',
-    upload:  'https://prelude.eurobrake.net/upload',
-   
-}
-
-
 
 class Edit extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            formdata: ''
-        }
-    }
+   
 
-    componentDidMount = () => {
-        const { userLoggedIn } = this.state;
-        const { logintoken } = cookie.get();
-        console.log('cdm', logintoken)
-        logintoken && !userLoggedIn ? this.setState(prev => ({
-            userLoggedIn: !prev
-        })) : null
-    }
+    // componentDidMount = () => {
+    //     const { userLoggedIn } = this.state;
+    //     const { logintoken } = cookie.get();
+    //     console.log('cdm', logintoken)
+    //     logintoken && !userLoggedIn ? this.setState(prev => ({
+    //         userLoggedIn: !prev
+    //     })) : null
+    // }
 
-    handleInputChange = (event) => {
-        const target = event.target;
-        const value = target.type === 'checkbox' ? target.checked : target.value;
-        const name = target.name;
+    // handleInputChange = (event) => {
+    //     const target = event.target;
+    //     const value = target.type === 'checkbox' ? target.checked : target.value;
+    //     const name = target.name;
 
-        this.setState({
-            [name]: value
-        });
-    }
+    //     this.setState({
+    //         [name]: value
+    //     });
+    // }
 
     render() {
         return (
@@ -172,55 +159,54 @@ class Edit extends Component {
                         <Typography className="authors-title">Hi {'*USERNAME*'}</Typography>
                         <Typography gutterBottom className="authors_sub-title">Edit Your Abstract</Typography>
                     </div>
+                    <AbstractForm/>
                 </StyledPage>
             </>
-
         )
-
     }
 }
 
-Edit.getInitialProps = async ctx => {
-    // We use `nextCookie` to get the cookie and pass the token to the frontend in the `props`.
-    const { logintoken } = cookies(ctx);
-    const apiUrl = 'https://prelude.eurobrake.net/dashboard ';
-    const redirectOnError = () =>
-        process.browser
-            ? Router.push('/authorsArea')
-            : ctx.res.writeHead(301, { Location: '/authorsArea' })
-    if (logintoken) {
-        try {
-            const response = await fetch(apiUrl, {
-                credentials: 'include',
-                cache: 'no-cache',
-                headers: {
-                    Authorization: 'Bearer ' + logintoken,
-                }
+// Edit.getInitialProps = async ctx => {
+//     // We use `nextCookie` to get the cookie and pass the token to the frontend in the `props`.
+//     const { logintoken } = cookies(ctx);
+//     const apiUrl = 'https://prelude.eurobrake.net/dashboard ';
+//     const redirectOnError = () =>
+//         process.browser
+//             ? Router.push('/authorsArea')
+//             : ctx.res.writeHead(301, { Location: '/authorsArea' })
+//     if (logintoken) {
+//         try {
+//             const response = await fetch(apiUrl, {
+//                 credentials: 'include',
+//                 cache: 'no-cache',
+//                 headers: {
+//                     Authorization: 'Bearer ' + logintoken,
+//                 }
                  
-            })
-            const data = await response.json()
-            // console.log('Authors response Data =>', data.status, data);
-            if (data.status === 'success') {
-                console.log('res.ok', data)
-                return { authorData: data }
-            }
-            else {
-                console.log('not reading success')
-                console.log('stringyfied', JSON.stringify(data))
-                // https://github.com/developit/unfetch#caveats
-                return redirectOnError()
-            }
-        } catch (error) {
-            // Implementation or Network error
-            console.log(error)
-            return redirectOnError()
-        }
-    }
+//             })
+//             const data = await response.json()
+//             // console.log('Authors response Data =>', data.status, data);
+//             if (data.status === 'success') {
+//                 console.log('res.ok', data)
+//                 return { authorData: data }
+//             }
+//             else {
+//                 console.log('not reading success')
+//                 console.log('stringyfied', JSON.stringify(data))
+//                 // https://github.com/developit/unfetch#caveats
+//                 return redirectOnError()
+//             }
+//         } catch (error) {
+//             // Implementation or Network error
+//             console.log(error)
+//             return redirectOnError()
+//         }
+//     }
 
-}
+// }
 
-export default withAuthSync(Edit)
-// export default AuthorsAreaDash
+// export default withAuthSync(Edit)
+export default Edit
 
 
 // !

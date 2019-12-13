@@ -60,20 +60,6 @@ input:-internal-autofill-selected {
 `;
 
 export default class Login extends Component {
-    // static getInitialProps = async function () {
-    //     const { logintoken } = cookie.get();
-    //     const res = await fetch('https://prelude.eurobrake.net/login', {
-    //         credentials: 'include',
-            // headers: {
-            //     Authorization: `Bearer ${logintoken}`,
-            // }
-    //     });
-    //     const data = await res.json();
-
-    //     return {
-    //         form: data
-    //     };
-    // };
     constructor(props) {
         super(props);
         this.state = {

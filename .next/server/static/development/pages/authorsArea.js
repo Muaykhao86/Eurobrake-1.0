@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 4);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -390,12 +390,8 @@ async function SendFile({
   const {
     logintoken
   } = js_cookie__WEBPACK_IMPORTED_MODULE_5___default.a.get();
-  formData.append('__csrf_token', {
-    csrf
-  });
-  formData.append('filename', {
-    file
-  });
+  formData.append('__csrf_token', csrf);
+  formData.append('filename', file);
   console.log({
     logintoken,
     csrf,
@@ -471,58 +467,10 @@ const SignupSchema = yup__WEBPACK_IMPORTED_MODULE_4__["object"]().shape({
   lastName: yup__WEBPACK_IMPORTED_MODULE_4__["string"]().min(2, 'Too Short!').max(50, 'Too Long!').required('Required'),
   email: yup__WEBPACK_IMPORTED_MODULE_4__["string"]().email('Invalid email').required('Required')
 });
-const StyledForm = styled_components__WEBPACK_IMPORTED_MODULE_6___default()(formik__WEBPACK_IMPORTED_MODULE_2__["Form"])`
-     display: flex;
-    flex-flow: column;
-    justify-content: space-between;
-    align-items: center;
-    min-width: 100%;
-
-    
-.MuiInput-underline:after {
-    color: ${props => props.theme.primary};
-}
-
-.MuiInputBase-root {
-    font-family: ${props => props.theme.MPBoldIt};
-        font-size: 2rem;
-        color: ${props => props.theme.primary};
-}
-
-input:-internal-autofill-selected {
-
-}
-    .login_form{
-
-    &-field{
-        margin: 1rem 0;
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-end;
-    }
-    &-label{
-        font-family: ${props => props.theme.MPLight};
-        font-size: 2.6rem;
-        color: ${props => props.theme.primary};
-    }
-    &-input{
-        min-width: 40rem;
-        font-family: ${props => props.theme.MPBoldIt};
-        font-size: 5rem;
-        color: ${props => props.theme.primary};
-
-    }
-
-    &-link{
-        font-family: ${props => props.theme.MPBoldIt};
-        font-size: 1.7rem;
-        color: ${props => props.theme.primary};
-    }
-    }
-
-
-`;
+const StyledForm = styled_components__WEBPACK_IMPORTED_MODULE_6___default()(formik__WEBPACK_IMPORTED_MODULE_2__["Form"]).withConfig({
+  displayName: "Forms__StyledForm",
+  componentId: "sc-1q22qaj-0"
+})(["display:flex;flex-flow:column;justify-content:space-between;align-items:center;min-width:100%;.MuiInput-underline:after{color:", ";}.MuiInputBase-root{font-family:", ";font-size:2rem;color:", ";}input:-internal-autofill-selected{}.login_form{&-field{margin:1rem 0;width:100%;display:flex;justify-content:space-between;align-items:flex-end;}&-label{font-family:", ";font-size:2.6rem;color:", ";}&-input{min-width:40rem;font-family:", ";font-size:5rem;color:", ";}&-link{font-family:", ";font-size:1.7rem;color:", ";}}"], props => props.theme.primary, props => props.theme.MPBoldIt, props => props.theme.primary, props => props.theme.MPLight, props => props.theme.primary, props => props.theme.MPBoldIt, props => props.theme.primary, props => props.theme.MPBoldIt, props => props.theme.primary);
 const AbstractForm = () => __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Formik"], {
   initialValues: {
     author_title: '',
@@ -634,6 +582,43 @@ const AbstractForm = () => __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Formik"], 
     lineNumber: 244
   },
   __self: undefined
+}, "First Name:"), __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Field"], {
+  className: "login_form-input",
+  onChange: handleChange,
+  value: values.author_email,
+  style: {
+    color: '#134381'
+  },
+  id: "standard-required",
+  name: "firstName",
+  component: formik_material_ui__WEBPACK_IMPORTED_MODULE_3__["TextField"],
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 249
+  },
+  __self: undefined
+}), __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["ErrorMessage"], {
+  name: "firstName",
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 258
+  },
+  __self: undefined
+})), __jsx("div", {
+  className: "login_form-field",
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 260
+  },
+  __self: undefined
+}, __jsx("label", {
+  htmlFor: "label",
+  className: "login_form-label",
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 261
+  },
+  __self: undefined
 }, "Last Name:"), __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Field"], {
   className: "login_form-input",
   onChange: handleChange,
@@ -642,21 +627,21 @@ const AbstractForm = () => __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Formik"], 
   component: formik_material_ui__WEBPACK_IMPORTED_MODULE_3__["TextField"],
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 249
+    lineNumber: 266
   },
   __self: undefined
 }), __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["ErrorMessage"], {
   name: "lastName",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 256
+    lineNumber: 273
   },
   __self: undefined
 })), __jsx("div", {
   className: "login_form-field",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 258
+    lineNumber: 275
   },
   __self: undefined
 }, __jsx("label", {
@@ -664,7 +649,7 @@ const AbstractForm = () => __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Formik"], 
   className: "login_form-label",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 259
+    lineNumber: 276
   },
   __self: undefined
 }, "Email:"), __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Field"], {
@@ -676,14 +661,14 @@ const AbstractForm = () => __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Formik"], 
   component: formik_material_ui__WEBPACK_IMPORTED_MODULE_3__["TextField"],
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 264
+    lineNumber: 281
   },
   __self: undefined
 }), __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["ErrorMessage"], {
   name: "email",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 272
+    lineNumber: 289
   },
   __self: undefined
 })), __jsx("button", {
@@ -691,7 +676,7 @@ const AbstractForm = () => __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Formik"], 
   disabled: isSubmitting,
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 274
+    lineNumber: 291
   },
   __self: undefined
 }, "Submit"), console.log({
@@ -7283,7 +7268,7 @@ const withAuthSync = WrappedComponent => {
 
 /***/ }),
 
-/***/ 4:
+/***/ 3:
 /*!************************************!*\
   !*** multi ./pages/authorsArea.js ***!
   \************************************/
