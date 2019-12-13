@@ -55,7 +55,7 @@ export async function SendFile({csrf, file }) {
                     Authorization: 'Bearer ' + logintoken,
                 }
             });
-            const data = await response
+            const data = response;
 
             if (data.status === 'success') {
                 console.log('getForm', data);
@@ -130,17 +130,14 @@ const StyledForm = styled(Form)`
     align-items: center;
     min-width: 100%;
 
-    
 .MuiInput-underline:after {
     color: ${props => props.theme.primary};
 }
-
 .MuiInputBase-root {
     font-family: ${props => props.theme.MPBoldIt};
         font-size: 2rem;
         color: ${props => props.theme.primary};
 }
-
 input:-internal-autofill-selected {
 
 }
@@ -163,17 +160,13 @@ input:-internal-autofill-selected {
         font-family: ${props => props.theme.MPBoldIt};
         font-size: 5rem;
         color: ${props => props.theme.primary};
-
     }
-
     &-link{
         font-family: ${props => props.theme.MPBoldIt};
         font-size: 1.7rem;
         color: ${props => props.theme.primary};
     }
     }
-
-
 `;
 
 export const AbstractForm = () => (
@@ -223,6 +216,160 @@ export const AbstractForm = () => (
     >
         {({ values, isSubmitting, isValidating, handleChange }) => (
             <StyledForm>
+                <h1>Primary Author</h1>
+                <div className="login_form-field">
+                    <label
+                        htmlFor="label"
+                        className="login_form-label">
+                        First Name:
+                    </label>
+                    <Field
+                        className="login_form-input"
+                        onChange={handleChange}
+                        value={values.author_email}
+                        style={{ color: '#134381' }}
+                        id="standard-required"
+                        name="firstName"
+                        component={TextField}
+                    />
+                    <ErrorMessage name="firstName" />
+                </div>
+                <div className="login_form-field">
+                    <label
+                        htmlFor="label"
+                        className="login_form-label">
+                        First Name:
+                    </label>
+                    <Field
+                        className="login_form-input"
+                        onChange={handleChange}
+                        value={values.author_email}
+                        style={{ color: '#134381' }}
+                        id="standard-required"
+                        name="firstName"
+                        component={TextField}
+                    />
+                    <ErrorMessage name="firstName" />
+                </div>
+                <div className="login_form-field">
+                    <label
+                        htmlFor="label"
+                        className="login_form-label">
+                        First Name:
+                    </label>
+                    <Field
+                        className="login_form-input"
+                        onChange={handleChange}
+                        value={values.author_email}
+                        style={{ color: '#134381' }}
+                        id="standard-required"
+                        name="firstName"
+                        component={TextField}
+                    />
+                    <ErrorMessage name="firstName" />
+                </div>
+                <div className="login_form-field">
+                    <label
+                        htmlFor="label"
+                        className="login_form-label">
+                        First Name:
+                    </label>
+                    <Field
+                        className="login_form-input"
+                        onChange={handleChange}
+                        value={values.author_email}
+                        style={{ color: '#134381' }}
+                        id="standard-required"
+                        name="firstName"
+                        component={TextField}
+                    />
+                    <ErrorMessage name="firstName" />
+                </div>
+                <div className="login_form-field">
+                    <label
+                        htmlFor="label"
+                        className="login_form-label">
+                        First Name:
+                    </label>
+                    <Field
+                        className="login_form-input"
+                        onChange={handleChange}
+                        value={values.author_email}
+                        style={{ color: '#134381' }}
+                        id="standard-required"
+                        name="firstName"
+                        component={TextField}
+                    />
+                    <ErrorMessage name="firstName" />
+                </div>
+                <div className="login_form-field">
+                    <label
+                        htmlFor="label"
+                        className="login_form-label">
+                        First Name:
+                    </label>
+                    <Field
+                        className="login_form-input"
+                        onChange={handleChange}
+                        value={values.author_email}
+                        style={{ color: '#134381' }}
+                        id="standard-required"
+                        name="firstName"
+                        component={TextField}
+                    />
+                    <ErrorMessage name="firstName" />
+                </div>
+                <div className="login_form-field">
+                    <label
+                        htmlFor="label"
+                        className="login_form-label">
+                        First Name:
+                    </label>
+                    <Field
+                        className="login_form-input"
+                        onChange={handleChange}
+                        value={values.author_email}
+                        style={{ color: '#134381' }}
+                        id="standard-required"
+                        name="firstName"
+                        component={TextField}
+                    />
+                    <ErrorMessage name="firstName" />
+                </div>
+                <div className="login_form-field">
+                    <label
+                        htmlFor="label"
+                        className="login_form-label">
+                        First Name:
+                    </label>
+                    <Field
+                        className="login_form-input"
+                        onChange={handleChange}
+                        value={values.author_email}
+                        style={{ color: '#134381' }}
+                        id="standard-required"
+                        name="firstName"
+                        component={TextField}
+                    />
+                    <ErrorMessage name="firstName" />
+                </div>
+                <div className="login_form-field">
+                    <label
+                        htmlFor="label"
+                        className="login_form-label">
+                        First Name:
+                    </label>
+                    <Field
+                        className="login_form-input"
+                        onChange={handleChange}
+                        value={values.author_email}
+                        style={{ color: '#134381' }}
+                        id="standard-required"
+                        name="firstName"
+                        component={TextField}
+                    />
+                    <ErrorMessage name="firstName" />
+                </div>
                 <div className="login_form-field">
                     <label
                         htmlFor="label"
