@@ -1,5 +1,4 @@
 import React from 'react'
-import FormBuilder from '../components/FormBuilder';
 import fetch from 'isomorphic-unfetch';
 import styled from 'styled-components';
 import HeroSection from '../components/HeroSection';
