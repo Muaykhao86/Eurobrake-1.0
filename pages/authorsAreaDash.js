@@ -114,6 +114,8 @@ const StyledInfoArea = styled.div`
     }}
 `;
 
+const Abstracts = undefined;
+
 const AreAbstracts = null || Abstracts ;
 
 const FilledBanner = () => (
