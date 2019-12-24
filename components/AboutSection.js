@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'next/link';
 import { StyledSection } from './styles/HomeStyles';
 import { Card } from './Card';
 import { Button } from './Button';
@@ -15,7 +16,9 @@ export default function AboutSection() {
                 </div>
                 <Card right>
                     <h1>Early bird tickets are on sale now</h1>
+                    <Link href="/ticketPortal">
                     <Button br="500rem">Book Now</Button>
+                    </Link>
                 </Card>
             </div>
         </StyledSection>

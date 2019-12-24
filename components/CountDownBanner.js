@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Link from 'next/link';
 import styled from 'styled-components';
 import Typography from '@material-ui/core/Typography';
 import { Button } from '../components/Button';
@@ -104,7 +105,9 @@ class CountDownBanner extends Component {
                         <Typography className="timer">{seconds > 9 ? ': '+ seconds : `: 0` + seconds}</Typography>
                         <span>Seconds</span>
                     </CDItem>
+            <Link href="/ticketPortal">
                     <Button style={{marginLeft: '5rem', minHeight: '8rem'}}>Book Now</Button>
+            </Link>
                 </CDContainer>
             </CDBanner>
 

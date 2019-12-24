@@ -41,7 +41,7 @@ const Al = styled.a`
 
 export default () => (
     <>
-        <HeroSection>
+        <HeroSection t="30rem" max="55%">
             Exhibition and Sponsorship
         </HeroSection>
         <StyledPage>

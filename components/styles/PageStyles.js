@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import {device} from '../Page';
 
 
 export const StyledPage = styled.div`
@@ -6,7 +7,15 @@ export const StyledPage = styled.div`
     flex-flow: column;
     align-self: center;
     margin-top: ${props => props.mt || '5rem'};
+    @media ${device.mobile} {
+    width: ${props => props.max || props.theme.mobileWidth}
+    }
+    @media ${device.tablet} {
+    width: ${props => props.max || props.theme.tabletWidth}
+    }
+    @media ${device.laptopM} {
     width: ${props => props.max || props.theme.minWidth};
+    }
     background-color: ${props => props.theme.white};
     margin-top: 7rem;
 

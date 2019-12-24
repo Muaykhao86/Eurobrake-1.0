@@ -15,8 +15,8 @@ const StyledCard = styled(Card)`
   flex-flow: column;
   justify-content: space-between;
   margin: 1rem;
-  width: 23rem;
-  height: 35rem;
+  width: 27rem;
+  min-height: 37rem;
   padding: 0 1rem;
 `;
 

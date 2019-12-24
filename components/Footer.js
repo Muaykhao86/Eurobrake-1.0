@@ -51,24 +51,11 @@ const FooterBar = styled.div`
        
 
     }
-    .ftr_container-5{
-        padding: 1rem;
-        min-width: 40rem;
-        border: 1px solid white;
-        
-        /* background-color: limegreen; */
-        min-height: 20rem;
-        
-        display: flex;
-        flex-flow: column;
-    }
     .ftr_sponsor-box{
         background-color: white;
         padding: .5rem;
-        max-width: 40rem;
+        max-width: 42rem;
         border: 1px solid white;
-        
-        /* background-color: hotpink; */
         height: 25rem;
         
         display: flex;
@@ -182,5 +169,3 @@ function Footer() {
 }
 
 export default Footer;
-
-              {/* <div className="ftr_container-5">Map Box</div> */}

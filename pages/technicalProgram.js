@@ -5,8 +5,8 @@ import {StyledPage, IframeContent} from '../components/styles/PageStyles';
 
 export default () => (
     <>
-     <HeroSection t="25rem">
-                Book Now
+     <HeroSection t="30rem" max="55%">
+                Technical Program
     </HeroSection>
 <StyledPage>
     <h1>Book your tickets now</h1>

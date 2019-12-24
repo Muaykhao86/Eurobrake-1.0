@@ -151,7 +151,7 @@ class Edit extends Component {
     render() {
         return (
             <>
-                <HeroSection banner={FilledBanner}>
+                <HeroSection banner={FilledBanner} t="30rem" max="55%">
                     Edit Your Abstract
             </HeroSection>
                 <StyledPage>

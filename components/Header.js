@@ -83,7 +83,9 @@ const HeaderButton = styled.button`
             </a>
             </Link>
             <Nav sticky={this.state.sticky} />
+            <Link href="/ticketPortal">
             <HeaderButton sticky={this.state.sticky}>Book now</HeaderButton>
+            </Link>
         </HeaderBar>
     
         )

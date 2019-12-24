@@ -23,8 +23,11 @@ export default class ExhibitorList extends Component {
             exhibitors: [],
             companies: [],
         }
+//  ? CHANGE OVER FOR LOCAL HOST
+
         // this.exhibitors = expo;
     }
+// ? CHANGE OVER FOR LOCAL HOST
 
     static async getInitialProps() {
         const res = await fetch('https://prelude.eurobrake.net/exhibitors');
@@ -34,13 +37,13 @@ export default class ExhibitorList extends Component {
         };
     };
 
-    componentDidMount() {
+    // componentDidMount() {
 
-        const exhibitors = this.props.exhibitors.exhibitors;
-        const company = exhibitors.map((ex, i) => ex.company);
+    //     // const exhibitors = this.props.exhibitors.exhibitors;
+    //     // const company = exhibitors.map((ex, i) => ex.company);
 
-        // this.setState({ companies: company });
-    }
+    //     // this.setState({ companies: company });
+    // }
 
     render() {
         
@@ -48,13 +51,13 @@ export default class ExhibitorList extends Component {
         const exhibitors = this.props.exhibitors.exhibitors;
         return (
             <Fragment>
-            <HeroSection  max="65%">
+            <HeroSection  max="65%" fs='9rem'>
                 EuroBrake 2020 Exhibitor Directory
             </HeroSection>
-            <StyledPage mt="10rem" max="60%">
+            <StyledPage mt="10rem" >
                 <h1>Get to know the exhibitors</h1>
                 <StyledExhibitors>
-                    {exhibitors.map((company, i) => {
+                    {this.exhibitors.map((company, i) => {
                         return (
                             <ExhibitorCard 
                             key={i} 

@@ -112,7 +112,7 @@ export default () => (
     <>
         <HeroSection
             fs="10rem"
-            t="25rem"
+            t="30rem"
             max="57%"
         >
             About EuroBrake
@@ -223,7 +223,7 @@ export default () => (
                                     Klaus Jäckel 
                                 </Typography>
                                 <Typography className="profile profile_description-subtitle">
-                                    Mercedes-Benz Trucks Daimler AG
+                                    DAIMLER TRUCK AG
                                 </Typography>
                             </div>
                         </StyledProfile>
@@ -283,7 +283,7 @@ export default () => (
                                     Ludwig Vollrath 
                                 </Typography>
                                 <Typography className="profile profile_description-subtitle">
-                                    Consultant
+                                    Formula Student Germany 
                                 </Typography>
                             </div>
                         </StyledProfile>
@@ -573,7 +573,7 @@ export default () => (
                                     Dr. Rainer Müller-Finkeldei 
                                 </Typography>
                                 <Typography className="profile profile_description-subtitle">
-                                    Daimler AG
+                                    DAIMLER TRUCK AG
                                 </Typography>
                             </div>
                         </StyledProfile>

@@ -7,7 +7,7 @@ import HeroSection from '../components/HeroSection';
 import ExpandTable from '../components/ExpandTable';
 import { Button } from '../components/Button';
 import {StyledBanner, StyledContainer} from '../components/styles/PageStyles';
-
+import {device} from '../components/Page';
 
 
 
@@ -15,7 +15,15 @@ const StyledPage = styled.div`
     display: flex;
     flex-direction: column;
     align-self: center;
-    width: ${props => props.theme.minWidth};
+     @media ${device.mobile} {
+    width: ${props => props.max || props.theme.mobileWidth}
+    }
+    @media ${device.tablet} {
+    width: ${props => props.max || props.theme.tabletWidth}
+    }
+    @media ${device.laptop} {
+    width: ${props => props.max || props.theme.minWidth};
+    }
     background-color: ${props => props.theme.white};
     margin-top: 7rem;
 

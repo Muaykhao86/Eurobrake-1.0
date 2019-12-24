@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'next/link';
 import { StyledSection } from './styles/HomeStyles';
 import { Card } from './Card';
 import { Button } from './Button';
@@ -15,7 +16,9 @@ export default function AttendeesSection() {
                 </div>
                 <Card right>
                     <h1>Who attends Eurobrake</h1>
+                    <Link href="/about">
                     <Button br="500rem">Attendees</Button>
+                    </Link>
                 </Card>
             </div>
         </StyledSection>

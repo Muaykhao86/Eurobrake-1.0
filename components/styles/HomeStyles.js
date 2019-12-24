@@ -1,4 +1,6 @@
 import styled from 'styled-components';
+import {device} from '../Page';
+
 
 export const StyledContainer = styled.div`
     display: flex;
@@ -12,7 +14,14 @@ export const StyledContainer = styled.div`
 
 
 export const StyledSection = styled.div`
-    max-width: 55%;
+    
+    
+    @media ${device.laptop} {
+    width: ${props => props.theme.laptopWidth};
+    }
+    @media ${device.laptopL} {
+    width: ${props => props.theme.minWidth};
+    }
     display: flex;
     flex-flow: column;
     justify-content: flex-start;

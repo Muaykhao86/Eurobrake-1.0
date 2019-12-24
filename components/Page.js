@@ -4,6 +4,28 @@ import Footer from './Footer';
 import Meta from './Meta';
 import styled, {ThemeProvider, createGlobalStyle} from 'styled-components';
 
+const size = {
+  mobileS: '20rem',//  320px
+  mobileM: '23rem',// 375 px
+  mobileL: '26.5rem',// 425px
+  tablet: '48rem',// 768px
+  laptop: '64rem',// 1024px
+  laptopM: '75rem', // 1200px
+  laptopL: '90rem',// 1440px
+  desktop: '160rem'// 2560px
+}
+
+export const device = {
+  mobileS: `(min-width: ${size.mobileS})`,
+  mobileM: `(min-width: ${size.mobileM})`,
+  mobileL: `(min-width: ${size.mobileL})`,
+  tablet: `(min-width: ${size.tablet})`,
+  laptop: `(min-width: ${size.laptop})`,
+  laptopM: `(min-width: ${size.laptopM})`,
+  laptopL: `(min-width: ${size.laptopL})`,
+  desktop: `(min-width: ${size.desktop})`,
+  desktopL: `(min-width: ${size.desktop})`
+};
 
 const theme = {
     black: '#000',
@@ -18,6 +40,11 @@ const theme = {
     MPLightIt: 'MyriadPro-LightIt',
     MPIt: 'MyriadPro-It',
     MPBlack: 'MyriadPro-Black',
+    heroHeightSml: '50%',
+    heroHeightBig: '100vh',
+    laptopWidth: '65%',
+    tabletWidth: '90%',
+    mobileWidth: '100%',
     minWidth: '50%',
     bs: '0 1.2rem 2.4rem rgba(0, 0, 0, .09)',
 
@@ -96,8 +123,15 @@ const GlobalStyle = createGlobalStyle`
     html{
         height: 100%;
         box-sizing:  border-box;
+        
+        
+        @media ${device.mobileS} and (-webkit-min-device-pixel-ratio: 2){
+        font-size: 60%; 
+        }
+        @media ${device.laptop}  and (-webkit-min-device-pixel-ratio: 2){
         font-size: 62.5%; 
-        /* 60% */
+        }
+        font-size: 62.5%; 
     };
     body{
         /* To set the footer at the bottom we have to leave space for it in the parent container */

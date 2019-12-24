@@ -54,12 +54,12 @@ export default class Nav extends Component {
 
                     </div>
                 </HiddenContainer>
-                <Link href="/about">
+                
                     {/* This is a link but it wont be / it will be just a label for the menu... maybe a button with the burger */}
-                    <a >
-                        Menu
-                    </a>
-                </Link>
+                    <h1 style={{alignSelf: "center"}}>
+                    Menu
+                    </h1>
+                
                 <Burger isOpen={this.state.isOpen} onClick={this.handleClick}>
                     <TopBun isOpen={this.state.isOpen} sticky={this.props.sticky} />
                 </Burger>

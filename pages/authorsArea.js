@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import Router from 'next/router';
 import fetch from 'isomorphic-unfetch';
 import styled from 'styled-components';
-import { withAuthSync, logout, login } from '../utils/auth'
 import cookies from 'next-cookies';
 import cookie from 'js-cookie';
 import Typography from '@material-ui/core/Typography';
@@ -10,6 +9,7 @@ import ExpandMoreOutlinedIcon from '@material-ui/icons/ExpandMoreOutlined';
 import PopupLogin from '../components/Popup';
 import HeroSection from '../components/HeroSection';
 import { StyledBanner, StyledContainer } from '../components/styles/PageStyles';
+import { withAuthSync, logout, login } from '../utils/auth'
 import LoginExpandTable from '../components/LoginExpandTable';
 
 
@@ -96,7 +96,7 @@ class AuthorsArea extends Component {
     render() {
         return (
             <>
-                <HeroSection banner={FilledBanner}>
+                <HeroSection banner={FilledBanner} t="30rem" max="55%">
                     AuthorsArea
             </HeroSection>
                 <StyledPage>

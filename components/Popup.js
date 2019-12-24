@@ -25,8 +25,8 @@ export default function Popup(props) {
   };
 
 
-  const handleSubmit = async () => { 
-    // event.preventDefault();
+  const handleSubmit = async (e) => { 
+    e.preventDefault();
     const file = await fileInput.current.files[0];
     await console.log({file, csrf});
     await SendFile({file, csrf});
@@ -63,7 +63,7 @@ export default function Popup(props) {
             <Button onClick={handleClose} value="cancel" color="#134381" bcolor="#134381">
               Cancel
           </Button>
-            <Button  onClick={() => handleSubmit()} color="#134381" bcolor="#134381">
+            <Button  onClick={() => handleSubmit(e)} color="#134381" bcolor="#134381">
               Submit
           </Button>
           </DialogActions>

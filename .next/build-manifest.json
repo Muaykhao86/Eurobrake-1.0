@@ -12,11 +12,7 @@
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],
-    "/authorsArea": [
-      "static/runtime/webpack.js",
-      "static/runtime/main.js"
-    ],
-    "/edit": [
+    "/exhibitors": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ]

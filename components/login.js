@@ -126,7 +126,6 @@ export default class Login extends Component {
                             </label>
                             <TextField
                             style={{color: '#134381'}}
-                            id="standard-required"
                             label="Required"
                             className="login_form-input" 
                             type="text"
@@ -141,7 +140,6 @@ export default class Login extends Component {
                                 Password:
                             </label>
                             <TextField
-                            id="standard-required"
                             label="Required"
                             className="login_form-input" 
                             type="password"

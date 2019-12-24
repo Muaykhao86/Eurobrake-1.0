@@ -4,25 +4,34 @@ import Backdrop from '@material-ui/core/Backdrop';
 import Fade from '@material-ui/core/Fade';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components'
 import { Button } from '../Button';
 import IconButton from '@material-ui/core/IconButton';
 import AddCircleOutlineIcon from '@material-ui/icons/AddCircleOutline';
 import Typography from '@material-ui/core/Typography';
 import { MailIcon, PhoneIcon, GlobeIcon, EBFloorPlan } from '../Icons';
+import {device} from '../Page';
 
 
 const StyledModal = styled.div`
+width: 100%;
+height: 100%;
 display: flex;
 flex: 1;
 flex-flow: column;
-justify-content: center;
 align-items: center;
-margin-top: 9rem;
+margin-top: 5rem;
+justify-content: stretch;
+
 .paper{
-max-width: 42rem;
-max-height: 70rem;
 padding: 2rem;
+margin: 2rem;
+
+@media ${device.tablet} {
+max-width: 50rem;
+}
+
+
 }
 .closeBtn{
   transform: rotate(45deg);
@@ -34,7 +43,7 @@ padding: 2rem;
 }
 .ModalTitle{
   font-family: ${props => props.theme.MPSemibold};
-  font-size: 3.1rem;
+  font-size: 2.1rem;
   color: ${props => props.theme.primary};
 }
  .ModalContact{
@@ -65,31 +74,44 @@ padding: 2rem;
   color: ${props => props.theme.primary};
   padding: 1rem 0 ;
  }
- .ModalMapBox{
- }
+
 `;
+const fadeIn = keyframes`
+  0% {
+    opacity: 1;
+  }
+  
+  20%{
+    opacity: .8;
+  }
+  50%{
+    opacity: .6;
+  }
+  80%{
+    opacity: .2;
+  }
+
+  100% {
+    opacity: 0;
+  }
+`
 const StyledMapBox = styled.div`
+
  min-width: 37.9rem;
   min-height: 22.9rem;
    border: 1px solid ${props => props.theme.primary};
-  /* background-color: goldenrod; */
   align-self: center;
+  overflow: hidden;
   svg{
     	.findMe{
       fill: #134381;
-      &::before{
-        content: 'look at me!';
-        position: absolute;
-        font-size: 10rem;
-        border: 2px solid black;
-        color: goldenrod;  
-        width: 2rem;   
-        top: 1.3em;
-        left: 0.6em;
-      }
+      animation: 1s ${fadeIn} ease-in-out infinite ;
+      
     }
   }
 `;
+
+
 export default function ServerModal(props) {
   const rootRef = useRef(null);
   const mapRef = useRef(null);
@@ -127,13 +149,15 @@ const selectedSvg = `#prefix__booth-${booth}`;
 
     }
   //Image handler Component
-  const addDefaultSrc = () => {
+  const addDefaultSrc = (e) => {
     e.target.src = "/images/logo.png"
     e.target.onerror = null;
     return
   }
 
+  const full = () => {
 
+  }
   
 
   return (
@@ -170,7 +194,7 @@ const selectedSvg = `#prefix__booth-${booth}`;
               >
 
                 <Grid item xs={6}>
-                  <img className="ModalLogo" src={img} alt="logo" onError={addDefaultSrc} />
+                  <img className="ModalLogo" src={img} alt="logo" onError={(e) => addDefaultSrc(e)} />
                 </Grid>
                 <Grid item xs={6} style={{ textAlign: 'end' }}>
                   <IconButton aria-label="close" onClick={handleClose} style={{ padding: '0' }}>
@@ -209,7 +233,7 @@ const selectedSvg = `#prefix__booth-${booth}`;
                 </Grid>
                 <Grid item xs={12}>
                   <StyledMapBox >
-                    <EBFloorPlan id="FP" booth={booth} open mapref={mapRef}/>
+                    <EBFloorPlan id="FP" booth={booth} open onClick={full} />
                   </StyledMapBox>
                 </Grid>
               </Grid>

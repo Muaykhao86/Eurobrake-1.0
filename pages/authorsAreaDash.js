@@ -16,11 +16,10 @@ import { withAuthSync, logout, login } from '../utils/auth'
 import HeroSection from '../components/HeroSection';
 import { Button } from '../components/Button';
 import { StyledBanner, StyledContainer } from '../components/styles/PageStyles';
-import { Abstracts } from '../components/testAuthors';
+// import { Abstracts } from '../components/testAuthors';
 import { GetForm, SendFile } from '../components/Forms';
 import Popup from '../components/Popup';
 
-const AreAbstracts = null || Abstracts ;
 
 const StyledPage = styled.div`
     display: flex;
@@ -115,6 +114,7 @@ const StyledInfoArea = styled.div`
     }}
 `;
 
+const AreAbstracts = null || Abstracts ;
 
 const FilledBanner = () => (
 
@@ -136,53 +136,6 @@ const url = {
     upload: 'https://prelude.eurobrake.net/upload',
 
 }
-// const Abstract =
-//     Abstracts.map(paper => (
-//         <StyledBox>
-//             <StyledActionArea>
-//                 <Typography gutterBottom className="action-paper">{paper.papercode}</Typography>
-//                 {paper.withdrawn ?
-//                     <Typography gutterBottom className="action-paper">WITHDRAWN</Typography>
-//                     :
-//                     <>
-//                         <Link href="/edit">
-//                             <Button
-//                                 bcolor="#134381"
-//                                 padding="0.5rem 2rem"
-//                                 background="#134381"
-//                                 br="100rem"
-//                                 style={{ margin: ".5rem 0" }}
-//                                 fontSize="1.7rem"
-//                             >
-//                                 <AssignmentIcon style={{ fontSize: '3rem', marginRight: '.5rem' }} />
-//                                 Edit Paper
-//                     </Button>
-//                         </Link>
-//                         <Button
-//                             bcolor="#134381"
-//                             background="#134381"
-//                             br="100rem"
-//                             padding="0.5rem 2rem"
-//                             style={{ margin: ".5rem 0" }}
-//                             fontSize="1.7rem"
-//                         >
-//                             <CancelIcon style={{ fontSize: '3rem', marginRight: '1rem' }} />
-//                             WITHDRAW
-//             </Button>
-//                     </>}
-//             </StyledActionArea>
-//             <StyledInfoArea>
-//                 <Typography className="paper-title">{paper.title}</Typography>
-//                 <Typography gutterBottom className="paper-type">{paper.paper_type.toUpperCase()}</Typography>
-//                 {paper.tasks && paper.tasks.map(task => {
-//                     return (<div className="paper_task-box">
-//                         {task.done === null ? <CheckCircleIcon style={{ fontSize: '2rem', color: 'green', marginRight: '1rem' }} /> : <CancelIcon style={{ fontSize: '2rem', color: 'red', marginRight: '1rem' }} />}
-//                         <Typography gutterBottom className="paper_task">{task.task}</Typography>
-//                     </div>)
-//                 })}
-//             </StyledInfoArea>
-//         </StyledBox>
-//     ));
 
 
 class AuthorsAreaDash extends Component {
@@ -216,13 +169,12 @@ class AuthorsAreaDash extends Component {
     }
 
     render() {
-        console.log(this.props)
-        const {firstname} = this.props.authorData;
+        const {firstname} = this.props.authorData.author;
         const { userLoggedIn, hasForm } = this.state;
-        console.log({ userLoggedIn, hasForm });
+        console.log({ userLoggedIn, hasForm, props });
         return (
             <>
-                <HeroSection banner={FilledBanner}>
+                <HeroSection banner={FilledBanner} t="30rem" max="55%">
                     Author's Area Dashboard
             </HeroSection>
                 <StyledPage>
@@ -274,9 +226,7 @@ class AuthorsAreaDash extends Component {
                         </div>
                         <Typography gutterBottom className="authors-title" style={{ fontSize: '3rem', borderTop: '2px solid #134381', borderBottom: '2px solid #134381' }}>Your Abstracts</Typography>
                         {AreAbstracts ?
-                            <StyledBox>
-                                <Typography gutterBottom className="authors-it" style={{ fontSize: '2rem' }}>You got some abstracts but I got some errors!</Typography>
-                            </StyledBox>
+                            Abstracts
                              :
                             <StyledBox>
                                 <Typography gutterBottom className="authors-it" style={{ fontSize: '2rem' }}>You haven't submitted any abstracts yet</Typography>
@@ -292,7 +242,6 @@ class AuthorsAreaDash extends Component {
 
     }
 }
-                            {/* <Abstract /> */}
 
 AuthorsAreaDash.getInitialProps = async ctx => {
     // We use `nextCookie` to get the cookie and pass the token to the frontend in the `props`.
