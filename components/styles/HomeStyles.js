@@ -17,20 +17,9 @@ export const StyledSection = styled.div`
     margin: 0 10rem;
     margin-top: 5rem;
     margin-bottom: 15rem; 
-        
- 
     width: ${props => props.theme.minWidth};
- 
-    @media ${device.laptop} and (-webkit-min-device-pixel-ratio: 2) {
-    width: ${props => props.theme.laptopWidth};
-    }
+
     @media ${device.laptop} {
-    width: ${props => props.theme.laptopWidth};
-    }
-    @media ${device.mobileL} and (-webkit-min-device-pixel-ratio: 2) {
-    width: ${props => props.theme.mobileWidth};
-    }
-    @media ${device.mobileL} {
     width: ${props => props.theme.mobileWidth};
     }
     h1{

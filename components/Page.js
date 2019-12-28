@@ -5,26 +5,18 @@ import Meta from './Meta';
 import styled, {ThemeProvider, createGlobalStyle} from 'styled-components';
 
 const size = {
-  mobileS: '20rem',//  320px
-  mobileM: '23rem',// 375 px
-  mobileL: '26.5rem',// 425px
+  mobile: '26.5rem',// 425px
   tablet: '48rem',// 768px
-  laptop: '64rem',// 1024px
-  laptopM: '75rem', // 1200px
-  laptopL: '90rem',// 1440px
+  laptop: '81rem',// 1300px
   desktop: '160rem'// 2560px
 }
 
 export const device = {
-  mobileS: `(max-width: ${size.mobileS})`,
-  mobileM: `(max-width: ${size.mobileM})`,
-  mobileL: `(max-width: ${size.mobileL})`,
+
+  mobile: `(max-width: ${size.mobile})`,
   tablet: `(max-width: ${size.tablet})`,
   laptop: `(max-width: ${size.laptop})`,
-  laptopM: `(max-width: ${size.laptopM})`,
-  laptopL: `(max-width: ${size.laptopL})`,
-  desktop: `(max-width: ${size.desktop})`,
-  desktopL: `(max-width: ${size.desktop})`
+  desktop: `(max-width: ${size.desktop})`
 };
 
 const theme = {
@@ -126,10 +118,6 @@ const GlobalStyle = createGlobalStyle`
         box-sizing:  border-box;
         font-size: 62.5%; 
         
-        
-        @media ${device.tablet} and (-webkit-min-device-pixel-ratio: 2){
-        font-size: 60%; 
-        }
     };
     body{
         /* To set the footer at the bottom we have to leave space for it in the parent container */

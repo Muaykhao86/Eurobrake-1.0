@@ -1233,33 +1233,20 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 const size = {
-  mobileS: '20rem',
-  //  320px
-  mobileM: '23rem',
-  // 375 px
-  mobileL: '26.5rem',
+  mobile: '26.5rem',
   // 425px
   tablet: '48rem',
   // 768px
-  laptop: '64rem',
-  // 1024px
-  laptopM: '75rem',
-  // 1200px
-  laptopL: '90rem',
-  // 1440px
+  laptop: '81rem',
+  // 1300px
   desktop: '160rem' // 2560px
 
 };
 const device = {
-  mobileS: `(max-width: ${size.mobileS})`,
-  mobileM: `(max-width: ${size.mobileM})`,
-  mobileL: `(max-width: ${size.mobileL})`,
+  mobile: `(max-width: ${size.mobile})`,
   tablet: `(max-width: ${size.tablet})`,
   laptop: `(max-width: ${size.laptop})`,
-  laptopM: `(max-width: ${size.laptopM})`,
-  laptopL: `(max-width: ${size.laptopL})`,
-  desktop: `(max-width: ${size.desktop})`,
-  desktopL: `(max-width: ${size.desktop})`
+  desktop: `(max-width: ${size.desktop})`
 };
 const theme = {
   black: '#000',
@@ -1355,10 +1342,6 @@ const GlobalStyle = styled_components__WEBPACK_IMPORTED_MODULE_4__["createGlobal
         box-sizing:  border-box;
         font-size: 62.5%; 
         
-        
-        @media ${device.tablet} and (-webkit-min-device-pixel-ratio: 2){
-        font-size: 60%; 
-        }
     };
     body{
         /* To set the footer at the bottom we have to leave space for it in the parent container */
@@ -1383,37 +1366,37 @@ class Page extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       theme: theme,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 156
+        lineNumber: 144
       },
       __self: this
     }, __jsx(GlobalStyle, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 157
+        lineNumber: 145
       },
       __self: this
     }), __jsx(StyledPage, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 158
+        lineNumber: 146
       },
       __self: this
     }, __jsx(_Meta__WEBPACK_IMPORTED_MODULE_3__["default"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 159
+        lineNumber: 147
       },
       __self: this
     }), __jsx(_Header__WEBPACK_IMPORTED_MODULE_1__["default"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 160
+        lineNumber: 148
       },
       __self: this
     }), this.props.children, __jsx(_Footer__WEBPACK_IMPORTED_MODULE_2__["default"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 162
+        lineNumber: 150
       },
       __self: this
     })));
