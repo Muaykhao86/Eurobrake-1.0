@@ -1272,7 +1272,7 @@ var _jsxFileName = "/mnt/c/Users/D.Hardiman/desktop/eurobrake/components/Page.js
 var __jsx = react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement;
 
 function _templateObject() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_5__["default"])(["\n    @font-face {\n    font-family: 'MyriadPro-Regular';\n    src: url('/fonts/MyriadPro-Regular.otf');\n    font-weight: normal;\n    font-display: auto;\n    font-style: normal;\n    };\n    @font-face {\n    font-family: 'MyriadPro-Bold';\n    src: url('/fonts/MyriadPro-Bold.otf');\n    font-weight: bold;\n    font-display: auto;\n    font-style: normal;\n    };\n    @font-face {\n    font-family: 'MyriadPro-BoldIt';\n    src: url('/fonts/MyriadPro-BoldIt.otf');\n    font-weight: bold;\n    font-display: auto;\n    font-style: normal;\n    };\n    @font-face {\n    font-family: 'MyriadPro-Semibold';\n    src: url('/fonts/MyriadPro-Semibold.otf');\n    font-weight: 600;\n    font-display: auto;\n    font-style: normal;\n    };\n    @font-face {\n    font-family: 'MyriadPro-Light';\n    src: url('/fonts/MyriadPro-Light.otf');\n    font-weight: 300;\n    font-display: auto;\n    font-style: normal;\n    };\n    @font-face {\n    font-family: 'MyriadPro-LightIt';\n    src: url('/fonts/MyriadPro-LightIt.otf');\n    font-weight: lighter;\n    font-display: auto;\n    font-style: normal;\n    };\n    @font-face {\n    font-family: 'MyriadPro-It';\n    src: url('/fonts/MyriadPro-It.otf');\n    font-display: auto;\n    font-style: normal;\n    };\n    @font-face {\n    font-family: 'MyriadPro-Black';\n    src: url('/fonts/MyriadPro-Black.otf');\n    font-weight: 300;\n    font-display: auto;\n    font-style: normal;\n    };\n    *,\n    *::before,\n    *::after{\n        margin: 0;\n        padding: 0;\n        box-sizing: inherit;\n    };\n    html{\n        height: 100%;\n        box-sizing:  border-box;\n        \n        \n        @media ", " and (-webkit-min-device-pixel-ratio: 2){\n        font-size: 60%; \n        }\n        @media ", "  and (-webkit-min-device-pixel-ratio: 2){\n        font-size: 62.5%; \n        }\n        font-size: 62.5%; \n    };\n    body{\n        /* To set the footer at the bottom we have to leave space for it in the parent container */\n        position: relative;\n        min-height: 100%;\n        padding-bottom: 40rem; /* ! FOOTER PADDING , HAS BEEN KNOW TO PUSH PAGE UP\n        font-family: ", ";\n        color: black;\n        line-height: 1.6;\n        /* 1.2 */\n    }\n    \n    a{\n        text-decoration: none;\n        color: black;\n    }\n    ;\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_5__["default"])(["\n    @font-face {\n    font-family: 'MyriadPro-Regular';\n    src: url('/fonts/MyriadPro-Regular.otf');\n    font-weight: normal;\n    font-display: auto;\n    font-style: normal;\n    };\n    @font-face {\n    font-family: 'MyriadPro-Bold';\n    src: url('/fonts/MyriadPro-Bold.otf');\n    font-weight: bold;\n    font-display: auto;\n    font-style: normal;\n    };\n    @font-face {\n    font-family: 'MyriadPro-BoldIt';\n    src: url('/fonts/MyriadPro-BoldIt.otf');\n    font-weight: bold;\n    font-display: auto;\n    font-style: normal;\n    };\n    @font-face {\n    font-family: 'MyriadPro-Semibold';\n    src: url('/fonts/MyriadPro-Semibold.otf');\n    font-weight: 600;\n    font-display: auto;\n    font-style: normal;\n    };\n    @font-face {\n    font-family: 'MyriadPro-Light';\n    src: url('/fonts/MyriadPro-Light.otf');\n    font-weight: 300;\n    font-display: auto;\n    font-style: normal;\n    };\n    @font-face {\n    font-family: 'MyriadPro-LightIt';\n    src: url('/fonts/MyriadPro-LightIt.otf');\n    font-weight: lighter;\n    font-display: auto;\n    font-style: normal;\n    };\n    @font-face {\n    font-family: 'MyriadPro-It';\n    src: url('/fonts/MyriadPro-It.otf');\n    font-display: auto;\n    font-style: normal;\n    };\n    @font-face {\n    font-family: 'MyriadPro-Black';\n    src: url('/fonts/MyriadPro-Black.otf');\n    font-weight: 300;\n    font-display: auto;\n    font-style: normal;\n    };\n    *,\n    *::before,\n    *::after{\n        margin: 0;\n        padding: 0;\n        box-sizing: inherit;\n    };\n    html{\n        height: 100%;\n        box-sizing:  border-box;\n        font-size: 62.5%; \n        \n        \n        @media ", " and (-webkit-min-device-pixel-ratio: 2){\n        font-size: 60%; \n        }\n    };\n    body{\n        /* To set the footer at the bottom we have to leave space for it in the parent container */\n        position: relative;\n        min-height: 100%;\n        padding-bottom: 40rem; /* ! FOOTER PADDING , HAS BEEN KNOW TO PUSH PAGE UP\n        font-family: ", ";\n        color: black;\n        line-height: 1.6;\n        /* 1.2 */\n    }\n    \n    a{\n        text-decoration: none;\n        color: black;\n    }\n    ;\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -1305,15 +1305,15 @@ var size = {
 
 };
 var device = {
-  mobileS: "(min-width: ".concat(size.mobileS, ")"),
-  mobileM: "(min-width: ".concat(size.mobileM, ")"),
-  mobileL: "(min-width: ".concat(size.mobileL, ")"),
-  tablet: "(min-width: ".concat(size.tablet, ")"),
-  laptop: "(min-width: ".concat(size.laptop, ")"),
-  laptopM: "(min-width: ".concat(size.laptopM, ")"),
-  laptopL: "(min-width: ".concat(size.laptopL, ")"),
-  desktop: "(min-width: ".concat(size.desktop, ")"),
-  desktopL: "(min-width: ".concat(size.desktop, ")")
+  mobileS: "(max-width: ".concat(size.mobileS, ")"),
+  mobileM: "(max-width: ".concat(size.mobileM, ")"),
+  mobileL: "(max-width: ".concat(size.mobileL, ")"),
+  tablet: "(max-width: ".concat(size.tablet, ")"),
+  laptop: "(max-width: ".concat(size.laptop, ")"),
+  laptopM: "(max-width: ".concat(size.laptopM, ")"),
+  laptopL: "(max-width: ".concat(size.laptopL, ")"),
+  desktop: "(max-width: ".concat(size.desktop, ")"),
+  desktopL: "(max-width: ".concat(size.desktop, ")")
 };
 var theme = {
   black: '#000',
@@ -1332,8 +1332,8 @@ var theme = {
   heroHeightSml: '50%',
   heroHeightBig: '100vh',
   laptopWidth: '65%',
+  mobileWidth: '80%',
   tabletWidth: '90%',
-  mobileWidth: '100%',
   minWidth: '50%',
   bs: '0 1.2rem 2.4rem rgba(0, 0, 0, .09)'
 };
@@ -1341,7 +1341,7 @@ var StyledPage = styled_components__WEBPACK_IMPORTED_MODULE_10__["default"].div.
   displayName: "Page__StyledPage",
   componentId: "sc-1cyutnt-0"
 })(["display:flex;flex-flow:column;justify-content:space-between;background:white;"]);
-var GlobalStyle = Object(styled_components__WEBPACK_IMPORTED_MODULE_10__["createGlobalStyle"])(_templateObject(), device.mobileS, device.laptop, function (props) {
+var GlobalStyle = Object(styled_components__WEBPACK_IMPORTED_MODULE_10__["createGlobalStyle"])(_templateObject(), device.tablet, function (props) {
   return props.theme.MPRegular;
 });
 
@@ -1363,37 +1363,37 @@ function (_Component) {
         theme: theme,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 159
+          lineNumber: 156
         },
         __self: this
       }, __jsx(GlobalStyle, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 160
+          lineNumber: 157
         },
         __self: this
       }), __jsx(StyledPage, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 161
+          lineNumber: 158
         },
         __self: this
       }, __jsx(_Meta__WEBPACK_IMPORTED_MODULE_9__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 162
+          lineNumber: 159
         },
         __self: this
       }), __jsx(_Header__WEBPACK_IMPORTED_MODULE_7__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 163
+          lineNumber: 160
         },
         __self: this
       }), this.props.children, __jsx(_Footer__WEBPACK_IMPORTED_MODULE_8__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 165
+          lineNumber: 162
         },
         __self: this
       })));

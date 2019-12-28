@@ -1251,15 +1251,15 @@ const size = {
 
 };
 const device = {
-  mobileS: `(min-width: ${size.mobileS})`,
-  mobileM: `(min-width: ${size.mobileM})`,
-  mobileL: `(min-width: ${size.mobileL})`,
-  tablet: `(min-width: ${size.tablet})`,
-  laptop: `(min-width: ${size.laptop})`,
-  laptopM: `(min-width: ${size.laptopM})`,
-  laptopL: `(min-width: ${size.laptopL})`,
-  desktop: `(min-width: ${size.desktop})`,
-  desktopL: `(min-width: ${size.desktop})`
+  mobileS: `(max-width: ${size.mobileS})`,
+  mobileM: `(max-width: ${size.mobileM})`,
+  mobileL: `(max-width: ${size.mobileL})`,
+  tablet: `(max-width: ${size.tablet})`,
+  laptop: `(max-width: ${size.laptop})`,
+  laptopM: `(max-width: ${size.laptopM})`,
+  laptopL: `(max-width: ${size.laptopL})`,
+  desktop: `(max-width: ${size.desktop})`,
+  desktopL: `(max-width: ${size.desktop})`
 };
 const theme = {
   black: '#000',
@@ -1278,8 +1278,8 @@ const theme = {
   heroHeightSml: '50%',
   heroHeightBig: '100vh',
   laptopWidth: '65%',
+  mobileWidth: '80%',
   tabletWidth: '90%',
-  mobileWidth: '100%',
   minWidth: '50%',
   bs: '0 1.2rem 2.4rem rgba(0, 0, 0, .09)'
 };
@@ -1353,15 +1353,12 @@ const GlobalStyle = styled_components__WEBPACK_IMPORTED_MODULE_4__["createGlobal
     html{
         height: 100%;
         box-sizing:  border-box;
+        font-size: 62.5%; 
         
         
-        @media ${device.mobileS} and (-webkit-min-device-pixel-ratio: 2){
+        @media ${device.tablet} and (-webkit-min-device-pixel-ratio: 2){
         font-size: 60%; 
         }
-        @media ${device.laptop}  and (-webkit-min-device-pixel-ratio: 2){
-        font-size: 62.5%; 
-        }
-        font-size: 62.5%; 
     };
     body{
         /* To set the footer at the bottom we have to leave space for it in the parent container */
@@ -1386,37 +1383,37 @@ class Page extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       theme: theme,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 159
+        lineNumber: 156
       },
       __self: this
     }, __jsx(GlobalStyle, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 160
+        lineNumber: 157
       },
       __self: this
     }), __jsx(StyledPage, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 161
+        lineNumber: 158
       },
       __self: this
     }, __jsx(_Meta__WEBPACK_IMPORTED_MODULE_3__["default"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 162
+        lineNumber: 159
       },
       __self: this
     }), __jsx(_Header__WEBPACK_IMPORTED_MODULE_1__["default"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 163
+        lineNumber: 160
       },
       __self: this
     }), this.props.children, __jsx(_Footer__WEBPACK_IMPORTED_MODULE_2__["default"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 165
+        lineNumber: 162
       },
       __self: this
     })));

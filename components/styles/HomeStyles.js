@@ -27,10 +27,10 @@ export const StyledSection = styled.div`
     @media ${device.laptop} {
     width: ${props => props.theme.laptopWidth};
     }
-    @media ${device.mobileS} and (-webkit-min-device-pixel-ratio: 2) {
+    @media ${device.mobileL} and (-webkit-min-device-pixel-ratio: 2) {
     width: ${props => props.theme.mobileWidth};
     }
-    @media ${device.mobileS} {
+    @media ${device.mobileL} {
     width: ${props => props.theme.mobileWidth};
     }
     h1{
