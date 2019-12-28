@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import {device} from '../Page';
+import { device } from '../Page';
 
 
 export const StyledContainer = styled.div`
@@ -19,12 +19,27 @@ export const StyledSection = styled.div`
     margin-bottom: 15rem; 
     width: ${props => props.theme.minWidth};
 
+
     @media ${device.laptop} and (-webkit-min-device-pixel-ratio: 2){
     width: ${props => props.theme.mobileWidth};
     }
     @media ${device.laptop} {
     width: ${props => props.theme.mobileWidth};
     }
+
+    @media only screen and (max-width:48rem){
+    width: ${props => props.theme.mobileWidth};
+    
+    
+    }
+    @media only screen 
+  and (min-device-width: 175px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2) { 
+    width: ${props => props.theme.mobileWidth};
+       
+}
+
     h1{
         font-family: ${props => props.theme.MPSemibold};
         font-size: 4.4rem;
