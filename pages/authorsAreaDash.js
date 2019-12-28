@@ -146,7 +146,7 @@ papers.map((paper, i) => (
                 padding="0.5rem 2rem"
                 style={{ margin: ".5rem 0" }}
                 fontSize="1.7rem"
-                onClick={GetForm(`https://prelude.eurobrake.net/edit/${paper.papercode}`)}
+                onClick={() => GetForm(`https://prelude.eurobrake.net/edit/${paper.papercode}`)}
             >
                 <CreateIcon style={{ fontSize: '3rem', marginRight: '1rem' }} />
                 EDIT PAPER

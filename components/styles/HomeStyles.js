@@ -11,20 +11,24 @@ export const StyledContainer = styled.div`
 
 
 export const StyledSection = styled.div`
-    
-    
-    @media ${device.laptop} {
-    width: ${props => props.theme.laptopWidth};
-    }
-    @media ${device.laptopL} {
     width: ${props => props.theme.minWidth};
-    }
     display: flex;
     flex-flow: column;
     justify-content: flex-start;
     margin: 0 10rem;
     margin-top: 5rem;
     margin-bottom: 15rem; 
+        
+    @media ${device.laptop} and (-webkit-min-device-pixel-ratio: 2) {
+    width: ${props => props.theme.laptopWidth};
+    }
+    @media ${device.laptop} {
+    width: ${props => props.theme.laptopWidth};
+    }
+    @media ${device.laptopL}  {
+    width: ${props => props.theme.minWidth};
+    }
+    
 
     h1{
         font-family: ${props => props.theme.MPSemibold};
