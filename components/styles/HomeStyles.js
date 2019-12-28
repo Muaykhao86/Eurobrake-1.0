@@ -19,6 +19,9 @@ export const StyledSection = styled.div`
     margin-bottom: 15rem; 
     width: ${props => props.theme.minWidth};
 
+    @media ${device.laptop} and (-webkit-min-device-pixel-ratio: 2){
+    width: ${props => props.theme.mobileWidth};
+    }
     @media ${device.laptop} {
     width: ${props => props.theme.mobileWidth};
     }
