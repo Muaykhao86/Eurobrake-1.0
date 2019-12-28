@@ -137,46 +137,46 @@ const url = {
 }
 
 const Abstract = ({papers}) => (
-papers.map((paper, i) => {
+papers.map((paper, i) => { console.log(paper[i])
 
-    <StyledBox>
-        <StyledActionArea>
-            <Typography gutterBottom className="action-paper">{paper[i].papercode}</Typography>
-            <Button
-                bcolor="#134381"
-                background="#134381"
-                br="100rem"
-                padding="0.5rem 2rem"
-                style={{ margin: ".5rem 0" }}
-                fontSize="1.7rem"
-                onClick={GetForm(url.edit)}
-            >
-                <CreateIcon style={{ fontSize: '3rem', marginRight: '1rem' }} />
-                EDIT PAPER TEST
-            </Button>
-            <Button
-                bcolor="#134381"
-                background="#134381"
-                br="100rem"
-                padding="0.5rem 2rem"
-                style={{ margin: ".5rem 0" }}
-                fontSize="1.7rem"
-            >
-                <CancelIcon style={{ fontSize: '3rem', marginRight: '1rem' }} />
-                WITHDRAW
-            </Button>
-        </StyledActionArea>
-        <StyledInfoArea>
-            <Typography  className="paper-title">{paper[i].title}</Typography>
-            <Typography gutterBottom className="paper-type">{paper[i].paper_type.toUpperCase()}</Typography>
-           {paper[i].tasks && paper[i].tasks.map(task => {
-                  return ( <div className="paper_task-box">
-                    {task.done === null ? <CheckCircleIcon style={{fontSize: '2rem', color: 'green', marginRight: '1rem'}}/> : <CancelIcon style={{fontSize: '2rem',color: 'red',  marginRight: '1rem'}}/>}
-                    <Typography gutterBottom className="paper_task">{task.task}</Typography>
-                    </div> )
-                })}
-        </StyledInfoArea>
-    </StyledBox>
+    // <StyledBox>
+    //     <StyledActionArea>
+    //         <Typography gutterBottom className="action-paper">{paper[i].papercode}</Typography>
+    //         <Button
+    //             bcolor="#134381"
+    //             background="#134381"
+    //             br="100rem"
+    //             padding="0.5rem 2rem"
+    //             style={{ margin: ".5rem 0" }}
+    //             fontSize="1.7rem"
+    //             onClick={GetForm(url.edit)}
+    //         >
+    //             <CreateIcon style={{ fontSize: '3rem', marginRight: '1rem' }} />
+    //             EDIT PAPER TEST
+    //         </Button>
+    //         <Button
+    //             bcolor="#134381"
+    //             background="#134381"
+    //             br="100rem"
+    //             padding="0.5rem 2rem"
+    //             style={{ margin: ".5rem 0" }}
+    //             fontSize="1.7rem"
+    //         >
+    //             <CancelIcon style={{ fontSize: '3rem', marginRight: '1rem' }} />
+    //             WITHDRAW
+    //         </Button>
+    //     </StyledActionArea>
+    //     <StyledInfoArea>
+    //         <Typography  className="paper-title">{paper[i].title}</Typography>
+    //         <Typography gutterBottom className="paper-type">{paper[i].paper_type.toUpperCase()}</Typography>
+    //        {paper[i].tasks && paper[i].tasks.map(task => {
+    //               return ( <div className="paper_task-box">
+    //                 {task.done === null ? <CheckCircleIcon style={{fontSize: '2rem', color: 'green', marginRight: '1rem'}}/> : <CancelIcon style={{fontSize: '2rem',color: 'red',  marginRight: '1rem'}}/>}
+    //                 <Typography gutterBottom className="paper_task">{task.task}</Typography>
+    //                 </div> )
+    //             })}
+    //     </StyledInfoArea>
+    // </StyledBox>
 })
 )
 

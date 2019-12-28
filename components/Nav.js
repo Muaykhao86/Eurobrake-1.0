@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import Link from 'next/link';
+import { Typography } from '@material-ui/core';
 import { NavStyles, Burger, TopBun, HiddenNavBG, HiddenContainer } from './styles/NavStyles';
+import {Button} from './Button';
 
 
 
@@ -23,7 +25,7 @@ export default class Nav extends Component {
                 <HiddenNavBG isOpen={this.state.isOpen} />
                 <HiddenContainer isOpen={this.state.isOpen}>
                     <div className="nav_box-1">
-                        <h1>Main</h1>
+                        <Typography>Main</Typography>
                         <Link href="/"><a onClick={this.handleClick} >Home</a></Link>
                         <Link href="/about"><a onClick={this.handleClick} >About</a></Link>
                         <Link href="/authorsArea"><a onClick={this.handleClick}>Authors Area</a></Link>
@@ -33,18 +35,20 @@ export default class Nav extends Component {
                         <Link href="/ticketPortal"><a onClick={this.handleClick}>Ticket Portal</a></Link>
                     </div>
                     <div className="nav_box-2">
-                        <h1>Quick Links</h1>
+                        <Typography>Quick Links</Typography>
                         <Link href="/welcome"><a onClick={this.handleClick}>Welcome to Barcelona</a></Link>
-                        {/* <Link href="/login"><a onClick={this.handleClick}>Login</a></Link> */}
                         <Link href="/exhibitors"><a onClick={this.handleClick}>Exhibitors List</a></Link>
                         <Link href="/exhibitorsRegistration"><a onClick={this.handleClick}>Exhibitors Registration</a></Link>
                         <Link href="/authorsAreaInstructions"><a onClick={this.handleClick}>Authors Area Instructions & Templates</a></Link>
                         <Link href=""><a >Technical Program</a></Link>
                     </div>
                     <div className="nav_box-3">
-                        <div className="nav_box-4">
+                        <Link href="/ticketPortal">
+                        <Button>
                             BOOK NOW
-                        </div>
+                        </Button>
+                        </Link>
+                        
                         <div className="nav_box-5">
                             IMPORTANT DATES
                         </div>
