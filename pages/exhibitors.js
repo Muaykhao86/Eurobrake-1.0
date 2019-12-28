@@ -49,6 +49,7 @@ export default class ExhibitorList extends Component {
         
         
         const exhibitors = this.props.exhibitors.exhibitors;
+        console.log(this.props)
         return (
             <Fragment>
             <HeroSection  max="65%" fs='9rem'>

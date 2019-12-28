@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from 'next/link';
+import Bounce from 'react-reveal/Bounce';
 import { StyledSection } from './styles/HomeStyles';
 import { Card } from './Card';
 import { Button } from './Button';
@@ -14,12 +15,15 @@ export default function AuthorSection() {
                 <div className="mediaBox">
                     <img src="/images/pic1.png" alt="EuroBrake Greating" style={{ width: '100%', height: '100%' }} />
                 </div>
+                <Bounce left>
+
                 <Card left>
                     <h1>Access the Authors Area</h1>
                     <Link href="/authorsArea">
                     <Button br="500rem">Authors Area</Button>
                     </Link>
                 </Card>
+                </Bounce>
             </div>
         </StyledSection>
     )

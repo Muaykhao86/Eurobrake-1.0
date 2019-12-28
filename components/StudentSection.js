@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import Bounce from 'react-reveal/Bounce';
 import { StyledSection } from './styles/HomeStyles';
 import { Card } from './Card';
 import { Button } from './Button';
@@ -15,12 +16,14 @@ export default function StudentSection() {
                 <div className="mediaBox">
                     <img src="/images/pic2.png" alt="EuroBrake Greating" style={{ width: '100%', height: '100%' }} />
                 </div>
+                <Bounce right>
                 <Card right>
                     <h1>Learn more about ESOP</h1>
                     <Link href="/studentArea">
                     <Button br="500rem">ESOP</Button>
                     </Link>
                 </Card>
+                </Bounce>
             </div>
         </StyledSection>
     )

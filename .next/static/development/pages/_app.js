@@ -657,12 +657,18 @@ var HeaderLogo = styled_components__WEBPACK_IMPORTED_MODULE_9__["default"].img.a
 var HeaderButton = styled_components__WEBPACK_IMPORTED_MODULE_9__["default"].button.withConfig({
   displayName: "Header__HeaderButton",
   componentId: "zfe6h7-2"
-})(["font-size:1.5rem;font-family:", ";margin-left:2rem;text-transform:uppercase;align-self:flex-end;min-width:16rem;min-height:100%;background-color:", ";border:none;color:", ";cursor:pointer;outline:none;"], function (props) {
+})(["font-size:1.5rem;font-family:", ";margin-left:2rem;text-transform:uppercase;align-self:flex-end;min-width:16rem;min-height:100%;background-color:", ";border:none;color:", ";cursor:pointer;outline:none;&:hover{background-color:", ";color:", ";border:2px solid ", ";box-shadow:(0,0,0,0.5);font-size:2.5rem;}"], function (props) {
   return props.theme.MPBold;
 }, function (props) {
   return props.sticky ? props.theme.secondary : 'transparent';
 }, function (props) {
   return props.theme.white;
+}, function (props) {
+  return props.sticky ? props.theme.primary : props.theme.secondary;
+}, function (props) {
+  return props.sticky ? props.theme.secondary : props.theme.primary;
+}, function (props) {
+  return props.sticky ? props.theme.secondary : 'transparent';
 });
 
 var Header =
@@ -718,48 +724,48 @@ function (_Component) {
         ref: this.myRef,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 80
+          lineNumber: 91
         },
         __self: this
       }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_8___default.a, {
         href: "/",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 81
+          lineNumber: 92
         },
         __self: this
       }, __jsx("a", {
         className: "logo",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 81
+          lineNumber: 92
         },
         __self: this
       }, __jsx(HeaderLogo, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 82
+          lineNumber: 93
         },
         __self: this
       }))), __jsx(_Nav__WEBPACK_IMPORTED_MODULE_10__["default"], {
         sticky: this.state.sticky,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 85
+          lineNumber: 96
         },
         __self: this
       }), __jsx(next_link__WEBPACK_IMPORTED_MODULE_8___default.a, {
         href: "/ticketPortal",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 86
+          lineNumber: 97
         },
         __self: this
       }, __jsx(HeaderButton, {
         sticky: this.state.sticky,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 87
+          lineNumber: 98
         },
         __self: this
       }, "Book now")));
@@ -1257,6 +1263,7 @@ var theme = {
   black: '#000',
   white: '#FFF',
   primary: '#134381',
+  primary2: '#D2E6FF',
   secondary: '#F9B721',
   MPRegular: 'MyriadPro-Regular',
   MPBold: 'MyriadPro-Bold',
@@ -1300,37 +1307,37 @@ function (_Component) {
         theme: theme,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 158
+          lineNumber: 159
         },
         __self: this
       }, __jsx(GlobalStyle, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 159
+          lineNumber: 160
         },
         __self: this
       }), __jsx(StyledPage, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 160
+          lineNumber: 161
         },
         __self: this
       }, __jsx(_Meta__WEBPACK_IMPORTED_MODULE_9__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 161
+          lineNumber: 162
         },
         __self: this
       }), __jsx(_Header__WEBPACK_IMPORTED_MODULE_7__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 162
+          lineNumber: 163
         },
         __self: this
       }), this.props.children, __jsx(_Footer__WEBPACK_IMPORTED_MODULE_8__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 164
+          lineNumber: 165
         },
         __self: this
       })));

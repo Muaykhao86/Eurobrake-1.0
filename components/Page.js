@@ -31,6 +31,7 @@ const theme = {
     black: '#000',
     white: '#FFF',
     primary: '#134381',
+    primary2: '#D2E6FF',
     secondary: '#F9B721',
     MPRegular: 'MyriadPro-Regular',
     MPBold: 'MyriadPro-Bold',

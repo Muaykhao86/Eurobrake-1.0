@@ -33,9 +33,9 @@ export const Button = styled.a`
 }
 &:hover{
     box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.5);
+    transform: translateY(-.3rem);
     color: #FFF;
     background-color: #12377D;
-    transform: translateY(-.3rem);
 }
 &::after{
     transform: scalex(1.4) scaleY(1.6);

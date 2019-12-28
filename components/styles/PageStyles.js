@@ -7,6 +7,10 @@ export const StyledPage = styled.div`
     flex-flow: column;
     align-self: center;
     margin-top: ${props => props.mt || '5rem'};
+    @media ${device.mobile} and (-webkit-min-device-pixel-ratio: 2) {
+    width: ${props => props.max || props.theme.mobileWidth}
+    }
+
     @media ${device.mobile} {
     width: ${props => props.max || props.theme.mobileWidth}
     }

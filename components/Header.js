@@ -44,6 +44,17 @@ const HeaderButton = styled.button`
     props.theme.primary : props.theme.white}; */
     cursor: pointer;
     outline: none;
+
+    &:hover{
+        background-color: ${props => props.sticky ?
+        props.theme.primary : props.theme.secondary};
+        color: ${props => props.sticky ?
+        props.theme.secondary : props.theme.primary};
+        border: 2px solid ${props => props.sticky ?
+        props.theme.secondary : 'transparent'};
+        box-shadow: (0, 0, 0, 0.5);
+        font-size: 2.5rem;
+    }
     `;
 
  class Header extends Component {
