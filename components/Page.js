@@ -44,6 +44,7 @@ const theme = {
     heroHeightSml: '50%',
     heroHeightBig: '100vh',
     laptopWidth: '65%',
+    mobileWidth: '80%',
     tabletWidth: '90%',
     mobileWidth: '100%',
     minWidth: '50%',
