@@ -1,109 +1,28 @@
 {
-  "devFiles": [],
+  "devFiles": [
+    "static/development/dll/dll_90e8ea1802b868f0c448.js",
+    "static/development/dll/dll_90e8ea1802b868f0c448.js.map"
+  ],
   "pages": {
     "/": [
-      "static/runtime/webpack-4b444dab214c6491079c.js",
-      "static/chunks/commons.fae76dbedf7873ec96cc.js",
-      "static/css/styles.11ba6a81.chunk.css",
-      "static/chunks/styles.8cc2def4a6466c62d0e4.js",
-      "static/runtime/main-1d51c7a942fdaec2dc4a.js"
+      "static/runtime/webpack.js",
+      "static/css/styles.chunk.css",
+      "static/chunks/styles.js",
+      "static/runtime/main.js"
     ],
     "/_app": [
-      "static/runtime/webpack-4b444dab214c6491079c.js",
-      "static/chunks/commons.fae76dbedf7873ec96cc.js",
-      "static/runtime/main-1d51c7a942fdaec2dc4a.js"
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
     ],
     "/_error": [
-      "static/runtime/webpack-4b444dab214c6491079c.js",
-      "static/chunks/commons.fae76dbedf7873ec96cc.js",
-      "static/runtime/main-1d51c7a942fdaec2dc4a.js"
-    ],
-    "/about": [
-      "static/runtime/webpack-4b444dab214c6491079c.js",
-      "static/chunks/commons.fae76dbedf7873ec96cc.js",
-      "static/runtime/main-1d51c7a942fdaec2dc4a.js"
-    ],
-    "/authorsArea": [
-      "static/runtime/webpack-4b444dab214c6491079c.js",
-      "static/chunks/commons.fae76dbedf7873ec96cc.js",
-      "static/runtime/main-1d51c7a942fdaec2dc4a.js"
-    ],
-    "/authorsAreaDash": [
-      "static/runtime/webpack-4b444dab214c6491079c.js",
-      "static/chunks/commons.fae76dbedf7873ec96cc.js",
-      "static/runtime/main-1d51c7a942fdaec2dc4a.js"
-    ],
-    "/authorsAreaInstructions": [
-      "static/runtime/webpack-4b444dab214c6491079c.js",
-      "static/chunks/commons.fae76dbedf7873ec96cc.js",
-      "static/runtime/main-1d51c7a942fdaec2dc4a.js"
-    ],
-    "/disclaimer": [
-      "static/runtime/webpack-4b444dab214c6491079c.js",
-      "static/chunks/commons.fae76dbedf7873ec96cc.js",
-      "static/runtime/main-1d51c7a942fdaec2dc4a.js"
-    ],
-    "/edit": [
-      "static/runtime/webpack-4b444dab214c6491079c.js",
-      "static/chunks/commons.fae76dbedf7873ec96cc.js",
-      "static/runtime/main-1d51c7a942fdaec2dc4a.js"
-    ],
-    "/exhibitAndSponsor": [
-      "static/runtime/webpack-4b444dab214c6491079c.js",
-      "static/chunks/commons.fae76dbedf7873ec96cc.js",
-      "static/runtime/main-1d51c7a942fdaec2dc4a.js"
-    ],
-    "/exhibitors": [
-      "static/runtime/webpack-4b444dab214c6491079c.js",
-      "static/chunks/commons.fae76dbedf7873ec96cc.js",
-      "static/runtime/main-1d51c7a942fdaec2dc4a.js"
-    ],
-    "/exhibitorsArea": [
-      "static/runtime/webpack-4b444dab214c6491079c.js",
-      "static/chunks/commons.fae76dbedf7873ec96cc.js",
-      "static/runtime/main-1d51c7a942fdaec2dc4a.js"
-    ],
-    "/exhibitorsRegistration": [
-      "static/runtime/webpack-4b444dab214c6491079c.js",
-      "static/chunks/commons.fae76dbedf7873ec96cc.js",
-      "static/runtime/main-1d51c7a942fdaec2dc4a.js"
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
     ],
     "/index": [
-      "static/runtime/webpack-4b444dab214c6491079c.js",
-      "static/chunks/commons.fae76dbedf7873ec96cc.js",
-      "static/css/styles.11ba6a81.chunk.css",
-      "static/chunks/styles.8cc2def4a6466c62d0e4.js",
-      "static/runtime/main-1d51c7a942fdaec2dc4a.js"
-    ],
-    "/privacyPolicy": [
-      "static/runtime/webpack-4b444dab214c6491079c.js",
-      "static/chunks/commons.fae76dbedf7873ec96cc.js",
-      "static/runtime/main-1d51c7a942fdaec2dc4a.js"
-    ],
-    "/studentArea": [
-      "static/runtime/webpack-4b444dab214c6491079c.js",
-      "static/chunks/commons.fae76dbedf7873ec96cc.js",
-      "static/runtime/main-1d51c7a942fdaec2dc4a.js"
-    ],
-    "/studentAreaEsopApp": [
-      "static/runtime/webpack-4b444dab214c6491079c.js",
-      "static/chunks/commons.fae76dbedf7873ec96cc.js",
-      "static/runtime/main-1d51c7a942fdaec2dc4a.js"
-    ],
-    "/technicalProgram": [
-      "static/runtime/webpack-4b444dab214c6491079c.js",
-      "static/chunks/commons.fae76dbedf7873ec96cc.js",
-      "static/runtime/main-1d51c7a942fdaec2dc4a.js"
-    ],
-    "/ticketPortal": [
-      "static/runtime/webpack-4b444dab214c6491079c.js",
-      "static/chunks/commons.fae76dbedf7873ec96cc.js",
-      "static/runtime/main-1d51c7a942fdaec2dc4a.js"
-    ],
-    "/welcome": [
-      "static/runtime/webpack-4b444dab214c6491079c.js",
-      "static/chunks/commons.fae76dbedf7873ec96cc.js",
-      "static/runtime/main-1d51c7a942fdaec2dc4a.js"
+      "static/runtime/webpack.js",
+      "static/css/styles.chunk.css",
+      "static/chunks/styles.js",
+      "static/runtime/main.js"
     ]
   }
 }

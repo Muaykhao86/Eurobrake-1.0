@@ -11,7 +11,6 @@ export const StyledContainer = styled.div`
 
 
 export const StyledSection = styled.div`
-    width: ${props => props.theme.minWidth};
     display: flex;
     flex-flow: column;
     justify-content: flex-start;
@@ -19,6 +18,12 @@ export const StyledSection = styled.div`
     margin-top: 5rem;
     margin-bottom: 15rem; 
         
+    @media ${device.mobileS} and (-webkit-min-device-pixel-ratio: 2) {
+    width: ${props => props.theme.tabletWidth};
+    }
+    @media ${device.mobileS} {
+    width: ${props => props.theme.tabletWidth};
+    }
     @media ${device.laptop} and (-webkit-min-device-pixel-ratio: 2) {
     width: ${props => props.theme.laptopWidth};
     }
