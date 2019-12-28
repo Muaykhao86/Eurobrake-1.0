@@ -16,7 +16,8 @@ import { withAuthSync, logout, login } from '../utils/auth'
 import HeroSection from '../components/HeroSection';
 import { Button } from '../components/Button';
 import { StyledBanner, StyledContainer } from '../components/styles/PageStyles';
-import { GetForm, SendFile } from '../components/Forms';
+import { GetForm } from '../components/forms/Get';
+import { SendFile } from '../components/Files';
 import Popup from '../components/Popup';
 
 
@@ -212,7 +213,8 @@ class AuthorsAreaDash extends Component {
 
     render() {
         const {firstname} = this.props.authorData.author;
-        const {papers} = this.props.authorData.papers;
+        const {papers} = this.props.authorData;
+
         return (
             <>
                 <HeroSection banner={FilledBanner} t="30rem" max="55%">
