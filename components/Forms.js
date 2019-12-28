@@ -5,8 +5,8 @@ import { AddCircle, RemoveCircle, ArrowUpwardRounded, ArrowDownwardRounded, } fr
 import * as Yup from 'yup';
 import cookie from 'js-cookie';
 import styled from 'styled-components';
-import { Button } from './Button'
-import { Typography, Input } from '@material-ui/core';
+import { Button } from './Button';
+import { Typography } from '@material-ui/core';
 
 
 export async function GetForm(url) {
@@ -241,24 +241,7 @@ const StyledForm = styled(Form)`
 // MAXTHREE CHECKBOX
 // ? Handled by yup atm => doesnt disable but brings msg and stops submit
 // ONLYONE PRESENTING
-// ? ONLY GONE AND DONE IT N I?? PROBLEM STILL WHEN SWITCHING INDEXES BUT CAN PROBABLY RESOLVE BY ON EVERY NEW AUTHOR RESET ISPRESENTINGAUTHORFIELDS
-
-// const onPresenterChange = (setFieldValue) => {
-// if (process.browser) {
-//     const radios = document.querySelectorAll('input[name*="is_presenting_author"`]');
-//     radios.forEach(a => {
-//         a.name !== presenter && a.value === 'yes' && console.log(a)
-//         Form.setFieldValue(a.name, 'no')
-//         //  a.checked  && console.log(a)
-//         console.log(a)
-//     }
-
-//     )
-// }
-// console.log(setFieldValue)
-// }
-
-// const onPresenter = () => console.log('fuck you!');
+// ? ONLY GONE AND DONE IT N I?? 
 
 
 export const AbstractForm = () => {
@@ -747,7 +730,13 @@ export const AbstractForm = () => {
                                     ))}
                             </FieldArray>
                         </div>
-                        <button type="submit" >Submit</button>
+                        <Button type="submit" 
+                         bcolor="#134381"
+                                padding="0.5rem 2rem"
+                                background="#134381"
+                                br="100rem"
+                                style={{ margin: ".5rem 0" }}
+                                fontSize="1.7rem">Submit</Button>
                         {console.log('main', values.is_presenting_author, 'second', values.secondary_authors)}
                     </StyledForm>
                 )
