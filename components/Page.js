@@ -46,7 +46,6 @@ const theme = {
     laptopWidth: '65%',
     mobileWidth: '80%',
     tabletWidth: '90%',
-    mobileWidth: '100%',
     minWidth: '50%',
     bs: '0 1.2rem 2.4rem rgba(0, 0, 0, .09)',
 
