@@ -244,8 +244,9 @@ const StyledForm = styled(Form)`
 // ? ONLY GONE AND DONE IT N I?? 
 
 
-export const AbstractForm = () => {
+export const AbstractForm = (editPaper = false) => {
     const [presenter, setPresenter] = useState('');
+    console.log({editPaper})
     useEffect(() => {
 
         console.log('presenter is changing')
@@ -254,7 +255,7 @@ export const AbstractForm = () => {
 
     return (
         <Formik
-            initialValues={emptyInitial}
+            initialValues={editPaper ? presets : emptyInitial }
             onSubmit={(values, actions) => {
                 setTimeout(() => {
                     alert(JSON.stringify(values, null, 2));
@@ -745,278 +746,6 @@ export const AbstractForm = () => {
     )
 };
 
-// ! NOT NEEDED ANYMORE !!!! £$!*er
-//  <h1>Your Abstract</h1>
-//                         <div className="login_form-field">
-//                             <label
-//                                 htmlFor="label"
-//                                 className="login_form-label">
-//                                 Submission Type:
-//                         </label>
-//                             <Field
-//                                 className="login_form-radio"
-//                                 onClick={handleChange}
-//                                 value={values.submission_type}
-//                                 style={{ color: '#134381' }}
-//                                 name="submission_type"
-//                                 component={RadioGroup}
-//                             >
-//                                 <label
-//                                     style={{ margin: '1rem' }}
-//                                     htmlFor="label"
-//                                     className="login_form-label">
-//                                     I will make a full technical paper submission
-//                             <Field
-//                                         type="radio"
-//                                         name="submission_type"
-//                                         value="full"
-//                                     />
-//                                 </label>
-//                                 <label
-//                                     style={{ margin: '1rem' }}
-//                                     htmlFor="label"
-//                                     className="login_form-label">
-//                                     I will make an oral-only submission
-//                             <Field
-//                                         type="radio"
-//                                         name="submission_type"
-//                                         value="oral"
-//                                     />
-//                                 </label>
-//                                 <label
-//                                     style={{ margin: '1rem' }}
-//                                     htmlFor="label"
-//                                     className="login_form-label">
-//                                     I will make a poster-only submission
-//                             <Field
-//                                         type="radio"
-//                                         name="submission_type"
-//                                         value="poster"
-//                                     />
-//                                 </label>
-
-
-//                             </Field>
-//                         </div>
-//                         {values.submission_type === 'full' && <div className="login_form-field">
-//                             <label
-//                                 htmlFor="label"
-//                                 className="login_form-label">
-//                                 Presentation Type:
-//                         </label>
-//                             <Field
-//                                 className="login_form-radio"
-//                                 onClick={handleChange}
-//                                 value={values.presentationtype_full}
-//                                 style={{ color: '#134381' }}
-//                                 name="presentationtype_full"
-//                                 component={RadioGroup}
-//                             >
-//                                 <label
-//                                     style={{ margin: '1rem' }}
-//                                     htmlFor="label"
-//                                     className="login_form-label">
-//                                     My full paper submission will be accompanied by an oral presentation
-//                             <Field
-//                                         type="radio"
-//                                         name="presentationtype_full"
-//                                         value="programme"
-//                                     />
-//                                 </label>
-//                                 <label
-//                                     style={{ margin: '1rem' }}
-//                                     htmlFor="label"
-//                                     className="login_form-label">
-//                                     My full paper submission will be accompanied by an poster presentation
-//                             <Field
-//                                         type="radio"
-//                                         name="presentationtype_full"
-//                                         value="poster"
-//                                     />
-//                                 </label>
-
-//                             </Field>
-//                         </div>}
-//                         <div className="login_form-field">
-//                             <label
-//                                 htmlFor="label"
-//                                 className="login_form-label">
-//                                 Paper Title:
-//                         </label>
-//                             <Field
-//                                 className="login_form-input"
-//                                 onClick={handleChange}
-//                                 value={values.papertitle}
-//                                 style={{ color: '#134381' }}
-//                                 name="papertitle"
-//                                 component={TextField}
-//                             />
-//                         </div>
-//                         <div className="login_form-field">
-//                             <label
-//                                 htmlFor="label"
-//                                 className="login_form-label">
-//                                 Which topic does your paper belong to?
-//                         </label>
-//                             <Field
-//                                 className="login_form-radio"
-//                                 onClick={handleChange}
-//                                 value={values.theme}
-//                                 style={{ color: '#134381' }}
-//                                 name="theme"
-//                                 component={RadioGroup}
-//                             >
-//                                 {themes.map(theme =>
-//                                     <label
-//                                         style={{ margin: '1rem' }}
-//                                         htmlFor="label"
-//                                         className="login_form-label">
-//                                         {theme.label}
-//                                         <Field
-//                                             type="radio"
-//                                             name="theme"
-//                                             value={theme.value}
-//                                         />
-//                                     </label>)}
-//                             </Field>
-//                         </div>
-//                         <div className="login_form-field">
-//                             <label
-//                                 htmlFor="label"
-//                                 className="login_form-label">
-//                                 Please choose up to three sub-topics for your paper:
-//                         </label>
-//                             {
-//                                 values.theme === 'BC50E220-9412-11E8-85AF-D97B4D95EBB1' ?
-//                                     subTheme1.map((sub, i) => (
-//                                         <label
-//                                             htmlFor="label"
-//                                             className="login_form-label">
-//                                             <Field key={i} id={`Box-${i}`} type="checkbox" name="subtheme" value={sub.value} />
-//                                             {sub.label}
-//                                         </label>
-//                                     )
-//                                     )
-//                                     :
-//                                     values.theme === '48C9561C-7865-11E7-AA75-C89000D85D50' ?
-//                                         subTheme2.map((sub, i) => (
-//                                             <label
-//                                                 htmlFor="label"
-//                                                 className="login_form-label">
-//                                                 <Field key={i} id={`Box-${i}`} type="checkbox" name="subtheme" value={sub.value} />
-//                                                 {sub.label}
-//                                             </label>
-//                                         )
-//                                         )
-//                                         :
-//                                         values.theme === '5D49D9C2-7865-11E7-9112-887F12D54550' ?
-//                                             subTheme3.map((sub, i) => (
-//                                                 <label
-//                                                     htmlFor="label"
-//                                                     className="login_form-label">
-//                                                     <Field key={i} id={`Box-${i}`} type="checkbox" name="subtheme" value={sub.value} />
-//                                                     {sub.label}
-//                                                 </label>
-//                                             )
-//                                             )
-//                                             :
-//                                             values.theme === '7C15061A-7865-11E7-8178-84D2A73AF9BC' ?
-//                                                 subTheme4.map((sub, i) => (
-//                                                     <label
-//                                                         htmlFor="label"
-//                                                         className="login_form-label">
-//                                                         <Field key={i} id={`Box-${i}`} type="checkbox" name="subtheme" value={sub.value} />
-//                                                         {sub.label}
-//                                                     </label>
-//                                                 )
-//                                                 )
-//                                                 :
-//                                                 values.theme === '925B5F3C-7865-11E7-8659-8C8422753A7C' ?
-//                                                     subTheme5.map((sub, i) => (
-//                                                         <label
-//                                                             htmlFor="label"
-//                                                             className="login_form-label">
-//                                                             <Field key={i} id={`Box-${i}`} type="checkbox" name="subtheme" value={sub.value} />
-//                                                             {sub.label}
-//                                                         </label>
-//                                                     )
-//                                                     )
-//                                                     :
-//                                                     values.theme === 'B6F53F20-7865-11E7-A9B1-FC3D434D4D51' ?
-//                                                         subTheme6.map((sub, i) => (
-//                                                             <label
-//                                                                 htmlFor="label"
-//                                                                 className="login_form-label">
-//                                                                 <Field key={i} id={`Box-${i}`} type="checkbox" name="subtheme" value={sub.value} />
-//                                                                 {sub.label}
-//                                                             </label>
-//                                                         )
-//                                                         )
-//                                                         : null
-//                             }
-//                             <ErrorMessage component={Typography} name="subtheme" style={{ color: 'red', fontSize: '1.5rem' }} />
-//                         </div>
-//                         <div className="login_form-field">
-//                             <label
-//                                 htmlFor="label"
-//                                 className="login_form-label">
-//                                 Abstract:
-//                         </label>
-//                             <Field
-//                                 className="login_form-input"
-//                                 onClick={handleChange}
-//                                 value={values.abstract}
-//                                 style={{ color: '#134381' }}
-//                                 name="abstract"
-//                                 component={TextField}
-//                             />
-//                         </div>
-//                         <div className="login_form-field">
-//                             <label
-//                                 htmlFor="label"
-//                                 className="login_form-label">
-//                                 Keywords:
-//                         </label>
-//                             <Field
-//                                 className="login_form-input"
-//                                 onClick={handleChange}
-//                                 value={values.keywords}
-//                                 style={{ color: '#134381' }}
-//                                 name="keywords"
-//                                 component={TextField}
-//                             />
-//                         </div>
-//                         <div className="login_form-field">
-//                             <label
-//                                 htmlFor="label"
-//                                 className="login_form-label">
-//                                 Previous Papers:
-//                         </label>
-//                             <Field
-//                                 className="login_form-input"
-//                                 onClick={handleChange}
-//                                 value={values.previouspapers}
-//                                 style={{ color: '#134381' }}
-//                                 name="previouspapers"
-//                                 component={TextField}
-//                             />
-//                         </div>
-//                         <div className="login_form-field">
-//                             <label
-//                                 htmlFor="label"
-//                                 className="login_form-label">
-//                                 Do you wish your paper to be considered for inclusion in a list of the best papers given at EuroBrake to be published in an academic journal?:
-//                         </label>
-//                             <Field
-//                                 className="login_form-input"
-//                                 onClick={handleChange}
-//                                 value={values.consider_for_journal}
-//                                 style={{ color: '#134381' }}
-//                                 name="consider_for_journal"
-//                                 component={TextField}
-//                             />
-//                         </div>
-
 const titles = [
     { value: "", label: "—" },
     { value: "Mr.", label: "Mr." },
@@ -1293,3 +1022,275 @@ const emptyInitial = {
     __csrf_token: '',
 
 }
+
+// ! NOT NEEDED ANYMORE !!!! £$!*er
+//  <h1>Your Abstract</h1>
+//                         <div className="login_form-field">
+//                             <label
+//                                 htmlFor="label"
+//                                 className="login_form-label">
+//                                 Submission Type:
+//                         </label>
+//                             <Field
+//                                 className="login_form-radio"
+//                                 onClick={handleChange}
+//                                 value={values.submission_type}
+//                                 style={{ color: '#134381' }}
+//                                 name="submission_type"
+//                                 component={RadioGroup}
+//                             >
+//                                 <label
+//                                     style={{ margin: '1rem' }}
+//                                     htmlFor="label"
+//                                     className="login_form-label">
+//                                     I will make a full technical paper submission
+//                             <Field
+//                                         type="radio"
+//                                         name="submission_type"
+//                                         value="full"
+//                                     />
+//                                 </label>
+//                                 <label
+//                                     style={{ margin: '1rem' }}
+//                                     htmlFor="label"
+//                                     className="login_form-label">
+//                                     I will make an oral-only submission
+//                             <Field
+//                                         type="radio"
+//                                         name="submission_type"
+//                                         value="oral"
+//                                     />
+//                                 </label>
+//                                 <label
+//                                     style={{ margin: '1rem' }}
+//                                     htmlFor="label"
+//                                     className="login_form-label">
+//                                     I will make a poster-only submission
+//                             <Field
+//                                         type="radio"
+//                                         name="submission_type"
+//                                         value="poster"
+//                                     />
+//                                 </label>
+
+
+//                             </Field>
+//                         </div>
+//                         {values.submission_type === 'full' && <div className="login_form-field">
+//                             <label
+//                                 htmlFor="label"
+//                                 className="login_form-label">
+//                                 Presentation Type:
+//                         </label>
+//                             <Field
+//                                 className="login_form-radio"
+//                                 onClick={handleChange}
+//                                 value={values.presentationtype_full}
+//                                 style={{ color: '#134381' }}
+//                                 name="presentationtype_full"
+//                                 component={RadioGroup}
+//                             >
+//                                 <label
+//                                     style={{ margin: '1rem' }}
+//                                     htmlFor="label"
+//                                     className="login_form-label">
+//                                     My full paper submission will be accompanied by an oral presentation
+//                             <Field
+//                                         type="radio"
+//                                         name="presentationtype_full"
+//                                         value="programme"
+//                                     />
+//                                 </label>
+//                                 <label
+//                                     style={{ margin: '1rem' }}
+//                                     htmlFor="label"
+//                                     className="login_form-label">
+//                                     My full paper submission will be accompanied by an poster presentation
+//                             <Field
+//                                         type="radio"
+//                                         name="presentationtype_full"
+//                                         value="poster"
+//                                     />
+//                                 </label>
+
+//                             </Field>
+//                         </div>}
+//                         <div className="login_form-field">
+//                             <label
+//                                 htmlFor="label"
+//                                 className="login_form-label">
+//                                 Paper Title:
+//                         </label>
+//                             <Field
+//                                 className="login_form-input"
+//                                 onClick={handleChange}
+//                                 value={values.papertitle}
+//                                 style={{ color: '#134381' }}
+//                                 name="papertitle"
+//                                 component={TextField}
+//                             />
+//                         </div>
+//                         <div className="login_form-field">
+//                             <label
+//                                 htmlFor="label"
+//                                 className="login_form-label">
+//                                 Which topic does your paper belong to?
+//                         </label>
+//                             <Field
+//                                 className="login_form-radio"
+//                                 onClick={handleChange}
+//                                 value={values.theme}
+//                                 style={{ color: '#134381' }}
+//                                 name="theme"
+//                                 component={RadioGroup}
+//                             >
+//                                 {themes.map(theme =>
+//                                     <label
+//                                         style={{ margin: '1rem' }}
+//                                         htmlFor="label"
+//                                         className="login_form-label">
+//                                         {theme.label}
+//                                         <Field
+//                                             type="radio"
+//                                             name="theme"
+//                                             value={theme.value}
+//                                         />
+//                                     </label>)}
+//                             </Field>
+//                         </div>
+//                         <div className="login_form-field">
+//                             <label
+//                                 htmlFor="label"
+//                                 className="login_form-label">
+//                                 Please choose up to three sub-topics for your paper:
+//                         </label>
+//                             {
+//                                 values.theme === 'BC50E220-9412-11E8-85AF-D97B4D95EBB1' ?
+//                                     subTheme1.map((sub, i) => (
+//                                         <label
+//                                             htmlFor="label"
+//                                             className="login_form-label">
+//                                             <Field key={i} id={`Box-${i}`} type="checkbox" name="subtheme" value={sub.value} />
+//                                             {sub.label}
+//                                         </label>
+//                                     )
+//                                     )
+//                                     :
+//                                     values.theme === '48C9561C-7865-11E7-AA75-C89000D85D50' ?
+//                                         subTheme2.map((sub, i) => (
+//                                             <label
+//                                                 htmlFor="label"
+//                                                 className="login_form-label">
+//                                                 <Field key={i} id={`Box-${i}`} type="checkbox" name="subtheme" value={sub.value} />
+//                                                 {sub.label}
+//                                             </label>
+//                                         )
+//                                         )
+//                                         :
+//                                         values.theme === '5D49D9C2-7865-11E7-9112-887F12D54550' ?
+//                                             subTheme3.map((sub, i) => (
+//                                                 <label
+//                                                     htmlFor="label"
+//                                                     className="login_form-label">
+//                                                     <Field key={i} id={`Box-${i}`} type="checkbox" name="subtheme" value={sub.value} />
+//                                                     {sub.label}
+//                                                 </label>
+//                                             )
+//                                             )
+//                                             :
+//                                             values.theme === '7C15061A-7865-11E7-8178-84D2A73AF9BC' ?
+//                                                 subTheme4.map((sub, i) => (
+//                                                     <label
+//                                                         htmlFor="label"
+//                                                         className="login_form-label">
+//                                                         <Field key={i} id={`Box-${i}`} type="checkbox" name="subtheme" value={sub.value} />
+//                                                         {sub.label}
+//                                                     </label>
+//                                                 )
+//                                                 )
+//                                                 :
+//                                                 values.theme === '925B5F3C-7865-11E7-8659-8C8422753A7C' ?
+//                                                     subTheme5.map((sub, i) => (
+//                                                         <label
+//                                                             htmlFor="label"
+//                                                             className="login_form-label">
+//                                                             <Field key={i} id={`Box-${i}`} type="checkbox" name="subtheme" value={sub.value} />
+//                                                             {sub.label}
+//                                                         </label>
+//                                                     )
+//                                                     )
+//                                                     :
+//                                                     values.theme === 'B6F53F20-7865-11E7-A9B1-FC3D434D4D51' ?
+//                                                         subTheme6.map((sub, i) => (
+//                                                             <label
+//                                                                 htmlFor="label"
+//                                                                 className="login_form-label">
+//                                                                 <Field key={i} id={`Box-${i}`} type="checkbox" name="subtheme" value={sub.value} />
+//                                                                 {sub.label}
+//                                                             </label>
+//                                                         )
+//                                                         )
+//                                                         : null
+//                             }
+//                             <ErrorMessage component={Typography} name="subtheme" style={{ color: 'red', fontSize: '1.5rem' }} />
+//                         </div>
+//                         <div className="login_form-field">
+//                             <label
+//                                 htmlFor="label"
+//                                 className="login_form-label">
+//                                 Abstract:
+//                         </label>
+//                             <Field
+//                                 className="login_form-input"
+//                                 onClick={handleChange}
+//                                 value={values.abstract}
+//                                 style={{ color: '#134381' }}
+//                                 name="abstract"
+//                                 component={TextField}
+//                             />
+//                         </div>
+//                         <div className="login_form-field">
+//                             <label
+//                                 htmlFor="label"
+//                                 className="login_form-label">
+//                                 Keywords:
+//                         </label>
+//                             <Field
+//                                 className="login_form-input"
+//                                 onClick={handleChange}
+//                                 value={values.keywords}
+//                                 style={{ color: '#134381' }}
+//                                 name="keywords"
+//                                 component={TextField}
+//                             />
+//                         </div>
+//                         <div className="login_form-field">
+//                             <label
+//                                 htmlFor="label"
+//                                 className="login_form-label">
+//                                 Previous Papers:
+//                         </label>
+//                             <Field
+//                                 className="login_form-input"
+//                                 onClick={handleChange}
+//                                 value={values.previouspapers}
+//                                 style={{ color: '#134381' }}
+//                                 name="previouspapers"
+//                                 component={TextField}
+//                             />
+//                         </div>
+//                         <div className="login_form-field">
+//                             <label
+//                                 htmlFor="label"
+//                                 className="login_form-label">
+//                                 Do you wish your paper to be considered for inclusion in a list of the best papers given at EuroBrake to be published in an academic journal?:
+//                         </label>
+//                             <Field
+//                                 className="login_form-input"
+//                                 onClick={handleChange}
+//                                 value={values.consider_for_journal}
+//                                 style={{ color: '#134381' }}
+//                                 name="consider_for_journal"
+//                                 component={TextField}
+//                             />
+//                         </div>

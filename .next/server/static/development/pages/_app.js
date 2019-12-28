@@ -93,6 +93,39 @@ module.exports =
 /************************************************************************/
 /******/ ({
 
+/***/ "./components/Button.js":
+/*!******************************!*\
+  !*** ./components/Button.js ***!
+  \******************************/
+/*! exports provided: Button */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Button", function() { return Button; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "styled-components");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_2__);
+
+
+
+const Button = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.a.withConfig({
+  displayName: "Button",
+  componentId: "sc-1t6v16c-0"
+})(["&,&:link,&:visited{display:flex;justify-content:center;align-items:center;text-align:center;text-transform:uppercase;text-decoration:none;font-size:", ";color:", ";background:", ";border:1px solid ", ";border-radius:", ";font-family:", ";letter-spacing:0;padding:", ";transition:all .2s;cursor:pointer;}&:hover{box-shadow:0 2.5rem 4rem rgba(0,0,0,0.5);transform:translateY(-.3rem);color:#FFF;background-color:#12377D;}&::after{transform:scalex(1.4) scaleY(1.6);opacity:0;}&:focus{outline:none;}&:active{outline:none;transform:translateY(-.1rem);box-shadow:0 2rem 2rem rgba(0,0,0,0.5);}"], props => props.fontSize || '2.1rem', props => props.color || props.theme.white, props => props.background || 'transparent', props => props.bcolor || props.theme.white, props => props.br || '0', props => props.theme.MPBold, props => props.padding || '1.5rem 4rem'); // const ButtonLink = React.forwardRef(({ className, href, hrefAs, children, prefetch }, ref) => (
+//     <Link href={href} as={hrefAs} prefetch ref={ref}>
+//         <a className={className}>
+//             {children}
+//         </a>
+//     </Link>
+// ));
+//TODO ADJUST BOX SHADOWS FOR DIFFERENT BUTTONS
+
+/***/ }),
+
 /***/ "./components/Footer.js":
 /*!******************************!*\
   !*** ./components/Footer.js ***!
@@ -867,10 +900,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _styles_NavStyles__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./styles/NavStyles */ "./components/styles/NavStyles.js");
+/* harmony import */ var _material_ui_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @material-ui/core */ "@material-ui/core");
+/* harmony import */ var _material_ui_core__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _styles_NavStyles__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./styles/NavStyles */ "./components/styles/NavStyles.js");
+/* harmony import */ var _Button__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Button */ "./components/Button.js");
 
 var _jsxFileName = "/mnt/c/Users/D.Hardiman/desktop/eurobrake/components/Nav.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
+
+
 
 
 
@@ -890,245 +928,251 @@ class Nav extends react__WEBPACK_IMPORTED_MODULE_1__["Component"] {
   }
 
   render() {
-    return __jsx(_styles_NavStyles__WEBPACK_IMPORTED_MODULE_3__["NavStyles"], {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 22
-      },
-      __self: this
-    }, __jsx(_styles_NavStyles__WEBPACK_IMPORTED_MODULE_3__["HiddenNavBG"], {
-      isOpen: this.state.isOpen,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 23
-      },
-      __self: this
-    }), __jsx(_styles_NavStyles__WEBPACK_IMPORTED_MODULE_3__["HiddenContainer"], {
-      isOpen: this.state.isOpen,
+    return __jsx(_styles_NavStyles__WEBPACK_IMPORTED_MODULE_4__["NavStyles"], {
       __source: {
         fileName: _jsxFileName,
         lineNumber: 24
+      },
+      __self: this
+    }, __jsx(_styles_NavStyles__WEBPACK_IMPORTED_MODULE_4__["HiddenNavBG"], {
+      isOpen: this.state.isOpen,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 25
+      },
+      __self: this
+    }), __jsx(_styles_NavStyles__WEBPACK_IMPORTED_MODULE_4__["HiddenContainer"], {
+      isOpen: this.state.isOpen,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 26
       },
       __self: this
     }, __jsx("div", {
       className: "nav_box-1",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 25
+        lineNumber: 27
       },
       __self: this
-    }, __jsx("h1", {
+    }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_3__["Typography"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 26
+        lineNumber: 28
       },
       __self: this
     }, "Main"), __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
       href: "/",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 27
+        lineNumber: 29
       },
       __self: this
     }, __jsx("a", {
       onClick: this.handleClick,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 27
+        lineNumber: 29
       },
       __self: this
     }, "Home")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
       href: "/about",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 28
+        lineNumber: 30
       },
       __self: this
     }, __jsx("a", {
       onClick: this.handleClick,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 28
+        lineNumber: 30
       },
       __self: this
     }, "About")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
       href: "/authorsArea",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 29
+        lineNumber: 31
       },
       __self: this
     }, __jsx("a", {
       onClick: this.handleClick,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 29
+        lineNumber: 31
       },
       __self: this
     }, "Authors Area")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
       href: "/exhibitorsArea",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 30
+        lineNumber: 32
       },
       __self: this
     }, __jsx("a", {
       onClick: this.handleClick,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 30
+        lineNumber: 32
       },
       __self: this
     }, "Exhibitors Area")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
       href: "/studentArea",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 31
+        lineNumber: 33
       },
       __self: this
     }, __jsx("a", {
       onClick: this.handleClick,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 31
+        lineNumber: 33
       },
       __self: this
     }, "Student Area")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
       href: "/exhibitAndSponsor",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 32
+        lineNumber: 34
       },
       __self: this
     }, __jsx("a", {
       onClick: this.handleClick,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 32
+        lineNumber: 34
       },
       __self: this
     }, "Exhibition And Sponsorship")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
       href: "/ticketPortal",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 33
+        lineNumber: 35
       },
       __self: this
     }, __jsx("a", {
       onClick: this.handleClick,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 33
+        lineNumber: 35
       },
       __self: this
     }, "Ticket Portal"))), __jsx("div", {
       className: "nav_box-2",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 35
+        lineNumber: 37
       },
       __self: this
-    }, __jsx("h1", {
+    }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_3__["Typography"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 36
+        lineNumber: 38
       },
       __self: this
     }, "Quick Links"), __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
       href: "/welcome",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 37
+        lineNumber: 39
       },
       __self: this
     }, __jsx("a", {
       onClick: this.handleClick,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 37
+        lineNumber: 39
       },
       __self: this
     }, "Welcome to Barcelona")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
       href: "/exhibitors",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 39
+        lineNumber: 40
       },
       __self: this
     }, __jsx("a", {
       onClick: this.handleClick,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 39
+        lineNumber: 40
       },
       __self: this
     }, "Exhibitors List")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
       href: "/exhibitorsRegistration",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 40
+        lineNumber: 41
       },
       __self: this
     }, __jsx("a", {
       onClick: this.handleClick,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 40
+        lineNumber: 41
       },
       __self: this
     }, "Exhibitors Registration")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
       href: "/authorsAreaInstructions",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 41
+        lineNumber: 42
       },
       __self: this
     }, __jsx("a", {
       onClick: this.handleClick,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 41
+        lineNumber: 42
       },
       __self: this
     }, "Authors Area Instructions & Templates")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
       href: "",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 42
+        lineNumber: 43
       },
       __self: this
     }, __jsx("a", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 42
+        lineNumber: 43
       },
       __self: this
     }, "Technical Program"))), __jsx("div", {
       className: "nav_box-3",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 44
-      },
-      __self: this
-    }, __jsx("div", {
-      className: "nav_box-4",
-      __source: {
-        fileName: _jsxFileName,
         lineNumber: 45
       },
       __self: this
-    }, "BOOK NOW"), __jsx("div", {
+    }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
+      href: "/ticketPortal",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 46
+      },
+      __self: this
+    }, __jsx(_Button__WEBPACK_IMPORTED_MODULE_5__["Button"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 47
+      },
+      __self: this
+    }, "BOOK NOW")), __jsx("div", {
       className: "nav_box-5",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 48
+        lineNumber: 52
       },
       __self: this
     }, "IMPORTANT DATES"), __jsx("div", {
       className: "nav_box-6",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 51
+        lineNumber: 55
       },
       __self: this
     }, "SOMTHING ELSE IMPORTANT"))), __jsx("h1", {
@@ -1137,23 +1181,23 @@ class Nav extends react__WEBPACK_IMPORTED_MODULE_1__["Component"] {
       },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 59
+        lineNumber: 63
       },
       __self: this
-    }, "Menu"), __jsx(_styles_NavStyles__WEBPACK_IMPORTED_MODULE_3__["Burger"], {
+    }, "Menu"), __jsx(_styles_NavStyles__WEBPACK_IMPORTED_MODULE_4__["Burger"], {
       isOpen: this.state.isOpen,
       onClick: this.handleClick,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 63
+        lineNumber: 67
       },
       __self: this
-    }, __jsx(_styles_NavStyles__WEBPACK_IMPORTED_MODULE_3__["TopBun"], {
+    }, __jsx(_styles_NavStyles__WEBPACK_IMPORTED_MODULE_4__["TopBun"], {
       isOpen: this.state.isOpen,
       sticky: this.props.sticky,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 64
+        lineNumber: 68
       },
       __self: this
     })));
@@ -6398,6 +6442,17 @@ class MyApp extends next_app__WEBPACK_IMPORTED_MODULE_1___default.a {
 
 module.exports = __webpack_require__(/*! private-next-pages/_app.js */"./pages/_app.js");
 
+
+/***/ }),
+
+/***/ "@material-ui/core":
+/*!************************************!*\
+  !*** external "@material-ui/core" ***!
+  \************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("@material-ui/core");
 
 /***/ }),
 

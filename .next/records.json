@@ -1,0 +1,82 @@
+{
+  "mini-css-extract-plugin node_modules/@zeit/next-css/node_modules/css-loader/index.js??ref--5-1!node_modules/video.js/dist/video-js.css": [
+    {
+      "modules": {
+        "byIdentifier": {},
+        "usedIds": {}
+      },
+      "chunks": {
+        "byName": {
+          "mini-css-extract-plugin": 0
+        },
+        "bySource": {},
+        "usedIds": [
+          0
+        ]
+      }
+    }
+  ],
+  "modules": {
+    "byIdentifier": {
+      "ignored node_modules/global min-document": 0,
+      "css node_modules/@zeit/next-css/node_modules/css-loader/index.js??ref--5-1!node_modules/video.js/dist/video-js.css 0": 1
+    },
+    "usedIds": {
+      "0": 0,
+      "1": 1
+    }
+  },
+  "chunks": {
+    "byName": {
+      "commons": 0,
+      "static/runtime/webpack.js": 1,
+      "static/_mlh-uPUK852pnqL6CSwI/pages/_app.js": 2,
+      "static/_mlh-uPUK852pnqL6CSwI/pages/_error.js": 3,
+      "static/_mlh-uPUK852pnqL6CSwI/pages/about.js": 4,
+      "static/_mlh-uPUK852pnqL6CSwI/pages/authorsArea.js": 5,
+      "static/_mlh-uPUK852pnqL6CSwI/pages/authorsAreaDash.js": 6,
+      "static/_mlh-uPUK852pnqL6CSwI/pages/authorsAreaInstructions.js": 7,
+      "static/_mlh-uPUK852pnqL6CSwI/pages/disclaimer.js": 8,
+      "static/_mlh-uPUK852pnqL6CSwI/pages/edit.js": 9,
+      "static/_mlh-uPUK852pnqL6CSwI/pages/exhibitAndSponsor.js": 10,
+      "static/_mlh-uPUK852pnqL6CSwI/pages/exhibitors.js": 11,
+      "static/_mlh-uPUK852pnqL6CSwI/pages/exhibitorsArea.js": 12,
+      "static/_mlh-uPUK852pnqL6CSwI/pages/exhibitorsRegistration.js": 13,
+      "static/_mlh-uPUK852pnqL6CSwI/pages/index.js": 14,
+      "static/_mlh-uPUK852pnqL6CSwI/pages/privacyPolicy.js": 15,
+      "static/_mlh-uPUK852pnqL6CSwI/pages/studentArea.js": 16,
+      "static/_mlh-uPUK852pnqL6CSwI/pages/studentAreaEsopApp.js": 17,
+      "static/_mlh-uPUK852pnqL6CSwI/pages/technicalProgram.js": 18,
+      "static/_mlh-uPUK852pnqL6CSwI/pages/ticketPortal.js": 19,
+      "static/_mlh-uPUK852pnqL6CSwI/pages/welcome.js": 20,
+      "static/runtime/main.js": 21,
+      "styles": 22
+    },
+    "bySource": {},
+    "usedIds": [
+      0,
+      1,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      2,
+      20,
+      21,
+      22,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ]
+  }
+}

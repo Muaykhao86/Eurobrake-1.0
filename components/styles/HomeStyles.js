@@ -6,11 +6,8 @@ export const StyledContainer = styled.div`
     display: flex;
     flex-flow: column;
     align-items: center;
+
 `;
-
-
-
-
 
 
 export const StyledSection = styled.div`
@@ -27,7 +24,7 @@ export const StyledSection = styled.div`
     justify-content: flex-start;
     margin: 0 10rem;
     margin-top: 5rem;
-    margin-bottom: 15rem;
+    margin-bottom: 15rem; 
 
     h1{
         font-family: ${props => props.theme.MPSemibold};

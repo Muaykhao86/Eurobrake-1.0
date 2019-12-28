@@ -9,8 +9,9 @@ import ExhibitionSection from '../components/exhibitors/ExhibitionSection';
 import StudentSection from '../components/StudentSection';
 import AuthorSection from '../components/AuthorSection';
 
+
 export default () => (
-    <div className="FullPage">
+    <>
         <div className="Hero">
             <VideoPLayer />
             <CountDownBanner />
@@ -23,6 +24,6 @@ export default () => (
             <StudentSection />
             <AuthorSection />
         </StyledContainer>
-    </div>
+    </>
 
 ) 

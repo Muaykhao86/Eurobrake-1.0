@@ -1,0 +1,691 @@
+<!DOCTYPE html><html><head><meta name="viewport" contents="width=device-width, initial-scale=1"/><meta charSet="utf-8"/><link rel="shortcut icon" href="/static/favicon.png"/><title>EuroBrake2020</title><meta name="next-head-count" content="4"/><link rel="preload" href="/_next/static/_mlh-uPUK852pnqL6CSwI/pages/about.js" as="script"/><link rel="preload" href="/_next/static/_mlh-uPUK852pnqL6CSwI/pages/_app.js" as="script"/><link rel="preload" href="/_next/static/runtime/webpack-4b444dab214c6491079c.js" as="script"/><link rel="preload" href="/_next/static/chunks/commons.fae76dbedf7873ec96cc.js" as="script"/><link rel="preload" href="/_next/static/runtime/main-1d51c7a942fdaec2dc4a.js" as="script"/><style id="jss-server-side">.MuiTypography-root {
+  margin: 0;
+}
+.MuiTypography-body2 {
+  font-size: 0.875rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 400;
+  line-height: 1.43;
+  letter-spacing: 0.01071em;
+}
+.MuiTypography-body1 {
+  font-size: 1rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0.00938em;
+}
+.MuiTypography-caption {
+  font-size: 0.75rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 400;
+  line-height: 1.66;
+  letter-spacing: 0.03333em;
+}
+.MuiTypography-button {
+  font-size: 0.875rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 500;
+  line-height: 1.75;
+  letter-spacing: 0.02857em;
+  text-transform: uppercase;
+}
+.MuiTypography-h1 {
+  font-size: 6rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -0.01562em;
+}
+.MuiTypography-h2 {
+  font-size: 3.75rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -0.00833em;
+}
+.MuiTypography-h3 {
+  font-size: 3rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 400;
+  line-height: 1.04;
+  letter-spacing: 0em;
+}
+.MuiTypography-h4 {
+  font-size: 2.125rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 400;
+  line-height: 1.17;
+  letter-spacing: 0.00735em;
+}
+.MuiTypography-h5 {
+  font-size: 1.5rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 400;
+  line-height: 1.33;
+  letter-spacing: 0em;
+}
+.MuiTypography-h6 {
+  font-size: 1.25rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 500;
+  line-height: 1.6;
+  letter-spacing: 0.0075em;
+}
+.MuiTypography-subtitle1 {
+  font-size: 1rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 400;
+  line-height: 1.75;
+  letter-spacing: 0.00938em;
+}
+.MuiTypography-subtitle2 {
+  font-size: 0.875rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 500;
+  line-height: 1.57;
+  letter-spacing: 0.00714em;
+}
+.MuiTypography-overline {
+  font-size: 0.75rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 400;
+  line-height: 2.66;
+  letter-spacing: 0.08333em;
+  text-transform: uppercase;
+}
+.MuiTypography-srOnly {
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+}
+.MuiTypography-alignLeft {
+  text-align: left;
+}
+.MuiTypography-alignCenter {
+  text-align: center;
+}
+.MuiTypography-alignRight {
+  text-align: right;
+}
+.MuiTypography-alignJustify {
+  text-align: justify;
+}
+.MuiTypography-noWrap {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.MuiTypography-gutterBottom {
+  margin-bottom: 0.35em;
+}
+.MuiTypography-paragraph {
+  margin-bottom: 16px;
+}
+.MuiTypography-colorInherit {
+  color: inherit;
+}
+.MuiTypography-colorPrimary {
+  color: #3f51b5;
+}
+.MuiTypography-colorSecondary {
+  color: #f50057;
+}
+.MuiTypography-colorTextPrimary {
+  color: rgba(0, 0, 0, 0.87);
+}
+.MuiTypography-colorTextSecondary {
+  color: rgba(0, 0, 0, 0.54);
+}
+.MuiTypography-colorError {
+  color: #f44336;
+}
+.MuiTypography-displayInline {
+  display: inline;
+}
+.MuiTypography-displayBlock {
+  display: block;
+}
+.MuiGrid-container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+}
+.MuiGrid-item {
+  margin: 0;
+  box-sizing: border-box;
+}
+.MuiGrid-zeroMinWidth {
+  min-width: 0;
+}
+.MuiGrid-direction-xs-column {
+  flex-direction: column;
+}
+.MuiGrid-direction-xs-column-reverse {
+  flex-direction: column-reverse;
+}
+.MuiGrid-direction-xs-row-reverse {
+  flex-direction: row-reverse;
+}
+.MuiGrid-wrap-xs-nowrap {
+  flex-wrap: nowrap;
+}
+.MuiGrid-wrap-xs-wrap-reverse {
+  flex-wrap: wrap-reverse;
+}
+.MuiGrid-align-items-xs-center {
+  align-items: center;
+}
+.MuiGrid-align-items-xs-flex-start {
+  align-items: flex-start;
+}
+.MuiGrid-align-items-xs-flex-end {
+  align-items: flex-end;
+}
+.MuiGrid-align-items-xs-baseline {
+  align-items: baseline;
+}
+.MuiGrid-align-content-xs-center {
+  align-content: center;
+}
+.MuiGrid-align-content-xs-flex-start {
+  align-content: flex-start;
+}
+.MuiGrid-align-content-xs-flex-end {
+  align-content: flex-end;
+}
+.MuiGrid-align-content-xs-space-between {
+  align-content: space-between;
+}
+.MuiGrid-align-content-xs-space-around {
+  align-content: space-around;
+}
+.MuiGrid-justify-xs-center {
+  justify-content: center;
+}
+.MuiGrid-justify-xs-flex-end {
+  justify-content: flex-end;
+}
+.MuiGrid-justify-xs-space-between {
+  justify-content: space-between;
+}
+.MuiGrid-justify-xs-space-around {
+  justify-content: space-around;
+}
+.MuiGrid-justify-xs-space-evenly {
+  justify-content: space-evenly;
+}
+.MuiGrid-spacing-xs-1 {
+  width: calc(100% + 8px);
+  margin: -4px;
+}
+.MuiGrid-spacing-xs-1 > .MuiGrid-item {
+  padding: 4px;
+}
+.MuiGrid-spacing-xs-2 {
+  width: calc(100% + 16px);
+  margin: -8px;
+}
+.MuiGrid-spacing-xs-2 > .MuiGrid-item {
+  padding: 8px;
+}
+.MuiGrid-spacing-xs-3 {
+  width: calc(100% + 24px);
+  margin: -12px;
+}
+.MuiGrid-spacing-xs-3 > .MuiGrid-item {
+  padding: 12px;
+}
+.MuiGrid-spacing-xs-4 {
+  width: calc(100% + 32px);
+  margin: -16px;
+}
+.MuiGrid-spacing-xs-4 > .MuiGrid-item {
+  padding: 16px;
+}
+.MuiGrid-spacing-xs-5 {
+  width: calc(100% + 40px);
+  margin: -20px;
+}
+.MuiGrid-spacing-xs-5 > .MuiGrid-item {
+  padding: 20px;
+}
+.MuiGrid-spacing-xs-6 {
+  width: calc(100% + 48px);
+  margin: -24px;
+}
+.MuiGrid-spacing-xs-6 > .MuiGrid-item {
+  padding: 24px;
+}
+.MuiGrid-spacing-xs-7 {
+  width: calc(100% + 56px);
+  margin: -28px;
+}
+.MuiGrid-spacing-xs-7 > .MuiGrid-item {
+  padding: 28px;
+}
+.MuiGrid-spacing-xs-8 {
+  width: calc(100% + 64px);
+  margin: -32px;
+}
+.MuiGrid-spacing-xs-8 > .MuiGrid-item {
+  padding: 32px;
+}
+.MuiGrid-spacing-xs-9 {
+  width: calc(100% + 72px);
+  margin: -36px;
+}
+.MuiGrid-spacing-xs-9 > .MuiGrid-item {
+  padding: 36px;
+}
+.MuiGrid-spacing-xs-10 {
+  width: calc(100% + 80px);
+  margin: -40px;
+}
+.MuiGrid-spacing-xs-10 > .MuiGrid-item {
+  padding: 40px;
+}
+.MuiGrid-grid-xs-auto {
+  flex-grow: 0;
+  max-width: none;
+  flex-basis: auto;
+}
+.MuiGrid-grid-xs-true {
+  flex-grow: 1;
+  max-width: 100%;
+  flex-basis: 0;
+}
+.MuiGrid-grid-xs-1 {
+  flex-grow: 0;
+  max-width: 8.333333%;
+  flex-basis: 8.333333%;
+}
+.MuiGrid-grid-xs-2 {
+  flex-grow: 0;
+  max-width: 16.666667%;
+  flex-basis: 16.666667%;
+}
+.MuiGrid-grid-xs-3 {
+  flex-grow: 0;
+  max-width: 25%;
+  flex-basis: 25%;
+}
+.MuiGrid-grid-xs-4 {
+  flex-grow: 0;
+  max-width: 33.333333%;
+  flex-basis: 33.333333%;
+}
+.MuiGrid-grid-xs-5 {
+  flex-grow: 0;
+  max-width: 41.666667%;
+  flex-basis: 41.666667%;
+}
+.MuiGrid-grid-xs-6 {
+  flex-grow: 0;
+  max-width: 50%;
+  flex-basis: 50%;
+}
+.MuiGrid-grid-xs-7 {
+  flex-grow: 0;
+  max-width: 58.333333%;
+  flex-basis: 58.333333%;
+}
+.MuiGrid-grid-xs-8 {
+  flex-grow: 0;
+  max-width: 66.666667%;
+  flex-basis: 66.666667%;
+}
+.MuiGrid-grid-xs-9 {
+  flex-grow: 0;
+  max-width: 75%;
+  flex-basis: 75%;
+}
+.MuiGrid-grid-xs-10 {
+  flex-grow: 0;
+  max-width: 83.333333%;
+  flex-basis: 83.333333%;
+}
+.MuiGrid-grid-xs-11 {
+  flex-grow: 0;
+  max-width: 91.666667%;
+  flex-basis: 91.666667%;
+}
+.MuiGrid-grid-xs-12 {
+  flex-grow: 0;
+  max-width: 100%;
+  flex-basis: 100%;
+}
+@media (min-width:600px) {
+  .MuiGrid-grid-sm-auto {
+    flex-grow: 0;
+    max-width: none;
+    flex-basis: auto;
+  }
+  .MuiGrid-grid-sm-true {
+    flex-grow: 1;
+    max-width: 100%;
+    flex-basis: 0;
+  }
+  .MuiGrid-grid-sm-1 {
+    flex-grow: 0;
+    max-width: 8.333333%;
+    flex-basis: 8.333333%;
+  }
+  .MuiGrid-grid-sm-2 {
+    flex-grow: 0;
+    max-width: 16.666667%;
+    flex-basis: 16.666667%;
+  }
+  .MuiGrid-grid-sm-3 {
+    flex-grow: 0;
+    max-width: 25%;
+    flex-basis: 25%;
+  }
+  .MuiGrid-grid-sm-4 {
+    flex-grow: 0;
+    max-width: 33.333333%;
+    flex-basis: 33.333333%;
+  }
+  .MuiGrid-grid-sm-5 {
+    flex-grow: 0;
+    max-width: 41.666667%;
+    flex-basis: 41.666667%;
+  }
+  .MuiGrid-grid-sm-6 {
+    flex-grow: 0;
+    max-width: 50%;
+    flex-basis: 50%;
+  }
+  .MuiGrid-grid-sm-7 {
+    flex-grow: 0;
+    max-width: 58.333333%;
+    flex-basis: 58.333333%;
+  }
+  .MuiGrid-grid-sm-8 {
+    flex-grow: 0;
+    max-width: 66.666667%;
+    flex-basis: 66.666667%;
+  }
+  .MuiGrid-grid-sm-9 {
+    flex-grow: 0;
+    max-width: 75%;
+    flex-basis: 75%;
+  }
+  .MuiGrid-grid-sm-10 {
+    flex-grow: 0;
+    max-width: 83.333333%;
+    flex-basis: 83.333333%;
+  }
+  .MuiGrid-grid-sm-11 {
+    flex-grow: 0;
+    max-width: 91.666667%;
+    flex-basis: 91.666667%;
+  }
+  .MuiGrid-grid-sm-12 {
+    flex-grow: 0;
+    max-width: 100%;
+    flex-basis: 100%;
+  }
+}
+@media (min-width:960px) {
+  .MuiGrid-grid-md-auto {
+    flex-grow: 0;
+    max-width: none;
+    flex-basis: auto;
+  }
+  .MuiGrid-grid-md-true {
+    flex-grow: 1;
+    max-width: 100%;
+    flex-basis: 0;
+  }
+  .MuiGrid-grid-md-1 {
+    flex-grow: 0;
+    max-width: 8.333333%;
+    flex-basis: 8.333333%;
+  }
+  .MuiGrid-grid-md-2 {
+    flex-grow: 0;
+    max-width: 16.666667%;
+    flex-basis: 16.666667%;
+  }
+  .MuiGrid-grid-md-3 {
+    flex-grow: 0;
+    max-width: 25%;
+    flex-basis: 25%;
+  }
+  .MuiGrid-grid-md-4 {
+    flex-grow: 0;
+    max-width: 33.333333%;
+    flex-basis: 33.333333%;
+  }
+  .MuiGrid-grid-md-5 {
+    flex-grow: 0;
+    max-width: 41.666667%;
+    flex-basis: 41.666667%;
+  }
+  .MuiGrid-grid-md-6 {
+    flex-grow: 0;
+    max-width: 50%;
+    flex-basis: 50%;
+  }
+  .MuiGrid-grid-md-7 {
+    flex-grow: 0;
+    max-width: 58.333333%;
+    flex-basis: 58.333333%;
+  }
+  .MuiGrid-grid-md-8 {
+    flex-grow: 0;
+    max-width: 66.666667%;
+    flex-basis: 66.666667%;
+  }
+  .MuiGrid-grid-md-9 {
+    flex-grow: 0;
+    max-width: 75%;
+    flex-basis: 75%;
+  }
+  .MuiGrid-grid-md-10 {
+    flex-grow: 0;
+    max-width: 83.333333%;
+    flex-basis: 83.333333%;
+  }
+  .MuiGrid-grid-md-11 {
+    flex-grow: 0;
+    max-width: 91.666667%;
+    flex-basis: 91.666667%;
+  }
+  .MuiGrid-grid-md-12 {
+    flex-grow: 0;
+    max-width: 100%;
+    flex-basis: 100%;
+  }
+}
+@media (min-width:1280px) {
+  .MuiGrid-grid-lg-auto {
+    flex-grow: 0;
+    max-width: none;
+    flex-basis: auto;
+  }
+  .MuiGrid-grid-lg-true {
+    flex-grow: 1;
+    max-width: 100%;
+    flex-basis: 0;
+  }
+  .MuiGrid-grid-lg-1 {
+    flex-grow: 0;
+    max-width: 8.333333%;
+    flex-basis: 8.333333%;
+  }
+  .MuiGrid-grid-lg-2 {
+    flex-grow: 0;
+    max-width: 16.666667%;
+    flex-basis: 16.666667%;
+  }
+  .MuiGrid-grid-lg-3 {
+    flex-grow: 0;
+    max-width: 25%;
+    flex-basis: 25%;
+  }
+  .MuiGrid-grid-lg-4 {
+    flex-grow: 0;
+    max-width: 33.333333%;
+    flex-basis: 33.333333%;
+  }
+  .MuiGrid-grid-lg-5 {
+    flex-grow: 0;
+    max-width: 41.666667%;
+    flex-basis: 41.666667%;
+  }
+  .MuiGrid-grid-lg-6 {
+    flex-grow: 0;
+    max-width: 50%;
+    flex-basis: 50%;
+  }
+  .MuiGrid-grid-lg-7 {
+    flex-grow: 0;
+    max-width: 58.333333%;
+    flex-basis: 58.333333%;
+  }
+  .MuiGrid-grid-lg-8 {
+    flex-grow: 0;
+    max-width: 66.666667%;
+    flex-basis: 66.666667%;
+  }
+  .MuiGrid-grid-lg-9 {
+    flex-grow: 0;
+    max-width: 75%;
+    flex-basis: 75%;
+  }
+  .MuiGrid-grid-lg-10 {
+    flex-grow: 0;
+    max-width: 83.333333%;
+    flex-basis: 83.333333%;
+  }
+  .MuiGrid-grid-lg-11 {
+    flex-grow: 0;
+    max-width: 91.666667%;
+    flex-basis: 91.666667%;
+  }
+  .MuiGrid-grid-lg-12 {
+    flex-grow: 0;
+    max-width: 100%;
+    flex-basis: 100%;
+  }
+}
+@media (min-width:1920px) {
+  .MuiGrid-grid-xl-auto {
+    flex-grow: 0;
+    max-width: none;
+    flex-basis: auto;
+  }
+  .MuiGrid-grid-xl-true {
+    flex-grow: 1;
+    max-width: 100%;
+    flex-basis: 0;
+  }
+  .MuiGrid-grid-xl-1 {
+    flex-grow: 0;
+    max-width: 8.333333%;
+    flex-basis: 8.333333%;
+  }
+  .MuiGrid-grid-xl-2 {
+    flex-grow: 0;
+    max-width: 16.666667%;
+    flex-basis: 16.666667%;
+  }
+  .MuiGrid-grid-xl-3 {
+    flex-grow: 0;
+    max-width: 25%;
+    flex-basis: 25%;
+  }
+  .MuiGrid-grid-xl-4 {
+    flex-grow: 0;
+    max-width: 33.333333%;
+    flex-basis: 33.333333%;
+  }
+  .MuiGrid-grid-xl-5 {
+    flex-grow: 0;
+    max-width: 41.666667%;
+    flex-basis: 41.666667%;
+  }
+  .MuiGrid-grid-xl-6 {
+    flex-grow: 0;
+    max-width: 50%;
+    flex-basis: 50%;
+  }
+  .MuiGrid-grid-xl-7 {
+    flex-grow: 0;
+    max-width: 58.333333%;
+    flex-basis: 58.333333%;
+  }
+  .MuiGrid-grid-xl-8 {
+    flex-grow: 0;
+    max-width: 66.666667%;
+    flex-basis: 66.666667%;
+  }
+  .MuiGrid-grid-xl-9 {
+    flex-grow: 0;
+    max-width: 75%;
+    flex-basis: 75%;
+  }
+  .MuiGrid-grid-xl-10 {
+    flex-grow: 0;
+    max-width: 83.333333%;
+    flex-basis: 83.333333%;
+  }
+  .MuiGrid-grid-xl-11 {
+    flex-grow: 0;
+    max-width: 91.666667%;
+    flex-basis: 91.666667%;
+  }
+  .MuiGrid-grid-xl-12 {
+    flex-grow: 0;
+    max-width: 100%;
+    flex-basis: 100%;
+  }
+}</style><style data-styled="dHAamK jbrzKM bpodop cxpDZe PfMqL iMTdxK jQdlUK egXtRY cvNDuH izFceS bTbsua ifCIBH ciFMiU jiakiF hzwErv fHHFnP fvDWZX cjrdL coQzrd jvDZXw hxIlVf" data-styled-version="4.4.0">
+/* sc-component-id: Button-sc-1t6v16c-0 */
+.jQdlUK,.jQdlUK:link,.jQdlUK:visited{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;text-align:center;text-transform:uppercase;-webkit-text-decoration:none;text-decoration:none;font-size:2.1rem;color:#FFF;background:transparent;border:1px solid #FFF;border-radius:0;font-family:MyriadPro-Bold;-webkit-letter-spacing:0;-moz-letter-spacing:0;-ms-letter-spacing:0;letter-spacing:0;padding:1.5rem 4rem;-webkit-transition:all .2s;transition:all .2s;cursor:pointer;} .jQdlUK:hover{box-shadow:0 2.5rem 4rem rgba(0,0,0,0.5);-webkit-transform:translateY(-.3rem);-ms-transform:translateY(-.3rem);transform:translateY(-.3rem);color:#FFF;background-color:#12377D;} .jQdlUK::after{-webkit-transform:scalex(1.4) scaleY(1.6);-ms-transform:scalex(1.4) scaleY(1.6);transform:scalex(1.4) scaleY(1.6);opacity:0;} .jQdlUK:focus{outline:none;} .jQdlUK:active{outline:none;-webkit-transform:translateY(-.1rem);-ms-transform:translateY(-.1rem);transform:translateY(-.1rem);box-shadow:0 2rem 2rem rgba(0,0,0,0.5);}
+/* sc-component-id: CountDownBanner__CDBanner-y7fpkn-0 */
+.ciFMiU{background-color:#134381;margin-top:0;min-width:100%;min-height:19.5rem;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;color:white;}
+/* sc-component-id: CountDownBanner__CDContainer-y7fpkn-1 */
+.jiakiF{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;margin-right:2rem;}
+/* sc-component-id: CountDownBanner__CDItem-y7fpkn-2 */
+.hzwErv{position:relative;top:-1.5rem;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-flow:column;-ms-flex-flow:column;flex-flow:column;-webkit-align-content:flex-start;-ms-flex-line-pack:start;align-content:flex-start;-webkit-align-items:flex-start;-webkit-box-align:flex-start;-ms-flex-align:flex-start;align-items:flex-start;} .hzwErv .timer{position:relative;font-size:7rem;font-family:MyriadPro-Black;margin:0 1rem;} .hzwErv span{position:absolute;top:8.8rem;font-size:1.7rem;font-family:MyriadPro-Light;padding-left:2rem;} .hzwErv span:not(.noPad){padding-left:5rem;}
+/* sc-component-id: NavStyles-sc-1ltvdnj-0 */
+.cxpDZe{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;position:absolute;-webkit-transform:translateX(-20rem);-ms-transform:translateX(-20rem);transform:translateX(-20rem);z-index:200;} .cxpDZe a{font-family:MyriadPro-Bold;font-size:1.6rem;color:#F9B721;margin:1rem;text-transform:uppercase;cursor:pointer;z-index:100;}
+/* sc-component-id: NavStyles__Burger-sc-1ltvdnj-2 */
+.egXtRY{margin:0 1rem;width:4rem;height:4rem;cursor:pointer;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;z-index:300;-webkit-transition:all 10s linear;transition:all 10s linear;}
+/* sc-component-id: NavStyles__TopBun-sc-1ltvdnj-3 */
+.cvNDuH{position:relative;width:100%;height:.2rem;-webkit-transition:-webkit-transform .6s cubic-bezier(.55,.055,.675,.19);-webkit-transition:transform .6s cubic-bezier(.55,.055,.675,.19);transition:transform .6s cubic-bezier(.55,.055,.675,.19);.3;background-color:#F9B721;-webkit-transform:rotate(0);-ms-transform:rotate(0);transform:rotate(0);} .cvNDuH:before{width:100%;height:100%;position:absolute;-webkit-transition:top .2s ease-out,-webkit-transform .22s cubic-bezier(.215,.61,.355,1) .12s;-webkit-transition:top .2s ease-out,transform .22s cubic-bezier(.215,.61,.355,1) .12s;transition:top .2s ease-out,transform .22s cubic-bezier(.215,.61,.355,1) .12s;top:-1.2rem;content:'';-webkit-transform:rotate(0);-ms-transform:rotate(0);transform:rotate(0);border-bottom:2px solid #F9B721;} .cvNDuH:after{border-bottom:2px solid #F9B721;width:100%;height:100%;position:absolute;content:'';-webkit-transition:top .2s ease-out;transition:top .2s ease-out;top:1.2rem;}
+/* sc-component-id: NavStyles__HiddenNavBG-sc-1ltvdnj-4 */
+.PfMqL{background-color:#134381;position:absolute;top:-4rem;right:0rem;width:5rem;height:5rem;border-radius:50%;-webkit-transition:-webkit-transform .8s ease-in-out;-webkit-transition:transform .8s ease-in-out;transition:transform .8s ease-in-out;-webkit-transform:scale(0);-ms-transform:scale(0);transform:scale(0);}
+/* sc-component-id: NavStyles__HiddenContainer-sc-1ltvdnj-5 */
+.iMTdxK{position:absolute;right:-15rem;top:0;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;min-width:90vw;min-height:90vh;padding:2rem;margin:2rem;-webkit-transition:all .8s ease-in-out;transition:all .8s ease-in-out;-webkit-transform:translateX(-200rem);-ms-transform:translateX(-200rem);transform:translateX(-200rem);} .iMTdxK .nav_box-1{border:2px solid white;padding:2rem;margin:2rem;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-flow:column;-ms-flex-flow:column;flex-flow:column;-webkit-align-items:flex-start;-webkit-box-align:flex-start;-ms-flex-align:flex-start;align-items:flex-start;} .iMTdxK .nav_box-2{border:2px solid white;padding:2rem;margin:2rem;margin-right:auto;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-flow:column;-ms-flex-flow:column;flex-flow:column;-webkit-align-items:flex-start;-webkit-box-align:flex-start;-ms-flex-align:flex-start;align-items:flex-start;} .iMTdxK .nav_box-3{border:2px solid white;padding:2rem;margin:2rem;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-flow:column;-ms-flex-flow:column;flex-flow:column;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:space-around;-webkit-justify-content:space-around;-ms-flex-pack:space-around;justify-content:space-around;} .iMTdxK .nav_box-4{border:2px solid white;padding:2rem;margin:2rem;min-height:15rem;min-width:15rem;} .iMTdxK .nav_box-5{border:2px solid white;padding:2rem;margin:2rem;min-height:15rem;min-width:15rem;} .iMTdxK .nav_box-6{border:2px solid white;padding:2rem;margin:2rem;min-height:15rem;min-width:15rem;}
+/* sc-component-id: Header__HeaderBar-zfe6h7-0 */
+.jbrzKM{color:white;position:fixed;background-color:transparent;min-width:100%;height:10rem;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:end;-webkit-justify-content:flex-end;-ms-flex-pack:end;justify-content:flex-end;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;z-index:100;} .jbrzKM .logo{margin-left:10rem;margin-right:auto;}
+/* sc-component-id: Header__HeaderLogo-zfe6h7-1 */
+.bpodop{max-width:16.8rem;cursor:pointer;}
+/* sc-component-id: Header__HeaderButton-zfe6h7-2 */
+.izFceS{font-size:1.5rem;font-family:MyriadPro-Bold;margin-left:2rem;text-transform:uppercase;-webkit-align-self:flex-end;-ms-flex-item-align:end;align-self:flex-end;min-width:16rem;min-height:100%;background-color:transparent;border:none;color:#FFF;cursor:pointer;outline:none;} .izFceS:hover{background-color:#F9B721;color:#134381;border:2px solid transparent;box-shadow:(0,0,0,0.5);font-size:2.5rem;}
+/* sc-component-id: Footer__FooterBar-sc-1wn18ws-0 */
+.hxIlVf{color:#FFF;background:#134381;min-width:100%;min-height:10rem;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;-webkit-align-items:flex-end;-webkit-box-align:flex-end;-ms-flex-align:flex-end;align-items:flex-end;position:absolute;bottom:0;padding:2rem;} .hxIlVf .ftr_container-1{padding:.2rem;min-width:30rem;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-flow:column;-ms-flex-flow:column;flex-flow:column;} .hxIlVf .ftr_middle-links{padding:.2rem;min-width:20rem;min-height:20rem;-webkit-flex:1 1 auto;-ms-flex:1 1 auto;flex:1 1 auto;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-flow:column;-ms-flex-flow:column;flex-flow:column;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;} .hxIlVf .ftr_container-3{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-flow:column;-ms-flex-flow:column;flex-flow:column;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;} .hxIlVf .ftr_newsletter-box{padding-bottom:1rem;min-width:40rem;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;} .hxIlVf .ftr_sponsor-box{background-color:white;padding:.5rem;max-width:42rem;border:1px solid white;height:25rem;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-flow:wrap;-ms-flex-flow:wrap;flex-flow:wrap;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-align-content:center;-ms-flex-line-pack:center;align-content:center;} .hxIlVf .ftr_sponsor-box .sponsor{margin:0 1rem;cursor:pointer;} .hxIlVf .ftr_container-7{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;position:relative;} .hxIlVf .social{color:#FFF;margin:1rem;font-size:2rem;} .hxIlVf a{color:#FFF;text-transform:uppercase;font-family:MyriadPro-Bold;font-size:2rem;} .hxIlVf h1{padding:1rem;text-align:center;} .hxIlVf input{width:65%;margin-left:auto;} .hxIlVf label{font-family:MyriadPro-Bold;font-size:2rem;text-transform:uppercase;}
+/* sc-component-id: Page__StyledPage-sc-1cyutnt-0 */
+.dHAamK{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-flow:column;-ms-flex-flow:column;flex-flow:column;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;background:white;}
+/* sc-component-id: sc-global-511533460 */
+@font-face{font-family:'MyriadPro-Regular';src:url('/fonts/MyriadPro-Regular.otf');font-weight:normal;font-display:auto;font-style:normal;} @font-face{font-family:'MyriadPro-Bold';src:url('/fonts/MyriadPro-Bold.otf');font-weight:bold;font-display:auto;font-style:normal;} @font-face{font-family:'MyriadPro-BoldIt';src:url('/fonts/MyriadPro-BoldIt.otf');font-weight:bold;font-display:auto;font-style:normal;} @font-face{font-family:'MyriadPro-Semibold';src:url('/fonts/MyriadPro-Semibold.otf');font-weight:600;font-display:auto;font-style:normal;} @font-face{font-family:'MyriadPro-Light';src:url('/fonts/MyriadPro-Light.otf');font-weight:300;font-display:auto;font-style:normal;} @font-face{font-family:'MyriadPro-LightIt';src:url('/fonts/MyriadPro-LightIt.otf');font-weight:lighter;font-display:auto;font-style:normal;} @font-face{font-family:'MyriadPro-It';src:url('/fonts/MyriadPro-It.otf');font-display:auto;font-style:normal;} @font-face{font-family:'MyriadPro-Black';src:url('/fonts/MyriadPro-Black.otf');font-weight:300;font-display:auto;font-style:normal;} *,*::before,*::after{margin:0;padding:0;box-sizing:inherit;} html{height:100%;box-sizing:border-box;font-size:62.5%;} @media (min-width:20rem) and (-webkit-min-device-pixel-ratio:2){html{font-size:60%;}} @media (min-width:64rem) and (-webkit-min-device-pixel-ratio:2){html{font-size:62.5%;}} body{position:relative;min-height:100%;padding-bottom:40rem;} a{-webkit-text-decoration:none;text-decoration:none;color:black;}
+/* sc-component-id: HeroSection__StyledHero-sc-1rt21yv-0 */
+.bTbsua{min-width:100%;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-flow:column;-ms-flex-flow:column;flex-flow:column;} @media (min-width:48rem){.bTbsua{height:50%;}} @media (min-width:64rem){.bTbsua{height:100vh;}} .bTbsua img{-webkit-flex:2 1 80%;-ms-flex:2 1 80%;flex:2 1 80%;object-fit:cover;} .bTbsua .banner{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex:1 1 20%;-ms-flex:1 1 20%;flex:1 1 20%;}
+/* sc-component-id: HeroSection__StyledText-sc-1rt21yv-1 */
+.ifCIBH{position:absolute;-webkit-align-self:center;-ms-flex-item-align:center;align-self:center;line-height:1;color:#FFF;text-align:left;text-shadow:0px 3px 50px #0000008C;} .ifCIBH.ifCIBH.MuiTypography-body1{font-size:10rem;font-family:MyriadPro-Black;line-height:1;} @media (min-width:48rem){.ifCIBH{width:65%;top:15rem;}} @media (min-width:64rem){.ifCIBH{width:57%;top:30rem;}}
+/* sc-component-id: PageStyles__StyledPage-mg8x3v-0 */
+.fHHFnP{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-flow:column;-ms-flex-flow:column;flex-flow:column;-webkit-align-self:center;-ms-flex-item-align:center;align-self:center;margin-top:3rem;background-color:#FFF;margin-top:7rem;} @media and (-webkit-min-device-pixel-ratio:2){.fHHFnP{width:100%;}} @media{.fHHFnP{width:100%;}} @media (min-width:48rem){.fHHFnP{width:90%;}} @media (min-width:75rem){.fHHFnP{width:50%;}} .fHHFnP h1{font-family:MyriadPro-Black;color:#134381;font-size:4.4rem;}
+/* sc-component-id: about__StyledAbout-sc-73ask6-0 */
+.fvDWZX{color:#134381;font-family:MyriadPro-Light;font-size:2rem;} .fvDWZX .about{color:inherit;font-family:inherit;font-size:inherit;} .fvDWZX .about-title{color:#134381;font-family:MyriadPro-Semibold;font-size:4.4rem;margin-top:3rem;} .fvDWZX .about_list{list-style-type:square;list-style-position:inside;margin-bottom:1rem;} .fvDWZX .about_list-title{margin-bottom:1rem;font-family:MyriadPro-Light;font-size:2rem;} .fvDWZX .about_sub-title{color:#134381;font-size:3.5rem;font-family:MyriadPro-LightIt;padding-bottom:.5rem;} .fvDWZX .about-bold{font-family:MyriadPro-Bold;}
+/* sc-component-id: about__NameBox-sc-73ask6-1 */
+.cjrdL{margin-top:3rem;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex:1 1 auto;-ms-flex:1 1 auto;flex:1 1 auto;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;max-width:70%;}
+/* sc-component-id: about__ListBox-sc-73ask6-2 */
+.coQzrd{margin-top:3rem;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex:1 1 auto;-ms-flex:1 1 auto;flex:1 1 auto;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;max-width:80%;}
+/* sc-component-id: about__StyledProfile-sc-73ask6-3 */
+.jvDZXw{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-flow:column;-ms-flex-flow:column;flex-flow:column;max-width:12.7rem;margin:2rem 0;} .jvDZXw .profile{line-height:1.2;font-size:1.4rem;color:#134381;} .jvDZXw .profile-mediabox{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;height:16.9rem;width:12.7rem;overflow:hidden;} .jvDZXw .profile-mediabox img{object-fit:contain;} .jvDZXw .profile_description{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-flow:column;-ms-flex-flow:column;flex-flow:column;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;} .jvDZXw .profile_description-title{font-family:MyriadPro-Bold;text-align:center;margin:.5rem 0;} .jvDZXw .profile_description-subtitle{font-family:MyriadPro-Light;text-align:center;}</style></head><body><div id="__next"><div class="Page__StyledPage-sc-1cyutnt-0 dHAamK"><div class="Header__HeaderBar-zfe6h7-0 jbrzKM"><a class="logo" href="/"><img src="/images/logo.png" alt="Logo" class="Header__HeaderLogo-zfe6h7-1 bpodop"/></a><div class="NavStyles-sc-1ltvdnj-0 cxpDZe"><div class="NavStyles__HiddenNavBG-sc-1ltvdnj-4 PfMqL"></div><div class="NavStyles__HiddenContainer-sc-1ltvdnj-5 iMTdxK"><div class="nav_box-1"><p class="MuiTypography-root MuiTypography-body1">Main</p><a href="/">Home</a><a href="/about">About</a><a href="/authorsArea">Authors Area</a><a href="/exhibitorsArea">Exhibitors Area</a><a href="/studentArea">Student Area</a><a href="/exhibitAndSponsor">Exhibition And Sponsorship</a><a href="/ticketPortal">Ticket Portal</a></div><div class="nav_box-2"><p class="MuiTypography-root MuiTypography-body1">Quick Links</p><a href="/welcome">Welcome to Barcelona</a><a href="/exhibitors">Exhibitors List</a><a href="/exhibitorsRegistration">Exhibitors Registration</a><a href="/authorsAreaInstructions">Authors Area Instructions &amp; Templates</a><a href="">Technical Program</a></div><div class="nav_box-3"><a class="Button-sc-1t6v16c-0 jQdlUK">BOOK NOW</a><div class="nav_box-5">IMPORTANT DATES</div><div class="nav_box-6">SOMTHING ELSE IMPORTANT</div></div></div><h1 style="align-self:center">Menu</h1><div class="NavStyles__Burger-sc-1ltvdnj-2 egXtRY"><div class="NavStyles__TopBun-sc-1ltvdnj-3 cvNDuH"></div></div></div><button class="Header__HeaderButton-zfe6h7-2 izFceS">Book now</button></div><div class="HeroSection__StyledHero-sc-1rt21yv-0 bTbsua"><img srcSet="/images/pic11.png" alt="EuroBrake Greating"/><p class="MuiTypography-root HeroSection__StyledText-sc-1rt21yv-1 ifCIBH MuiTypography-body1" t="30rem" max="57%" fs="10rem">About EuroBrake</p><div class="banner"><div class="CountDownBanner__CDBanner-y7fpkn-0 ciFMiU"><div class="CountDownBanner__CDContainer-y7fpkn-1 jiakiF"><div class="CountDownBanner__CDItem-y7fpkn-2 hzwErv"><p class="MuiTypography-root timer MuiTypography-body1"></p><span class="noPad">Days</span></div><div class="CountDownBanner__CDItem-y7fpkn-2 hzwErv countdown-item"><p class="MuiTypography-root timer MuiTypography-body1">: 0</p><span>Hours</span></div><div class="CountDownBanner__CDItem-y7fpkn-2 hzwErv countdown-item"><p class="MuiTypography-root timer MuiTypography-body1">: 0</p><span>Minutes</span></div><div class="CountDownBanner__CDItem-y7fpkn-2 hzwErv countdown-item"><p class="MuiTypography-root timer MuiTypography-body1">: 0</p><span>Seconds</span></div><a style="margin-left:5rem;min-height:8rem" class="Button-sc-1t6v16c-0 jQdlUK">Book Now</a></div></div></div></div><div class="PageStyles__StyledPage-mg8x3v-0 fHHFnP"><div class="about__StyledAbout-sc-73ask6-0 fvDWZX"><p class="MuiTypography-root about-title MuiTypography-body1">Welcome</p><p class="MuiTypography-root about MuiTypography-body1 MuiTypography-gutterBottom">The world’s largest conference and exhibition dedicated to braking technology.</p><p class="MuiTypography-root about MuiTypography-body1 MuiTypography-gutterBottom">EuroBrake was created in 2012 to address the profound changes in the demands made by the braking industry’s customers and end-users, and to provide a forum for companies, engineers and academics working in the area of brake technology to come together to share ideas. </p><p class="MuiTypography-root about MuiTypography-body1 MuiTypography-gutterBottom">Following seven years of growth, EuroBrake has become established as the world’s largest technical event of its kind, attended by 1,200 delegates in 2019, with a significant technical programme of 150 technical presentations and featuring 100 international organisations within the exhibition. EuroBrake attracts a global audience of engineers, scientists, academics and executives from the industries of passenger car, commercial vehicle, rail and the wider industrial sectors. </p><p class="MuiTypography-root about MuiTypography-body1 MuiTypography-gutterBottom">We invite you to join us at EuroBrake 2020, which will take place in Barcelona, Spain, one of the world’s leading connected, cultural and historical destinations. </p><p class="MuiTypography-root about MuiTypography-body1 MuiTypography-gutterBottom">EuroBrake 2020 is set to be another record-braking year, so why not come sponsor or exhibit at the event for the opportunity to reach an influential audience of braking specialists, to share knowledge and to connect with decision-makers from leading companies around the world. </p><p class="MuiTypography-root about MuiTypography-body1 MuiTypography-gutterBottom">Offering an enviable climate and world-leading hub for business, Barcelona has direct links with many of the world’s Capital cities, via air, road, rail and sea, making EuroBrake 2020 extremely accessible. </p><p class="MuiTypography-root about MuiTypography-body1 MuiTypography-gutterBottom">Presenting at this international and highly regarded conference is your opportunity to reach an influential audience of braking specialists, to share knowledge and to connect with decision-makers from leading companies around the world. The Call for Papers will be published soon so keep an eye out for its announcement in BrakingNews! </p><p class="MuiTypography-root about MuiTypography-body1 MuiTypography-gutterBottom">On behalf of FISITA and the EuroBrake Steering Committee, we invite you to participate in EuroBrake 2020, and we look forward to welcoming you to Barcelona next year.</p><div class="about__NameBox-sc-73ask6-1 cjrdL"><div><p class="MuiTypography-root about about-bold MuiTypography-body1">Chris Mason</p><p class="MuiTypography-root about MuiTypography-body1">CEO, FISITA</p></div><div><p class="MuiTypography-root about about-bold MuiTypography-body1">Harold Abendroth</p><p class="MuiTypography-root about MuiTypography-body1">Chairman, EuroBrake</p></div></div><p class="MuiTypography-root about-title MuiTypography-body1">Who Attends EuroBrake?</p><p class="MuiTypography-root about MuiTypography-body1 MuiTypography-gutterBottom">EuroBrake is an essential learning and networking event for all engineers, scientists and decision makers concerned with braking systems throughout the value-chain, from OEMs to materials suppliers, including:</p><div class="about__ListBox-sc-73ask6-2 coQzrd"><ul class="about_list"><li>Rail</li><li>Passenger car</li><li>Commercial Vehical</li><li>Motorcycle</li><li>Aerospace</li><li>Industry brakes</li><li>Wind turbines</li></ul><ul class="about_list"><li>Academia and research</li><li>Application</li><li>Research and development</li><li>Materials</li><li>Quality and process</li><li>Testing and measurement</li><li>Sales and purchasing</li></ul></div><p class="MuiTypography-root about-title MuiTypography-body1">Organisation</p><p class="MuiTypography-root about MuiTypography-body1 MuiTypography-gutterBottom">EuroBrake is organised by FISITA, the membership organisation that supports the automotive and mobility systems sector in its quest to advance technological development. </p><p class="MuiTypography-root about MuiTypography-body1 MuiTypography-gutterBottom">Having delivered against this mission for every generation of engineers since 1948, we are uniquely placed to promote excellence in mobility engineering and the development of safe, sustainable and affordable mobility solutions.</p><div class="MuiGrid-root MuiGrid-container" style="display:flex;margin:2.5rem 0;align-self:flexStart"><div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-3"><div class="about__StyledProfile-sc-73ask6-3 jvDZXw profile"><div class="profile-mediabox"><img src="/images/AbendrothHarald.png" alt="profilePicture" class="profile-media"/></div><div class="profile_description"><p class="MuiTypography-root profile profile_description-title MuiTypography-body1">Harald Abendroth</p><p class="MuiTypography-root profile profile_description-subtitle MuiTypography-body1">EuroBrake Chairman Consultant</p></div></div></div><div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-3"><div class="about__StyledProfile-sc-73ask6-3 jvDZXw profile"><div class="profile-mediabox"><img src="/images/BartonDavid.png" alt="profilePicture" class="profile-media"/></div><div class="profile_description"><p class="MuiTypography-root profile profile_description-title MuiTypography-body1">David Barton</p><p class="MuiTypography-root profile profile_description-subtitle MuiTypography-body1">University of Leeds</p></div></div></div><div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-3"><div class="about__StyledProfile-sc-73ask6-3 jvDZXw profile"><div class="profile-mediabox"><img src="/images/DesplanquesYannick.png" alt="profilePicture" class="profile-media"/></div><div class="profile_description"><p class="MuiTypography-root profile profile_description-title MuiTypography-body1">Prof. Yannick Desplanques</p><p class="MuiTypography-root profile profile_description-subtitle MuiTypography-body1">Centrale Lille</p></div></div></div><div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-3"><div class="about__StyledProfile-sc-73ask6-3 jvDZXw profile"><div class="profile-mediabox"><img src="/images/JK.png" alt="profilePicture" class="profile-media"/></div><div class="profile_description"><p class="MuiTypography-root profile profile_description-title MuiTypography-body1">Klaus Jäckel</p><p class="MuiTypography-root profile profile_description-subtitle MuiTypography-body1">DAIMLER TRUCK AG</p></div></div></div><div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-3"><div class="about__StyledProfile-sc-73ask6-3 jvDZXw profile"><div class="profile-mediabox"><img src="/images/LL.png" alt="profilePicture" class="profile-media"/></div><div class="profile_description"><p class="MuiTypography-root profile profile_description-title MuiTypography-body1">Loïc Lelièvre</p><p class="MuiTypography-root profile profile_description-subtitle MuiTypography-body1">FLERTEX</p></div></div></div><div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-3"><div class="about__StyledProfile-sc-73ask6-3 jvDZXw profile"><div class="profile-mediabox"><img src="/images/MunchhoffJan.png" alt="profilePicture" class="profile-media"/></div><div class="profile_description"><p class="MuiTypography-root profile profile_description-title MuiTypography-body1">Jan Münchhoff</p><p class="MuiTypography-root profile profile_description-subtitle MuiTypography-body1">AUDI AG</p></div></div></div><div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-3"><div class="about__StyledProfile-sc-73ask6-3 jvDZXw profile"><div class="profile-mediabox"><img src="/images/OstermeyerGeorg.png" alt="profilePicture" class="profile-media"/></div><div class="profile_description"><p class="MuiTypography-root profile profile_description-title MuiTypography-body1">Prof. Dr. Georg Ostermeyer</p><p class="MuiTypography-root profile profile_description-subtitle MuiTypography-body1">TU Braunschweig</p></div></div></div><div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-3"><div class="about__StyledProfile-sc-73ask6-3 jvDZXw profile"><div class="profile-mediabox"><img src="/images/VollrathLudwig.png" alt="profilePicture" class="profile-media"/></div><div class="profile_description"><p class="MuiTypography-root profile profile_description-title MuiTypography-body1">Ludwig Vollrath</p><p class="MuiTypography-root profile profile_description-subtitle MuiTypography-body1">Formula Student Germany</p></div></div></div><p class="MuiTypography-root about-title MuiTypography-body1">Advisory Board</p><p class="MuiTypography-root about MuiTypography-body1 MuiTypography-gutterBottom">The EuroBrake Advisory Board consists of representatives from major companies and research institutions which lead the field in braking technology today. The Advisory Board provides strategic advice and helps to ensure that EuroBrake continues to meet the needs of the international braking community.</p><div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-3"><div class="about__StyledProfile-sc-73ask6-3 jvDZXw profile"><div class="profile-mediabox"><img src="/images/BijweJayashree.png" alt="profilePicture" class="profile-media"/></div><div class="profile_description"><p class="MuiTypography-root profile profile_description-title MuiTypography-body1">Prof. Jayashree Bijwe</p><p class="MuiTypography-root profile profile_description-subtitle MuiTypography-body1">Indian Institute of Technology</p></div></div></div><div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-3"><div class="about__StyledProfile-sc-73ask6-3 jvDZXw profile"><div class="profile-mediabox"><img src="/images/StefanDorsch.png" alt="profilePicture" class="profile-media"/></div><div class="profile_description"><p class="MuiTypography-root profile profile_description-title MuiTypography-body1">Dr. Stefan Dörsch</p><p class="MuiTypography-root profile profile_description-subtitle MuiTypography-body1">DB Systemtechnik GmbH</p></div></div></div><div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-3"><div class="about__StyledProfile-sc-73ask6-3 jvDZXw profile"><div class="profile-mediabox"><img src="/images/DufrenoyPhilippe.png" alt="profilePicture" class="profile-media"/></div><div class="profile_description"><p class="MuiTypography-root profile profile_description-title MuiTypography-body1">Prof. Philippe Dufrénoy</p><p class="MuiTypography-root profile profile_description-subtitle MuiTypography-body1">University of Lille</p></div></div></div><div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-3"><div class="about__StyledProfile-sc-73ask6-3 jvDZXw profile"><div class="profile-mediabox"><img src="/images/FieldhouseJohn.png" alt="profilePicture" class="profile-media"/></div><div class="profile_description"><p class="MuiTypography-root profile profile_description-title MuiTypography-body1">Prof. John Fieldhouse</p><p class="MuiTypography-root profile profile_description-subtitle MuiTypography-body1">JDF Consulting</p></div></div></div><div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-3"><div class="about__StyledProfile-sc-73ask6-3 jvDZXw profile"><div class="profile-mediabox"><img src="/images/FilipPeter.png" alt="profilePicture" class="profile-media"/></div><div class="profile_description"><p class="MuiTypography-root profile profile_description-title MuiTypography-body1">Prof. Peter Filip</p><p class="MuiTypography-root profile profile_description-subtitle MuiTypography-body1">Southern Illinois University Carbondal</p></div></div></div><div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-3"><div class="about__StyledProfile-sc-73ask6-3 jvDZXw profile"><div class="profile-mediabox"><img src="/images/GraeberJohannes.png" alt="profilePicture" class="profile-media"/></div><div class="profile_description"><p class="MuiTypography-root profile profile_description-title MuiTypography-body1">Johannes Gräber</p><p class="MuiTypography-root profile profile_description-subtitle MuiTypography-body1">Knorr-Bremse - Systeme für Schienenfahrzeuge GmbH</p></div></div></div><div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-3"><div class="about__StyledProfile-sc-73ask6-3 jvDZXw profile"><div class="profile-mediabox"><img src="/images/TheodorosGrigoratos.png" alt="profilePicture" class="profile-media"/></div><div class="profile_description"><p class="MuiTypography-root profile profile_description-title MuiTypography-body1">Dr. Theodoros Grigoratos</p><p class="MuiTypography-root profile profile_description-subtitle MuiTypography-body1">European Commission, Joint Research Centre</p></div></div></div><div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-3"><div class="about__StyledProfile-sc-73ask6-3 jvDZXw profile"><div class="profile-mediabox"><img src="/images/KudoTakashi.png" alt="profilePicture" class="profile-media"/></div><div class="profile_description"><p class="MuiTypography-root profile profile_description-title MuiTypography-body1">Takashi Kudo</p><p class="MuiTypography-root profile profile_description-subtitle MuiTypography-body1">Akebono Brake Industry Co., Ltd.</p></div></div></div><div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-3"><div class="about__StyledProfile-sc-73ask6-3 jvDZXw profile"><div class="profile-mediabox"><img src="/images/LauxmannRalph.png" alt="profilePicture" class="profile-media"/></div><div class="profile_description"><p class="MuiTypography-root profile profile_description-title MuiTypography-body1">Ralph Lauxmann</p><p class="MuiTypography-root profile profile_description-subtitle MuiTypography-body1">Continental AG</p></div></div></div><div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-3"><div class="about__StyledProfile-sc-73ask6-3 jvDZXw profile"><div class="profile-mediabox"><img src="/images/LiebemannEdwin.png" alt="profilePicture" class="profile-media"/></div><div class="profile_description"><p class="MuiTypography-root profile profile_description-title MuiTypography-body1">Edwin Liebemann</p><p class="MuiTypography-root profile profile_description-subtitle MuiTypography-body1">Robert Bosch GmbH</p></div></div></div><div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-3"><div class="about__StyledProfile-sc-73ask6-3 jvDZXw profile"><div class="profile-mediabox"><img src="/images/MichaelLingg.png" alt="profilePicture" class="profile-media"/></div><div class="profile_description"><p class="MuiTypography-root profile profile_description-title MuiTypography-body1">Michael Lingg</p><p class="MuiTypography-root profile profile_description-subtitle MuiTypography-body1">Volkswagen</p></div></div></div><div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-3"><div class="about__StyledProfile-sc-73ask6-3 jvDZXw profile"><div class="profile-mediabox"><img src="/images/LinkRoy.png" alt="profilePicture" class="profile-media"/></div><div class="profile_description"><p class="MuiTypography-root profile profile_description-title MuiTypography-body1">Roy Link</p><p class="MuiTypography-root profile profile_description-subtitle MuiTypography-body1">Link Engineering</p></div></div></div><div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-3"><div class="about__StyledProfile-sc-73ask6-3 jvDZXw profile"><div class="profile-mediabox"><img src="/images/MartinottoLuca.png" alt="profilePicture" class="profile-media"/></div><div class="profile_description"><p class="MuiTypography-root profile profile_description-title MuiTypography-body1">Luca Martinotto</p><p class="MuiTypography-root profile profile_description-subtitle MuiTypography-body1">ITT Friction Technologies</p></div></div></div><div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-3"><div class="about__StyledProfile-sc-73ask6-3 jvDZXw profile"><div class="profile-mediabox"><img src="/images/NishiwakiMasaaki.png" alt="profilePicture" class="profile-media"/></div><div class="profile_description"><p class="MuiTypography-root profile profile_description-title MuiTypography-body1">Prof. Dr. Masaaki Nishiwaki</p><p class="MuiTypography-root profile profile_description-subtitle MuiTypography-body1">Kanagawa Institute of Technology</p></div></div></div><div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-3"><div class="about__StyledProfile-sc-73ask6-3 jvDZXw profile"><div class="profile-mediabox"><img src="/images/MeyerManfred.png" alt="profilePicture" class="profile-media"/></div><div class="profile_description"><p class="MuiTypography-root profile profile_description-title MuiTypography-body1">Manfred Meyer</p><p class="MuiTypography-root profile profile_description-subtitle MuiTypography-body1">ZF</p></div></div></div><div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-3"><div class="about__StyledProfile-sc-73ask6-3 jvDZXw profile"><div class="profile-mediabox"><img src="/images/JiliangMo.png" alt="profilePicture" class="profile-media"/></div><div class="profile_description"><p class="MuiTypography-root profile profile_description-title MuiTypography-body1">Prof. Dr. Jiliang Mo</p><p class="MuiTypography-root profile profile_description-subtitle MuiTypography-body1">Southwest Jiaotong University</p></div></div></div><div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-3"><div class="about__StyledProfile-sc-73ask6-3 jvDZXw profile"><div class="profile-mediabox"><img src="/images/MODY.png" alt="profilePicture" class="profile-media"/></div><div class="profile_description"><p class="MuiTypography-root profile profile_description-title MuiTypography-body1">Parimal Mody</p><p class="MuiTypography-root profile profile_description-subtitle MuiTypography-body1">NUCAP Industries</p></div></div></div><div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-3"><div class="about__StyledProfile-sc-73ask6-3 jvDZXw profile"><div class="profile-mediabox"><img src="/images/TonyNicol.png" alt="profilePicture" class="profile-media"/></div><div class="profile_description"><p class="MuiTypography-root profile profile_description-title MuiTypography-body1">Tony Nicol</p><p class="MuiTypography-root profile profile_description-subtitle MuiTypography-body1">Meritor</p></div></div></div><div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-3"><div class="about__StyledProfile-sc-73ask6-3 jvDZXw profile"><div class="profile-mediabox"><img src="/images/Rainer.png" alt="profilePicture" class="profile-media"/></div><div class="profile_description"><p class="MuiTypography-root profile profile_description-title MuiTypography-body1">Dr. Rainer Müller-Finkeldei</p><p class="MuiTypography-root profile profile_description-subtitle MuiTypography-body1">DAIMLER TRUCK AG</p></div></div></div><div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-3"><div class="about__StyledProfile-sc-73ask6-3 jvDZXw profile"><div class="profile-mediabox"><img src="/images/PoissonFranck.png" alt="profilePicture" class="profile-media"/></div><div class="profile_description"><p class="MuiTypography-root profile profile_description-title MuiTypography-body1">Franck Poisson</p><p class="MuiTypography-root profile profile_description-subtitle MuiTypography-body1">SNCF</p></div></div></div><div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-3"><div class="about__StyledProfile-sc-73ask6-3 jvDZXw profile"><div class="profile-mediabox"><img src="/images/RheeSeongK.png" alt="profilePicture" class="profile-media"/></div><div class="profile_description"><p class="MuiTypography-root profile profile_description-title MuiTypography-body1">Dr. Seong K. Rhee</p><p class="MuiTypography-root profile profile_description-subtitle MuiTypography-body1">SKR Consulting LLC</p></div></div></div><div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-3"><div class="about__StyledProfile-sc-73ask6-3 jvDZXw profile"><div class="profile-mediabox"><img src="/images/ShiomiYukihiro.png" alt="profilePicture" class="profile-media"/></div><div class="profile_description"><p class="MuiTypography-root profile profile_description-title MuiTypography-body1">Yukihiro Shiomi</p><p class="MuiTypography-root profile profile_description-subtitle MuiTypography-body1">Toyota Motor Corporation</p></div></div></div><div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-3"><div class="about__StyledProfile-sc-73ask6-3 jvDZXw profile"><div class="profile-mediabox"><img src="/images/FabioSquadrani.png" alt="profilePicture" class="profile-media"/></div><div class="profile_description"><p class="MuiTypography-root profile profile_description-title MuiTypography-body1">Fabio Squadrani</p><p class="MuiTypography-root profile profile_description-subtitle MuiTypography-body1">Applus IDIADA</p></div></div></div><div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-3"><div class="about__StyledProfile-sc-73ask6-3 jvDZXw profile"><div class="profile-mediabox"><img src="/images/Tione.png" alt="profilePicture" class="profile-media"/></div><div class="profile_description"><p class="MuiTypography-root profile profile_description-title MuiTypography-body1">Roberto Tione</p><p class="MuiTypography-root profile profile_description-subtitle MuiTypography-body1">WABTEC-Faiveley</p></div></div></div></div></div></div><div class="Footer__FooterBar-sc-1wn18ws-0 hxIlVf"><div class="ftr_container-1"><h1>CONFIRMED EUROBRAKE 2020 SPONSORS</h1><div class="ftr_sponsor-box"><div class="sponsor"><a href="http://www.applusidiada.com/en/"><img src="https://www.eurobrake.net/res/display/default/chrome/logos/applus-idiada2.png" alt="" style="max-height:5rem;width:10rem"/></a></div><div class="sponsor"><a href="http://www.applusidiada.com/en/"><img src="https://www.eurobrake.net/res/display/default/chrome/logos/itt.png" alt="" style="max-height:5rem;width:10rem"/></a></div><div class="sponsor"><a href="http://www.applusidiada.com/en/"><img src="https://www.eurobrake.net/res/display/default/chrome/logos/horiba2.png" alt="" style="max-height:5rem;width:10rem"/></a></div><div class="sponsor"><a href="http://www.applusidiada.com/en/"><img src="https://www.eurobrake.net/res/display/default/chrome/logos/nof2.png" alt="" style="maxheight:5rem;width:10rem"/></a></div><div class="sponsor"><a href="http://www.applusidiada.com/en/"><img src="https://www.eurobrake.net/res/display/default/chrome/logos/itaprochim3.png" alt="" style="max-height:5rem;width:10rem"/></a></div><div class="sponsor"><a href="http://www.applusidiada.com/en/"><img src="https://www.eurobrake.net/res/display/default/chrome/logos/link3.png" alt="" style="max-height:5rem;width:10rem"/></a></div><div class="sponsor"><a href="http://www.applusidiada.com/en/"><img src="https://www.eurobrake.net/res/display/default/chrome/logos/fagorederlangroup.png" alt="" style="max-height:5rem;width:10rem"/></a></div><div class="sponsor"><a href="http://www.applusidiada.com/en/"><img src="https://www.eurobrake.net/res/display/default/chrome/logos/lapinus2.png" alt="" style="max-height:5rem;width:10rem"/></a></div><div class="sponsor"><a href="http://www.applusidiada.com/en/"><img src="https://www.eurobrake.net/res/display/default/chrome/logos/sadeca2.png" alt="" style="max-height:5rem;width:10rem"/></a></div><div class="sponsor"><a href="http://www.applusidiada.com/en/"><img src="https://www.eurobrake.net/res/display/default/chrome/logos/alroko.png" alt="" style="max-height:5rem;width:10rem"/></a></div></div></div><div class="ftr_middle-links"><a href="/privacyPolicy">Privacy Policy</a><a href="/disclaimer">Disclaimer</a><a href="">Contact Us</a><div class="ftr_container-7"><a class="social" href="http://www.linkedin.com/groups/EuroBrake-4282205?trk=myg_ugrp_ovr"><img src="/images/LinkedIn@2000x.png" alt="Linkedin" style="max-width:5rem"/></a><a class="social" href="http://www.facebook.com/pages/FISITA-International-Federation-of-Automotive-Engineering-Societies/123022704532"><img src="/images/Facebook@2000x.png" alt="Facebook" style="max-width:5rem"/></a><a class="social" href="http://twitter.com/FISITAhq"><img src="/images/Twitter@2000x.png" alt="Twitter" style="max-width:5rem"/></a><a class="social" href="https://www.flickr.com/photos/eurobrake/albums/72157681368290774"><img src="/images/flickr-icon@2000w.png" alt="Flickr" style="max-width:5rem"/></a></div></div><div class="ftr_container-3"><div class="ftr_newsletter-box"><label for="Newsletter">Newsletter</label><input type="email" name="Newsletter" id=""/></div><div class="ftr_container-7"><div>Loading...</div></div></div></div></div></div><script id="__NEXT_DATA__" type="application/json">{"dataManager":"[]","props":{"pageProps":{}},"page":"/about","query":{},"buildId":"_mlh-uPUK852pnqL6CSwI","nextExport":true,"autoExport":true}</script><script async="" data-next-page="/about" src="/_next/static/_mlh-uPUK852pnqL6CSwI/pages/about.js"></script><script async="" data-next-page="/_app" src="/_next/static/_mlh-uPUK852pnqL6CSwI/pages/_app.js"></script><script src="/_next/static/runtime/webpack-4b444dab214c6491079c.js" async=""></script><script src="/_next/static/chunks/commons.fae76dbedf7873ec96cc.js" async=""></script><script src="/_next/static/runtime/main-1d51c7a942fdaec2dc4a.js" async=""></script></body></html>

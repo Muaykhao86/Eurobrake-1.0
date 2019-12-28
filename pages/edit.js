@@ -12,7 +12,6 @@ import { withAuthSync, logout, login } from '../utils/auth'
 import HeroSection from '../components/HeroSection';
 import { Button } from '../components/Button';
 import { StyledBanner, StyledContainer } from '../components/styles/PageStyles';
-import { Abstracts } from '../components/testAuthors';
 import {GetForm, SendFile} from '../components/Forms';
 import Popup from '../components/Popup';
 
@@ -127,6 +126,12 @@ const FilledBanner = () => (
 
 
 class Edit extends Component {
+   constructor(props) {
+       super(props);
+       
+   }
+
+//    * NEED TO DO SOME DYNAMIC ROUTE CHANGES FOR EDITING FORMSS    
    
 
     // componentDidMount = () => {
@@ -149,6 +154,7 @@ class Edit extends Component {
     // }
 
     render() {
+        console.log('edit props', this.props)
         return (
             <>
                 <HeroSection banner={FilledBanner} t="30rem" max="55%">
@@ -159,7 +165,7 @@ class Edit extends Component {
                         <Typography className="authors-title">Hi {'*USERNAME*'}</Typography>
                         <Typography gutterBottom className="authors_sub-title">Edit Your Abstract</Typography>
                     </div>
-                    <AbstractForm/>
+                    <AbstractForm editPaper={true} />
                 </StyledPage>
             </>
         )

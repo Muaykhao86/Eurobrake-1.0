@@ -30,8 +30,6 @@ const StyledPage = styled.div`
     background-color: ${props => props.theme.white};
     margin-top: 7rem;
     .authors{
-            
-        
         color: ${props => props.theme.primary};
         font-family: ${props => props.theme.MPLight};
         font-size: 2rem;
@@ -148,10 +146,10 @@ papers.map((paper, i) => (
                 padding="0.5rem 2rem"
                 style={{ margin: ".5rem 0" }}
                 fontSize="1.7rem"
-                onClick={GetForm(url.edit)}
+                onClick={GetForm(`https://prelude.eurobrake.net/edit/${paper.papercode}`)}
             >
                 <CreateIcon style={{ fontSize: '3rem', marginRight: '1rem' }} />
-                EDIT PAPER TEST
+                EDIT PAPER
             </Button>
             <Button
                 bcolor="#134381"

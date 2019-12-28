@@ -16,7 +16,6 @@ export default function AuthorSection() {
                     <img src="/images/pic1.png" alt="EuroBrake Greating" style={{ width: '100%', height: '100%' }} />
                 </div>
                 <Bounce left>
-
                 <Card left>
                     <h1>Access the Authors Area</h1>
                     <Link href="/authorsArea">
