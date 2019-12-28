@@ -137,7 +137,7 @@ const url = {
 }
 
 const Abstract = ({papers}) => (
-papers.map(paper => {
+papers.map((paper, i) => {
 
     <StyledBox>
         <StyledActionArea>
