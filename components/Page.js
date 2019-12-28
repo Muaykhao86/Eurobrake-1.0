@@ -124,6 +124,7 @@ const GlobalStyle = createGlobalStyle`
     html{
         height: 100%;
         box-sizing:  border-box;
+        font-size: 62.5%; 
         
         
         @media ${device.mobileS} and (-webkit-min-device-pixel-ratio: 2){
@@ -132,7 +133,6 @@ const GlobalStyle = createGlobalStyle`
         @media ${device.laptop}  and (-webkit-min-device-pixel-ratio: 2){
         font-size: 62.5%; 
         }
-        font-size: 62.5%; 
     };
     body{
         /* To set the footer at the bottom we have to leave space for it in the parent container */

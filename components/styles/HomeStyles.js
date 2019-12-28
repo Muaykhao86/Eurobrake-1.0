@@ -18,16 +18,16 @@ export const StyledSection = styled.div`
     margin-top: 5rem;
     margin-bottom: 15rem; 
         
-    @media ${device.mobileS} and (-webkit-min-device-pixel-ratio: 2) {
-    width: ${props => props.theme.mobileWidth};
-    }
     @media ${device.mobileS} {
     width: ${props => props.theme.mobileWidth};
     }
-    @media ${device.laptop} and (-webkit-min-device-pixel-ratio: 2) {
-    width: ${props => props.theme.laptopWidth};
+    @media ${device.mobileS} and (-webkit-min-device-pixel-ratio: 2) {
+    width: ${props => props.theme.mobileWidth};
     }
     @media ${device.laptop} {
+    width: ${props => props.theme.laptopWidth};
+    }
+    @media ${device.laptop} and (-webkit-min-device-pixel-ratio: 2) {
     width: ${props => props.theme.laptopWidth};
     }
     @media ${device.laptopL}  {
