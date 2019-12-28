@@ -127,11 +127,8 @@ const GlobalStyle = createGlobalStyle`
         font-size: 62.5%; 
         
         
-        @media ${device.mobileS} and (-webkit-min-device-pixel-ratio: 2){
+        @media ${device.tablet} and (-webkit-min-device-pixel-ratio: 2){
         font-size: 60%; 
-        }
-        @media ${device.laptop}  and (-webkit-min-device-pixel-ratio: 2){
-        font-size: 62.5%; 
         }
     };
     body{
