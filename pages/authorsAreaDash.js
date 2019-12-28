@@ -17,7 +17,7 @@ import HeroSection from '../components/HeroSection';
 import { Button } from '../components/Button';
 import { StyledBanner, StyledContainer } from '../components/styles/PageStyles';
 import { GetForm } from '../components/forms/Get';
-import { SendFile } from '../components/Files';
+import { SendFile } from '../components/Forms';
 import Popup from '../components/Popup';
 
 
