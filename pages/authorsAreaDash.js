@@ -214,7 +214,8 @@ class AuthorsAreaDash extends Component {
     render() {
         const {firstname} = this.props.authorData.author;
         const {papers} = this.props.authorData;
-
+        const data = this.props.authorData;
+        console.log({papers, data})
         return (
             <>
                 <HeroSection banner={FilledBanner} t="30rem" max="55%">
