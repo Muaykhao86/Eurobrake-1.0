@@ -15,7 +15,7 @@ export default function ExhibitionSection() {
                 <div className="mediaBox">
                     <img src="/images/pic2.png" alt="EuroBrake Greating" style={{ width: '100%', height: '100%' }} />
                 </div>
-                <Bounce left>
+                <Bounce ssrFadeout left>
                 <Card left>
                     <h1>Partner your brand with EuroBrake</h1>
                     <Link href="/exhibitAndSponsor">

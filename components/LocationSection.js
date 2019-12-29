@@ -15,7 +15,7 @@ export default function LocationSection() {
                 <div className="mediaBox">
                     <img src="/images/pic2.png" alt="Barcelona" style={{ width: '100%', height: '100%' }} />
                 </div>
-                <Bounce  left>
+                <Bounce ssrFadeout left>
                 <Card left>
                     <h1>Find out more about Barcelona</h1>
                     <Link href="/welcome">

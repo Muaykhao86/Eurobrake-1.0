@@ -22,8 +22,8 @@ const StyledPage = styled.div`
 const Content = styled.iframe`
     align-self: center;
     margin-top: 2rem;
-    min-width: 100rem;
-    min-height: 100rem;
+    max-width: 100rem;
+    max-height: 100rem;
     border: none;
     background-color: transparent;
     /* overflow: hidden; */

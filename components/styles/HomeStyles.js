@@ -19,25 +19,17 @@ export const StyledSection = styled.div`
     margin-bottom: 15rem; 
     width: ${props => props.theme.minWidth};
 
-
-    @media ${device.laptop} and (-webkit-min-device-pixel-ratio: 2){
-    width: ${props => props.theme.mobileWidth};
-    }
-    @media ${device.laptop} {
-    width: ${props => props.theme.mobileWidth};
-    }
-
-    @media only screen and (max-width:48rem){
-    width: ${props => props.theme.mobileWidth};
-    
-    
-    }
+    /* ! works ! */
     @media only screen 
-  and (min-device-width: 175px) 
-  and (max-device-width: 667px) 
+  and (max-device-width: 1300px) 
   and (-webkit-min-device-pixel-ratio: 2) { 
-    width: ${props => props.theme.mobileWidth};
-       
+    width: ${props => props.theme.laptopWidth};
+  }
+
+    @media only screen 
+  and (max-device-width: 768px) 
+  and (-webkit-min-device-pixel-ratio: 2) { 
+    width: ${props => props.theme.mobileWidth};    
 }
 
     h1{

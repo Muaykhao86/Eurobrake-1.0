@@ -1,7 +1,7 @@
-const withCss = require('@zeit/next-css')
+import withCss from '@zeit/next-css';
 
 
-module.exports = withCss({
+export default withCss({
   webpack(config) {
     config.module.rules.push(
       {

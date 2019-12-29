@@ -25,7 +25,7 @@ export default class Nav extends Component {
                 <HiddenNavBG isOpen={this.state.isOpen} />
                 <HiddenContainer isOpen={this.state.isOpen}>
                     <div className="nav_box-1">
-                        <Typography>Main</Typography>
+                        <Typography gutterBottom className="Nav-title">Main</Typography>
                         <Link href="/"><a onClick={this.handleClick} >Home</a></Link>
                         <Link href="/about"><a onClick={this.handleClick} >About</a></Link>
                         <Link href="/authorsArea"><a onClick={this.handleClick}>Authors Area</a></Link>
@@ -35,7 +35,7 @@ export default class Nav extends Component {
                         <Link href="/ticketPortal"><a onClick={this.handleClick}>Ticket Portal</a></Link>
                     </div>
                     <div className="nav_box-2">
-                        <Typography>Quick Links</Typography>
+                        <Typography gutterBottom className="Nav-title">Quick Links</Typography>
                         <Link href="/welcome"><a onClick={this.handleClick}>Welcome to Barcelona</a></Link>
                         <Link href="/exhibitors"><a onClick={this.handleClick}>Exhibitors List</a></Link>
                         <Link href="/exhibitorsRegistration"><a onClick={this.handleClick}>Exhibitors Registration</a></Link>
@@ -43,19 +43,15 @@ export default class Nav extends Component {
                         <Link href=""><a >Technical Program</a></Link>
                     </div>
                     <div className="nav_box-3">
+                        <div className="nav_box-5" style={{maxHeight: '50rem', maxWidth: '35rem'}}>
+                            <Typography className="" >IMPORTANT DATES</Typography>
+                        </div>
                         <Link href="/ticketPortal">
-                        <Button>
+                        <Button style={{maxWidth: '35rem', maxHeight: '15rem'}}>
                             BOOK NOW
                         </Button>
                         </Link>
                         
-                        <div className="nav_box-5">
-                            IMPORTANT DATES
-                        </div>
-                        <div className="nav_box-6">
-                            SOMTHING ELSE IMPORTANT
-                        </div>
-
                     </div>
                 </HiddenContainer>
                 

@@ -172,6 +172,7 @@ function AboutSection() {
     },
     __self: this
   })), __jsx(react_reveal_Bounce__WEBPACK_IMPORTED_MODULE_2___default.a, {
+    ssrFadeout: true,
     right: true,
     __source: {
       fileName: _jsxFileName,
@@ -283,6 +284,7 @@ function AttendeesSection() {
     },
     __self: this
   })), __jsx(react_reveal_Bounce__WEBPACK_IMPORTED_MODULE_2___default.a, {
+    ssrFadeout: true,
     right: true,
     __source: {
       fileName: _jsxFileName,
@@ -394,6 +396,7 @@ function AuthorSection() {
     },
     __self: this
   })), __jsx(react_reveal_Bounce__WEBPACK_IMPORTED_MODULE_2___default.a, {
+    ssrFadeout: true,
     left: true,
     __source: {
       fileName: _jsxFileName,
@@ -1455,6 +1458,7 @@ function LocationSection() {
     },
     __self: this
   })), __jsx(react_reveal_Bounce__WEBPACK_IMPORTED_MODULE_2___default.a, {
+    ssrFadeout: true,
     left: true,
     __source: {
       fileName: _jsxFileName,
@@ -1623,6 +1627,8 @@ class Nav extends react__WEBPACK_IMPORTED_MODULE_1__["Component"] {
       },
       __self: this
     }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_3__["Typography"], {
+      gutterBottom: true,
+      className: "Nav-title",
       __source: {
         fileName: _jsxFileName,
         lineNumber: 28
@@ -1734,6 +1740,8 @@ class Nav extends react__WEBPACK_IMPORTED_MODULE_1__["Component"] {
       },
       __self: this
     }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_3__["Typography"], {
+      gutterBottom: true,
+      className: "Nav-title",
       __source: {
         fileName: _jsxFileName,
         lineNumber: 38
@@ -1815,40 +1823,48 @@ class Nav extends react__WEBPACK_IMPORTED_MODULE_1__["Component"] {
         lineNumber: 45
       },
       __self: this
-    }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
-      href: "/ticketPortal",
+    }, __jsx("div", {
+      className: "nav_box-5",
+      style: {
+        maxHeight: '50rem',
+        maxWidth: '35rem'
+      },
       __source: {
         fileName: _jsxFileName,
         lineNumber: 46
       },
       __self: this
-    }, __jsx(_Button__WEBPACK_IMPORTED_MODULE_5__["Button"], {
+    }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_3__["Typography"], {
+      className: "",
       __source: {
         fileName: _jsxFileName,
         lineNumber: 47
       },
       __self: this
-    }, "BOOK NOW")), __jsx("div", {
-      className: "nav_box-5",
+    }, "IMPORTANT DATES")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
+      href: "/ticketPortal",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 52
+        lineNumber: 49
       },
       __self: this
-    }, "IMPORTANT DATES"), __jsx("div", {
-      className: "nav_box-6",
+    }, __jsx(_Button__WEBPACK_IMPORTED_MODULE_5__["Button"], {
+      style: {
+        maxWidth: '35rem',
+        maxHeight: '15rem'
+      },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 55
+        lineNumber: 50
       },
       __self: this
-    }, "SOMTHING ELSE IMPORTANT"))), __jsx("h1", {
+    }, "BOOK NOW")))), __jsx("h1", {
       style: {
         alignSelf: "center"
       },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 63
+        lineNumber: 59
       },
       __self: this
     }, "Menu"), __jsx(_styles_NavStyles__WEBPACK_IMPORTED_MODULE_4__["Burger"], {
@@ -1856,7 +1872,7 @@ class Nav extends react__WEBPACK_IMPORTED_MODULE_1__["Component"] {
       onClick: this.handleClick,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 67
+        lineNumber: 63
       },
       __self: this
     }, __jsx(_styles_NavStyles__WEBPACK_IMPORTED_MODULE_4__["TopBun"], {
@@ -1864,7 +1880,7 @@ class Nav extends react__WEBPACK_IMPORTED_MODULE_1__["Component"] {
       sticky: this.props.sticky,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 68
+        lineNumber: 64
       },
       __self: this
     })));
@@ -2219,6 +2235,7 @@ function StudentSection() {
     },
     __self: this
   })), __jsx(react_reveal_Bounce__WEBPACK_IMPORTED_MODULE_2___default.a, {
+    ssrFadeout: true,
     right: true,
     __source: {
       fileName: _jsxFileName,
@@ -2401,6 +2418,7 @@ function ExhibitionSection() {
     },
     __self: this
   })), __jsx(react_reveal_Bounce__WEBPACK_IMPORTED_MODULE_2___default.a, {
+    ssrFadeout: true,
     left: true,
     __source: {
       fileName: _jsxFileName,
@@ -2492,7 +2510,7 @@ const StyledContainer = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a
 const StyledSection = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({
   displayName: "HomeStyles__StyledSection",
   componentId: "sc-1nylq97-1"
-})(["display:flex;flex-flow:column;justify-content:flex-start;margin:0 10rem;margin-top:5rem;margin-bottom:15rem;width:", ";@media ", "{width:", ";}h1{font-family:", ";font-size:4.4rem;color:", ";line-height:1.1;margin-bottom:3rem;}p{font-family:", ";font-size:2rem;color:", ";margin-bottom:1rem;}.innerContainer{position:relative;display:flex;flex-flow:column;margin-top:2rem;}.mediaBox{min-width:66.4rem;max-height:33rem;overflow:hidden;display:flex;justify-content:center;align-items:center;}"], props => props.theme.minWidth, _Page__WEBPACK_IMPORTED_MODULE_1__["device"].laptop, props => props.theme.mobileWidth, props => props.theme.MPSemibold, props => props.theme.primary, props => props.theme.MPLight, props => props.theme.primary);
+})(["display:flex;flex-flow:column;justify-content:flex-start;margin:0 10rem;margin-top:5rem;margin-bottom:15rem;width:", ";@media only screen  and (max-device-width:1300px)  and (-webkit-min-device-pixel-ratio:2){width:", ";}@media only screen  and (max-device-width:768px)  and (-webkit-min-device-pixel-ratio:2){width:", ";}h1{font-family:", ";font-size:4.4rem;color:", ";line-height:1.1;margin-bottom:3rem;}p{font-family:", ";font-size:2rem;color:", ";margin-bottom:1rem;}.innerContainer{position:relative;display:flex;flex-flow:column;margin-top:2rem;}.mediaBox{min-width:66.4rem;max-height:33rem;overflow:hidden;display:flex;justify-content:center;align-items:center;}"], props => props.theme.minWidth, props => props.theme.laptopWidth, props => props.theme.mobileWidth, props => props.theme.MPSemibold, props => props.theme.primary, props => props.theme.MPLight, props => props.theme.primary);
 
 /***/ }),
 
@@ -2519,7 +2537,7 @@ __webpack_require__.r(__webpack_exports__);
 const NavStyles = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({
   displayName: "NavStyles",
   componentId: "sc-1ltvdnj-0"
-})(["display:flex;position:absolute;transform:translateX(-20rem);z-index:200;a{font-family:", ";font-size:1.6rem;color:", ";margin:1rem;text-transform:uppercase;cursor:pointer;z-index:100;}"], props => props.theme.MPBold, props => props.sticky ? props.theme.white : props.theme.secondary);
+})(["display:flex;position:absolute;transform:translateX(-20rem);z-index:200;a{font-family:", ";font-size:3rem;color:", ";margin:1rem;text-transform:uppercase;cursor:pointer;z-index:100;@media only screen  and (max-device-width:1200px)  and (-webkit-min-device-pixel-ratio:2){font-size:2.3rem;}}"], props => props.theme.MPBold, props => props.sticky ? props.theme.white : props.theme.secondary);
 const Rotate360 = Object(styled_components__WEBPACK_IMPORTED_MODULE_0__["keyframes"])(["100%{transform:rotate(360deg);}"]);
 const Rotate = styled_components__WEBPACK_IMPORTED_MODULE_0___default()(_BaseAnimation__WEBPACK_IMPORTED_MODULE_1__["default"]).withConfig({
   displayName: "NavStyles__Rotate",
@@ -2552,7 +2570,7 @@ const HiddenNavBG = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div
 const HiddenContainer = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({
   displayName: "NavStyles__HiddenContainer",
   componentId: "sc-1ltvdnj-5"
-})(["position:absolute;right:-15rem;top:0;display:flex;min-width:90vw;min-height:90vh;padding:2rem;margin:2rem;transition:all .8s ease-in-out;transform:", ";.nav_box-1{border:2px solid white;padding:2rem;margin:2rem;display:flex;flex-flow:column;align-items:flex-start;}.nav_box-2{border:2px solid white;padding:2rem;margin:2rem;margin-right:auto;display:flex;flex-flow:column;align-items:flex-start;}.nav_box-3{border:2px solid white;padding:2rem;margin:2rem;display:flex;flex-flow:column;align-items:center;justify-content:space-around;}.nav_box-4{border:2px solid white;padding:2rem;margin:2rem;min-height:15rem;min-width:15rem;}.nav_box-5{border:2px solid white;padding:2rem;margin:2rem;min-height:15rem;min-width:15rem;}.nav_box-6{border:2px solid white;padding:2rem;margin:2rem;min-height:15rem;min-width:15rem;}"], props => props.isOpen ? null : 'translateX(-200rem)');
+})(["position:absolute;right:-15rem;top:0;display:flex;padding:2rem;margin:2rem;transition:all .8s ease-in-out;transform:", ";min-width:90vw;min-height:90vh;@media only screen  and (max-device-width:768px)  and (-webkit-min-device-pixel-ratio:2){min-height:30rem;}@media only screen  and (max-device-width:500px)  and (-webkit-min-device-pixel-ratio:2){flex-flow:column;margin:0;}.Nav-title{font-size:4rem;@media only screen  and (max-device-width:1200px)  and (-webkit-min-device-pixel-ratio:2){font-size:2.3rem;}}.Nav-title{margin-left:1rem;}.nav_box-1{flex:1 1 auto;border:2px solid white;padding:2rem;margin:2rem;display:flex;flex-flow:column;align-items:flex-start;}.nav_box-2{flex:1 1 auto;border:2px solid white;padding:2rem;margin:2rem;display:flex;flex-flow:column;align-items:flex-start;}.nav_box-3{flex:1 1 auto;border:2px solid white;padding:2rem;margin:2rem;display:flex;flex-flow:column;align-items:center;justify-content:space-around;}.nav_box-4{flex:1 1 auto;border:2px solid white;padding:2rem;margin:2rem;min-height:15rem;min-width:15rem;}.nav_box-5{flex:1 1 auto;border:2px solid white;padding:2rem;margin:2rem;min-height:15rem;min-width:15rem;}.nav_box-6{border:2px solid white;padding:2rem;margin:2rem;min-height:15rem;min-width:15rem;}"], props => props.isOpen ? null : 'translateX(-200rem)');
 
 /***/ }),
 

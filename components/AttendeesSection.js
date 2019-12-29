@@ -15,7 +15,7 @@ export default function AttendeesSection() {
                 <div className="mediaBox">
                     <img src="/images/pic1.png" alt="EuroBrake Greating" style={{ width: '100%', height: '100%' }} />
                 </div>
-                <Bounce right >
+                <Bounce ssrFadeout right >
                 <Card right>
                     <h1>Who attends Eurobrake</h1>
                     <Link href="/about">
