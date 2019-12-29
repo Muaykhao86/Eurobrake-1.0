@@ -21,12 +21,14 @@ const StyledPage = styled.div`
 
 const Content = styled.iframe`
     align-self: center;
-    margin-top: 2rem;
-    max-width: 100rem;
-    max-height: 100rem;
-    border: none;
+    display: flex;
+    
+    margin-top: 10rem;
+    min-width: 80rem;
+    min-height: 70rem;
+    border: 5px solid ${props => props.theme.primary};
     background-color: transparent;
-    /* overflow: hidden; */
+    padding: 3rem;
     text-decoration: none;
 `;
 

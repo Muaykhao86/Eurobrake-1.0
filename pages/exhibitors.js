@@ -55,7 +55,7 @@ export default class ExhibitorList extends Component {
             <HeroSection  max="65%" fs='9rem'>
                 EuroBrake 2020 Exhibitor Directory
             </HeroSection>
-            <StyledPage mt="10rem" >
+            <StyledPage  >
                 <h1>Get to know the exhibitors</h1>
                 <StyledExhibitors>
                     {exhibitors.map((company, i) => {

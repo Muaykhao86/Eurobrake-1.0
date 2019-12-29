@@ -19,6 +19,12 @@ const StyledPage = styled.div`
     background-color: ${props => props.theme.white};
     margin-top: 3rem;
 
+     @media only screen 
+  and (max-device-width: 768px) 
+  and (-webkit-min-device-pixel-ratio: 2) { 
+    width: ${props => props.theme.mobileWidth};    
+}
+
     .CCIBBox{
         max-width: 68rem;
         display: flex;
