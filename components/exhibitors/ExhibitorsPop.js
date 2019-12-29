@@ -26,9 +26,12 @@ justify-content: stretch;
 .paper{
 padding: 2rem;
 margin: 2rem;
+width: 30vw;
 
-@media ${device.tablet} {
-max-width: 50rem;
+  @media only screen 
+  and (max-device-width: 768px) 
+  and (-webkit-min-device-pixel-ratio: 2) { 
+    width: 70vw;  
 }
 
 
@@ -96,9 +99,9 @@ const fadeIn = keyframes`
   }
 `
 const StyledMapBox = styled.div`
-
+/* 
  min-width: 37.9rem;
-  min-height: 22.9rem;
+  min-height: 22.9rem; */
    border: 1px solid ${props => props.theme.primary};
   align-self: center;
   overflow: hidden;
