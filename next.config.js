@@ -1,4 +1,4 @@
-import withCss from '@zeit/next-css';
+const withCss = require('@zeit/next-css')
 
 
 export default withCss({

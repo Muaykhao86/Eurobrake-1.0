@@ -134,11 +134,14 @@ const url = {
 
 }
 
+
+// * NEED TO SORT OUT DYNAMIC ROUTING FOR EDITING A PAPER
 const Abstract = ({papers}) => (
 papers.map((paper, i) => (
     <StyledBox>
         <StyledActionArea>
             <Typography gutterBottom className="action-paper">{paper.papercode}</Typography>
+            <Link >
             <Button
                 bcolor="#134381"
                 background="#134381"
@@ -151,6 +154,7 @@ papers.map((paper, i) => (
                 <CreateIcon style={{ fontSize: '3rem', marginRight: '1rem' }} />
                 EDIT PAPER
             </Button>
+            </Link>
             <Button
                 bcolor="#134381"
                 background="#134381"
