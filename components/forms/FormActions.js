@@ -76,7 +76,8 @@ export async function SendFile({ csrf, file }) {
 export async function SendForm({ csrf, values, url }) {
     const form = JSON.stringify(values);
     const { logintoken } = cookie.get();
-    if (logintoken && csrf && formData) {
+        console.log({url, form});
+    if (logintoken && csrf && form) {
         try {
             const apiUrl = url;
             const response = await fetch(apiUrl, {
@@ -102,6 +103,7 @@ export async function SendForm({ csrf, values, url }) {
         }
     }
     if(url === 'https://prelude.eurobrake.net/login' ){
+        console.log({url, form});
         try {
             const response = await fetch(url, {
                 method: 'POST', 
