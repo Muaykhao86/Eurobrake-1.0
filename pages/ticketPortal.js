@@ -22,13 +22,14 @@ const StyledPage = styled.div`
 const Content = styled.iframe`
     align-self: center;
     display: flex;
-    
-    margin-top: 10rem;
-    min-width: 80rem;
-    min-height: 70rem;
-    border: 5px solid ${props => props.theme.primary};
+    flex: 1 1 auto;
+    margin-top: 5rem;
+    min-width: 70vw;
+    min-height: 75rem;
+    border: 30px solid ${props => props.theme.primary} ;
     background-color: transparent;
     padding: 3rem;
+    padding-top: 12rem;
     text-decoration: none;
 `;
 

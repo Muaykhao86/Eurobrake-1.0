@@ -205,9 +205,6 @@ export default () => (
             
             </div>
             <HotelBox />
-
-
-
             <Typography className="Discover-title" style={{fontSize: "2rem", marginBottom: "1rem"}} >Other hotels close to the venue are:</Typography>
             <Typography gutterBottom className="Discover" >AC Hotel Barcelona Forum -  <span className="Discover-it">2 minute walk from venue</span></Typography>
             <Typography gutterBottom className="Discover" >Occidental Atena Mar - <span className="Discover-it">10 minute walk from venue</span></Typography>

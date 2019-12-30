@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 5);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -6429,38 +6429,38 @@ const StyledPage = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div.
 const Content = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.iframe.withConfig({
   displayName: "ticketPortal__Content",
   componentId: "pmowy0-1"
-})(["align-self:center;display:flex;margin-top:10rem;min-width:80rem;min-height:70rem;border:5px solid ", ";background-color:transparent;padding:3rem;text-decoration:none;"], props => props.theme.primary);
+})(["align-self:center;display:flex;flex:1 1 auto;margin-top:5rem;min-width:70vw;min-height:75rem;border:30px solid ", ";background-color:transparent;padding:3rem;padding-top:12rem;text-decoration:none;"], props => props.theme.primary);
 /* harmony default export */ __webpack_exports__["default"] = (() => __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx(_components_HeroSection__WEBPACK_IMPORTED_MODULE_2__["default"], {
   t: "30rem",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 38
+    lineNumber: 39
   },
   __self: undefined
 }, "Book Now"), __jsx(StyledPage, {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 41
+    lineNumber: 42
   },
   __self: undefined
 }, __jsx("h1", {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 42
+    lineNumber: 43
   },
   __self: undefined
 }, "Book your tickets now"), __jsx(Content, {
   src: "https://www.eventsforce.net/fisita/14/register",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 43
+    lineNumber: 44
   },
   __self: undefined
 }))));
 
 /***/ }),
 
-/***/ 3:
+/***/ 5:
 /*!*************************************!*\
   !*** multi ./pages/ticketPortal.js ***!
   \*************************************/

@@ -69299,7 +69299,7 @@ var StyledPage = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div.w
 var Content = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].iframe.withConfig({
   displayName: "ticketPortal__Content",
   componentId: "pmowy0-1"
-})(["align-self:center;display:flex;margin-top:10rem;min-width:80rem;min-height:70rem;border:5px solid ", ";background-color:transparent;padding:3rem;text-decoration:none;"], function (props) {
+})(["align-self:center;display:flex;flex:1 1 auto;margin-top:5rem;min-width:70vw;min-height:75rem;border:30px solid ", ";background-color:transparent;padding:3rem;padding-top:12rem;text-decoration:none;"], function (props) {
   return props.theme.primary;
 });
 /* harmony default export */ __webpack_exports__["default"] = (function () {
@@ -69307,26 +69307,26 @@ var Content = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].iframe.w
     t: "30rem",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 38
+      lineNumber: 39
     },
     __self: this
   }, "Book Now"), __jsx(StyledPage, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 41
+      lineNumber: 42
     },
     __self: this
   }, __jsx("h1", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 42
+      lineNumber: 43
     },
     __self: this
   }, "Book your tickets now"), __jsx(Content, {
     src: "https://www.eventsforce.net/fisita/14/register",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 43
+      lineNumber: 44
     },
     __self: this
   })));
@@ -69334,7 +69334,7 @@ var Content = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].iframe.w
 
 /***/ }),
 
-/***/ 0:
+/***/ 4:
 /*!************************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2FticketPortal&absolutePagePath=%2Fmnt%2Fc%2FUsers%2FD.Hardiman%2Fdesktop%2Feurobrake%2Fpages%2FticketPortal.js ***!
   \************************************************************************************************************************************************************/
@@ -69357,5 +69357,5 @@ module.exports = dll_ea92a4d9664833a26066;
 
 /***/ })
 
-},[[0,"static/runtime/webpack.js"]]]);
+},[[4,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=ticketPortal.js.map

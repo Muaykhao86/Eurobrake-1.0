@@ -85,7 +85,7 @@ export default function HotelBox() {
 
                 <div className="Accomodation_hotel">
                     <div className="Accomodation_hotel-imageBox">
-                        <img src="/images/image3.png" alt="Hotel SB Diagonal Zero" />
+                        <img src="/images/hotelSB.png" alt="Hotel SB Diagonal Zero" />
                     </div>
                     <div className="Accomodation_hotel-primaryBox">
                         <Typography className="Accomodation_text-primary-title" >Hotel SB Diagonal Zero</Typography>
@@ -127,7 +127,7 @@ export default function HotelBox() {
 
                 <div className="Accomodation_hotel">
                     <div className="Accomodation_hotel-imageBox">
-                        <img src="/images/image2.png" alt="Hasperia Barcelona Del Mar" />
+                        <img src="/images/delMar.png" alt="Hasperia Barcelona Del Mar" />
                     </div>
                     <div className="Accomodation_hotel-primaryBox">
                         <Typography className="Accomodation_text-primary-title" >Hasperia Barcelona Del Mar</Typography>
@@ -167,7 +167,7 @@ export default function HotelBox() {
 
                 <div className="Accomodation_hotel">
                     <div className="Accomodation_hotel-imageBox">
-                        <img src="/images/image5.png" alt="Hotel Barcelona Condal Mar" />
+                        <img src="/images/conMar.png" alt="Hotel Barcelona Condal Mar" />
                     </div>
                     <div className="Accomodation_hotel-primaryBox">
                         <Typography className="Accomodation_text-primary-title" >Hotel Barcelona Condal Mar</Typography>

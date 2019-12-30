@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component, useState } from 'react'
 import Router from 'next/router';
 import cookies from 'next-cookies';
 import cookie from 'js-cookie';
@@ -19,6 +19,7 @@ import { StyledBanner, StyledContainer } from '../components/styles/PageStyles';
 import { GetForm } from '../components/forms/Get';
 import { SendFile } from '../components/Forms';
 import Popup from '../components/Popup';
+import OneForm from '../components/forms/OneForm';
 
 
 const StyledPage = styled.div`
@@ -190,6 +191,8 @@ class AuthorsAreaDash extends Component {
             formData: undefined,
             error: '',
             userLoggedIn: false,
+            editAbstract: false,
+            editProfile: false,
         }
     }
 
@@ -213,6 +216,7 @@ class AuthorsAreaDash extends Component {
     }
 
     render() {
+        const {editAbstract, editProfile} = this.state;
         const {firstname} = this.props.authorData.author;
         const {papers} = this.props.authorData;
         const data = this.props.authorData;
@@ -252,9 +256,9 @@ class AuthorsAreaDash extends Component {
                                 br="100rem"
                                 style={{ margin: ".5rem 0" }}
                                 fontSize="1.7rem"
-                                onClick={() => GetForm(url.editdef)}>
+                                onClick={() => this.setState({editProfile: true})}>
                                 <ExitToAppIcon style={{ fontSize: '3rem', marginRight: '.5rem' }} />
-                                Edit Definition
+                                Edit Profile
                     </Button>
 
                             <Button
@@ -270,9 +274,10 @@ class AuthorsAreaDash extends Component {
                     </Button>
                         </div>
                         <Typography gutterBottom className="authors-title" style={{ fontSize: '3rem', borderTop: '2px solid #134381', borderBottom: '2px solid #134381' }}>Your paper</Typography>
-                        {papers ?
-                            Abstract({papers})
-                             :
+                        { 
+                                 editAbstract || editProfile ? <OneForm/> : 
+                                 papaers ? Abstract({papers})
+                                                     :
                             <StyledBox>
                                 <Typography gutterBottom className="authors-it" style={{ fontSize: '2rem' }}>You haven't submitted any abstracts yet</Typography>
                             </StyledBox>

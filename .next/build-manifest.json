@@ -12,11 +12,11 @@
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],
-    "/ticketPortal": [
+    "/authorsArea": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],
-    "/welcome": [
+    "/ticketPortal": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ]
