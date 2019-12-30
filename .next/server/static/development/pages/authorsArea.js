@@ -4848,8 +4848,12 @@ async function SendForm({
   const {
     logintoken
   } = js_cookie__WEBPACK_IMPORTED_MODULE_1___default.a.get();
+  console.log({
+    url,
+    form
+  });
 
-  if (logintoken && csrf && formData) {
+  if (logintoken && csrf && form) {
     try {
       const apiUrl = url;
       const response = await isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_2___default()(apiUrl, {
@@ -4874,6 +4878,11 @@ async function SendForm({
   }
 
   if (url === 'https://prelude.eurobrake.net/login') {
+    console.log({
+      url,
+      form
+    });
+
     try {
       const response = await isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_2___default()(url, {
         method: 'POST',
@@ -4900,9 +4909,6 @@ async function SendForm({
       }
     } catch (error) {
       console.error('Failed to login, please try again', error);
-      this.setState({
-        error: error.message
-      });
     }
   }
 
@@ -5531,22 +5537,19 @@ const StyledForm = styled_components__WEBPACK_IMPORTED_MODULE_0___default()(form
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LoginForm", function() { return LoginForm; });
-/* harmony import */ var _babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/core-js/json/stringify */ "./node_modules/@babel/runtime-corejs2/core-js/json/stringify.js");
-/* harmony import */ var _babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var formik__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! formik */ "formik");
-/* harmony import */ var formik__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(formik__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var formik_material_ui__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! formik-material-ui */ "formik-material-ui");
-/* harmony import */ var formik_material_ui__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(formik_material_ui__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _Formstyles__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Formstyles */ "./components/forms/Formstyles.js");
-/* harmony import */ var _Button__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../Button */ "./components/Button.js");
-/* harmony import */ var _FormActions__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./FormActions */ "./components/forms/FormActions.js");
-/* harmony import */ var _material_ui_core__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @material-ui/core */ "@material-ui/core");
-/* harmony import */ var _material_ui_core__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core__WEBPACK_IMPORTED_MODULE_7__);
-
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var formik__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! formik */ "formik");
+/* harmony import */ var formik__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(formik__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var formik_material_ui__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! formik-material-ui */ "formik-material-ui");
+/* harmony import */ var formik_material_ui__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(formik_material_ui__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _Formstyles__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Formstyles */ "./components/forms/Formstyles.js");
+/* harmony import */ var _Button__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../Button */ "./components/Button.js");
+/* harmony import */ var _FormActions__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./FormActions */ "./components/forms/FormActions.js");
+/* harmony import */ var _material_ui_core__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @material-ui/core */ "@material-ui/core");
+/* harmony import */ var _material_ui_core__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core__WEBPACK_IMPORTED_MODULE_6__);
 var _jsxFileName = "/mnt/c/Users/D.Hardiman/desktop/eurobrake/components/forms/LoginForm.js";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 
@@ -5554,24 +5557,17 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 
 
 
-const url = 'https://prelude.eurobrake.net/login';
+const url = 'https://prelude.eurobrake.net/login'; // async (values, actions) => {
+//                 await SendForm({ values, url })
+//             }
+
 const LoginForm = () => {
-  return __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Formik"], {
+  return __jsx(formik__WEBPACK_IMPORTED_MODULE_1__["Formik"], {
     initialValues: emptyInitial,
-    onSubmit: async (values, actions) => {
-      await Object(_FormActions__WEBPACK_IMPORTED_MODULE_6__["SendForm"])({
-        values,
-        url
-      });
-      setTimeout(() => {
-        alert(_babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_0___default()(values, null, 2));
-        actions.setSubmitting(false);
-      }, 1000);
-    },
     enableReinitialize: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 14
+      lineNumber: 17
     },
     __self: undefined
   }, ({
@@ -5579,17 +5575,17 @@ const LoginForm = () => {
     handleChange
   }) => {
     console.log(values);
-    return __jsx(_Formstyles__WEBPACK_IMPORTED_MODULE_4__["StyledForm"], {
+    return __jsx(_Formstyles__WEBPACK_IMPORTED_MODULE_3__["StyledForm"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 28
+        lineNumber: 24
       },
       __self: undefined
     }, __jsx("div", {
       className: "form-field",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 29
+        lineNumber: 25
       },
       __self: undefined
     }, __jsx("label", {
@@ -5597,10 +5593,10 @@ const LoginForm = () => {
       className: "form-label",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 30
+        lineNumber: 26
       },
       __self: undefined
-    }, "Email:"), __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Field"], {
+    }, "Email:"), __jsx(formik__WEBPACK_IMPORTED_MODULE_1__["Field"], {
       className: "form-input",
       onClick: handleChange,
       value: values.login_email,
@@ -5608,17 +5604,17 @@ const LoginForm = () => {
         color: '#134381'
       },
       name: "login_email",
-      component: formik_material_ui__WEBPACK_IMPORTED_MODULE_3__["TextField"],
+      component: formik_material_ui__WEBPACK_IMPORTED_MODULE_2__["TextField"],
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 35
+        lineNumber: 31
       },
       __self: undefined
     })), __jsx("div", {
       className: "form-field",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 45
+        lineNumber: 41
       },
       __self: undefined
     }, __jsx("label", {
@@ -5626,10 +5622,10 @@ const LoginForm = () => {
       className: "form-label",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 46
+        lineNumber: 42
       },
       __self: undefined
-    }, "Password:"), __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Field"], {
+    }, "Password:"), __jsx(formik__WEBPACK_IMPORTED_MODULE_1__["Field"], {
       className: "form-input",
       onClick: handleChange,
       value: values.login_password,
@@ -5637,14 +5633,17 @@ const LoginForm = () => {
         color: '#134381'
       },
       name: "login_password",
-      component: formik_material_ui__WEBPACK_IMPORTED_MODULE_3__["TextField"],
+      component: formik_material_ui__WEBPACK_IMPORTED_MODULE_2__["TextField"],
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 51
+        lineNumber: 47
       },
       __self: undefined
-    })), __jsx(_Button__WEBPACK_IMPORTED_MODULE_5__["Button"], {
-      type: "submit",
+    })), __jsx(_Button__WEBPACK_IMPORTED_MODULE_4__["Button"], {
+      onClick: () => Object(_FormActions__WEBPACK_IMPORTED_MODULE_5__["SendForm"])({
+        url,
+        values
+      }),
       bcolor: "#134381",
       padding: "0.5rem 2rem",
       background: "#134381",
@@ -5655,15 +5654,14 @@ const LoginForm = () => {
       fontSize: "1.7rem",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 61
+        lineNumber: 57
       },
       __self: undefined
-    }, "Login"), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_7__["Typography"], {
+    }, "Login"), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_6__["Typography"], {
       className: "login_form-link",
-      href: "",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 70
+        lineNumber: 67
       },
       __self: undefined
     }, "Forgotten your password?"));

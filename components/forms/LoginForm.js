@@ -8,18 +8,14 @@ import { Typography } from '@material-ui/core';
 
 
 const url = 'https://prelude.eurobrake.net/login'
+// async (values, actions) => {
+//                 await SendForm({ values, url })
+//             }
 
 export const LoginForm = () => {
     return (
         <Formik
             initialValues={emptyInitial}
-            onSubmit={async (values, actions) => {
-                await SendForm({ values, url })
-                setTimeout(() => {
-                    alert(JSON.stringify(values, null, 2));
-                    actions.setSubmitting(false);
-                }, 1000)
-            }}
             enableReinitialize
         >
             {({ values, handleChange }) => {
@@ -58,7 +54,8 @@ export const LoginForm = () => {
                             />
                         </div>
 
-                        <Button type="submit"
+                        <Button 
+                            onClick={() => SendForm({url, values})}
                             bcolor="#134381"
                             padding="0.5rem 2rem"
                             background="#134381"
@@ -67,7 +64,7 @@ export const LoginForm = () => {
                             fontSize="1.7rem">
                             Login
                         </Button>
-                        <Typography className="login_form-link" href="">Forgotten your password?</Typography>
+                        <Typography className="login_form-link">Forgotten your password?</Typography>
                     </StyledForm>
                 )
             }}

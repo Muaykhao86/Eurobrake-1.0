@@ -130,7 +130,6 @@ export async function SendForm({ csrf, values, url }) {
             console.error(
                 'Failed to login, please try again', error
             )
-            this.setState({ error: error.message });
          }
         }
     return
