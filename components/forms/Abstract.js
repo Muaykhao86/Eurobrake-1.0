@@ -522,7 +522,6 @@ export const AbstractForm = (editPaper = false) => {
                                 br="100rem"
                                 style={{ margin: ".5rem 0" }}
                                 fontSize="1.7rem">Submit</Button>
-                        {console.log('main', values.is_presenting_author, 'second', values.secondary_authors)}
                     </StyledForm>
                 )
             }}

@@ -7,6 +7,7 @@ import {AbstractSchema} from './FormControl';
 
 import {Button} from '../Button';
 import {SendForm} from './FormActions';
+import { Typography } from '@material-ui/core';
 
 
 const url =  'https://prelude.eurobrake.net/login'
@@ -22,11 +23,10 @@ return (
                     actions.setSubmitting(false);
                 }, 1000)
             }}
-            validationSchema={AbstractSchema}
             enableReinitialize
         >
             {({ values, isSubmitting, isValidating, handleChange }) => {
-
+                    console.log(values)
                 return (
                     <StyledForm>
                         <div className="form-field">
@@ -70,7 +70,7 @@ return (
                                 fontSize="1.7rem">
                                 Login
                         </Button>
-                        <a className="login_form-link" href="">Forgotten your password?</a>
+                        <Typography className="login_form-link" href="">Forgotten your password?</Typography>
                     </StyledForm>
                 )
             }}
