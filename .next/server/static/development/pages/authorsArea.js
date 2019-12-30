@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 4);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -3083,7 +3083,7 @@ const AbstractForm = (editPaper = false) => {
         lineNumber: 518
       },
       __self: undefined
-    }, "Submit"), console.log('main', values.is_presenting_author, 'second', values.secondary_authors));
+    }, "Submit"));
   });
 };
 const presets = {
@@ -3468,18 +3468,6 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 const Authorprofile = ({
   editPaper = false
 }) => {
-  const {
-    0: presenter,
-    1: setPresenter
-  } = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])(''); // if edit = true send back a preset form if not send a blank
-
-  console.log({
-    editPaper
-  }); // ! NEED TO SORTR AND SAVE PRESETS
-
-  Object(react__WEBPACK_IMPORTED_MODULE_1__["useEffect"])(() => {
-    console.log('presenter is changing');
-  }, [presenter]);
   return __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Formik"], {
     initialValues: editPaper ? presets : emptyInitial,
     onSubmit: (values, actions) => {
@@ -3491,7 +3479,7 @@ const Authorprofile = ({
     enableReinitialize: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 24
+      lineNumber: 14
     },
     __self: undefined
   }, ({
@@ -3501,14 +3489,14 @@ const Authorprofile = ({
     return __jsx(_Formstyles__WEBPACK_IMPORTED_MODULE_8__["StyledForm"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 37
+        lineNumber: 27
       },
       __self: undefined
     }, __jsx("div", {
       className: "form-field",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 38
+        lineNumber: 28
       },
       __self: undefined
     }, __jsx("label", {
@@ -3516,7 +3504,7 @@ const Authorprofile = ({
       className: "form-label",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 39
+        lineNumber: 29
       },
       __self: undefined
     }, "Title"), __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Field"], {
@@ -3530,7 +3518,7 @@ const Authorprofile = ({
       component: formik_material_ui__WEBPACK_IMPORTED_MODULE_3__["Select"],
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 44
+        lineNumber: 34
       },
       __self: undefined
     }, _FormSelects__WEBPACK_IMPORTED_MODULE_6__["titles"].map((option, i) => __jsx("option", {
@@ -3542,14 +3530,14 @@ const Authorprofile = ({
       value: option.value,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 53
+        lineNumber: 43
       },
       __self: undefined
     }, option.label)))), __jsx("div", {
       className: "form-field",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 56
+        lineNumber: 46
       },
       __self: undefined
     }, __jsx("label", {
@@ -3557,7 +3545,7 @@ const Authorprofile = ({
       className: "form-label",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 57
+        lineNumber: 47
       },
       __self: undefined
     }, "First Name:"), __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Field"], {
@@ -3571,14 +3559,14 @@ const Authorprofile = ({
       component: formik_material_ui__WEBPACK_IMPORTED_MODULE_3__["TextField"],
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 62
+        lineNumber: 52
       },
       __self: undefined
     })), __jsx("div", {
       className: "form-field",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 71
+        lineNumber: 61
       },
       __self: undefined
     }, __jsx("label", {
@@ -3586,7 +3574,7 @@ const Authorprofile = ({
       className: "form-label",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 72
+        lineNumber: 62
       },
       __self: undefined
     }, "Last Name:"), __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Field"], {
@@ -3600,14 +3588,14 @@ const Authorprofile = ({
       component: formik_material_ui__WEBPACK_IMPORTED_MODULE_3__["TextField"],
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 77
+        lineNumber: 67
       },
       __self: undefined
     })), __jsx("div", {
       className: "form-field",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 86
+        lineNumber: 76
       },
       __self: undefined
     }, __jsx("label", {
@@ -3615,7 +3603,7 @@ const Authorprofile = ({
       className: "form-label",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 87
+        lineNumber: 77
       },
       __self: undefined
     }, "Email:"), __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Field"], {
@@ -3629,14 +3617,14 @@ const Authorprofile = ({
       component: formik_material_ui__WEBPACK_IMPORTED_MODULE_3__["TextField"],
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 92
+        lineNumber: 82
       },
       __self: undefined
     })), __jsx("div", {
       className: "form-field",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 101
+        lineNumber: 91
       },
       __self: undefined
     }, __jsx("label", {
@@ -3644,7 +3632,7 @@ const Authorprofile = ({
       className: "form-label",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 102
+        lineNumber: 92
       },
       __self: undefined
     }, "Job Title:"), __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Field"], {
@@ -3658,14 +3646,14 @@ const Authorprofile = ({
       component: formik_material_ui__WEBPACK_IMPORTED_MODULE_3__["TextField"],
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 107
+        lineNumber: 97
       },
       __self: undefined
     })), __jsx("div", {
       className: "form-field",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 116
+        lineNumber: 106
       },
       __self: undefined
     }, __jsx("label", {
@@ -3673,7 +3661,7 @@ const Authorprofile = ({
       className: "form-label",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 117
+        lineNumber: 107
       },
       __self: undefined
     }, "Company:"), __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Field"], {
@@ -3687,14 +3675,14 @@ const Authorprofile = ({
       component: formik_material_ui__WEBPACK_IMPORTED_MODULE_3__["TextField"],
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 122
+        lineNumber: 112
       },
       __self: undefined
     })), __jsx("div", {
       className: "form-field",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 131
+        lineNumber: 121
       },
       __self: undefined
     }, __jsx("label", {
@@ -3702,7 +3690,7 @@ const Authorprofile = ({
       className: "form-label",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 132
+        lineNumber: 122
       },
       __self: undefined
     }, "Address:"), __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Field"], {
@@ -3716,14 +3704,14 @@ const Authorprofile = ({
       component: formik_material_ui__WEBPACK_IMPORTED_MODULE_3__["TextField"],
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 137
+        lineNumber: 127
       },
       __self: undefined
     })), __jsx("div", {
       className: "form-field",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 146
+        lineNumber: 136
       },
       __self: undefined
     }, __jsx("label", {
@@ -3731,7 +3719,7 @@ const Authorprofile = ({
       className: "form-label",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 147
+        lineNumber: 137
       },
       __self: undefined
     }), __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Field"], {
@@ -3745,14 +3733,14 @@ const Authorprofile = ({
       component: formik_material_ui__WEBPACK_IMPORTED_MODULE_3__["TextField"],
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 152
+        lineNumber: 142
       },
       __self: undefined
     })), __jsx("div", {
       className: "form-field",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 161
+        lineNumber: 151
       },
       __self: undefined
     }, __jsx("label", {
@@ -3760,7 +3748,7 @@ const Authorprofile = ({
       className: "form-label",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 162
+        lineNumber: 152
       },
       __self: undefined
     }), __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Field"], {
@@ -3774,14 +3762,14 @@ const Authorprofile = ({
       component: formik_material_ui__WEBPACK_IMPORTED_MODULE_3__["TextField"],
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 167
+        lineNumber: 157
       },
       __self: undefined
     })), __jsx("div", {
       className: "form-field",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 176
+        lineNumber: 166
       },
       __self: undefined
     }, __jsx("label", {
@@ -3789,7 +3777,7 @@ const Authorprofile = ({
       className: "form-label",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 177
+        lineNumber: 167
       },
       __self: undefined
     }, "City:"), __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Field"], {
@@ -3803,14 +3791,14 @@ const Authorprofile = ({
       component: formik_material_ui__WEBPACK_IMPORTED_MODULE_3__["TextField"],
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 182
+        lineNumber: 172
       },
       __self: undefined
     })), __jsx("div", {
       className: "form-field",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 191
+        lineNumber: 181
       },
       __self: undefined
     }, __jsx("label", {
@@ -3818,7 +3806,7 @@ const Authorprofile = ({
       className: "form-label",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 192
+        lineNumber: 182
       },
       __self: undefined
     }, "State/county/province:"), __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Field"], {
@@ -3832,14 +3820,14 @@ const Authorprofile = ({
       component: formik_material_ui__WEBPACK_IMPORTED_MODULE_3__["TextField"],
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 197
+        lineNumber: 187
       },
       __self: undefined
     })), __jsx("div", {
       className: "form-field",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 206
+        lineNumber: 196
       },
       __self: undefined
     }, __jsx("label", {
@@ -3847,7 +3835,7 @@ const Authorprofile = ({
       className: "form-label",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 207
+        lineNumber: 197
       },
       __self: undefined
     }, "Postal/Zip code:"), __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Field"], {
@@ -3861,14 +3849,14 @@ const Authorprofile = ({
       component: formik_material_ui__WEBPACK_IMPORTED_MODULE_3__["TextField"],
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 212
+        lineNumber: 202
       },
       __self: undefined
     })), __jsx("div", {
       className: "form-field",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 221
+        lineNumber: 211
       },
       __self: undefined
     }, __jsx("label", {
@@ -3876,7 +3864,7 @@ const Authorprofile = ({
       className: "form-label",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 222
+        lineNumber: 212
       },
       __self: undefined
     }, "Country"), __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Field"], {
@@ -3890,7 +3878,7 @@ const Authorprofile = ({
       component: formik_material_ui__WEBPACK_IMPORTED_MODULE_3__["Select"],
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 227
+        lineNumber: 217
       },
       __self: undefined
     }, _FormSelects__WEBPACK_IMPORTED_MODULE_6__["countries"].map((option, i) => __jsx("option", {
@@ -3902,14 +3890,14 @@ const Authorprofile = ({
       value: option.value,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 236
+        lineNumber: 226
       },
       __self: undefined
     }, option.label)))), __jsx("div", {
       className: "form-field",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 239
+        lineNumber: 229
       },
       __self: undefined
     }, __jsx("label", {
@@ -3917,7 +3905,7 @@ const Authorprofile = ({
       className: "form-label",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 240
+        lineNumber: 230
       },
       __self: undefined
     }, "Phone:"), __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Field"], {
@@ -3931,14 +3919,14 @@ const Authorprofile = ({
       component: formik_material_ui__WEBPACK_IMPORTED_MODULE_3__["TextField"],
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 245
+        lineNumber: 235
       },
       __self: undefined
     })), __jsx("div", {
       className: "form-field",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 254
+        lineNumber: 244
       },
       __self: undefined
     }, __jsx("label", {
@@ -3946,7 +3934,7 @@ const Authorprofile = ({
       className: "form-label",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 255
+        lineNumber: 245
       },
       __self: undefined
     }, "Fax:"), __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Field"], {
@@ -3960,14 +3948,14 @@ const Authorprofile = ({
       component: formik_material_ui__WEBPACK_IMPORTED_MODULE_3__["TextField"],
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 260
+        lineNumber: 250
       },
       __self: undefined
     })), __jsx("div", {
       className: "form-field",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 269
+        lineNumber: 259
       },
       __self: undefined
     }, __jsx("label", {
@@ -3975,7 +3963,7 @@ const Authorprofile = ({
       className: "form-label",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 270
+        lineNumber: 260
       },
       __self: undefined
     }, "Choose a Password:"), __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Field"], {
@@ -3989,14 +3977,14 @@ const Authorprofile = ({
       component: formik_material_ui__WEBPACK_IMPORTED_MODULE_3__["TextField"],
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 275
+        lineNumber: 265
       },
       __self: undefined
     })), __jsx("div", {
       className: "form-field",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 284
+        lineNumber: 274
       },
       __self: undefined
     }, __jsx("label", {
@@ -4004,7 +3992,7 @@ const Authorprofile = ({
       className: "form-label",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 285
+        lineNumber: 275
       },
       __self: undefined
     }, "Confirm password:"), __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Field"], {
@@ -4018,7 +4006,7 @@ const Authorprofile = ({
       component: formik_material_ui__WEBPACK_IMPORTED_MODULE_3__["TextField"],
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 290
+        lineNumber: 280
       },
       __self: undefined
     })), __jsx(_Button__WEBPACK_IMPORTED_MODULE_4__["Button"], {
@@ -4033,7 +4021,7 @@ const Authorprofile = ({
       fontSize: "1.7rem",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 301
+        lineNumber: 291
       },
       __self: undefined
     }, "Submit"), console.log('main', values.is_presenting_author, 'second', values.secondary_authors));
@@ -5549,12 +5537,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var formik__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! formik */ "formik");
 /* harmony import */ var formik__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(formik__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _Formstyles__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Formstyles */ "./components/forms/Formstyles.js");
-/* harmony import */ var _material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @material-ui/core/TextField */ "@material-ui/core/TextField");
-/* harmony import */ var _material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _FormControl__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./FormControl */ "./components/forms/FormControl.js");
-/* harmony import */ var _Button__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../Button */ "./components/Button.js");
-/* harmony import */ var _FormActions__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./FormActions */ "./components/forms/FormActions.js");
+/* harmony import */ var formik_material_ui__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! formik-material-ui */ "formik-material-ui");
+/* harmony import */ var formik_material_ui__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(formik_material_ui__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _Formstyles__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Formstyles */ "./components/forms/Formstyles.js");
+/* harmony import */ var _Button__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../Button */ "./components/Button.js");
+/* harmony import */ var _FormActions__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./FormActions */ "./components/forms/FormActions.js");
+/* harmony import */ var _material_ui_core__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @material-ui/core */ "@material-ui/core");
+/* harmony import */ var _material_ui_core__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core__WEBPACK_IMPORTED_MODULE_7__);
 
 var _jsxFileName = "/mnt/c/Users/D.Hardiman/desktop/eurobrake/components/forms/LoginForm.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
@@ -5570,7 +5559,7 @@ const LoginForm = () => {
   return __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Formik"], {
     initialValues: emptyInitial,
     onSubmit: async (values, actions) => {
-      await Object(_FormActions__WEBPACK_IMPORTED_MODULE_7__["SendForm"])({
+      await Object(_FormActions__WEBPACK_IMPORTED_MODULE_6__["SendForm"])({
         values,
         url
       });
@@ -5579,30 +5568,28 @@ const LoginForm = () => {
         actions.setSubmitting(false);
       }, 1000);
     },
-    validationSchema: _FormControl__WEBPACK_IMPORTED_MODULE_5__["AbstractSchema"],
     enableReinitialize: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 16
+      lineNumber: 14
     },
     __self: undefined
   }, ({
     values,
-    isSubmitting,
-    isValidating,
     handleChange
   }) => {
-    return __jsx(_Formstyles__WEBPACK_IMPORTED_MODULE_3__["StyledForm"], {
+    console.log(values);
+    return __jsx(_Formstyles__WEBPACK_IMPORTED_MODULE_4__["StyledForm"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 31
+        lineNumber: 28
       },
       __self: undefined
     }, __jsx("div", {
       className: "form-field",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 32
+        lineNumber: 29
       },
       __self: undefined
     }, __jsx("label", {
@@ -5610,7 +5597,7 @@ const LoginForm = () => {
       className: "form-label",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 33
+        lineNumber: 30
       },
       __self: undefined
     }, "Email:"), __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Field"], {
@@ -5621,17 +5608,17 @@ const LoginForm = () => {
         color: '#134381'
       },
       name: "login_email",
-      component: _material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_4___default.a,
+      component: formik_material_ui__WEBPACK_IMPORTED_MODULE_3__["TextField"],
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 38
+        lineNumber: 35
       },
       __self: undefined
     })), __jsx("div", {
       className: "form-field",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 48
+        lineNumber: 45
       },
       __self: undefined
     }, __jsx("label", {
@@ -5639,7 +5626,7 @@ const LoginForm = () => {
       className: "form-label",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 49
+        lineNumber: 46
       },
       __self: undefined
     }, "Password:"), __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Field"], {
@@ -5650,13 +5637,13 @@ const LoginForm = () => {
         color: '#134381'
       },
       name: "login_password",
-      component: _material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_4___default.a,
+      component: formik_material_ui__WEBPACK_IMPORTED_MODULE_3__["TextField"],
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 54
+        lineNumber: 51
       },
       __self: undefined
-    })), __jsx(_Button__WEBPACK_IMPORTED_MODULE_6__["Button"], {
+    })), __jsx(_Button__WEBPACK_IMPORTED_MODULE_5__["Button"], {
       type: "submit",
       bcolor: "#134381",
       padding: "0.5rem 2rem",
@@ -5668,15 +5655,15 @@ const LoginForm = () => {
       fontSize: "1.7rem",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 64
+        lineNumber: 61
       },
       __self: undefined
-    }, "Login"), __jsx("a", {
+    }, "Login"), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_7__["Typography"], {
       className: "login_form-link",
       href: "",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 73
+        lineNumber: 70
       },
       __self: undefined
     }, "Forgotten your password?"));
@@ -11401,7 +11388,7 @@ const withAuthSync = WrappedComponent => {
 
 /***/ }),
 
-/***/ 3:
+/***/ 4:
 /*!************************************!*\
   !*** multi ./pages/authorsArea.js ***!
   \************************************/
@@ -11553,17 +11540,6 @@ module.exports = require("@material-ui/core/TableCell");
 /***/ (function(module, exports) {
 
 module.exports = require("@material-ui/core/TableRow");
-
-/***/ }),
-
-/***/ "@material-ui/core/TextField":
-/*!**********************************************!*\
-  !*** external "@material-ui/core/TextField" ***!
-  \**********************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = require("@material-ui/core/TextField");
 
 /***/ }),
 

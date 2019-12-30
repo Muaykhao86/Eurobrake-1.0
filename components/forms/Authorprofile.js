@@ -9,17 +9,7 @@ import {StyledForm} from './Formstyles';
 
 
 export const Authorprofile = ({editPaper = false}) => {
-    const [presenter, setPresenter] = useState('');
-    // if edit = true send back a preset form if not send a blank
-    console.log({editPaper})
-
-    // ! NEED TO SORTR AND SAVE PRESETS
-    useEffect(() => {
-
-        console.log('presenter is changing')
-
-    }, [presenter])
-
+  
     return (
         <Formik
             initialValues={editPaper ? presets : emptyInitial }
@@ -31,7 +21,7 @@ export const Authorprofile = ({editPaper = false}) => {
             }}
             enableReinitialize
         >
-            {({ values, handleChange, }) => {
+            {({ values, handleChange}) => {
 
                 return (
                     <StyledForm>
