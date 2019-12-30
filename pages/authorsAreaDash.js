@@ -16,8 +16,8 @@ import { withAuthSync, logout, login } from '../utils/auth'
 import HeroSection from '../components/HeroSection';
 import { Button } from '../components/Button';
 import { StyledBanner, StyledContainer } from '../components/styles/PageStyles';
-import { GetForm } from '../components/forms/Get';
-import { SendFile } from '../components/Forms';
+import { GetForm } from '../components/forms/FormActions';
+import { SendFile } from '../components/forms/Abstract';
 import Popup from '../components/Popup';
 import OneForm from '../components/forms/OneForm';
 
@@ -128,12 +128,6 @@ const FilledBanner = () => (
     </StyledBanner>
 )
 
-const url = {
-    edit: 'https://prelude.eurobrake.net/edit/EB2020-MDS-002',
-    editdef: 'https://prelude.eurobrake.net/edit/EB2020-MDS-002?definition=1',
-    upload: 'https://prelude.eurobrake.net/upload',
-
-}
 
 
 // * NEED TO SORT OUT DYNAMIC ROUTING FOR EDITING A PAPER
@@ -295,7 +289,7 @@ class AuthorsAreaDash extends Component {
 
 AuthorsAreaDash.getInitialProps = async ctx => {
     // We use `nextCookie` to get the cookie and pass the token to the frontend in the `props`.
-    const { logintoken } = cookies(ctx) ;
+    const { logintoken } = cookies(ctx) || {} ;
     const apiUrl = 'https://prelude.eurobrake.net/dashboard ';
     const redirectOnError = () =>
         process.browser

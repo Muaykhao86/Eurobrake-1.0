@@ -32,10 +32,14 @@ export const Button = styled.a`
     cursor: pointer;
 }
 &:hover{
-    box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.5);
-    transform: translateY(-.3rem);
-    color: #FFF;
-    background-color: #12377D;
+    box-shadow: ${props => props.bs ? 
+    props.bs : '0 2.5rem 4rem rgba(0, 0, 0, 0.5)'};
+    transform: ${props => props.transform ?
+    props.transform : 'translateY(-.3rem)'};
+    color: ${props => props.HColor ? 
+    props.Hcolor : '#FFF'};
+    background-color: ${props => props.HBColor ? 
+    props.HBColor : '#12377D'};
 }
 &::after{
     transform: scalex(1.4) scaleY(1.6);

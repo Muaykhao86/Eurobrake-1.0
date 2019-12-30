@@ -5,7 +5,7 @@ import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
-import {GetForm, SendFile} from './Forms';
+import {GetForm, SendFile} from './forms/FormActions';
 
 
 export default function Popup(props) {

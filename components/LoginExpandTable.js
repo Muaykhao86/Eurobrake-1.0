@@ -9,8 +9,7 @@ import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
 import TableCell from '@material-ui/core/TableCell';
 import TableRow from '@material-ui/core/TableRow';
-import Login from '../components/login';
-import {AbstractForm} from '../components/Forms';
+import OneForm from './forms/OneForm';
 
 
 
@@ -99,9 +98,7 @@ export default function LoginExpandTable() {
     setExpanded(newExpanded ? panel : false);
   };
 
-  function createData(days, Early, Full) {
-    return { days, Early, Full };
-  }
+
   return (
     <div>
       <ExpansionPanel square expanded={expanded === 'panel1'} onChange={handleChange('panel1')} style={{ boxShadow: '0 0 0 0 rgba(0,0,0,0)' }}>
@@ -115,7 +112,7 @@ export default function LoginExpandTable() {
             : null}
         </ExpansionPanelSummary>
         <ExpansionPanelDetails>
-                 <Login />
+                 <OneForm form='login'/>
         </ExpansionPanelDetails>
       </ExpansionPanel>
       <ExpansionPanel square expanded={expanded === 'panel2'} onChange={handleChange('panel2')} style={{ boxShadow: '0 0 0 0 rgba(0,0,0,0)' }}>
@@ -129,7 +126,7 @@ export default function LoginExpandTable() {
             : null}
         </ExpansionPanelSummary>
         <ExpansionPanelDetails>
-          <AbstractForm/>
+          <OneForm form='author' />
         </ExpansionPanelDetails>
       </ExpansionPanel>
     </div>

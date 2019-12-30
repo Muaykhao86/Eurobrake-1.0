@@ -115,7 +115,7 @@ __webpack_require__.r(__webpack_exports__);
 const Button = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.a.withConfig({
   displayName: "Button",
   componentId: "sc-1t6v16c-0"
-})(["&,&:link,&:visited{display:flex;justify-content:center;align-items:center;text-align:center;text-transform:uppercase;text-decoration:none;font-size:", ";color:", ";background:", ";border:1px solid ", ";border-radius:", ";font-family:", ";letter-spacing:0;padding:", ";transition:all .2s;cursor:pointer;}&:hover{box-shadow:0 2.5rem 4rem rgba(0,0,0,0.5);transform:translateY(-.3rem);color:#FFF;background-color:#12377D;}&::after{transform:scalex(1.4) scaleY(1.6);opacity:0;}&:focus{outline:none;}&:active{outline:none;transform:translateY(-.1rem);box-shadow:0 2rem 2rem rgba(0,0,0,0.5);}"], props => props.fontSize || '2.1rem', props => props.color || props.theme.white, props => props.background || 'transparent', props => props.bcolor || props.theme.white, props => props.br || '0', props => props.theme.MPBold, props => props.padding || '1.5rem 4rem'); // const ButtonLink = React.forwardRef(({ className, href, hrefAs, children, prefetch }, ref) => (
+})(["&,&:link,&:visited{display:flex;justify-content:center;align-items:center;text-align:center;text-transform:uppercase;text-decoration:none;font-size:", ";color:", ";background:", ";border:1px solid ", ";border-radius:", ";font-family:", ";letter-spacing:0;padding:", ";transition:all .2s;cursor:pointer;}&:hover{box-shadow:", ";transform:", ";color:", ";background-color:", ";}&::after{transform:scalex(1.4) scaleY(1.6);opacity:0;}&:focus{outline:none;}&:active{outline:none;transform:translateY(-.1rem);box-shadow:0 2rem 2rem rgba(0,0,0,0.5);}"], props => props.fontSize || '2.1rem', props => props.color || props.theme.white, props => props.background || 'transparent', props => props.bcolor || props.theme.white, props => props.br || '0', props => props.theme.MPBold, props => props.padding || '1.5rem 4rem', props => props.bs ? props.bs : '0 2.5rem 4rem rgba(0, 0, 0, 0.5)', props => props.transform ? props.transform : 'translateY(-.3rem)', props => props.HColor ? props.Hcolor : '#FFF', props => props.HBColor ? props.HBColor : '#12377D'); // const ButtonLink = React.forwardRef(({ className, href, hrefAs, children, prefetch }, ref) => (
 //     <Link href={href} as={hrefAs} prefetch ref={ref}>
 //         <a className={className}>
 //             {children}
@@ -810,2017 +810,6 @@ function Footer() {
 
 /***/ }),
 
-/***/ "./components/Forms.js":
-/*!*****************************!*\
-  !*** ./components/Forms.js ***!
-  \*****************************/
-/*! exports provided: GetForm, SendFile, SendForm, AbstractForm */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GetForm", function() { return GetForm; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SendFile", function() { return SendFile; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SendForm", function() { return SendForm; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AbstractForm", function() { return AbstractForm; });
-/* harmony import */ var _babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/core-js/json/stringify */ "./node_modules/@babel/runtime-corejs2/core-js/json/stringify.js");
-/* harmony import */ var _babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var formik__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! formik */ "formik");
-/* harmony import */ var formik__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(formik__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var formik_material_ui__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! formik-material-ui */ "formik-material-ui");
-/* harmony import */ var formik_material_ui__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(formik_material_ui__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _material_ui_icons__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @material-ui/icons */ "@material-ui/icons");
-/* harmony import */ var _material_ui_icons__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_material_ui_icons__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var yup__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! yup */ "yup");
-/* harmony import */ var yup__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(yup__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var js_cookie__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! js-cookie */ "js-cookie");
-/* harmony import */ var js_cookie__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(js_cookie__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! styled-components */ "styled-components");
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var _Button__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./Button */ "./components/Button.js");
-/* harmony import */ var _material_ui_core__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @material-ui/core */ "@material-ui/core");
-/* harmony import */ var _material_ui_core__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core__WEBPACK_IMPORTED_MODULE_9__);
-
-var _jsxFileName = "/mnt/c/Users/D.Hardiman/desktop/eurobrake/components/Forms.js";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
-
-
-
-
-
-
-
-
-
-async function GetForm(url) {
-  const {
-    logintoken
-  } = js_cookie__WEBPACK_IMPORTED_MODULE_6___default.a.get();
-  console.log({
-    logintoken
-  });
-
-  try {
-    const apiUrl = url;
-    const response = await fetch(apiUrl, {
-      credentials: 'include',
-      headers: {
-        Authorization: 'Bearer ' + logintoken
-      }
-    });
-    const data = await response.json();
-
-    if (data.status === 'success') {
-      console.log('getForm', data);
-      console.log('tkn', data.__csrf_token);
-      return data.__csrf_token;
-    } else {
-      let error = new Error(data.error);
-      error.response = response;
-      throw error;
-    }
-  } catch (error) {
-    console.error('Failed to get form, please try again', error); // return error.message
-  }
-
-  return;
-}
-async function SendFile({
-  csrf,
-  file
-}) {
-  const formData = new FormData();
-  const {
-    logintoken
-  } = js_cookie__WEBPACK_IMPORTED_MODULE_6___default.a.get();
-  formData.append('__csrf_token', csrf);
-  formData.append('filename', file);
-  console.log({
-    logintoken,
-    csrf,
-    file
-  });
-
-  if (logintoken && csrf && file) {
-    try {
-      const apiUrl = 'https://prelude.eurobrake.net/upload';
-      const response = await fetch(apiUrl, {
-        method: 'POST',
-        body: formData,
-        credentials: 'include',
-        headers: {
-          Authorization: 'Bearer ' + logintoken
-        }
-      });
-      const data = await response.json();
-      await console.log({
-        data
-      });
-
-      if (data.status === 'success') {
-        console.log('getForm', data);
-      } else {
-        let error = new Error(data.error);
-        error.response = response;
-        throw error;
-      }
-    } catch (error) {
-      console.error('Failed to get form, please try again', error); // this.setState({ error: error.message });
-    }
-  }
-
-  return;
-}
-async function SendForm({
-  csrf,
-  formData,
-  url
-}) {
-  const form = _babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_0___default()(formData);
-
-  const {
-    logintoken
-  } = js_cookie__WEBPACK_IMPORTED_MODULE_6___default.a.get();
-
-  if (logintoken && csrf && formData) {
-    try {
-      const apiUrl = url;
-      const response = await fetch(apiUrl, {
-        body: form,
-        credentials: 'include',
-        headers: {
-          Authorization: 'Bearer ' + logintoken
-        }
-      });
-      const data = await response.json();
-
-      if (data.status === 'success') {
-        console.log('getForm', data);
-      } else {
-        let error = new Error(data.error);
-        error.response = response;
-        throw error;
-      }
-    } catch (error) {
-      console.error('Failed to get form, please try again', error);
-    }
-  }
-
-  return;
-}
-const AbstractSchema = yup__WEBPACK_IMPORTED_MODULE_5__["object"]().shape({
-  author_firstname: yup__WEBPACK_IMPORTED_MODULE_5__["string"]().min(2, 'Too Short!').max(50, 'Too Long!').required('Required'),
-  author_lastname: yup__WEBPACK_IMPORTED_MODULE_5__["string"]().min(2, 'Too Short!').max(50, 'Too Long!').required('Required'),
-  author_email: yup__WEBPACK_IMPORTED_MODULE_5__["string"]().email().required('Required'),
-  author_jobtitle: yup__WEBPACK_IMPORTED_MODULE_5__["string"]().required('Required'),
-  author_company: yup__WEBPACK_IMPORTED_MODULE_5__["string"]().required('Required'),
-  author_address1: yup__WEBPACK_IMPORTED_MODULE_5__["string"]().required('Required'),
-  author_address2: yup__WEBPACK_IMPORTED_MODULE_5__["string"]().required('Required'),
-  author_address3: yup__WEBPACK_IMPORTED_MODULE_5__["string"]().required('Required'),
-  author_city: yup__WEBPACK_IMPORTED_MODULE_5__["string"]().required('Required'),
-  author_scp: yup__WEBPACK_IMPORTED_MODULE_5__["string"]().required('Required'),
-  author_postal: yup__WEBPACK_IMPORTED_MODULE_5__["string"]().required('Required'),
-  author_country: yup__WEBPACK_IMPORTED_MODULE_5__["string"]().required('Required'),
-  author_phone: yup__WEBPACK_IMPORTED_MODULE_5__["string"]().required('Required'),
-  is_presenting_author: yup__WEBPACK_IMPORTED_MODULE_5__["string"]().required('Required'),
-  submission_type: yup__WEBPACK_IMPORTED_MODULE_5__["string"]().required('Required'),
-  presentationtype_full: yup__WEBPACK_IMPORTED_MODULE_5__["string"](),
-  papertitle: yup__WEBPACK_IMPORTED_MODULE_5__["string"]().required('Required'),
-  theme: yup__WEBPACK_IMPORTED_MODULE_5__["string"]().required('Required'),
-  subtheme: yup__WEBPACK_IMPORTED_MODULE_5__["array"]().max(3, 'Please select max of three subthemes!').required('Required'),
-  abstract: yup__WEBPACK_IMPORTED_MODULE_5__["string"]().required('Required'),
-  keywords: yup__WEBPACK_IMPORTED_MODULE_5__["string"]().required('Required'),
-  previouspapers: yup__WEBPACK_IMPORTED_MODULE_5__["string"]().required('Required'),
-  consider_for_journal: yup__WEBPACK_IMPORTED_MODULE_5__["string"]().required('Required'),
-  secondary_authors: yup__WEBPACK_IMPORTED_MODULE_5__["array"]().of(yup__WEBPACK_IMPORTED_MODULE_5__["object"]().shape({
-    title: yup__WEBPACK_IMPORTED_MODULE_5__["string"]().required('Required'),
-    firstname: yup__WEBPACK_IMPORTED_MODULE_5__["string"]().required('Required'),
-    lastname: yup__WEBPACK_IMPORTED_MODULE_5__["string"]().required('Required'),
-    email: yup__WEBPACK_IMPORTED_MODULE_5__["string"]().email().required('Required'),
-    company: yup__WEBPACK_IMPORTED_MODULE_5__["string"]().required('Required'),
-    country: yup__WEBPACK_IMPORTED_MODULE_5__["string"]().required('Required'),
-    is_presenting_author: yup__WEBPACK_IMPORTED_MODULE_5__["string"]().required('Required')
-  }))
-});
-const StyledForm = styled_components__WEBPACK_IMPORTED_MODULE_7___default()(formik__WEBPACK_IMPORTED_MODULE_2__["Form"]).withConfig({
-  displayName: "Forms__StyledForm",
-  componentId: "sc-1q22qaj-0"
-})(["display:flex;flex-flow:column;justify-content:space-between;align-items:center;min-width:100%;.MuiInput-underline:after{color:", ";}.MuiFormHelperText-root{font-size:1.5rem;}.MuiInputBase-root{font-family:", ";font-size:2rem;color:", ";}input:-internal-autofill-selected{}.login_form{&-field{margin:1rem 0;width:100%;display:flex;justify-content:space-between;align-items:flex-end;}&-label{font-family:", ";font-size:2.6rem;color:", ";}&-input{min-width:40rem;font-family:", ";font-size:2rem;color:", ";}&-link{font-family:", ";font-size:1.7rem;color:", ";}&-radio{text-align:end;}}"], props => props.theme.primary, props => props.theme.MPBoldIt, props => props.theme.primary, props => props.theme.MPLight, props => props.theme.primary, props => props.theme.MPBoldIt, props => props.theme.primary, props => props.theme.MPBoldIt, props => props.theme.primary); // !    FUNCTIONS
-// MAXTHREE CHECKBOX
-// ? Handled by yup atm => doesnt disable but brings msg and stops submit
-// ONLYONE PRESENTING
-// ? ONLY GONE AND DONE IT N I?? 
-
-const AbstractForm = (editPaper = false) => {
-  const {
-    0: presenter,
-    1: setPresenter
-  } = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])('');
-  console.log({
-    editPaper
-  });
-  Object(react__WEBPACK_IMPORTED_MODULE_1__["useEffect"])(() => {
-    console.log('presenter is changing');
-  }, [presenter]);
-  return __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Formik"], {
-    initialValues: editPaper ? presets : emptyInitial,
-    onSubmit: (values, actions) => {
-      setTimeout(() => {
-        alert(_babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_0___default()(values, null, 2));
-        actions.setSubmitting(false);
-      }, 1000);
-    },
-    validationSchema: AbstractSchema,
-    enableReinitialize: true,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 257
-    },
-    __self: undefined
-  }, ({
-    values,
-    isSubmitting,
-    isValidating,
-    handleChange,
-    setFieldValue
-  }) => {
-    const allNo = ({
-      name
-    }) => {
-      if (false) {}
-    };
-
-    const onPresenterChange = event => {
-      const {
-        target
-      } = event;
-      const value = target.value;
-      const name = target.name;
-      value === 'no' ? setPresenter('') : setPresenter(name);
-      setFieldValue(name, value);
-      allNo({
-        name
-      });
-      return console.log({
-        values
-      });
-    };
-
-    return __jsx(StyledForm, {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 293
-      },
-      __self: undefined
-    }, __jsx("h1", {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 294
-      },
-      __self: undefined
-    }, "Primary Author"), __jsx("div", {
-      className: "login_form-field",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 295
-      },
-      __self: undefined
-    }, __jsx("label", {
-      htmlFor: "label",
-      className: "login_form-label",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 296
-      },
-      __self: undefined
-    }, "Title"), __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Field"], {
-      className: "login_form-input",
-      onClick: handleChange,
-      value: values.author_title,
-      style: {
-        color: '#134381'
-      },
-      name: "author_title",
-      component: formik_material_ui__WEBPACK_IMPORTED_MODULE_3__["Select"],
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 301
-      },
-      __self: undefined
-    }, titles.map((option, i) => __jsx("option", {
-      key: i,
-      style: {
-        fontSize: '1.5rem',
-        cursor: 'pointer'
-      },
-      value: option.value,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 310
-      },
-      __self: undefined
-    }, option.label)))), __jsx("div", {
-      className: "login_form-field",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 313
-      },
-      __self: undefined
-    }, __jsx("label", {
-      htmlFor: "label",
-      className: "login_form-label",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 314
-      },
-      __self: undefined
-    }, "First Name:"), __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Field"], {
-      className: "login_form-input",
-      onClick: handleChange,
-      value: values.author_firstname,
-      style: {
-        color: '#134381'
-      },
-      name: "author_firstname",
-      component: formik_material_ui__WEBPACK_IMPORTED_MODULE_3__["TextField"],
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 319
-      },
-      __self: undefined
-    })), __jsx("div", {
-      className: "login_form-field",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 328
-      },
-      __self: undefined
-    }, __jsx("label", {
-      htmlFor: "label",
-      className: "login_form-label",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 329
-      },
-      __self: undefined
-    }, "Last Name:"), __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Field"], {
-      className: "login_form-input",
-      onClick: handleChange,
-      value: values.author_lastname,
-      style: {
-        color: '#134381'
-      },
-      name: "author_lastname",
-      component: formik_material_ui__WEBPACK_IMPORTED_MODULE_3__["TextField"],
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 334
-      },
-      __self: undefined
-    })), __jsx("div", {
-      className: "login_form-field",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 343
-      },
-      __self: undefined
-    }, __jsx("label", {
-      htmlFor: "label",
-      className: "login_form-label",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 344
-      },
-      __self: undefined
-    }, "Email:"), __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Field"], {
-      className: "login_form-input",
-      onClick: handleChange,
-      value: values.author_email,
-      style: {
-        color: '#134381'
-      },
-      name: "author_email",
-      component: formik_material_ui__WEBPACK_IMPORTED_MODULE_3__["TextField"],
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 349
-      },
-      __self: undefined
-    })), __jsx("div", {
-      className: "login_form-field",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 358
-      },
-      __self: undefined
-    }, __jsx("label", {
-      htmlFor: "label",
-      className: "login_form-label",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 359
-      },
-      __self: undefined
-    }, "Job Title:"), __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Field"], {
-      className: "login_form-input",
-      onClick: handleChange,
-      value: values.author_jobtitle,
-      style: {
-        color: '#134381'
-      },
-      name: "author_jobtitle",
-      component: formik_material_ui__WEBPACK_IMPORTED_MODULE_3__["TextField"],
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 364
-      },
-      __self: undefined
-    })), __jsx("div", {
-      className: "login_form-field",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 373
-      },
-      __self: undefined
-    }, __jsx("label", {
-      htmlFor: "label",
-      className: "login_form-label",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 374
-      },
-      __self: undefined
-    }, "Company:"), __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Field"], {
-      className: "login_form-input",
-      onClick: handleChange,
-      value: values.author_company,
-      style: {
-        color: '#134381'
-      },
-      name: "author_company",
-      component: formik_material_ui__WEBPACK_IMPORTED_MODULE_3__["TextField"],
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 379
-      },
-      __self: undefined
-    })), __jsx("div", {
-      className: "login_form-field",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 388
-      },
-      __self: undefined
-    }, __jsx("label", {
-      htmlFor: "label",
-      className: "login_form-label",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 389
-      },
-      __self: undefined
-    }, "Address:"), __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Field"], {
-      className: "login_form-input",
-      onClick: handleChange,
-      value: values.author_address1,
-      style: {
-        color: '#134381'
-      },
-      name: "author_address1",
-      component: formik_material_ui__WEBPACK_IMPORTED_MODULE_3__["TextField"],
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 394
-      },
-      __self: undefined
-    })), __jsx("div", {
-      className: "login_form-field",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 403
-      },
-      __self: undefined
-    }, __jsx("label", {
-      htmlFor: "label",
-      className: "login_form-label",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 404
-      },
-      __self: undefined
-    }), __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Field"], {
-      className: "login_form-input",
-      onClick: handleChange,
-      value: values.author_address2,
-      style: {
-        color: '#134381'
-      },
-      name: "author_address2",
-      component: formik_material_ui__WEBPACK_IMPORTED_MODULE_3__["TextField"],
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 409
-      },
-      __self: undefined
-    })), __jsx("div", {
-      className: "login_form-field",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 418
-      },
-      __self: undefined
-    }, __jsx("label", {
-      htmlFor: "label",
-      className: "login_form-label",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 419
-      },
-      __self: undefined
-    }), __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Field"], {
-      className: "login_form-input",
-      onClick: handleChange,
-      value: values.author_address3,
-      style: {
-        color: '#134381'
-      },
-      name: "author_address3",
-      component: formik_material_ui__WEBPACK_IMPORTED_MODULE_3__["TextField"],
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 424
-      },
-      __self: undefined
-    })), __jsx("div", {
-      className: "login_form-field",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 433
-      },
-      __self: undefined
-    }, __jsx("label", {
-      htmlFor: "label",
-      className: "login_form-label",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 434
-      },
-      __self: undefined
-    }, "City:"), __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Field"], {
-      className: "login_form-input",
-      onClick: handleChange,
-      value: values.author_city,
-      style: {
-        color: '#134381'
-      },
-      name: "author_city",
-      component: formik_material_ui__WEBPACK_IMPORTED_MODULE_3__["TextField"],
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 439
-      },
-      __self: undefined
-    })), __jsx("div", {
-      className: "login_form-field",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 448
-      },
-      __self: undefined
-    }, __jsx("label", {
-      htmlFor: "label",
-      className: "login_form-label",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 449
-      },
-      __self: undefined
-    }, "State/county/province:"), __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Field"], {
-      className: "login_form-input",
-      onClick: handleChange,
-      value: values.author_scp,
-      style: {
-        color: '#134381'
-      },
-      name: "author_scp",
-      component: formik_material_ui__WEBPACK_IMPORTED_MODULE_3__["TextField"],
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 454
-      },
-      __self: undefined
-    })), __jsx("div", {
-      className: "login_form-field",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 463
-      },
-      __self: undefined
-    }, __jsx("label", {
-      htmlFor: "label",
-      className: "login_form-label",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 464
-      },
-      __self: undefined
-    }, "Postal/Zip code:"), __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Field"], {
-      className: "login_form-input",
-      onClick: handleChange,
-      value: values.author_postal,
-      style: {
-        color: '#134381'
-      },
-      name: "author_postal",
-      component: formik_material_ui__WEBPACK_IMPORTED_MODULE_3__["TextField"],
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 469
-      },
-      __self: undefined
-    })), __jsx("div", {
-      className: "login_form-field",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 478
-      },
-      __self: undefined
-    }, __jsx("label", {
-      htmlFor: "label",
-      className: "login_form-label",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 479
-      },
-      __self: undefined
-    }, "Country"), __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Field"], {
-      className: "login_form-input",
-      onClick: handleChange,
-      value: values.author_country,
-      style: {
-        color: '#134381'
-      },
-      name: "author_country",
-      component: formik_material_ui__WEBPACK_IMPORTED_MODULE_3__["Select"],
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 484
-      },
-      __self: undefined
-    }, countries.map((option, i) => __jsx("option", {
-      key: i,
-      style: {
-        fontSize: '1.5rem',
-        cursor: 'pointer'
-      },
-      value: option.value,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 493
-      },
-      __self: undefined
-    }, option.label)))), __jsx("div", {
-      className: "login_form-field",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 496
-      },
-      __self: undefined
-    }, __jsx("label", {
-      htmlFor: "label",
-      className: "login_form-label",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 497
-      },
-      __self: undefined
-    }, "Phone:"), __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Field"], {
-      className: "login_form-input",
-      onClick: handleChange,
-      value: values.author_phone,
-      style: {
-        color: '#134381'
-      },
-      name: "author_phone",
-      component: formik_material_ui__WEBPACK_IMPORTED_MODULE_3__["TextField"],
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 502
-      },
-      __self: undefined
-    })), __jsx("div", {
-      className: "login_form-field",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 511
-      },
-      __self: undefined
-    }, __jsx("label", {
-      htmlFor: "label",
-      className: "login_form-label",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 512
-      },
-      __self: undefined
-    }, "Is this the presenting author?"), __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Field"], {
-      className: "login_form-radio",
-      value: values.is_presenting_author,
-      style: {
-        color: '#134381'
-      },
-      name: "is_presenting_author",
-      component: formik_material_ui__WEBPACK_IMPORTED_MODULE_3__["RadioGroup"],
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 517
-      },
-      __self: undefined
-    }, __jsx("label", {
-      style: {
-        margin: '1rem'
-      },
-      htmlFor: "label",
-      className: "login_form-label",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 524
-      },
-      __self: undefined
-    }, "Yes", __jsx("input", {
-      checked: presenter === 'is_presenting_author',
-      onChange: event => {
-        onPresenterChange(event);
-      },
-      type: "radio",
-      name: "is_presenting_author",
-      value: "yes",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 529
-      },
-      __self: undefined
-    })), __jsx("label", {
-      style: {
-        margin: '1rem'
-      },
-      htmlFor: "label",
-      className: "login_form-label",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 540
-      },
-      __self: undefined
-    }, "No", __jsx("input", {
-      onChange: event => {
-        onPresenterChange(event);
-      },
-      checked: presenter !== 'is_presenting_author',
-      type: "radio",
-      name: "is_presenting_author",
-      value: "no",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 545
-      },
-      __self: undefined
-    })))), __jsx("h1", {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 559
-      },
-      __self: undefined
-    }, "Secondary Author(s)"), __jsx("div", {
-      className: "",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 560
-      },
-      __self: undefined
-    }, __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["FieldArray"], {
-      name: `secondary_authors`,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 561
-      },
-      __self: undefined
-    }, ({
-      swap,
-      push,
-      remove,
-      setSubmitting
-    }) => values.secondary_authors && values.secondary_authors.length > 0 && values.secondary_authors.map((authors, index) => __jsx("div", {
-      key: index,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 567
-      },
-      __self: undefined
-    }, __jsx("div", {
-      className: "login_form-field",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 568
-      },
-      __self: undefined
-    }, __jsx("label", {
-      htmlFor: "label",
-      className: "login_form-label",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 569
-      },
-      __self: undefined
-    }, "Title:"), __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Field"], {
-      className: "login_form-input",
-      onClick: handleChange,
-      value: `secondary_authors[${index}].title`,
-      style: {
-        color: '#134381'
-      },
-      name: `secondary_authors[${index}].title`,
-      component: formik_material_ui__WEBPACK_IMPORTED_MODULE_3__["TextField"],
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 574
-      },
-      __self: undefined
-    })), __jsx("div", {
-      className: "login_form-field",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 583
-      },
-      __self: undefined
-    }, __jsx("label", {
-      htmlFor: "label",
-      className: "login_form-label",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 584
-      },
-      __self: undefined
-    }, "First Name:"), __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Field"], {
-      className: "login_form-input",
-      onClick: handleChange,
-      value: `secondary_authors[${index}].firstname`,
-      style: {
-        color: '#134381'
-      },
-      name: `secondary_authors[${index}].firstname`,
-      component: formik_material_ui__WEBPACK_IMPORTED_MODULE_3__["TextField"],
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 589
-      },
-      __self: undefined
-    })), __jsx("div", {
-      className: "login_form-field",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 598
-      },
-      __self: undefined
-    }, __jsx("label", {
-      htmlFor: "label",
-      className: "login_form-label",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 599
-      },
-      __self: undefined
-    }, "Last Name:"), __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Field"], {
-      className: "login_form-input",
-      onClick: handleChange,
-      value: `secondary_authors[${index}].lastname`,
-      style: {
-        color: '#134381'
-      },
-      name: `secondary_authors[${index}].lastname`,
-      component: formik_material_ui__WEBPACK_IMPORTED_MODULE_3__["TextField"],
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 604
-      },
-      __self: undefined
-    })), __jsx("div", {
-      className: "login_form-field",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 613
-      },
-      __self: undefined
-    }, __jsx("label", {
-      htmlFor: "label",
-      className: "login_form-label",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 614
-      },
-      __self: undefined
-    }, "Email:"), __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Field"], {
-      className: "login_form-input",
-      onClick: handleChange,
-      value: `secondary_authors[${index}].email`,
-      style: {
-        color: '#134381'
-      },
-      name: `secondary_authors[${index}].email`,
-      component: formik_material_ui__WEBPACK_IMPORTED_MODULE_3__["TextField"],
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 619
-      },
-      __self: undefined
-    })), __jsx("div", {
-      className: "login_form-field",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 628
-      },
-      __self: undefined
-    }, __jsx("label", {
-      htmlFor: "label",
-      className: "login_form-label",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 629
-      },
-      __self: undefined
-    }, "Company:"), __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Field"], {
-      className: "login_form-input",
-      onClick: handleChange,
-      value: `secondary_authors[${index}].company`,
-      style: {
-        color: '#134381'
-      },
-      name: `secondary_authors[${index}].company`,
-      component: formik_material_ui__WEBPACK_IMPORTED_MODULE_3__["TextField"],
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 634
-      },
-      __self: undefined
-    })), __jsx("div", {
-      className: "login_form-field",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 643
-      },
-      __self: undefined
-    }, __jsx("label", {
-      htmlFor: "label",
-      className: "login_form-label",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 644
-      },
-      __self: undefined
-    }, "Country:"), __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Field"], {
-      className: "login_form-input",
-      onClick: handleChange,
-      value: `secondary_authors[${index}].country`,
-      style: {
-        color: '#134381'
-      },
-      name: `secondary_authors[${index}].country`,
-      component: formik_material_ui__WEBPACK_IMPORTED_MODULE_3__["TextField"],
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 649
-      },
-      __self: undefined
-    })), __jsx("div", {
-      className: "login_form-field",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 658
-      },
-      __self: undefined
-    }, __jsx("label", {
-      htmlFor: "label",
-      className: "login_form-label",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 659
-      },
-      __self: undefined
-    }, "Is this the presenting Author?"), __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Field"], {
-      className: "login_form-radio",
-      style: {
-        color: '#134381'
-      },
-      value: `secondary_authors[${index}].is_presenting_author`,
-      component: formik_material_ui__WEBPACK_IMPORTED_MODULE_3__["RadioGroup"],
-      name: `secondary_authors[${index}].is_presenting_author`,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 664
-      },
-      __self: undefined
-    }, __jsx("label", {
-      style: {
-        margin: '1rem'
-      },
-      htmlFor: "label",
-      className: "login_form-label",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 671
-      },
-      __self: undefined
-    }, "Yes", __jsx("input", {
-      checked: presenter == `secondary_authors[${index}].is_presenting_author`,
-      onChange: event => {
-        onPresenterChange(event);
-      },
-      type: "radio",
-      value: "yes",
-      name: `secondary_authors[${index}].is_presenting_author`,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 676
-      },
-      __self: undefined
-    })), __jsx("label", {
-      style: {
-        margin: '1rem'
-      },
-      htmlFor: "label",
-      className: "login_form-label",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 687
-      },
-      __self: undefined
-    }, "No", __jsx("input", {
-      checked: presenter != `secondary_authors[${index}].is_presenting_author`,
-      onChange: event => {
-        onPresenterChange(event);
-      },
-      type: "radio",
-      value: "no",
-      name: `secondary_authors[${index}].is_presenting_author`,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 692
-      },
-      __self: undefined
-    })))), __jsx(_Button__WEBPACK_IMPORTED_MODULE_8__["Button"], {
-      type: "add",
-      onClick: () => {
-        push({
-          title: '',
-          firstname: '',
-          lastname: '',
-          email: '',
-          company: '',
-          country: '',
-          is_presenting_author: ''
-        });
-      },
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 705
-      },
-      __self: undefined
-    }, __jsx(_material_ui_icons__WEBPACK_IMPORTED_MODULE_4__["AddCircle"], {
-      style: {
-        color: 'green'
-      },
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 716
-      },
-      __self: undefined
-    })), __jsx(_Button__WEBPACK_IMPORTED_MODULE_8__["Button"], {
-      type: "remove",
-      onClick: () => values.secondary_authors.length > 1 && remove(index),
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 718
-      },
-      __self: undefined
-    }, __jsx(_material_ui_icons__WEBPACK_IMPORTED_MODULE_4__["RemoveCircle"], {
-      style: {
-        color: 'red'
-      },
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 719
-      },
-      __self: undefined
-    })), __jsx(_Button__WEBPACK_IMPORTED_MODULE_8__["Button"], {
-      type: "upgrade",
-      onClick: () => values.secondary_authors.length > 1 && index !== 0 && swap(index, index - 1),
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 721
-      },
-      __self: undefined
-    }, __jsx(_material_ui_icons__WEBPACK_IMPORTED_MODULE_4__["ArrowUpwardRounded"], {
-      style: {
-        color: 'red'
-      },
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 722
-      },
-      __self: undefined
-    })), __jsx(_Button__WEBPACK_IMPORTED_MODULE_8__["Button"], {
-      type: "downgrade",
-      onClick: () => values.secondary_authors.length > 1 && index !== values.secondary_authors.length - 1 && swap(index, index + 1),
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 724
-      },
-      __self: undefined
-    }, __jsx(_material_ui_icons__WEBPACK_IMPORTED_MODULE_4__["ArrowDownwardRounded"], {
-      style: {
-        color: 'red'
-      },
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 725
-      },
-      __self: undefined
-    })))))), __jsx(_Button__WEBPACK_IMPORTED_MODULE_8__["Button"], {
-      type: "submit",
-      bcolor: "#134381",
-      padding: "0.5rem 2rem",
-      background: "#134381",
-      br: "100rem",
-      style: {
-        margin: ".5rem 0"
-      },
-      fontSize: "1.7rem",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 734
-      },
-      __self: undefined
-    }, "Submit"), console.log('main', values.is_presenting_author, 'second', values.secondary_authors));
-  });
-};
-const titles = [{
-  value: "",
-  label: "—"
-}, {
-  value: "Mr.",
-  label: "Mr."
-}, {
-  value: "Ms.",
-  label: "Ms."
-}, {
-  value: "Mrs.",
-  label: "Mrs."
-}, {
-  value: "Dr.",
-  label: "Dr."
-}, {
-  value: "Dr.-Ing.",
-  label: "Dr.-Ing."
-}, {
-  value: "Dr. Eng.",
-  label: "Dr. Eng."
-}, {
-  value: "Prof.",
-  label: "Prof."
-}, {
-  value: "Prof. Dr.",
-  label: "Prof. Dr."
-}, {
-  value: "Prof. Dr.-Ing.",
-  label: "Prof. Dr.-Ing."
-}, {
-  value: "Ing.",
-  label: "Ing."
-}, {
-  value: "Dipl.-Ing.",
-  label: "Dipl.-Ing."
-}, {
-  value: "Ir.",
-  label: "Ir."
-}];
-const countries = [{
-  value: "",
-  label: "—"
-}, {
-  value: "DZ",
-  label: "Algeria"
-}, {
-  value: "AR",
-  label: "Argentina"
-}, {
-  value: "AU",
-  label: "Australia"
-}, {
-  value: "AT",
-  label: "Austria"
-}, {
-  value: "BD",
-  label: "Bangladesh"
-}, {
-  value: "BY",
-  label: "Belarus"
-}, {
-  value: "BE",
-  label: "Belgium"
-}, {
-  value: "BA",
-  label: "Bosnia and Herzegovina"
-}, {
-  value: "BR",
-  label: "Brazil"
-}, {
-  value: "BG",
-  label: "Bulgaria"
-}, {
-  value: "CA",
-  label: "Canada"
-}, {
-  value: "CL",
-  label: "Chile"
-}, {
-  value: "CN",
-  label: "China"
-}, {
-  value: "HK",
-  label: "China - Hong Kong"
-}, {
-  value: "CO",
-  label: "Colombia"
-}, {
-  value: "HR",
-  label: "Croatia"
-}, {
-  value: "CZ",
-  label: "Czech Republic"
-}, {
-  value: "DK",
-  label: "Denmark"
-}, {
-  value: "EC",
-  label: "Ecuador"
-}, {
-  value: "EG",
-  label: "Egypt"
-}, {
-  value: "EE",
-  label: "Estonia"
-}, {
-  value: "FI",
-  label: "Finland"
-}, {
-  value: "MK",
-  label: "Fmr. Yugoslav Republic of Macedonia"
-}, {
-  value: "FR",
-  label: "France"
-}, {
-  value: "GE",
-  label: "Georgia"
-}, {
-  value: "DE",
-  label: "Germany"
-}, {
-  value: "GR",
-  label: "Greece"
-}, {
-  value: "HU",
-  label: "Hungary"
-}, {
-  value: "IS",
-  label: "Iceland"
-}, {
-  value: "IN",
-  label: "India"
-}, {
-  value: "ID",
-  label: "Indonesia"
-}, {
-  value: "IR",
-  label: "Iran (Islamic Republic of)"
-}, {
-  value: "IQ",
-  label: "Iraq"
-}, {
-  value: "IE",
-  label: "Ireland"
-}, {
-  value: "IL",
-  label: "Israel"
-}, {
-  value: "IT",
-  label: "Italy"
-}, {
-  value: "JP",
-  label: "Japan"
-}, {
-  value: "KG",
-  label: "Kyrgyzstan"
-}, {
-  value: "LV",
-  label: "Latvia"
-}, {
-  value: "LT",
-  label: "Lithuania"
-}, {
-  value: "LU",
-  label: "Luxembourg"
-}, {
-  value: "MY",
-  label: "Malaysia"
-}, {
-  value: "MT",
-  label: "Malta"
-}, {
-  value: "MX",
-  label: "Mexico"
-}, {
-  value: "MN",
-  label: "Mongolia"
-}, {
-  value: "MA",
-  label: "Morocco"
-}, {
-  value: "NP",
-  label: "Nepal"
-}, {
-  value: "NL",
-  label: "Netherlands"
-}, {
-  value: "NZ",
-  label: "New Zealand"
-}, {
-  value: "NG",
-  label: "Nigeria"
-}, {
-  value: "NO",
-  label: "Norway"
-}, {
-  value: "PK",
-  label: "Pakistan"
-}, {
-  value: "PE",
-  label: "Peru"
-}, {
-  value: "PH",
-  label: "Philippines"
-}, {
-  value: "PL",
-  label: "Poland"
-}, {
-  value: "PT",
-  label: "Portugal"
-}, {
-  value: "KR",
-  label: "Republic of Korea"
-}, {
-  value: "PA",
-  label: "Republic of Panama"
-}, {
-  value: "RO",
-  label: "Romania"
-}, {
-  value: "RU",
-  label: "Russian Federation"
-}, {
-  value: "SA",
-  label: "Saudi Arabia"
-}, {
-  value: "RS",
-  label: "Serbia"
-}, {
-  value: "SG",
-  label: "Singapore"
-}, {
-  value: "SK",
-  label: "Slovakia"
-}, {
-  value: "SI",
-  label: "Slovenia"
-}, {
-  value: "ZA",
-  label: "South Africa"
-}, {
-  value: "ES",
-  label: "Spain"
-}, {
-  value: "LK",
-  label: "Sri Lanka"
-}, {
-  value: "SE",
-  label: "Sweden"
-}, {
-  value: "CH",
-  label: "Switzerland"
-}, {
-  value: "TW",
-  label: "Taiwan"
-}, {
-  value: "TH",
-  label: "Thailand"
-}, {
-  value: "TN",
-  label: "Tunisia"
-}, {
-  value: "TR",
-  label: "Turkey"
-}, {
-  value: "TM",
-  label: "Turkmenistan"
-}, {
-  value: "UA",
-  label: "Ukraine"
-}, {
-  value: "AE",
-  label: "United Arab Emirates"
-}, {
-  value: "GB",
-  label: "United Kingdom"
-}, {
-  value: "US",
-  label: "United States"
-}, {
-  value: "UZ",
-  label: "Uzbekistan"
-}, {
-  value: "VE",
-  label: "Venezuela"
-}, {
-  value: "VN",
-  label: "Viet Nam"
-}];
-const themes = [{
-  value: "BC50E220-9412-11E8-85AF-D97B4D95EBB1",
-  label: "Intelligent Braking and Braking Control"
-}, {
-  value: "48C9561C-7865-11E7-AA75-C89000D85D50",
-  label: "Environmentally-friendly Braking Systems"
-}, {
-  value: "5D49D9C2-7865-11E7-9112-887F12D54550",
-  label: "Fundamentals of Brakes"
-}, {
-  value: "7C15061A-7865-11E7-8178-84D2A73AF9BC",
-  label: "Manufacturing and Markets"
-}, {
-  value: "925B5F3C-7865-11E7-8659-8C8422753A7C",
-  label: "Materials and Design"
-}, {
-  value: "B6F53F20-7865-11E7-A9B1-FC3D434D4D51",
-  label: "Simulation, Testing, Innovative Development Processes"
-}];
-const subThemes = [{
-  value: "06CE3888-9414-11E8-AE34-9BA1BE5E3471",
-  label: "Brake Systems for Highly Automated Road and Rail Vehicles"
-}, {
-  value: "0DD80384-9414-11E8-A380-9320CF01B393",
-  label: "Braking for Electric and Hybrid Vehicles"
-}, {
-  value: "1BFDEE9C-9414-11E8-A7E0-A07B6C067014",
-  label: "Innovative Parking Brake Systems"
-}, {
-  value: "1C01065E-9414-11E8-A93F-A546BD18FAA0",
-  label: "Innovative Brake Actuators and System Controls (Software and Function Development)"
-}, {
-  value: "1C04A9BC-9414-11E8-B1D2-8516A557BE68",
-  label: "Safety relevant braking functions"
-}, {
-  value: "1C082150-9414-11E8-AF92-B5E7B5B9337D",
-  label: "Railway Traffic Management Systems"
-}, {
-  value: "2604091C-9414-11E8-A078-CC3BFBB45A3C",
-  label: "Sustainability in Brake Systems"
-}, {
-  value: "26093DE2-9414-11E8-B272-A7C4EBADAE4A",
-  label: "Brake Energy Management and Recuperation"
-}, {
-  value: "260E56E2-9414-11E8-B9F8-E613015D1408",
-  label: "Brake Noise and Drag Reduction"
-}, {
-  value: "26126F98-9414-11E8-BBB3-D3A884B3E943",
-  label: "Lightweight Brake Components"
-}, {
-  value: "26176674-9414-11E8-8A0E-C108E25B228C",
-  label: "Brake Emission findings and available countermeasures"
-}, {
-  value: "2FE079A2-9414-11E8-AA53-C7435EE03528",
-  label: "Friction Interface Dynamics"
-}, {
-  value: "2FE4D18C-9414-11E8-B418-87A1883F2046",
-  label: "Friction Induced Vibration"
-}, {
-  value: "2FE958F6-9414-11E8-A0E5-9911B184DEC0",
-  label: "Thermal Effects"
-}, {
-  value: "2FECE066-9414-11E8-A9FA-A830F1ADACA6",
-  label: "Wear and Emissions"
-}, {
-  value: "36935E7C-9414-11E8-830E-8F6C9F83D892",
-  label: "Manufacturing, Quality Control and Warranty Claims"
-}, {
-  value: "369B7C92-9414-11E8-8D9F-E0E2215D2248",
-  label: "Global Standardisation"
-}, {
-  value: "36A067CA-9414-11E8-8D58-F172FE98C949",
-  label: "Aftermarket, Global Sourcing"
-}, {
-  value: "36A436C0-9414-11E8-AAB2-F98B8437A38B",
-  label: "Governmental Regulation and Homologation of Brake Systems"
-}, {
-  value: "3DAE1288-9414-11E8-85DC-B1A03E97F386",
-  label: "Innovative Friction Materials and Components"
-}, {
-  value: "3DB1BDC0-9414-11E8-81E9-D82DD1471F92",
-  label: "Disc, Drum, Wheel Materials, Coatings and Design"
-}, {
-  value: "E65121F6-B77B-11E9-A3BF-935F1E4F73DC",
-  label: "Virtual Development Methods of Braking Hardware and Software "
-}, {
-  value: "E6542694-B77B-11E9-BAAD-C06218C5F3E9",
-  label: "Friction Material and Friction Couple Characterisation"
-}, {
-  value: "E6572D62-B77B-11E9-AEEC-DEEBD990D172",
-  label: "Simulation and Testing of Noise Vibration Harshness"
-}, {
-  value: "E65A4448-B77B-11E9-925C-E3659DA380C2",
-  label: "Simulating and Testing of Particulate Emissions"
-}, {
-  value: "E65D5C1E-B77B-11E9-B6C9-A62E81FFC1F7",
-  label: "Brake System and Component Performance"
-}, {
-  value: "E6607750-B77B-11E9-A508-CA68AAFEDEBE",
-  label: "Scale Testing for Research Development and Quality Control"
-}, {
-  value: "E66375B8-B77B-11E9-B730-BE1C3C7011F1",
-  label: "Virtual Validation and Certification of Brake Systems"
-}, {
-  value: "E6668E42-B77B-11E9-8175-950FC9BD5E64",
-  label: "State-of-the-Art Engineering Processes for Safety Relevant Functions and Systems"
-}, {
-  value: "E6699C68-B77B-11E9-BE37-D0A72E493802",
-  label: "Development (Process/Products) of Cooperating Software and Hardware Solutions in Brakes"
-}];
-const subTheme1 = [{
-  value: "06CE3888-9414-11E8-AE34-9BA1BE5E3471",
-  label: "Brake Systems for Highly Automated Road and Rail Vehicles"
-}, {
-  value: "0DD80384-9414-11E8-A380-9320CF01B393",
-  label: "Braking for Electric and Hybrid Vehicles"
-}, {
-  value: "1BFDEE9C-9414-11E8-A7E0-A07B6C067014",
-  label: "Innovative Parking Brake Systems"
-}, {
-  value: "1C01065E-9414-11E8-A93F-A546BD18FAA0",
-  label: "Innovative Brake Actuators and System Controls (Software and Function Development)"
-}, {
-  value: "1C04A9BC-9414-11E8-B1D2-8516A557BE68",
-  label: "Safety relevant braking functions"
-}, {
-  value: "1C082150-9414-11E8-AF92-B5E7B5B9337D",
-  label: "Railway Traffic Management Systems"
-}];
-const subTheme2 = [{
-  value: "2604091C-9414-11E8-A078-CC3BFBB45A3C",
-  label: "Sustainability in Brake Systems"
-}, {
-  value: "26093DE2-9414-11E8-B272-A7C4EBADAE4A",
-  label: "Brake Energy Management and Recuperation"
-}, {
-  value: "260E56E2-9414-11E8-B9F8-E613015D1408",
-  label: "Brake Noise and Drag Reduction"
-}, {
-  value: "26126F98-9414-11E8-BBB3-D3A884B3E943",
-  label: "Lightweight Brake Components"
-}, {
-  value: "26176674-9414-11E8-8A0E-C108E25B228C",
-  label: "Brake Emission findings and available countermeasures"
-}];
-const subTheme3 = [{
-  value: "2FE079A2-9414-11E8-AA53-C7435EE03528",
-  label: "Friction Interface Dynamics"
-}, {
-  value: "2FE4D18C-9414-11E8-B418-87A1883F2046",
-  label: "Friction Induced Vibration"
-}, {
-  value: "2FE958F6-9414-11E8-A0E5-9911B184DEC0",
-  label: "Thermal Effects"
-}, {
-  value: "2FECE066-9414-11E8-A9FA-A830F1ADACA6",
-  label: "Wear and Emissions"
-}];
-const subTheme4 = [{
-  value: "36935E7C-9414-11E8-830E-8F6C9F83D892",
-  label: "Manufacturing, Quality Control and Warranty Claims"
-}, {
-  value: "369B7C92-9414-11E8-8D9F-E0E2215D2248",
-  label: "Global Standardisation"
-}, {
-  value: "36A067CA-9414-11E8-8D58-F172FE98C949",
-  label: "Aftermarket, Global Sourcing"
-}, {
-  value: "36A436C0-9414-11E8-AAB2-F98B8437A38B",
-  label: "Governmental Regulation and Homologation of Brake Systems"
-}];
-const subTheme5 = [{
-  value: "3DAE1288-9414-11E8-85DC-B1A03E97F386",
-  label: "Innovative Friction Materials and Components"
-}, {
-  value: "3DB1BDC0-9414-11E8-81E9-D82DD1471F92",
-  label: "Disc, Drum, Wheel Materials, Coatings and Design"
-}];
-const subTheme6 = [{
-  value: "E65121F6-B77B-11E9-A3BF-935F1E4F73DC",
-  label: "Virtual Development Methods of Braking Hardware and Software "
-}, {
-  value: "E6542694-B77B-11E9-BAAD-C06218C5F3E9",
-  label: "Friction Material and Friction Couple Characterisation"
-}, {
-  value: "E6572D62-B77B-11E9-AEEC-DEEBD990D172",
-  label: "Simulation and Testing of Noise Vibration Harshness"
-}, {
-  value: "E65A4448-B77B-11E9-925C-E3659DA380C2",
-  label: "Simulating and Testing of Particulate Emissions"
-}, {
-  value: "E65D5C1E-B77B-11E9-B6C9-A62E81FFC1F7",
-  label: "Brake System and Component Performance"
-}, {
-  value: "E6607750-B77B-11E9-A508-CA68AAFEDEBE",
-  label: "Scale Testing for Research Development and Quality Control"
-}, {
-  value: "E66375B8-B77B-11E9-B730-BE1C3C7011F1",
-  label: "Virtual Validation and Certification of Brake Systems"
-}, {
-  value: "E6668E42-B77B-11E9-8175-950FC9BD5E64",
-  label: "State-of-the-Art Engineering Processes for Safety Relevant Functions and Systems"
-}, {
-  value: "E6699C68-B77B-11E9-BE37-D0A72E493802",
-  label: "Development (Process/Products) of Cooperating Software and Hardware Solutions in Brakes"
-}];
-const submissionType = [{
-  value: "full",
-  label: "I will make a full technical paper submission"
-}, {
-  value: "oral",
-  label: "I will make an oral-only submission"
-}, {
-  value: "poster",
-  label: "I will make a poster-only submission"
-}];
-const ifFull = [{
-  value: "programme",
-  label: "My full paper submission will be accompanied by an oral presentation"
-}, {
-  value: "poster",
-  label: "My full paper submission will be accompanied by a poster presentation"
-}];
-const presets = {
-  abstract: "lorem ipsum",
-  author_address1: "10 Hamilton Road",
-  author_address2: null,
-  author_address3: null,
-  author_city: "Sidcup",
-  author_company: "Article Seven Limited",
-  author_country: "GB",
-  author_email: "andrew@article7.co.uk",
-  author_firstname: "Andrew",
-  author_jobtitle: "Director",
-  author_lastname: "Green",
-  author_phone: "+44 20 8305 1224",
-  author_postal: "DA15 7HB",
-  author_scp: "Kent",
-  author_title: "Mr.",
-  consider_for_journal: "no",
-  is_presenting_author: "yes",
-  keywords: "lorem, ipsum",
-  papertitle: "Duis aute irure dolor",
-  presentationtype_full: "programme",
-  previouspapers: null,
-  secondary_authors: [{
-    company: "Article Seven",
-    country: "GB",
-    email: "ava@article7.co.uk",
-    firstname: "Ava",
-    is_presenting_author: "no",
-    lastname: "Green",
-    ref: "2399A3C8-1823-11EA-BBE7-BDC53B013130",
-    title: null
-  }],
-  submission_type: "full",
-  subtheme: ["3DB1BDC0-9414-11E8-81E9-D82DD1471F92"],
-  theme: "925B5F3C-7865-11E7-8659-8C8422753A7C",
-  __csrf_token: "5d159fb224ed613dce89a64553f36f5eda1fa97c,2caaa318bb55c8c19d660a1e420d1c602dfc59f9,1576603105"
-};
-const emptyInitial = {
-  author_title: '',
-  author_firstname: '',
-  author_lastname: '',
-  author_email: '',
-  author_jobtitle: '',
-  author_company: '',
-  author_address1: '',
-  author_address2: '',
-  author_address3: '',
-  author_city: '',
-  author_scp: '',
-  author_postal: '',
-  author_country: '',
-  author_phone: '',
-  is_presenting_author: '',
-  submission_type: '',
-  presentationtype_full: '',
-  papertitle: '',
-  theme: '',
-  subtheme: [],
-  abstract: '',
-  keywords: '',
-  previouspapers: '',
-  consider_for_journal: '',
-  secondary_authors: [{
-    title: '',
-    firstname: '',
-    lastname: '',
-    email: '',
-    company: '',
-    country: '',
-    is_presenting_author: '',
-    ref: ''
-  }],
-  __csrf_token: ''
-}; // ! NOT NEEDED ANYMORE !!!! £$!*er
-//  <h1>Your Abstract</h1>
-//                         <div className="login_form-field">
-//                             <label
-//                                 htmlFor="label"
-//                                 className="login_form-label">
-//                                 Submission Type:
-//                         </label>
-//                             <Field
-//                                 className="login_form-radio"
-//                                 onClick={handleChange}
-//                                 value={values.submission_type}
-//                                 style={{ color: '#134381' }}
-//                                 name="submission_type"
-//                                 component={RadioGroup}
-//                             >
-//                                 <label
-//                                     style={{ margin: '1rem' }}
-//                                     htmlFor="label"
-//                                     className="login_form-label">
-//                                     I will make a full technical paper submission
-//                             <Field
-//                                         type="radio"
-//                                         name="submission_type"
-//                                         value="full"
-//                                     />
-//                                 </label>
-//                                 <label
-//                                     style={{ margin: '1rem' }}
-//                                     htmlFor="label"
-//                                     className="login_form-label">
-//                                     I will make an oral-only submission
-//                             <Field
-//                                         type="radio"
-//                                         name="submission_type"
-//                                         value="oral"
-//                                     />
-//                                 </label>
-//                                 <label
-//                                     style={{ margin: '1rem' }}
-//                                     htmlFor="label"
-//                                     className="login_form-label">
-//                                     I will make a poster-only submission
-//                             <Field
-//                                         type="radio"
-//                                         name="submission_type"
-//                                         value="poster"
-//                                     />
-//                                 </label>
-//                             </Field>
-//                         </div>
-//                         {values.submission_type === 'full' && <div className="login_form-field">
-//                             <label
-//                                 htmlFor="label"
-//                                 className="login_form-label">
-//                                 Presentation Type:
-//                         </label>
-//                             <Field
-//                                 className="login_form-radio"
-//                                 onClick={handleChange}
-//                                 value={values.presentationtype_full}
-//                                 style={{ color: '#134381' }}
-//                                 name="presentationtype_full"
-//                                 component={RadioGroup}
-//                             >
-//                                 <label
-//                                     style={{ margin: '1rem' }}
-//                                     htmlFor="label"
-//                                     className="login_form-label">
-//                                     My full paper submission will be accompanied by an oral presentation
-//                             <Field
-//                                         type="radio"
-//                                         name="presentationtype_full"
-//                                         value="programme"
-//                                     />
-//                                 </label>
-//                                 <label
-//                                     style={{ margin: '1rem' }}
-//                                     htmlFor="label"
-//                                     className="login_form-label">
-//                                     My full paper submission will be accompanied by an poster presentation
-//                             <Field
-//                                         type="radio"
-//                                         name="presentationtype_full"
-//                                         value="poster"
-//                                     />
-//                                 </label>
-//                             </Field>
-//                         </div>}
-//                         <div className="login_form-field">
-//                             <label
-//                                 htmlFor="label"
-//                                 className="login_form-label">
-//                                 Paper Title:
-//                         </label>
-//                             <Field
-//                                 className="login_form-input"
-//                                 onClick={handleChange}
-//                                 value={values.papertitle}
-//                                 style={{ color: '#134381' }}
-//                                 name="papertitle"
-//                                 component={TextField}
-//                             />
-//                         </div>
-//                         <div className="login_form-field">
-//                             <label
-//                                 htmlFor="label"
-//                                 className="login_form-label">
-//                                 Which topic does your paper belong to?
-//                         </label>
-//                             <Field
-//                                 className="login_form-radio"
-//                                 onClick={handleChange}
-//                                 value={values.theme}
-//                                 style={{ color: '#134381' }}
-//                                 name="theme"
-//                                 component={RadioGroup}
-//                             >
-//                                 {themes.map(theme =>
-//                                     <label
-//                                         style={{ margin: '1rem' }}
-//                                         htmlFor="label"
-//                                         className="login_form-label">
-//                                         {theme.label}
-//                                         <Field
-//                                             type="radio"
-//                                             name="theme"
-//                                             value={theme.value}
-//                                         />
-//                                     </label>)}
-//                             </Field>
-//                         </div>
-//                         <div className="login_form-field">
-//                             <label
-//                                 htmlFor="label"
-//                                 className="login_form-label">
-//                                 Please choose up to three sub-topics for your paper:
-//                         </label>
-//                             {
-//                                 values.theme === 'BC50E220-9412-11E8-85AF-D97B4D95EBB1' ?
-//                                     subTheme1.map((sub, i) => (
-//                                         <label
-//                                             htmlFor="label"
-//                                             className="login_form-label">
-//                                             <Field key={i} id={`Box-${i}`} type="checkbox" name="subtheme" value={sub.value} />
-//                                             {sub.label}
-//                                         </label>
-//                                     )
-//                                     )
-//                                     :
-//                                     values.theme === '48C9561C-7865-11E7-AA75-C89000D85D50' ?
-//                                         subTheme2.map((sub, i) => (
-//                                             <label
-//                                                 htmlFor="label"
-//                                                 className="login_form-label">
-//                                                 <Field key={i} id={`Box-${i}`} type="checkbox" name="subtheme" value={sub.value} />
-//                                                 {sub.label}
-//                                             </label>
-//                                         )
-//                                         )
-//                                         :
-//                                         values.theme === '5D49D9C2-7865-11E7-9112-887F12D54550' ?
-//                                             subTheme3.map((sub, i) => (
-//                                                 <label
-//                                                     htmlFor="label"
-//                                                     className="login_form-label">
-//                                                     <Field key={i} id={`Box-${i}`} type="checkbox" name="subtheme" value={sub.value} />
-//                                                     {sub.label}
-//                                                 </label>
-//                                             )
-//                                             )
-//                                             :
-//                                             values.theme === '7C15061A-7865-11E7-8178-84D2A73AF9BC' ?
-//                                                 subTheme4.map((sub, i) => (
-//                                                     <label
-//                                                         htmlFor="label"
-//                                                         className="login_form-label">
-//                                                         <Field key={i} id={`Box-${i}`} type="checkbox" name="subtheme" value={sub.value} />
-//                                                         {sub.label}
-//                                                     </label>
-//                                                 )
-//                                                 )
-//                                                 :
-//                                                 values.theme === '925B5F3C-7865-11E7-8659-8C8422753A7C' ?
-//                                                     subTheme5.map((sub, i) => (
-//                                                         <label
-//                                                             htmlFor="label"
-//                                                             className="login_form-label">
-//                                                             <Field key={i} id={`Box-${i}`} type="checkbox" name="subtheme" value={sub.value} />
-//                                                             {sub.label}
-//                                                         </label>
-//                                                     )
-//                                                     )
-//                                                     :
-//                                                     values.theme === 'B6F53F20-7865-11E7-A9B1-FC3D434D4D51' ?
-//                                                         subTheme6.map((sub, i) => (
-//                                                             <label
-//                                                                 htmlFor="label"
-//                                                                 className="login_form-label">
-//                                                                 <Field key={i} id={`Box-${i}`} type="checkbox" name="subtheme" value={sub.value} />
-//                                                                 {sub.label}
-//                                                             </label>
-//                                                         )
-//                                                         )
-//                                                         : null
-//                             }
-//                             <ErrorMessage component={Typography} name="subtheme" style={{ color: 'red', fontSize: '1.5rem' }} />
-//                         </div>
-//                         <div className="login_form-field">
-//                             <label
-//                                 htmlFor="label"
-//                                 className="login_form-label">
-//                                 Abstract:
-//                         </label>
-//                             <Field
-//                                 className="login_form-input"
-//                                 onClick={handleChange}
-//                                 value={values.abstract}
-//                                 style={{ color: '#134381' }}
-//                                 name="abstract"
-//                                 component={TextField}
-//                             />
-//                         </div>
-//                         <div className="login_form-field">
-//                             <label
-//                                 htmlFor="label"
-//                                 className="login_form-label">
-//                                 Keywords:
-//                         </label>
-//                             <Field
-//                                 className="login_form-input"
-//                                 onClick={handleChange}
-//                                 value={values.keywords}
-//                                 style={{ color: '#134381' }}
-//                                 name="keywords"
-//                                 component={TextField}
-//                             />
-//                         </div>
-//                         <div className="login_form-field">
-//                             <label
-//                                 htmlFor="label"
-//                                 className="login_form-label">
-//                                 Previous Papers:
-//                         </label>
-//                             <Field
-//                                 className="login_form-input"
-//                                 onClick={handleChange}
-//                                 value={values.previouspapers}
-//                                 style={{ color: '#134381' }}
-//                                 name="previouspapers"
-//                                 component={TextField}
-//                             />
-//                         </div>
-//                         <div className="login_form-field">
-//                             <label
-//                                 htmlFor="label"
-//                                 className="login_form-label">
-//                                 Do you wish your paper to be considered for inclusion in a list of the best papers given at EuroBrake to be published in an academic journal?:
-//                         </label>
-//                             <Field
-//                                 className="login_form-input"
-//                                 onClick={handleChange}
-//                                 value={values.consider_for_journal}
-//                                 style={{ color: '#134381' }}
-//                                 name="consider_for_journal"
-//                                 component={TextField}
-//                             />
-//                         </div>
-
-/***/ }),
-
 /***/ "./components/GoogleMaps.js":
 /*!**********************************!*\
   !*** ./components/GoogleMaps.js ***!
@@ -3152,11 +1141,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _material_ui_core_TableCell__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_TableCell__WEBPACK_IMPORTED_MODULE_9__);
 /* harmony import */ var _material_ui_core_TableRow__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @material-ui/core/TableRow */ "@material-ui/core/TableRow");
 /* harmony import */ var _material_ui_core_TableRow__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_TableRow__WEBPACK_IMPORTED_MODULE_10__);
-/* harmony import */ var _components_login__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../components/login */ "./components/login.js");
-/* harmony import */ var _components_Forms__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../components/Forms */ "./components/Forms.js");
+/* harmony import */ var _forms_OneForm__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./forms/OneForm */ "./components/forms/OneForm.js");
 var _jsxFileName = "/mnt/c/Users/D.Hardiman/desktop/eurobrake/components/LoginExpandTable.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
-
 
 
 
@@ -3192,18 +1179,10 @@ function LoginExpandTable() {
     setExpanded(newExpanded ? panel : false);
   };
 
-  function createData(days, Early, Full) {
-    return {
-      days,
-      Early,
-      Full
-    };
-  }
-
   return __jsx("div", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 106
+      lineNumber: 103
     },
     __self: this
   }, __jsx(ExpansionPanel, {
@@ -3215,7 +1194,7 @@ function LoginExpandTable() {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 107
+      lineNumber: 104
     },
     __self: this
   }, __jsx(ExpansionPanelSummary, {
@@ -3223,54 +1202,55 @@ function LoginExpandTable() {
     id: "panel1d-header",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 108
+      lineNumber: 105
     },
     __self: this
   }, __jsx("div", {
     className: "table_summary-box",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 109
+      lineNumber: 106
     },
     __self: this
   }, expanded === 'panel1' ? __jsx(_material_ui_icons__WEBPACK_IMPORTED_MODULE_6__["RemoveCircle"], {
     className: "table-icon",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 110
+      lineNumber: 107
     },
     __self: this
   }) : __jsx(_material_ui_icons__WEBPACK_IMPORTED_MODULE_6__["AddCircle"], {
     className: "table-icon",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 110
+      lineNumber: 107
     },
     __self: this
   }), __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_5___default.a, {
     className: "table-heading",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 111
+      lineNumber: 108
     },
     __self: this
   }, "Login")), expanded !== 'panel1' ? __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_5___default.a, {
     className: "table-sub",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 114
+      lineNumber: 111
     },
     __self: this
   }, "Click to reveal Login Form") : null), __jsx(ExpansionPanelDetails, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 117
+      lineNumber: 114
     },
     __self: this
-  }, __jsx(_components_login__WEBPACK_IMPORTED_MODULE_11__["default"], {
+  }, __jsx(_forms_OneForm__WEBPACK_IMPORTED_MODULE_11__["default"], {
+    form: "login",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 118
+      lineNumber: 115
     },
     __self: this
   }))), __jsx(ExpansionPanel, {
@@ -3282,7 +1262,7 @@ function LoginExpandTable() {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 121
+      lineNumber: 118
     },
     __self: this
   }, __jsx(ExpansionPanelSummary, {
@@ -3290,54 +1270,55 @@ function LoginExpandTable() {
     id: "panel2d-header",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 122
+      lineNumber: 119
     },
     __self: this
   }, __jsx("div", {
     className: "table_summary-box",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 123
+      lineNumber: 120
     },
     __self: this
   }, expanded === 'panel2' ? __jsx(_material_ui_icons__WEBPACK_IMPORTED_MODULE_6__["RemoveCircle"], {
     className: "table-icon",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 124
+      lineNumber: 121
     },
     __self: this
   }) : __jsx(_material_ui_icons__WEBPACK_IMPORTED_MODULE_6__["AddCircle"], {
     className: "table-icon",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 124
+      lineNumber: 121
     },
     __self: this
   }), __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_5___default.a, {
     className: "table-heading",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 125
+      lineNumber: 122
     },
     __self: this
   }, "Create Author Account")), expanded !== 'panel2' ? __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_5___default.a, {
     className: "table-sub",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 128
+      lineNumber: 125
     },
     __self: this
   }, "Click to reveal Form") : null), __jsx(ExpansionPanelDetails, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 131
+      lineNumber: 128
     },
     __self: this
-  }, __jsx(_components_Forms__WEBPACK_IMPORTED_MODULE_12__["AbstractForm"], {
+  }, __jsx(_forms_OneForm__WEBPACK_IMPORTED_MODULE_11__["default"], {
+    form: "author",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 132
+      lineNumber: 129
     },
     __self: this
   }))));
@@ -3960,7 +1941,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _material_ui_core_DialogContentText__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_DialogContentText__WEBPACK_IMPORTED_MODULE_5__);
 /* harmony import */ var _material_ui_core_DialogTitle__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @material-ui/core/DialogTitle */ "@material-ui/core/DialogTitle");
 /* harmony import */ var _material_ui_core_DialogTitle__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_DialogTitle__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _Forms__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./Forms */ "./components/Forms.js");
+/* harmony import */ var _forms_FormActions__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./forms/FormActions */ "./components/forms/FormActions.js");
 var _jsxFileName = "/mnt/c/Users/D.Hardiman/desktop/eurobrake/components/Popup.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -3978,7 +1959,7 @@ function Popup(props) {
 
   const handleClickOpen = async () => {
     await setOpen(true);
-    const getCsrf = await Object(_Forms__WEBPACK_IMPORTED_MODULE_7__["GetForm"])('https://prelude.eurobrake.net/upload');
+    const getCsrf = await Object(_forms_FormActions__WEBPACK_IMPORTED_MODULE_7__["GetForm"])('https://prelude.eurobrake.net/upload');
     await setCsrf(getCsrf);
   };
 
@@ -3993,7 +1974,7 @@ function Popup(props) {
       file,
       csrf
     });
-    await Object(_Forms__WEBPACK_IMPORTED_MODULE_7__["SendFile"])({
+    await Object(_forms_FormActions__WEBPACK_IMPORTED_MODULE_7__["SendFile"])({
       file,
       csrf
     });
@@ -4093,202 +2074,3743 @@ function Popup(props) {
 
 /***/ }),
 
-/***/ "./components/login.js":
-/*!*****************************!*\
-  !*** ./components/login.js ***!
-  \*****************************/
-/*! exports provided: default */
+/***/ "./components/forms/Abstract.js":
+/*!**************************************!*\
+  !*** ./components/forms/Abstract.js ***!
+  \**************************************/
+/*! exports provided: AbstractForm */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Login; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AbstractForm", function() { return AbstractForm; });
 /* harmony import */ var _babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/core-js/json/stringify */ "./node_modules/@babel/runtime-corejs2/core-js/json/stringify.js");
 /* harmony import */ var _babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/defineProperty */ "./node_modules/@babel/runtime-corejs2/helpers/esm/defineProperty.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! styled-components */ "styled-components");
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! isomorphic-unfetch */ "isomorphic-unfetch");
-/* harmony import */ var isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @material-ui/core/TextField */ "@material-ui/core/TextField");
-/* harmony import */ var _material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _utils_auth__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../utils/auth */ "./utils/auth.js");
-/* harmony import */ var _Button__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./Button */ "./components/Button.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var formik__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! formik */ "formik");
+/* harmony import */ var formik__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(formik__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var formik_material_ui__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! formik-material-ui */ "formik-material-ui");
+/* harmony import */ var formik_material_ui__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(formik_material_ui__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _material_ui_icons__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @material-ui/icons */ "@material-ui/icons");
+/* harmony import */ var _material_ui_icons__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_material_ui_icons__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var js_cookie__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! js-cookie */ "js-cookie");
+/* harmony import */ var js_cookie__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(js_cookie__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _Button__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../Button */ "./components/Button.js");
+/* harmony import */ var _material_ui_core__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @material-ui/core */ "@material-ui/core");
+/* harmony import */ var _material_ui_core__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _FormSelects__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./FormSelects */ "./components/forms/FormSelects.js");
+/* harmony import */ var _FormControl__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./FormControl */ "./components/forms/FormControl.js");
+/* harmony import */ var _Formstyles__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./Formstyles */ "./components/forms/Formstyles.js");
+
+var _jsxFileName = "/mnt/c/Users/D.Hardiman/desktop/eurobrake/components/forms/Abstract.js";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 
 
-var _jsxFileName = "/mnt/c/Users/D.Hardiman/desktop/eurobrake/components/login.js";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement;
 
 
 
 
 
 
-const StyledForm = styled_components__WEBPACK_IMPORTED_MODULE_3___default.a.form.withConfig({
-  displayName: "login__StyledForm",
-  componentId: "sc-1otdfux-0"
-})(["display:flex;flex-flow:column;justify-content:space-between;align-items:center;min-width:100%;.MuiInput-underline:after{color:", ";}.MuiInputBase-root{font-family:", ";font-size:2rem;color:", ";}input:-internal-autofill-selected{}.login_form{&-field{margin:1rem 0;width:100%;display:flex;justify-content:space-between;align-items:flex-end;}&-label{font-family:", ";font-size:2.6rem;color:", ";}&-input{min-width:40rem;font-family:", ";font-size:5rem;color:", ";}&-link{font-family:", ";font-size:1.7rem;color:", ";}}"], props => props.theme.primary, props => props.theme.MPBoldIt, props => props.theme.primary, props => props.theme.MPLight, props => props.theme.primary, props => props.theme.MPBoldIt, props => props.theme.primary, props => props.theme.MPBoldIt, props => props.theme.primary);
-class Login extends react__WEBPACK_IMPORTED_MODULE_2__["Component"] {
-  constructor(props) {
-    super(props);
 
-    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_1__["default"])(this, "saveToState", e => {
-      this.setState({
-        [e.target.name]: e.target.value
-      });
-    });
 
-    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_1__["default"])(this, "onSubmit", async e => {
-      e.preventDefault();
-      const {
-        username,
-        password,
-        error
-      } = this.state; // const apiUrl = authorLogin ? 'https://prelude.eurobrake.net/login' : '' ;
-      // action="//2019.eurobrake.net/exhibition/exhibitors/login" SHOULD BE LOGIN FORM FOR EXHIBITORS
+const AbstractForm = (editPaper = false) => {
+  const {
+    0: presenter,
+    1: setPresenter
+  } = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])(''); // if edit = true send back a preset form if not send a blank
 
-      const formData = {
-        username: username,
-        password: password
-      };
-
-      try {
-        const response = await isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_4___default()('https://prelude.eurobrake.net/login', {
-          method: 'POST',
-          credentials: 'include',
-          body: _babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_0___default()(formData),
-          headers: {
-            'Content-Type': 'application/json'
-          }
-        });
-        const data = await response;
-        const data2 = await response.json();
-        console.log('login', _babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_0___default()(data2));
-
-        if (data2.status === 'success') {
-          const {
-            logintoken
-          } = data2;
-          await Object(_utils_auth__WEBPACK_IMPORTED_MODULE_6__["login"])({
-            logintoken
-          }); // this.setState(prev => ({ userLoggedIn: !prev }))
-
-          return {};
-        } else {
-          let error = new Error(data.error);
-          error.response = response;
-          throw error;
-        }
-      } catch (error) {
-        console.error('Failed to login, please try again', error);
-        this.setState({
-          error: error.message
-        });
-      }
-    });
-
-    this.state = {
-      username: '',
-      password: '',
-      error: ''
+  console.log({
+    editPaper
+  });
+  Object(react__WEBPACK_IMPORTED_MODULE_1__["useEffect"])(() => {
+    console.log('presenter is changing');
+  }, [presenter]);
+  return __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Formik"], {
+    initialValues: editPaper === true ? presets : emptyInitial,
+    onSubmit: (values, actions) => {
+      setTimeout(() => {
+        alert(_babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_0___default()(values, null, 2));
+        actions.setSubmitting(false);
+      }, 1000);
+    },
+    validationSchema: _FormControl__WEBPACK_IMPORTED_MODULE_9__["AbstractSchema"],
+    enableReinitialize: true,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 24
+    },
+    __self: undefined
+  }, ({
+    values,
+    isSubmitting,
+    isValidating,
+    handleChange,
+    setFieldValue
+  }) => {
+    const allNo = ({
+      name
+    }) => {
+      if (false) {}
     };
-  }
 
-  render() {
-    return __jsx(StyledForm, {
-      className: "login_form",
+    const onPresenterChange = event => {
+      const {
+        target
+      } = event;
+      const value = target.value;
+      const name = target.name;
+      value === 'no' ? setPresenter('') : setPresenter(name);
+      setFieldValue(name, value);
+      allNo({
+        name
+      });
+      return console.log({
+        values
+      });
+    };
+
+    return __jsx(_Formstyles__WEBPACK_IMPORTED_MODULE_10__["StyledForm"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 120
+        lineNumber: 60
       },
-      __self: this
-    }, __jsx("div", {
-      className: "login_form-field",
+      __self: undefined
+    }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_7__["Typography"], {
+      className: "form-title",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 121
+        lineNumber: 61
       },
-      __self: this
+      __self: undefined
+    }, "Primary Author"), __jsx("div", {
+      className: "form-field",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 62
+      },
+      __self: undefined
     }, __jsx("label", {
       htmlFor: "label",
-      className: "login_form-label",
+      className: "form-label",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 63
+      },
+      __self: undefined
+    }, "Title"), __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Field"], {
+      className: "form-input",
+      onClick: handleChange,
+      value: values.author_title,
+      style: {
+        color: '#134381'
+      },
+      name: "author_title",
+      component: formik_material_ui__WEBPACK_IMPORTED_MODULE_3__["Select"],
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 68
+      },
+      __self: undefined
+    }, _FormSelects__WEBPACK_IMPORTED_MODULE_8__["titles"].map((option, i) => __jsx("option", {
+      key: i,
+      style: {
+        fontSize: '1.5rem',
+        cursor: 'pointer'
+      },
+      value: option.value,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 77
+      },
+      __self: undefined
+    }, option.label)))), __jsx("div", {
+      className: "form-field",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 80
+      },
+      __self: undefined
+    }, __jsx("label", {
+      htmlFor: "label",
+      className: "form-label",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 81
+      },
+      __self: undefined
+    }, "First Name:"), __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Field"], {
+      className: "form-input",
+      onClick: handleChange,
+      value: values.author_firstname,
+      style: {
+        color: '#134381'
+      },
+      name: "author_firstname",
+      component: formik_material_ui__WEBPACK_IMPORTED_MODULE_3__["TextField"],
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 86
+      },
+      __self: undefined
+    })), __jsx("div", {
+      className: "form-field",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 95
+      },
+      __self: undefined
+    }, __jsx("label", {
+      htmlFor: "label",
+      className: "form-label",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 96
+      },
+      __self: undefined
+    }, "Last Name:"), __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Field"], {
+      className: "form-input",
+      onClick: handleChange,
+      value: values.author_lastname,
+      style: {
+        color: '#134381'
+      },
+      name: "author_lastname",
+      component: formik_material_ui__WEBPACK_IMPORTED_MODULE_3__["TextField"],
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 101
+      },
+      __self: undefined
+    })), __jsx("div", {
+      className: "form-field",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 110
+      },
+      __self: undefined
+    }, __jsx("label", {
+      htmlFor: "label",
+      className: "form-label",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 111
+      },
+      __self: undefined
+    }, "Email:"), __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Field"], {
+      className: "form-input",
+      onClick: handleChange,
+      value: values.author_email,
+      style: {
+        color: '#134381'
+      },
+      name: "author_email",
+      component: formik_material_ui__WEBPACK_IMPORTED_MODULE_3__["TextField"],
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 116
+      },
+      __self: undefined
+    })), __jsx("div", {
+      className: "form-field",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 125
+      },
+      __self: undefined
+    }, __jsx("label", {
+      htmlFor: "label",
+      className: "form-label",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 126
+      },
+      __self: undefined
+    }, "Job Title:"), __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Field"], {
+      className: "form-input",
+      onClick: handleChange,
+      value: values.author_jobtitle,
+      style: {
+        color: '#134381'
+      },
+      name: "author_jobtitle",
+      component: formik_material_ui__WEBPACK_IMPORTED_MODULE_3__["TextField"],
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 131
+      },
+      __self: undefined
+    })), __jsx("div", {
+      className: "form-field",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 140
+      },
+      __self: undefined
+    }, __jsx("label", {
+      htmlFor: "label",
+      className: "form-label",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 141
+      },
+      __self: undefined
+    }, "Company:"), __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Field"], {
+      className: "form-input",
+      onClick: handleChange,
+      value: values.author_company,
+      style: {
+        color: '#134381'
+      },
+      name: "author_company",
+      component: formik_material_ui__WEBPACK_IMPORTED_MODULE_3__["TextField"],
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 146
+      },
+      __self: undefined
+    })), __jsx("div", {
+      className: "form-field",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 155
+      },
+      __self: undefined
+    }, __jsx("label", {
+      htmlFor: "label",
+      className: "form-label",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 156
+      },
+      __self: undefined
+    }, "Address:"), __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Field"], {
+      className: "form-input",
+      onClick: handleChange,
+      value: values.author_address1,
+      style: {
+        color: '#134381'
+      },
+      name: "author_address1",
+      component: formik_material_ui__WEBPACK_IMPORTED_MODULE_3__["TextField"],
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 161
+      },
+      __self: undefined
+    })), __jsx("div", {
+      className: "form-field",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 170
+      },
+      __self: undefined
+    }, __jsx("label", {
+      htmlFor: "label",
+      className: "form-label",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 171
+      },
+      __self: undefined
+    }), __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Field"], {
+      className: "form-input",
+      onClick: handleChange,
+      value: values.author_address2,
+      style: {
+        color: '#134381'
+      },
+      name: "author_address2",
+      component: formik_material_ui__WEBPACK_IMPORTED_MODULE_3__["TextField"],
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 176
+      },
+      __self: undefined
+    })), __jsx("div", {
+      className: "form-field",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 185
+      },
+      __self: undefined
+    }, __jsx("label", {
+      htmlFor: "label",
+      className: "form-label",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 186
+      },
+      __self: undefined
+    }), __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Field"], {
+      className: "form-input",
+      onClick: handleChange,
+      value: values.author_address3,
+      style: {
+        color: '#134381'
+      },
+      name: "author_address3",
+      component: formik_material_ui__WEBPACK_IMPORTED_MODULE_3__["TextField"],
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 191
+      },
+      __self: undefined
+    })), __jsx("div", {
+      className: "form-field",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 200
+      },
+      __self: undefined
+    }, __jsx("label", {
+      htmlFor: "label",
+      className: "form-label",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 201
+      },
+      __self: undefined
+    }, "City:"), __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Field"], {
+      className: "form-input",
+      onClick: handleChange,
+      value: values.author_city,
+      style: {
+        color: '#134381'
+      },
+      name: "author_city",
+      component: formik_material_ui__WEBPACK_IMPORTED_MODULE_3__["TextField"],
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 206
+      },
+      __self: undefined
+    })), __jsx("div", {
+      className: "form-field",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 215
+      },
+      __self: undefined
+    }, __jsx("label", {
+      htmlFor: "label",
+      className: "form-label",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 216
+      },
+      __self: undefined
+    }, "State/county/province:"), __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Field"], {
+      className: "form-input",
+      onClick: handleChange,
+      value: values.author_scp,
+      style: {
+        color: '#134381'
+      },
+      name: "author_scp",
+      component: formik_material_ui__WEBPACK_IMPORTED_MODULE_3__["TextField"],
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 221
+      },
+      __self: undefined
+    })), __jsx("div", {
+      className: "form-field",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 230
+      },
+      __self: undefined
+    }, __jsx("label", {
+      htmlFor: "label",
+      className: "form-label",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 231
+      },
+      __self: undefined
+    }, "Postal/Zip code:"), __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Field"], {
+      className: "form-input",
+      onClick: handleChange,
+      value: values.author_postal,
+      style: {
+        color: '#134381'
+      },
+      name: "author_postal",
+      component: formik_material_ui__WEBPACK_IMPORTED_MODULE_3__["TextField"],
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 236
+      },
+      __self: undefined
+    })), __jsx("div", {
+      className: "form-field",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 245
+      },
+      __self: undefined
+    }, __jsx("label", {
+      htmlFor: "label",
+      className: "form-label",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 246
+      },
+      __self: undefined
+    }, "Country"), __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Field"], {
+      className: "form-input",
+      onClick: handleChange,
+      value: values.author_country,
+      style: {
+        color: '#134381'
+      },
+      name: "author_country",
+      component: formik_material_ui__WEBPACK_IMPORTED_MODULE_3__["Select"],
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 251
+      },
+      __self: undefined
+    }, _FormSelects__WEBPACK_IMPORTED_MODULE_8__["countries"].map((option, i) => __jsx("option", {
+      key: i,
+      style: {
+        fontSize: '1.5rem',
+        cursor: 'pointer'
+      },
+      value: option.value,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 260
+      },
+      __self: undefined
+    }, option.label)))), __jsx("div", {
+      className: "form-field",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 263
+      },
+      __self: undefined
+    }, __jsx("label", {
+      htmlFor: "label",
+      className: "form-label",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 264
+      },
+      __self: undefined
+    }, "Phone:"), __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Field"], {
+      className: "form-input",
+      onClick: handleChange,
+      value: values.author_phone,
+      style: {
+        color: '#134381'
+      },
+      name: "author_phone",
+      component: formik_material_ui__WEBPACK_IMPORTED_MODULE_3__["TextField"],
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 269
+      },
+      __self: undefined
+    })), __jsx("div", {
+      className: "form-field",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 278
+      },
+      __self: undefined
+    }, __jsx("label", {
+      htmlFor: "label",
+      className: "form-label",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 279
+      },
+      __self: undefined
+    }, "Is this the presenting author?"), __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Field"], {
+      className: "form-radio",
+      value: values.is_presenting_author,
+      style: {
+        color: '#134381'
+      },
+      name: "is_presenting_author",
+      component: formik_material_ui__WEBPACK_IMPORTED_MODULE_3__["RadioGroup"],
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 284
+      },
+      __self: undefined
+    }, __jsx("label", {
+      style: {
+        margin: '1rem'
+      },
+      htmlFor: "label",
+      className: "form-label",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 291
+      },
+      __self: undefined
+    }, "Yes", __jsx("input", {
+      checked: presenter === 'is_presenting_author',
+      onChange: event => {
+        onPresenterChange(event);
+      },
+      type: "radio",
+      name: "is_presenting_author",
+      value: "yes",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 296
+      },
+      __self: undefined
+    })), __jsx("label", {
+      style: {
+        margin: '1rem'
+      },
+      htmlFor: "label",
+      className: "form-label",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 307
+      },
+      __self: undefined
+    }, "No", __jsx("input", {
+      onChange: event => {
+        onPresenterChange(event);
+      },
+      checked: presenter !== 'is_presenting_author',
+      type: "radio",
+      name: "is_presenting_author",
+      value: "no",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 312
+      },
+      __self: undefined
+    })))), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_7__["Typography"], {
+      className: "form-title",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 326
+      },
+      __self: undefined
+    }, "Secondary Author(s)"), __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["FieldArray"], {
+      name: `secondary_authors`,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 328
+      },
+      __self: undefined
+    }, ({
+      swap,
+      push,
+      remove,
+      setSubmitting
+    }) => values.secondary_authors && values.secondary_authors.length > 0 && values.secondary_authors.map((authors, index) => __jsx("div", {
+      key: index,
+      className: "form-secondary",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 334
+      },
+      __self: undefined
+    }, __jsx("div", {
+      className: "form-field",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 335
+      },
+      __self: undefined
+    }, __jsx("label", {
+      htmlFor: "label",
+      className: "form-label",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 336
+      },
+      __self: undefined
+    }, "Title:"), __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Field"], {
+      className: "form-input",
+      onClick: handleChange,
+      value: `secondary_authors[${index}].title`,
+      style: {
+        color: '#134381'
+      },
+      name: `secondary_authors[${index}].title`,
+      component: formik_material_ui__WEBPACK_IMPORTED_MODULE_3__["TextField"],
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 341
+      },
+      __self: undefined
+    })), __jsx("div", {
+      className: "form-field",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 350
+      },
+      __self: undefined
+    }, __jsx("label", {
+      htmlFor: "label",
+      className: "form-label",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 351
+      },
+      __self: undefined
+    }, "First Name:"), __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Field"], {
+      className: "form-input",
+      onClick: handleChange,
+      value: `secondary_authors[${index}].firstname`,
+      style: {
+        color: '#134381'
+      },
+      name: `secondary_authors[${index}].firstname`,
+      component: formik_material_ui__WEBPACK_IMPORTED_MODULE_3__["TextField"],
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 356
+      },
+      __self: undefined
+    })), __jsx("div", {
+      className: "form-field",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 365
+      },
+      __self: undefined
+    }, __jsx("label", {
+      htmlFor: "label",
+      className: "form-label",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 366
+      },
+      __self: undefined
+    }, "Last Name:"), __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Field"], {
+      className: "form-input",
+      onClick: handleChange,
+      value: `secondary_authors[${index}].lastname`,
+      style: {
+        color: '#134381'
+      },
+      name: `secondary_authors[${index}].lastname`,
+      component: formik_material_ui__WEBPACK_IMPORTED_MODULE_3__["TextField"],
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 371
+      },
+      __self: undefined
+    })), __jsx("div", {
+      className: "form-field",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 380
+      },
+      __self: undefined
+    }, __jsx("label", {
+      htmlFor: "label",
+      className: "form-label",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 381
+      },
+      __self: undefined
+    }, "Email:"), __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Field"], {
+      className: "form-input",
+      onClick: handleChange,
+      value: `secondary_authors[${index}].email`,
+      style: {
+        color: '#134381'
+      },
+      name: `secondary_authors[${index}].email`,
+      component: formik_material_ui__WEBPACK_IMPORTED_MODULE_3__["TextField"],
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 386
+      },
+      __self: undefined
+    })), __jsx("div", {
+      className: "form-field",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 395
+      },
+      __self: undefined
+    }, __jsx("label", {
+      htmlFor: "label",
+      className: "form-label",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 396
+      },
+      __self: undefined
+    }, "Company:"), __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Field"], {
+      className: "form-input",
+      onClick: handleChange,
+      value: `secondary_authors[${index}].company`,
+      style: {
+        color: '#134381'
+      },
+      name: `secondary_authors[${index}].company`,
+      component: formik_material_ui__WEBPACK_IMPORTED_MODULE_3__["TextField"],
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 401
+      },
+      __self: undefined
+    })), __jsx("div", {
+      className: "form-field",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 410
+      },
+      __self: undefined
+    }, __jsx("label", {
+      htmlFor: "label",
+      className: "form-label",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 411
+      },
+      __self: undefined
+    }, "Country:"), __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Field"], {
+      className: "form-input",
+      onClick: handleChange,
+      value: `secondary_authors[${index}].country`,
+      style: {
+        color: '#134381'
+      },
+      name: `secondary_authors[${index}].country`,
+      component: formik_material_ui__WEBPACK_IMPORTED_MODULE_3__["TextField"],
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 416
+      },
+      __self: undefined
+    })), __jsx("div", {
+      className: "form-field",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 425
+      },
+      __self: undefined
+    }, __jsx("label", {
+      htmlFor: "label",
+      className: "form-label",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 426
+      },
+      __self: undefined
+    }, "Is this the presenting Author?"), __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Field"], {
+      className: "form-radio",
+      style: {
+        color: '#134381'
+      },
+      value: `secondary_authors[${index}].is_presenting_author`,
+      component: formik_material_ui__WEBPACK_IMPORTED_MODULE_3__["RadioGroup"],
+      name: `secondary_authors[${index}].is_presenting_author`,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 431
+      },
+      __self: undefined
+    }, __jsx("label", {
+      style: {
+        margin: '1rem'
+      },
+      htmlFor: "label",
+      className: "form-label",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 438
+      },
+      __self: undefined
+    }, "Yes", __jsx("input", {
+      checked: presenter == `secondary_authors[${index}].is_presenting_author`,
+      onChange: event => {
+        onPresenterChange(event);
+      },
+      type: "radio",
+      value: "yes",
+      name: `secondary_authors[${index}].is_presenting_author`,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 443
+      },
+      __self: undefined
+    })), __jsx("label", {
+      style: {
+        margin: '1rem'
+      },
+      htmlFor: "label",
+      className: "form-label",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 454
+      },
+      __self: undefined
+    }, "No", __jsx("input", {
+      checked: presenter != `secondary_authors[${index}].is_presenting_author`,
+      onChange: event => {
+        onPresenterChange(event);
+      },
+      type: "radio",
+      value: "no",
+      name: `secondary_authors[${index}].is_presenting_author`,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 459
+      },
+      __self: undefined
+    })))), __jsx("div", {
+      className: "form-field",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 472
+      },
+      __self: undefined
+    }, __jsx(_Button__WEBPACK_IMPORTED_MODULE_6__["Button"], {
+      bs: "false",
+      HBColor: "transparent",
+      transform: "scale(1.4)",
+      type: "add",
+      onClick: () => {
+        push({
+          title: '',
+          firstname: '',
+          lastname: '',
+          email: '',
+          company: '',
+          country: '',
+          is_presenting_author: ''
+        });
+      },
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 474
+      },
+      __self: undefined
+    }, __jsx(_material_ui_icons__WEBPACK_IMPORTED_MODULE_4__["AddCircle"], {
+      style: {
+        color: 'green',
+        fontSize: '3rem'
+      },
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 489
+      },
+      __self: undefined
+    })), __jsx(_Button__WEBPACK_IMPORTED_MODULE_6__["Button"], {
+      bs: "false",
+      HBColor: "transparent",
+      transform: "scale(1.4)",
+      type: "remove",
+      onClick: () => values.secondary_authors.length > 1 && remove(index),
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 491
+      },
+      __self: undefined
+    }, __jsx(_material_ui_icons__WEBPACK_IMPORTED_MODULE_4__["RemoveCircle"], {
+      style: {
+        color: 'red',
+        fontSize: '3rem'
+      },
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 496
+      },
+      __self: undefined
+    })), __jsx(_Button__WEBPACK_IMPORTED_MODULE_6__["Button"], {
+      bs: "false",
+      HBColor: "transparent",
+      transform: "scale(1.4)",
+      type: "upgrade",
+      onClick: () => values.secondary_authors.length > 1 && index !== 0 && swap(index, index - 1),
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 498
+      },
+      __self: undefined
+    }, __jsx(_material_ui_icons__WEBPACK_IMPORTED_MODULE_4__["ArrowUpwardRounded"], {
+      style: {
+        color: 'red',
+        fontSize: '3rem'
+      },
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 503
+      },
+      __self: undefined
+    })), __jsx(_Button__WEBPACK_IMPORTED_MODULE_6__["Button"], {
+      bs: "false",
+      HBColor: "transparent",
+      transform: "scale(1.4)",
+      type: "downgrade",
+      onClick: () => values.secondary_authors.length > 1 && index !== values.secondary_authors.length - 1 && swap(index, index + 1),
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 505
+      },
+      __self: undefined
+    }, __jsx(_material_ui_icons__WEBPACK_IMPORTED_MODULE_4__["ArrowDownwardRounded"], {
+      style: {
+        color: 'red',
+        fontSize: '3rem'
+      },
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 510
+      },
+      __self: undefined
+    })))))), __jsx(_Button__WEBPACK_IMPORTED_MODULE_6__["Button"], {
+      type: "submit",
+      bcolor: "#134381",
+      padding: "0.5rem 2rem",
+      background: "#134381",
+      br: "100rem",
+      style: {
+        margin: ".5rem 0"
+      },
+      fontSize: "1.7rem",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 518
+      },
+      __self: undefined
+    }, "Submit"), console.log('main', values.is_presenting_author, 'second', values.secondary_authors));
+  });
+};
+const presets = {
+  abstract: "lorem ipsum",
+  author_address1: "10 Hamilton Road",
+  author_address2: null,
+  author_address3: null,
+  author_city: "Sidcup",
+  author_company: "Article Seven Limited",
+  author_country: "GB",
+  author_email: "andrew@article7.co.uk",
+  author_firstname: "Andrew",
+  author_jobtitle: "Director",
+  author_lastname: "Green",
+  author_phone: "+44 20 8305 1224",
+  author_postal: "DA15 7HB",
+  author_scp: "Kent",
+  author_title: "Mr.",
+  consider_for_journal: "no",
+  is_presenting_author: "yes",
+  keywords: "lorem, ipsum",
+  papertitle: "Duis aute irure dolor",
+  presentationtype_full: "programme",
+  previouspapers: null,
+  secondary_authors: [{
+    company: "Article Seven",
+    country: "GB",
+    email: "ava@article7.co.uk",
+    firstname: "Ava",
+    is_presenting_author: "no",
+    lastname: "Green",
+    ref: "2399A3C8-1823-11EA-BBE7-BDC53B013130",
+    title: null
+  }],
+  submission_type: "full",
+  subtheme: ["3DB1BDC0-9414-11E8-81E9-D82DD1471F92"],
+  theme: "925B5F3C-7865-11E7-8659-8C8422753A7C",
+  __csrf_token: "5d159fb224ed613dce89a64553f36f5eda1fa97c,2caaa318bb55c8c19d660a1e420d1c602dfc59f9,1576603105"
+};
+const emptyInitial = {
+  author_title: '',
+  author_firstname: '',
+  author_lastname: '',
+  author_email: '',
+  author_jobtitle: '',
+  author_company: '',
+  author_address1: '',
+  author_address2: '',
+  author_address3: '',
+  author_city: '',
+  author_scp: '',
+  author_postal: '',
+  author_country: '',
+  author_phone: '',
+  is_presenting_author: '',
+  submission_type: '',
+  presentationtype_full: '',
+  papertitle: '',
+  theme: '',
+  subtheme: [],
+  abstract: '',
+  keywords: '',
+  previouspapers: '',
+  consider_for_journal: '',
+  secondary_authors: [{
+    title: '',
+    firstname: '',
+    lastname: '',
+    email: '',
+    company: '',
+    country: '',
+    is_presenting_author: '',
+    ref: ''
+  }],
+  __csrf_token: ''
+}; // ! NOT NEEDED ANYMORE !!!! £$!*er
+//  <h1>Your Abstract</h1>
+//                         <div className="form-field">
+//                             <label
+//                                 htmlFor="label"
+//                                 className="form-label">
+//                                 Submission Type:
+//                         </label>
+//                             <Field
+//                                 className="form-radio"
+//                                 onClick={handleChange}
+//                                 value={values.submission_type}
+//                                 style={{ color: '#134381' }}
+//                                 name="submission_type"
+//                                 component={RadioGroup}
+//                             >
+//                                 <label
+//                                     style={{ margin: '1rem' }}
+//                                     htmlFor="label"
+//                                     className="form-label">
+//                                     I will make a full technical paper submission
+//                             <Field
+//                                         type="radio"
+//                                         name="submission_type"
+//                                         value="full"
+//                                     />
+//                                 </label>
+//                                 <label
+//                                     style={{ margin: '1rem' }}
+//                                     htmlFor="label"
+//                                     className="form-label">
+//                                     I will make an oral-only submission
+//                             <Field
+//                                         type="radio"
+//                                         name="submission_type"
+//                                         value="oral"
+//                                     />
+//                                 </label>
+//                                 <label
+//                                     style={{ margin: '1rem' }}
+//                                     htmlFor="label"
+//                                     className="form-label">
+//                                     I will make a poster-only submission
+//                             <Field
+//                                         type="radio"
+//                                         name="submission_type"
+//                                         value="poster"
+//                                     />
+//                                 </label>
+//                             </Field>
+//                         </div>
+//                         {values.submission_type === 'full' && <div className="form-field">
+//                             <label
+//                                 htmlFor="label"
+//                                 className="form-label">
+//                                 Presentation Type:
+//                         </label>
+//                             <Field
+//                                 className="form-radio"
+//                                 onClick={handleChange}
+//                                 value={values.presentationtype_full}
+//                                 style={{ color: '#134381' }}
+//                                 name="presentationtype_full"
+//                                 component={RadioGroup}
+//                             >
+//                                 <label
+//                                     style={{ margin: '1rem' }}
+//                                     htmlFor="label"
+//                                     className="form-label">
+//                                     My full paper submission will be accompanied by an oral presentation
+//                             <Field
+//                                         type="radio"
+//                                         name="presentationtype_full"
+//                                         value="programme"
+//                                     />
+//                                 </label>
+//                                 <label
+//                                     style={{ margin: '1rem' }}
+//                                     htmlFor="label"
+//                                     className="form-label">
+//                                     My full paper submission will be accompanied by an poster presentation
+//                             <Field
+//                                         type="radio"
+//                                         name="presentationtype_full"
+//                                         value="poster"
+//                                     />
+//                                 </label>
+//                             </Field>
+//                         </div>}
+//                         <div className="form-field">
+//                             <label
+//                                 htmlFor="label"
+//                                 className="form-label">
+//                                 Paper Title:
+//                         </label>
+//                             <Field
+//                                 className="form-input"
+//                                 onClick={handleChange}
+//                                 value={values.papertitle}
+//                                 style={{ color: '#134381' }}
+//                                 name="papertitle"
+//                                 component={TextField}
+//                             />
+//                         </div>
+//                         <div className="form-field">
+//                             <label
+//                                 htmlFor="label"
+//                                 className="form-label">
+//                                 Which topic does your paper belong to?
+//                         </label>
+//                             <Field
+//                                 className="form-radio"
+//                                 onClick={handleChange}
+//                                 value={values.theme}
+//                                 style={{ color: '#134381' }}
+//                                 name="theme"
+//                                 component={RadioGroup}
+//                             >
+//                                 {themes.map(theme =>
+//                                     <label
+//                                         style={{ margin: '1rem' }}
+//                                         htmlFor="label"
+//                                         className="form-label">
+//                                         {theme.label}
+//                                         <Field
+//                                             type="radio"
+//                                             name="theme"
+//                                             value={theme.value}
+//                                         />
+//                                     </label>)}
+//                             </Field>
+//                         </div>
+//                         <div className="form-field">
+//                             <label
+//                                 htmlFor="label"
+//                                 className="form-label">
+//                                 Please choose up to three sub-topics for your paper:
+//                         </label>
+//                             {
+//                                 values.theme === 'BC50E220-9412-11E8-85AF-D97B4D95EBB1' ?
+//                                     subTheme1.map((sub, i) => (
+//                                         <label
+//                                             htmlFor="label"
+//                                             className="form-label">
+//                                             <Field key={i} id={`Box-${i}`} type="checkbox" name="subtheme" value={sub.value} />
+//                                             {sub.label}
+//                                         </label>
+//                                     )
+//                                     )
+//                                     :
+//                                     values.theme === '48C9561C-7865-11E7-AA75-C89000D85D50' ?
+//                                         subTheme2.map((sub, i) => (
+//                                             <label
+//                                                 htmlFor="label"
+//                                                 className="form-label">
+//                                                 <Field key={i} id={`Box-${i}`} type="checkbox" name="subtheme" value={sub.value} />
+//                                                 {sub.label}
+//                                             </label>
+//                                         )
+//                                         )
+//                                         :
+//                                         values.theme === '5D49D9C2-7865-11E7-9112-887F12D54550' ?
+//                                             subTheme3.map((sub, i) => (
+//                                                 <label
+//                                                     htmlFor="label"
+//                                                     className="form-label">
+//                                                     <Field key={i} id={`Box-${i}`} type="checkbox" name="subtheme" value={sub.value} />
+//                                                     {sub.label}
+//                                                 </label>
+//                                             )
+//                                             )
+//                                             :
+//                                             values.theme === '7C15061A-7865-11E7-8178-84D2A73AF9BC' ?
+//                                                 subTheme4.map((sub, i) => (
+//                                                     <label
+//                                                         htmlFor="label"
+//                                                         className="form-label">
+//                                                         <Field key={i} id={`Box-${i}`} type="checkbox" name="subtheme" value={sub.value} />
+//                                                         {sub.label}
+//                                                     </label>
+//                                                 )
+//                                                 )
+//                                                 :
+//                                                 values.theme === '925B5F3C-7865-11E7-8659-8C8422753A7C' ?
+//                                                     subTheme5.map((sub, i) => (
+//                                                         <label
+//                                                             htmlFor="label"
+//                                                             className="form-label">
+//                                                             <Field key={i} id={`Box-${i}`} type="checkbox" name="subtheme" value={sub.value} />
+//                                                             {sub.label}
+//                                                         </label>
+//                                                     )
+//                                                     )
+//                                                     :
+//                                                     values.theme === 'B6F53F20-7865-11E7-A9B1-FC3D434D4D51' ?
+//                                                         subTheme6.map((sub, i) => (
+//                                                             <label
+//                                                                 htmlFor="label"
+//                                                                 className="form-label">
+//                                                                 <Field key={i} id={`Box-${i}`} type="checkbox" name="subtheme" value={sub.value} />
+//                                                                 {sub.label}
+//                                                             </label>
+//                                                         )
+//                                                         )
+//                                                         : null
+//                             }
+//                             <ErrorMessage component={Typography} name="subtheme" style={{ color: 'red', fontSize: '1.5rem' }} />
+//                         </div>
+//                         <div className="form-field">
+//                             <label
+//                                 htmlFor="label"
+//                                 className="form-label">
+//                                 Abstract:
+//                         </label>
+//                             <Field
+//                                 className="form-input"
+//                                 onClick={handleChange}
+//                                 value={values.abstract}
+//                                 style={{ color: '#134381' }}
+//                                 name="abstract"
+//                                 component={TextField}
+//                             />
+//                         </div>
+//                         <div className="form-field">
+//                             <label
+//                                 htmlFor="label"
+//                                 className="form-label">
+//                                 Keywords:
+//                         </label>
+//                             <Field
+//                                 className="form-input"
+//                                 onClick={handleChange}
+//                                 value={values.keywords}
+//                                 style={{ color: '#134381' }}
+//                                 name="keywords"
+//                                 component={TextField}
+//                             />
+//                         </div>
+//                         <div className="form-field">
+//                             <label
+//                                 htmlFor="label"
+//                                 className="form-label">
+//                                 Previous Papers:
+//                         </label>
+//                             <Field
+//                                 className="form-input"
+//                                 onClick={handleChange}
+//                                 value={values.previouspapers}
+//                                 style={{ color: '#134381' }}
+//                                 name="previouspapers"
+//                                 component={TextField}
+//                             />
+//                         </div>
+//                         <div className="form-field">
+//                             <label
+//                                 htmlFor="label"
+//                                 className="form-label">
+//                                 Do you wish your paper to be considered for inclusion in a list of the best papers given at EuroBrake to be published in an academic journal?:
+//                         </label>
+//                             <Field
+//                                 className="form-input"
+//                                 onClick={handleChange}
+//                                 value={values.consider_for_journal}
+//                                 style={{ color: '#134381' }}
+//                                 name="consider_for_journal"
+//                                 component={TextField}
+//                             />
+//                         </div>
+
+/***/ }),
+
+/***/ "./components/forms/Authorprofile.js":
+/*!*******************************************!*\
+  !*** ./components/forms/Authorprofile.js ***!
+  \*******************************************/
+/*! exports provided: Authorprofile */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Authorprofile", function() { return Authorprofile; });
+/* harmony import */ var _babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/core-js/json/stringify */ "./node_modules/@babel/runtime-corejs2/core-js/json/stringify.js");
+/* harmony import */ var _babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var formik__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! formik */ "formik");
+/* harmony import */ var formik__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(formik__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var formik_material_ui__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! formik-material-ui */ "formik-material-ui");
+/* harmony import */ var formik_material_ui__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(formik_material_ui__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _Button__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../Button */ "./components/Button.js");
+/* harmony import */ var _material_ui_core__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @material-ui/core */ "@material-ui/core");
+/* harmony import */ var _material_ui_core__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _FormSelects__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./FormSelects */ "./components/forms/FormSelects.js");
+/* harmony import */ var _FormControl__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./FormControl */ "./components/forms/FormControl.js");
+/* harmony import */ var _Formstyles__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./Formstyles */ "./components/forms/Formstyles.js");
+
+var _jsxFileName = "/mnt/c/Users/D.Hardiman/desktop/eurobrake/components/forms/Authorprofile.js";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
+
+
+
+
+
+
+
+
+const Authorprofile = ({
+  editPaper = false
+}) => {
+  const {
+    0: presenter,
+    1: setPresenter
+  } = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])(''); // if edit = true send back a preset form if not send a blank
+
+  console.log({
+    editPaper
+  }); // ! NEED TO SORTR AND SAVE PRESETS
+
+  Object(react__WEBPACK_IMPORTED_MODULE_1__["useEffect"])(() => {
+    console.log('presenter is changing');
+  }, [presenter]);
+  return __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Formik"], {
+    initialValues: editPaper ? presets : emptyInitial,
+    onSubmit: (values, actions) => {
+      setTimeout(() => {
+        alert(_babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_0___default()(values, null, 2));
+        actions.setSubmitting(false);
+      }, 1000);
+    },
+    enableReinitialize: true,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 24
+    },
+    __self: undefined
+  }, ({
+    values,
+    handleChange
+  }) => {
+    return __jsx(_Formstyles__WEBPACK_IMPORTED_MODULE_8__["StyledForm"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 37
+      },
+      __self: undefined
+    }, __jsx("div", {
+      className: "form-field",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 38
+      },
+      __self: undefined
+    }, __jsx("label", {
+      htmlFor: "label",
+      className: "form-label",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 39
+      },
+      __self: undefined
+    }, "Title"), __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Field"], {
+      className: "form-input",
+      onClick: handleChange,
+      value: values.author_title,
+      style: {
+        color: '#134381'
+      },
+      name: "author_title",
+      component: formik_material_ui__WEBPACK_IMPORTED_MODULE_3__["Select"],
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 44
+      },
+      __self: undefined
+    }, _FormSelects__WEBPACK_IMPORTED_MODULE_6__["titles"].map((option, i) => __jsx("option", {
+      key: i,
+      style: {
+        fontSize: '1.5rem',
+        cursor: 'pointer'
+      },
+      value: option.value,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 53
+      },
+      __self: undefined
+    }, option.label)))), __jsx("div", {
+      className: "form-field",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 56
+      },
+      __self: undefined
+    }, __jsx("label", {
+      htmlFor: "label",
+      className: "form-label",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 57
+      },
+      __self: undefined
+    }, "First Name:"), __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Field"], {
+      className: "form-input",
+      onClick: handleChange,
+      value: values.author_firstname,
+      style: {
+        color: '#134381'
+      },
+      name: "author_firstname",
+      component: formik_material_ui__WEBPACK_IMPORTED_MODULE_3__["TextField"],
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 62
+      },
+      __self: undefined
+    })), __jsx("div", {
+      className: "form-field",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 71
+      },
+      __self: undefined
+    }, __jsx("label", {
+      htmlFor: "label",
+      className: "form-label",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 72
+      },
+      __self: undefined
+    }, "Last Name:"), __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Field"], {
+      className: "form-input",
+      onClick: handleChange,
+      value: values.author_lastname,
+      style: {
+        color: '#134381'
+      },
+      name: "author_lastname",
+      component: formik_material_ui__WEBPACK_IMPORTED_MODULE_3__["TextField"],
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 77
+      },
+      __self: undefined
+    })), __jsx("div", {
+      className: "form-field",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 86
+      },
+      __self: undefined
+    }, __jsx("label", {
+      htmlFor: "label",
+      className: "form-label",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 87
+      },
+      __self: undefined
+    }, "Email:"), __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Field"], {
+      className: "form-input",
+      onClick: handleChange,
+      value: values.author_email,
+      style: {
+        color: '#134381'
+      },
+      name: "author_email",
+      component: formik_material_ui__WEBPACK_IMPORTED_MODULE_3__["TextField"],
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 92
+      },
+      __self: undefined
+    })), __jsx("div", {
+      className: "form-field",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 101
+      },
+      __self: undefined
+    }, __jsx("label", {
+      htmlFor: "label",
+      className: "form-label",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 102
+      },
+      __self: undefined
+    }, "Job Title:"), __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Field"], {
+      className: "form-input",
+      onClick: handleChange,
+      value: values.author_jobtitle,
+      style: {
+        color: '#134381'
+      },
+      name: "author_jobtitle",
+      component: formik_material_ui__WEBPACK_IMPORTED_MODULE_3__["TextField"],
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 107
+      },
+      __self: undefined
+    })), __jsx("div", {
+      className: "form-field",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 116
+      },
+      __self: undefined
+    }, __jsx("label", {
+      htmlFor: "label",
+      className: "form-label",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 117
+      },
+      __self: undefined
+    }, "Company:"), __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Field"], {
+      className: "form-input",
+      onClick: handleChange,
+      value: values.author_company,
+      style: {
+        color: '#134381'
+      },
+      name: "author_company",
+      component: formik_material_ui__WEBPACK_IMPORTED_MODULE_3__["TextField"],
       __source: {
         fileName: _jsxFileName,
         lineNumber: 122
       },
-      __self: this
-    }, "Email:"), __jsx(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_5___default.a, {
+      __self: undefined
+    })), __jsx("div", {
+      className: "form-field",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 131
+      },
+      __self: undefined
+    }, __jsx("label", {
+      htmlFor: "label",
+      className: "form-label",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 132
+      },
+      __self: undefined
+    }, "Address:"), __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Field"], {
+      className: "form-input",
+      onClick: handleChange,
+      value: values.author_address1,
       style: {
         color: '#134381'
       },
-      label: "Required",
-      className: "login_form-input",
-      type: "text",
-      name: "username",
-      onChange: this.saveToState,
-      value: this.state.username,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 127
-      },
-      __self: this
-    })), __jsx("div", {
-      className: "login_form-field",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 136
-      },
-      __self: this
-    }, __jsx("label", {
-      className: "login_form-label",
-      htmlFor: "label",
+      name: "author_address1",
+      component: formik_material_ui__WEBPACK_IMPORTED_MODULE_3__["TextField"],
       __source: {
         fileName: _jsxFileName,
         lineNumber: 137
       },
-      __self: this
-    }, "Password:"), __jsx(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_5___default.a, {
-      label: "Required",
-      className: "login_form-input",
-      type: "password",
-      name: "password",
-      onChange: this.saveToState,
-      value: this.state.password,
+      __self: undefined
+    })), __jsx("div", {
+      className: "form-field",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 142
+        lineNumber: 146
       },
-      __self: this
-    })), __jsx(_Button__WEBPACK_IMPORTED_MODULE_7__["Button"], {
-      onClick: this.onSubmit,
-      value: "Submit",
+      __self: undefined
+    }, __jsx("label", {
+      htmlFor: "label",
+      className: "form-label",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 147
+      },
+      __self: undefined
+    }), __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Field"], {
+      className: "form-input",
+      onClick: handleChange,
+      value: values.author_address2,
+      style: {
+        color: '#134381'
+      },
+      name: "author_address2",
+      component: formik_material_ui__WEBPACK_IMPORTED_MODULE_3__["TextField"],
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 152
+      },
+      __self: undefined
+    })), __jsx("div", {
+      className: "form-field",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 161
+      },
+      __self: undefined
+    }, __jsx("label", {
+      htmlFor: "label",
+      className: "form-label",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 162
+      },
+      __self: undefined
+    }), __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Field"], {
+      className: "form-input",
+      onClick: handleChange,
+      value: values.author_address3,
+      style: {
+        color: '#134381'
+      },
+      name: "author_address3",
+      component: formik_material_ui__WEBPACK_IMPORTED_MODULE_3__["TextField"],
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 167
+      },
+      __self: undefined
+    })), __jsx("div", {
+      className: "form-field",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 176
+      },
+      __self: undefined
+    }, __jsx("label", {
+      htmlFor: "label",
+      className: "form-label",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 177
+      },
+      __self: undefined
+    }, "City:"), __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Field"], {
+      className: "form-input",
+      onClick: handleChange,
+      value: values.author_city,
+      style: {
+        color: '#134381'
+      },
+      name: "author_city",
+      component: formik_material_ui__WEBPACK_IMPORTED_MODULE_3__["TextField"],
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 182
+      },
+      __self: undefined
+    })), __jsx("div", {
+      className: "form-field",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 191
+      },
+      __self: undefined
+    }, __jsx("label", {
+      htmlFor: "label",
+      className: "form-label",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 192
+      },
+      __self: undefined
+    }, "State/county/province:"), __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Field"], {
+      className: "form-input",
+      onClick: handleChange,
+      value: values.author_scp,
+      style: {
+        color: '#134381'
+      },
+      name: "author_scp",
+      component: formik_material_ui__WEBPACK_IMPORTED_MODULE_3__["TextField"],
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 197
+      },
+      __self: undefined
+    })), __jsx("div", {
+      className: "form-field",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 206
+      },
+      __self: undefined
+    }, __jsx("label", {
+      htmlFor: "label",
+      className: "form-label",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 207
+      },
+      __self: undefined
+    }, "Postal/Zip code:"), __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Field"], {
+      className: "form-input",
+      onClick: handleChange,
+      value: values.author_postal,
+      style: {
+        color: '#134381'
+      },
+      name: "author_postal",
+      component: formik_material_ui__WEBPACK_IMPORTED_MODULE_3__["TextField"],
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 212
+      },
+      __self: undefined
+    })), __jsx("div", {
+      className: "form-field",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 221
+      },
+      __self: undefined
+    }, __jsx("label", {
+      htmlFor: "label",
+      className: "form-label",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 222
+      },
+      __self: undefined
+    }, "Country"), __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Field"], {
+      className: "form-input",
+      onClick: handleChange,
+      value: values.author_country,
+      style: {
+        color: '#134381'
+      },
+      name: "author_country",
+      component: formik_material_ui__WEBPACK_IMPORTED_MODULE_3__["Select"],
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 227
+      },
+      __self: undefined
+    }, _FormSelects__WEBPACK_IMPORTED_MODULE_6__["countries"].map((option, i) => __jsx("option", {
+      key: i,
+      style: {
+        fontSize: '1.5rem',
+        cursor: 'pointer'
+      },
+      value: option.value,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 236
+      },
+      __self: undefined
+    }, option.label)))), __jsx("div", {
+      className: "form-field",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 239
+      },
+      __self: undefined
+    }, __jsx("label", {
+      htmlFor: "label",
+      className: "form-label",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 240
+      },
+      __self: undefined
+    }, "Phone:"), __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Field"], {
+      className: "form-input",
+      onClick: handleChange,
+      value: values.author_phone,
+      style: {
+        color: '#134381'
+      },
+      name: "author_phone",
+      component: formik_material_ui__WEBPACK_IMPORTED_MODULE_3__["TextField"],
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 245
+      },
+      __self: undefined
+    })), __jsx("div", {
+      className: "form-field",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 254
+      },
+      __self: undefined
+    }, __jsx("label", {
+      htmlFor: "label",
+      className: "form-label",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 255
+      },
+      __self: undefined
+    }, "Fax:"), __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Field"], {
+      className: "form-input",
+      onClick: handleChange,
+      value: values.author_fax,
+      style: {
+        color: '#134381'
+      },
+      name: "author_fax",
+      component: formik_material_ui__WEBPACK_IMPORTED_MODULE_3__["TextField"],
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 260
+      },
+      __self: undefined
+    })), __jsx("div", {
+      className: "form-field",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 269
+      },
+      __self: undefined
+    }, __jsx("label", {
+      htmlFor: "label",
+      className: "form-label",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 270
+      },
+      __self: undefined
+    }, "Choose a Password:"), __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Field"], {
+      className: "form-input",
+      onClick: handleChange,
+      value: values.author_phone,
+      style: {
+        color: '#134381'
+      },
+      name: "author_password",
+      component: formik_material_ui__WEBPACK_IMPORTED_MODULE_3__["TextField"],
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 275
+      },
+      __self: undefined
+    })), __jsx("div", {
+      className: "form-field",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 284
+      },
+      __self: undefined
+    }, __jsx("label", {
+      htmlFor: "label",
+      className: "form-label",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 285
+      },
+      __self: undefined
+    }, "Confirm password:"), __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Field"], {
+      className: "form-input",
+      onClick: handleChange,
+      value: values.author_phone,
+      style: {
+        color: '#134381'
+      },
+      name: "author_password_confirm",
+      component: formik_material_ui__WEBPACK_IMPORTED_MODULE_3__["TextField"],
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 290
+      },
+      __self: undefined
+    })), __jsx(_Button__WEBPACK_IMPORTED_MODULE_4__["Button"], {
+      type: "submit",
       bcolor: "#134381",
+      padding: "0.5rem 2rem",
       background: "#134381",
       br: "100rem",
       style: {
-        margin: "3rem 0"
+        margin: ".5rem 0"
       },
-      fs: "1.8rem",
-      padding: ".5rem 6rem",
+      fontSize: "1.7rem",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 150
+        lineNumber: 301
       },
-      __self: this
+      __self: undefined
+    }, "Submit"), console.log('main', values.is_presenting_author, 'second', values.secondary_authors));
+  });
+};
+const presets = {
+  author_title: "Mr.",
+  author_firstname: "Andrew",
+  author_lastname: "Green",
+  author_email: "andrew@article7.co.uk",
+  author_jobtitle: "Director",
+  author_company: "Article Seven Limited",
+  author_address1: "10 Hamilton Road",
+  author_address2: null,
+  author_address3: null,
+  author_city: "Sidcup",
+  author_scp: "Kent",
+  author_country: "GB",
+  author_postal: "DA15 7HB",
+  author_phone: "+44 20 8305 1224",
+  author_fax: '',
+  author_password: '',
+  author_password_confirmed: '',
+  __csrf_token: "5d159fb224ed613dce89a64553f36f5eda1fa97c,2caaa318bb55c8c19d660a1e420d1c602dfc59f9,1576603105"
+};
+const emptyInitial = {
+  author_title: '',
+  author_firstname: '',
+  author_lastname: '',
+  author_email: '',
+  author_jobtitle: '',
+  author_company: '',
+  author_address1: '',
+  author_address2: '',
+  author_address3: '',
+  author_city: '',
+  author_scp: '',
+  author_postal: '',
+  author_country: '',
+  author_phone: '',
+  author_fax: '',
+  author_password: '',
+  author_password_confirmed: '',
+  __csrf_token: ''
+};
+
+/***/ }),
+
+/***/ "./components/forms/Esop.js":
+/*!**********************************!*\
+  !*** ./components/forms/Esop.js ***!
+  \**********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+
+
+/***/ }),
+
+/***/ "./components/forms/Exhibitorprofile.js":
+/*!**********************************************!*\
+  !*** ./components/forms/Exhibitorprofile.js ***!
+  \**********************************************/
+/*! exports provided: Exhibitorprofile */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Exhibitorprofile", function() { return Exhibitorprofile; });
+/* harmony import */ var _babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/core-js/json/stringify */ "./node_modules/@babel/runtime-corejs2/core-js/json/stringify.js");
+/* harmony import */ var _babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var formik__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! formik */ "formik");
+/* harmony import */ var formik__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(formik__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var formik_material_ui__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! formik-material-ui */ "formik-material-ui");
+/* harmony import */ var formik_material_ui__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(formik_material_ui__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _Button__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../Button */ "./components/Button.js");
+/* harmony import */ var _material_ui_core__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @material-ui/core */ "@material-ui/core");
+/* harmony import */ var _material_ui_core__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _FormSelects__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./FormSelects */ "./components/forms/FormSelects.js");
+/* harmony import */ var _FormControl__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./FormControl */ "./components/forms/FormControl.js");
+/* harmony import */ var _Formstyles__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./Formstyles */ "./components/forms/Formstyles.js");
+
+var _jsxFileName = "/mnt/c/Users/D.Hardiman/desktop/eurobrake/components/forms/Exhibitorprofile.js";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
+
+
+
+
+
+
+
+
+const Exhibitorprofile = ({
+  editPaper = false
+}) => {
+  const {
+    0: presenter,
+    1: setPresenter
+  } = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])(''); // if edit = true send back a preset form if not send a blank
+
+  console.log({
+    editPaper
+  }); // ! NEED TO SORTR AND SAVE PRESETS
+
+  Object(react__WEBPACK_IMPORTED_MODULE_1__["useEffect"])(() => {
+    console.log('presenter is changing');
+  }, [presenter]);
+  return __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Formik"], {
+    initialValues: editPaper ? presets : emptyInitial,
+    onSubmit: (values, actions) => {
+      setTimeout(() => {
+        alert(_babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_0___default()(values, null, 2));
+        actions.setSubmitting(false);
+      }, 1000);
+    },
+    enableReinitialize: true,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 25
+    },
+    __self: undefined
+  }, ({
+    values,
+    isSubmitting,
+    isValidating,
+    handleChange,
+    setFieldValue
+  }) => {
+    return __jsx(_Formstyles__WEBPACK_IMPORTED_MODULE_8__["StyledForm"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 38
+      },
+      __self: undefined
+    }, __jsx("div", {
+      className: "form-field",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 39
+      },
+      __self: undefined
+    }, __jsx("label", {
+      htmlFor: "label",
+      className: "form-label",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 40
+      },
+      __self: undefined
+    }, "Title"), __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Field"], {
+      className: "form-input",
+      onClick: handleChange,
+      value: values.exhibitor_title,
+      style: {
+        color: '#134381'
+      },
+      name: "exhibitor_title",
+      component: formik_material_ui__WEBPACK_IMPORTED_MODULE_3__["Select"],
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 45
+      },
+      __self: undefined
+    }, _FormSelects__WEBPACK_IMPORTED_MODULE_6__["titles"].map((option, i) => __jsx("option", {
+      key: i,
+      style: {
+        fontSize: '1.5rem',
+        cursor: 'pointer'
+      },
+      value: option.value,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 54
+      },
+      __self: undefined
+    }, option.label)))), __jsx("div", {
+      className: "form-field",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 57
+      },
+      __self: undefined
+    }, __jsx("label", {
+      htmlFor: "label",
+      className: "form-label",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 58
+      },
+      __self: undefined
+    }, "First Name:"), __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Field"], {
+      className: "form-input",
+      onClick: handleChange,
+      value: values.exhibitor_firstname,
+      style: {
+        color: '#134381'
+      },
+      name: "exhibitor_firstname",
+      component: formik_material_ui__WEBPACK_IMPORTED_MODULE_3__["TextField"],
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 63
+      },
+      __self: undefined
+    })), __jsx("div", {
+      className: "form-field",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 72
+      },
+      __self: undefined
+    }, __jsx("label", {
+      htmlFor: "label",
+      className: "form-label",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 73
+      },
+      __self: undefined
+    }, "Last Name:"), __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Field"], {
+      className: "form-input",
+      onClick: handleChange,
+      value: values.exhibitor_lastname,
+      style: {
+        color: '#134381'
+      },
+      name: "exhibitor_lastname",
+      component: formik_material_ui__WEBPACK_IMPORTED_MODULE_3__["TextField"],
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 78
+      },
+      __self: undefined
+    })), __jsx("div", {
+      className: "form-field",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 87
+      },
+      __self: undefined
+    }, __jsx("label", {
+      htmlFor: "label",
+      className: "form-label",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 88
+      },
+      __self: undefined
+    }, "Email:"), __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Field"], {
+      className: "form-input",
+      onClick: handleChange,
+      value: values.exhibitor_email,
+      style: {
+        color: '#134381'
+      },
+      name: "exhibitor_email",
+      component: formik_material_ui__WEBPACK_IMPORTED_MODULE_3__["TextField"],
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 93
+      },
+      __self: undefined
+    })), __jsx("div", {
+      className: "form-field",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 102
+      },
+      __self: undefined
+    }, __jsx("label", {
+      htmlFor: "label",
+      className: "form-label",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 103
+      },
+      __self: undefined
+    }, "Job Title:"), __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Field"], {
+      className: "form-input",
+      onClick: handleChange,
+      value: values.exhibitor_jobtitle,
+      style: {
+        color: '#134381'
+      },
+      name: "exhibitor_jobtitle",
+      component: formik_material_ui__WEBPACK_IMPORTED_MODULE_3__["TextField"],
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 108
+      },
+      __self: undefined
+    })), __jsx("div", {
+      className: "form-field",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 117
+      },
+      __self: undefined
+    }, __jsx("label", {
+      htmlFor: "label",
+      className: "form-label",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 118
+      },
+      __self: undefined
+    }, "Company:"), __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Field"], {
+      className: "form-input",
+      onClick: handleChange,
+      value: values.exhibitor_company,
+      style: {
+        color: '#134381'
+      },
+      name: "exhibitor_company",
+      component: formik_material_ui__WEBPACK_IMPORTED_MODULE_3__["TextField"],
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 123
+      },
+      __self: undefined
+    })), __jsx("div", {
+      className: "form-field",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 132
+      },
+      __self: undefined
+    }, __jsx("label", {
+      htmlFor: "label",
+      className: "form-label",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 133
+      },
+      __self: undefined
+    }, "Address:"), __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Field"], {
+      className: "form-input",
+      onClick: handleChange,
+      value: values.exhibitor_address1,
+      style: {
+        color: '#134381'
+      },
+      name: "exhibitor_address1",
+      component: formik_material_ui__WEBPACK_IMPORTED_MODULE_3__["TextField"],
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 138
+      },
+      __self: undefined
+    })), __jsx("div", {
+      className: "form-field",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 147
+      },
+      __self: undefined
+    }, __jsx("label", {
+      htmlFor: "label",
+      className: "form-label",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 148
+      },
+      __self: undefined
+    }), __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Field"], {
+      className: "form-input",
+      onClick: handleChange,
+      value: values.exhibitor_address2,
+      style: {
+        color: '#134381'
+      },
+      name: "exhibitor_address2",
+      component: formik_material_ui__WEBPACK_IMPORTED_MODULE_3__["TextField"],
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 153
+      },
+      __self: undefined
+    })), __jsx("div", {
+      className: "form-field",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 162
+      },
+      __self: undefined
+    }, __jsx("label", {
+      htmlFor: "label",
+      className: "form-label",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 163
+      },
+      __self: undefined
+    }), __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Field"], {
+      className: "form-input",
+      onClick: handleChange,
+      value: values.exhibitor_address3,
+      style: {
+        color: '#134381'
+      },
+      name: "exhibitor_address3",
+      component: formik_material_ui__WEBPACK_IMPORTED_MODULE_3__["TextField"],
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 168
+      },
+      __self: undefined
+    })), __jsx("div", {
+      className: "form-field",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 177
+      },
+      __self: undefined
+    }, __jsx("label", {
+      htmlFor: "label",
+      className: "form-label",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 178
+      },
+      __self: undefined
+    }, "City:"), __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Field"], {
+      className: "form-input",
+      onClick: handleChange,
+      value: values.exhibitor_city,
+      style: {
+        color: '#134381'
+      },
+      name: "exhibitor_city",
+      component: formik_material_ui__WEBPACK_IMPORTED_MODULE_3__["TextField"],
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 183
+      },
+      __self: undefined
+    })), __jsx("div", {
+      className: "form-field",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 192
+      },
+      __self: undefined
+    }, __jsx("label", {
+      htmlFor: "label",
+      className: "form-label",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 193
+      },
+      __self: undefined
+    }, "State/county/province:"), __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Field"], {
+      className: "form-input",
+      onClick: handleChange,
+      value: values.exhibitor_scp,
+      style: {
+        color: '#134381'
+      },
+      name: "exhibitor_scp",
+      component: formik_material_ui__WEBPACK_IMPORTED_MODULE_3__["TextField"],
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 198
+      },
+      __self: undefined
+    })), __jsx("div", {
+      className: "form-field",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 207
+      },
+      __self: undefined
+    }, __jsx("label", {
+      htmlFor: "label",
+      className: "form-label",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 208
+      },
+      __self: undefined
+    }, "Postal/Zip code:"), __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Field"], {
+      className: "form-input",
+      onClick: handleChange,
+      value: values.exhibitor_postal,
+      style: {
+        color: '#134381'
+      },
+      name: "exhibitor_postal",
+      component: formik_material_ui__WEBPACK_IMPORTED_MODULE_3__["TextField"],
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 213
+      },
+      __self: undefined
+    })), __jsx("div", {
+      className: "form-field",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 222
+      },
+      __self: undefined
+    }, __jsx("label", {
+      htmlFor: "label",
+      className: "form-label",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 223
+      },
+      __self: undefined
+    }, "Country"), __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Field"], {
+      className: "form-input",
+      onClick: handleChange,
+      value: values.exhibitor_country,
+      style: {
+        color: '#134381'
+      },
+      name: "exhibitor_country",
+      component: formik_material_ui__WEBPACK_IMPORTED_MODULE_3__["Select"],
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 228
+      },
+      __self: undefined
+    }, _FormSelects__WEBPACK_IMPORTED_MODULE_6__["countries"].map((option, i) => __jsx("option", {
+      key: i,
+      style: {
+        fontSize: '1.5rem',
+        cursor: 'pointer'
+      },
+      value: option.value,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 237
+      },
+      __self: undefined
+    }, option.label)))), __jsx("div", {
+      className: "form-field",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 240
+      },
+      __self: undefined
+    }, __jsx("label", {
+      htmlFor: "label",
+      className: "form-label",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 241
+      },
+      __self: undefined
+    }, "Phone:"), __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Field"], {
+      className: "form-input",
+      onClick: handleChange,
+      value: values.exhibitor_phone,
+      style: {
+        color: '#134381'
+      },
+      name: "exhibitor_phone",
+      component: formik_material_ui__WEBPACK_IMPORTED_MODULE_3__["TextField"],
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 246
+      },
+      __self: undefined
+    })), __jsx("div", {
+      className: "form-field",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 255
+      },
+      __self: undefined
+    }, __jsx("label", {
+      htmlFor: "label",
+      className: "form-label",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 256
+      },
+      __self: undefined
+    }, "Fax:"), __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Field"], {
+      className: "form-input",
+      onClick: handleChange,
+      value: values.exhibitor_fax,
+      style: {
+        color: '#134381'
+      },
+      name: "exhibitor_fax",
+      component: formik_material_ui__WEBPACK_IMPORTED_MODULE_3__["TextField"],
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 261
+      },
+      __self: undefined
+    })), __jsx("div", {
+      className: "form-field",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 270
+      },
+      __self: undefined
+    }, __jsx("label", {
+      htmlFor: "label",
+      className: "form-label",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 271
+      },
+      __self: undefined
+    }, "Choose a Password:"), __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Field"], {
+      className: "form-input",
+      onClick: handleChange,
+      value: values.exhibitor_phone,
+      style: {
+        color: '#134381'
+      },
+      name: "exhibitor_password",
+      component: formik_material_ui__WEBPACK_IMPORTED_MODULE_3__["TextField"],
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 276
+      },
+      __self: undefined
+    })), __jsx("div", {
+      className: "form-field",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 285
+      },
+      __self: undefined
+    }, __jsx("label", {
+      htmlFor: "label",
+      className: "form-label",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 286
+      },
+      __self: undefined
+    }, "Confirm password:"), __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Field"], {
+      className: "form-input",
+      onClick: handleChange,
+      value: values.exhibitor_phone,
+      style: {
+        color: '#134381'
+      },
+      name: "exhibitor_password_confirm",
+      component: formik_material_ui__WEBPACK_IMPORTED_MODULE_3__["TextField"],
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 291
+      },
+      __self: undefined
+    })), __jsx(_Button__WEBPACK_IMPORTED_MODULE_4__["Button"], {
+      type: "submit",
+      bcolor: "#134381",
+      padding: "0.5rem 2rem",
+      background: "#134381",
+      br: "100rem",
+      style: {
+        margin: ".5rem 0"
+      },
+      fontSize: "1.7rem",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 302
+      },
+      __self: undefined
+    }, "Submit"), console.log('main', values.is_presenting_exhibitor, 'second', values.secondary_exhibitors));
+  });
+};
+const presets = {
+  exhibitor_title: "Mr.",
+  exhibitor_firstname: "Andrew",
+  exhibitor_lastname: "Green",
+  exhibitor_email: "andrew@article7.co.uk",
+  exhibitor_jobtitle: "Director",
+  exhibitor_company: "Article Seven Limited",
+  exhibitor_address1: "10 Hamilton Road",
+  exhibitor_address2: null,
+  exhibitor_address3: null,
+  exhibitor_city: "Sidcup",
+  exhibitor_scp: "Kent",
+  exhibitor_country: "GB",
+  exhibitor_postal: "DA15 7HB",
+  exhibitor_phone: "+44 20 8305 1224",
+  exhibitor_fax: '',
+  exhibitor_password: '',
+  exhibitor_password_confirmed: '',
+  __csrf_token: "5d159fb224ed613dce89a64553f36f5eda1fa97c,2caaa318bb55c8c19d660a1e420d1c602dfc59f9,1576603105"
+};
+const emptyInitial = {
+  exhibitor_title: '',
+  exhibitor_firstname: '',
+  exhibitor_lastname: '',
+  exhibitor_email: '',
+  exhibitor_jobtitle: '',
+  exhibitor_company: '',
+  exhibitor_address1: '',
+  exhibitor_address2: '',
+  exhibitor_address3: '',
+  exhibitor_city: '',
+  exhibitor_scp: '',
+  exhibitor_postal: '',
+  exhibitor_country: '',
+  exhibitor_phone: '',
+  exhibitor_fax: '',
+  exhibitor_password: '',
+  exhibitor_password_confirmed: '',
+  __csrf_token: ''
+};
+
+/***/ }),
+
+/***/ "./components/forms/FormActions.js":
+/*!*****************************************!*\
+  !*** ./components/forms/FormActions.js ***!
+  \*****************************************/
+/*! exports provided: GetForm, SendFile, SendForm */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GetForm", function() { return GetForm; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SendFile", function() { return SendFile; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SendForm", function() { return SendForm; });
+/* harmony import */ var _babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/core-js/json/stringify */ "./node_modules/@babel/runtime-corejs2/core-js/json/stringify.js");
+/* harmony import */ var _babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var js_cookie__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! js-cookie */ "js-cookie");
+/* harmony import */ var js_cookie__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(js_cookie__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! isomorphic-unfetch */ "isomorphic-unfetch");
+/* harmony import */ var isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _utils_auth__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../utils/auth */ "./utils/auth.js");
+
+
+
+
+async function GetForm(url) {
+  const {
+    logintoken
+  } = js_cookie__WEBPACK_IMPORTED_MODULE_1___default.a.get();
+  console.log({
+    logintoken
+  });
+
+  try {
+    const apiUrl = url;
+    const response = await isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_2___default()(apiUrl, {
+      credentials: 'include',
+      headers: {
+        Authorization: 'Bearer ' + logintoken
+      }
+    });
+    const data = await response.json();
+
+    if (data.status === 'success') {
+      console.log('getForm', data);
+      console.log('tkn', data.__csrf_token);
+      return data;
+    } else {
+      let error = new Error(data.error);
+      error.response = response;
+      throw error;
+    }
+  } catch (error) {
+    console.error('Failed to get form, please try again', error); // return error.message
+  }
+
+  return;
+}
+async function SendFile({
+  csrf,
+  file
+}) {
+  const formData = new FormData();
+  const {
+    logintoken
+  } = js_cookie__WEBPACK_IMPORTED_MODULE_1___default.a.get();
+  formData.append('__csrf_token', csrf);
+  formData.append('filename', file);
+  console.log({
+    logintoken,
+    csrf,
+    file
+  });
+
+  if (logintoken && csrf && file) {
+    try {
+      const apiUrl = 'https://prelude.eurobrake.net/upload';
+      const response = await isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_2___default()(apiUrl, {
+        method: 'POST',
+        body: formData,
+        credentials: 'include',
+        headers: {
+          Authorization: 'Bearer ' + logintoken
+        }
+      });
+      const data = await response.json();
+      await console.log({
+        data
+      });
+
+      if (data.status === 'success') {
+        console.log('getForm', data);
+      } else {
+        let error = new Error(data.error);
+        error.response = response;
+        throw error;
+      }
+    } catch (error) {
+      console.error('Failed to get form, please try again', error); // this.setState({ error: error.message });
+    }
+  }
+
+  return;
+}
+async function SendForm({
+  csrf,
+  values,
+  url
+}) {
+  const form = _babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_0___default()(values);
+
+  const {
+    logintoken
+  } = js_cookie__WEBPACK_IMPORTED_MODULE_1___default.a.get();
+
+  if (logintoken && csrf && formData) {
+    try {
+      const apiUrl = url;
+      const response = await isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_2___default()(apiUrl, {
+        body: form,
+        credentials: 'include',
+        headers: {
+          Authorization: 'Bearer ' + logintoken
+        }
+      });
+      const data = await response.json();
+
+      if (data.status === 'success') {
+        console.log('getForm', data);
+      } else {
+        let error = new Error(data.error);
+        error.response = response;
+        throw error;
+      }
+    } catch (error) {
+      console.error('Failed to get form, please try again', error);
+    }
+  }
+
+  if (url === 'https://prelude.eurobrake.net/login') {
+    try {
+      const response = await isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_2___default()(url, {
+        method: 'POST',
+        credentials: 'include',
+        body: form,
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      });
+      const data = await response.json();
+
+      if (data.status === 'success') {
+        const {
+          logintoken
+        } = data;
+        await Object(_utils_auth__WEBPACK_IMPORTED_MODULE_3__["login"])({
+          logintoken
+        });
+        return {};
+      } else {
+        let error = new Error(data.error);
+        error.response = response;
+        throw error;
+      }
+    } catch (error) {
+      console.error('Failed to login, please try again', error);
+      this.setState({
+        error: error.message
+      });
+    }
+  }
+
+  return;
+}
+
+/***/ }),
+
+/***/ "./components/forms/FormControl.js":
+/*!*****************************************!*\
+  !*** ./components/forms/FormControl.js ***!
+  \*****************************************/
+/*! exports provided: AbstractSchema */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AbstractSchema", function() { return AbstractSchema; });
+/* harmony import */ var yup__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! yup */ "yup");
+/* harmony import */ var yup__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(yup__WEBPACK_IMPORTED_MODULE_0__);
+
+const AbstractSchema = yup__WEBPACK_IMPORTED_MODULE_0__["object"]().shape({
+  author_firstname: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().min(2, 'Too Short!').max(50, 'Too Long!').required('Required'),
+  author_lastname: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().min(2, 'Too Short!').max(50, 'Too Long!').required('Required'),
+  author_email: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().email().required('Required'),
+  author_jobtitle: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().required('Required'),
+  author_company: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().required('Required'),
+  author_address1: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().required('Required'),
+  author_address2: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().required('Required'),
+  author_address3: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().required('Required'),
+  author_city: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().required('Required'),
+  author_scp: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().required('Required'),
+  author_postal: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().required('Required'),
+  author_country: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().required('Required'),
+  author_phone: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().required('Required'),
+  is_presenting_author: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().required('Required'),
+  submission_type: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().required('Required'),
+  presentationtype_full: yup__WEBPACK_IMPORTED_MODULE_0__["string"](),
+  papertitle: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().required('Required'),
+  theme: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().required('Required'),
+  subtheme: yup__WEBPACK_IMPORTED_MODULE_0__["array"]().max(3, 'Please select max of three subthemes!').required('Required'),
+  abstract: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().required('Required'),
+  keywords: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().required('Required'),
+  previouspapers: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().required('Required'),
+  consider_for_journal: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().required('Required'),
+  secondary_authors: yup__WEBPACK_IMPORTED_MODULE_0__["array"]().of(yup__WEBPACK_IMPORTED_MODULE_0__["object"]().shape({
+    title: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().nullable().required('Required'),
+    firstname: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().required('Required'),
+    lastname: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().required('Required'),
+    email: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().email().required('Required'),
+    company: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().required('Required'),
+    country: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().required('Required'),
+    is_presenting_author: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().required('Required')
+  }))
+});
+
+/***/ }),
+
+/***/ "./components/forms/FormSelects.js":
+/*!*****************************************!*\
+  !*** ./components/forms/FormSelects.js ***!
+  \*****************************************/
+/*! exports provided: titles, countries, themes, subThemes, subTheme1, subTheme2, subTheme3, subTheme4, subTheme5, subTheme6, submissionType, ifFull */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "titles", function() { return titles; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "countries", function() { return countries; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "themes", function() { return themes; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "subThemes", function() { return subThemes; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "subTheme1", function() { return subTheme1; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "subTheme2", function() { return subTheme2; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "subTheme3", function() { return subTheme3; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "subTheme4", function() { return subTheme4; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "subTheme5", function() { return subTheme5; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "subTheme6", function() { return subTheme6; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "submissionType", function() { return submissionType; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ifFull", function() { return ifFull; });
+const titles = [{
+  value: "",
+  label: "—"
+}, {
+  value: "Mr.",
+  label: "Mr."
+}, {
+  value: "Ms.",
+  label: "Ms."
+}, {
+  value: "Mrs.",
+  label: "Mrs."
+}, {
+  value: "Dr.",
+  label: "Dr."
+}, {
+  value: "Dr.-Ing.",
+  label: "Dr.-Ing."
+}, {
+  value: "Dr. Eng.",
+  label: "Dr. Eng."
+}, {
+  value: "Prof.",
+  label: "Prof."
+}, {
+  value: "Prof. Dr.",
+  label: "Prof. Dr."
+}, {
+  value: "Prof. Dr.-Ing.",
+  label: "Prof. Dr.-Ing."
+}, {
+  value: "Ing.",
+  label: "Ing."
+}, {
+  value: "Dipl.-Ing.",
+  label: "Dipl.-Ing."
+}, {
+  value: "Ir.",
+  label: "Ir."
+}];
+const countries = [{
+  value: "",
+  label: "—"
+}, {
+  value: "DZ",
+  label: "Algeria"
+}, {
+  value: "AR",
+  label: "Argentina"
+}, {
+  value: "AU",
+  label: "Australia"
+}, {
+  value: "AT",
+  label: "Austria"
+}, {
+  value: "BD",
+  label: "Bangladesh"
+}, {
+  value: "BY",
+  label: "Belarus"
+}, {
+  value: "BE",
+  label: "Belgium"
+}, {
+  value: "BA",
+  label: "Bosnia and Herzegovina"
+}, {
+  value: "BR",
+  label: "Brazil"
+}, {
+  value: "BG",
+  label: "Bulgaria"
+}, {
+  value: "CA",
+  label: "Canada"
+}, {
+  value: "CL",
+  label: "Chile"
+}, {
+  value: "CN",
+  label: "China"
+}, {
+  value: "HK",
+  label: "China - Hong Kong"
+}, {
+  value: "CO",
+  label: "Colombia"
+}, {
+  value: "HR",
+  label: "Croatia"
+}, {
+  value: "CZ",
+  label: "Czech Republic"
+}, {
+  value: "DK",
+  label: "Denmark"
+}, {
+  value: "EC",
+  label: "Ecuador"
+}, {
+  value: "EG",
+  label: "Egypt"
+}, {
+  value: "EE",
+  label: "Estonia"
+}, {
+  value: "FI",
+  label: "Finland"
+}, {
+  value: "MK",
+  label: "Fmr. Yugoslav Republic of Macedonia"
+}, {
+  value: "FR",
+  label: "France"
+}, {
+  value: "GE",
+  label: "Georgia"
+}, {
+  value: "DE",
+  label: "Germany"
+}, {
+  value: "GR",
+  label: "Greece"
+}, {
+  value: "HU",
+  label: "Hungary"
+}, {
+  value: "IS",
+  label: "Iceland"
+}, {
+  value: "IN",
+  label: "India"
+}, {
+  value: "ID",
+  label: "Indonesia"
+}, {
+  value: "IR",
+  label: "Iran (Islamic Republic of)"
+}, {
+  value: "IQ",
+  label: "Iraq"
+}, {
+  value: "IE",
+  label: "Ireland"
+}, {
+  value: "IL",
+  label: "Israel"
+}, {
+  value: "IT",
+  label: "Italy"
+}, {
+  value: "JP",
+  label: "Japan"
+}, {
+  value: "KG",
+  label: "Kyrgyzstan"
+}, {
+  value: "LV",
+  label: "Latvia"
+}, {
+  value: "LT",
+  label: "Lithuania"
+}, {
+  value: "LU",
+  label: "Luxembourg"
+}, {
+  value: "MY",
+  label: "Malaysia"
+}, {
+  value: "MT",
+  label: "Malta"
+}, {
+  value: "MX",
+  label: "Mexico"
+}, {
+  value: "MN",
+  label: "Mongolia"
+}, {
+  value: "MA",
+  label: "Morocco"
+}, {
+  value: "NP",
+  label: "Nepal"
+}, {
+  value: "NL",
+  label: "Netherlands"
+}, {
+  value: "NZ",
+  label: "New Zealand"
+}, {
+  value: "NG",
+  label: "Nigeria"
+}, {
+  value: "NO",
+  label: "Norway"
+}, {
+  value: "PK",
+  label: "Pakistan"
+}, {
+  value: "PE",
+  label: "Peru"
+}, {
+  value: "PH",
+  label: "Philippines"
+}, {
+  value: "PL",
+  label: "Poland"
+}, {
+  value: "PT",
+  label: "Portugal"
+}, {
+  value: "KR",
+  label: "Republic of Korea"
+}, {
+  value: "PA",
+  label: "Republic of Panama"
+}, {
+  value: "RO",
+  label: "Romania"
+}, {
+  value: "RU",
+  label: "Russian Federation"
+}, {
+  value: "SA",
+  label: "Saudi Arabia"
+}, {
+  value: "RS",
+  label: "Serbia"
+}, {
+  value: "SG",
+  label: "Singapore"
+}, {
+  value: "SK",
+  label: "Slovakia"
+}, {
+  value: "SI",
+  label: "Slovenia"
+}, {
+  value: "ZA",
+  label: "South Africa"
+}, {
+  value: "ES",
+  label: "Spain"
+}, {
+  value: "LK",
+  label: "Sri Lanka"
+}, {
+  value: "SE",
+  label: "Sweden"
+}, {
+  value: "CH",
+  label: "Switzerland"
+}, {
+  value: "TW",
+  label: "Taiwan"
+}, {
+  value: "TH",
+  label: "Thailand"
+}, {
+  value: "TN",
+  label: "Tunisia"
+}, {
+  value: "TR",
+  label: "Turkey"
+}, {
+  value: "TM",
+  label: "Turkmenistan"
+}, {
+  value: "UA",
+  label: "Ukraine"
+}, {
+  value: "AE",
+  label: "United Arab Emirates"
+}, {
+  value: "GB",
+  label: "United Kingdom"
+}, {
+  value: "US",
+  label: "United States"
+}, {
+  value: "UZ",
+  label: "Uzbekistan"
+}, {
+  value: "VE",
+  label: "Venezuela"
+}, {
+  value: "VN",
+  label: "Viet Nam"
+}];
+const themes = [{
+  value: "BC50E220-9412-11E8-85AF-D97B4D95EBB1",
+  label: "Intelligent Braking and Braking Control"
+}, {
+  value: "48C9561C-7865-11E7-AA75-C89000D85D50",
+  label: "Environmentally-friendly Braking Systems"
+}, {
+  value: "5D49D9C2-7865-11E7-9112-887F12D54550",
+  label: "Fundamentals of Brakes"
+}, {
+  value: "7C15061A-7865-11E7-8178-84D2A73AF9BC",
+  label: "Manufacturing and Markets"
+}, {
+  value: "925B5F3C-7865-11E7-8659-8C8422753A7C",
+  label: "Materials and Design"
+}, {
+  value: "B6F53F20-7865-11E7-A9B1-FC3D434D4D51",
+  label: "Simulation, Testing, Innovative Development Processes"
+}];
+const subThemes = [{
+  value: "06CE3888-9414-11E8-AE34-9BA1BE5E3471",
+  label: "Brake Systems for Highly Automated Road and Rail Vehicles"
+}, {
+  value: "0DD80384-9414-11E8-A380-9320CF01B393",
+  label: "Braking for Electric and Hybrid Vehicles"
+}, {
+  value: "1BFDEE9C-9414-11E8-A7E0-A07B6C067014",
+  label: "Innovative Parking Brake Systems"
+}, {
+  value: "1C01065E-9414-11E8-A93F-A546BD18FAA0",
+  label: "Innovative Brake Actuators and System Controls (Software and Function Development)"
+}, {
+  value: "1C04A9BC-9414-11E8-B1D2-8516A557BE68",
+  label: "Safety relevant braking functions"
+}, {
+  value: "1C082150-9414-11E8-AF92-B5E7B5B9337D",
+  label: "Railway Traffic Management Systems"
+}, {
+  value: "2604091C-9414-11E8-A078-CC3BFBB45A3C",
+  label: "Sustainability in Brake Systems"
+}, {
+  value: "26093DE2-9414-11E8-B272-A7C4EBADAE4A",
+  label: "Brake Energy Management and Recuperation"
+}, {
+  value: "260E56E2-9414-11E8-B9F8-E613015D1408",
+  label: "Brake Noise and Drag Reduction"
+}, {
+  value: "26126F98-9414-11E8-BBB3-D3A884B3E943",
+  label: "Lightweight Brake Components"
+}, {
+  value: "26176674-9414-11E8-8A0E-C108E25B228C",
+  label: "Brake Emission findings and available countermeasures"
+}, {
+  value: "2FE079A2-9414-11E8-AA53-C7435EE03528",
+  label: "Friction Interface Dynamics"
+}, {
+  value: "2FE4D18C-9414-11E8-B418-87A1883F2046",
+  label: "Friction Induced Vibration"
+}, {
+  value: "2FE958F6-9414-11E8-A0E5-9911B184DEC0",
+  label: "Thermal Effects"
+}, {
+  value: "2FECE066-9414-11E8-A9FA-A830F1ADACA6",
+  label: "Wear and Emissions"
+}, {
+  value: "36935E7C-9414-11E8-830E-8F6C9F83D892",
+  label: "Manufacturing, Quality Control and Warranty Claims"
+}, {
+  value: "369B7C92-9414-11E8-8D9F-E0E2215D2248",
+  label: "Global Standardisation"
+}, {
+  value: "36A067CA-9414-11E8-8D58-F172FE98C949",
+  label: "Aftermarket, Global Sourcing"
+}, {
+  value: "36A436C0-9414-11E8-AAB2-F98B8437A38B",
+  label: "Governmental Regulation and Homologation of Brake Systems"
+}, {
+  value: "3DAE1288-9414-11E8-85DC-B1A03E97F386",
+  label: "Innovative Friction Materials and Components"
+}, {
+  value: "3DB1BDC0-9414-11E8-81E9-D82DD1471F92",
+  label: "Disc, Drum, Wheel Materials, Coatings and Design"
+}, {
+  value: "E65121F6-B77B-11E9-A3BF-935F1E4F73DC",
+  label: "Virtual Development Methods of Braking Hardware and Software "
+}, {
+  value: "E6542694-B77B-11E9-BAAD-C06218C5F3E9",
+  label: "Friction Material and Friction Couple Characterisation"
+}, {
+  value: "E6572D62-B77B-11E9-AEEC-DEEBD990D172",
+  label: "Simulation and Testing of Noise Vibration Harshness"
+}, {
+  value: "E65A4448-B77B-11E9-925C-E3659DA380C2",
+  label: "Simulating and Testing of Particulate Emissions"
+}, {
+  value: "E65D5C1E-B77B-11E9-B6C9-A62E81FFC1F7",
+  label: "Brake System and Component Performance"
+}, {
+  value: "E6607750-B77B-11E9-A508-CA68AAFEDEBE",
+  label: "Scale Testing for Research Development and Quality Control"
+}, {
+  value: "E66375B8-B77B-11E9-B730-BE1C3C7011F1",
+  label: "Virtual Validation and Certification of Brake Systems"
+}, {
+  value: "E6668E42-B77B-11E9-8175-950FC9BD5E64",
+  label: "State-of-the-Art Engineering Processes for Safety Relevant Functions and Systems"
+}, {
+  value: "E6699C68-B77B-11E9-BE37-D0A72E493802",
+  label: "Development (Process/Products) of Cooperating Software and Hardware Solutions in Brakes"
+}];
+const subTheme1 = [{
+  value: "06CE3888-9414-11E8-AE34-9BA1BE5E3471",
+  label: "Brake Systems for Highly Automated Road and Rail Vehicles"
+}, {
+  value: "0DD80384-9414-11E8-A380-9320CF01B393",
+  label: "Braking for Electric and Hybrid Vehicles"
+}, {
+  value: "1BFDEE9C-9414-11E8-A7E0-A07B6C067014",
+  label: "Innovative Parking Brake Systems"
+}, {
+  value: "1C01065E-9414-11E8-A93F-A546BD18FAA0",
+  label: "Innovative Brake Actuators and System Controls (Software and Function Development)"
+}, {
+  value: "1C04A9BC-9414-11E8-B1D2-8516A557BE68",
+  label: "Safety relevant braking functions"
+}, {
+  value: "1C082150-9414-11E8-AF92-B5E7B5B9337D",
+  label: "Railway Traffic Management Systems"
+}];
+const subTheme2 = [{
+  value: "2604091C-9414-11E8-A078-CC3BFBB45A3C",
+  label: "Sustainability in Brake Systems"
+}, {
+  value: "26093DE2-9414-11E8-B272-A7C4EBADAE4A",
+  label: "Brake Energy Management and Recuperation"
+}, {
+  value: "260E56E2-9414-11E8-B9F8-E613015D1408",
+  label: "Brake Noise and Drag Reduction"
+}, {
+  value: "26126F98-9414-11E8-BBB3-D3A884B3E943",
+  label: "Lightweight Brake Components"
+}, {
+  value: "26176674-9414-11E8-8A0E-C108E25B228C",
+  label: "Brake Emission findings and available countermeasures"
+}];
+const subTheme3 = [{
+  value: "2FE079A2-9414-11E8-AA53-C7435EE03528",
+  label: "Friction Interface Dynamics"
+}, {
+  value: "2FE4D18C-9414-11E8-B418-87A1883F2046",
+  label: "Friction Induced Vibration"
+}, {
+  value: "2FE958F6-9414-11E8-A0E5-9911B184DEC0",
+  label: "Thermal Effects"
+}, {
+  value: "2FECE066-9414-11E8-A9FA-A830F1ADACA6",
+  label: "Wear and Emissions"
+}];
+const subTheme4 = [{
+  value: "36935E7C-9414-11E8-830E-8F6C9F83D892",
+  label: "Manufacturing, Quality Control and Warranty Claims"
+}, {
+  value: "369B7C92-9414-11E8-8D9F-E0E2215D2248",
+  label: "Global Standardisation"
+}, {
+  value: "36A067CA-9414-11E8-8D58-F172FE98C949",
+  label: "Aftermarket, Global Sourcing"
+}, {
+  value: "36A436C0-9414-11E8-AAB2-F98B8437A38B",
+  label: "Governmental Regulation and Homologation of Brake Systems"
+}];
+const subTheme5 = [{
+  value: "3DAE1288-9414-11E8-85DC-B1A03E97F386",
+  label: "Innovative Friction Materials and Components"
+}, {
+  value: "3DB1BDC0-9414-11E8-81E9-D82DD1471F92",
+  label: "Disc, Drum, Wheel Materials, Coatings and Design"
+}];
+const subTheme6 = [{
+  value: "E65121F6-B77B-11E9-A3BF-935F1E4F73DC",
+  label: "Virtual Development Methods of Braking Hardware and Software "
+}, {
+  value: "E6542694-B77B-11E9-BAAD-C06218C5F3E9",
+  label: "Friction Material and Friction Couple Characterisation"
+}, {
+  value: "E6572D62-B77B-11E9-AEEC-DEEBD990D172",
+  label: "Simulation and Testing of Noise Vibration Harshness"
+}, {
+  value: "E65A4448-B77B-11E9-925C-E3659DA380C2",
+  label: "Simulating and Testing of Particulate Emissions"
+}, {
+  value: "E65D5C1E-B77B-11E9-B6C9-A62E81FFC1F7",
+  label: "Brake System and Component Performance"
+}, {
+  value: "E6607750-B77B-11E9-A508-CA68AAFEDEBE",
+  label: "Scale Testing for Research Development and Quality Control"
+}, {
+  value: "E66375B8-B77B-11E9-B730-BE1C3C7011F1",
+  label: "Virtual Validation and Certification of Brake Systems"
+}, {
+  value: "E6668E42-B77B-11E9-8175-950FC9BD5E64",
+  label: "State-of-the-Art Engineering Processes for Safety Relevant Functions and Systems"
+}, {
+  value: "E6699C68-B77B-11E9-BE37-D0A72E493802",
+  label: "Development (Process/Products) of Cooperating Software and Hardware Solutions in Brakes"
+}];
+const submissionType = [{
+  value: "full",
+  label: "I will make a full technical paper submission"
+}, {
+  value: "oral",
+  label: "I will make an oral-only submission"
+}, {
+  value: "poster",
+  label: "I will make a poster-only submission"
+}];
+const ifFull = [{
+  value: "programme",
+  label: "My full paper submission will be accompanied by an oral presentation"
+}, {
+  value: "poster",
+  label: "My full paper submission will be accompanied by a poster presentation"
+}];
+
+/***/ }),
+
+/***/ "./components/forms/Formstyles.js":
+/*!****************************************!*\
+  !*** ./components/forms/Formstyles.js ***!
+  \****************************************/
+/*! exports provided: StyledForm */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "StyledForm", function() { return StyledForm; });
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! styled-components */ "styled-components");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var formik__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! formik */ "formik");
+/* harmony import */ var formik__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(formik__WEBPACK_IMPORTED_MODULE_1__);
+
+
+const StyledForm = styled_components__WEBPACK_IMPORTED_MODULE_0___default()(formik__WEBPACK_IMPORTED_MODULE_1__["Form"]).withConfig({
+  displayName: "Formstyles__StyledForm",
+  componentId: "sc-1mvqi50-0"
+})(["display:flex;flex-flow:column;justify-content:space-between;align-items:center;min-width:100%;.MuiInput-underline:after{color:", ";}.MuiFormHelperText-root{font-size:1.5rem;}.MuiInputBase-root{font-family:", ";font-size:2rem;color:", ";}input:-internal-autofill-selected{}.form{&-secondary{display:flex;flex-flow:column;justify-content:space-between;align-items:center;min-width:100%;}&-field{margin:1rem 0;width:100%;display:flex;justify-content:space-between;align-items:flex-end;}&-label{font-family:", ";font-size:2.6rem;color:", ";}&-input{min-width:40rem;font-family:", ";font-size:2rem;color:", ";}&-link{font-family:", ";font-size:1.7rem;color:", ";}&-radio{text-align:end;}&-title{color:", ";font-family:", ";font-size:3rem;align-self:flex-start;margin:2rem 0;}}"], props => props.theme.primary, props => props.theme.MPBoldIt, props => props.theme.primary, props => props.theme.MPLight, props => props.theme.primary, props => props.theme.MPBoldIt, props => props.theme.primary, props => props.theme.MPBoldIt, props => props.theme.primary, props => props.theme.primary, props => props.theme.MPSemibold);
+
+/***/ }),
+
+/***/ "./components/forms/LoginForm.js":
+/*!***************************************!*\
+  !*** ./components/forms/LoginForm.js ***!
+  \***************************************/
+/*! exports provided: LoginForm */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LoginForm", function() { return LoginForm; });
+/* harmony import */ var _babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/core-js/json/stringify */ "./node_modules/@babel/runtime-corejs2/core-js/json/stringify.js");
+/* harmony import */ var _babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var formik__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! formik */ "formik");
+/* harmony import */ var formik__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(formik__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _Formstyles__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Formstyles */ "./components/forms/Formstyles.js");
+/* harmony import */ var _material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @material-ui/core/TextField */ "@material-ui/core/TextField");
+/* harmony import */ var _material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _FormControl__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./FormControl */ "./components/forms/FormControl.js");
+/* harmony import */ var _Button__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../Button */ "./components/Button.js");
+/* harmony import */ var _FormActions__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./FormActions */ "./components/forms/FormActions.js");
+
+var _jsxFileName = "/mnt/c/Users/D.Hardiman/desktop/eurobrake/components/forms/LoginForm.js";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
+
+
+
+
+
+
+
+const url = 'https://prelude.eurobrake.net/login';
+const LoginForm = () => {
+  return __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Formik"], {
+    initialValues: emptyInitial,
+    onSubmit: async (values, actions) => {
+      await Object(_FormActions__WEBPACK_IMPORTED_MODULE_7__["SendForm"])({
+        values,
+        url
+      });
+      setTimeout(() => {
+        alert(_babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_0___default()(values, null, 2));
+        actions.setSubmitting(false);
+      }, 1000);
+    },
+    validationSchema: _FormControl__WEBPACK_IMPORTED_MODULE_5__["AbstractSchema"],
+    enableReinitialize: true,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 16
+    },
+    __self: undefined
+  }, ({
+    values,
+    isSubmitting,
+    isValidating,
+    handleChange
+  }) => {
+    return __jsx(_Formstyles__WEBPACK_IMPORTED_MODULE_3__["StyledForm"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 31
+      },
+      __self: undefined
+    }, __jsx("div", {
+      className: "form-field",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 32
+      },
+      __self: undefined
+    }, __jsx("label", {
+      htmlFor: "label",
+      className: "form-label",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 33
+      },
+      __self: undefined
+    }, "Email:"), __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Field"], {
+      className: "form-input",
+      onClick: handleChange,
+      value: values.login_email,
+      style: {
+        color: '#134381'
+      },
+      name: "login_email",
+      component: _material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_4___default.a,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 38
+      },
+      __self: undefined
+    })), __jsx("div", {
+      className: "form-field",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 48
+      },
+      __self: undefined
+    }, __jsx("label", {
+      htmlFor: "label",
+      className: "form-label",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 49
+      },
+      __self: undefined
+    }, "Password:"), __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Field"], {
+      className: "form-input",
+      onClick: handleChange,
+      value: values.login_password,
+      style: {
+        color: '#134381'
+      },
+      name: "login_password",
+      component: _material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_4___default.a,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 54
+      },
+      __self: undefined
+    })), __jsx(_Button__WEBPACK_IMPORTED_MODULE_6__["Button"], {
+      type: "submit",
+      bcolor: "#134381",
+      padding: "0.5rem 2rem",
+      background: "#134381",
+      br: "100rem",
+      style: {
+        margin: ".5rem 0"
+      },
+      fontSize: "1.7rem",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 64
+      },
+      __self: undefined
     }, "Login"), __jsx("a", {
       className: "login_form-link",
       href: "",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 160
+        lineNumber: 73
       },
-      __self: this
+      __self: undefined
     }, "Forgotten your password?"));
+  });
+};
+const emptyInitial = {
+  login_email: '',
+  login_password: ''
+};
+
+/***/ }),
+
+/***/ "./components/forms/OneForm.js":
+/*!*************************************!*\
+  !*** ./components/forms/OneForm.js ***!
+  \*************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _LoginForm__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./LoginForm */ "./components/forms/LoginForm.js");
+/* harmony import */ var _Abstract__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Abstract */ "./components/forms/Abstract.js");
+/* harmony import */ var _Authorprofile__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Authorprofile */ "./components/forms/Authorprofile.js");
+/* harmony import */ var _Exhibitorprofile__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Exhibitorprofile */ "./components/forms/Exhibitorprofile.js");
+/* harmony import */ var _Esop__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Esop */ "./components/forms/Esop.js");
+/* harmony import */ var _Esop__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_Esop__WEBPACK_IMPORTED_MODULE_5__);
+var _jsxFileName = "/mnt/c/Users/D.Hardiman/desktop/eurobrake/components/forms/OneForm.js";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
+
+
+
+
+
+class OneForm extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
+  constructor(props) {
+    super(props);
   }
 
-}
+  render() {
+    const {
+      props,
+      form
+    } = this.props;
+    console.log('edit props', props);
+    {
+      switch (form) {
+        case 'abstract-edit':
+          return __jsx(_Abstract__WEBPACK_IMPORTED_MODULE_2__["AbstractForm"], {
+            editPaper: "true",
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 18
+            },
+            __self: this
+          });
+
+        case 'abstract':
+          return __jsx(_Abstract__WEBPACK_IMPORTED_MODULE_2__["AbstractForm"], {
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 20
+            },
+            __self: this
+          });
+
+        case 'exhibitor-edit':
+          return __jsx(_Exhibitorprofile__WEBPACK_IMPORTED_MODULE_4__["Exhibitorprofile"], {
+            editPaper: "true",
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 22
+            },
+            __self: this
+          });
+
+        case 'exhibitor':
+          return __jsx(_Exhibitorprofile__WEBPACK_IMPORTED_MODULE_4__["Exhibitorprofile"], {
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 24
+            },
+            __self: this
+          });
+
+        case 'author-edit':
+          return __jsx(_Authorprofile__WEBPACK_IMPORTED_MODULE_3__["Authorprofile"], {
+            editPaper: "true",
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 26
+            },
+            __self: this
+          });
+
+        case 'author':
+          return __jsx(_Authorprofile__WEBPACK_IMPORTED_MODULE_3__["Authorprofile"], {
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 28
+            },
+            __self: this
+          });
+
+        case 'esop-edit': // return <Esop editPaper="true" />;
+
+        case 'esop': // return <Esop />;
+
+        case 'login':
+          return __jsx(_LoginForm__WEBPACK_IMPORTED_MODULE_1__["LoginForm"], {
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 34
+            },
+            __self: this
+          });
+
+        default:
+          return null;
+      }
+    }
+  }
+
+} // export default withAuthSync(Edit)
+
+
+/* harmony default export */ __webpack_exports__["default"] = (OneForm); // !
+// ?
+// *
+// todo
 
 /***/ }),
 
@@ -9668,7 +11190,7 @@ class AuthorsArea extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
   }) {
     const {
       logintoken
-    } = js_cookie__WEBPACK_IMPORTED_MODULE_5___default.a.get();
+    } = js_cookie__WEBPACK_IMPORTED_MODULE_5___default.a.get() || {};
 
     if (logintoken) {
       if (res) {
