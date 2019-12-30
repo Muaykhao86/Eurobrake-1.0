@@ -276,7 +276,7 @@ class AuthorsAreaDash extends Component {
                         <Typography gutterBottom className="authors-title" style={{ fontSize: '3rem', borderTop: '2px solid #134381', borderBottom: '2px solid #134381' }}>Your paper</Typography>
                         { 
                                  editAbstract || editProfile ? <OneForm/> : 
-                                 papaers ? Abstract({papers})
+                                 papers ? Abstract({papers})
                                                      :
                             <StyledBox>
                                 <Typography gutterBottom className="authors-it" style={{ fontSize: '2rem' }}>You haven't submitted any abstracts yet</Typography>
