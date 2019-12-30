@@ -2,7 +2,6 @@ import React, { Component, useState, useEffect } from 'react'
 import { Formik, Form, Field } from 'formik';
 import { TextField, Select} from 'formik-material-ui';
 import { Button } from '../Button';
-import { Typography } from '@material-ui/core';
 import {titles, countries} from './FormSelects';
 import {AbstractSchema} from './FormControl';
 import {StyledForm} from './Formstyles';
