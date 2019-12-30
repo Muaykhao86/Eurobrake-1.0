@@ -31,9 +31,9 @@ export const LoginForm = () => {
                             <Field
                                 className="form-input"
                                 onClick={handleChange}
-                                value={values.login_email}
+                                value={values.username}
                                 style={{ color: '#134381' }}
-                                name="login_email"
+                                name="username"
                                 component={TextField}
                             />
                         </div>
@@ -47,9 +47,9 @@ export const LoginForm = () => {
                             <Field
                                 className="form-input"
                                 onClick={handleChange}
-                                value={values.login_password}
+                                value={values.password}
                                 style={{ color: '#134381' }}
-                                name="login_password"
+                                name="password"
                                 component={TextField}
                             />
                         </div>
@@ -75,8 +75,8 @@ export const LoginForm = () => {
 
 
 const emptyInitial = {
-    login_email: '',
-    login_password: '',
+    email: '',
+    password: '',
 };
 
 
