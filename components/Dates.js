@@ -3,9 +3,6 @@ import styled from 'styled-components';
 import { Typography } from '@material-ui/core';
 
 const StyledDates = styled.div`
- position: absolute;
-   
-
     max-width: ${props => props.MW || '33rem'};
     min-height: ${props => props.MW ||'33rem'};
     background-color: ${props => props.theme.primary};
@@ -15,6 +12,8 @@ const StyledDates = styled.div`
     display: flex;
     flex-flow: column;
     justify-content: space-between;
+
+    font-size: 2rem;
 
 
 `;

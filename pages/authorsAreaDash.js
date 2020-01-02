@@ -171,6 +171,7 @@ class AuthorsAreaDash extends Component {
             error: '',
             editForm: false,
             formType: '',
+            paper: '',
         }
     }
 
@@ -260,7 +261,7 @@ class AuthorsAreaDash extends Component {
                         </div>
                         <Typography gutterBottom className="authors-title" style={{ fontSize: '3rem', borderTop: '2px solid #134381', borderBottom: '2px solid #134381' }}>Your paper</Typography>
                         {
-                            editForm ? <OneForm form={formType} /> :
+                            editForm ? <OneForm form={formType} paper={}/> :
                                 papers ?
 
                                     papers.map((paper) => (
@@ -275,7 +276,7 @@ class AuthorsAreaDash extends Component {
                                                     padding="0.5rem 2rem"
                                                     style={{ margin: ".5rem 0" }}
                                                     fontSize="1.7rem"
-                                                    onClick={() => this.setState({ editForm: true, formType: 'abstract=edit' })}>
+                                                    onClick={() => this.setState({ editForm: true, formType: 'abstract=edit', paper: paper.papercode })}>
                                                     <CreateIcon style={{ fontSize: '3rem', marginRight: '1rem' }} />
                                                     EDIT PAPER
                                                 </Button>

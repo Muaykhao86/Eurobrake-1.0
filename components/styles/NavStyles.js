@@ -181,7 +181,6 @@ export const HiddenContainer = styled.div`
         /* background-color: goldenrod; */
          display: flex;
         flex-flow: column;
-        align-items: center;
         justify-content: space-between;
     }
     .nav_box-4{
