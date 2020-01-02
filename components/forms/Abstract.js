@@ -8,7 +8,7 @@ import { Typography } from '@material-ui/core';
 import {titles, countries} from './FormSelects';
 import {AbstractSchema} from './FormControl';
 import {StyledForm} from './Formstyles';
-import { GetForm } from '../components/forms/FormActions';
+import { GetForm } from './FormActions';
 
 
 
