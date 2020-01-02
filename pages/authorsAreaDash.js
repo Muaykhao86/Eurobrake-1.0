@@ -137,12 +137,12 @@ const FilledBanner = () => (
 
 
 const Abstract = ({ papers }) => {
-    const { paper, setPaper } = useState('');
-    const { edit, setEdit } = useState(false);
+    const [ paper, setPaper ] = useState('');
+    const[ edit, setEdit ] = useState(false);
 
     editPaper = async ({papercode}) => {
      console.log({papercode})
-        // await setPaper({ papercode })
+        await setPaper({ papercode })
         await setEdit(true)
     }
 

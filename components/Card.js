@@ -13,8 +13,8 @@ export const Card = styled.div`
     props.center && 'null'};
     
 
-    max-width: 33rem;
-    min-height: 33rem;
+    max-width: ${props => props.MW || '33rem'};
+    min-height: ${props => props.MW ||'33rem'};
     background-color: ${props => props.theme.primary};
     padding: 4rem;
     padding-bottom: 3.5rem;
