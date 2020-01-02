@@ -15,10 +15,11 @@ class OneForm extends Component {
    }
    }
 
-   componentDidMount (){
+   async componentDidMount (){
             const formData = await  GetForm(`https://prelude.eurobrake.net/edit/${paper}`);
-            const presets = formData.presets;
-          return  this.setState({presets: presets})
+            const presets = await formData.presets;
+            await this.setState({presets: presets})
+            return
    }
 
     render() {
