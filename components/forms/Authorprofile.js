@@ -292,7 +292,7 @@ export const Authorprofile = ({editPaper = false}) => {
                                 padding="0.5rem 2rem"
                                 background="#134381"
                                 br="100rem"
-                                style={{ margin: ".5rem 0" }}
+                                style={{ margin: "1rem" }}
                                 fontSize="1.7rem">Submit</Button>
                         {console.log('main', values.is_presenting_author, 'second', values.secondary_authors)}
                     </StyledForm>

@@ -29,6 +29,7 @@ export const LoginForm = () => {
                                 Email:
                         </label>
                             <Field
+                                type="email"
                                 className="form-input"
                                 onClick={handleChange}
                                 value={values.username}
@@ -45,6 +46,7 @@ export const LoginForm = () => {
                                 Password:
                         </label>
                             <Field
+                                type="password"
                                 className="form-input"
                                 onClick={handleChange}
                                 value={values.password}
@@ -60,7 +62,7 @@ export const LoginForm = () => {
                             padding="0.5rem 2rem"
                             background="#134381"
                             br="100rem"
-                            style={{ margin: ".5rem 0" }}
+                            style={{ margin: "1rem" }}
                             fontSize="1.7rem">
                             Login
                         </Button>

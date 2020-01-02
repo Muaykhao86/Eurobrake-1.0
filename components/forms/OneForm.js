@@ -11,11 +11,11 @@ class OneForm extends Component {
    }
 
     render() {
-        const {props, form} = this.props;
+        const {props, form, paper} = this.props;
         console.log('edit props', props)
             {switch(form) {
                 case'abstract-edit' : 
-                return <AbstractForm editPaper="true" />;
+                return <AbstractForm editPaper="true" paper={paper}/>;
                 case'abstract' : 
                 return <AbstractForm />;
                 case'exhibitor-edit' : 

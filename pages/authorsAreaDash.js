@@ -137,11 +137,10 @@ const FilledBanner = () => (
 
 // * NEED TO SORT OUT DYNAMIC ROUTING FOR EDITING A PAPER
 const Abstract = ({ papers }) => (
-    papers.map((paper, i) => (
+    papers.map((paper) => (
         <StyledBox>
             <StyledActionArea>
                 <Typography gutterBottom className="action-paper">{paper.papercode}</Typography>
-                <Link >
                     <Button
                         disabled
                         bcolor="#134381"
@@ -150,12 +149,11 @@ const Abstract = ({ papers }) => (
                         padding="0.5rem 2rem"
                         style={{ margin: ".5rem 0" }}
                         fontSize="1.7rem"
-                        onClick={() => GetForm(`https://prelude.eurobrake.net/edit/${paper.papercode}`)}
+                        onClick={() => this.setState({editForm: 'true', formType: 'abstract-edit', paper: paper.papercode})}
                     >
                         <CreateIcon style={{ fontSize: '3rem', marginRight: '1rem' }} />
                         EDIT PAPER
             </Button>
-                </Link>
                 <Button
                     bcolor="#134381"
                     background="#134381"
@@ -163,9 +161,10 @@ const Abstract = ({ papers }) => (
                     padding="0.5rem 2rem"
                     style={{ margin: ".5rem 0" }}
                     fontSize="1.7rem"
+                    onClick={() => GetForm(`https://prelude.eurobrake.net/edit/${paper.papercode}`)}
                 >
                     <CancelIcon style={{ fontSize: '3rem', marginRight: '1rem' }} />
-                    WITHDRAW
+                    WITHDRAW/get
             </Button>
             </StyledActionArea>
             <StyledInfoArea>
@@ -191,7 +190,8 @@ class AuthorsAreaDash extends Component {
             formData: undefined,
             error: '',
             editForm: false,
-            formType: ''
+            formType: '',
+            paper: '',
         }
     }
 
@@ -215,7 +215,7 @@ class AuthorsAreaDash extends Component {
     }
 
     render() {
-        const { editAbstract, editProfile, formType } = this.state;
+        const { editForm, formType } = this.state;
         const { firstname } = this.props.authorData.author;
         const { papers } = this.props.authorData;
         const data = this.props.authorData;
@@ -235,7 +235,7 @@ class AuthorsAreaDash extends Component {
                                 <CreateIcon style={{ fontSize: '3rem', marginRight: '1rem' }} />
                                 UPLOAD FILE TEST
                             </Popup> */}
-                            {editPaper &&
+                            {editForm &&
                                  <Button
                                     bcolor="#134381"
                                     padding="0.5rem 2rem"
@@ -290,7 +290,7 @@ class AuthorsAreaDash extends Component {
                         </div>
                         <Typography gutterBottom className="authors-title" style={{ fontSize: '3rem', borderTop: '2px solid #134381', borderBottom: '2px solid #134381' }}>Your paper</Typography>
                         {
-                            editForm ? <OneForm form={formType} /> :
+                            editForm ? <OneForm form={formType} paper={paper} /> :
                                 papers ? Abstract({ papers }) :
                                     <StyledBox>
                                         <Typography gutterBottom className="authors-it" style={{ fontSize: '2rem' }}>You haven't submitted any abstracts yet</Typography>
