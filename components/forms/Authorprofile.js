@@ -5,9 +5,14 @@ import { Button } from '../Button';
 import {titles, countries} from './FormSelects';
 import {AbstractSchema} from './FormControl';
 import {StyledForm} from './Formstyles';
+import { GetForm } from './FormActions';
 
 
 export const Authorprofile = ({editPaper = false}) => {
+    useEffect(() => {
+       console.log({editPaper})
+      
+    }, [editPaper])
   
     return (
         <Formik
