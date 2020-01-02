@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components';
 import { Typography } from '@material-ui/core';
-import Card from './Card';
+import {Card} from './Card';
 
 
 export default function Dates() {
