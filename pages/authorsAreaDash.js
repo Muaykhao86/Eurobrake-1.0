@@ -134,79 +134,32 @@ const FilledBanner = () => (
 
 
 
-class Abstract extends Component {
- constructor(props) {
-     super(props);
-     this.state = {
-        edit: false,
-        paper: ''
-     }
+// class Abstract extends Component {
+//  constructor(props) {
+//      super(props);
+//      this.state = {
+//         edit: false,
+//         paper: ''
+//      }
 
- }
+//  }
 
-    editPaper = async ({papercode}) => {
-        this.setState(prev => ({edit: !prev.edit, paper: papercode}))
-        return 
-    }
+//     editPaper = async ({papercode}) => {
+//         this.setState(prev => ({edit: !prev.edit, paper: papercode}))
+//         return 
+//     }
 
-render(){
-    const {papers } = this.props;
-    const {paper, edit } = this.state;
-     return(
-         <>
-         { edit ?
-         <OneForm form="abstract-edit" paper={paper} /> :
-            
-            papers.map((paper) => (
-                <StyledBox>
-                    <StyledActionArea>
-                        <Typography gutterBottom className="action-paper">{paper.papercode}</Typography>
-                        <Button
-                            disabled
-                            bcolor="#134381"
-                            background="#134381"
-                            br="100rem"
-                            padding="0.5rem 2rem"
-                            style={{ margin: ".5rem 0" }}
-                            fontSize="1.7rem"
-                            onClick={() => {
-                                const { papercode } = paper
-                                this.editPaper({papercode})
-                                }}
-                        >
-                            <CreateIcon style={{ fontSize: '3rem', marginRight: '1rem' }} />
-                            EDIT PAPER
-            </Button>
-                        <Button
-                            bcolor="#134381"
-                            background="#134381"
-                            br="100rem"
-                            padding="0.5rem 2rem"
-                            style={{ margin: ".5rem 0" }}
-                            fontSize="1.7rem"
-                            onClick={() => GetForm(`https://prelude.eurobrake.net/edit/${paper.papercode}`)}
-                        >
-                            <CancelIcon style={{ fontSize: '3rem', marginRight: '1rem' }} />
-                            WITHDRAW/get
-            </Button>
-                    </StyledActionArea>
-                    <StyledInfoArea>
-                        <Typography className="paper-title">{paper.title}</Typography>
-                        <Typography gutterBottom className="paper-type">{paper.paper_type.toUpperCase()}</Typography>
-                        {paper.tasks && paper.tasks.map(task => {
-                            return (<div className="paper_task-box">
-                                {task.done === null ? <CheckCircleIcon style={{ fontSize: '2rem', color: 'green', marginRight: '1rem' }} /> : <CancelIcon style={{ fontSize: '2rem', color: 'red', marginRight: '1rem' }} />}
-                                <Typography gutterBottom className="paper_task">{task.task}</Typography>
-                            </div>)
-                        })}
-                    </StyledInfoArea>
-                </StyledBox>
-             ))
-         }
-         </>
-         )
-}
-}
+// render(){
+//     const {papers } = this.props;
+//     const {paper, edit } = this.state;
+//      return(
+//          <>
+//          {console.log({edit})}
+//           edit 
+//          <OneForm form="abstract-edit" paper={paper} /> 
+
+
+// }}}
 
 
 class AuthorsAreaDash extends Component {
@@ -248,6 +201,7 @@ class AuthorsAreaDash extends Component {
         console.log({ papers, data })
         return (
             <>
+
                 <HeroSection banner={FilledBanner} t="30rem" max="55%">
                     Author's Area Dashboard
             </HeroSection>
@@ -270,7 +224,7 @@ class AuthorsAreaDash extends Component {
                                     style={{ margin: ".5rem" }}
                                     fontSize="1.7rem"
                                     onClick={() => this.setState({ editForm: false, formType: '' })}>
-                                <ExitToAppIcon style={{ fontSize: '3rem', marginRight: '.5rem' }} />
+                                    <ExitToAppIcon style={{ fontSize: '3rem', marginRight: '.5rem' }} />
                                     Go back
                     </Button>
                             }
@@ -315,7 +269,53 @@ class AuthorsAreaDash extends Component {
                         <Typography gutterBottom className="authors-title" style={{ fontSize: '3rem', borderTop: '2px solid #134381', borderBottom: '2px solid #134381' }}>Your paper</Typography>
                         {
                             editForm ? <OneForm form={formType} /> :
-                                papers ? <Abstract papers={papers}/> :
+                                papers ?
+
+                                    papers.map((paper) => (
+                                        <StyledBox>
+                                            <StyledActionArea>
+                                                <Typography gutterBottom className="action-paper">{paper.papercode}</Typography>
+                                                <Button
+                                                    disabled
+                                                    bcolor="#134381"
+                                                    background="#134381"
+                                                    br="100rem"
+                                                    padding="0.5rem 2rem"
+                                                    style={{ margin: ".5rem 0" }}
+                                                    fontSize="1.7rem"
+                                                    onClick={() => {
+                                                        const { papercode } = paper
+                                                        GetForm({ papercode })
+                                                    }}
+                                                >
+                                                    <CreateIcon style={{ fontSize: '3rem', marginRight: '1rem' }} />
+                                                    EDIT PAPER
+                                                </Button>
+                                                <Button
+                                                    bcolor="#134381"
+                                                    background="#134381"
+                                                    br="100rem"
+                                                    padding="0.5rem 2rem"
+                                                    style={{ margin: ".5rem 0" }}
+                                                    fontSize="1.7rem"
+                                                    onClick={() => GetForm(`https://prelude.eurobrake.net/edit/${paper.papercode}`)}
+                                                >
+                                                    <CancelIcon style={{ fontSize: '3rem', marginRight: '1rem' }} />
+                                                    WITHDRAW/get
+                                                </Button>
+                                            </StyledActionArea>
+                                            <StyledInfoArea>
+                                                <Typography className="paper-title">{paper.title}</Typography>
+                                                <Typography gutterBottom className="paper-type">{paper.paper_type.toUpperCase()}</Typography>
+                                                {paper.tasks && paper.tasks.map(task => {
+                                                    return (<div className="paper_task-box">
+                                                        {task.done === null ? <CheckCircleIcon style={{ fontSize: '2rem', color: 'green', marginRight: '1rem' }} /> : <CancelIcon style={{ fontSize: '2rem', color: 'red', marginRight: '1rem' }} />}
+                                                        <Typography gutterBottom className="paper_task">{task.task}</Typography>
+                                                    </div>)
+                                                })}
+                                            </StyledInfoArea>
+                                        </StyledBox>
+                                    )) :
                                     <StyledBox>
                                         <Typography gutterBottom className="authors-it" style={{ fontSize: '2rem' }}>You haven't submitted any abstracts yet</Typography>
                                     </StyledBox>
