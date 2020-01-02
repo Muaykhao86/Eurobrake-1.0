@@ -135,8 +135,14 @@ const FilledBanner = () => (
 
 
 
-// * NEED TO SORT OUT DYNAMIC ROUTING FOR EDITING A PAPER
-const Abstract = ({ papers }) => (
+
+const Abstract = ({ papers }) => {
+    const {paper, setPaper} = useState('');
+    const {edit, setEdit} = useState(false);
+return (
+    edit ?
+   <OneForm formType="abstract-edit" paper={paper} /> :
+
     papers.map((paper) => (
         <StyledBox>
             <StyledActionArea>
@@ -149,7 +155,12 @@ const Abstract = ({ papers }) => (
                         padding="0.5rem 2rem"
                         style={{ margin: ".5rem 0" }}
                         fontSize="1.7rem"
-                        onClick={() => this.setState({editForm: 'true', formType: 'abstract-edit', paper: paper.papercode})}
+                        onClick={() => {
+                        const {papercode} = paper
+                        await setPaper({papercode})
+                        await setEdit(true)
+                        }
+                        }
                     >
                         <CreateIcon style={{ fontSize: '3rem', marginRight: '1rem' }} />
                         EDIT PAPER
@@ -179,7 +190,7 @@ const Abstract = ({ papers }) => (
             </StyledInfoArea>
         </StyledBox>
     ))
-)
+)}
 
 
 class AuthorsAreaDash extends Component {
@@ -191,7 +202,6 @@ class AuthorsAreaDash extends Component {
             error: '',
             editForm: false,
             formType: '',
-            paper: '',
         }
     }
 
@@ -215,7 +225,7 @@ class AuthorsAreaDash extends Component {
     }
 
     render() {
-        const { editForm, formType, paper } = this.state;
+        const { editForm, formType} = this.state;
         const { firstname } = this.props.authorData.author;
         const { papers } = this.props.authorData;
         const data = this.props.authorData;
@@ -290,7 +300,7 @@ class AuthorsAreaDash extends Component {
                         </div>
                         <Typography gutterBottom className="authors-title" style={{ fontSize: '3rem', borderTop: '2px solid #134381', borderBottom: '2px solid #134381' }}>Your paper</Typography>
                         {
-                            editForm ? <OneForm form={formType} paper={paper} /> :
+                            editForm ? <OneForm form={formType} /> :
                                 papers ? Abstract({ papers }) :
                                     <StyledBox>
                                         <Typography gutterBottom className="authors-it" style={{ fontSize: '2rem' }}>You haven't submitted any abstracts yet</Typography>
