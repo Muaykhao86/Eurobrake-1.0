@@ -16,6 +16,7 @@ class OneForm extends Component {
    }
 
    async componentDidMount (){
+            const {paper} = this.props
             const formData = await  GetForm(`https://prelude.eurobrake.net/edit/${paper}`);
             const presets = await formData.presets;
             await this.setState({presets: presets})

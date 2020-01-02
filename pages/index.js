@@ -13,7 +13,7 @@ import HeroSection from '../components/HeroSection';
 
 export default () => (
     <>
-         <HeroSection src="/images/barcelona.png" t="30rem" max="55%" >
+         <HeroSection src="/images/barcelona.png" max="55%" >
             EuroBrake 2020
         </HeroSection>
         {/* <div className="Hero">
