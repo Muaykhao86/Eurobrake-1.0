@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const Card = styled.div`
     position: absolute;
-    bottom: -12rem;
+    bottom: ${props => props.bottom || '-12rem'};
     left: ${props  => 
     props.right && 'null' ||
     props.left && '-5rem'||
@@ -16,8 +16,8 @@ export const Card = styled.div`
     max-width: ${props => props.MW || '33rem'};
     min-height: ${props => props.MW ||'33rem'};
     background-color: ${props => props.theme.primary};
-    padding: 4rem;
-    padding-bottom: 3.5rem;
+    padding: ${props => props.padding || '4rem'};
+    padding-bottom: ${props => props.paddingB || '3.5rem'};
 
     align-self: ${props  => 
     props.right && 'flex-end' ||

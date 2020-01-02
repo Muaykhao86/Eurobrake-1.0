@@ -173,7 +173,7 @@ render(){
                             fontSize="1.7rem"
                             onClick={() => {
                                 const { papercode } = paper
-                                editPaper({papercode})
+                                this.editPaper({papercode})
                                 }}
                         >
                             <CreateIcon style={{ fontSize: '3rem', marginRight: '1rem' }} />
