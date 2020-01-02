@@ -21,16 +21,14 @@ export const AbstractForm = (props) => {
     // ? If they choose to edit a abstarct paper we pass the paper code and il get its presets to fill in
 
     useEffect(() => {
-
         console.log('presenter is changing')
-
     }, [presenter])
 
     useEffect(async ({paper}) => {
        const formData = await  GetForm(`https://prelude.eurobrake.net/edit/${paper}`);
         pre = formData.presets
         console.log('presetting')
-    }, [editPaper])
+    }, [])
 
     return (
         <Formik

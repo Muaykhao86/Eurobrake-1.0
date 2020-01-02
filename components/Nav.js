@@ -39,7 +39,7 @@ export default class Nav extends Component {
                         <Typography gutterBottom className="Nav-title">Quick Links</Typography>
                         <Link href="/welcome"><a onClick={this.handleClick}>Welcome to Barcelona</a></Link>
                         <Link href="/exhibitors"><a onClick={this.handleClick}>Exhibitors List</a></Link>
-                        <Link href="/exhibitorsRegistration"><a onClick={this.handleClick}>Exhibitors Registration</a></Link>
+                        <Link href="/exhibitorsRegistration"><a onClick={this.handleClick}>Delegate Registration</a></Link>
                         <Link href="/authorsAreaInstructions"><a onClick={this.handleClick}>Authors Area Instructions & Templates</a></Link>
                         <Link href=""><a >Technical Program</a></Link>
                     </div>
@@ -50,15 +50,8 @@ export default class Nav extends Component {
                             BOOK NOW
                         </Button>
                         </Link>
-                        
                     </div>
-                </HiddenContainer>
-                
-                    {/* This is a link but it wont be / it will be just a label for the menu... maybe a button with the burger */}
-                    <h1 style={{alignSelf: "center"}}>
-                    Menu
-                    </h1>
-                
+                </HiddenContainer>                
                 <Burger isOpen={this.state.isOpen} onClick={this.handleClick}>
                     <TopBun isOpen={this.state.isOpen} sticky={this.props.sticky} />
                 </Burger>

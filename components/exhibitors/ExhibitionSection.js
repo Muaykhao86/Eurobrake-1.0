@@ -4,6 +4,7 @@ import Bounce from 'react-reveal/Bounce';
 import { StyledSection } from '../styles/HomeStyles';
 import { Card } from '../Card';
 import { Button } from '../Button';
+import Typography from '@material-ui/core/Typography';
 
 export default function ExhibitionSection() {
     return (
@@ -17,7 +18,8 @@ export default function ExhibitionSection() {
                 </div>
                 <Bounce ssrFadeout left>
                 <Card left>
-                    <h1>Partner your brand with EuroBrake</h1>
+                    {/* CHANGE TO MP BLACK!!! */}
+                    <Typography>Partner your brand with EuroBrake</Typography>
                     <Link href="/exhibitAndSponsor">
                     <Button br="500rem">EXHIBIT/SPONSOR</Button>
                     </Link>

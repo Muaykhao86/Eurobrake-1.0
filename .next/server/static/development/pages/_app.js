@@ -126,6 +126,131 @@ const Button = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.a.withCo
 
 /***/ }),
 
+/***/ "./components/Dates.js":
+/*!*****************************!*\
+  !*** ./components/Dates.js ***!
+  \*****************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Dates; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "styled-components");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _material_ui_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @material-ui/core */ "@material-ui/core");
+/* harmony import */ var _material_ui_core__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core__WEBPACK_IMPORTED_MODULE_2__);
+var _jsxFileName = "/mnt/c/Users/D.Hardiman/desktop/eurobrake/components/Dates.js";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
+
+const StyledDates = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div.withConfig({
+  displayName: "Dates__StyledDates",
+  componentId: "sc-2eodxj-0"
+})(["position:absolute;max-width:", ";min-height:", ";background-color:", ";padding:4rem;display:flex;flex-flow:column;justify-content:space-between;"], props => props.MW || '33rem', props => props.MW || '33rem', props => props.theme.primary);
+function Dates() {
+  return __jsx(StyledDates, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 25
+    },
+    __self: this
+  }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_2__["Typography"], {
+    gutterBottom: true,
+    as: "h1",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 26
+    },
+    __self: this
+  }, "Important Dates"), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_2__["Typography"], {
+    gutterBottom: true,
+    as: "h1",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 27
+    },
+    __self: this
+  }, "26 January 2020"), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_2__["Typography"], {
+    gutterBottom: true,
+    as: "p",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 28
+    },
+    __self: this
+  }, "Deadline for submission of review ready papers"), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_2__["Typography"], {
+    gutterBottom: true,
+    as: "h1",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 29
+    },
+    __self: this
+  }, "12 April 2020 "), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_2__["Typography"], {
+    gutterBottom: true,
+    as: "p",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 30
+    },
+    __self: this
+  }, "Final deadline for modifications to technical papers"), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_2__["Typography"], {
+    gutterBottom: true,
+    as: "h1",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 31
+    },
+    __self: this
+  }, "1 May 2020"), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_2__["Typography"], {
+    gutterBottom: true,
+    as: "p",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 32
+    },
+    __self: this
+  }, "Deadline for draft oral-only presentations, posters and presentations associated with a technical paper"), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_2__["Typography"], {
+    gutterBottom: true,
+    as: "h1",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 33
+    },
+    __self: this
+  }, "1 May 2020"), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_2__["Typography"], {
+    gutterBottom: true,
+    as: "p",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 34
+    },
+    __self: this
+  }, "Deadline for speakers to register"), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_2__["Typography"], {
+    gutterBottom: true,
+    as: "h1",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 35
+    },
+    __self: this
+  }, "24 May 2020"), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_2__["Typography"], {
+    gutterBottom: true,
+    as: "p",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 36
+    },
+    __self: this
+  }, "Deadline to upload PPTs for on-site presentation"));
+}
+
+/***/ }),
+
 /***/ "./components/Footer.js":
 /*!******************************!*\
   !*** ./components/Footer.js ***!
@@ -904,9 +1029,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _material_ui_core__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _styles_NavStyles__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./styles/NavStyles */ "./components/styles/NavStyles.js");
 /* harmony import */ var _Button__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Button */ "./components/Button.js");
+/* harmony import */ var _Dates__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./Dates */ "./components/Dates.js");
 
 var _jsxFileName = "/mnt/c/Users/D.Hardiman/desktop/eurobrake/components/Nav.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
+
 
 
 
@@ -931,28 +1058,28 @@ class Nav extends react__WEBPACK_IMPORTED_MODULE_1__["Component"] {
     return __jsx(_styles_NavStyles__WEBPACK_IMPORTED_MODULE_4__["NavStyles"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 24
+        lineNumber: 25
       },
       __self: this
     }, __jsx(_styles_NavStyles__WEBPACK_IMPORTED_MODULE_4__["HiddenNavBG"], {
       isOpen: this.state.isOpen,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 25
+        lineNumber: 26
       },
       __self: this
     }), __jsx(_styles_NavStyles__WEBPACK_IMPORTED_MODULE_4__["HiddenContainer"], {
       isOpen: this.state.isOpen,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 26
+        lineNumber: 27
       },
       __self: this
     }, __jsx("div", {
       className: "nav_box-1",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 27
+        lineNumber: 28
       },
       __self: this
     }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_3__["Typography"], {
@@ -960,112 +1087,112 @@ class Nav extends react__WEBPACK_IMPORTED_MODULE_1__["Component"] {
       className: "Nav-title",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 28
+        lineNumber: 29
       },
       __self: this
     }, "Main"), __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
       href: "/",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 29
+        lineNumber: 30
       },
       __self: this
     }, __jsx("a", {
       onClick: this.handleClick,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 29
+        lineNumber: 30
       },
       __self: this
     }, "Home")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
       href: "/about",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 30
+        lineNumber: 31
       },
       __self: this
     }, __jsx("a", {
       onClick: this.handleClick,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 30
+        lineNumber: 31
       },
       __self: this
     }, "About")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
       href: "/authorsArea",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 31
+        lineNumber: 32
       },
       __self: this
     }, __jsx("a", {
       onClick: this.handleClick,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 31
+        lineNumber: 32
       },
       __self: this
     }, "Authors Area")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
       href: "/exhibitorsArea",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 32
+        lineNumber: 33
       },
       __self: this
     }, __jsx("a", {
       onClick: this.handleClick,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 32
+        lineNumber: 33
       },
       __self: this
     }, "Exhibitors Area")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
       href: "/studentArea",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 33
+        lineNumber: 34
       },
       __self: this
     }, __jsx("a", {
       onClick: this.handleClick,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 33
+        lineNumber: 34
       },
       __self: this
     }, "Student Area")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
       href: "/exhibitAndSponsor",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 34
+        lineNumber: 35
       },
       __self: this
     }, __jsx("a", {
       onClick: this.handleClick,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 34
+        lineNumber: 35
       },
       __self: this
     }, "Exhibition And Sponsorship")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
       href: "/ticketPortal",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 35
+        lineNumber: 36
       },
       __self: this
     }, __jsx("a", {
       onClick: this.handleClick,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 35
+        lineNumber: 36
       },
       __self: this
     }, "Ticket Portal"))), __jsx("div", {
       className: "nav_box-2",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 37
+        lineNumber: 38
       },
       __self: this
     }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_3__["Typography"], {
@@ -1073,108 +1200,96 @@ class Nav extends react__WEBPACK_IMPORTED_MODULE_1__["Component"] {
       className: "Nav-title",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 38
+        lineNumber: 39
       },
       __self: this
     }, "Quick Links"), __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
       href: "/welcome",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 39
+        lineNumber: 40
       },
       __self: this
     }, __jsx("a", {
       onClick: this.handleClick,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 39
+        lineNumber: 40
       },
       __self: this
     }, "Welcome to Barcelona")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
       href: "/exhibitors",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 40
+        lineNumber: 41
       },
       __self: this
     }, __jsx("a", {
       onClick: this.handleClick,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 40
+        lineNumber: 41
       },
       __self: this
     }, "Exhibitors List")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
       href: "/exhibitorsRegistration",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 41
+        lineNumber: 42
       },
       __self: this
     }, __jsx("a", {
       onClick: this.handleClick,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 41
+        lineNumber: 42
       },
       __self: this
-    }, "Exhibitors Registration")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
+    }, "Delegate Registration")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
       href: "/authorsAreaInstructions",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 42
+        lineNumber: 43
       },
       __self: this
     }, __jsx("a", {
       onClick: this.handleClick,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 42
+        lineNumber: 43
       },
       __self: this
     }, "Authors Area Instructions & Templates")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
       href: "",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 43
+        lineNumber: 44
       },
       __self: this
     }, __jsx("a", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 43
+        lineNumber: 44
       },
       __self: this
     }, "Technical Program"))), __jsx("div", {
       className: "nav_box-3",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 45
-      },
-      __self: this
-    }, __jsx("div", {
-      className: "nav_box-5",
-      style: {
-        maxHeight: '50rem',
-        maxWidth: '35rem'
-      },
-      __source: {
-        fileName: _jsxFileName,
         lineNumber: 46
       },
       __self: this
-    }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_3__["Typography"], {
-      className: "",
+    }, __jsx(_Dates__WEBPACK_IMPORTED_MODULE_6__["default"], {
       __source: {
         fileName: _jsxFileName,
         lineNumber: 47
       },
       __self: this
-    }, "IMPORTANT DATES")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
+    }), __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
       href: "/ticketPortal",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 49
+        lineNumber: 48
       },
       __self: this
     }, __jsx(_Button__WEBPACK_IMPORTED_MODULE_5__["Button"], {
@@ -1184,7 +1299,7 @@ class Nav extends react__WEBPACK_IMPORTED_MODULE_1__["Component"] {
       },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 50
+        lineNumber: 49
       },
       __self: this
     }, "BOOK NOW")))), __jsx("h1", {
@@ -1193,7 +1308,7 @@ class Nav extends react__WEBPACK_IMPORTED_MODULE_1__["Component"] {
       },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 59
+        lineNumber: 58
       },
       __self: this
     }, "Menu"), __jsx(_styles_NavStyles__WEBPACK_IMPORTED_MODULE_4__["Burger"], {
@@ -1201,7 +1316,7 @@ class Nav extends react__WEBPACK_IMPORTED_MODULE_1__["Component"] {
       onClick: this.handleClick,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 63
+        lineNumber: 62
       },
       __self: this
     }, __jsx(_styles_NavStyles__WEBPACK_IMPORTED_MODULE_4__["TopBun"], {
@@ -1209,7 +1324,7 @@ class Nav extends react__WEBPACK_IMPORTED_MODULE_1__["Component"] {
       sticky: this.props.sticky,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 64
+        lineNumber: 63
       },
       __self: this
     })));
@@ -1504,7 +1619,7 @@ const HiddenNavBG = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div
 const HiddenContainer = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({
   displayName: "NavStyles__HiddenContainer",
   componentId: "sc-1ltvdnj-5"
-})(["position:absolute;right:-15rem;top:0;display:flex;padding:2rem;margin:2rem;transition:all .8s ease-in-out;transform:", ";min-width:90vw;min-height:90vh;@media only screen  and (max-device-width:768px)  and (-webkit-min-device-pixel-ratio:2){min-height:30rem;}@media only screen  and (max-device-width:500px)  and (-webkit-min-device-pixel-ratio:2){flex-flow:column;margin:0;}.Nav-title{font-size:4rem;@media only screen  and (max-device-width:1200px)  and (-webkit-min-device-pixel-ratio:2){font-size:2.3rem;}}.Nav-title{margin-left:1rem;}.nav_box-1{flex:1 1 auto;border:2px solid white;padding:2rem;margin:2rem;display:flex;flex-flow:column;align-items:flex-start;}.nav_box-2{flex:1 1 auto;border:2px solid white;padding:2rem;margin:2rem;display:flex;flex-flow:column;align-items:flex-start;}.nav_box-3{flex:1 1 auto;border:2px solid white;padding:2rem;margin:2rem;display:flex;flex-flow:column;align-items:center;justify-content:space-around;}.nav_box-4{flex:1 1 auto;border:2px solid white;padding:2rem;margin:2rem;min-height:15rem;min-width:15rem;}.nav_box-5{flex:1 1 auto;border:2px solid white;padding:2rem;margin:2rem;min-height:15rem;min-width:15rem;}.nav_box-6{border:2px solid white;padding:2rem;margin:2rem;min-height:15rem;min-width:15rem;}"], props => props.isOpen ? null : 'translateX(-200rem)');
+})(["position:absolute;right:-15rem;top:0;display:flex;padding:2rem;margin:2rem;transition:all .8s ease-in-out;transform:", ";min-width:90vw;min-height:90vh;@media only screen  and (max-device-width:768px)  and (-webkit-min-device-pixel-ratio:2){min-height:30rem;}@media only screen  and (max-device-width:500px)  and (-webkit-min-device-pixel-ratio:2){flex-flow:column;margin:0;}.Nav-title{font-size:4rem;@media only screen  and (max-device-width:1200px)  and (-webkit-min-device-pixel-ratio:2){font-size:2.3rem;}}.Nav-title{margin-left:1rem;}.nav_box-1{flex:1 1 auto;border:2px solid white;padding:2rem;margin:2rem;display:flex;flex-flow:column;align-items:flex-start;}.nav_box-2{flex:1 1 auto;border:2px solid white;padding:2rem;margin:2rem;display:flex;flex-flow:column;align-items:flex-start;}.nav_box-3{flex:1 1 auto;border:2px solid white;padding:2rem;margin:2rem;display:flex;flex-flow:column;align-items:center;justify-content:space-between;}.nav_box-4{flex:1 1 auto;border:2px solid white;padding:2rem;margin:2rem;min-height:15rem;min-width:15rem;}.nav_box-5{flex:1 1 auto;border:2px solid white;padding:2rem;margin:2rem;min-height:15rem;min-width:15rem;}.nav_box-6{border:2px solid white;padding:2rem;margin:2rem;min-height:15rem;min-width:15rem;}"], props => props.isOpen ? null : 'translateX(-200rem)');
 
 /***/ }),
 
