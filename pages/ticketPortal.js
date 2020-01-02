@@ -12,6 +12,12 @@ const StyledPage = styled.div`
     width: ${props => props.theme.minWidth};
     background-color: ${props => props.theme.white};
 
+      @media only screen 
+  and (max-device-width: 768px) 
+  and (-webkit-min-device-pixel-ratio: 2) { 
+    width: ${props => props.theme.mobileWidth};    
+}
+
     h1{
         font-family: ${props => props.theme.MPBlack};
         color: ${props => props.theme.primary};

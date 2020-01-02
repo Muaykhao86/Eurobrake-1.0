@@ -24,12 +24,17 @@ import OneForm from '../components/forms/OneForm';
 
 const StyledPage = styled.div`
     display: flex;
-    
     flex-direction: column;
     align-self: center;
     width: ${props => props.theme.minWidth};
     background-color: ${props => props.theme.white};
     margin-top: 7rem;
+
+      @media only screen 
+  and (max-device-width: 768px) 
+  and (-webkit-min-device-pixel-ratio: 2) { 
+    width: ${props => props.theme.mobileWidth};    
+}
     .authors{
         color: ${props => props.theme.primary};
         font-family: ${props => props.theme.MPLight};
@@ -131,49 +136,50 @@ const FilledBanner = () => (
 
 
 // * NEED TO SORT OUT DYNAMIC ROUTING FOR EDITING A PAPER
-const Abstract = ({papers}) => (
-papers.map((paper, i) => (
-    <StyledBox>
-        <StyledActionArea>
-            <Typography gutterBottom className="action-paper">{paper.papercode}</Typography>
-            <Link >
-            <Button
-                bcolor="#134381"
-                background="#134381"
-                br="100rem"
-                padding="0.5rem 2rem"
-                style={{ margin: ".5rem 0" }}
-                fontSize="1.7rem"
-                onClick={() => GetForm(`https://prelude.eurobrake.net/edit/${paper.papercode}`)}
-            >
-                <CreateIcon style={{ fontSize: '3rem', marginRight: '1rem' }} />
-                EDIT PAPER
+const Abstract = ({ papers }) => (
+    papers.map((paper, i) => (
+        <StyledBox>
+            <StyledActionArea>
+                <Typography gutterBottom className="action-paper">{paper.papercode}</Typography>
+                <Link >
+                    <Button
+                        disabled
+                        bcolor="#134381"
+                        background="#134381"
+                        br="100rem"
+                        padding="0.5rem 2rem"
+                        style={{ margin: ".5rem 0" }}
+                        fontSize="1.7rem"
+                        onClick={() => GetForm(`https://prelude.eurobrake.net/edit/${paper.papercode}`)}
+                    >
+                        <CreateIcon style={{ fontSize: '3rem', marginRight: '1rem' }} />
+                        EDIT PAPER
             </Button>
-            </Link>
-            <Button
-                bcolor="#134381"
-                background="#134381"
-                br="100rem"
-                padding="0.5rem 2rem"
-                style={{ margin: ".5rem 0" }}
-                fontSize="1.7rem"
-            >
-                <CancelIcon style={{ fontSize: '3rem', marginRight: '1rem' }} />
-                WITHDRAW
+                </Link>
+                <Button
+                    bcolor="#134381"
+                    background="#134381"
+                    br="100rem"
+                    padding="0.5rem 2rem"
+                    style={{ margin: ".5rem 0" }}
+                    fontSize="1.7rem"
+                >
+                    <CancelIcon style={{ fontSize: '3rem', marginRight: '1rem' }} />
+                    WITHDRAW
             </Button>
-        </StyledActionArea>
-        <StyledInfoArea>
-            <Typography  className="paper-title">{paper.title}</Typography>
-            <Typography gutterBottom className="paper-type">{paper.paper_type.toUpperCase()}</Typography>
-           {paper.tasks && paper.tasks.map(task => {
-                  return ( <div className="paper_task-box">
-                    {task.done === null ? <CheckCircleIcon style={{fontSize: '2rem', color: 'green', marginRight: '1rem'}}/> : <CancelIcon style={{fontSize: '2rem',color: 'red',  marginRight: '1rem'}}/>}
-                    <Typography gutterBottom className="paper_task">{task.task}</Typography>
-                    </div> )
+            </StyledActionArea>
+            <StyledInfoArea>
+                <Typography className="paper-title">{paper.title}</Typography>
+                <Typography gutterBottom className="paper-type">{paper.paper_type.toUpperCase()}</Typography>
+                {paper.tasks && paper.tasks.map(task => {
+                    return (<div className="paper_task-box">
+                        {task.done === null ? <CheckCircleIcon style={{ fontSize: '2rem', color: 'green', marginRight: '1rem' }} /> : <CancelIcon style={{ fontSize: '2rem', color: 'red', marginRight: '1rem' }} />}
+                        <Typography gutterBottom className="paper_task">{task.task}</Typography>
+                    </div>)
                 })}
-        </StyledInfoArea>
-    </StyledBox>
-))
+            </StyledInfoArea>
+        </StyledBox>
+    ))
 )
 
 
@@ -184,9 +190,8 @@ class AuthorsAreaDash extends Component {
             hasForm: false,
             formData: undefined,
             error: '',
-            userLoggedIn: false,
-            editAbstract: false,
-            editProfile: false,
+            editForm: false,
+            formType: ''
         }
     }
 
@@ -210,11 +215,11 @@ class AuthorsAreaDash extends Component {
     }
 
     render() {
-        const {editAbstract, editProfile} = this.state;
-        const {firstname} = this.props.authorData.author;
-        const {papers} = this.props.authorData;
+        const { editAbstract, editProfile, formType } = this.state;
+        const { firstname } = this.props.authorData.author;
+        const { papers } = this.props.authorData;
         const data = this.props.authorData;
-        console.log({papers, data})
+        console.log({ papers, data })
         return (
             <>
                 <HeroSection banner={FilledBanner} t="30rem" max="55%">
@@ -226,10 +231,25 @@ class AuthorsAreaDash extends Component {
                         <Typography className="authors-title">{`Hi ${firstname}`}</Typography>
                         <Typography gutterBottom className="authors_sub-title">Welcome to the Author's Area</Typography>
                         <div className="authors_action-box">
-                            <Popup>
+                            {/* <Popup>
                                 <CreateIcon style={{ fontSize: '3rem', marginRight: '1rem' }} />
                                 UPLOAD FILE TEST
-                            </Popup>
+                            </Popup> */}
+                            {editPaper &&
+                                 <Button
+                                    bcolor="#134381"
+                                    padding="0.5rem 2rem"
+                                    background="#134381"
+                                    br="100rem"
+                                    style={{ margin: ".5rem" }}
+                                    fontSize="1.7rem"
+                                    onClick={() => this.setState({ editForm: false, formType: '' })}>
+
+                                >
+                                <ExitToAppIcon style={{ fontSize: '3rem', marginRight: '.5rem' }} />
+                                    Go back
+                    </Button>
+                            }
                             <Link href="/authorsAreaInstructions">
                                 <Button
                                     bcolor="#134381"
@@ -243,6 +263,7 @@ class AuthorsAreaDash extends Component {
                                     INSTRUCTIONS & TEMPLATES
                     </Button>
                             </Link>
+
                             <Button
                                 bcolor="#134381"
                                 padding="0.5rem 2rem"
@@ -250,10 +271,10 @@ class AuthorsAreaDash extends Component {
                                 br="100rem"
                                 style={{ margin: ".5rem 0" }}
                                 fontSize="1.7rem"
-                                onClick={() => this.setState({editProfile: true})}>
+                                onClick={() => this.setState({ editForm: true, formType: 'author-edit' })}>
                                 <ExitToAppIcon style={{ fontSize: '3rem', marginRight: '.5rem' }} />
                                 Edit Profile
-                    </Button>
+                            </Button>
 
                             <Button
                                 bcolor="#134381"
@@ -268,13 +289,12 @@ class AuthorsAreaDash extends Component {
                     </Button>
                         </div>
                         <Typography gutterBottom className="authors-title" style={{ fontSize: '3rem', borderTop: '2px solid #134381', borderBottom: '2px solid #134381' }}>Your paper</Typography>
-                        { 
-                                 editAbstract || editProfile ? <OneForm/> : 
-                                 papers ? Abstract({papers})
-                                                     :
-                            <StyledBox>
-                                <Typography gutterBottom className="authors-it" style={{ fontSize: '2rem' }}>You haven't submitted any abstracts yet</Typography>
-                            </StyledBox>
+                        {
+                            editForm ? <OneForm form={formType} /> :
+                                papers ? Abstract({ papers }) :
+                                    <StyledBox>
+                                        <Typography gutterBottom className="authors-it" style={{ fontSize: '2rem' }}>You haven't submitted any abstracts yet</Typography>
+                                    </StyledBox>
                         }
                         <Typography gutterBottom className="authors" style={{ fontSize: '2rem' }}>For more information, please visit <Link href="/authorsAreaInstructions" ><a className="authors-bold">Instructions & Templates</a></Link> or email <a className="authors-bold" href="mailto:info@fisita.com">info@eurobrake.net</a></Typography>
 
@@ -289,7 +309,7 @@ class AuthorsAreaDash extends Component {
 
 AuthorsAreaDash.getInitialProps = async ctx => {
     // We use `nextCookie` to get the cookie and pass the token to the frontend in the `props`.
-    const { logintoken } = cookies(ctx) || {} ;
+    const { logintoken } = cookies(ctx) || {};
     const apiUrl = 'https://prelude.eurobrake.net/dashboard ';
     const redirectOnError = () =>
         process.browser

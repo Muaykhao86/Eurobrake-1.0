@@ -607,7 +607,7 @@ const emptyInitial = {
 
 }
 
-// ! NOT NEEDED ANYMORE !!!! £$!*er
+// ! NOT NEEDED ANYMORE !!!! 
 //  <h1>Your Abstract</h1>
 //                         <div className="form-field">
 //                             <label

@@ -15,17 +15,14 @@ const StyledPage = styled.div`
     display: flex;
     flex-direction: column;
     align-self: center;
-     @media ${device.mobile} {
-    width: ${props => props.max || props.theme.mobileWidth}
-    }
-    @media ${device.tablet} {
-    width: ${props => props.max || props.theme.tabletWidth}
-    }
-    @media ${device.laptop} {
     width: ${props => props.max || props.theme.minWidth};
-    }
     background-color: ${props => props.theme.white};
     margin-top: 7rem;
+      @media only screen 
+  and (max-device-width: 768px) 
+  and (-webkit-min-device-pixel-ratio: 2) { 
+    width: ${props => props.theme.mobileWidth};    
+}
 
     .Registration{
         color: ${props => props.theme.primary};

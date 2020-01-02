@@ -33,9 +33,9 @@ export const Esop = ({editPaper = false}) => {
                             <Field
                                 className="form-input"
                                 onClick={handleChange}
-                                value={values.author_title}
+                                value={values.esop_title}
                                 style={{ color: '#134381' }}
-                                name="author_title"
+                                name="esop_title"
                                 component={Select}
                             >
                                 {titles.map((option, i) =>
@@ -51,9 +51,9 @@ export const Esop = ({editPaper = false}) => {
                             <Field
                                 className="form-input"
                                 onClick={handleChange}
-                                value={values.author_firstname}
+                                value={values.esop_firstname}
                                 style={{ color: '#134381' }}
-                                name="author_firstname"
+                                name="esop_firstname"
                                 component={TextField}
                             />
                         </div>
@@ -66,9 +66,9 @@ export const Esop = ({editPaper = false}) => {
                             <Field
                                 className="form-input"
                                 onClick={handleChange}
-                                value={values.author_lastname}
+                                value={values.esop_lastname}
                                 style={{ color: '#134381' }}
-                                name="author_lastname"
+                                name="esop_lastname"
                                 component={TextField}
                             />
                         </div>
@@ -81,9 +81,9 @@ export const Esop = ({editPaper = false}) => {
                             <Field
                                 className="form-input"
                                 onClick={handleChange}
-                                value={values.author_email}
+                                value={values.esop_email}
                                 style={{ color: '#134381' }}
-                                name="author_email"
+                                name="esop_email"
                                 component={TextField}
                             />
                         </div>
@@ -96,9 +96,9 @@ export const Esop = ({editPaper = false}) => {
                             <Field
                                 className="form-input"
                                 onClick={handleChange}
-                                value={values.author_jobtitle}
+                                value={values.esop_jobtitle}
                                 style={{ color: '#134381' }}
-                                name="author_jobtitle"
+                                name="esop_jobtitle"
                                 component={TextField}
                             />
                         </div>
@@ -111,9 +111,9 @@ export const Esop = ({editPaper = false}) => {
                             <Field
                                 className="form-input"
                                 onClick={handleChange}
-                                value={values.author_company}
+                                value={values.esop_company}
                                 style={{ color: '#134381' }}
-                                name="author_company"
+                                name="esop_company"
                                 component={TextField}
                             />
                         </div>
@@ -126,9 +126,9 @@ export const Esop = ({editPaper = false}) => {
                             <Field
                                 className="form-input"
                                 onClick={handleChange}
-                                value={values.author_address1}
+                                value={values.esop_address1}
                                 style={{ color: '#134381' }}
-                                name="author_address1"
+                                name="esop_address1"
                                 component={TextField}
                             />
                         </div>
@@ -141,9 +141,9 @@ export const Esop = ({editPaper = false}) => {
                             <Field
                                 className="form-input"
                                 onClick={handleChange}
-                                value={values.author_address2}
+                                value={values.esop_address2}
                                 style={{ color: '#134381' }}
-                                name="author_address2"
+                                name="esop_address2"
                                 component={TextField}
                             />
                         </div>
@@ -156,9 +156,9 @@ export const Esop = ({editPaper = false}) => {
                             <Field
                                 className="form-input"
                                 onClick={handleChange}
-                                value={values.author_address3}
+                                value={values.esop_address3}
                                 style={{ color: '#134381' }}
-                                name="author_address3"
+                                name="esop_address3"
                                 component={TextField}
                             />
                         </div>
@@ -171,9 +171,9 @@ export const Esop = ({editPaper = false}) => {
                             <Field
                                 className="form-input"
                                 onClick={handleChange}
-                                value={values.author_city}
+                                value={values.esop_city}
                                 style={{ color: '#134381' }}
-                                name="author_city"
+                                name="esop_city"
                                 component={TextField}
                             />
                         </div>
@@ -186,9 +186,9 @@ export const Esop = ({editPaper = false}) => {
                             <Field
                                 className="form-input"
                                 onClick={handleChange}
-                                value={values.author_scp}
+                                value={values.esop_scp}
                                 style={{ color: '#134381' }}
-                                name="author_scp"
+                                name="esop_scp"
                                 component={TextField}
                             />
                         </div>
@@ -201,9 +201,9 @@ export const Esop = ({editPaper = false}) => {
                             <Field
                                 className="form-input"
                                 onClick={handleChange}
-                                value={values.author_postal}
+                                value={values.esop_postal}
                                 style={{ color: '#134381' }}
-                                name="author_postal"
+                                name="esop_postal"
                                 component={TextField}
                             />
                         </div>
@@ -216,9 +216,9 @@ export const Esop = ({editPaper = false}) => {
                             <Field
                                 className="form-input"
                                 onClick={handleChange}
-                                value={values.author_country}
+                                value={values.esop_country}
                                 style={{ color: '#134381' }}
-                                name="author_country"
+                                name="esop_country"
                                 component={Select}
                             >
                                 {countries.map((option, i) =>
@@ -234,9 +234,9 @@ export const Esop = ({editPaper = false}) => {
                             <Field
                                 className="form-input"
                                 onClick={handleChange}
-                                value={values.author_phone}
+                                value={values.esop_phone}
                                 style={{ color: '#134381' }}
-                                name="author_phone"
+                                name="esop_phone"
                                 component={TextField}
                             />
                         </div>
@@ -249,9 +249,9 @@ export const Esop = ({editPaper = false}) => {
                             <Field
                                 className="form-input"
                                 onClick={handleChange}
-                                value={values.author_fax}
+                                value={values.esop_fax}
                                 style={{ color: '#134381' }}
-                                name="author_fax"
+                                name="esop_fax"
                                 component={TextField}
                             />
                         </div>
@@ -264,9 +264,9 @@ export const Esop = ({editPaper = false}) => {
                             <Field
                                 className="form-input"
                                 onClick={handleChange}
-                                value={values.author_phone}
+                                value={values.esop_phone}
                                 style={{ color: '#134381' }}
-                                name="author_password"
+                                name="esop_password"
                                 component={TextField}
                             />
                         </div>
@@ -279,9 +279,9 @@ export const Esop = ({editPaper = false}) => {
                             <Field
                                 className="form-input"
                                 onClick={handleChange}
-                                value={values.author_phone}
+                                value={values.esop_phone}
                                 style={{ color: '#134381' }}
-                                name="author_password_confirm"
+                                name="esop_password_confirm"
                                 component={TextField}
                             />
                         </div>
@@ -294,7 +294,7 @@ export const Esop = ({editPaper = false}) => {
                                 br="100rem"
                                 style={{ margin: ".5rem 0" }}
                                 fontSize="1.7rem">Submit</Button>
-                        {console.log('main', values.is_presenting_author, 'second', values.secondary_authors)}
+                        {console.log('main', values.is_presenting_esop, 'second', values.secondary_esops)}
                     </StyledForm>
                 )
             }}
@@ -303,44 +303,44 @@ export const Esop = ({editPaper = false}) => {
 };
 
 const presets = {
-    author_title: "Mr.",
-    author_firstname: "Andrew",
-    author_lastname: "Green",
-    author_email: "andrew@article7.co.uk",
-    author_jobtitle: "Director",
-    author_company: "Article Seven Limited",
-    author_address1: "10 Hamilton Road",
-    author_address2: null,
-    author_address3: null,
-    author_city: "Sidcup",
-    author_scp: "Kent",
-    author_country: "GB",
-    author_postal: "DA15 7HB",
-    author_phone: "+44 20 8305 1224",
-    author_fax: '',
-    author_password: '',
-    author_password_confirmed: '',
+    esop_title: "Mr.",
+    esop_firstname: "Andrew",
+    esop_lastname: "Green",
+    esop_email: "andrew@article7.co.uk",
+    esop_jobtitle: "Director",
+    esop_company: "Article Seven Limited",
+    esop_address1: "10 Hamilton Road",
+    esop_address2: null,
+    esop_address3: null,
+    esop_city: "Sidcup",
+    esop_scp: "Kent",
+    esop_country: "GB",
+    esop_postal: "DA15 7HB",
+    esop_phone: "+44 20 8305 1224",
+    esop_fax: '',
+    esop_password: '',
+    esop_password_confirmed: '',
     __csrf_token: "5d159fb224ed613dce89a64553f36f5eda1fa97c,2caaa318bb55c8c19d660a1e420d1c602dfc59f9,1576603105"
 }
 
 const emptyInitial = {
-    author_title: '',
-    author_firstname: '',
-    author_lastname: '',
-    author_email: '',
-    author_jobtitle: '',
-    author_company: '',
-    author_address1: '',
-    author_address2: '',
-    author_address3: '',
-    author_city: '',
-    author_scp: '',
-    author_postal: '',
-    author_country: '',
-    author_phone: '',
-    author_fax: '',
-    author_password: '',
-    author_password_confirmed: '',
+    esop_title: '',
+    esop_firstname: '',
+    esop_lastname: '',
+    esop_email: '',
+    esop_jobtitle: '',
+    esop_company: '',
+    esop_address1: '',
+    esop_address2: '',
+    esop_address3: '',
+    esop_city: '',
+    esop_scp: '',
+    esop_postal: '',
+    esop_country: '',
+    esop_phone: '',
+    esop_fax: '',
+    esop_password: '',
+    esop_password_confirmed: '',
     __csrf_token: ''
 
 }
