@@ -137,60 +137,64 @@ const FilledBanner = () => (
 
 
 const Abstract = ({ papers }) => {
-    const {paper, setPaper} = useState('');
-    const {edit, setEdit} = useState(false);
-return (
-    edit ?
-   <OneForm formType="abstract-edit" paper={paper} /> :
+    const { paper, setPaper } = useState('');
+    const { edit, setEdit } = useState(false);
 
-    papers.map((paper) => (
-        <StyledBox>
-            <StyledActionArea>
-                <Typography gutterBottom className="action-paper">{paper.papercode}</Typography>
-                    <Button
-                        disabled
-                        bcolor="#134381"
-                        background="#134381"
-                        br="100rem"
-                        padding="0.5rem 2rem"
-                        style={{ margin: ".5rem 0" }}
-                        fontSize="1.7rem"
-                        onClick={async () => {
-                        const {papercode} = paper
-                        await setPaper({papercode})
-                        await setEdit(true)
-                        }
-                        }
-                    >
-                        <CreateIcon style={{ fontSize: '3rem', marginRight: '1rem' }} />
-                        EDIT PAPER
+    editPaper = async () => {
+        const { papercode } = paper
+        await setPaper({ papercode })
+        await setEdit(true)
+    }
+
+
+    return (
+        edit ?
+            <OneForm formType="abstract-edit" paper={paper} /> :
+
+            papers.map((paper) => (
+                <StyledBox>
+                    <StyledActionArea>
+                        <Typography gutterBottom className="action-paper">{paper.papercode}</Typography>
+                        <Button
+                            disabled
+                            bcolor="#134381"
+                            background="#134381"
+                            br="100rem"
+                            padding="0.5rem 2rem"
+                            style={{ margin: ".5rem 0" }}
+                            fontSize="1.7rem"
+                            onClick={editPaper}
+                        >
+                            <CreateIcon style={{ fontSize: '3rem', marginRight: '1rem' }} />
+                            EDIT PAPER
             </Button>
-                <Button
-                    bcolor="#134381"
-                    background="#134381"
-                    br="100rem"
-                    padding="0.5rem 2rem"
-                    style={{ margin: ".5rem 0" }}
-                    fontSize="1.7rem"
-                    onClick={() => GetForm(`https://prelude.eurobrake.net/edit/${paper.papercode}`)}
-                >
-                    <CancelIcon style={{ fontSize: '3rem', marginRight: '1rem' }} />
-                    WITHDRAW/get
+                        <Button
+                            bcolor="#134381"
+                            background="#134381"
+                            br="100rem"
+                            padding="0.5rem 2rem"
+                            style={{ margin: ".5rem 0" }}
+                            fontSize="1.7rem"
+                            onClick={() => GetForm(`https://prelude.eurobrake.net/edit/${paper.papercode}`)}
+                        >
+                            <CancelIcon style={{ fontSize: '3rem', marginRight: '1rem' }} />
+                            WITHDRAW/get
             </Button>
-            </StyledActionArea>
-            <StyledInfoArea>
-                <Typography className="paper-title">{paper.title}</Typography>
-                <Typography gutterBottom className="paper-type">{paper.paper_type.toUpperCase()}</Typography>
-                {paper.tasks && paper.tasks.map(task => {
-                    return (<div className="paper_task-box">
-                        {task.done === null ? <CheckCircleIcon style={{ fontSize: '2rem', color: 'green', marginRight: '1rem' }} /> : <CancelIcon style={{ fontSize: '2rem', color: 'red', marginRight: '1rem' }} />}
-                        <Typography gutterBottom className="paper_task">{task.task}</Typography>
-                    </div>)
-                })}
-            </StyledInfoArea>
-        </StyledBox>
-    ))
-)}
+                    </StyledActionArea>
+                    <StyledInfoArea>
+                        <Typography className="paper-title">{paper.title}</Typography>
+                        <Typography gutterBottom className="paper-type">{paper.paper_type.toUpperCase()}</Typography>
+                        {paper.tasks && paper.tasks.map(task => {
+                            return (<div className="paper_task-box">
+                                {task.done === null ? <CheckCircleIcon style={{ fontSize: '2rem', color: 'green', marginRight: '1rem' }} /> : <CancelIcon style={{ fontSize: '2rem', color: 'red', marginRight: '1rem' }} />}
+                                <Typography gutterBottom className="paper_task">{task.task}</Typography>
+                            </div>)
+                        })}
+                    </StyledInfoArea>
+                </StyledBox>
+            ))
+    )
+}
 
 
 class AuthorsAreaDash extends Component {
@@ -225,7 +229,7 @@ class AuthorsAreaDash extends Component {
     }
 
     render() {
-        const { editForm, formType} = this.state;
+        const { editForm, formType } = this.state;
         const { firstname } = this.props.authorData.author;
         const { papers } = this.props.authorData;
         const data = this.props.authorData;
@@ -246,7 +250,7 @@ class AuthorsAreaDash extends Component {
                                 UPLOAD FILE TEST
                             </Popup> */}
                             {editForm &&
-                                 <Button
+                                <Button
                                     bcolor="#134381"
                                     padding="0.5rem 2rem"
                                     background="#134381"
@@ -254,8 +258,6 @@ class AuthorsAreaDash extends Component {
                                     style={{ margin: ".5rem" }}
                                     fontSize="1.7rem"
                                     onClick={() => this.setState({ editForm: false, formType: '' })}>
-
-                                >
                                 <ExitToAppIcon style={{ fontSize: '3rem', marginRight: '.5rem' }} />
                                     Go back
                     </Button>
