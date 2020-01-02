@@ -141,7 +141,8 @@ const Abstract = ({ papers }) => {
     const { edit, setEdit } = useState(false);
 
     editPaper = async ({papercode}) => {
-        await setPaper({ papercode })
+     console.log({papercode})
+        // await setPaper({ papercode })
         await setEdit(true)
     }
 
