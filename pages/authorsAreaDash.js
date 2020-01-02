@@ -183,15 +183,7 @@ class AuthorsAreaDash extends Component {
         })) : null
     }
 
-    handleInputChange = (event) => {
-        const target = event.target;
-        const value = target.type === 'checkbox' ? target.checked : target.value;
-        const name = target.name;
-
-        this.setState({
-            [name]: value
-        });
-    }
+    
 
     render() {
         const { editForm, formType } = this.state;
@@ -283,7 +275,7 @@ class AuthorsAreaDash extends Component {
                                                     padding="0.5rem 2rem"
                                                     style={{ margin: ".5rem 0" }}
                                                     fontSize="1.7rem"
-                                                    onClick={() => GetForm(`${papers.papercode}`)}
+                                                    onClick={() => this.setState({ editForm: true, formType: 'abstract=edit' })}>
                                                 >
                                                     <CreateIcon style={{ fontSize: '3rem', marginRight: '1rem' }} />
                                                     EDIT PAPER
