@@ -140,8 +140,7 @@ const Abstract = ({ papers }) => {
     const { paper, setPaper } = useState('');
     const { edit, setEdit } = useState(false);
 
-    editPaper = async () => {
-        const { papercode } = paper
+    editPaper = async ({papercode}) => {
         await setPaper({ papercode })
         await setEdit(true)
     }
@@ -163,7 +162,10 @@ const Abstract = ({ papers }) => {
                             padding="0.5rem 2rem"
                             style={{ margin: ".5rem 0" }}
                             fontSize="1.7rem"
-                            onClick={editPaper}
+                            onClick={() => {
+                                const { papercode } = paper
+                                editPaper({papercode})
+                                }}
                         >
                             <CreateIcon style={{ fontSize: '3rem', marginRight: '1rem' }} />
                             EDIT PAPER
