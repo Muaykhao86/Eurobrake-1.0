@@ -136,17 +136,24 @@ const FilledBanner = () => (
 
 
 
-const Abstract = ({ papers }) => {
-    const [ paper, setPaper ] = useState('');
-    const[ edit, setEdit ] = useState(false);
+class Abstract extends Component {
+ constructor(props) {
+     super(props);
+     this.state = {
+        edit: false,
+        paper: ''
+     }
+
+ }
 
     editPaper = async ({papercode}) => {
-     console.log({papercode})
-        await setPaper({ papercode })
-        await setEdit(true)
+        console.log({papercode})
+        this.setState(prev => ({edit: !prev.edit}))
+        return 
     }
 
-
+render(){
+    const {paper, edit } = this.state;
     return (
         edit ?
             <OneForm formType="abstract-edit" paper={paper} /> :
@@ -197,6 +204,7 @@ const Abstract = ({ papers }) => {
                 </StyledBox>
             ))
     )
+}
 }
 
 
