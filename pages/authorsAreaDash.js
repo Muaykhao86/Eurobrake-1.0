@@ -187,7 +187,7 @@ class AuthorsAreaDash extends Component {
     
 
     render() {
-        const { editForm, formType } = this.state;
+        const { editForm, formType, paper } = this.state;
         const { firstname } = this.props.authorData.author;
         const { papers } = this.props.authorData;
         const data = this.props.authorData;
@@ -261,7 +261,7 @@ class AuthorsAreaDash extends Component {
                         </div>
                         <Typography gutterBottom className="authors-title" style={{ fontSize: '3rem', borderTop: '2px solid #134381', borderBottom: '2px solid #134381' }}>Your paper</Typography>
                         {
-                            editForm ? <OneForm form={formType} paper={}/> :
+                            editForm ? <OneForm form={formType} paper={paper}/> :
                                 papers ?
 
                                     papers.map((paper) => (
