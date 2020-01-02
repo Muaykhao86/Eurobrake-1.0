@@ -26,8 +26,9 @@ export const AbstractForm = (props) => {
 
     useEffect(async ({paper}) => {
        const formData = await  GetForm(`https://prelude.eurobrake.net/edit/${paper}`);
-        pre = formData.presets
-        console.log('presetting')
+       pre = formData.presets
+       console.log(pre)
+       return 
     }, [])
 
     return (

@@ -152,10 +152,11 @@ class Abstract extends Component {
 render(){
     const {papers } = this.props;
     const {paper, edit } = this.state;
-    return (
-        edit ?
-            <OneForm form="abstract-edit" paper={paper} /> :
-
+     return(
+         <>
+         { edit ?
+         <OneForm form="abstract-edit" paper={paper} /> :
+            
             papers.map((paper) => (
                 <StyledBox>
                     <StyledActionArea>
@@ -200,8 +201,10 @@ render(){
                         })}
                     </StyledInfoArea>
                 </StyledBox>
-            ))
-    )
+             ))
+         }
+         </>
+         )
 }
 }
 
