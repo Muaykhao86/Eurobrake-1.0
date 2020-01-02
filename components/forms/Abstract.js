@@ -14,28 +14,17 @@ import { GetForm } from './FormActions';
 
 export const AbstractForm = (props) => {
     const [presenter, setPresenter] = useState('');
-    const pre = {};
+  
     // if edit = true send back a preset form if not send a blank
     const {editPaper, paper, presets} = props;
     console.log({editPaper, paper, presets})
     // ? If they choose to edit a abstarct paper we pass the paper code and il get its presets to fill in
 
-    useEffect(() => {
-        console.log('presenter is changing')
-    }, [presenter])
-
-    useEffect(async ({paper}) => {
-       const formData = await  GetForm(`https://prelude.eurobrake.net/edit/${paper}`);
-       pre = formData.presets
-       console.log({pre})
-        console.log({editPaper, presets})
-
-       return 
-    }, [])
+ 
 
     return (
         <Formik
-            initialValues={pre}
+            initialValues={presets}
             onSubmit={(values, actions) => {
                 setTimeout(() => {
                     alert(JSON.stringify(values, null, 2));
@@ -541,7 +530,7 @@ export const AbstractForm = (props) => {
     )
 };
 
-const presets = {
+const presetEG = {
     abstract: "lorem ipsum",
     author_address1: "10 Hamilton Road",
     author_address2: null,

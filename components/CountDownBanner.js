@@ -90,7 +90,7 @@ class CountDownBanner extends Component {
             <CDBanner>
                 <CDContainer>
                     <CDItem>
-                       <Typography className="timer">{days}</Typography>
+                       <Typography className="timer">{days || '0' }</Typography>
                         <span className="noPad">Days</span>
                     </CDItem>
                     <CDItem className="countdown-item">
