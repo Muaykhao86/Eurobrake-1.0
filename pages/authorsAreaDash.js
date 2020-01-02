@@ -153,6 +153,7 @@ class Abstract extends Component {
     }
 
 render(){
+    const {papers } = this.props;
     const {paper, edit } = this.state;
     return (
         edit ?
@@ -314,7 +315,7 @@ class AuthorsAreaDash extends Component {
                         <Typography gutterBottom className="authors-title" style={{ fontSize: '3rem', borderTop: '2px solid #134381', borderBottom: '2px solid #134381' }}>Your paper</Typography>
                         {
                             editForm ? <OneForm form={formType} /> :
-                                papers ? Abstract({ papers }) :
+                                papers ? <Abstract papers={papers}/> :
                                     <StyledBox>
                                         <Typography gutterBottom className="authors-it" style={{ fontSize: '2rem' }}>You haven't submitted any abstracts yet</Typography>
                                     </StyledBox>
