@@ -10,9 +10,10 @@ import {AbstractSchema} from './FormControl';
 import {StyledForm} from './Formstyles';
 
 
-export const AbstractForm = (editPaper = false, paper) => {
+export const AbstractForm = (props) => {
     const [presenter, setPresenter] = useState('');
     // if edit = true send back a preset form if not send a blank
+    const {editPaper, paper} = props;
     console.log({editPaper, paper})
     // ? If they choose to edit a abstarct paper we pass the paper code and il get its presets to fill in
 
