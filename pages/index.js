@@ -8,14 +8,18 @@ import AttendeesSection from '../components/AttendeesSection';
 import ExhibitionSection from '../components/exhibitors/ExhibitionSection';
 import StudentSection from '../components/StudentSection';
 import AuthorSection from '../components/AuthorSection';
+import HeroSection from '../components/HeroSection';
 
 
 export default () => (
     <>
-        <div className="Hero">
+         <HeroSection src="/images/barcelona.png" t="30rem" max="55%" >
+            EuroBrake 2020
+        </HeroSection>
+        {/* <div className="Hero">
             <VideoPLayer />
             <CountDownBanner />
-        </div>
+        </div> */}
         <StyledContainer>
             <AboutSection />
             <LocationSection />

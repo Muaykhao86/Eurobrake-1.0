@@ -53,7 +53,6 @@ const HeaderButton = styled.button`
         border: 2px solid ${props => props.sticky ?
         props.theme.secondary : 'transparent'};
         box-shadow: (0, 0, 0, 0.5);
-        font-size: 2.5rem;
     }
     `;
 
