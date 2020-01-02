@@ -8,10 +8,13 @@ import { Typography } from '@material-ui/core';
 import {titles, countries} from './FormSelects';
 import {AbstractSchema} from './FormControl';
 import {StyledForm} from './Formstyles';
+import { GetForm } from '../components/forms/FormActions';
+
 
 
 export const AbstractForm = (props) => {
     const [presenter, setPresenter] = useState('');
+    const pre = {};
     // if edit = true send back a preset form if not send a blank
     const {editPaper, paper} = props;
     console.log({editPaper, paper})
@@ -23,9 +26,15 @@ export const AbstractForm = (props) => {
 
     }, [presenter])
 
+    useEffect(async ({paper}) => {
+       const formData = await  GetForm(`https://prelude.eurobrake.net/edit/${paper}`);
+        pre = formData.presets
+        console.log('presetting')
+    }, [editPaper])
+
     return (
         <Formik
-            initialValues={editPaper === true ? presets : emptyInitial }
+            initialValues={pre}
             onSubmit={(values, actions) => {
                 setTimeout(() => {
                     alert(JSON.stringify(values, null, 2));
@@ -520,7 +529,6 @@ export const AbstractForm = (props) => {
                        
                         <Button type="submit" 
                                 bcolor="#134381"
-                                padding="0.5rem 2rem"
                                 background="#134381"
                                 br="100rem"
                                 style={{ margin: ".5rem 0" }}

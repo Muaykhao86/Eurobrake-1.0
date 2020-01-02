@@ -289,7 +289,6 @@ export const Esop = ({editPaper = false}) => {
                        
                         <Button type="submit" 
                          bcolor="#134381"
-                                padding="0.5rem 2rem"
                                 background="#134381"
                                 br="100rem"
                                 style={{ margin: ".5rem 0" }}

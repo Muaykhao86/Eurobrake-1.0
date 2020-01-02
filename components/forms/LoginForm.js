@@ -59,7 +59,6 @@ export const LoginForm = () => {
                         <Button 
                             onClick={() => SendForm({url, values})}
                             bcolor="#134381"
-                            padding="0.5rem 2rem"
                             background="#134381"
                             br="100rem"
                             style={{ margin: "1rem" }}

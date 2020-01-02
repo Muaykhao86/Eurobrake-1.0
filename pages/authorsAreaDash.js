@@ -17,8 +17,6 @@ import HeroSection from '../components/HeroSection';
 import { Button } from '../components/Button';
 import { StyledBanner, StyledContainer } from '../components/styles/PageStyles';
 import { GetForm } from '../components/forms/FormActions';
-import { SendFile } from '../components/forms/Abstract';
-import Popup from '../components/Popup';
 import OneForm from '../components/forms/OneForm';
 
 

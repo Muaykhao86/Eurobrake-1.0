@@ -182,7 +182,7 @@ export const HiddenContainer = styled.div`
          display: flex;
         flex-flow: column;
         align-items: center;
-        justify-content: space-around;
+        justify-content: space-between;
     }
     .nav_box-4{
         flex: 1 1 auto;
