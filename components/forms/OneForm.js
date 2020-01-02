@@ -11,8 +11,8 @@ class OneForm extends Component {
    }
 
     render() {
-        const {props, form, paper} = this.props;
-        console.log('edit props', props)
+        const {form, paper} = this.props;
+       console.log(form, paper)
             {switch(form) {
                 case'abstract-edit' : 
                 return <AbstractForm editPaper="true" paper={paper}/>;

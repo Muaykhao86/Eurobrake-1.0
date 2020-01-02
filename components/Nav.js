@@ -44,9 +44,7 @@ export default class Nav extends Component {
                         <Link href=""><a >Technical Program</a></Link>
                     </div>
                     <div className="nav_box-3">
-                        <div className="nav_box-5" style={{maxHeight: '50rem', maxWidth: '35rem'}}>
                            <Dates/>
-                        </div>
                         <Link href="/ticketPortal">
                         <Button style={{maxWidth: '35rem', maxHeight: '15rem'}}>
                             BOOK NOW

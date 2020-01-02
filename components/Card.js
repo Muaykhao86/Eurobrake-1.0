@@ -27,7 +27,8 @@ export const Card = styled.div`
     display: flex;
     flex-flow: column;
     justify-content: space-between;
-
+    flex: 1 1 auto;
+    
     h1{
         font-size: 4rem;
         color: ${props => props.theme.white};

@@ -147,8 +147,7 @@ class Abstract extends Component {
  }
 
     editPaper = async ({papercode}) => {
-        console.log({papercode})
-        this.setState(prev => ({edit: !prev.edit}))
+        this.setState(prev => ({edit: !prev.edit, paper: papercode}))
         return 
     }
 
@@ -157,7 +156,7 @@ render(){
     const {paper, edit } = this.state;
     return (
         edit ?
-            <OneForm formType="abstract-edit" paper={paper} /> :
+            <OneForm form="abstract-edit" paper={paper} /> :
 
             papers.map((paper) => (
                 <StyledBox>
