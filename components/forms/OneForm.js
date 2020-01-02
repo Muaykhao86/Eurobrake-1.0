@@ -4,18 +4,30 @@ import {AbstractForm} from './Abstract';
 import {Authorprofile} from './Authorprofile';
 import {Exhibitorprofile} from './Exhibitorprofile';
 import {Esop} from './Esop';
+import { GetForm } from './FormActions';
+
 
 class OneForm extends Component {
    constructor(props) {
        super(props);
+   this.state = {
+       presets: ''
+   }
+   }
+
+   componentDidMount (){
+            const formData = await  GetForm(`https://prelude.eurobrake.net/edit/${paper}`);
+            const presets = formData.presets;
+          return  this.setState({presets: presets})
    }
 
     render() {
         const {form, paper} = this.props;
+        const {presets} = this.state;
        console.log(form, paper)
             {switch(form) {
                 case'abstract-edit' : 
-                return <AbstractForm editPaper="true" paper={paper}/>;
+                return <AbstractForm editPaper="true" paper={paper} presets={presets}/>;
                 case'abstract' : 
                 return <AbstractForm />;
                 case'exhibitor-edit' : 

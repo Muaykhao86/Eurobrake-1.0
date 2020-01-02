@@ -16,8 +16,8 @@ export const AbstractForm = (props) => {
     const [presenter, setPresenter] = useState('');
     const pre = {};
     // if edit = true send back a preset form if not send a blank
-    const {editPaper, paper} = props;
-    console.log({editPaper, paper})
+    const {editPaper, paper, presets} = props;
+    console.log({editPaper, paper, presets})
     // ? If they choose to edit a abstarct paper we pass the paper code and il get its presets to fill in
 
     useEffect(() => {
@@ -27,7 +27,9 @@ export const AbstractForm = (props) => {
     useEffect(async ({paper}) => {
        const formData = await  GetForm(`https://prelude.eurobrake.net/edit/${paper}`);
        pre = formData.presets
-       console.log(pre)
+       console.log({pre})
+        console.log({editPaper, presets})
+
        return 
     }, [])
 
