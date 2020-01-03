@@ -449,7 +449,7 @@ export const AbstractForm = (props) => {
                                                             className="form-label">
                                                             Yes
                                                                 <input
-                                                                checked={`values.secondary_authors[${index}].is_presenting_author` === 'yes'}
+                                                                checked={`secondary_authors[${index}].is_presenting_author` === 'yes'}
                                                                 onChange={(event) => {
                                                                     onPresenterChange(event)
                                                                 }
@@ -465,7 +465,7 @@ export const AbstractForm = (props) => {
                                                             className="form-label">
                                                             No
                                                                 <input
-                                                                checked={`values.secondary_authors[${index}].is_presenting_author` !== 'yes'}
+                                                                checked={`secondary_authors[${index}].is_presenting_author` !== 'yes'}
                                                                 onChange={(event) => {
                                                                     onPresenterChange(event)
                                                                 }
