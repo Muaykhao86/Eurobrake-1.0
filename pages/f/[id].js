@@ -8,6 +8,8 @@ import { AbstractForm } from '../../components/forms/Abstract';
 import { Authorprofile } from '../../components/forms/Authorprofile';
 import { Exhibitorprofile } from '../../components/forms/Exhibitorprofile';
 import { StyledPage } from '../../components/styles/PageStyles';
+import HeroSection from '../../components/HeroSection';
+
 // import { Esop } from './Esop';
 // import { GetFormSSR } from '../../components/forms/FormActions';
 
