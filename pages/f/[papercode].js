@@ -16,10 +16,10 @@ const OneForm = props => {
 // export default withAuthSync(Edit)
 export default OneForm
 
-OneForm.getInitialProps = async function (ctx) {
+OneForm.getInitialProps = async ctx => {
     const { papercode } = ctx.query;
-    console.log({papercode})
-    const res = await GetFormSSR(`https://prelude.eurobrake.net/edit/${papercode}`, {ctx})
+    console.log('GIP', papercode)
+    const res = await GetFormSSR(`https://prelude.eurobrake.net/edit/${papercode}`, ctx)
     const presets = await res;
 
     console.log({presets});
