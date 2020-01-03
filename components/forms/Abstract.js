@@ -334,9 +334,9 @@ export const AbstractForm = (props) => {
                                     values.secondary_authors &&
                                     values.secondary_authors.length > 0 &&
                                     (
-                                        values.secondary_authors.map((authors, index) => (
+                                        values.secondary_authors.map((author, index) => (
                                             <div key={index} className="form-secondary">
-                                            {console.log({authors})}
+                                            {console.log({author})}
                                                 <div className="form-field">
                                                     <label
                                                         htmlFor="label"
