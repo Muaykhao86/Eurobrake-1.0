@@ -32,7 +32,6 @@ const Content = styled.iframe`
     margin-top: 5rem;
     min-width: 70vw;
     min-height: 75rem;
-    border: 30px solid ${props => props.theme.primary} ;
     background-color: transparent;
     padding: 3rem;
     padding-top: 12rem;

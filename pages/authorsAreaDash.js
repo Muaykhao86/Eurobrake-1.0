@@ -268,18 +268,18 @@ class AuthorsAreaDash extends Component {
                                         <StyledBox>
                                             <StyledActionArea>
                                                 <Typography gutterBottom className="action-paper">{paper.papercode}</Typography>
+                                                <Link href="/f/[papercode]" as={`/f/${paper.papercode}`}>
                                                 <Button
-                                                    disabled
                                                     bcolor="#134381"
                                                     background="#134381"
                                                     br="100rem"
                                                     padding="0.5rem 2rem"
                                                     style={{ margin: ".5rem 0" }}
-                                                    fontSize="1.7rem"
-                                                    onClick={() => this.setState({ editForm: true, formType: 'abstract=edit', paper: paper.papercode })}>
+                                                    fontSize="1.7rem">
                                                     <CreateIcon style={{ fontSize: '3rem', marginRight: '1rem' }} />
                                                     EDIT PAPER
                                                 </Button>
+                                                </Link>
                                                 <Button
                                                     bcolor="#134381"
                                                     background="#134381"
