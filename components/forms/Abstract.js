@@ -26,7 +26,7 @@ export const AbstractForm = (props) => {
             enableReinitialize
         >
             {({ values, isSubmitting, isValidating, handleChange, setFieldValue }) => {
-  
+                const second = `values.secondary_authors[${index}].is_presenting_author`
     useEffect(() => {
      const keys = Object.keys(values);
      console.log(keys)
@@ -449,7 +449,7 @@ export const AbstractForm = (props) => {
                                                             className="form-label">
                                                             Yes
                                                                 <input
-                                                                checked={`secondary_authors[${index}].is_presenting_author` === 'yes'}
+                                                                checked={second === 'yes'}
                                                                 onChange={(event) => {
                                                                     onPresenterChange(event)
                                                                 }
@@ -465,7 +465,7 @@ export const AbstractForm = (props) => {
                                                             className="form-label">
                                                             No
                                                                 <input
-                                                                checked={`secondary_authors[${index}].is_presenting_author` !== 'yes'}
+                                                                checked={second !== 'yes'}
                                                                 onChange={(event) => {
                                                                     onPresenterChange(event)
                                                                 }
