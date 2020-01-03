@@ -1,16 +1,18 @@
 
 import React, { Component } from 'react'
-
+import cookies from 'next-cookies';
+import fetch from 'isomorphic-unfetch';
 import { LoginForm } from '../../components/forms/LoginForm';
 import { AbstractForm } from '../../components/forms/Abstract';
 import { Authorprofile } from '../../components/forms/Authorprofile';
 import { Exhibitorprofile } from '../../components/forms/Exhibitorprofile';
 // import { Esop } from './Esop';
-import { GetFormSSR } from '../../components/forms/FormActions';
+// import { GetFormSSR } from '../../components/forms/FormActions';
 
 
 const OneForm = props => {
-            return <AbstractForm editPaper="true"  presets={props.presets} />;
+    const { presets } = props.data;
+    return <AbstractForm editPaper="true" presets={presets} />;
 }
 
 // export default withAuthSync(Edit)
@@ -18,15 +20,46 @@ export default OneForm
 
 OneForm.getInitialProps = async context => {
     const { papercode } = context.query;
-    console.log('GIP', papercode)
-    const res = await GetFormSSR(`https://prelude.eurobrake.net/edit/${papercode}`, context)
-    const presets = await res;
+    const { logintoken } = cookies(context) || {};
+    const apiUrl = `https://prelude.eurobrake.net/edit/${papercode}`;
+    const redirectOnError = () =>
+        process.browser
+            ? Router.push('/authorsArea')
+            : context.res.writeHead(301, { Location: '/authorsArea' })
+    if (logintoken) {
+        try {
+            // console.log({logintoken}, 'getIProps right before fetch call')
+            // headers: {
+            //     Authorization: 'Bearer ' + logintoken,
+            // }
+            const response = await fetch(apiUrl, {
+                credentials: 'include',
+                cache: 'no-cache',
+                headers: {
+                    Authorization: 'Bearer ' + logintoken,
+                }
 
-    console.log({presets});
+            })
+            const data = await response.json()
+            // console.log('Authors response Data =>', data.status, data);
+            if (data.status === 'success') {
+                console.log('res.ok', data)
+                return { data }
+            }
+            else {
+                console.log('not reading success')
+                console.log('stringyfied', JSON.stringify(data))
+                // https://github.com/developit/unfetch#caveats
+                return redirectOnError()
+            }
+        } catch (error) {
+            // Implementation or Network error
+            console.log(error)
+            return redirectOnError()
+        }
+    }
 
-    return { presets};
-};
-
+}
 
     // const { form } = props;
 
