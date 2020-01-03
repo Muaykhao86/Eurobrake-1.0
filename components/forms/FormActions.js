@@ -4,7 +4,7 @@ import fetch from 'isomorphic-unfetch';
 import { login} from '../../utils/auth';
 
 
-export async function GetFormSSR(url, context) {
+export async function GetFormSSR({url, context}) {
     // We use `nextCookie` to get the cookie and pass the token to the frontend in the `props`.
     const { logintoken } = cookies(context);
     console.log({logintoken})
