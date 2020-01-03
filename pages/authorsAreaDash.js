@@ -187,7 +187,8 @@ class AuthorsAreaDash extends Component {
                                     br="100rem"
                                     style={{ margin: ".5rem" }}
                                     fontSize="1.7rem"
-                                    onClick={() => this.setState({ editForm: false, formType: '' })}>
+                                    >
+                                    onClick={() => this.setState({ editForm: false, formType: '' })}
                                     <ExitToAppIcon style={{ fontSize: '3rem', marginRight: '.5rem' }} />
                                     Go back
                     </Button>
@@ -235,10 +236,10 @@ class AuthorsAreaDash extends Component {
                                 papers ?
 
                                     papers.map((paper) => (
-                                        <StyledBox>
+                                        <StyledBox key={paper.papercode}>
                                             <StyledActionArea>
                                                 <Typography gutterBottom className="action-paper">{paper.papercode}</Typography>
-                                                <Link href="/f/[papercode]" as={`/f/${paper.papercode}`}>
+                                                <Link href="/f/[id]" as={`/f/${paper.papercode}`}>
                                                 <Button
                                                     bcolor="#134381"
                                                     background="#134381"

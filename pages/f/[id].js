@@ -18,9 +18,9 @@ const Form = props => {
 export default Form
 
 Form.getInitialProps = async context => {
-    const { papercode } = context.query;
+    const { id } = context.query;
     const { logintoken } = cookies(context) || {};
-    const apiUrl = `https://prelude.eurobrake.net/edit/${papercode}`;
+    const apiUrl = `https://prelude.eurobrake.net/edit/${id}`;
     console.log({papercode, logintoken, apiUrl})
     const redirectOnError = () =>
         process.browser
