@@ -6,13 +6,18 @@ import { LoginForm } from '../../components/forms/LoginForm';
 import { AbstractForm } from '../../components/forms/Abstract';
 import { Authorprofile } from '../../components/forms/Authorprofile';
 import { Exhibitorprofile } from '../../components/forms/Exhibitorprofile';
+import {StyledPage } from '../../components/styles/PageStyles';
 // import { Esop } from './Esop';
 // import { GetFormSSR } from '../../components/forms/FormActions';
 
 
 const Form = props => {
     const { presets } = props.data;
-    return <AbstractForm editPaper="true" presets={presets} />;
+    return (
+    <StyledPage>
+    <AbstractForm editPaper="true" presets={presets} />;
+    </StyledPage>
+    )
 }
 
 export default Form
