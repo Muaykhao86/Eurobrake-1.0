@@ -4,24 +4,8 @@ import { LoginForm } from '../../components/forms/LoginForm';
 import { AbstractForm } from '../../components/forms/Abstract';
 import { Authorprofile } from '../../components/forms/Authorprofile';
 import { Exhibitorprofile } from '../../components/forms/Exhibitorprofile';
-import  OneForm from '../../components/forms/OneForm';
 // import { Esop } from './Esop';
 import { GetForm } from '../../components/forms/FormActions';
-
-
-
-OneForm.getInitialProps = async function (context) {
-    const { papercode } = context.query;
-    const res = await GetForm(`https://prelude.eurobrake.net/edit/${papercode}`)
-    const presets = await res;
-
-    console.log({presets});
-
-    return { presets};
-};
-
-
-
 
 
 const OneForm = props => {
@@ -54,3 +38,13 @@ const OneForm = props => {
 
 // export default withAuthSync(Edit)
 export default OneForm
+
+OneForm.getInitialProps = async function (context) {
+    const { papercode } = context.query;
+    const res = await GetForm(`https://prelude.eurobrake.net/edit/${papercode}`)
+    const presets = await res;
+
+    console.log({presets});
+
+    return { presets};
+};

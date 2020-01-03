@@ -17,7 +17,6 @@ import HeroSection from '../components/HeroSection';
 import { Button } from '../components/Button';
 import { StyledBanner, StyledContainer } from '../components/styles/PageStyles';
 import { GetForm } from '../components/forms/FormActions';
-import OneForm from '../components/forms/OneForm';
 
 
 const StyledPage = styled.div`
@@ -134,34 +133,6 @@ const FilledBanner = () => (
 
 
 
-// class Abstract extends Component {
-//  constructor(props) {
-//      super(props);
-//      this.state = {
-//         edit: false,
-//         paper: ''
-//      }
-
-//  }
-
-//     editPaper = async ({papercode}) => {
-//         this.setState(prev => ({edit: !prev.edit, paper: papercode}))
-//         return 
-//     }
-
-// render(){
-//     const {papers } = this.props;
-//     const {paper, edit } = this.state;
-//      return(
-//          <>
-//          {console.log({edit})}
-//           edit 
-//          <OneForm form="abstract-edit" paper={paper} /> 
-
-
-// }}}
-
-
 class AuthorsAreaDash extends Component {
     constructor(props) {
         super(props);
@@ -261,7 +232,6 @@ class AuthorsAreaDash extends Component {
                         </div>
                         <Typography gutterBottom className="authors-title" style={{ fontSize: '3rem', borderTop: '2px solid #134381', borderBottom: '2px solid #134381' }}>Your paper</Typography>
                         {
-                            editForm ? <OneForm form={formType} paper={paper}/> :
                                 papers ?
 
                                     papers.map((paper) => (
