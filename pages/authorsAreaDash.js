@@ -2,7 +2,7 @@ import React, { Component, useState } from 'react'
 import Router from 'next/router';
 import cookies from 'next-cookies';
 import cookie from 'js-cookie';
-import { Link } from '@material-ui/core';
+import Link from 'next/link';
 import fetch from 'isomorphic-unfetch';
 import styled from 'styled-components';
 import Typography from '@material-ui/core/Typography';
