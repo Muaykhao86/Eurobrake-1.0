@@ -1,12 +1,11 @@
 
 import React, { Component } from 'react'
-import { LoginForm } from './LoginForm';
-import { AbstractForm } from './Abstract';
+import { LoginForm } from '../../components/forms/LoginForm';
+import { AbstractForm } from '../../components/forms/Abstract';
 import { Authorprofile } from '../../components/forms/Authorprofile';
 import { Exhibitorprofile } from '../../components/forms/Exhibitorprofile';
-import { Esop } from './Esop';
+// import { Esop } from './Esop';
 import { GetForm } from '../../components/forms/FormActions';
-import fetch from 'isomorphic-unfetch';
 
 
 
