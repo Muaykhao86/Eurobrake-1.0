@@ -7,10 +7,12 @@ import { login} from '../../utils/auth';
 export async function GetFormSSR(url, ctx) {
     // We use `nextCookie` to get the cookie and pass the token to the frontend in the `props`.
     const { logintoken } = cookies(ctx);
+    console.log({logintoken})
     try {
         const apiUrl = url;
         const response = await fetch(apiUrl, {
             credentials: 'include',
+            cache: 'no-cache',
             headers: {
                 Authorization: 'Bearer ' + logintoken,
             }

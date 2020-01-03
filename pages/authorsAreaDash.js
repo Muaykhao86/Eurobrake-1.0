@@ -238,7 +238,7 @@ class AuthorsAreaDash extends Component {
                                         <StyledBox>
                                             <StyledActionArea>
                                                 <Typography gutterBottom className="action-paper">{paper.papercode}</Typography>
-                                                <Link href="/f/[papercode]" as={`/f/${paper.papercode}`}>
+                                                <Link href="/f/[paper.papercode]" as={`/f/${paper.papercode}`}>
                                                 <Button
                                                     bcolor="#134381"
                                                     background="#134381"
