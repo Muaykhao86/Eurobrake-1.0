@@ -7,7 +7,7 @@ import { LoginForm } from '../../components/forms/LoginForm';
 import { AbstractForm } from '../../components/forms/Abstract';
 import { Authorprofile } from '../../components/forms/Authorprofile';
 import { Exhibitorprofile } from '../../components/forms/Exhibitorprofile';
-import {StyledPage } from '../../components/styles/PageStyles';
+import { StyledPage } from '../../components/styles/PageStyles';
 // import { Esop } from './Esop';
 // import { GetFormSSR } from '../../components/forms/FormActions';
 
@@ -15,9 +15,14 @@ import {StyledPage } from '../../components/styles/PageStyles';
 const Form = props => {
     const { presets } = props.data;
     return (
-    <StyledPage>
-    <AbstractForm editPaper="true" presets={presets} />;
+        <>
+        <HeroSection>
+            Edit your abstract details
+            </HeroSection>
+        <StyledPage>
+            <AbstractForm editPaper="true" presets={presets} />;
     </StyledPage>
+        </>
     )
 }
 
@@ -27,7 +32,7 @@ Form.getInitialProps = async context => {
     const { id } = context.query;
     const { logintoken } = cookies(context) || {};
     const apiUrl = `https://prelude.eurobrake.net/edit/${id}`;
-    console.log({id, logintoken, apiUrl})
+    console.log({ id, logintoken, apiUrl })
     const redirectOnError = () =>
         process.browser
             ? Router.push('/authorsArea')

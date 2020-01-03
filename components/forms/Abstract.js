@@ -18,8 +18,6 @@ export const AbstractForm = (props) => {
     const {editPaper,  presets} = props;
     console.log({editPaper,  presets})
     // ? If they choose to edit a abstarct paper we pass the paper code and il get its presets to fill in
-
-
     return (
         <Formik
             initialValues={presets || emptyInitial}
@@ -28,6 +26,14 @@ export const AbstractForm = (props) => {
             enableReinitialize
         >
             {({ values, isSubmitting, isValidating, handleChange, setFieldValue }) => {
+  
+    useEffect(() => {
+     const keys = Object.keys(values);
+     console.log(keys)
+     {/* const inputPresenter = values.querySelectorAll('input[name*="is_presenting_author"]'); */}
+
+      {/* inputPresenter.forEach(input => input === 'yes' && setPresenter(`${inputPresenter.name}`)) */}
+    }, [])
 
                 const allNo = ({name}) => {
                     if(process.browser){
