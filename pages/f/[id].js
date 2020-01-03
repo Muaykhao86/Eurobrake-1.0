@@ -1,6 +1,7 @@
 
 import React, { Component } from 'react'
 import cookies from 'next-cookies';
+import Router from 'next/router';
 import fetch from 'isomorphic-unfetch';
 import { LoginForm } from '../../components/forms/LoginForm';
 import { AbstractForm } from '../../components/forms/Abstract';

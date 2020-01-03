@@ -19,17 +19,11 @@ export const AbstractForm = (props) => {
     console.log({editPaper,  presets})
     // ? If they choose to edit a abstarct paper we pass the paper code and il get its presets to fill in
 
- 
 
     return (
         <Formik
             initialValues={presets}
-            onSubmit={(values, actions) => {
-                setTimeout(() => {
-                    alert(JSON.stringify(values, null, 2));
-                    actions.setSubmitting(false);
-                }, 1000)
-            }}
+            
             validationSchema={AbstractSchema}
             enableReinitialize
         >
@@ -56,6 +50,9 @@ export const AbstractForm = (props) => {
                     return console.log({ values })
                 }
 
+                const onSubmit = () => {
+                    console.log(values)
+                    }
 
                 return (
                     <StyledForm>
@@ -516,7 +513,8 @@ export const AbstractForm = (props) => {
                                     ))}
                             </FieldArray>
                        
-                        <Button type="submit" 
+                        <Button 
+                                onClick={onSubmit}
                                 bcolor="#134381"
                                 background="#134381"
                                 br="100rem"
