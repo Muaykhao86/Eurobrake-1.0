@@ -260,7 +260,7 @@ class AuthorsAreaDash extends Component {
                                                     onClick={() => GetForm(`https://prelude.eurobrake.net/edit/${paper.papercode}`)}
                                                 >
                                                     <CancelIcon style={{ fontSize: '3rem', marginRight: '1rem' }} />
-                                                    WITHDRAW/get
+                                                    WITHDRAW
                                                 </Button>
                                             </StyledActionArea>
                                             <StyledInfoArea>
