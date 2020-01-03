@@ -10,15 +10,14 @@ import { Exhibitorprofile } from '../../components/forms/Exhibitorprofile';
 // import { GetFormSSR } from '../../components/forms/FormActions';
 
 
-const OneForm = props => {
+const Form = props => {
     const { presets } = props.data;
     return <AbstractForm editPaper="true" presets={presets} />;
 }
 
-// export default withAuthSync(Edit)
-export default OneForm
+export default Form
 
-OneForm.getInitialProps = async context => {
+Form.getInitialProps = async context => {
     const { papercode } = context.query;
     const { logintoken } = cookies(context) || {};
     const apiUrl = `https://prelude.eurobrake.net/edit/${papercode}`;
