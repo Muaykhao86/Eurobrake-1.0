@@ -335,7 +335,9 @@ export const AbstractForm = (props) => {
                                     values.secondary_authors.length > 0 &&
                                     (
                                         values.secondary_authors.map((author, index) => {
-                                            const {is_presenting_author} = `author[${index}]`
+                                            const {is_presenting_author} = author;
+                                            const second = `values.secondary_authors[${index}].is_presenting_author`;
+                                            console.log({is_presenting_author, author, second})
                                            return (
                                             <div key={index} className="form-secondary">
                                                 <div className="form-field">
