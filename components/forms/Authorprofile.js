@@ -16,7 +16,7 @@ export const Authorprofile = ({editPaper = false}) => {
   
     return (
         <Formik
-            initialValues={editPaper ? presets : emptyInitial }
+            initialValues={ presets || emptyInitial }
             onSubmit={(values, actions) => {
                 setTimeout(() => {
                     alert(JSON.stringify(values, null, 2));
@@ -296,7 +296,7 @@ export const Authorprofile = ({editPaper = false}) => {
                          bcolor="#134381"
                                 background="#134381"
                                 br="100rem"
-                                style={{ margin: "1rem" }}
+                                style={{ marginTop: "1rem" }}
                                 fontSize="1.7rem">Submit</Button>
                         {console.log('main', values.is_presenting_author, 'second', values.secondary_authors)}
                     </StyledForm>
@@ -306,26 +306,26 @@ export const Authorprofile = ({editPaper = false}) => {
     )
 };
 
-const presets = {
-    author_title: "Mr.",
-    author_firstname: "Andrew",
-    author_lastname: "Green",
-    author_email: "andrew@article7.co.uk",
-    author_jobtitle: "Director",
-    author_company: "Article Seven Limited",
-    author_address1: "10 Hamilton Road",
-    author_address2: null,
-    author_address3: null,
-    author_city: "Sidcup",
-    author_scp: "Kent",
-    author_country: "GB",
-    author_postal: "DA15 7HB",
-    author_phone: "+44 20 8305 1224",
-    author_fax: '',
-    author_password: '',
-    author_password_confirmed: '',
-    __csrf_token: "5d159fb224ed613dce89a64553f36f5eda1fa97c,2caaa318bb55c8c19d660a1e420d1c602dfc59f9,1576603105"
-}
+// const presets = {
+//     author_title: "Mr.",
+//     author_firstname: "Andrew",
+//     author_lastname: "Green",
+//     author_email: "andrew@article7.co.uk",
+//     author_jobtitle: "Director",
+//     author_company: "Article Seven Limited",
+//     author_address1: "10 Hamilton Road",
+//     author_address2: null,
+//     author_address3: null,
+//     author_city: "Sidcup",
+//     author_scp: "Kent",
+//     author_country: "GB",
+//     author_postal: "DA15 7HB",
+//     author_phone: "+44 20 8305 1224",
+//     author_fax: '',
+//     author_password: '',
+//     author_password_confirmed: '',
+//     __csrf_token: "5d159fb224ed613dce89a64553f36f5eda1fa97c,2caaa318bb55c8c19d660a1e420d1c602dfc59f9,1576603105"
+// }
 
 const emptyInitial = {
     author_title: '',

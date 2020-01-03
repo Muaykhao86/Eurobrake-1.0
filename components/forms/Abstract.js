@@ -22,7 +22,7 @@ export const AbstractForm = (props) => {
 
     return (
         <Formik
-            initialValues={presets}
+            initialValues={presets || emptyInitial}
             
             validationSchema={AbstractSchema}
             enableReinitialize
@@ -342,8 +342,11 @@ export const AbstractForm = (props) => {
                                                         value={`secondary_authors[${index}].title`}
                                                         style={{ color: '#134381' }}
                                                         name={`secondary_authors[${index}].title`}
-                                                        component={TextField}
-                                                    />
+                                                        component={Select}
+                                                        >
+                                {titles.map((option, i) =>
+                                    <option key={i} style={{ fontSize: '1.5rem', cursor: 'pointer' }} value={option.value}>{option.label}</option>)}
+                            </Field>
                                                 </div>
                                                 <div className="form-field">
                                                     <label

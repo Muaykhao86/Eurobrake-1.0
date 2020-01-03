@@ -56,7 +56,7 @@ Form.getInitialProps = async context => {
         } catch (error) {
             // Implementation or Network error
             console.log(error)
-            return redirectOnError()
+            return await redirectOnError()
         }
     }
 

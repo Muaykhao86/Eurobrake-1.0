@@ -328,7 +328,7 @@ AuthorsAreaDash.getInitialProps = async ctx => {
         } catch (error) {
             // Implementation or Network error
             console.log(error)
-            return redirectOnError()
+            return await redirectOnError()
         }
     }
 

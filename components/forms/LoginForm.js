@@ -61,7 +61,7 @@ export const LoginForm = () => {
                             bcolor="#134381"
                             background="#134381"
                             br="100rem"
-                            style={{ margin: "1rem" }}
+                            style={{ marginTop: "1rem" }}
                             fontSize="1.7rem">
                             Login
                         </Button>
