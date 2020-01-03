@@ -16,7 +16,7 @@ export const Authorprofile = ({editPaper = false}) => {
   
     return (
         <Formik
-            initialValues={ presets || emptyInitial }
+            initialValues={ emptyInitial }
             onSubmit={(values, actions) => {
                 setTimeout(() => {
                     alert(JSON.stringify(values, null, 2));
