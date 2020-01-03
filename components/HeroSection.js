@@ -29,7 +29,7 @@ const StyledHero = styled.div`
 
 const StyledText = styled(Typography)`
     position: absolute;
-    top: ${props => props.t || '24rem'};
+    top: ${props => props.t || '26rem'};
     align-self: center;
     width: ${props => props.max || props.theme.minWidth };
     line-height: ${props => props.LH || '1'};

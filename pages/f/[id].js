@@ -21,7 +21,7 @@ Form.getInitialProps = async context => {
     const { id } = context.query;
     const { logintoken } = cookies(context) || {};
     const apiUrl = `https://prelude.eurobrake.net/edit/${id}`;
-    console.log({papercode, logintoken, apiUrl})
+    console.log({id, logintoken, apiUrl})
     const redirectOnError = () =>
         process.browser
             ? Router.push('/authorsArea')
