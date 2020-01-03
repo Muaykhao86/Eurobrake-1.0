@@ -118,5 +118,3 @@ class CountDownBanner extends Component {
 export default CountDownBanner;
 
 
-
-// TODO LINE UP DAYS PROPERLY AND CHANGE DAYS TO 3 DIDGIT AND 00 FOR REPLACING 0 

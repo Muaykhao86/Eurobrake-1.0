@@ -22,16 +22,13 @@ OneForm.getInitialProps = async context => {
     const { papercode } = context.query;
     const { logintoken } = cookies(context) || {};
     const apiUrl = `https://prelude.eurobrake.net/edit/${papercode}`;
+    console.log({papercode, logintoken, apiUrl})
     const redirectOnError = () =>
         process.browser
             ? Router.push('/authorsArea')
             : context.res.writeHead(301, { Location: '/authorsArea' })
     if (logintoken) {
         try {
-            // console.log({logintoken}, 'getIProps right before fetch call')
-            // headers: {
-            //     Authorization: 'Bearer ' + logintoken,
-            // }
             const response = await fetch(apiUrl, {
                 credentials: 'include',
                 cache: 'no-cache',
@@ -41,7 +38,6 @@ OneForm.getInitialProps = async context => {
 
             })
             const data = await response.json()
-            // console.log('Authors response Data =>', data.status, data);
             if (data.status === 'success') {
                 console.log('res.ok', data)
                 return { data }

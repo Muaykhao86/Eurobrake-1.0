@@ -34,7 +34,7 @@ const StyledText = styled(Typography)`
     width: ${props => props.max || props.theme.minWidth };
     line-height: ${props => props.LH || '1'};
     color: ${props => props.theme.white};
-    text-align: ${props => props.ta || 'left'};
+    text-align: center;
     text-shadow: 0px 3px 50px #0000008C;
 
 &&.MuiTypography-body1 {
