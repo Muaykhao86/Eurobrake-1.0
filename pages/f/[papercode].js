@@ -1,11 +1,12 @@
 
 import React, { Component } from 'react'
+
 import { LoginForm } from '../../components/forms/LoginForm';
 import { AbstractForm } from '../../components/forms/Abstract';
 import { Authorprofile } from '../../components/forms/Authorprofile';
 import { Exhibitorprofile } from '../../components/forms/Exhibitorprofile';
 // import { Esop } from './Esop';
-import { GetForm } from '../../components/forms/FormActions';
+import { GetFormSSR } from '../../components/forms/FormActions';
 
 
 const OneForm = props => {
@@ -17,14 +18,16 @@ export default OneForm
 
 OneForm.getInitialProps = async function (context) {
     const { papercode } = context.query;
-    console.log({context})
-    const res = await GetForm(`https://prelude.eurobrake.net/edit/${papercode}`)
+    console.log({papercode})
+    const res = await GetFormSSR(`https://prelude.eurobrake.net/edit/${papercode}`)
     const presets = await res;
 
     console.log({presets});
 
     return { presets};
 };
+
+
     // const { form } = props;
 
     // switch (form) {

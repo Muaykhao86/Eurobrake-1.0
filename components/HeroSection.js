@@ -2,7 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 import Typography from '@material-ui/core/Typography';
 import CountDownBanner from '../components/CountDownBanner';
-import {device} from './Page';
 
 
 const StyledHero = styled.div`

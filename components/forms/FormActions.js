@@ -1,8 +1,38 @@
 import cookie from 'js-cookie';
+import cookies from 'next-cookies';
 import fetch from 'isomorphic-unfetch';
 import { login} from '../../utils/auth';
 
 
+export async function GetFormSSR(url) 
+    // We use `nextCookie` to get the cookie and pass the token to the frontend in the `props`.
+    const { logintoken } = cookies(ctx) || {};
+    try {
+        const apiUrl = url;
+        const response = await fetch(apiUrl, {
+            credentials: 'include',
+            headers: {
+                Authorization: 'Bearer ' + logintoken,
+            }
+        });
+        const data = await response.json();
+        if (data.status === 'success') {
+            console.log('getForm', data);
+            console.log('tkn', data.__csrf_token)
+            return data;
+        } else {
+            let error = new Error(data.error)
+            error.response = response
+            throw error
+        }
+    } catch (error) {
+        console.error(
+            'Failed to get form, please try again', error
+        )
+        // return error.message
+    }
+    return
+}
 
 export async function GetForm(url) {
     const { logintoken } = cookie.get();
