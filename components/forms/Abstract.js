@@ -26,7 +26,6 @@ export const AbstractForm = (props) => {
             enableReinitialize
         >
             {({ values, isSubmitting, isValidating, handleChange, setFieldValue }) => {
-                const second = `values.secondary_authors[${index}].is_presenting_author`
     useEffect(() => {
      const keys = Object.keys(values);
      console.log(keys)
@@ -337,6 +336,7 @@ export const AbstractForm = (props) => {
                                     (
                                         values.secondary_authors.map((authors, index) => (
                                             <div key={index} className="form-secondary">
+                                            {console.log({authors})}
                                                 <div className="form-field">
                                                     <label
                                                         htmlFor="label"
