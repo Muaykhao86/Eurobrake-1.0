@@ -30,6 +30,7 @@ export const AbstractForm = (props) => {
     useEffect(() => {
      const keys = Object.keys(values);
      console.log(keys)
+     console.log('1st 2ndry', values.secondary_authors[0].is_presenting_author)
      {/* const inputPresenter = values.querySelectorAll('input[name*="is_presenting_author"]'); */}
 
       {/* inputPresenter.forEach(input => input === 'yes' && setPresenter(`${inputPresenter.name}`)) */}
