@@ -8,6 +8,7 @@ import { Typography } from '@material-ui/core';
 import {titles, countries} from './FormSelects';
 import {AbstractSchema} from './FormControl';
 import {StyledForm} from './Formstyles';
+import {SendForm} from './FormActions';
 
 
 
@@ -15,7 +16,8 @@ export const AbstractForm = (props) => {
     const [presenter, setPresenter] = useState('');
   
     // if edit = true send back a preset form if not send a blank
-    const {editPaper,  presets} = props;
+    const {editPaper,  presets, csrf} = props;
+    const url = 
     console.log({editPaper,  presets})
     // ? If they choose to edit a abstarct paper we pass the paper code and il get its presets to fill in
     return (
@@ -56,7 +58,8 @@ export const AbstractForm = (props) => {
                     return console.log({ values })
                 }
 
-                const onSubmit = () => {
+                const onSubmit = ({values, csrf, url}) => {
+                    SendForm({values, csrf, url})
                     console.log(values)
                     }
 

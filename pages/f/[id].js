@@ -15,14 +15,16 @@ import HeroSection from '../../components/HeroSection';
 
 
 const Form = props => {
-    const { presets } = props.data;
+    const { presets, __csrf_token } = props.data;
+    const {apiUrl} = data;
+    console.log({apiUrl})
     return (
         <>
         <HeroSection>
             Edit your abstract details
             </HeroSection>
         <StyledPage>
-            <AbstractForm editPaper="true" presets={presets} />;
+            <AbstractForm editPaper="true" presets={presets} csrf={__csrf_token} url={apiUrl}/>;
     </StyledPage>
         </>
     )
@@ -52,7 +54,7 @@ Form.getInitialProps = async context => {
             const data = await response.json()
             if (data.status === 'success') {
                 console.log('res.ok', data)
-                return { data }
+                return { data, apiUrl }
             }
             else {
                 console.log('not reading success')
