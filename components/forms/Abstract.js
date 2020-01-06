@@ -16,8 +16,8 @@ export const AbstractForm = (props) => {
     const [presenter, setPresenter] = useState('');
   
     // if edit = true send back a preset form if not send a blank
-    const {editPaper,  presets, csrf} = props;
-    const url = 
+    const {editPaper,  presets, csrf, apiUrl} = props;
+    const url = apiUrl;
     console.log({editPaper,  presets})
     // ? If they choose to edit a abstarct paper we pass the paper code and il get its presets to fill in
     return (
@@ -58,9 +58,9 @@ export const AbstractForm = (props) => {
                     return console.log({ values })
                 }
 
-                const onSubmit = ({values, csrf, url}) => {
+                const onSubmit = () => {
                     SendForm({values, csrf, url})
-                    console.log(values)
+                    console.log('sending', values)
                     }
 
                 return (

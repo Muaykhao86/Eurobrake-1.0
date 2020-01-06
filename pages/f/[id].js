@@ -24,7 +24,7 @@ const Form = props => {
             Edit your abstract details
             </HeroSection>
         <StyledPage>
-            <AbstractForm editPaper="true" presets={presets} csrf={__csrf_token} url={apiUrl}/>;
+            <AbstractForm editPaper="true" presets={presets} csrf={__csrf_token} apiUrl={apiUrl}/>;
     </StyledPage>
         </>
     )
