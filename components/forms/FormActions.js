@@ -113,6 +113,7 @@ export async function SendForm({ csrf, values, url }) {
         try {
             const apiUrl = url;
             const response = await fetch(apiUrl, {
+                method: 'POST', 
                 body: form,
                 credentials: 'include',
                 headers: {
