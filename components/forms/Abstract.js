@@ -28,15 +28,7 @@ export const AbstractForm = (props) => {
             enableReinitialize
         >
             {({ values, isSubmitting, isValidating, handleChange, setFieldValue }) => {
-    useEffect(() => {
-     const keys = Object.keys(values);
-     console.log(keys)
-     console.log('1st 2ndry', values.secondary_authors[0].is_presenting_author)
-     {/* const inputPresenter = values.querySelectorAll('input[name*="is_presenting_author"]'); */}
-
-      {/* inputPresenter.forEach(input => input === 'yes' && setPresenter(`${inputPresenter.name}`)) */}
-    }, [])
-
+          
                 const allNo = ({name}) => {
                     if(process.browser){
                     const radios = document.querySelectorAll('input[name*="is_presenting_author"]');
@@ -58,8 +50,9 @@ export const AbstractForm = (props) => {
                     return console.log({ values })
                 }
 
-                const onSubmit = () => {
-                    SendForm({values, csrf, url})
+                const onSubmit = async () => {
+                  values.__csrf_token = csrf;
+                  await SendForm({values, csrf, url})
                     console.log('sending', values)
                     }
 

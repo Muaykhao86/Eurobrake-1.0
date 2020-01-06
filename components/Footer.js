@@ -70,9 +70,15 @@ const FooterBar = styled.div`
         /* padding-bottom: 1rem; */
         /* min-width: 40rem;    */
         display: flex;
-        flex-flow: column;
+        flex-flow: row;
         align-items: center;
-        /* justify-content: space-between; */
+        justify-content: space-between;
+            @media only screen 
+  and (max-device-width: 1200px) 
+  and (-webkit-min-device-pixel-ratio: 2) { 
+       flex-flow: column;
+       align-items: center
+}
        
 
     }
@@ -178,11 +184,6 @@ function Footer() {
                 </div>
             </div>
             <div className="ftr_middle-links">
-            <div className="ftr_newsletter-box">
-                <label htmlFor="Newsletter">Newsletter</label>
-                <input type="email" name="Newsletter" id=""/>
-                <Button padding=".5rem 2rem" style={{margin: '.5rem'}}>submit</Button>    
-            </div>
                 <Link href="/privacyPolicy"><a>Privacy Policy</a></Link>
                 <Link href="/disclaimer"><a>Disclaimer</a></Link>
                 <a href="">Contact Us</a>
@@ -201,6 +202,11 @@ function Footer() {
                 <a  className="social" href="https://www.flickr.com/photos/eurobrake/albums/72157681368290774">
                     <img src="/images/flickr-icon@2000w.png" alt="Flickr" style={{maxWidth: '5rem'}}/>
                 </a>
+            </div>
+            <div className="ftr_newsletter-box">
+                <label htmlFor="Newsletter">Newsletter</label>
+                <input type="email" name="Newsletter" id=""/>
+                <Button padding=".5rem 2rem" style={{margin: '.5rem'}}>submit</Button>    
             </div>
             </div>
             <div className="ftr_container-right">
