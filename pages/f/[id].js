@@ -16,7 +16,7 @@ import HeroSection from '../../components/HeroSection';
 
 const Form = props => {
     const { presets, __csrf_token } = props.data;
-    const {apiUrl} = data;
+    const {apiUrl} = props;
     console.log({apiUrl})
     return (
         <>
