@@ -118,6 +118,7 @@ export async function SendForm({ csrf, values, url }) {
                 credentials: 'include',
                 headers: {
                     Authorization: 'Bearer ' + logintoken,
+                    'Content-Type': 'application/json'
                 }
             });
             const data = await response.json();
