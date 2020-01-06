@@ -2,6 +2,8 @@ import React from 'react'
 import Link from 'next/link';
 import styled from 'styled-components';
 import MapContainer from './GoogleMaps';
+import Typography from '@material-ui/core/Typography';
+import { Button } from './Button';
 
 const FooterBar = styled.div`
     color: ${props => props.theme.white};
@@ -10,12 +12,25 @@ const FooterBar = styled.div`
     min-height: 10rem;
     display: flex;
     justify-content: space-between;
-    align-items: flex-end;
+    align-items: center;
     position: absolute;
     bottom: 0;
     padding: 2rem;
+  
+    .heading{
+        font-family: ${props => props.theme.MPBold};
+        font-size: 2rem;
+        text-transform: uppercase;
+        align-self: center;
 
-    .ftr_container-1{
+            @media only screen 
+  and (max-device-width: 1200px) 
+  and (-webkit-min-device-pixel-ratio: 2) { 
+       font-size: 1.5rem;
+}
+    }
+
+    .ftr_container-left{
         padding: .2rem;
         min-width: 30rem;
         
@@ -23,6 +38,7 @@ const FooterBar = styled.div`
         flex-flow: column;
     }
     .ftr_middle-links{
+        margin: 1rem;
         padding: .2rem;
         min-width: 20rem;
         min-height: 20rem;
@@ -32,22 +48,31 @@ const FooterBar = styled.div`
         justify-content: space-between;
         align-items: center;
     }
-    .ftr_container-3{
+    .ftr_container-right{
    
         display: flex;
         flex-flow: column;
         align-items: center;
+        /* min-width: 30rem; */
+        margin-bottom: 3.3rem;
        
     }
-    .ftr_newsletter-box{
-        padding-bottom: 1rem;
-        min-width: 40rem;
-        /* border: 1px solid black; */
-        
-        /* background-color:steelblue; */
-        
+    
+    .ftr_container-map{
         display: flex;
-        justify-content: space-between;
+        flex-flow: column;
+        height: 25rem;
+        align-items: center; 
+        position: relative;
+    }
+
+    .ftr_newsletter-box{
+        /* padding-bottom: 1rem; */
+        /* min-width: 40rem;    */
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        /* justify-content: space-between; */
        
 
     }
@@ -71,11 +96,19 @@ const FooterBar = styled.div`
     }
 
 
-    .ftr_container-7{
+    
+    .ftr_container-icons{
         display: flex;
+        width: auto;
         flex-wrap: wrap;
         justify-content:space-between;
         position: relative;
+
+           @media only screen 
+  and (max-device-width: 1200px) 
+  and (-webkit-min-device-pixel-ratio: 2) { 
+       width: 15rem;
+}
       
     }
 
@@ -93,6 +126,11 @@ const FooterBar = styled.div`
         text-transform: uppercase;
         font-family: ${props => props.theme.MPBold};
         font-size: 2rem;
+            @media only screen 
+  and (max-device-width: 1200px) 
+  and (-webkit-min-device-pixel-ratio: 2) { 
+       font-size: 1.5rem;
+}
         
     }
 
@@ -102,14 +140,20 @@ const FooterBar = styled.div`
     }
 
     input{
-        width: 65%;
-        margin-left: auto;
+        /* width: 65%; */
+        /* margin-left: auto; */
+        margin: .5rem;
     }
 
     label{
         font-family: ${props => props.theme.MPBold};
         font-size: 2rem;
         text-transform: uppercase;
+            @media only screen 
+  and (max-device-width: 1200px) 
+  and (-webkit-min-device-pixel-ratio: 2) { 
+       font-size: 1.5rem;
+}
     }
 
     
@@ -118,11 +162,11 @@ const FooterBar = styled.div`
 function Footer() {
     return (
         <FooterBar>
-            <div className="ftr_container-1">
-                <h1>CONFIRMED EUROBRAKE 2020 SPONSORS</h1>      
+            <div className="ftr_container-left">
+                <Typography className="heading">CONFIRMED EUROBRAKE 2020 SPONSORS</Typography>      
                 <div className="ftr_sponsor-box">
                     <div className="sponsor"><a href="http://www.applusidiada.com/en/"><img src="https://www.eurobrake.net/res/display/default/chrome/logos/applus-idiada2.png" alt="" style={{maxHeight: '5rem', width: '10rem'}}/></a></div>
-                    <div className="sponsor"><a href="http://www.applusidiada.com/en/"><img src="https://www.eurobrake.net/res/display/default/chrome/logos/itt.png" alt="" style={{maxHeight: '5rem', width: '10rem'}}/></a></div>
+                    <div className="sponsor"><a href="http://www.applusidiada.com/en/"><img src="https://www.eurobrake.net/res/display/default/chrome/logos/itt.png" alt="" style={{maxHeight: '5rem', width: '8rem'}}/></a></div>
                     <div className="sponsor"><a href="http://www.applusidiada.com/en/"><img src="https://www.eurobrake.net/res/display/default/chrome/logos/horiba2.png" alt="" style={{maxHeight: '5rem', width: '10rem'}}/></a></div>
                     <div className="sponsor"><a href="http://www.applusidiada.com/en/"><img src="https://www.eurobrake.net/res/display/default/chrome/logos/nof2.png" alt="" style={{maxheight: '5rem', width: '10rem'}}/></a></div>
                     <div className="sponsor"><a href="http://www.applusidiada.com/en/"><img src="https://www.eurobrake.net/res/display/default/chrome/logos/itaprochim3.png" alt="" style={{maxHeight: '5rem', width: '10rem'}}/></a></div>
@@ -134,12 +178,17 @@ function Footer() {
                 </div>
             </div>
             <div className="ftr_middle-links">
+            <div className="ftr_newsletter-box">
+                <label htmlFor="Newsletter">Newsletter</label>
+                <input type="email" name="Newsletter" id=""/>
+                <Button padding=".5rem 2rem" style={{margin: '.5rem'}}>submit</Button>    
+            </div>
                 <Link href="/privacyPolicy"><a>Privacy Policy</a></Link>
                 <Link href="/disclaimer"><a>Disclaimer</a></Link>
                 <a href="">Contact Us</a>
                 {/* <a href="">Site Map</a>
                 <a href="">links</a> */}
-            <div className="ftr_container-7">
+            <div className="ftr_container-icons">
                 <a className="social" href="http://www.linkedin.com/groups/EuroBrake-4282205?trk=myg_ugrp_ovr">
                 <img src="/images/LinkedIn@2000x.png" alt="Linkedin" style={{maxWidth: '5rem'}}/>
                 </a>
@@ -154,13 +203,10 @@ function Footer() {
                 </a>
             </div>
             </div>
-            <div className="ftr_container-3">
+            <div className="ftr_container-right">
 
-            <div className="ftr_newsletter-box">
-                <label htmlFor="Newsletter">Newsletter</label>
-                <input type="email" name="Newsletter" id=""/>    
-            </div>
-            <div className="ftr_container-7">
+            <div className="ftr_container-map">
+                <Typography className="heading">Go to CCIB wesbsite <a href="https://ccib.es/en/" style={{color: '#F9B721'}}>HERE</a></Typography>
               <MapContainer/>
             </div> 
             </div>

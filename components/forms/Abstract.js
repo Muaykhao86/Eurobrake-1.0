@@ -335,7 +335,7 @@ export const AbstractForm = (props) => {
                                     values.secondary_authors.length > 0 &&
                                     (
                                         values.secondary_authors.map((author, index) => {
-                                            const {is_presenting_author} = author;
+                                            const {is_presenting_author} = author; //? ONLY FUNCKING WORKS!!!
                                             const second = `values.secondary_authors[${index}].is_presenting_author`;
                                             console.log({is_presenting_author, author, second})
                                            return (
@@ -424,14 +424,17 @@ export const AbstractForm = (props) => {
                                                         className="form-label">
                                                         Country:
                                                     </label>
-                                                    <Field
+                                                     <Field
                                                         className="form-input"
                                                         onClick={handleChange}
                                                         value={`secondary_authors[${index}].country`}
                                                         style={{ color: '#134381' }}
                                                         name={`secondary_authors[${index}].country`}
-                                                        component={TextField}
-                                                    />
+                                                        component={Select}
+                                                    >
+                                {countries.map((option, i) =>
+                                    <option key={i} style={{ fontSize: '1.5rem', cursor: 'pointer' }} value={option.value}>{option.label}</option>)}
+                                                    </Field>
                                                 </div>
                                                 <div className="form-field">
                                                     <label
@@ -612,7 +615,7 @@ const emptyInitial = {
         company: '',
         country: '',
         is_presenting_author: '',
-        ref: ''
+        // ref: ''
     }],
     __csrf_token: '',
 
