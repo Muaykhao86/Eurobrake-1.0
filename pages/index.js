@@ -9,13 +9,18 @@ import ExhibitionSection from '../components/exhibitors/ExhibitionSection';
 import StudentSection from '../components/StudentSection';
 import AuthorSection from '../components/AuthorSection';
 import HeroSection from '../components/HeroSection';
+import StyledCarousel from '../components/StyledCarousel';
 
 
 export default () => (
     <>
-         <HeroSection src="/images/barcelona.png" >
+    
+        <HeroSection 
+         cara
+         src="/images/barcelona.png" 
+         >
             EuroBrake 2020
-        </HeroSection>
+        </HeroSection> 
         {/* <div className="Hero">
             <VideoPLayer />
             <CountDownBanner />

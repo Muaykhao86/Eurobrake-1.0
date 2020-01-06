@@ -281,48 +281,48 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 const FooterBar = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div.withConfig({
   displayName: "Footer__FooterBar",
   componentId: "sc-1wn18ws-0"
-})(["color:", ";background:", ";min-width:100%;min-height:10rem;display:flex;justify-content:space-between;align-items:center;position:absolute;bottom:0;padding:2rem;.heading{font-family:", ";font-size:2rem;text-transform:uppercase;align-self:center;@media only screen  and (max-device-width:1200px)  and (-webkit-min-device-pixel-ratio:2){font-size:1.5rem;}}.ftr_container-left{padding:.2rem;min-width:30rem;display:flex;flex-flow:column;}.ftr_middle-links{margin:1rem;padding:.2rem;min-width:20rem;min-height:20rem;flex:1 1 auto;display:flex;flex-flow:column;justify-content:space-between;align-items:center;}.ftr_container-right{display:flex;flex-flow:column;align-items:center;margin-bottom:3.3rem;}.ftr_container-map{display:flex;flex-flow:column;height:25rem;align-items:center;position:relative;}.ftr_newsletter-box{display:flex;flex-flow:column;align-items:center;}.ftr_sponsor-box{background-color:white;padding:.5rem;max-width:42rem;border:1px solid white;height:25rem;display:flex;flex-flow:wrap;justify-content:center;align-items:center;align-content:center;.sponsor{margin:0 1rem;cursor:pointer;}}.ftr_container-icons{display:flex;width:auto;flex-wrap:wrap;justify-content:space-between;position:relative;@media only screen  and (max-device-width:1200px)  and (-webkit-min-device-pixel-ratio:2){width:15rem;}}.social{color:", ";;margin:1rem;font-size:2rem;}a{color:", ";text-transform:uppercase;font-family:", ";font-size:2rem;@media only screen  and (max-device-width:1200px)  and (-webkit-min-device-pixel-ratio:2){font-size:1.5rem;}}h1{padding:1rem;text-align:center;}input{margin:.5rem;}label{font-family:", ";font-size:2rem;text-transform:uppercase;@media only screen  and (max-device-width:1200px)  and (-webkit-min-device-pixel-ratio:2){font-size:1.5rem;}}"], props => props.theme.white, props => props.theme.primary, props => props.theme.MPBold, props => props.theme.white, props => props.theme.white, props => props.theme.MPBold, props => props.theme.MPBold);
+})(["color:", ";background:", ";min-width:100%;min-height:10rem;display:flex;justify-content:space-between;align-items:center;position:absolute;bottom:0;padding:2rem;.heading{font-family:", ";font-size:2rem;text-transform:uppercase;align-self:center;@media only screen  and (max-device-width:1200px)  and (-webkit-min-device-pixel-ratio:2){font-size:1.5rem;}}.ftr_container-left{padding:.2rem;min-width:30rem;display:flex;flex-flow:column;}.ftr_middle-links{margin:1rem;padding:.2rem;min-width:20rem;min-height:20rem;flex:1 1 auto;display:flex;flex-flow:column;justify-content:space-between;align-items:center;}.ftr_container-right{display:flex;flex-flow:column;align-items:center;margin-bottom:3.3rem;}.ftr_container-map{display:flex;flex-flow:column;height:25rem;align-items:center;position:relative;}.ftr_newsletter-box{display:flex;flex-flow:row;align-items:center;justify-content:space-between;@media only screen  and (max-device-width:1200px)  and (-webkit-min-device-pixel-ratio:2){flex-flow:column;align-items:center}}.ftr_sponsor-box{background-color:white;padding:.5rem;max-width:42rem;border:1px solid white;height:25rem;display:flex;flex-flow:wrap;justify-content:center;align-items:center;align-content:center;.sponsor{margin:0 1rem;cursor:pointer;}}.ftr_container-icons{display:flex;width:auto;flex-wrap:wrap;justify-content:space-between;position:relative;@media only screen  and (max-device-width:1200px)  and (-webkit-min-device-pixel-ratio:2){width:15rem;}}.social{color:", ";;margin:1rem;font-size:2rem;}a{color:", ";text-transform:uppercase;font-family:", ";font-size:2rem;@media only screen  and (max-device-width:1200px)  and (-webkit-min-device-pixel-ratio:2){font-size:1.5rem;}}h1{padding:1rem;text-align:center;}input{margin:.5rem;}label{font-family:", ";font-size:2rem;text-transform:uppercase;@media only screen  and (max-device-width:1200px)  and (-webkit-min-device-pixel-ratio:2){font-size:1.5rem;}}"], props => props.theme.white, props => props.theme.primary, props => props.theme.MPBold, props => props.theme.white, props => props.theme.white, props => props.theme.MPBold, props => props.theme.MPBold);
 
 function Footer() {
   return __jsx(FooterBar, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 164
+      lineNumber: 170
     },
     __self: this
   }, __jsx("div", {
     className: "ftr_container-left",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 165
+      lineNumber: 171
     },
     __self: this
   }, __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_4___default.a, {
     className: "heading",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 166
+      lineNumber: 172
     },
     __self: this
   }, "CONFIRMED EUROBRAKE 2020 SPONSORS"), __jsx("div", {
     className: "ftr_sponsor-box",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 167
+      lineNumber: 173
     },
     __self: this
   }, __jsx("div", {
     className: "sponsor",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 168
+      lineNumber: 174
     },
     __self: this
   }, __jsx("a", {
     href: "http://www.applusidiada.com/en/",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 168
+      lineNumber: 174
     },
     __self: this
   }, __jsx("img", {
@@ -334,21 +334,21 @@ function Footer() {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 168
+      lineNumber: 174
     },
     __self: this
   }))), __jsx("div", {
     className: "sponsor",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 169
+      lineNumber: 175
     },
     __self: this
   }, __jsx("a", {
     href: "http://www.applusidiada.com/en/",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 169
+      lineNumber: 175
     },
     __self: this
   }, __jsx("img", {
@@ -360,21 +360,21 @@ function Footer() {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 169
+      lineNumber: 175
     },
     __self: this
   }))), __jsx("div", {
     className: "sponsor",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 170
+      lineNumber: 176
     },
     __self: this
   }, __jsx("a", {
     href: "http://www.applusidiada.com/en/",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 170
+      lineNumber: 176
     },
     __self: this
   }, __jsx("img", {
@@ -386,21 +386,21 @@ function Footer() {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 170
+      lineNumber: 176
     },
     __self: this
   }))), __jsx("div", {
     className: "sponsor",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 171
+      lineNumber: 177
     },
     __self: this
   }, __jsx("a", {
     href: "http://www.applusidiada.com/en/",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 171
+      lineNumber: 177
     },
     __self: this
   }, __jsx("img", {
@@ -412,21 +412,21 @@ function Footer() {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 171
+      lineNumber: 177
     },
     __self: this
   }))), __jsx("div", {
     className: "sponsor",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 172
+      lineNumber: 178
     },
     __self: this
   }, __jsx("a", {
     href: "http://www.applusidiada.com/en/",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 172
+      lineNumber: 178
     },
     __self: this
   }, __jsx("img", {
@@ -438,21 +438,21 @@ function Footer() {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 172
+      lineNumber: 178
     },
     __self: this
   }))), __jsx("div", {
     className: "sponsor",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 173
+      lineNumber: 179
     },
     __self: this
   }, __jsx("a", {
     href: "http://www.applusidiada.com/en/",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 173
+      lineNumber: 179
     },
     __self: this
   }, __jsx("img", {
@@ -464,21 +464,21 @@ function Footer() {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 173
+      lineNumber: 179
     },
     __self: this
   }))), __jsx("div", {
     className: "sponsor",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 174
+      lineNumber: 180
     },
     __self: this
   }, __jsx("a", {
     href: "http://www.applusidiada.com/en/",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 174
+      lineNumber: 180
     },
     __self: this
   }, __jsx("img", {
@@ -490,21 +490,21 @@ function Footer() {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 174
+      lineNumber: 180
     },
     __self: this
   }))), __jsx("div", {
     className: "sponsor",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 175
+      lineNumber: 181
     },
     __self: this
   }, __jsx("a", {
     href: "http://www.applusidiada.com/en/",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 175
+      lineNumber: 181
     },
     __self: this
   }, __jsx("img", {
@@ -516,21 +516,21 @@ function Footer() {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 175
+      lineNumber: 181
     },
     __self: this
   }))), __jsx("div", {
     className: "sponsor",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 176
+      lineNumber: 182
     },
     __self: this
   }, __jsx("a", {
     href: "http://www.applusidiada.com/en/",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 176
+      lineNumber: 182
     },
     __self: this
   }, __jsx("img", {
@@ -542,21 +542,21 @@ function Footer() {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 176
+      lineNumber: 182
     },
     __self: this
   }))), __jsx("div", {
     className: "sponsor",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 177
+      lineNumber: 183
     },
     __self: this
   }, __jsx("a", {
     href: "http://www.applusidiada.com/en/",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 177
+      lineNumber: 183
     },
     __self: this
   }, __jsx("img", {
@@ -568,87 +568,54 @@ function Footer() {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 177
+      lineNumber: 183
     },
     __self: this
   }))))), __jsx("div", {
     className: "ftr_middle-links",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 180
+      lineNumber: 186
     },
     __self: this
-  }, __jsx("div", {
-    className: "ftr_newsletter-box",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 181
-    },
-    __self: this
-  }, __jsx("label", {
-    htmlFor: "Newsletter",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 182
-    },
-    __self: this
-  }, "Newsletter"), __jsx("input", {
-    type: "email",
-    name: "Newsletter",
-    id: "",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 183
-    },
-    __self: this
-  }), __jsx(_Button__WEBPACK_IMPORTED_MODULE_5__["Button"], {
-    padding: ".5rem 2rem",
-    style: {
-      margin: '.5rem'
-    },
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 184
-    },
-    __self: this
-  }, "submit")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+  }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
     href: "/privacyPolicy",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 186
+      lineNumber: 187
     },
     __self: this
   }, __jsx("a", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 186
+      lineNumber: 187
     },
     __self: this
   }, "Privacy Policy")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
     href: "/disclaimer",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 187
+      lineNumber: 188
     },
     __self: this
   }, __jsx("a", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 187
+      lineNumber: 188
     },
     __self: this
   }, "Disclaimer")), __jsx("a", {
     href: "",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 188
+      lineNumber: 189
     },
     __self: this
   }, "Contact Us"), __jsx("div", {
     className: "ftr_container-icons",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 191
+      lineNumber: 192
     },
     __self: this
   }, __jsx("a", {
@@ -656,7 +623,7 @@ function Footer() {
     href: "http://www.linkedin.com/groups/EuroBrake-4282205?trk=myg_ugrp_ovr",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 192
+      lineNumber: 193
     },
     __self: this
   }, __jsx("img", {
@@ -667,7 +634,7 @@ function Footer() {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 193
+      lineNumber: 194
     },
     __self: this
   })), __jsx("a", {
@@ -675,7 +642,7 @@ function Footer() {
     href: "http://www.facebook.com/pages/FISITA-International-Federation-of-Automotive-Engineering-Societies/123022704532",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 195
+      lineNumber: 196
     },
     __self: this
   }, __jsx("img", {
@@ -686,7 +653,7 @@ function Footer() {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 196
+      lineNumber: 197
     },
     __self: this
   })), __jsx("a", {
@@ -694,7 +661,7 @@ function Footer() {
     href: "http://twitter.com/FISITAhq",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 198
+      lineNumber: 199
     },
     __self: this
   }, __jsx("img", {
@@ -705,7 +672,7 @@ function Footer() {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 199
+      lineNumber: 200
     },
     __self: this
   })), __jsx("a", {
@@ -713,7 +680,7 @@ function Footer() {
     href: "https://www.flickr.com/photos/eurobrake/albums/72157681368290774",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 201
+      lineNumber: 202
     },
     __self: this
   }, __jsx("img", {
@@ -724,44 +691,78 @@ function Footer() {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 202
+      lineNumber: 203
     },
     __self: this
-  })))), __jsx("div", {
-    className: "ftr_container-right",
+  }))), __jsx("div", {
+    className: "ftr_newsletter-box",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 206
+    },
+    __self: this
+  }, __jsx("label", {
+    htmlFor: "Newsletter",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 207
+    },
+    __self: this
+  }, "Newsletter"), __jsx("input", {
+    type: "email",
+    name: "Newsletter",
+    id: "",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 208
+    },
+    __self: this
+  }), __jsx(_Button__WEBPACK_IMPORTED_MODULE_5__["Button"], {
+    padding: ".3rem 1.5rem",
+    style: {
+      margin: '.5rem',
+      fontSize: "1rem"
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 209
+    },
+    __self: this
+  }, "submit"))), __jsx("div", {
+    className: "ftr_container-right",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 212
     },
     __self: this
   }, __jsx("div", {
     className: "ftr_container-map",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 208
+      lineNumber: 214
     },
     __self: this
   }, __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_4___default.a, {
     className: "heading",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 209
+      lineNumber: 215
     },
     __self: this
-  }, "Go to CCIB wesbsite ", __jsx("a", {
+  }, "Visit the CCIB wesbsite ", __jsx("a", {
     href: "https://ccib.es/en/",
     style: {
       color: '#F9B721'
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 209
+      lineNumber: 215
     },
     __self: this
   }, "HERE")), __jsx(_GoogleMaps__WEBPACK_IMPORTED_MODULE_3__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 210
+      lineNumber: 216
     },
     __self: this
   }))));
@@ -1413,7 +1414,7 @@ const theme = {
   MPLightIt: 'MyriadPro-LightIt',
   MPIt: 'MyriadPro-It',
   MPBlack: 'MyriadPro-Black',
-  heroHeightSml: '50vh',
+  heroHeightSml: '35vh',
   heroHeightBig: '100vh',
   laptopWidth: '65%',
   mobileWidth: '80%',

@@ -206,13 +206,13 @@ function Footer() {
             <div className="ftr_newsletter-box">
                 <label htmlFor="Newsletter">Newsletter</label>
                 <input type="email" name="Newsletter" id=""/>
-                <Button padding=".5rem 2rem" style={{margin: '.5rem'}}>submit</Button>    
+                <Button padding=".3rem 1.5rem"  style={{margin: '.5rem', fontSize: "1rem"}}>submit</Button>    
             </div>
             </div>
             <div className="ftr_container-right">
 
             <div className="ftr_container-map">
-                <Typography className="heading">Go to CCIB wesbsite <a href="https://ccib.es/en/" style={{color: '#F9B721'}}>HERE</a></Typography>
+                <Typography className="heading">Visit the CCIB wesbsite <a href="https://ccib.es/en/" style={{color: '#F9B721'}}>HERE</a></Typography>
               <MapContainer/>
             </div> 
             </div>

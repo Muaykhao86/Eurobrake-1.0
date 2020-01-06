@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import Typography from '@material-ui/core/Typography';
-import CountDownBanner from '../components/CountDownBanner';
-
+import CountDownBanner from './CountDownBanner';
+import StyledCarousel from './StyledCarousel';
 
 const StyledHero = styled.div`
     min-width: 100%;
@@ -22,13 +22,13 @@ const StyledHero = styled.div`
      
     .banner{
         display: flex;
-        flex: 1 1 20%;
+        /* flex: 1 1 20%; */
     }
     
 `;
-
 const StyledText = styled(Typography)`
     position: absolute;
+    z-index: 10;
     top: ${props => props.t || '26rem'};
     align-self: center;
     width: ${props => props.max || props.theme.minWidth };
@@ -36,20 +36,20 @@ const StyledText = styled(Typography)`
     color: ${props => props.theme.white};
     text-align: center;
     text-shadow: 0px 3px 50px #0000008C;
-
 &&.MuiTypography-body1 {
         font-size: ${props => props.fs || '10rem'};
         font-family:${props => props.theme.MPBlack};
         line-height: 1;
 }
-
 `;
-
 export default function HeroSection(props) {
-    const { t, max, fs } = props;
+    const { t, max, fs, cara } = props;
     return (
         <StyledHero>
+             {cara ? 
+            <StyledCarousel /> :
             <img srcSet={props.src ? props.src : "/images/pic11.png"} alt="EuroBrake Greating" />
+             }   
             <StyledText t={t} max={max} fs={fs}>
                 {props.children}
             </StyledText>
@@ -59,5 +59,3 @@ export default function HeroSection(props) {
         </StyledHero>
     )
 }
-
-

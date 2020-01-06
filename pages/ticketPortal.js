@@ -30,12 +30,13 @@ const Content = styled.iframe`
     display: flex;
     flex: 1 1 auto;
     margin-top: 5rem;
-    min-width: 70vw;
+    width: 70vw;
     min-height: 75rem;
     background-color: transparent;
     padding: 3rem;
     padding-top: 12rem;
     text-decoration: none;
+    border: none;
 `;
 
 

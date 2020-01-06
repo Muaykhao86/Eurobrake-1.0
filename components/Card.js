@@ -30,6 +30,7 @@ export const Card = styled.div`
 
     h1{
         font-size: 4rem;
+        font-family: ${props => props.theme.MPBlack};
         color: ${props => props.theme.white};
         align-self: flex-start;
         max-width: 90%;

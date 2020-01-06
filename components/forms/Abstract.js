@@ -54,8 +54,11 @@ export const AbstractForm = (props) => {
                   values.__csrf_token = csrf;
                   await SendForm({values, csrf, url})
                     console.log('sending', values)
+                    
                     }
-
+                // ? NEED TO REDIRECT AFTER FORM SUBMISSION
+                // ? NEED TO DO VALIDATION
+                // ? sECONDARY AUTHORS => IF THERE ARE NONE WE NEED THE OPTION TO ADD IN A NEW ONE
                 return (
                     <StyledForm>
                         <Typography className="form-title">Primary Author</Typography>
