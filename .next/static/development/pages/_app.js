@@ -1437,7 +1437,7 @@ var _jsxFileName = "/mnt/c/Users/D.Hardiman/desktop/eurobrake/components/Page.js
 var __jsx = react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement;
 
 function _templateObject() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_5__["default"])(["\n    @font-face {\n    font-family: 'MyriadPro-Regular';\n    src: url('/fonts/MyriadPro-Regular.otf');\n    font-weight: normal;\n    font-display: auto;\n    font-style: normal;\n    };\n    @font-face {\n    font-family: 'MyriadPro-Bold';\n    src: url('/fonts/MyriadPro-Bold.otf');\n    font-weight: bold;\n    font-display: auto;\n    font-style: normal;\n    };\n    @font-face {\n    font-family: 'MyriadPro-BoldIt';\n    src: url('/fonts/MyriadPro-BoldIt.otf');\n    font-weight: bold;\n    font-display: auto;\n    font-style: normal;\n    };\n    @font-face {\n    font-family: 'MyriadPro-Semibold';\n    src: url('/fonts/MyriadPro-Semibold.otf');\n    font-weight: 600;\n    font-display: auto;\n    font-style: normal;\n    };\n    @font-face {\n    font-family: 'MyriadPro-Light';\n    src: url('/fonts/MyriadPro-Light.otf');\n    font-weight: 300;\n    font-display: auto;\n    font-style: normal;\n    };\n    @font-face {\n    font-family: 'MyriadPro-LightIt';\n    src: url('/fonts/MyriadPro-LightIt.otf');\n    font-weight: lighter;\n    font-display: auto;\n    font-style: normal;\n    };\n    @font-face {\n    font-family: 'MyriadPro-It';\n    src: url('/fonts/MyriadPro-It.otf');\n    font-display: auto;\n    font-style: normal;\n    };\n    @font-face {\n    font-family: 'MyriadPro-Black';\n    src: url('/fonts/MyriadPro-Black.otf');\n    font-weight: 300;\n    font-display: auto;\n    font-style: normal;\n    };\n    *,\n    *::before,\n    *::after{\n        margin: 0;\n        padding: 0;\n        box-sizing: inherit;\n    };\n    html{\n        height: 100%;\n        box-sizing:  border-box;\n        font-size: 62.5%; \n        \n    };\n    body{\n        /* To set the footer at the bottom we have to leave space for it in the parent container */\n        position: relative;\n        min-height: 100%;\n        padding-bottom: 40rem; /* ! FOOTER PADDING , HAS BEEN KNOW TO PUSH PAGE UP\n        font-family: ", ";\n        color: black;\n        line-height: 1.6;\n        /* 1.2 */\n    }\n    \n    a{\n        text-decoration: none;\n        color: black;\n    }\n    ;\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_5__["default"])(["\n    @font-face {\n    font-family: 'MyriadPro-Regular';\n    src: url('/fonts/MyriadPro-Regular.otf');\n    font-weight: normal;\n    font-display: auto;\n    font-style: normal;\n    };\n    @font-face {\n    font-family: 'MyriadPro-Bold';\n    src: url('/fonts/MyriadPro-Bold.otf');\n    font-weight: bold;\n    font-display: auto;\n    font-style: normal;\n    };\n    @font-face {\n    font-family: 'MyriadPro-BoldIt';\n    src: url('/fonts/MyriadPro-BoldIt.otf');\n    font-weight: bold;\n    font-display: auto;\n    font-style: normal;\n    };\n    @font-face {\n    font-family: 'MyriadPro-Semibold';\n    src: url('/fonts/MyriadPro-Semibold.otf');\n    font-weight: 600;\n    font-display: auto;\n    font-style: normal;\n    };\n    @font-face {\n    font-family: 'MyriadPro-Light';\n    src: url('/fonts/MyriadPro-Light.otf');\n    font-weight: 300;\n    font-display: auto;\n    font-style: normal;\n    };\n    @font-face {\n    font-family: 'MyriadPro-LightIt';\n    src: url('/fonts/MyriadPro-LightIt.otf');\n    font-weight: lighter;\n    font-display: auto;\n    font-style: normal;\n    };\n    @font-face {\n    font-family: 'MyriadPro-It';\n    src: url('/fonts/MyriadPro-It.otf');\n    font-display: auto;\n    font-style: normal;\n    };\n    @font-face {\n    font-family: 'MyriadPro-Black';\n    src: url('/fonts/MyriadPro-Black.otf');\n    font-weight: 300;\n    font-display: auto;\n    font-style: normal;\n    };\n    *,\n    *::before,\n    *::after{\n        margin: 0;\n        padding: 0;\n        box-sizing: inherit;\n    };\n    html{\n        height: 100%;\n        box-sizing:  border-box;\n        font-size: 62.5%; \n        \n    };\n    body{\n        /* To set the footer at the bottom we have to leave space for it in the parent container */\n        position: relative;\n        min-height: 100%;\n        padding-bottom: 40rem;\n         /* ! FOOTER PADDING , HAS BEEN KNOW TO PUSH PAGE UP\n        font-family: ", ";\n        color: black;\n        line-height: 1.6;\n        /* 1.2 */\n    }\n    \n    a{\n        text-decoration: none;\n        color: black;\n    }\n    ;\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -1515,37 +1515,37 @@ function (_Component) {
         theme: theme,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 144
+          lineNumber: 145
         },
         __self: this
       }, __jsx(GlobalStyle, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 145
+          lineNumber: 146
         },
         __self: this
       }), __jsx(StyledPage, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 146
+          lineNumber: 147
         },
         __self: this
       }, __jsx(_Meta__WEBPACK_IMPORTED_MODULE_9__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 147
+          lineNumber: 148
         },
         __self: this
       }), __jsx(_Header__WEBPACK_IMPORTED_MODULE_7__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 148
+          lineNumber: 149
         },
         __self: this
       }), this.props.children, __jsx(_Footer__WEBPACK_IMPORTED_MODULE_8__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 150
+          lineNumber: 151
         },
         __self: this
       })));

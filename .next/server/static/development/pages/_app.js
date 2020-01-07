@@ -1499,7 +1499,8 @@ const GlobalStyle = styled_components__WEBPACK_IMPORTED_MODULE_4__["createGlobal
         /* To set the footer at the bottom we have to leave space for it in the parent container */
         position: relative;
         min-height: 100%;
-        padding-bottom: 40rem; /* ! FOOTER PADDING , HAS BEEN KNOW TO PUSH PAGE UP
+        padding-bottom: 40rem;
+         /* ! FOOTER PADDING , HAS BEEN KNOW TO PUSH PAGE UP
         font-family: ${props => props.theme.MPRegular};
         color: black;
         line-height: 1.6;
@@ -1518,37 +1519,37 @@ class Page extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       theme: theme,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 144
+        lineNumber: 145
       },
       __self: this
     }, __jsx(GlobalStyle, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 145
+        lineNumber: 146
       },
       __self: this
     }), __jsx(StyledPage, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 146
+        lineNumber: 147
       },
       __self: this
     }, __jsx(_Meta__WEBPACK_IMPORTED_MODULE_3__["default"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 147
+        lineNumber: 148
       },
       __self: this
     }), __jsx(_Header__WEBPACK_IMPORTED_MODULE_1__["default"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 148
+        lineNumber: 149
       },
       __self: this
     }), this.props.children, __jsx(_Footer__WEBPACK_IMPORTED_MODULE_2__["default"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 150
+        lineNumber: 151
       },
       __self: this
     })));

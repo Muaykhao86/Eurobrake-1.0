@@ -516,7 +516,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 const CDBanner = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div.withConfig({
   displayName: "CountDownBanner__CDBanner",
   componentId: "y7fpkn-0"
-})(["position:relative;align-self:flex-end;background-color:#134381;margin-top:0;min-width:100%;min-height:19.5rem;display:flex;justify-content:center;align-items:center;color:white;"]);
+})(["position:relative;align-self:flex-end;background-color:#134381;margin-top:0;min-width:100%;min-height:20vh;display:flex;justify-content:center;align-items:center;color:white;"]);
 const CDContainer = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div.withConfig({
   displayName: "CountDownBanner__CDContainer",
   componentId: "y7fpkn-1"
@@ -1576,7 +1576,7 @@ const StyledHero = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div.
 const StyledText = styled_components__WEBPACK_IMPORTED_MODULE_1___default()(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_2___default.a).withConfig({
   displayName: "HeroSection__StyledText",
   componentId: "sc-1rt21yv-1"
-})(["position:absolute;z-index:10;top:", ";align-self:center;width:", ";line-height:", ";color:", ";text-align:center;text-shadow:0px 3px 50px #0000008C;&&.MuiTypography-body1{font-size:", ";font-family:", ";line-height:1;}"], props => props.t || '26rem', props => props.max || props.theme.minWidth, props => props.LH || '1', props => props.theme.white, props => props.fs || '10rem', props => props.theme.MPBlack);
+})(["position:absolute;z-index:10;top:", ";align-self:center;line-height:", ";color:", ";text-align:center;text-shadow:0px 3px 50px #0000008C;&&.MuiTypography-body1{font-size:", ";font-family:", ";line-height:1;}"], props => props.t || '26rem', props => props.LH || '1', props => props.theme.white, props => props.fs || '12rem', props => props.theme.MPBlack);
 function HeroSection(props) {
   const {
     t,
@@ -2263,7 +2263,8 @@ const GlobalStyle = styled_components__WEBPACK_IMPORTED_MODULE_4__["createGlobal
         /* To set the footer at the bottom we have to leave space for it in the parent container */
         position: relative;
         min-height: 100%;
-        padding-bottom: 40rem; /* ! FOOTER PADDING , HAS BEEN KNOW TO PUSH PAGE UP
+        padding-bottom: 40rem;
+         /* ! FOOTER PADDING , HAS BEEN KNOW TO PUSH PAGE UP
         font-family: ${props => props.theme.MPRegular};
         color: black;
         line-height: 1.6;
@@ -2282,37 +2283,37 @@ class Page extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       theme: theme,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 144
+        lineNumber: 145
       },
       __self: this
     }, __jsx(GlobalStyle, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 145
+        lineNumber: 146
       },
       __self: this
     }), __jsx(StyledPage, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 146
+        lineNumber: 147
       },
       __self: this
     }, __jsx(_Meta__WEBPACK_IMPORTED_MODULE_3__["default"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 147
+        lineNumber: 148
       },
       __self: this
     }), __jsx(_Header__WEBPACK_IMPORTED_MODULE_1__["default"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 148
+        lineNumber: 149
       },
       __self: this
     }), this.props.children, __jsx(_Footer__WEBPACK_IMPORTED_MODULE_2__["default"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 150
+        lineNumber: 151
       },
       __self: this
     })));
@@ -2531,67 +2532,79 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 
+const Overlay = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div.withConfig({
+  displayName: "StyledCarousel__Overlay",
+  componentId: "zmlu3k-0"
+})(["background-color:", ";"], props => props.theme.primary);
 const Container = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div.withConfig({
   displayName: "StyledCarousel__Container",
-  componentId: "zmlu3k-0"
-})(["width:100%;height:100%;display:flex;position:relative;overflow:hidden;flex:1 1 80%;object-fit:cover;"]);
+  componentId: "zmlu3k-1"
+})(["width:100%;height:80vh;@media only screen  and (max-device-width:768px)  and (-webkit-min-device-pixel-ratio:2){height:60vh;}display:flex;position:relative;overflow:hidden;flex:1 1 80%;background-position:center;"]);
 const StyledSlide = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.img.withConfig({
   displayName: "StyledCarousel__StyledSlide",
-  componentId: "zmlu3k-1"
-})(["min-width:100%;max-height:80vh;@media only screen  and (max-device-width:768px)  and (-webkit-min-device-pixel-ratio:2){min-height:40vh;}"]);
+  componentId: "zmlu3k-2"
+})(["min-width:100%;min-height:80vh !important;@media only screen  and (max-device-width:768px)  and (-webkit-min-device-pixel-ratio:2){min-height:60vh !important;}"]);
 
 const CarouselUI = ({
   children
 }) => __jsx(Container, {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 31
+    lineNumber: 54
   },
   __self: undefined
 }, children);
 
 const Carousel = react_reveal_makeCarousel__WEBPACK_IMPORTED_MODULE_2___default()(CarouselUI);
 function StyledCarousel() {
-  return __jsx(Carousel, {
+  return __jsx(Overlay, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 59
+    },
+    __self: this
+  }, __jsx(Carousel, {
     defaultWait: 4000
     /*wait for 1000 milliseconds*/
     ,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 37
+      lineNumber: 61
     },
     __self: this
   }, __jsx(react_reveal_Slide__WEBPACK_IMPORTED_MODULE_3___default.a, {
     right: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 38
+      lineNumber: 62
     },
     __self: this
   }, __jsx(StyledSlide, {
-    srcSet: "/images/pic11.png",
+    style: {},
+    srcSet: "/images/pic1.png",
     alt: "EuroBrake Greating",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 39
+      lineNumber: 63
     },
     __self: this
   })), __jsx(react_reveal_Slide__WEBPACK_IMPORTED_MODULE_3___default.a, {
     right: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 41
+      lineNumber: 65
     },
     __self: this
   }, __jsx(StyledSlide, {
+    style: {},
     srcSet: "/images/pic2.png",
     alt: "EuroBrake Greating",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 42
+      lineNumber: 66
     },
     __self: this
-  })));
+  }))));
 }
 
 /***/ }),
@@ -7593,49 +7606,49 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
   src: "/images/barcelona.png",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 18
+    lineNumber: 20
   },
   __self: undefined
 }, "EuroBrake 2020"), __jsx(_components_styles_HomeStyles__WEBPACK_IMPORTED_MODULE_3__["StyledContainer"], {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 28
+    lineNumber: 29
   },
   __self: undefined
 }, __jsx(_components_AboutSection__WEBPACK_IMPORTED_MODULE_4__["default"], {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 29
+    lineNumber: 30
   },
   __self: undefined
 }), __jsx(_components_LocationSection__WEBPACK_IMPORTED_MODULE_5__["default"], {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 30
+    lineNumber: 31
   },
   __self: undefined
 }), __jsx(_components_AttendeesSection__WEBPACK_IMPORTED_MODULE_6__["default"], {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 31
+    lineNumber: 32
   },
   __self: undefined
 }), __jsx(_components_exhibitors_ExhibitionSection__WEBPACK_IMPORTED_MODULE_7__["default"], {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 32
+    lineNumber: 33
   },
   __self: undefined
 }), __jsx(_components_StudentSection__WEBPACK_IMPORTED_MODULE_8__["default"], {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 33
+    lineNumber: 34
   },
   __self: undefined
 }), __jsx(_components_AuthorSection__WEBPACK_IMPORTED_MODULE_9__["default"], {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 34
+    lineNumber: 35
   },
   __self: undefined
 }))));

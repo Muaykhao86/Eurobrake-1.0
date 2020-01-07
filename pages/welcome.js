@@ -36,6 +36,7 @@ const StyledPage = styled.div`
     &-image{
         overflow: hidden;
         max-height: 59rem;
+        min-width: 100%;
 
     }
 

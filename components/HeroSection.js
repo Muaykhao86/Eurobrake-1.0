@@ -31,13 +31,13 @@ const StyledText = styled(Typography)`
     z-index: 10;
     top: ${props => props.t || '26rem'};
     align-self: center;
-    width: ${props => props.max || props.theme.minWidth };
+    /* width: ${props => props.max || props.theme.minWidth }; */
     line-height: ${props => props.LH || '1'};
     color: ${props => props.theme.white};
     text-align: center;
     text-shadow: 0px 3px 50px #0000008C;
 &&.MuiTypography-body1 {
-        font-size: ${props => props.fs || '10rem'};
+        font-size: ${props => props.fs || '12rem'};
         font-family:${props => props.theme.MPBlack};
         line-height: 1;
 }

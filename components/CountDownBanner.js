@@ -11,7 +11,7 @@ const CDBanner = styled.div`
     background-color: #134381;
     margin-top: 0;
     min-width: 100%;
-    min-height: 19.5rem;
+    min-height: 20vh;
     display: flex;
     justify-content: center;
     align-items: center;

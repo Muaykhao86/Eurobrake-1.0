@@ -14,7 +14,9 @@ import StyledCarousel from '../components/StyledCarousel';
 
 export default () => (
     <>
-    
+        {/* <StyledCarousel ssrFadeout/>
+        <CountDownBanner /> */}
+            
         <HeroSection 
          cara
          src="/images/barcelona.png" 
@@ -23,7 +25,6 @@ export default () => (
         </HeroSection> 
         {/* <div className="Hero">
             <VideoPLayer />
-            <CountDownBanner />
         </div> */}
         <StyledContainer>
             <AboutSection />
