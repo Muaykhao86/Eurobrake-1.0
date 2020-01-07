@@ -30,6 +30,11 @@ const StyledText = styled(Typography)`
     position: absolute;
     z-index: 10;
     top: ${props => props.t || '26rem'};
+     @media only screen 
+        and (max-device-width: 768px) 
+        and (-webkit-min-device-pixel-ratio: 2) {
+    top: ${props => props.t || '14rem'};
+    }
     align-self: center;
     /* width: ${props => props.max || props.theme.minWidth }; */
     line-height: ${props => props.LH || '1'};

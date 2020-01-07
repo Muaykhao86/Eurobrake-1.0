@@ -281,48 +281,48 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 const FooterBar = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div.withConfig({
   displayName: "Footer__FooterBar",
   componentId: "sc-1wn18ws-0"
-})(["color:", ";background:", ";min-width:100%;min-height:10rem;display:flex;justify-content:space-between;align-items:center;position:absolute;bottom:0;padding:2rem;.heading{font-family:", ";font-size:2rem;text-transform:uppercase;align-self:center;@media only screen  and (max-device-width:1200px)  and (-webkit-min-device-pixel-ratio:2){font-size:1.5rem;}}.ftr_container-left{padding:.2rem;min-width:30rem;display:flex;flex-flow:column;}.ftr_middle-links{margin:1rem;padding:.2rem;min-width:20rem;min-height:20rem;flex:1 1 auto;display:flex;flex-flow:column;justify-content:space-between;align-items:center;}.ftr_container-right{display:flex;flex-flow:column;align-items:center;margin-bottom:3.3rem;}.ftr_container-map{display:flex;flex-flow:column;height:25rem;align-items:center;position:relative;}.ftr_newsletter-box{display:flex;flex-flow:row;align-items:center;justify-content:space-between;@media only screen  and (max-device-width:1200px)  and (-webkit-min-device-pixel-ratio:2){flex-flow:column;align-items:center}}.ftr_sponsor-box{background-color:white;padding:.5rem;max-width:42rem;border:1px solid white;height:25rem;display:flex;flex-flow:wrap;justify-content:center;align-items:center;align-content:center;.sponsor{margin:0 1rem;cursor:pointer;}}.ftr_container-icons{display:flex;width:auto;flex-wrap:wrap;justify-content:space-between;position:relative;@media only screen  and (max-device-width:1200px)  and (-webkit-min-device-pixel-ratio:2){width:15rem;}}.social{color:", ";;margin:1rem;font-size:2rem;}a{color:", ";text-transform:uppercase;font-family:", ";font-size:2rem;@media only screen  and (max-device-width:1200px)  and (-webkit-min-device-pixel-ratio:2){font-size:1.5rem;}}h1{padding:1rem;text-align:center;}input{margin:.5rem;}label{font-family:", ";font-size:2rem;text-transform:uppercase;@media only screen  and (max-device-width:1200px)  and (-webkit-min-device-pixel-ratio:2){font-size:1.5rem;}}"], props => props.theme.white, props => props.theme.primary, props => props.theme.MPBold, props => props.theme.white, props => props.theme.white, props => props.theme.MPBold, props => props.theme.MPBold);
+})(["color:", ";background:", ";min-width:100%;min-height:10rem;display:flex;justify-content:space-between;align-items:center;position:absolute;bottom:0;padding:2rem;.heading{font-family:", ";font-size:2rem;text-transform:uppercase;align-self:center;@media only screen  and (max-device-width:1200px)  and (-webkit-min-device-pixel-ratio:2){font-size:1.5rem;}}.ftr_container-left{border:1px solid #FFF;min-width:30rem;display:flex;flex-flow:column;}.ftr_middle-links{margin:0 1rem;padding:.2rem;min-width:20rem;min-height:20rem;flex:1 1 auto;display:flex;flex-flow:column;justify-content:space-between;align-items:center;}.ftr_container-right{border:1px solid #FFF;display:flex;flex-flow:column;align-items:center;}.ftr_container-map{height:25rem;position:relative;}.ftr_newsletter-box{display:flex;flex:1 1 auto;flex-flow:row;align-items:center;justify-content:space-between;@media only screen  and (max-device-width:1200px)  and (-webkit-min-device-pixel-ratio:2){flex-flow:column;align-items:center}}.ftr_sponsor-box{background-color:white;padding:.5rem;max-width:42rem;border:1px solid white;height:25rem;display:flex;flex-flow:wrap;justify-content:center;align-items:center;align-content:center;.sponsor{margin:0 1rem;cursor:pointer;}}.ftr_container-icons{display:flex;width:auto;flex-wrap:wrap;justify-content:space-between;position:relative;@media only screen  and (max-device-width:1200px)  and (-webkit-min-device-pixel-ratio:2){width:10rem;}}.social{color:", ";;margin:1rem;font-size:2rem;}a{color:", ";text-transform:uppercase;font-family:", ";font-size:2rem;@media only screen  and (max-device-width:1200px)  and (-webkit-min-device-pixel-ratio:2){font-size:1.5rem;}}h1{padding:1rem;text-align:center;}input{margin:.5rem;}label{font-family:", ";font-size:2rem;text-transform:uppercase;@media only screen  and (max-device-width:1200px)  and (-webkit-min-device-pixel-ratio:2){font-size:1.5rem;}}"], props => props.theme.white, props => props.theme.primary, props => props.theme.MPBold, props => props.theme.white, props => props.theme.white, props => props.theme.MPBold, props => props.theme.MPBold);
 
 function Footer() {
   return __jsx(FooterBar, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 170
+      lineNumber: 169
     },
     __self: this
   }, __jsx("div", {
     className: "ftr_container-left",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 171
+      lineNumber: 170
     },
     __self: this
   }, __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_4___default.a, {
     className: "heading",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 172
+      lineNumber: 171
     },
     __self: this
   }, "CONFIRMED EUROBRAKE 2020 SPONSORS"), __jsx("div", {
     className: "ftr_sponsor-box",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 173
+      lineNumber: 172
     },
     __self: this
   }, __jsx("div", {
     className: "sponsor",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 174
+      lineNumber: 173
     },
     __self: this
   }, __jsx("a", {
     href: "http://www.applusidiada.com/en/",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 174
+      lineNumber: 173
     },
     __self: this
   }, __jsx("img", {
@@ -334,6 +334,32 @@ function Footer() {
     },
     __source: {
       fileName: _jsxFileName,
+      lineNumber: 173
+    },
+    __self: this
+  }))), __jsx("div", {
+    className: "sponsor",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 174
+    },
+    __self: this
+  }, __jsx("a", {
+    href: "http://www.applusidiada.com/en/",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 174
+    },
+    __self: this
+  }, __jsx("img", {
+    src: "https://www.eurobrake.net/res/display/default/chrome/logos/itt.png",
+    alt: "",
+    style: {
+      maxHeight: '5rem',
+      width: '8rem'
+    },
+    __source: {
+      fileName: _jsxFileName,
       lineNumber: 174
     },
     __self: this
@@ -352,11 +378,11 @@ function Footer() {
     },
     __self: this
   }, __jsx("img", {
-    src: "https://www.eurobrake.net/res/display/default/chrome/logos/itt.png",
+    src: "https://www.eurobrake.net/res/display/default/chrome/logos/horiba2.png",
     alt: "",
     style: {
       maxHeight: '5rem',
-      width: '8rem'
+      width: '10rem'
     },
     __source: {
       fileName: _jsxFileName,
@@ -378,10 +404,10 @@ function Footer() {
     },
     __self: this
   }, __jsx("img", {
-    src: "https://www.eurobrake.net/res/display/default/chrome/logos/horiba2.png",
+    src: "https://www.eurobrake.net/res/display/default/chrome/logos/nof2.png",
     alt: "",
     style: {
-      maxHeight: '5rem',
+      maxheight: '5rem',
       width: '10rem'
     },
     __source: {
@@ -404,10 +430,10 @@ function Footer() {
     },
     __self: this
   }, __jsx("img", {
-    src: "https://www.eurobrake.net/res/display/default/chrome/logos/nof2.png",
+    src: "https://www.eurobrake.net/res/display/default/chrome/logos/itaprochim3.png",
     alt: "",
     style: {
-      maxheight: '5rem',
+      maxHeight: '5rem',
       width: '10rem'
     },
     __source: {
@@ -430,7 +456,7 @@ function Footer() {
     },
     __self: this
   }, __jsx("img", {
-    src: "https://www.eurobrake.net/res/display/default/chrome/logos/itaprochim3.png",
+    src: "https://www.eurobrake.net/res/display/default/chrome/logos/link3.png",
     alt: "",
     style: {
       maxHeight: '5rem',
@@ -456,7 +482,7 @@ function Footer() {
     },
     __self: this
   }, __jsx("img", {
-    src: "https://www.eurobrake.net/res/display/default/chrome/logos/link3.png",
+    src: "https://www.eurobrake.net/res/display/default/chrome/logos/fagorederlangroup.png",
     alt: "",
     style: {
       maxHeight: '5rem',
@@ -482,7 +508,7 @@ function Footer() {
     },
     __self: this
   }, __jsx("img", {
-    src: "https://www.eurobrake.net/res/display/default/chrome/logos/fagorederlangroup.png",
+    src: "https://www.eurobrake.net/res/display/default/chrome/logos/lapinus2.png",
     alt: "",
     style: {
       maxHeight: '5rem',
@@ -508,7 +534,7 @@ function Footer() {
     },
     __self: this
   }, __jsx("img", {
-    src: "https://www.eurobrake.net/res/display/default/chrome/logos/lapinus2.png",
+    src: "https://www.eurobrake.net/res/display/default/chrome/logos/sadeca2.png",
     alt: "",
     style: {
       maxHeight: '5rem',
@@ -534,7 +560,7 @@ function Footer() {
     },
     __self: this
   }, __jsx("img", {
-    src: "https://www.eurobrake.net/res/display/default/chrome/logos/sadeca2.png",
+    src: "https://www.eurobrake.net/res/display/default/chrome/logos/alroko.png",
     alt: "",
     style: {
       maxHeight: '5rem',
@@ -545,77 +571,51 @@ function Footer() {
       lineNumber: 182
     },
     __self: this
-  }))), __jsx("div", {
-    className: "sponsor",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 183
-    },
-    __self: this
-  }, __jsx("a", {
-    href: "http://www.applusidiada.com/en/",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 183
-    },
-    __self: this
-  }, __jsx("img", {
-    src: "https://www.eurobrake.net/res/display/default/chrome/logos/alroko.png",
-    alt: "",
-    style: {
-      maxHeight: '5rem',
-      width: '10rem'
-    },
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 183
-    },
-    __self: this
   }))))), __jsx("div", {
     className: "ftr_middle-links",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 186
+      lineNumber: 185
     },
     __self: this
   }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
     href: "/privacyPolicy",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 187
+      lineNumber: 186
     },
     __self: this
   }, __jsx("a", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 187
+      lineNumber: 186
     },
     __self: this
   }, "Privacy Policy")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
     href: "/disclaimer",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 188
+      lineNumber: 187
     },
     __self: this
   }, __jsx("a", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 188
+      lineNumber: 187
     },
     __self: this
   }, "Disclaimer")), __jsx("a", {
     href: "",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 189
+      lineNumber: 188
     },
     __self: this
   }, "Contact Us"), __jsx("div", {
     className: "ftr_container-icons",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 192
+      lineNumber: 191
     },
     __self: this
   }, __jsx("a", {
@@ -623,18 +623,18 @@ function Footer() {
     href: "http://www.linkedin.com/groups/EuroBrake-4282205?trk=myg_ugrp_ovr",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 193
+      lineNumber: 192
     },
     __self: this
   }, __jsx("img", {
     src: "/images/LinkedIn@2000x.png",
     alt: "Linkedin",
     style: {
-      maxWidth: '5rem'
+      maxWidth: '3rem'
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 194
+      lineNumber: 193
     },
     __self: this
   })), __jsx("a", {
@@ -642,18 +642,18 @@ function Footer() {
     href: "http://www.facebook.com/pages/FISITA-International-Federation-of-Automotive-Engineering-Societies/123022704532",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 196
+      lineNumber: 195
     },
     __self: this
   }, __jsx("img", {
     src: "/images/Facebook@2000x.png",
     alt: "Facebook",
     style: {
-      maxWidth: '5rem'
+      maxWidth: '3rem'
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 197
+      lineNumber: 196
     },
     __self: this
   })), __jsx("a", {
@@ -661,18 +661,18 @@ function Footer() {
     href: "http://twitter.com/FISITAhq",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 199
+      lineNumber: 198
     },
     __self: this
   }, __jsx("img", {
     src: "/images/Twitter@2000x.png",
     alt: "Twitter",
     style: {
-      maxWidth: '5rem'
+      maxWidth: '3rem'
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 200
+      lineNumber: 199
     },
     __self: this
   })), __jsx("a", {
@@ -680,32 +680,35 @@ function Footer() {
     href: "https://www.flickr.com/photos/eurobrake/albums/72157681368290774",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 202
+      lineNumber: 201
     },
     __self: this
   }, __jsx("img", {
     src: "/images/flickr-icon@2000w.png",
     alt: "Flickr",
     style: {
-      maxWidth: '5rem'
+      maxWidth: '3rem'
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 203
+      lineNumber: 202
     },
     __self: this
   }))), __jsx("div", {
     className: "ftr_newsletter-box",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 206
+      lineNumber: 205
     },
     __self: this
   }, __jsx("label", {
     htmlFor: "Newsletter",
+    style: {
+      margimRight: 'auto'
+    },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 207
+      lineNumber: 206
     },
     __self: this
   }, "Newsletter"), __jsx("input", {
@@ -714,39 +717,31 @@ function Footer() {
     id: "",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 208
+      lineNumber: 207
     },
     __self: this
   }), __jsx(_Button__WEBPACK_IMPORTED_MODULE_5__["Button"], {
-    padding: ".3rem 1.5rem",
+    padding: ".2rem 1.5rem",
     style: {
-      margin: '.5rem',
       fontSize: "1rem"
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 209
+      lineNumber: 208
     },
     __self: this
   }, "submit"))), __jsx("div", {
     className: "ftr_container-right",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 212
-    },
-    __self: this
-  }, __jsx("div", {
-    className: "ftr_container-map",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 214
+      lineNumber: 211
     },
     __self: this
   }, __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_4___default.a, {
     className: "heading",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 215
+      lineNumber: 212
     },
     __self: this
   }, "Visit the CCIB wesbsite ", __jsx("a", {
@@ -756,13 +751,20 @@ function Footer() {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 215
+      lineNumber: 212
     },
     __self: this
-  }, "HERE")), __jsx(_GoogleMaps__WEBPACK_IMPORTED_MODULE_3__["default"], {
+  }, "HERE")), __jsx("div", {
+    className: "ftr_container-map",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 216
+      lineNumber: 213
+    },
+    __self: this
+  }, __jsx(_GoogleMaps__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 214
     },
     __self: this
   }))));

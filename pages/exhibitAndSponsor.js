@@ -4,8 +4,8 @@ import Link from 'next/link';
 import Typography from '@material-ui/core/Typography';
 import HeroSection from '../components/HeroSection';
 import StopIcon from '@material-ui/icons/Stop';
-import {Button} from '../components/Button';
-import {Quote, MailIcon, PhoneIcon} from '../components/Icons';
+import { Button } from '../components/Button';
+import { Quote, MailIcon, PhoneIcon } from '../components/Icons';
 
 
 const StyledPage = styled.div`
@@ -25,6 +25,20 @@ const StyledPage = styled.div`
         color: ${props => props.theme.primary};
         font-family: ${props => props.theme.MPLight};
         font-size: 2rem;
+
+    &-icon{
+        position: absolute;
+        left: -29px;
+        top: 9px;
+
+        &_text{
+        line-height: 3.5rem;/* needed? */
+        position: relative;
+        margin-left: 3rem;
+        }
+
+    }
+
     &-title{
         color: ${props => props.theme.primary};
         font-family: ${props => props.theme.MPSemibold};
@@ -33,17 +47,25 @@ const StyledPage = styled.div`
     }
     &_list{
         /* NEED TO INLINE BULLET POINTS! */
+        li{
+        position: relative;
         list-style-type: none;
         list-style-position:inside;
+        margin-left: 3rem;
         margin-bottom: 1rem;
-/*         
-        li{ 
-            display: inline;
-            vertical-align: middle;
-        } */
-           }
+        line-height: 3.5rem;
+        /* list-style: square url('') */
+        
+            &:before{ 
+                content: '■';
+                position: absolute;
+                font-size: 3.14rem;
+                left: -27px;
+                top: -6.1px;
+                          }
+        }
    
-  
+    }
 
     &_list-title{
         margin-bottom: 1rem;
@@ -67,6 +89,8 @@ const StyledPage = styled.div`
     }
 
 }
+
+
     .button_box{
         display: flex;
         justify-content: flex-start;
@@ -107,133 +131,83 @@ const StyledPage = styled.div`
 
 const StyledQuote = styled.div`
     margin-top: 5rem; 
-    
-     /* position: relative; */
-/*
-    .Quote-text_box{
-
-        padding: 2.5rem;
-        position: absolute;
-        display: flex;
-        flex-flow: column;
-        justify-content: space-between;
-        height: 100%;
-        width: 90%;
-    }
-    .Quote-text{
-        flex: 1 1 auto;
-        color: white;
-        font-size: 2rem;
-        font-family: ${props => props.theme.MPLight};
-
-        &_bold{
-        font-family: ${props => props.theme.MPBold};
-    }
-    } */
-`;
+    `;
 
 // ! NEED TO SORT OUT MEDIA QUERIS FOR TEXT DUE TO SVG NOT SCALING WITH FONT
 //  * OPTIONS ARE TO REDO QOUTE MARKS AND SET THE Z-INDEZX AS -100? 
 
 export default () => (
     <>
-        <HeroSection 
-        t="30rem" 
-        max="55%"
-        src="/images/BarClip.png"
-             >
+        <HeroSection
+            t="30rem"
+            max="55%"
+            src="/images/BarClip.png"
+        >
             Exhibition and Sponsorship
         </HeroSection>
         <StyledPage>
             <div className="Exhibit">
 
-            <Typography gutterBottom className="Exhibit-title">Exhibit & Sponsor at EuroBrake</Typography>
-            <div className="margin-bottom1.5">
-                <img src="/images/ccibClip.png" alt="" style={{width: '100%', height: '100%'}}/>
-            </div>
-            <Typography gutterBottom className="Exhibit Exhibit-bold margin-top5">EuroBrake’s accompanying technical exhibition offers an ideal opportunity to present your company’s products, services and technical capabilities to key decision-makers, from industry players to new entrants in specialist engineering. </Typography>
-            <Typography gutterBottom className="Exhibit ">There were around 100 companies that took part in the EuroBrake 2019 exhibition, representing the entire value chain from leading industry players to new entrants, including brake suppliers, component suppliers, material manufacturers and specialist engineering, testing, measurement and simulation providers. EuroBrake’s exhibition has rapidly sold out in previous years, companies are advised to book well in advance of the event as in-demand booths are sold on a first-come, first-served basis.</Typography>
-            <Typography gutterBottom className="Exhibit ">A range of sought-after sponsorship packages are available to help position your company as a leader in the braking technology world.</Typography>
-            <div className="button_box">
+                <Typography gutterBottom className="Exhibit-title">Exhibit & Sponsor at EuroBrake</Typography>
+                <div className="margin-bottom1.5">
+                    <img src="/images/ccibClip.png" alt="" style={{ width: '100%', height: '100%' }} />
+                </div>
+                <Typography gutterBottom className="Exhibit Exhibit-bold margin-top5">EuroBrake’s accompanying technical exhibition offers an ideal opportunity to present your company’s products, services and technical capabilities to key decision-makers, from industry players to new entrants in specialist engineering. </Typography>
+                <Typography gutterBottom className="Exhibit ">There were around 100 companies that took part in the EuroBrake 2019 exhibition, representing the entire value chain from leading industry players to new entrants, including brake suppliers, component suppliers, material manufacturers and specialist engineering, testing, measurement and simulation providers. EuroBrake’s exhibition has rapidly sold out in previous years, companies are advised to book well in advance of the event as in-demand booths are sold on a first-come, first-served basis.</Typography>
+                <Typography gutterBottom className="Exhibit ">A range of sought-after sponsorship packages are available to help position your company as a leader in the braking technology world.</Typography>
+                <div className="button_box">
 
-            <Button
-            background="#134381"
-            br="100rem"
-            bcolor="#134381"
-            style={{margin: '3.5rem 0', }}
-            >Download the exhibition & sponsorship brochure</Button>
-            </div>
-            <div className="infoBox">
-                <div className="infoBox-text">
+                    <Button
+                        background="#134381"
+                        br="100rem"
+                        bcolor="#134381"
+                        style={{ margin: '3.5rem 0', }}
+                    >Download the exhibition & sponsorship brochure</Button>
+                </div>
+                <div className="infoBox">
+                    <div className="infoBox-text">
 
-            <Typography gutterBottom className="Exhibit Exhibit-italic" style={{color: 'black'}}>Please note, all sponsor.exhibitor content must be sent to FISITA by<span className="Exhibit-boldIt"> Tuesday 28 January 2020</span> for inclusion in the Preliminary Program.</Typography>
-            <Typography gutterBottom className="Exhibit  Exhibit-bold" style={{color: 'black'}}>For more information please contact FISITA: </Typography>
-                
-                <Typography gutterBottom className="Exhibit  Exhibit-bold" style={{color: 'black'}}><PhoneIcon width="20" height="20" color="#000"style={{marginRight: '1rem'}}/> +44 (0) 1279883470 </Typography>
-            <Typography gutterBottom className="Exhibit Exhibit-bold" style={{color: 'black'}}><MailIcon width="20" height="20" color="#000"style={{marginRight: '1rem'}}/> sales@fisita.com</Typography>
+                        <Typography gutterBottom className="Exhibit Exhibit-italic" style={{ color: 'black' }}>Please note, all sponsor.exhibitor content must be sent to FISITA by<span className="Exhibit-boldIt"> Tuesday 28 January 2020</span> for inclusion in the Preliminary Program.</Typography>
+                        <Typography gutterBottom className="Exhibit  Exhibit-bold" style={{ color: 'black' }}>For more information please contact FISITA: </Typography>
+
+                        <Typography gutterBottom className="Exhibit  Exhibit-bold Exhibit-icon_text" style={{ color: 'black', marginLeft: '3rem'  }}><PhoneIcon className="Exhibit-icon" width="20" height="20" color="#000"  /> +44 (0) 1279883470 </Typography>
+                        <Typography gutterBottom className="Exhibit Exhibit-bold Exhibit-icon_text" style={{ color: 'black' , marginLeft: '3rem' }}><MailIcon className="Exhibit-icon" width="20" height="20" color="#000" /> sales@fisita.com</Typography>
+                    </div>
+                </div>
+                <StyledQuote>
+                    <Quote />
+                </StyledQuote>
+
+                <Typography gutterBottom className="Exhibit-title">Why exhibit at EuroBrake?</Typography>
+                <ul className="Exhibit_list">
+                    <li> <Typography className="Exhibit" >Build relationships with existing and new customers throughout the vehicle and braking communities</Typography></li>
+                    <li> <Typography className="Exhibit" >Save time and cost with an efficient programme located in a convenient European location</Typography> </li>
+                    <li> <Typography className="Exhibit" >Take advantage of great value exhibition and sponsorship packages which include delegate attendance, visibility in the programme and on line – all promoted throughout the FISITA network</Typography></li>
+                </ul>
+                <div className="">
+                    <Typography gutterBottom className="Exhibit  Exhibit-bold" style={{}}>For more information please contact FISITA: </Typography>
+                    <Typography gutterBottom className="Exhibit  Exhibit-bold Exhibit-icon_text" style={{}}><PhoneIcon className="Exhibit-icon" width="20" height="20" /> +44 (0) 1279883470 </Typography>
+                    <Typography gutterBottom className="Exhibit Exhibit-bold  Exhibit-icon_text" style={{}}><MailIcon className="Exhibit-icon" width="20" height="20" /> sales@fisita.com</Typography>
+                </div>
+                <div className="button_box">
+
+                    <Button
+                        background="#134381"
+                        br="100rem"
+                        bcolor="#134381"
+                        style={{ margin: '3.5rem 0' }}
+                    >DOWNLOAD THE EXHBITOR TERMS & CONDITIONS</Button>
                 </div>
             </div>
-            <StyledQuote>
-                <Quote />
-            </StyledQuote>
-            {/* <StyledQuote>
-             {/* <div className="Quote-text_box">
-            <div>
-            <Typography 
-            gutterBottom 
-            className="Quote-text"
-            > 
-
-            <span style={{color: '#F9B721'}}>&quot;</span> lt was a great experience to be part of the EuroBrake exhibition in 2018, which allowed us to promote the Horiba name,
-             explain to customers what we do and make new contacts from all over the world. <span style={{color: '#F9B721'}}>&quot;</span> </Typography>
-            </div>
-            <div>
-
-            <Typography 
-            className="Quote-text Quote-text_bold"
-            >Greg Filer</Typography>
-            <Typography 
-            gutterBottom 
-            className="Quote-text"
-            >Product Manager, HORIBA Europe GmbH</Typography>
-            </div>
-            </div>   
-
-                <Quote />
-            </StyledQuote> */} 
-          
-                
-
-            <Typography gutterBottom className="Exhibit-title">Why exhibit at EuroBrake?</Typography>
-             <ul className="Exhibit_list">
-                    <li> <Typography  className="Exhibit" ><StopIcon style={{marginRight: '1rem'}}/>Build relationships with existing and new customers throughout the vehicle and braking communities</Typography></li>
-                    <li> <Typography  className="Exhibit" ><StopIcon style={{marginRight: '1rem'}}/>Save time and cost with an efficient programme located in a convenient European location</Typography> </li>
-                    <li> <Typography  className="Exhibit" ><StopIcon style={{marginRight: '1rem'}}/>Take advantage of great value exhibition and sponsorship packages which include delegate attendance, visibility in the programme and on line – all promoted throughout the FISITA network</Typography></li>
-                </ul>
-            <div className="">
-            <Typography gutterBottom className="Exhibit  Exhibit-bold" style={{}}>For more information please contact FISITA: </Typography>
-            <Typography gutterBottom className="Exhibit  Exhibit-bold" style={{}}><PhoneIcon width="20" height="20" style={{marginRight: '1rem'}}/> +44 (0) 1279883470 </Typography>
-            <Typography gutterBottom className="Exhibit Exhibit-bold" style={{}}><MailIcon width="20" height="20" style={{marginRight: '1rem'}}/> sales@fisita.com</Typography>
-            </div>
-             <div className="button_box">
-
-             <Button
-            background="#134381"
-            br="100rem"
-            bcolor="#134381"
-            style={{margin: '3.5rem 0'}}
-            >DOWNLOAD THE EXHBITOR TERMS & CONDITIONS</Button>
-            </div>
-             </div>
         </StyledPage>
     </>
 )
 
 
- 
 
 
-            {/* <Link href="/exhibitors">
+
+{/* <Link href="/exhibitors">
                 <Al>
                     List of Exhibitors
                 </Al>

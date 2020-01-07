@@ -314,7 +314,7 @@ var StyledHero = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div.w
 var StyledText = Object(styled_components__WEBPACK_IMPORTED_MODULE_1__["default"])(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_2__["default"]).withConfig({
   displayName: "HeroSection__StyledText",
   componentId: "sc-1rt21yv-1"
-})(["position:absolute;z-index:10;top:", ";align-self:center;line-height:", ";color:", ";text-align:center;text-shadow:0px 3px 50px #0000008C;&&.MuiTypography-body1{font-size:", ";font-family:", ";line-height:1;}"], function (props) {
+})(["position:absolute;z-index:10;top:", ";@media only screen  and (max-device-width:768px)  and (-webkit-min-device-pixel-ratio:2){top:14rem;}align-self:center;line-height:", ";color:", ";text-align:center;text-shadow:0px 3px 50px #0000008C;&&.MuiTypography-body1{font-size:", ";font-family:", ";line-height:1;}"], function (props) {
   return props.t || '26rem';
 }, function (props) {
   return props.LH || '1';
@@ -333,13 +333,13 @@ function HeroSection(props) {
   return __jsx(StyledHero, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 48
+      lineNumber: 53
     },
     __self: this
   }, cara ? __jsx(_StyledCarousel__WEBPACK_IMPORTED_MODULE_4__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 50
+      lineNumber: 55
     },
     __self: this
   }) : __jsx("img", {
@@ -347,7 +347,7 @@ function HeroSection(props) {
     alt: "EuroBrake Greating",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 51
+      lineNumber: 56
     },
     __self: this
   }), __jsx(StyledText, {
@@ -356,26 +356,26 @@ function HeroSection(props) {
     fs: fs,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 53
+      lineNumber: 58
     },
     __self: this
   }, props.children), __jsx("div", {
     className: "banner",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 56
+      lineNumber: 61
     },
     __self: this
   }, props.banner ? __jsx(props.banner, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 57
+      lineNumber: 62
     },
     __self: this
   }) : __jsx(_CountDownBanner__WEBPACK_IMPORTED_MODULE_3__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 57
+      lineNumber: 62
     },
     __self: this
   })));
@@ -4948,24 +4948,26 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 var Overlay = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div.withConfig({
   displayName: "StyledCarousel__Overlay",
   componentId: "zmlu3k-0"
-})(["background-color:", ";"], function (props) {
-  return props.theme.primary;
-});
+})([""]);
 var Container = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div.withConfig({
   displayName: "StyledCarousel__Container",
   componentId: "zmlu3k-1"
-})(["width:100%;height:80vh;@media only screen  and (max-device-width:768px)  and (-webkit-min-device-pixel-ratio:2){height:60vh;}display:flex;position:relative;overflow:hidden;flex:1 1 80%;background-position:center;"]);
+})(["width:100%;height:80vh;@media only screen  and (max-device-width:768px)  and (-webkit-min-device-pixel-ratio:2){height:", ";}display:flex;position:relative;overflow:hidden;flex:1 1 80%;background-position:center;"], function (props) {
+  return props.h || props.theme.heroHeightSml;
+});
 var StyledSlide = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].img.withConfig({
   displayName: "StyledCarousel__StyledSlide",
   componentId: "zmlu3k-2"
-})(["min-width:100%;min-height:80vh !important;@media only screen  and (max-device-width:768px)  and (-webkit-min-device-pixel-ratio:2){min-height:60vh !important;}"]);
+})(["min-width:100%;height:80vh;@media only screen  and (max-device-width:768px)  and (-webkit-min-device-pixel-ratio:2){height:", ";}"], function (props) {
+  return props.h || props.theme.heroHeightSml;
+});
 
 var CarouselUI = function CarouselUI(_ref) {
   var children = _ref.children;
   return __jsx(Container, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 55
+      lineNumber: 49
     },
     __self: this
   }, children);
@@ -4976,7 +4978,7 @@ function StyledCarousel() {
   return __jsx(Overlay, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 60
+      lineNumber: 54
     },
     __self: this
   }, __jsx(Carousel, {
@@ -4985,14 +4987,14 @@ function StyledCarousel() {
     ,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 62
+      lineNumber: 56
     },
     __self: this
   }, __jsx(react_reveal_Slide__WEBPACK_IMPORTED_MODULE_3___default.a, {
     right: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 63
+      lineNumber: 57
     },
     __self: this
   }, __jsx(StyledSlide, {
@@ -5001,14 +5003,14 @@ function StyledCarousel() {
     alt: "EuroBrake Greating",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 64
+      lineNumber: 58
     },
     __self: this
   })), __jsx(react_reveal_Slide__WEBPACK_IMPORTED_MODULE_3___default.a, {
     right: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 66
+      lineNumber: 60
     },
     __self: this
   }, __jsx(StyledSlide, {
@@ -5017,7 +5019,7 @@ function StyledCarousel() {
     alt: "EuroBrake Greating",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 67
+      lineNumber: 61
     },
     __self: this
   }))));
@@ -26978,7 +26980,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 var StyledPage = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div.withConfig({
   displayName: "exhibitAndSponsor__StyledPage",
   componentId: "sc-17cnlcf-0"
-})(["display:flex;flex-direction:column;align-self:center;width:", ";background-color:", ";@media only screen  and (max-device-width:768px)  and (-webkit-min-device-pixel-ratio:2){width:", ";}.Exhibit{color:", ";font-family:", ";font-size:2rem;&-title{color:", ";font-family:", ";font-size:4.4rem;margin-top:3rem;}&_list{list-style-type:none;list-style-position:inside;margin-bottom:1rem;}&_list-title{margin-bottom:1rem;font-family:", ";font-size:2rem;}&_sub-title{color:", ";font-size:3.5rem;font-family:", ";padding-bottom:.5rem;}&-bold{font-family:", ";}&-italic{font-family:", "}&-boldIt{font-family:", "}}.button_box{display:flex;justify-content:flex-start;}.infoBox{display:flex;flex-flow:column;justify-content:center;min-height:24rem;background-color:", ";width:100vw;position:relative;left:50%;right:50%;margin-left:-50.5vw;margin-right:-50.5vw;&-text{padding:2rem;align-self:center;width:50%;@media only screen  and (max-device-width:768px)  and (-webkit-min-device-pixel-ratio:2){width:80%;};}}.margin-top5{margin-top:5rem;}.margin-bottom1.5{margin-bottom:1.5rem;}"], function (props) {
+})(["display:flex;flex-direction:column;align-self:center;width:", ";background-color:", ";@media only screen  and (max-device-width:768px)  and (-webkit-min-device-pixel-ratio:2){width:", ";}.Exhibit{color:", ";font-family:", ";font-size:2rem;&-icon{position:absolute;left:-29px;top:9px;&_text{line-height:3.5rem;position:relative;margin-left:3rem;}}&-title{color:", ";font-family:", ";font-size:4.4rem;margin-top:3rem;}&_list{li{position:relative;list-style-type:none;list-style-position:inside;margin-left:3rem;margin-bottom:1rem;line-height:3.5rem;&:before{content:'\u25A0';position:absolute;font-size:3.14rem;left:-27px;top:-6.1px;}}}&_list-title{margin-bottom:1rem;font-family:", ";font-size:2rem;}&_sub-title{color:", ";font-size:3.5rem;font-family:", ";padding-bottom:.5rem;}&-bold{font-family:", ";}&-italic{font-family:", "}&-boldIt{font-family:", "}}.button_box{display:flex;justify-content:flex-start;}.infoBox{display:flex;flex-flow:column;justify-content:center;min-height:24rem;background-color:", ";width:100vw;position:relative;left:50%;right:50%;margin-left:-50.5vw;margin-right:-50.5vw;&-text{padding:2rem;align-self:center;width:50%;@media only screen  and (max-device-width:768px)  and (-webkit-min-device-pixel-ratio:2){width:80%;};}}.margin-top5{margin-top:5rem;}.margin-bottom1.5{margin-bottom:1.5rem;}"], function (props) {
   return props.max || props.theme.minWidth;
 }, function (props) {
   return props.theme.white;
@@ -27020,20 +27022,20 @@ var StyledQuote = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div.
     src: "/images/BarClip.png",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 140
+      lineNumber: 141
     },
     __self: this
   }, "Exhibition and Sponsorship"), __jsx(StyledPage, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 147
+      lineNumber: 148
     },
     __self: this
   }, __jsx("div", {
     className: "Exhibit",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 148
+      lineNumber: 149
     },
     __self: this
   }, __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_3__["default"], {
@@ -27041,14 +27043,14 @@ var StyledQuote = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div.
     className: "Exhibit-title",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 150
+      lineNumber: 151
     },
     __self: this
   }, "Exhibit & Sponsor at EuroBrake"), __jsx("div", {
     className: "margin-bottom1.5",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 151
+      lineNumber: 152
     },
     __self: this
   }, __jsx("img", {
@@ -27060,7 +27062,7 @@ var StyledQuote = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div.
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 152
+      lineNumber: 153
     },
     __self: this
   })), __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_3__["default"], {
@@ -27068,7 +27070,7 @@ var StyledQuote = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div.
     className: "Exhibit Exhibit-bold margin-top5",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 154
+      lineNumber: 155
     },
     __self: this
   }, "EuroBrake\u2019s accompanying technical exhibition offers an ideal opportunity to present your company\u2019s products, services and technical capabilities to key decision-makers, from industry players to new entrants in specialist engineering. "), __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_3__["default"], {
@@ -27076,7 +27078,7 @@ var StyledQuote = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div.
     className: "Exhibit ",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 155
+      lineNumber: 156
     },
     __self: this
   }, "There were around 100 companies that took part in the EuroBrake 2019 exhibition, representing the entire value chain from leading industry players to new entrants, including brake suppliers, component suppliers, material manufacturers and specialist engineering, testing, measurement and simulation providers. EuroBrake\u2019s exhibition has rapidly sold out in previous years, companies are advised to book well in advance of the event as in-demand booths are sold on a first-come, first-served basis."), __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_3__["default"], {
@@ -27084,14 +27086,14 @@ var StyledQuote = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div.
     className: "Exhibit ",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 156
+      lineNumber: 157
     },
     __self: this
   }, "A range of sought-after sponsorship packages are available to help position your company as a leader in the braking technology world."), __jsx("div", {
     className: "button_box",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 157
+      lineNumber: 158
     },
     __self: this
   }, __jsx(_components_Button__WEBPACK_IMPORTED_MODULE_6__["Button"], {
@@ -27103,21 +27105,21 @@ var StyledQuote = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div.
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 159
+      lineNumber: 160
     },
     __self: this
   }, "Download the exhibition & sponsorship brochure")), __jsx("div", {
     className: "infoBox",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 166
+      lineNumber: 167
     },
     __self: this
   }, __jsx("div", {
     className: "infoBox-text",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 167
+      lineNumber: 168
     },
     __self: this
   }, __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_3__["default"], {
@@ -27128,14 +27130,14 @@ var StyledQuote = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div.
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 169
+      lineNumber: 170
     },
     __self: this
   }, "Please note, all sponsor.exhibitor content must be sent to FISITA by", __jsx("span", {
     className: "Exhibit-boldIt",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 169
+      lineNumber: 170
     },
     __self: this
   }, " Tuesday 28 January 2020"), " for inclusion in the Preliminary Program."), __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_3__["default"], {
@@ -27146,65 +27148,63 @@ var StyledQuote = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div.
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 170
+      lineNumber: 171
     },
     __self: this
   }, "For more information please contact FISITA: "), __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_3__["default"], {
     gutterBottom: true,
-    className: "Exhibit  Exhibit-bold",
+    className: "Exhibit  Exhibit-bold Exhibit-icon_text",
     style: {
-      color: 'black'
+      color: 'black',
+      marginLeft: '3rem'
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 172
+      lineNumber: 173
     },
     __self: this
   }, __jsx(_components_Icons__WEBPACK_IMPORTED_MODULE_7__["PhoneIcon"], {
+    className: "Exhibit-icon",
     width: "20",
     height: "20",
     color: "#000",
-    style: {
-      marginRight: '1rem'
-    },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 172
+      lineNumber: 173
     },
     __self: this
   }), " +44 (0) 1279883470 "), __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_3__["default"], {
     gutterBottom: true,
-    className: "Exhibit Exhibit-bold",
+    className: "Exhibit Exhibit-bold Exhibit-icon_text",
     style: {
-      color: 'black'
+      color: 'black',
+      marginLeft: '3rem'
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 173
+      lineNumber: 174
     },
     __self: this
   }, __jsx(_components_Icons__WEBPACK_IMPORTED_MODULE_7__["MailIcon"], {
+    className: "Exhibit-icon",
     width: "20",
     height: "20",
     color: "#000",
-    style: {
-      marginRight: '1rem'
-    },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 173
+      lineNumber: 174
     },
     __self: this
   }), " sales@fisita.com"))), __jsx(StyledQuote, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 176
+      lineNumber: 177
     },
     __self: this
   }, __jsx(_components_Icons__WEBPACK_IMPORTED_MODULE_7__["Quote"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 177
+      lineNumber: 178
     },
     __self: this
   })), __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_3__["default"], {
@@ -27212,87 +27212,60 @@ var StyledQuote = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div.
     className: "Exhibit-title",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 207
+      lineNumber: 181
     },
     __self: this
   }, "Why exhibit at EuroBrake?"), __jsx("ul", {
     className: "Exhibit_list",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 208
+      lineNumber: 182
     },
     __self: this
   }, __jsx("li", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 209
+      lineNumber: 183
     },
     __self: this
   }, " ", __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_3__["default"], {
     className: "Exhibit",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 209
+      lineNumber: 183
     },
     __self: this
-  }, __jsx(_material_ui_icons_Stop__WEBPACK_IMPORTED_MODULE_5___default.a, {
-    style: {
-      marginRight: '1rem'
-    },
+  }, "Build relationships with existing and new customers throughout the vehicle and braking communities")), __jsx("li", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 209
-    },
-    __self: this
-  }), "Build relationships with existing and new customers throughout the vehicle and braking communities")), __jsx("li", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 210
+      lineNumber: 184
     },
     __self: this
   }, " ", __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_3__["default"], {
     className: "Exhibit",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 210
+      lineNumber: 184
     },
     __self: this
-  }, __jsx(_material_ui_icons_Stop__WEBPACK_IMPORTED_MODULE_5___default.a, {
-    style: {
-      marginRight: '1rem'
-    },
+  }, "Save time and cost with an efficient programme located in a convenient European location"), " "), __jsx("li", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 210
-    },
-    __self: this
-  }), "Save time and cost with an efficient programme located in a convenient European location"), " "), __jsx("li", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 211
+      lineNumber: 185
     },
     __self: this
   }, " ", __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_3__["default"], {
     className: "Exhibit",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 211
+      lineNumber: 185
     },
     __self: this
-  }, __jsx(_material_ui_icons_Stop__WEBPACK_IMPORTED_MODULE_5___default.a, {
-    style: {
-      marginRight: '1rem'
-    },
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 211
-    },
-    __self: this
-  }), "Take advantage of great value exhibition and sponsorship packages which include delegate attendance, visibility in the programme and on line \u2013 all promoted throughout the FISITA network"))), __jsx("div", {
+  }, "Take advantage of great value exhibition and sponsorship packages which include delegate attendance, visibility in the programme and on line \u2013 all promoted throughout the FISITA network"))), __jsx("div", {
     className: "",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 213
+      lineNumber: 187
     },
     __self: this
   }, __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_3__["default"], {
@@ -27301,54 +27274,50 @@ var StyledQuote = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div.
     style: {},
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 214
+      lineNumber: 188
     },
     __self: this
   }, "For more information please contact FISITA: "), __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_3__["default"], {
     gutterBottom: true,
-    className: "Exhibit  Exhibit-bold",
+    className: "Exhibit  Exhibit-bold Exhibit-icon_text",
     style: {},
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 215
+      lineNumber: 189
     },
     __self: this
   }, __jsx(_components_Icons__WEBPACK_IMPORTED_MODULE_7__["PhoneIcon"], {
+    className: "Exhibit-icon",
     width: "20",
     height: "20",
-    style: {
-      marginRight: '1rem'
-    },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 215
+      lineNumber: 189
     },
     __self: this
   }), " +44 (0) 1279883470 "), __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_3__["default"], {
     gutterBottom: true,
-    className: "Exhibit Exhibit-bold",
+    className: "Exhibit Exhibit-bold  Exhibit-icon_text",
     style: {},
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 216
+      lineNumber: 190
     },
     __self: this
   }, __jsx(_components_Icons__WEBPACK_IMPORTED_MODULE_7__["MailIcon"], {
+    className: "Exhibit-icon",
     width: "20",
     height: "20",
-    style: {
-      marginRight: '1rem'
-    },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 216
+      lineNumber: 190
     },
     __self: this
   }), " sales@fisita.com")), __jsx("div", {
     className: "button_box",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 218
+      lineNumber: 192
     },
     __self: this
   }, __jsx(_components_Button__WEBPACK_IMPORTED_MODULE_6__["Button"], {
@@ -27360,22 +27329,22 @@ var StyledQuote = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div.
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 220
+      lineNumber: 194
     },
     __self: this
   }, "DOWNLOAD THE EXHBITOR TERMS & CONDITIONS")))));
 });
 {
   /* <Link href="/exhibitors">
-     <Al>
-         List of Exhibitors
-     </Al>
-  </Link>
-  <Link href="/exhibitorsRegistration">
-     <Al>
-         Register
-     </Al>
-  </Link> */
+                 <Al>
+                     List of Exhibitors
+                 </Al>
+             </Link>
+             <Link href="/exhibitorsRegistration">
+                 <Al>
+                     Register
+                 </Al>
+             </Link> */
 }
 
 /***/ }),

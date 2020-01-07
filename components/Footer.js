@@ -31,14 +31,14 @@ const FooterBar = styled.div`
     }
 
     .ftr_container-left{
-        padding: .2rem;
+        border: 1px solid #FFF;
         min-width: 30rem;
         
         display: flex;  
         flex-flow: column;
     }
     .ftr_middle-links{
-        margin: 1rem;
+        margin: 0 1rem;
         padding: .2rem;
         min-width: 20rem;
         min-height: 20rem;
@@ -50,19 +50,17 @@ const FooterBar = styled.div`
     }
     .ftr_container-right{
    
+        border: 1px solid #FFF;
         display: flex;
         flex-flow: column;
         align-items: center;
         /* min-width: 30rem; */
-        margin-bottom: 3.3rem;
+        /* margin-bottom: 3.3rem; */
        
     }
     
     .ftr_container-map{
-        display: flex;
-        flex-flow: column;
         height: 25rem;
-        align-items: center; 
         position: relative;
     }
 
@@ -70,6 +68,7 @@ const FooterBar = styled.div`
         /* padding-bottom: 1rem; */
         /* min-width: 40rem;    */
         display: flex;
+        flex: 1 1 auto;
         flex-flow: row;
         align-items: center;
         justify-content: space-between;
@@ -113,7 +112,7 @@ const FooterBar = styled.div`
            @media only screen 
   and (max-device-width: 1200px) 
   and (-webkit-min-device-pixel-ratio: 2) { 
-       width: 15rem;
+       width: 10rem;
 }
       
     }
@@ -191,28 +190,27 @@ function Footer() {
                 <a href="">links</a> */}
             <div className="ftr_container-icons">
                 <a className="social" href="http://www.linkedin.com/groups/EuroBrake-4282205?trk=myg_ugrp_ovr">
-                <img src="/images/LinkedIn@2000x.png" alt="Linkedin" style={{maxWidth: '5rem'}}/>
+                <img src="/images/LinkedIn@2000x.png" alt="Linkedin" style={{maxWidth: '3rem'}}/>
                 </a>
                 <a  className="social" href="http://www.facebook.com/pages/FISITA-International-Federation-of-Automotive-Engineering-Societies/123022704532">
-                    <img src="/images/Facebook@2000x.png" alt="Facebook" style={{maxWidth: '5rem'}}/>
+                    <img src="/images/Facebook@2000x.png" alt="Facebook" style={{maxWidth: '3rem'}}/>
                 </a>
                 <a  className="social" href="http://twitter.com/FISITAhq">
-                    <img src="/images/Twitter@2000x.png" alt="Twitter" style={{maxWidth: '5rem'}}/>
+                    <img src="/images/Twitter@2000x.png" alt="Twitter" style={{maxWidth: '3rem'}}/>
                 </a>
                 <a  className="social" href="https://www.flickr.com/photos/eurobrake/albums/72157681368290774">
-                    <img src="/images/flickr-icon@2000w.png" alt="Flickr" style={{maxWidth: '5rem'}}/>
+                    <img src="/images/flickr-icon@2000w.png" alt="Flickr" style={{maxWidth: '3rem'}}/>
                 </a>
             </div>
             <div className="ftr_newsletter-box">
-                <label htmlFor="Newsletter">Newsletter</label>
+                <label htmlFor="Newsletter" style={{margimRight: 'auto'}}>Newsletter</label>
                 <input type="email" name="Newsletter" id=""/>
-                <Button padding=".3rem 1.5rem"  style={{margin: '.5rem', fontSize: "1rem"}}>submit</Button>    
+                <Button padding=".2rem 1.5rem"  style={{ fontSize: "1rem"}}>submit</Button>    
             </div>
             </div>
             <div className="ftr_container-right">
-
+            <Typography className="heading">Visit the CCIB wesbsite <a href="https://ccib.es/en/" style={{color: '#F9B721'}}>HERE</a></Typography>
             <div className="ftr_container-map">
-                <Typography className="heading">Visit the CCIB wesbsite <a href="https://ccib.es/en/" style={{color: '#F9B721'}}>HERE</a></Typography>
               <MapContainer/>
             </div> 
             </div>

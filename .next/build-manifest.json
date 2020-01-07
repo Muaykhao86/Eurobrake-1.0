@@ -16,10 +16,6 @@
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],
-    "/esop": [
-      "static/runtime/webpack.js",
-      "static/runtime/main.js"
-    ],
     "/exhibitAndSponsor": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"

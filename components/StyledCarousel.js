@@ -8,7 +8,7 @@ import Slide from 'react-reveal/Slide';
 const Overlay = styled.div`
 /* width: 100%;
 height:100%; */
-    background-color: ${props => props.theme.primary};
+    /* background-color: ${props => props.theme.primary}; */
     /* opacity: .8; */
 `;
 
@@ -21,15 +21,9 @@ height: 80vh;
  @media only screen 
         and (max-device-width: 768px) 
         and (-webkit-min-device-pixel-ratio: 2) {
-    height: 60vh;
-    }
+    height: ${props => props.h || props.theme.heroHeightSml };
+    }  
 display: flex;
-// ? CAROUSEL IS PLAYING UP - CANT SEE IT WITH POISTIONI IN RELATIVE BUT NOT MERGING IN THE DOM 
-//? IDEALLY JUST HAVE THE C.D, TIMER @20%  AND CAROUSEL @80VH
-// ! WHY TF -- GOT A FEELINB ITS TO DO WITH THE ABSOLUTE POITIONING ON REACT ::-ms-reveal,
- /* SHOULD I JUST BUILD IT MY SELF */
- /* UPDATE NOW OBJECT FIT IS NIT WORKIN G */
- // ! 
 position: relative;
 
 overflow: hidden;
@@ -41,13 +35,13 @@ background-position: center;
 const StyledSlide = styled.img`
 /* position: absolute; */
 min-width: 100%;
-min-height: 80vh !important;
+height: 80vh ;
        @media only screen 
         and (max-device-width: 768px) 
         and (-webkit-min-device-pixel-ratio: 2) {
-    min-height: 60vh !important;
+    height: ${props => props.h || props.theme.heroHeightSml };
     } 
-  
+     
 `;
 
 
