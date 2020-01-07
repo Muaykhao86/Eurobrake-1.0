@@ -22,6 +22,11 @@ const VideoContainer = styled.div`
 // `;
 
 export default class VideoPlayer extends React.Component {
+  constructor(props) {
+    super(props);
+    
+  }
+  
   render () {
     const videoJsOptions = {
       loop: true,
@@ -31,8 +36,8 @@ export default class VideoPlayer extends React.Component {
       // poster: {Poster},
       sources: [
         {
-          src: '/videos/temp2.mp4',
-          type: 'video/mp4'
+          src: 'https://www.youtube.com/embed/N-Nq9BH9-W4?rel=0&hd=1',
+          type: 'video/youtube'
         }
       ]
     }

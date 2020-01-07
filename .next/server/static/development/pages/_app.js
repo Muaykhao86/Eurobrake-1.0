@@ -1181,7 +1181,7 @@ class Nav extends react__WEBPACK_IMPORTED_MODULE_1__["Component"] {
       },
       __self: this
     }, "Exhibitors Area")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
-      href: "/studentArea",
+      href: "/esop",
       __source: {
         fileName: _jsxFileName,
         lineNumber: 34
@@ -1194,7 +1194,7 @@ class Nav extends react__WEBPACK_IMPORTED_MODULE_1__["Component"] {
         lineNumber: 34
       },
       __self: this
-    }, "Student Area")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
+    }, "Student Opportunities Programme")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
       href: "/exhibitAndSponsor",
       __source: {
         fileName: _jsxFileName,

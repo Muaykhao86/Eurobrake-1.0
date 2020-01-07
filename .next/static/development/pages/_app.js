@@ -1222,7 +1222,7 @@ function (_Component) {
         },
         __self: this
       }, "Exhibitors Area")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_8___default.a, {
-        href: "/studentArea",
+        href: "/esop",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 34
@@ -1235,7 +1235,7 @@ function (_Component) {
           lineNumber: 34
         },
         __self: this
-      }, "Student Area")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_8___default.a, {
+      }, "Student Opportunities Programme")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_8___default.a, {
         href: "/exhibitAndSponsor",
         __source: {
           fileName: _jsxFileName,

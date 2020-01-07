@@ -1,5 +1,4 @@
 import React from 'react'
-import VideoPLayer from '../components/VideoPlayer';
 import CountDownBanner from '../components/CountDownBanner';
 import { StyledContainer } from '../components/styles/HomeStyles';
 import AboutSection from '../components/AboutSection';
@@ -23,9 +22,6 @@ export default () => (
          >
             EuroBrake 2020
         </HeroSection> 
-        {/* <div className="Hero">
-            <VideoPLayer />
-        </div> */}
         <StyledContainer>
             <AboutSection />
             <LocationSection />

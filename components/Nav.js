@@ -31,7 +31,7 @@ export default class Nav extends Component {
                         <Link href="/about"><a onClick={this.handleClick} >About</a></Link>
                         <Link href="/authorsArea"><a onClick={this.handleClick}>Authors Area</a></Link>
                         <Link href="/exhibitorsArea"><a onClick={this.handleClick}>Exhibitors Area</a></Link>
-                        <Link href="/studentArea"><a onClick={this.handleClick}>Student Area</a></Link>
+                        <Link href="/esop"><a onClick={this.handleClick}>Student Opportunities Programme</a></Link>
                         <Link href="/exhibitAndSponsor"><a onClick={this.handleClick}>Exhibition And Sponsorship</a></Link>
                         <Link href="/ticketPortal"><a onClick={this.handleClick}>Ticket Portal</a></Link>
                     </div>

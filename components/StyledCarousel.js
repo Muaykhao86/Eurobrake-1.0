@@ -39,6 +39,7 @@ background-position: center;
 `;
 
 const StyledSlide = styled.img`
+/* position: absolute; */
 min-width: 100%;
 min-height: 80vh !important;
        @media only screen 

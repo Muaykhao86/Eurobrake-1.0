@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 5);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -1945,7 +1945,7 @@ class Nav extends react__WEBPACK_IMPORTED_MODULE_1__["Component"] {
       },
       __self: this
     }, "Exhibitors Area")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
-      href: "/studentArea",
+      href: "/esop",
       __source: {
         fileName: _jsxFileName,
         lineNumber: 34
@@ -1958,7 +1958,7 @@ class Nav extends react__WEBPACK_IMPORTED_MODULE_1__["Component"] {
         lineNumber: 34
       },
       __self: this
-    }, "Student Area")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
+    }, "Student Opportunities Programme")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
       href: "/exhibitAndSponsor",
       __source: {
         fileName: _jsxFileName,
@@ -2323,73 +2323,6 @@ class Page extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
 
 /***/ }),
 
-/***/ "./components/Player.js":
-/*!******************************!*\
-  !*** ./components/Player.js ***!
-  \******************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var video_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! video.js */ "video.js");
-/* harmony import */ var video_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(video_js__WEBPACK_IMPORTED_MODULE_1__);
-var _jsxFileName = "/mnt/c/Users/D.Hardiman/desktop/eurobrake/components/Player.js";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
-
-
-
-class Player extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
-  componentDidMount() {
-    // instantiate Video.js
-    this.player = video_js__WEBPACK_IMPORTED_MODULE_1___default()(this.videoNode, this.props, function onPlayerReady() {
-      console.log('onPlayerReady', this);
-    });
-  } // destroy player on unmount
-
-
-  componentWillUnmount() {
-    if (this.player) {
-      this.player.dispose();
-    }
-  } // wrap the player in a div with a `data-vjs-player` attribute
-  // so videojs won't create additional wrapper in the DOM
-  // see https://github.com/videojs/video.js/pull/3856
-
-
-  render() {
-    return __jsx("div", {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 25
-      },
-      __self: this
-    }, __jsx("div", {
-      "data-vjs-player": true,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 26
-      },
-      __self: this
-    }, __jsx("video", {
-      ref: node => this.videoNode = node,
-      className: "video-js",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 27
-      },
-      __self: this
-    })));
-  }
-
-}
-
-/* harmony default export */ __webpack_exports__["default"] = (Player);
-
-/***/ }),
-
 /***/ "./components/StudentSection.js":
 /*!**************************************!*\
   !*** ./components/StudentSection.js ***!
@@ -2550,7 +2483,7 @@ const CarouselUI = ({
 }) => __jsx(Container, {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 54
+    lineNumber: 55
   },
   __self: undefined
 }, children);
@@ -2560,7 +2493,7 @@ function StyledCarousel() {
   return __jsx(Overlay, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 59
+      lineNumber: 60
     },
     __self: this
   }, __jsx(Carousel, {
@@ -2569,14 +2502,14 @@ function StyledCarousel() {
     ,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 61
+      lineNumber: 62
     },
     __self: this
   }, __jsx(react_reveal_Slide__WEBPACK_IMPORTED_MODULE_3___default.a, {
     right: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 62
+      lineNumber: 63
     },
     __self: this
   }, __jsx(StyledSlide, {
@@ -2585,14 +2518,14 @@ function StyledCarousel() {
     alt: "EuroBrake Greating",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 63
+      lineNumber: 64
     },
     __self: this
   })), __jsx(react_reveal_Slide__WEBPACK_IMPORTED_MODULE_3___default.a, {
     right: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 65
+      lineNumber: 66
     },
     __self: this
   }, __jsx(StyledSlide, {
@@ -2601,81 +2534,10 @@ function StyledCarousel() {
     alt: "EuroBrake Greating",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 66
+      lineNumber: 67
     },
     __self: this
   }))));
-}
-
-/***/ }),
-
-/***/ "./components/VideoPlayer.js":
-/*!***********************************!*\
-  !*** ./components/VideoPlayer.js ***!
-  \***********************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return VideoPlayer; });
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/extends */ "./node_modules/@babel/runtime-corejs2/helpers/esm/extends.js");
-/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/head */ "next/head");
-/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_head__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _components_Player__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/Player */ "./components/Player.js");
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! styled-components */ "styled-components");
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _node_modules_video_js_dist_video_js_css__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../node_modules/video.js/dist/video-js.css */ "./node_modules/video.js/dist/video-js.css");
-/* harmony import */ var _node_modules_video_js_dist_video_js_css__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_node_modules_video_js_dist_video_js_css__WEBPACK_IMPORTED_MODULE_5__);
-
-var _jsxFileName = "/mnt/c/Users/D.Hardiman/desktop/eurobrake/components/VideoPlayer.js";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement;
-
-
-
-
-
-const VideoContainer = styled_components__WEBPACK_IMPORTED_MODULE_4___default.a.div.withConfig({
-  displayName: "VideoPlayer__VideoContainer",
-  componentId: "sc-7m7rkg-0"
-})(["padding:0;position:relative;top:0;left:0;min-width:100%;"]); // const Poster = styled.img.attrs(props => ({
-//   src: '/images/video-poster.jpg'
-// }))`
-//     min-width: 100%;
-//     min-height: 100%;
-// `;
-
-class VideoPlayer extends react__WEBPACK_IMPORTED_MODULE_2___default.a.Component {
-  render() {
-    const videoJsOptions = {
-      loop: true,
-      autoplay: 'true',
-      //! doesnnt work in firefox
-      fluid: true,
-      controls: false,
-      // poster: {Poster},
-      sources: [{
-        src: '/videos/temp2.mp4',
-        type: 'video/mp4'
-      }]
-    };
-    return __jsx(VideoContainer, {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 41
-      },
-      __self: this
-    }, __jsx(_components_Player__WEBPACK_IMPORTED_MODULE_3__["default"], Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, videoJsOptions, {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 42
-      },
-      __self: this
-    })));
-  }
-
 }
 
 /***/ }),
@@ -3012,39 +2874,6 @@ function _defineProperty(obj, key, value) {
   }
 
   return obj;
-}
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime-corejs2/helpers/esm/extends.js":
-/*!********************************************************************!*\
-  !*** ./node_modules/@babel/runtime-corejs2/helpers/esm/extends.js ***!
-  \********************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _extends; });
-/* harmony import */ var _core_js_object_assign__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../core-js/object/assign */ "./node_modules/@babel/runtime-corejs2/core-js/object/assign.js");
-/* harmony import */ var _core_js_object_assign__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_core_js_object_assign__WEBPACK_IMPORTED_MODULE_0__);
-
-function _extends() {
-  _extends = _core_js_object_assign__WEBPACK_IMPORTED_MODULE_0___default.a || function (target) {
-    for (var i = 1; i < arguments.length; i++) {
-      var source = arguments[i];
-
-      for (var key in source) {
-        if (Object.prototype.hasOwnProperty.call(source, key)) {
-          target[key] = source[key];
-        }
-      }
-    }
-
-    return target;
-  };
-
-  return _extends.apply(this, arguments);
 }
 
 /***/ }),
@@ -7554,17 +7383,6 @@ module.exports = __webpack_require__(/*! ./dist/client/link */ "./node_modules/n
 
 /***/ }),
 
-/***/ "./node_modules/video.js/dist/video-js.css":
-/*!*************************************************!*\
-  !*** ./node_modules/video.js/dist/video-js.css ***!
-  \*************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-
-
-/***/ }),
-
 /***/ "./pages/index.js":
 /*!************************!*\
   !*** ./pages/index.js ***!
@@ -7576,17 +7394,16 @@ module.exports = __webpack_require__(/*! ./dist/client/link */ "./node_modules/n
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _components_VideoPlayer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/VideoPlayer */ "./components/VideoPlayer.js");
-/* harmony import */ var _components_CountDownBanner__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/CountDownBanner */ "./components/CountDownBanner.js");
-/* harmony import */ var _components_styles_HomeStyles__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/styles/HomeStyles */ "./components/styles/HomeStyles.js");
-/* harmony import */ var _components_AboutSection__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/AboutSection */ "./components/AboutSection.js");
-/* harmony import */ var _components_LocationSection__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/LocationSection */ "./components/LocationSection.js");
-/* harmony import */ var _components_AttendeesSection__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/AttendeesSection */ "./components/AttendeesSection.js");
-/* harmony import */ var _components_exhibitors_ExhibitionSection__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../components/exhibitors/ExhibitionSection */ "./components/exhibitors/ExhibitionSection.js");
-/* harmony import */ var _components_StudentSection__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../components/StudentSection */ "./components/StudentSection.js");
-/* harmony import */ var _components_AuthorSection__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../components/AuthorSection */ "./components/AuthorSection.js");
-/* harmony import */ var _components_HeroSection__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../components/HeroSection */ "./components/HeroSection.js");
-/* harmony import */ var _components_StyledCarousel__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../components/StyledCarousel */ "./components/StyledCarousel.js");
+/* harmony import */ var _components_CountDownBanner__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/CountDownBanner */ "./components/CountDownBanner.js");
+/* harmony import */ var _components_styles_HomeStyles__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/styles/HomeStyles */ "./components/styles/HomeStyles.js");
+/* harmony import */ var _components_AboutSection__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/AboutSection */ "./components/AboutSection.js");
+/* harmony import */ var _components_LocationSection__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/LocationSection */ "./components/LocationSection.js");
+/* harmony import */ var _components_AttendeesSection__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/AttendeesSection */ "./components/AttendeesSection.js");
+/* harmony import */ var _components_exhibitors_ExhibitionSection__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/exhibitors/ExhibitionSection */ "./components/exhibitors/ExhibitionSection.js");
+/* harmony import */ var _components_StudentSection__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../components/StudentSection */ "./components/StudentSection.js");
+/* harmony import */ var _components_AuthorSection__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../components/AuthorSection */ "./components/AuthorSection.js");
+/* harmony import */ var _components_HeroSection__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../components/HeroSection */ "./components/HeroSection.js");
+/* harmony import */ var _components_StyledCarousel__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../components/StyledCarousel */ "./components/StyledCarousel.js");
 var _jsxFileName = "/mnt/c/Users/D.Hardiman/desktop/eurobrake/pages/index.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -7600,62 +7417,61 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 
-
-/* harmony default export */ __webpack_exports__["default"] = (() => __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx(_components_HeroSection__WEBPACK_IMPORTED_MODULE_10__["default"], {
+/* harmony default export */ __webpack_exports__["default"] = (() => __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx(_components_HeroSection__WEBPACK_IMPORTED_MODULE_9__["default"], {
   cara: true,
   src: "/images/barcelona.png",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 20
+    lineNumber: 19
   },
   __self: undefined
-}, "EuroBrake 2020"), __jsx(_components_styles_HomeStyles__WEBPACK_IMPORTED_MODULE_3__["StyledContainer"], {
+}, "EuroBrake 2020"), __jsx(_components_styles_HomeStyles__WEBPACK_IMPORTED_MODULE_2__["StyledContainer"], {
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 25
+  },
+  __self: undefined
+}, __jsx(_components_AboutSection__WEBPACK_IMPORTED_MODULE_3__["default"], {
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 26
+  },
+  __self: undefined
+}), __jsx(_components_LocationSection__WEBPACK_IMPORTED_MODULE_4__["default"], {
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 27
+  },
+  __self: undefined
+}), __jsx(_components_AttendeesSection__WEBPACK_IMPORTED_MODULE_5__["default"], {
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 28
+  },
+  __self: undefined
+}), __jsx(_components_exhibitors_ExhibitionSection__WEBPACK_IMPORTED_MODULE_6__["default"], {
   __source: {
     fileName: _jsxFileName,
     lineNumber: 29
   },
   __self: undefined
-}, __jsx(_components_AboutSection__WEBPACK_IMPORTED_MODULE_4__["default"], {
+}), __jsx(_components_StudentSection__WEBPACK_IMPORTED_MODULE_7__["default"], {
   __source: {
     fileName: _jsxFileName,
     lineNumber: 30
   },
   __self: undefined
-}), __jsx(_components_LocationSection__WEBPACK_IMPORTED_MODULE_5__["default"], {
+}), __jsx(_components_AuthorSection__WEBPACK_IMPORTED_MODULE_8__["default"], {
   __source: {
     fileName: _jsxFileName,
     lineNumber: 31
-  },
-  __self: undefined
-}), __jsx(_components_AttendeesSection__WEBPACK_IMPORTED_MODULE_6__["default"], {
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 32
-  },
-  __self: undefined
-}), __jsx(_components_exhibitors_ExhibitionSection__WEBPACK_IMPORTED_MODULE_7__["default"], {
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 33
-  },
-  __self: undefined
-}), __jsx(_components_StudentSection__WEBPACK_IMPORTED_MODULE_8__["default"], {
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 34
-  },
-  __self: undefined
-}), __jsx(_components_AuthorSection__WEBPACK_IMPORTED_MODULE_9__["default"], {
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 35
   },
   __self: undefined
 }))));
 
 /***/ }),
 
-/***/ 3:
+/***/ 5:
 /*!******************************!*\
   !*** multi ./pages/index.js ***!
   \******************************/
@@ -7807,17 +7623,6 @@ module.exports = require("styled-components");
 /***/ (function(module, exports) {
 
 module.exports = require("url");
-
-/***/ }),
-
-/***/ "video.js":
-/*!***************************!*\
-  !*** external "video.js" ***!
-  \***************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = require("video.js");
 
 /***/ })
 

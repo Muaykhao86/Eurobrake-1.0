@@ -3,6 +3,65 @@ import styled from 'styled-components';
 
 
 
+export const Quote2 = (props) => {
+  return (
+ <svg width={props.width} height={props.height} viewBox="0 0 628 315" {...props}>
+      <path fill="#134381" d="M0 0h628v315H0z" />
+      <text
+        transform="translate(32 235)"
+        fontFamily="MyriadPro-Bold,Myriad Pro"
+        fontWeight={700}
+        fill="#fff"
+        fontSize={25}
+      >
+        <tspan x={0} y={25}>
+          {"NUCAP"}
+        </tspan>
+        <tspan fontFamily="MyriadPro-Light,Myriad Pro" fontWeight={300}>
+          <tspan x={0} y={53}>
+            {"ESOP 2018, Headline Sponsor"}
+          </tspan>
+        </tspan>
+      </text>
+      <path
+        d="M126.959 177.826V315H.287V206.72q0-87.938 21.006-127.321 27.565-52.484 87.288-79.4l28.88 45.972q-36.1 15.1-53.167 44.952t-19.025 86.949zm168.277 0V315H168.581V206.72q0-87.938 20.989-127.321 27.567-52.484 87.29-79.4l28.879 45.972q-36.1 15.1-53.166 44.952t-19.025 86.949z"
+        fill="rgba(210,230,255,.13)"
+      />
+      <text
+        transform="translate(32 19)"
+        fontFamily="MyriadPro-Light,Myriad Pro"
+        fontWeight={300}
+        fill="#fff"
+        fontSize={25}
+      >
+        <tspan x={0} y={23}>
+          {"In establishing the EuroBrake Student Opportunities "}
+        </tspan>
+        <tspan x={0} y={48}>
+          {"Program (ESOP), FISITA has made an immeasurable "}
+        </tspan>
+        <tspan x={0} y={73}>
+          {"contribution to our entire brake industry. Attracting "}
+        </tspan>
+        <tspan x={0} y={98}>
+          {"engineering students to our corner of the automotive "}
+        </tspan>
+        <tspan x={0} y={123}>
+          {"industry is important. Many students we met with had no "}
+        </tspan>
+        <tspan x={0} y={148}>
+          {"idea that there even was an entire industry dedicated to "}
+        </tspan>
+        <tspan x={0} y={173}>
+          {"brakes. ESOP provides enormous opportunities for both "}
+        </tspan>
+        <tspan x={0} y={198}>
+          {"students and the attending companies."}
+        </tspan>
+      </text>
+    </svg>
+  )
+}
 export const Quote = (props) => {
   return (
     <svg width={props.width} height={props.height} viewBox=" 0 0 628 215" {...props}>
