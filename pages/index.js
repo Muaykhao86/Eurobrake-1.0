@@ -12,10 +12,7 @@ import StyledCarousel from '../components/StyledCarousel';
 
 
 export default () => (
-    <>
-        {/* <StyledCarousel ssrFadeout/>
-        <CountDownBanner /> */}
-            
+    <>       
         <HeroSection 
          cara
          t="24rem"
