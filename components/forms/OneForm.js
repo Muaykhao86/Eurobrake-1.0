@@ -16,10 +16,18 @@ class OneForm extends Component {
    }
 
    async componentDidMount (){
+       if(this.props.paper){
             const {paper} = this.props
             const formData = await  GetForm(`https://prelude.eurobrake.net/edit/${paper}`);
             const presets = await formData.presets;
-            await this.setState({presets: presets})
+            await this.setState({presets: presets});
+   }
+       if(this.props.profile){
+            const {profile} = this.props
+            const formData = await  GetForm(`https://prelude.eurobrake.net/edit/${profile}`);
+            const presets = await formData.presets;
+            await this.setState({presets: presets});
+   }
             return
    }
 
@@ -41,9 +49,9 @@ class OneForm extends Component {
                 case'author' : 
                 return <Authorprofile />;
                 case'esop-edit' : 
-                // return <Esop editPaper="true" />;
+                return <Esop editPaper="true" />;
                 case'esop' : 
-                // return <Esop />;
+                return <Esop />;
                 case'login' : 
                 return <LoginForm />;
                 default: 

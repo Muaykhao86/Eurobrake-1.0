@@ -46,6 +46,7 @@ export const StyledBanner = styled.div`
 export const StyledContainer = styled.div`
     display: flex;
     flex-flow: column;
+    /* align-items: flex-start; */
     min-width: ${props => props.theme.minWidth};
     padding: 3rem 0;
     
@@ -55,26 +56,29 @@ export const StyledContainer = styled.div`
         padding-bottom: .5rem;
         margin-bottom: .5rem;
         border-bottom: 2px solid ${props => props.theme.white};
+        /* align-self: flex-start; */
     }
 
     .banner-sub{
         font-family: ${props => props.theme.MPLightIt};
         font-size: ${props => props.sfs || '3.8rem'};
         font-weight: 50;
+        /* align-self: flex-start; */
 
     }
 
     .banner_bottom{
         display: flex;
-        align-self: flex-end;
+        /* align-self: flex-start; */
+
     &-icon{
         color: ${props => props.theme.primary};
         font-size: 1.5rem;
         background-color: white;
         border: 1px solid white;
         border-radius: 50%;
-        margin: .5rem;
-    } 
+        margin: .5rem .5rem 0 0 ;
+    }  
     &-details{
         font-family: ${props => props.theme.MPSemibold};
         font-size: 1.6rem;

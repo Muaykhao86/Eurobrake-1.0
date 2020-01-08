@@ -36,6 +36,7 @@ width: 30vw;
 
 
 }
+
 .closeBtn{
   transform: rotate(45deg);
   font-size: 2.5rem;

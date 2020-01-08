@@ -57,7 +57,7 @@ const StyledPage = styled.div`
     }
     &_action-box{
         display: flex;
-        justify-content: space-between;
+        justify-content: flex-start;
         margin-bottom: 3rem;
     }
 }
@@ -96,7 +96,7 @@ const StyledInfoArea = styled.div`
 
     .paper-title{
     font-size: 2rem;
-    color: ${props => props.theme.black};
+    color: ${props => props.theme.MPRegular};
 
     }
     .paper-type{
@@ -143,6 +143,7 @@ class AuthorsAreaDash extends Component {
             editForm: false,
             formType: '',
             paper: '',
+            profile: '',//will get rid of when i have profile props
         }
     }
 
@@ -158,11 +159,13 @@ class AuthorsAreaDash extends Component {
     
 
     render() {
-        const { editForm, formType, paper } = this.state;
-        const { firstname } = this.props.authorData.author;
-        const { papers } = this.props.authorData;
-        const data = this.props.authorData;
-        console.log({ papers, data })
+        const papers = '';
+        // const { editForm, formType, paper } = this.state;
+        // const { firstname } = this.props.authorData.author;
+        // const { papers } = this.props.authorData;
+        const {profile} = this.state.profile;
+        // const data = this.props.authorData;
+        // console.log({ papers, data })
         return (
             <>
 
@@ -172,34 +175,20 @@ class AuthorsAreaDash extends Component {
                 <StyledPage>
                     <div className="authors">
 
-                        <Typography className="authors-title">{`Hi ${firstname}`}</Typography>
+                        {/* <Typography className="authors-title">{`Hi ${firstname}`}</Typography> */}
                         <Typography gutterBottom className="authors_sub-title">Welcome to the Author's Area</Typography>
                         <div className="authors_action-box">
                             {/* <Popup>
                                 <CreateIcon style={{ fontSize: '3rem', marginRight: '1rem' }} />
                                 UPLOAD FILE TEST
                             </Popup> */}
-                            {editForm &&
-                                <Button
-                                    bcolor="#134381"
-                                    padding="0.5rem 2rem"
-                                    background="#134381"
-                                    br="100rem"
-                                    style={{ margin: ".5rem" }}
-                                    fontSize="1.7rem"
-                                    >
-                                    onClick={() => this.setState({ editForm: false, formType: '' })}
-                                    <ExitToAppIcon style={{ fontSize: '3rem', marginRight: '.5rem' }} />
-                                    Go back
-                    </Button>
-                            }
                             <Link href="/authorsAreaInstructions">
                                 <Button
                                     bcolor="#134381"
                                     padding="0.5rem 2rem"
                                     background="#134381"
                                     br="100rem"
-                                    style={{ margin: ".5rem" }}
+                                    style={{ margin: "0 .5rem" }}
                                     fontSize="1.7rem"
                                 >
                                     <AssignmentIcon style={{ fontSize: '3rem', marginRight: '.5rem' }} />
@@ -207,24 +196,25 @@ class AuthorsAreaDash extends Component {
                     </Button>
                             </Link>
 
+                            <Link href="/f/[id]" as={`/f/${profile}`}>
                             <Button
                                 bcolor="#134381"
                                 padding="0.5rem 2rem"
                                 background="#134381"
                                 br="100rem"
-                                style={{ margin: ".5rem 0" }}
-                                fontSize="1.7rem"
-                                onClick={() => this.setState({ editForm: true, formType: 'author-edit' })}>
+                                style={{ margin: "0 .5rem" }}
+                                fontSize="1.7rem">
                                 <ExitToAppIcon style={{ fontSize: '3rem', marginRight: '.5rem' }} />
                                 Edit Profile
                             </Button>
+                            </Link>
 
                             <Button
                                 bcolor="#134381"
                                 padding="0.5rem 2rem"
                                 background="#134381"
                                 br="100rem"
-                                style={{ margin: ".5rem 0" }}
+                                style={{ margin: "0 .5rem " }}
                                 fontSize="1.7rem"
                                 onClick={logout}>
                                 <ExitToAppIcon style={{ fontSize: '3rem', marginRight: '.5rem' }} />
@@ -291,51 +281,51 @@ class AuthorsAreaDash extends Component {
     }
 }
 
-AuthorsAreaDash.getInitialProps = async ctx => {
-    // We use `nextCookie` to get the cookie and pass the token to the frontend in the `props`.
-    const { logintoken } = cookies(ctx) || {};
-    const apiUrl = 'https://prelude.eurobrake.net/dashboard ';
-    const redirectOnError = () =>
-        process.browser
-            ? Router.push('/authorsArea')
-            : ctx.res.writeHead(301, { Location: '/authorsArea' })
-    if (logintoken) {
-        try {
-            // console.log({logintoken}, 'getIProps right before fetch call')
-            // headers: {
-            //     Authorization: 'Bearer ' + logintoken,
-            // }
-            const response = await fetch(apiUrl, {
-                credentials: 'include',
-                cache: 'no-cache',
-                headers: {
-                    Authorization: 'Bearer ' + logintoken,
-                }
+// AuthorsAreaDash.getInitialProps = async ctx => {
+//     // We use `nextCookie` to get the cookie and pass the token to the frontend in the `props`.
+//     const { logintoken } = cookies(ctx) || {};
+//     const apiUrl = 'https://prelude.eurobrake.net/dashboard ';
+//     const redirectOnError = () =>
+//         process.browser
+//             ? Router.push('/authorsArea')
+//             : ctx.res.writeHead(301, { Location: '/authorsArea' })
+//     if (logintoken) {
+//         try {
+//             // console.log({logintoken}, 'getIProps right before fetch call')
+//             // headers: {
+//             //     Authorization: 'Bearer ' + logintoken,
+//             // }
+//             const response = await fetch(apiUrl, {
+//                 credentials: 'include',
+//                 cache: 'no-cache',
+//                 headers: {
+//                     Authorization: 'Bearer ' + logintoken,
+//                 }
 
-            })
-            const data = await response.json()
-            // console.log('Authors response Data =>', data.status, data);
-            if (data.status === 'success') {
-                console.log('res.ok', data)
-                return { authorData: data }
-            }
-            else {
-                console.log('not reading success')
-                console.log('stringyfied', JSON.stringify(data))
-                // https://github.com/developit/unfetch#caveats
-                return redirectOnError()
-            }
-        } catch (error) {
-            // Implementation or Network error
-            console.log(error)
-            return await redirectOnError()
-        }
-    }
+//             })
+//             const data = await response.json()
+//             // console.log('Authors response Data =>', data.status, data);
+//             if (data.status === 'success') {
+//                 console.log('res.ok', data)
+//                 return { authorData: data }
+//             }
+//             else {
+//                 console.log('not reading success')
+//                 console.log('stringyfied', JSON.stringify(data))
+//                 // https://github.com/developit/unfetch#caveats
+//                 return redirectOnError()
+//             }
+//         } catch (error) {
+//             // Implementation or Network error
+//             console.log(error)
+//             return await redirectOnError()
+//         }
+//     }
 
-}
-
-export default withAuthSync(AuthorsAreaDash)
-// export default AuthorsAreaDash
+// }
+// ! local host editing
+// export default withAuthSync(AuthorsAreaDash)
+export default AuthorsAreaDash
 
 
 // !

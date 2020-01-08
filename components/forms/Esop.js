@@ -11,7 +11,7 @@ export const Esop = ({editPaper = false}) => {
   
     return (
         <Formik
-            initialValues={editPaper ? presets : emptyInitial }
+            initialValues={ presets || emptyInitial }
             onSubmit={(values, actions) => {
                 setTimeout(() => {
                     alert(JSON.stringify(values, null, 2));

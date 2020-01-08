@@ -16,6 +16,7 @@ export const AbstractForm = (props) => {
     const [presenter, setPresenter] = useState('');
   
     // if edit = true send back a preset form if not send a blank
+    // * dont think i need this now, can just check if there aere presets and if not just use epty schema
     const {editPaper,  presets, csrf, apiUrl} = props;
     const url = apiUrl;
     console.log({editPaper,  presets})
@@ -219,7 +220,7 @@ export const AbstractForm = (props) => {
                             <label
                                 htmlFor="label"
                                 className="form-label">
-                                State/county/province:
+                                State/ County/ Province:
                         </label>
                             <Field
                                 className="form-input"
@@ -234,7 +235,7 @@ export const AbstractForm = (props) => {
                             <label
                                 htmlFor="label"
                                 className="form-label">
-                                Postal/Zip code:
+                                Postal/ Zip code:
                         </label>
                             <Field
                                 className="form-input"
@@ -482,7 +483,7 @@ export const AbstractForm = (props) => {
                                                         </label>
                                                     </Field>
                                                 </div>
-                                                <div className="form-field">
+                                                <div className="form-field_action">
 
                                                 <Button 
                                                 bs="false"
@@ -499,28 +500,28 @@ export const AbstractForm = (props) => {
                                                         is_presenting_author: ''
                                                     });
                                                 }}>
-                                                    <AddCircle style={{ color: 'green'  , fontSize: '3rem'}} />
+                                                    <AddCircle style={{ color: 'green'  , fontSize: '3rem', margin: '.5rem 0'}} />
                                                 </Button>
                                                 <Button 
                                                  bs="false"
                                                 HBColor="transparent"
                                                 transform="scale(1.4)"
                                                 type="remove" onClick={() => values.secondary_authors.length > 1 && remove(index)}>
-                                                    <RemoveCircle style={{ color: 'red' , fontSize: '3rem' }} />
+                                                    <RemoveCircle style={{ color: 'red' , fontSize: '3rem', margin: '.5rem 0' }} />
                                                 </Button>
                                                 <Button 
                                                  bs="false"
                                                 HBColor="transparent"
                                                 transform="scale(1.4)"
                                                 type="upgrade" onClick={() => values.secondary_authors.length > 1 && index !== 0 && swap(index, index - 1)}>
-                                                    <ArrowUpwardRounded style={{ color: 'red' , fontSize: '3rem' }} />
+                                                    <ArrowUpwardRounded style={{ color: 'red' , fontSize: '3rem', margin: '.5rem 0' }} />
                                                 </Button>
                                                 <Button 
                                                  bs="false"
                                                 HBColor="transparent"
                                                 transform="scale(1.4)"
                                                 type="downgrade" onClick={() => values.secondary_authors.length > 1 && index !== values.secondary_authors.length - 1 && swap(index, index + 1)}>
-                                                    <ArrowDownwardRounded style={{ color: 'red'  , fontSize: '3rem'}} />
+                                                    <ArrowDownwardRounded style={{ color: 'red'  , fontSize: '3rem', margin: '.5rem 0'}} />
                                                 </Button>
                                                 </div>
                                             </div>

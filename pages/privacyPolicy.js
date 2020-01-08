@@ -42,7 +42,7 @@ const StyledDiv = styled.div`
 export default () => (
     <>
         <HeroSection t="30rem" max="55%">
-            Privacy policy
+            Privacy Policy
     </HeroSection>
         <StyledPage>
             <StyledDiv>

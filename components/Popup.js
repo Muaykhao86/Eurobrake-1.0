@@ -8,7 +8,7 @@ import DialogTitle from '@material-ui/core/DialogTitle';
 import {GetForm, SendFile} from './forms/FormActions';
 
 
-export default function Popup(props) {
+export default function FilePopup(props) {
   const [open, setOpen] = React.useState(false);
   const [csrf, setCsrf] = React.useState();
   const fileInput = React.createRef();

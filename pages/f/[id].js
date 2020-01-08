@@ -24,6 +24,14 @@ const Form = props => {
             Edit your abstract details
             </HeroSection>
         <StyledPage>
+            <Link href="/authorsAreaDash">
+                          <Button
+                        background="#134381"
+                        br="100rem"
+                        bcolor="#134381"
+                        style={{ marginLeft: 'auto', color:"#FFF" }}
+                    >Back to Dashboard</Button>
+            </Link>
             <AbstractForm editPaper="true" presets={presets} csrf={__csrf_token} apiUrl={apiUrl}/>;
     </StyledPage>
         </>

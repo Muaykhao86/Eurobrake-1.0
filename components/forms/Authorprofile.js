@@ -186,7 +186,7 @@ export const Authorprofile = ({editPaper = false}) => {
                             <label
                                 htmlFor="label"
                                 className="form-label">
-                                State/county/province:
+                                State/ County/ Province:
                         </label>
                             <Field
                                 className="form-input"
@@ -201,7 +201,7 @@ export const Authorprofile = ({editPaper = false}) => {
                             <label
                                 htmlFor="label"
                                 className="form-label">
-                                Postal/Zip code:
+                                Postal/ Zip code:
                         </label>
                             <Field
                                 className="form-input"
@@ -296,7 +296,8 @@ export const Authorprofile = ({editPaper = false}) => {
                          bcolor="#134381"
                                 background="#134381"
                                 br="100rem"
-                                style={{ marginTop: "1rem" }}
+                                padding=".5rem 4rem"
+                                style={{ margin: "3rem" }}
                                 fontSize="1.7rem">Submit</Button>
                         {console.log('main', values.is_presenting_author, 'second', values.secondary_authors)}
                     </StyledForm>

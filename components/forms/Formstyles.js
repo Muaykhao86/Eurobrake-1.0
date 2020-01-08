@@ -22,9 +22,7 @@ export const StyledForm = styled(Form)`
             font-size: 2rem;
             color: ${props => props.theme.primary};
     }
-    input:-internal-autofill-selected {
-
-    }
+   
         .form{
 
         &-secondary{
@@ -41,19 +39,25 @@ export const StyledForm = styled(Form)`
             display: flex;
             justify-content: space-between;
             align-items: flex-end;
+
+            &_action{
+                justify-content: flex-end
+            }
         }
         &-label{
+            min-width: 33.3%;
             font-family: ${props => props.theme.MPLight};
             font-size: 2.6rem;
             color: ${props => props.theme.primary};
         }
         &-input{
-            min-width: 40rem;
+            min-width: 66.6%;
             font-family: ${props => props.theme.MPBoldIt};
             font-size: 2rem;
             color: ${props => props.theme.primary};
         }
         &-link{
+            cursor: pointer;
             font-family: ${props => props.theme.MPBoldIt};
             font-size: 1.7rem;
             color: ${props => props.theme.primary};
