@@ -45,16 +45,24 @@ const StyledHotels = styled.div`
                 color: ${props => props.theme.white};
                 font-family: ${props => props.theme.MPBold};
                 font-size: 2rem;
+                max-width: 20.5rem;
             }
         }
         }
     
         &_hotel{
-            max-width: 20rem;
+            max-width: 28rem;
+            flex: 1 1 auto;
 
         &-imageBox{
-            max-height: 24.3rem;
-            overflow: hidden;    
+            height: 24.3rem;
+            max-width: 30rem;
+            overflow: hidden; 
+            flex: 1;
+
+            img{
+                object-fit: cover;
+            }
         }
 
         &-primaryBox{
@@ -62,12 +70,12 @@ const StyledHotels = styled.div`
             display: flex;
             flex-flow: column;
             background-color: ${props => props.theme.primary};
+            flex: 1;
         }
         &-secondaryBox{
             height: 35rem;
             padding: 1rem;
             display: flex;
-            
             flex-flow: column;
             justify-content: space-between;
             background-color: ${props => props.theme.primary2}
@@ -85,11 +93,11 @@ export default function HotelBox() {
 
                 <div className="Accomodation_hotel">
                     <div className="Accomodation_hotel-imageBox">
-                        <img src="/images/hotelSB.png" alt="Hotel SB Diagonal Zero" />
+                        <img src="/images/hotelSB.png" alt="Hotel SB Diagonal Zero" width='100%' height='100%' />
                     </div>
                     <div className="Accomodation_hotel-primaryBox">
-                        <Typography className="Accomodation_text-primary-title" >Hotel SB Diagonal Zero</Typography>
-                        <Typography className="Accomodation_text-primary" >4 Stars</Typography>
+                        <Typography className="Accomodation_text-primary-title" >Hotel SB Diagonal Zero </Typography>
+                        <Typography className="Accomodation_text" style={{color: '#FFF'}}>4 Stars</Typography>
                     </div>
                     <div className="Accomodation_hotel-secondaryBox">
                         <div className="Accomodation_icon-box">
@@ -121,17 +129,17 @@ export default function HotelBox() {
                                 <Typography gutterBottom className="Accomodation_text-bold" >CODE: EUROBRAKE20</Typography>
                             </div>
                         </div>
-                        <Button padding=".5rem" fontSize="1.5rem" br="100rem" bcolor="#134381" background="#134381" >Book Room</Button>
+                        <Button href="https://www.hoteldiagonalzero.com/en/" padding=".5rem" fontSize="1.5rem" br="100rem" bcolor="#134381" background="#134381" >Book Room</Button>
                     </div>
                 </div>
 
-                <div className="Accomodation_hotel">
+                <div className="Accomodation_hotel" style={{margin: '0 1rem'}}>
                     <div className="Accomodation_hotel-imageBox">
-                        <img src="/images/delMar.png" alt="Hasperia Barcelona Del Mar" />
+                        <img src="/images/delMar.png" alt="Hasperia Barcelona Del Mar"  width='100%' height='100%'/>
                     </div>
                     <div className="Accomodation_hotel-primaryBox">
                         <Typography className="Accomodation_text-primary-title" >Hasperia Barcelona Del Mar</Typography>
-                        <Typography className="Accomodation_text-primary" >4 Stars</Typography>
+                        <Typography className="Accomodation_text" style={{color: '#FFF'}}>4 Stars</Typography>
                     </div>
                     <div className="Accomodation_hotel-secondaryBox">
                         <div className="Accomodation_icon-box">
@@ -161,17 +169,17 @@ export default function HotelBox() {
                                 <Typography gutterBottom className="Accomodation_text" >Preferential rate available until 01 April 2020</Typography>
                             </div>
                         </div>
-                        <Button padding=".5rem" fontSize="1.5rem" br="100rem" bcolor="#134381" background="#134381">Book Room</Button>
+                        <Button  href="https://www.fisita.com/documents/EuroBrake_2020_Hesperia_del_Mar_Booking_form_for_delegates.pdf" padding=".5rem" fontSize="1.5rem" br="100rem" bcolor="#134381" background="#134381">Book Room</Button>
                     </div>
                 </div>
 
                 <div className="Accomodation_hotel">
                     <div className="Accomodation_hotel-imageBox">
-                        <img src="/images/conMar.png" alt="Hotel Barcelona Condal Mar" />
+                        <img src="/images/conMar.png" alt="Hotel Barcelona Condal Mar"  width='100%' height='100%'/>
                     </div>
                     <div className="Accomodation_hotel-primaryBox">
                         <Typography className="Accomodation_text-primary-title" >Hotel Barcelona Condal Mar</Typography>
-                        <Typography className="Accomodation_text-primary" >4 Stars</Typography>
+                        <Typography className="Accomodation_text" style={{color: '#FFF'}}>4 Stars</Typography>
                     </div>
                     <div className="Accomodation_hotel-secondaryBox">
                         <div className="Accomodation_icon-box">
@@ -202,7 +210,7 @@ export default function HotelBox() {
                                 <Typography gutterBottom className="Accomodation_text" >Preferential rate available until 01 April 2020</Typography>
                             </div>
                         </div>
-                        <Button padding=".5rem" fontSize="1.5rem" br="100rem" bcolor="#134381" background="#134381" >Book Room</Button>
+                        <Button href="https://events.melia.com/en/events/hotel-barcelona-condal-mar-managed-by-melia/EuroBrake-2021.html" padding=".5rem" fontSize="1.5rem" br="100rem" bcolor="#134381" background="#134381" >Book Room</Button>
                     </div>
                 </div>
 

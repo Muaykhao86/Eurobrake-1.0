@@ -6,10 +6,8 @@ import Slide from 'react-reveal/Slide';
 
 
 const Overlay = styled.div`
-/* width: 100%;
-height:100%; */
-    /* background-color: ${props => props.theme.primary}; */
-    /* opacity: .8; */
+/* transform: translate3d(0,0,0); */
+overflow: hidden;
 `;
 
 
@@ -26,17 +24,16 @@ height: 80vh;
 display: flex;
 position: relative;
 
-overflow: hidden;
-flex: 1 1 80%;
-background-position: center;
+/* flex: 1 1 80%; */
+/* background-position: center; */
 background-color: black;
 /* object-fit: cover; */
 `;
 
 const StyledSlide = styled.img`
 /* position: absolute; */
-min-width: 100%;
-height: 80vh ;
+width: 110%;
+height: 100% ;
        @media only screen 
         and (max-device-width: 768px) 
         and (-webkit-min-device-pixel-ratio: 2) {
@@ -54,11 +51,11 @@ export default function StyledCarousel() {
     return (
         <Overlay>
        
-        <Carousel defaultWait={4000} /*wait for 1000 milliseconds*/>
-            <Slide right >
+        <Carousel  easing={'linear'} count={10} defaultWait={3000} /*wait for 1000 milliseconds*/>
+            <Slide ssr right >
                 <StyledSlide style={{}} srcSet="/images/pic1.png" alt="EuroBrake Greating"/> 
             </Slide>
-            <Slide right>
+            <Slide ssr right>
                 <StyledSlide style={{}} srcSet="/images/pic2.png" alt="EuroBrake Greating"/> 
             </Slide>
         </Carousel>

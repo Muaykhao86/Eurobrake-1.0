@@ -26,17 +26,18 @@ const StyledPage = styled.div`
 }
 
     .CCIBBox{
-        max-width: 68rem;
         display: flex;
         flex-flow: column;
         justify-content: space-between;
-        margin-bottom: 2rem;
+        margin-bottom: 5rem;
         
 
     &-image{
+        display: flex;
         overflow: hidden;
-        max-height: 59rem;
-        min-width: 100%;
+        object-fit: fill;
+        /* max-height: 59rem; */
+        /* min-width: 100%; */
 
     }
 
@@ -131,7 +132,7 @@ const StyledPage = styled.div`
 
 export default () => (
     <>
-        <HeroSection src="/images/barcelona.png" t="30rem" max="55%" banner={FilledBanner}>
+        <HeroSection src="/images/barcelona.png"  max="55%" banner={FilledBanner}>
             Discover Barcelona
         </HeroSection>
         <StyledPage className="Discover">
@@ -140,7 +141,7 @@ export default () => (
             <Typography className="Discover-sub-title" >Barcelona International Convention Centre</Typography>
             <div className="CCIBBox">
                 <div className="CCIBBox-image">
-                    <img src="/images/CCIB.png"  alt="CCIB" />
+                     <img src="/images/ccibClip.png" alt="" style={{ width: '100%', height: '100%' }} />
                 </div>
                 <div className="CCIBBox-info">
                     <div className="">
@@ -206,21 +207,21 @@ export default () => (
             
             </div>
             <HotelBox />
-            <Typography className="Discover-title" style={{fontSize: "2rem", marginBottom: "1rem"}} >Other hotels close to the venue are:</Typography>
-            <Typography gutterBottom className="Discover" >AC Hotel Barcelona Forum -  <span className="Discover-it">2 minute walk from venue</span></Typography>
-            <Typography gutterBottom className="Discover" >Occidental Atena Mar - <span className="Discover-it">10 minute walk from venue</span></Typography>
-            <Typography gutterBottom className="Discover" >Hilton Diagonal Mar Barcelona -  <span className="Discover-it">2 minute walk from venue</span></Typography>
-            <Typography gutterBottom className="Discover" >Hotel Barcelona Princess -  <span className="Discover-it">2 minute walk from venue</span></Typography>
-            <Typography gutterBottom className="Discover" >Hotel Front Maratim Barcelona -  <span className="Discover-it">10 minute walk from venue</span></Typography>
-            <Typography gutterBottom className="Discover" >Hotel Attica21 Barcelona Mar - <span className="Discover-it">10 minute walk from venue</span></Typography>
-            <Typography gutterBottom className="Discover" >Hotel Bestrprice Gràcia -  <span className="Discover-it">metro 30 mins</span></Typography>
-            <Typography gutterBottom className="Discover" >EuroHotel Barcelona Diagonal Port -  <span className="Discover-it">tram 12 mins or a 20 minute walk</span></Typography>
-            <Typography gutterBottom className="Discover" >Travelodge Barcelona Poblenou -  <span className="Discover-it">metro 14 mins</span></Typography>
-            <Typography gutterBottom className="Discover" >Holiday Inn Express Barcelona City 22@ - <span className="Discover-it">metro 13 min</span></Typography>
+           <Typography className="Discover-title" style={{fontSize: "2rem", marginBottom: "1rem"}} >Other hotels close to the venue are:</Typography>
+          <a href="https://www.marriott.co.uk/hotels/hotel-photos/bcnfo-ac-hotel-barcelona-forum/"> <Typography gutterBottom className="Discover" >AC Hotel Barcelona Forum -  <span className="Discover-it">2 minute walk from venue</span></Typography></a>
+        <a href="https://www.barcelo.com/en-gb/occidental-hotels/hotels/spain/barcelona/occidental-atenea-mar/">    <Typography gutterBottom className="Discover" >Occidental Atena Mar - <span className="Discover-it">10 minute walk from venue</span></Typography></a>
+        <a href="https://www3.hilton.com/en/hotels/spain/hilton-diagonal-mar-barcelona-BCNDMHI/index.html">    <Typography gutterBottom className="Discover" >Hilton Diagonal Mar Barcelona -  <span className="Discover-it">2 minute walk from venue</span></Typography></a>
+        <a href="https://www.hotelbarcelonaprincess.com/en/">    <Typography gutterBottom className="Discover" >Hotel Barcelona Princess -  <span className="Discover-it">2 minute walk from venue</span></Typography></a>
+        <a href="https://www.hotelfrontmaritim.com/en/?gclid=Cj0KCQjwv8nqBRDGARIsAHfR9wDB16wR0wxe17wR_YlWrZmEnGmwK0B5x1zvNAAk4kqXcf2afDkH7UcaAqRnEALw_wcB">    <Typography gutterBottom className="Discover" >Hotel Front Maratim Barcelona -  <span className="Discover-it">10 minute walk from venue</span></Typography></a>
+        <a href="https://www.attica21hotels.com/en/hotel-attica21-barcelona-mar/">    <Typography gutterBottom className="Discover" >Hotel Attica21 Barcelona Mar - <span className="Discover-it">10 minute walk from venue</span></Typography></a>
+        <a href="http://www.hotelbestpricegracia.com/">    <Typography gutterBottom className="Discover" >Hotel Bestrprice Gràcia -  <span className="Discover-it">metro 30 mins</span></Typography></a>
+        <a href="http://www.eurohotelbarcelona.com/">    <Typography gutterBottom className="Discover" >EuroHotel Barcelona Diagonal Port -  <span className="Discover-it">tram 12 mins or a 20 minute walk</span></Typography></a>
+        <a href="https://www.travelodge.co.uk/hotels/574/Barcelona-Poblenou-hotel?checkIn=25/10/2019&checkOut=26/10/2019&rooms%5b0%5d%5badults%5d=1&rooms%5b0%5d%5bchildren%5d=0">    <Typography gutterBottom className="Discover" >Travelodge Barcelona Poblenou -  <span className="Discover-it">metro 14 mins</span></Typography></a>
+        <a href="https://www.ihg.com/holidayinnexpress/hotels/gb/en/barcelona/bcnba/hoteldetail?qDest=Calle%20Pallars%20203,%20Barcelona,%20ES&qCiD=18&qCoD=19&qCiMy=72019&qCoMy=72019&qAdlt=2&qChld=0&qRms=1&qWch=0&qSmP=1&qIta=99618783&glat=META_hpa_GB_desktop_BCNBA_mapresults_1_GBP_2019-08-18_default_2087497919_753545307_false&cm_mmc=hpa_GB_desktop_BCNBA_mapresults_1_GBP_2019-08-18_default_2087497919_753545307_false&setPMCookies=true&qSlH=BCNBA&qSlRc=TTWN&qAkamaiCC=GB&srb_u=1&qRad=30&qRdU=mi&presentationViewType=select&qSrt=sBR&qBrs=re.ic.in.vn.cp.vx.hi.ex.rs.cv.sb.cw.ma.ul.ki.va#_gl=1*kcqi66*_gcl_aw*R0NMLjE1NjM4ODEzMzEzMDYuQUE4ME9zeFdiV1RoLUc1Yk5pWVNIM0dWUUVIdkZ3c1AyZjFBSm1ha3l5SllLT3dJNlRrMUt3OEhxZzRjeVRZNTQtR25jTDN4SXZxVTY4b2JjR0pDLTFGR0VHcHFqSDV5VUtPM1R3">    <Typography gutterBottom className="Discover" >Holiday Inn Express Barcelona City 22@ - <span className="Discover-it">metro 13 min</span></Typography></a>
 
             <Typography className="Discover-title" >Barcelona Travelcard</Typography>
             <Typography className="Discover" >Barcelona has many more hotels around the city that are easily accessible using the metro system. The city offers a travelcard that is very good value and allows for unlimited journeys on the bus, metro, tram, commuter train plus metro ride to / from the airport.</Typography>
-            <Button br="100rem" bcolor="#134381" background="#134381" style={{ maxWidth: "24rem", margin: "5rem 0" }}>Find out more</Button>
+            <Button href="https://www.publictransport.barcelona/metro_bus_tram/tickets_travelcards/#2" br="100rem" bcolor="#134381" background="#134381" style={{ maxWidth: "24rem", margin: "5rem 0" }}>Find out more</Button>
 
         </StyledPage>
 

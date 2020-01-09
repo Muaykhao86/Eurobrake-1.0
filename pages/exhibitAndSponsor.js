@@ -46,7 +46,6 @@ const StyledPage = styled.div`
         margin-top: 3rem;
     }
     &_list{
-        /* NEED TO INLINE BULLET POINTS! */
         li{
         position: relative;
         list-style-type: none;
@@ -54,7 +53,6 @@ const StyledPage = styled.div`
         margin-left: 3rem;
         margin-bottom: 1rem;
         line-height: 3.5rem;
-        /* list-style: square url('') */
         
             &:before{ 
                 content: '■';

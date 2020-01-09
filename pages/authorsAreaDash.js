@@ -221,7 +221,7 @@ class AuthorsAreaDash extends Component {
                                 logout
                     </Button>
                         </div>
-                        <Typography gutterBottom className="authors-title" style={{ fontSize: '3rem', borderTop: '2px solid #134381', borderBottom: '2px solid #134381' }}>Your paper</Typography>
+                        <Typography gutterBottom className="authors-title" style={{ fontSize: '3rem', borderTop: '2px solid #134381', borderBottom: '2px solid #134381' }}>Your submission(s)</Typography>
                         {
                                 papers ?
 

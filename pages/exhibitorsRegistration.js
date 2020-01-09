@@ -17,7 +17,7 @@ const StyledPage = styled.div`
     align-self: center;
     width: ${props => props.max || props.theme.minWidth};
     background-color: ${props => props.theme.white};
-    margin-top: 7rem;
+    /* margin-top: 7rem; */
       @media only screen 
   and (max-device-width: 768px) 
   and (-webkit-min-device-pixel-ratio: 2) { 
@@ -28,6 +28,9 @@ const StyledPage = styled.div`
         color: ${props => props.theme.primary};
         font-family: ${props => props.theme.MPLight};
         font-size: 2rem;
+
+
+
     &-title{
         color: ${props => props.theme.primary};
         font-family: ${props => props.theme.MPSemibold};
@@ -35,9 +38,22 @@ const StyledPage = styled.div`
         margin-top: 3rem;
     }
     &_list{
-        list-style-type: square;
+          li{
+        position: relative;
+        list-style-type: none;
         list-style-position:inside;
+        margin-left: 3rem;
         margin-bottom: 1rem;
+        line-height: 3.5rem;
+        
+            &:before{ 
+                content: '■';
+                position: absolute;
+                font-size: 3.14rem;
+                left: -27px;
+                top: -6.1px;
+                          }
+        }
     }
     &_list-title{
         margin-bottom: 1rem;
@@ -51,6 +67,7 @@ const StyledPage = styled.div`
         padding-bottom: .5rem;
     }
     &-bold{
+        color: ${props => props.theme.primary};
         font-family: ${props => props.theme.MPBold};
     }
 }
@@ -84,14 +101,14 @@ export default () => (
                 <Typography gutterBottom className="Registration-title">Delegate Registration</Typography>
                 <Typography gutterBottom className="Registration_list-title">Full Delegate registration includes:</Typography>
                 <ul className="Registration_list">
-                    <li>Admission to all Plenary and Technical Sessions</li>
-                    <li>Admission to the EuroBrake Dinner</li>
-                    <li>Admission to Exhibition</li>
-                    <li>Access to the EuroBarake app including all abstracts</li>
-                    <li>Conference Proceedings USB stick</li>
-                    <li>Admission to the Welcome and Farewell Receptions</li>
-                    <li>Coffee/Refresments</li>
-                    <li >Lunches</li>
+                    <li><Typography className="Registration"> Admission to all Plenary and Technical Sessions</Typography></li>
+                    <li><Typography className="Registration"> Admission to the EuroBrake Dinner</Typography></li>
+                    <li><Typography className="Registration"> Admission to Exhibition</Typography></li>
+                    <li><Typography className="Registration"> Access to the EuroBarake app including all abstracts</Typography></li>
+                    <li><Typography className="Registration"> Conference Proceedings USB stick</Typography></li>
+                    <li><Typography className="Registration"> Admission to the Welcome and Farewell Receptions</Typography></li>
+                    <li><Typography className="Registration"> Coffee/Refresments</Typography></li>
+                    <li><Typography className="Registration"> Lunches</Typography></li>
                 </ul>
                 <Typography className="Registration_list-title">All prices are qouted in <span className="Registration-bold" >&euro; EUR</span></Typography>
             </div>
@@ -115,7 +132,7 @@ export default () => (
                 <Typography className="Registration">Payments can be made by bank transfer or credit card using our secure online payment system</Typography>
                 <Typography className="Registration Registration-bold" >40 days prior to the event the only method of payment will be via
                         credit card. Bank transfers will not be acceptable after this time. </Typography>
-                <Typography className="Registration">Read the event terms and conditions <span className=" Registration-bold ">here.</span></Typography>
+                <Typography className="Registration">Read the event terms and conditions <a href="https://www.fisita.com/documents/FISITA_Event_Refund_Cancellation_policy-_EB.pdf" className=" Registration-bold ">here.</a></Typography>
                 <Typography className="Registration">For more information or help with registration, please call:</Typography>
                 <Typography className="Registration"><span className=" Registration-bold ">+44 (0) 1279883470</span> or email <span className="Registration-bold ">info@eurobrake.net</span></Typography>
             </div>

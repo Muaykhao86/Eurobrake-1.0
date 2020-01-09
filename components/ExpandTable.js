@@ -94,44 +94,46 @@ export default function ExpandTable() {
     setExpanded(newExpanded ? panel : false);
   };
 
-  function createData(days, Early, Full) {
-    return { days, Early, Full };
+  function createData(days, Early, Full, walk) {
+    return { days, Early, Full, walk };
   }
+
+  
 
   const delegateRows = [
     createData('3 x days', 940, 1180),
     createData('2 x days', 640, 800),
-    createData('1 x days', 320, 800),
+    createData('1 x days', 320, 400),
   ];
   const delegateMemberRows = [
-    createData('3 x days', 940, 1180),
-    createData('2 x days', 640, 800),
-    createData('1 x days', 320, 800),
+    createData('3 x days', 846, 1000),
+    createData('2 x days', 576, 720),
+    createData('1 x days', 288, 360),
   ];
   const studentRows = [
-    createData('3 x days', 940, 1180),
-    createData('2 x days', 640, 800),
-    createData('1 x days', 320, 800),
+    createData('3 x days', 170, 170),
+    createData('2 x days', 170, 170),
+    createData('1 x days', 170, 170),
   ];
   const expoRows = [
-    createData('3 x days', 940, 1180),
-    createData('2 x days', 640, 800),
-    createData('1 x days', 320, 800),
+    createData('3 x days', 220, 250, 280),
+    createData('2 x days', 150, 180, 200),
+    createData('1 x days', 70, 100, 150),
   ];
   const academicRows = [
-    createData('3 x days', 940, 1180),
-    createData('2 x days', 640, 800),
-    createData('1 x days', 320, 800),
+    createData('3 x days', 658, 826),
+    createData('2 x days', 448, 560),
+    createData('1 x days', 224, 280),
   ];
   const academicSessionRows = [
-    createData('3 x days', 940, 1180),
-    createData('2 x days', 640, 800),
-    createData('1 x days', 320, 800),
+    createData('3 x days', 348, 348),
+    createData('2 x days', 237, 237),
+    createData('1 x days', 118, 118),
   ];
   const sessionRows = [
-    createData('3 x days', 940, 1180),
-    createData('2 x days', 640, 800),
-    createData('1 x days', 320, 800),
+    createData('3 x days', 517, 517),
+    createData('2 x days', 352, 352),
+    createData('1 x days', 176, 176),
   ];
 
   return (
@@ -234,6 +236,8 @@ export default function ExpandTable() {
                   <StyledCell align="left" className="StyledCell-data">&euro; {row.Early.toFixed(2)}</StyledCell>
                   <StyledCell align="left" className="StyledCell-title">Full Price</StyledCell>
                   <StyledCell align="left" className="StyledCell-data">&euro; {row.Full.toFixed(2)}</StyledCell>
+                  <StyledCell align="left" className="StyledCell-title">Walk in</StyledCell>
+                  <StyledCell align="left" className="StyledCell-data">&euro; {row.walk.toFixed(2)}</StyledCell>
                 </TableRow>
               ))}
             </TableBody>

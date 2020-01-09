@@ -8,7 +8,6 @@ import { StyledPage, StyledBanner, StyledContainer } from '../components/styles/
 
 const StyledAbout = styled.div`
         color: ${props => props.theme.primary};
-
         font-family: ${props => props.theme.MPLight};
         font-size: 2rem;
     .about{
@@ -24,9 +23,23 @@ const StyledAbout = styled.div`
         margin-top: 3rem;
     }
     &_list{
-        list-style-type: square;
+         li{
+        position: relative;
+        list-style-type: none;
         list-style-position:inside;
+        margin-left: 3rem;
         margin-bottom: 1rem;
+        line-height: 3.5rem;
+        /* list-style: square url('') */
+        
+            &:before{ 
+                content: '■';
+                position: absolute;
+                font-size: 3.14rem;
+                left: -27px;
+                top: -6.1px;
+                          }
+        }
     }
     &_list-title{
         margin-bottom: 1rem;
@@ -145,22 +158,22 @@ export default () => (
             </Typography>
                 <ListBox>
                     <ul className="about_list">
-                        <li>Rail</li>
-                        <li>Passenger car</li>
-                        <li>Commercial Vehical</li>
-                        <li>Motorcycle</li>
-                        <li>Aerospace</li>
+                        <li><Typography gutterBottom className="about">Rail</Typography></li>
+                        <li><Typography gutterBottom className="about">Passenger car</Typography></li>
+                        <li><Typography gutterBottom className="about">Commercial Vehical</Typography></li>
+                        <li><Typography gutterBottom className="about">Motorcycle</Typography></li>
+                        <li><Typography gutterBottom className="about">Aerospace</Typography></li>
                         <li>Industry brakes</li>
                         <li>Wind turbines</li>
                     </ul>
                     <ul className="about_list">
-                        <li>Academia and research</li>
-                        <li>Application</li>
-                        <li>Research and development</li>
-                        <li>Materials</li>
-                        <li>Quality and process</li>
-                        <li>Testing and measurement</li>
-                        <li>Sales and purchasing</li>
+                        <li><Typography gutterBottom className="about">Academia and research</Typography></li>
+                        <li><Typography gutterBottom className="about">Application</Typography></li>
+                        <li><Typography gutterBottom className="about">Research and development</Typography></li>
+                        <li><Typography gutterBottom className="about">Materials</Typography></li>
+                        <li><Typography gutterBottom className="about">Quality and process</Typography></li>
+                        <li><Typography gutterBottom className="about">Testing and measurement</Typography></li>
+                        <li><Typography gutterBottom className="about">Sales and purchasing</Typography></li>
                     </ul>
                 </ListBox>
                 <Typography className="about-title">Organisation</Typography>
