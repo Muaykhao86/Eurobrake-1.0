@@ -4,6 +4,8 @@ import Bounce from 'react-reveal/Bounce';
 import { StyledSection } from './styles/HomeStyles';
 import { Card } from './Card';
 import { Button } from './Button';
+import {winWidth} from '../utils/mixins';
+
 
 export default function LocationSection() {
     return (
@@ -15,7 +17,16 @@ export default function LocationSection() {
                 <div className="mediaBox">
                     <img src="/images/pic2.png" alt="Barcelona" style={{ width: '100%', height: '100%' }} />
                 </div>
-                <Bounce ssrFadeout left>
+                {winWidth() ? 
+                <Card left>
+                    <h1>Find out more about Barcelona</h1>
+                    <Link href="/welcome">
+                    <Button br="500rem">Discover</Button>
+                    </Link>
+                </Card>
+                
+                :
+                 <Bounce ssrFadeout left>
                 <Card left>
                     <h1>Find out more about Barcelona</h1>
                     <Link href="/welcome">
@@ -23,6 +34,7 @@ export default function LocationSection() {
                     </Link>
                 </Card>
                 </Bounce>
+                }
             </div>
         </StyledSection>
     )

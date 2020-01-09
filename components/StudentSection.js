@@ -4,6 +4,9 @@ import Bounce from 'react-reveal/Bounce';
 import { StyledSection } from './styles/HomeStyles';
 import { Card } from './Card';
 import { Button } from './Button';
+import {winWidth} from '../utils/mixins';
+
+
 
 export default function StudentSection() {
     return (
@@ -16,6 +19,15 @@ export default function StudentSection() {
                 <div className="mediaBox">
                     <img src="/images/pic2.png" alt="EuroBrake Greating" style={{ width: '100%', height: '100%' }} />
                 </div>
+
+                {winWidth() ? 
+                <Card right>
+                    <h1>Learn more about ESOP</h1>
+                    <Link href="/studentArea">
+                    <Button br="500rem">ESOP</Button>
+                    </Link>
+                </Card>
+                :
                 <Bounce ssrFadeout right>
                 <Card right>
                     <h1>Learn more about ESOP</h1>
@@ -24,6 +36,7 @@ export default function StudentSection() {
                     </Link>
                 </Card>
                 </Bounce>
+                }
             </div>
         </StyledSection>
     )

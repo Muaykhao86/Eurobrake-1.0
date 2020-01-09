@@ -4,6 +4,8 @@ import Bounce from 'react-reveal/Bounce';
 import { StyledSection } from './styles/HomeStyles';
 import { Card } from './Card';
 import { Button } from './Button';
+import {winWidth} from '../utils/mixins';
+
 
 export default function AboutSection() {
     return (
@@ -15,6 +17,14 @@ export default function AboutSection() {
                 <div className="mediaBox">
                     <img src="/images/pic1.png" alt="EuroBrake Greating" style={{ width: '100%', height: '100%' }} />
                 </div>
+                {winWidth() ?
+                <Card right>
+                    <h1>Early bird tickets are on sale now</h1>
+                    <Link href="/ticketPortal">
+                    <Button br="500rem">Book Now</Button>
+                    </Link>
+                </Card>
+                :
                 <Bounce ssrFadeout right>
                 <Card right>
                     <h1>Early bird tickets are on sale now</h1>
@@ -23,6 +33,7 @@ export default function AboutSection() {
                     </Link>
                 </Card>
                 </Bounce>
+                }
             </div>
         </StyledSection>
     )
