@@ -160,7 +160,7 @@ class AuthorsAreaDash extends Component {
 
     render() {
         const papers = '';
-        const { editForm, formType, paper } = this.state;
+        const { editForm, formType,} = this.state;
         const { firstname } = this.props.authorData.author;
         const { papers } = this.props.authorData;
         const {profile} = this.state.profile;
