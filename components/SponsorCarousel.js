@@ -15,6 +15,11 @@ flex-flow: column;
 
 align-items: center;
         width: ${props => props.theme.minWidth};
+          @media only screen 
+  and (max-device-width: 768px) 
+  and (-webkit-min-device-pixel-ratio: 2) { 
+    width: ${props => props.theme.mobileWidth};    
+}
 
 
     .sponsor-top{

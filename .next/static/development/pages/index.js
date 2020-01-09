@@ -19,7 +19,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _styles_HomeStyles__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./styles/HomeStyles */ "./components/styles/HomeStyles.js");
 /* harmony import */ var _Card__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Card */ "./components/Card.js");
 /* harmony import */ var _Button__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Button */ "./components/Button.js");
-/* harmony import */ var _utils_mixins__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../utils/mixins */ "./utils/mixins.js");
+/* harmony import */ var react_reveal_withReveal__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-reveal/withReveal */ "./node_modules/react-reveal/withReveal.js");
+/* harmony import */ var react_reveal_withReveal__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react_reveal_withReveal__WEBPACK_IMPORTED_MODULE_6__);
 var _jsxFileName = "/mnt/c/Users/D.Hardiman/desktop/eurobrake/components/AboutSection.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -29,43 +30,83 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 
-function AboutSection() {
-  return __jsx(_styles_HomeStyles__WEBPACK_IMPORTED_MODULE_3__["StyledSection"], {
+
+var AboutCard = function AboutCard() {
+  return __jsx(_Card__WEBPACK_IMPORTED_MODULE_4__["Card"], {
+    right: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 12
+      lineNumber: 10
     },
     __self: this
   }, __jsx("h1", {
     __source: {
       fileName: _jsxFileName,
+      lineNumber: 11
+    },
+    __self: this
+  }, "Early bird tickets are on sale now"), __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+    href: "/ticketPortal",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 12
+    },
+    __self: this
+  }, __jsx(_Button__WEBPACK_IMPORTED_MODULE_5__["Button"], {
+    br: "500rem",
+    __source: {
+      fileName: _jsxFileName,
       lineNumber: 13
+    },
+    __self: this
+  }, "Book Now")));
+};
+
+var BounceAboutCard = react_reveal_withReveal__WEBPACK_IMPORTED_MODULE_6___default()(AboutCard, __jsx(react_reveal_Bounce__WEBPACK_IMPORTED_MODULE_2___default.a, {
+  left: true,
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 18
+  },
+  __self: undefined
+}));
+function AboutSection() {
+  return __jsx(_styles_HomeStyles__WEBPACK_IMPORTED_MODULE_3__["StyledSection"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 23
+    },
+    __self: this
+  }, __jsx("h1", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 24
     },
     __self: this
   }, "Europe's braking technology conference and exhibition"), __jsx("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 14
+      lineNumber: 25
     },
     __self: this
   }, "Welcome to EuroBrake, a major international forum for brake experts working in the fields of passenger cars, commercial vehicles, rail, aerospace, industry and academia. "), __jsx("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 15
+      lineNumber: 26
     },
     __self: this
   }, " We invite you to join us at EuroBrake 2020, which will take place in Barcelona, Spain, one of the world\u2019s leading connected, cultural and historical destinations."), __jsx("div", {
     className: "innerContainer",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 16
+      lineNumber: 27
     },
     __self: this
   }, __jsx("div", {
     className: "mediaBox",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 17
+      lineNumber: 28
     },
     __self: this
   }, __jsx("img", {
@@ -77,72 +118,16 @@ function AboutSection() {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 18
-    },
-    __self: this
-  })), Object(_utils_mixins__WEBPACK_IMPORTED_MODULE_6__["winWidth"])() ? __jsx(_Card__WEBPACK_IMPORTED_MODULE_4__["Card"], {
-    right: true,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 21
-    },
-    __self: this
-  }, __jsx("h1", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 22
-    },
-    __self: this
-  }, "Early bird tickets are on sale now"), __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-    href: "/ticketPortal",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 23
-    },
-    __self: this
-  }, __jsx(_Button__WEBPACK_IMPORTED_MODULE_5__["Button"], {
-    br: "500rem",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 24
-    },
-    __self: this
-  }, "Book Now"))) : __jsx(react_reveal_Bounce__WEBPACK_IMPORTED_MODULE_2___default.a, {
-    ssrFadeout: true,
-    right: true,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 28
-    },
-    __self: this
-  }, __jsx(_Card__WEBPACK_IMPORTED_MODULE_4__["Card"], {
-    right: true,
-    __source: {
-      fileName: _jsxFileName,
       lineNumber: 29
     },
     __self: this
-  }, __jsx("h1", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 30
-    },
-    __self: this
-  }, "Early bird tickets are on sale now"), __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-    href: "/ticketPortal",
+  })), __jsx(BounceAboutCard, {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 31
     },
     __self: this
-  }, __jsx(_Button__WEBPACK_IMPORTED_MODULE_5__["Button"], {
-    br: "500rem",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 32
-    },
-    __self: this
-  }, "Book Now"))))));
+  })));
 }
 
 /***/ }),
@@ -166,7 +151,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _styles_HomeStyles__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./styles/HomeStyles */ "./components/styles/HomeStyles.js");
 /* harmony import */ var _Card__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Card */ "./components/Card.js");
 /* harmony import */ var _Button__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Button */ "./components/Button.js");
-/* harmony import */ var _utils_mixins__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../utils/mixins */ "./utils/mixins.js");
+/* harmony import */ var react_reveal_withReveal__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-reveal/withReveal */ "./node_modules/react-reveal/withReveal.js");
+/* harmony import */ var react_reveal_withReveal__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react_reveal_withReveal__WEBPACK_IMPORTED_MODULE_6__);
 var _jsxFileName = "/mnt/c/Users/D.Hardiman/desktop/eurobrake/components/AttendeesSection.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -176,53 +162,48 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 
-function AttendeesSection() {
-  return __jsx(_styles_HomeStyles__WEBPACK_IMPORTED_MODULE_3__["StyledSection"], {
+
+var AttendeesCard = function AttendeesCard() {
+  return __jsx(_Card__WEBPACK_IMPORTED_MODULE_4__["Card"], {
+    right: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 11
+      lineNumber: 10
     },
     __self: this
   }, __jsx("h1", {
     __source: {
       fileName: _jsxFileName,
+      lineNumber: 11
+    },
+    __self: this
+  }, "Who attends Eurobrake"), __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+    href: "/about",
+    __source: {
+      fileName: _jsxFileName,
       lineNumber: 12
     },
     __self: this
-  }, "Attendees"), __jsx("p", {
+  }, __jsx(_Button__WEBPACK_IMPORTED_MODULE_5__["Button"], {
+    br: "500rem",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 13
     },
     __self: this
-  }, "Featuring more than 120 technical presentations and 100+ international exhibitors, EuroBrake attracts a global audience of engineers, scientists, academics and executives from the industries of passenger car, commercial vehicle, rail, aerospace and the wider industrial sectors."), __jsx("div", {
-    className: "innerContainer",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 15
-    },
-    __self: this
-  }, __jsx("div", {
-    className: "mediaBox",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 16
-    },
-    __self: this
-  }, __jsx("img", {
-    src: "/images/pic1.png",
-    alt: "EuroBrake Greating",
-    style: {
-      width: '100%',
-      height: '100%'
-    },
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 17
-    },
-    __self: this
-  })), Object(_utils_mixins__WEBPACK_IMPORTED_MODULE_6__["winWidth"])() ? __jsx(_Card__WEBPACK_IMPORTED_MODULE_4__["Card"], {
-    right: true,
+  }, "Attendees")));
+};
+
+var BounceAttendeesCard = react_reveal_withReveal__WEBPACK_IMPORTED_MODULE_6___default()(AttendeesCard, __jsx(react_reveal_Bounce__WEBPACK_IMPORTED_MODULE_2___default.a, {
+  left: true,
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 18
+  },
+  __self: undefined
+}));
+function AttendeesSection() {
+  return __jsx(_styles_HomeStyles__WEBPACK_IMPORTED_MODULE_3__["StyledSection"], {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 21
@@ -234,56 +215,45 @@ function AttendeesSection() {
       lineNumber: 22
     },
     __self: this
-  }, "Who attends Eurobrake"), __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-    href: "/about",
+  }, "Attendees"), __jsx("p", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 23
     },
     __self: this
-  }, __jsx(_Button__WEBPACK_IMPORTED_MODULE_5__["Button"], {
-    br: "500rem",
+  }, "Featuring more than 120 technical presentations and 100+ international exhibitors, EuroBrake attracts a global audience of engineers, scientists, academics and executives from the industries of passenger car, commercial vehicle, rail, aerospace and the wider industrial sectors."), __jsx("div", {
+    className: "innerContainer",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 24
+      lineNumber: 25
     },
     __self: this
-  }, "Attendees"))) : __jsx(react_reveal_Bounce__WEBPACK_IMPORTED_MODULE_2___default.a, {
-    ssrFadeout: true,
-    right: true,
+  }, __jsx("div", {
+    className: "mediaBox",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 28
+      lineNumber: 26
     },
     __self: this
-  }, __jsx(_Card__WEBPACK_IMPORTED_MODULE_4__["Card"], {
-    right: true,
+  }, __jsx("img", {
+    src: "/images/pic1.png",
+    alt: "EuroBrake Greating",
+    style: {
+      width: '100%',
+      height: '100%'
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 27
+    },
+    __self: this
+  })), __jsx(BounceAttendeesCard, {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 29
     },
     __self: this
-  }, __jsx("h1", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 30
-    },
-    __self: this
-  }, "Who attends Eurobrake"), __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-    href: "/about",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 31
-    },
-    __self: this
-  }, __jsx(_Button__WEBPACK_IMPORTED_MODULE_5__["Button"], {
-    br: "500rem",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 32
-    },
-    __self: this
-  }, "Attendees"))))));
+  })));
 }
 
 /***/ }),
@@ -307,7 +277,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _styles_HomeStyles__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./styles/HomeStyles */ "./components/styles/HomeStyles.js");
 /* harmony import */ var _Card__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Card */ "./components/Card.js");
 /* harmony import */ var _Button__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Button */ "./components/Button.js");
-/* harmony import */ var _utils_mixins__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../utils/mixins */ "./utils/mixins.js");
+/* harmony import */ var react_reveal_withReveal__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-reveal/withReveal */ "./node_modules/react-reveal/withReveal.js");
+/* harmony import */ var react_reveal_withReveal__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react_reveal_withReveal__WEBPACK_IMPORTED_MODULE_6__);
 var _jsxFileName = "/mnt/c/Users/D.Hardiman/desktop/eurobrake/components/AuthorSection.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -317,37 +288,77 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 
-function AuthorSection() {
-  return __jsx(_styles_HomeStyles__WEBPACK_IMPORTED_MODULE_3__["StyledSection"], {
+
+var AuthorCard = function AuthorCard() {
+  return __jsx(_Card__WEBPACK_IMPORTED_MODULE_4__["Card"], {
+    left: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 12
+      lineNumber: 10
     },
     __self: this
   }, __jsx("h1", {
     __source: {
       fileName: _jsxFileName,
+      lineNumber: 11
+    },
+    __self: this
+  }, "Access the Authors Area"), __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+    href: "/authorsArea",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 12
+    },
+    __self: this
+  }, __jsx(_Button__WEBPACK_IMPORTED_MODULE_5__["Button"], {
+    br: "500rem",
+    __source: {
+      fileName: _jsxFileName,
       lineNumber: 13
+    },
+    __self: this
+  }, "Authors Area")));
+};
+
+var BounceAuthorCard = react_reveal_withReveal__WEBPACK_IMPORTED_MODULE_6___default()(AuthorCard, __jsx(react_reveal_Bounce__WEBPACK_IMPORTED_MODULE_2___default.a, {
+  left: true,
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 18
+  },
+  __self: undefined
+}));
+function AuthorSection() {
+  return __jsx(_styles_HomeStyles__WEBPACK_IMPORTED_MODULE_3__["StyledSection"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 23
+    },
+    __self: this
+  }, __jsx("h1", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 24
     },
     __self: this
   }, "Authors Area"), __jsx("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 14
+      lineNumber: 25
     },
     __self: this
   }, "Presenting a paper at EuroBrake gives you the opportunity to share your latest technical ideas and achievements with influential specialists from around the world and to discuss your work with colleagues throughout the industrial and academic communities."), __jsx("div", {
     className: "innerContainer",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 16
+      lineNumber: 27
     },
     __self: this
   }, __jsx("div", {
     className: "mediaBox",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 17
+      lineNumber: 28
     },
     __self: this
   }, __jsx("img", {
@@ -359,72 +370,16 @@ function AuthorSection() {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 18
-    },
-    __self: this
-  })), Object(_utils_mixins__WEBPACK_IMPORTED_MODULE_6__["winWidth"])() ? __jsx(_Card__WEBPACK_IMPORTED_MODULE_4__["Card"], {
-    left: true,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 21
-    },
-    __self: this
-  }, __jsx("h1", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 22
-    },
-    __self: this
-  }, "Access the Authors Area"), __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-    href: "/authorsArea",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 23
-    },
-    __self: this
-  }, __jsx(_Button__WEBPACK_IMPORTED_MODULE_5__["Button"], {
-    br: "500rem",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 24
-    },
-    __self: this
-  }, "Authors Area"))) : __jsx(react_reveal_Bounce__WEBPACK_IMPORTED_MODULE_2___default.a, {
-    ssrFadeout: true,
-    left: true,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 28
-    },
-    __self: this
-  }, __jsx(_Card__WEBPACK_IMPORTED_MODULE_4__["Card"], {
-    left: true,
-    __source: {
-      fileName: _jsxFileName,
       lineNumber: 29
     },
     __self: this
-  }, __jsx("h1", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 30
-    },
-    __self: this
-  }, "Access the Authors Area"), __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-    href: "/authorsArea",
+  })), __jsx(BounceAuthorCard, {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 31
     },
     __self: this
-  }, __jsx(_Button__WEBPACK_IMPORTED_MODULE_5__["Button"], {
-    br: "500rem",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 32
-    },
-    __self: this
-  }, "Authors Area"))))));
+  })));
 }
 
 /***/ }),
@@ -1558,7 +1513,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _styles_HomeStyles__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./styles/HomeStyles */ "./components/styles/HomeStyles.js");
 /* harmony import */ var _Card__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Card */ "./components/Card.js");
 /* harmony import */ var _Button__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Button */ "./components/Button.js");
-/* harmony import */ var _utils_mixins__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../utils/mixins */ "./utils/mixins.js");
+/* harmony import */ var react_reveal_withReveal__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-reveal/withReveal */ "./node_modules/react-reveal/withReveal.js");
+/* harmony import */ var react_reveal_withReveal__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react_reveal_withReveal__WEBPACK_IMPORTED_MODULE_6__);
 var _jsxFileName = "/mnt/c/Users/D.Hardiman/desktop/eurobrake/components/LocationSection.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -1568,37 +1524,77 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 
-function LocationSection() {
-  return __jsx(_styles_HomeStyles__WEBPACK_IMPORTED_MODULE_3__["StyledSection"], {
+
+var LocationCard = function LocationCard() {
+  return __jsx(_Card__WEBPACK_IMPORTED_MODULE_4__["Card"], {
+    left: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 12
+      lineNumber: 10
     },
     __self: this
   }, __jsx("h1", {
     __source: {
       fileName: _jsxFileName,
+      lineNumber: 11
+    },
+    __self: this
+  }, "Find out more about Barcelona"), __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+    href: "/welcome",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 12
+    },
+    __self: this
+  }, __jsx(_Button__WEBPACK_IMPORTED_MODULE_5__["Button"], {
+    br: "500rem",
+    __source: {
+      fileName: _jsxFileName,
       lineNumber: 13
+    },
+    __self: this
+  }, "Discover")));
+};
+
+var BounceLocationCard = react_reveal_withReveal__WEBPACK_IMPORTED_MODULE_6___default()(LocationCard, __jsx(react_reveal_Bounce__WEBPACK_IMPORTED_MODULE_2___default.a, {
+  left: true,
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 18
+  },
+  __self: undefined
+}));
+function LocationSection() {
+  return __jsx(_styles_HomeStyles__WEBPACK_IMPORTED_MODULE_3__["StyledSection"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 23
+    },
+    __self: this
+  }, __jsx("h1", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 24
     },
     __self: this
   }, "Discover Barcelona"), __jsx("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 14
+      lineNumber: 25
     },
     __self: this
   }, "Offering an enviable climate and world-leading hub for business, Barcelona has direct links with many of the world\u2019s Capital cities, via air, road, rail and sea, making EuroBrake 2020 extremely accessible."), __jsx("div", {
     className: "innerContainer",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 16
+      lineNumber: 27
     },
     __self: this
   }, __jsx("div", {
     className: "mediaBox",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 17
+      lineNumber: 28
     },
     __self: this
   }, __jsx("img", {
@@ -1610,72 +1606,16 @@ function LocationSection() {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 18
-    },
-    __self: this
-  })), Object(_utils_mixins__WEBPACK_IMPORTED_MODULE_6__["winWidth"])() ? __jsx(_Card__WEBPACK_IMPORTED_MODULE_4__["Card"], {
-    left: true,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 21
-    },
-    __self: this
-  }, __jsx("h1", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 22
-    },
-    __self: this
-  }, "Find out more about Barcelona"), __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-    href: "/welcome",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 23
-    },
-    __self: this
-  }, __jsx(_Button__WEBPACK_IMPORTED_MODULE_5__["Button"], {
-    br: "500rem",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 24
-    },
-    __self: this
-  }, "Discover"))) : __jsx(react_reveal_Bounce__WEBPACK_IMPORTED_MODULE_2___default.a, {
-    ssrFadeout: true,
-    left: true,
-    __source: {
-      fileName: _jsxFileName,
       lineNumber: 29
     },
     __self: this
-  }, __jsx(_Card__WEBPACK_IMPORTED_MODULE_4__["Card"], {
-    left: true,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 30
-    },
-    __self: this
-  }, __jsx("h1", {
+  })), __jsx(BounceLocationCard, {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 31
     },
     __self: this
-  }, "Find out more about Barcelona"), __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-    href: "/welcome",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 32
-    },
-    __self: this
-  }, __jsx(_Button__WEBPACK_IMPORTED_MODULE_5__["Button"], {
-    br: "500rem",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 33
-    },
-    __self: this
-  }, "Discover"))))));
+  })));
 }
 
 /***/ }),
@@ -2268,8 +2208,10 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 var SponsorContainer = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div.withConfig({
   displayName: "SponsorCarousel__SponsorContainer",
   componentId: "p6ud71-0"
-})(["margin-top:1rem;align-self:center;display:flex;flex-flow:column;align-items:center;width:", ";.sponsor-top{&_title{color:", ";font-family:", ";font-size:2rem;}}"], function (props) {
+})(["margin-top:1rem;align-self:center;display:flex;flex-flow:column;align-items:center;width:", ";@media only screen  and (max-device-width:768px)  and (-webkit-min-device-pixel-ratio:2){width:", ";}.sponsor-top{&_title{color:", ";font-family:", ";font-size:2rem;}}"], function (props) {
   return props.theme.minWidth;
+}, function (props) {
+  return props.theme.mobileWidth;
 }, function (props) {
   return props.theme.primary;
 }, function (props) {
@@ -2285,7 +2227,7 @@ var CarouselUI = function CarouselUI(_ref) {
   return __jsx(Container, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 52
+      lineNumber: 57
     },
     __self: this
   }, children);
@@ -2296,14 +2238,14 @@ function SponsorCarousel() {
   return __jsx(SponsorContainer, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 57
+      lineNumber: 62
     },
     __self: this
   }, __jsx("div", {
     className: "sponsor-top",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 58
+      lineNumber: 63
     },
     __self: this
   }, __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_4__["default"], {
@@ -2311,27 +2253,27 @@ function SponsorCarousel() {
     className: "sponsor-top_title",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 59
+      lineNumber: 64
     },
     __self: this
   }, "Confirmed EuroBrake 2020 Sponsors")), __jsx(SponsorBox, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 61
+      lineNumber: 66
     },
     __self: this
   }, __jsx("div", {
     className: "sponsor",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 63
+      lineNumber: 68
     },
     __self: this
   }, __jsx("a", {
     href: "http://www.applusidiada.com/en/",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 63
+      lineNumber: 68
     },
     __self: this
   }, __jsx("img", {
@@ -2343,21 +2285,21 @@ function SponsorCarousel() {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 63
+      lineNumber: 68
     },
     __self: this
   }))), __jsx("div", {
     className: "sponsor",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 64
+      lineNumber: 69
     },
     __self: this
   }, __jsx("a", {
     href: "http://www.applusidiada.com/en/",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 64
+      lineNumber: 69
     },
     __self: this
   }, __jsx("img", {
@@ -2369,21 +2311,21 @@ function SponsorCarousel() {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 64
+      lineNumber: 69
     },
     __self: this
   }))), __jsx("div", {
     className: "sponsor",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 65
+      lineNumber: 70
     },
     __self: this
   }, __jsx("a", {
     href: "http://www.applusidiada.com/en/",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 65
+      lineNumber: 70
     },
     __self: this
   }, __jsx("img", {
@@ -2395,21 +2337,21 @@ function SponsorCarousel() {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 65
+      lineNumber: 70
     },
     __self: this
   }))), __jsx("div", {
     className: "sponsor",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 66
+      lineNumber: 71
     },
     __self: this
   }, __jsx("a", {
     href: "http://www.applusidiada.com/en/",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 66
+      lineNumber: 71
     },
     __self: this
   }, __jsx("img", {
@@ -2421,21 +2363,21 @@ function SponsorCarousel() {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 66
+      lineNumber: 71
     },
     __self: this
   }))), __jsx("div", {
     className: "sponsor",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 67
+      lineNumber: 72
     },
     __self: this
   }, __jsx("a", {
     href: "http://www.applusidiada.com/en/",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 67
+      lineNumber: 72
     },
     __self: this
   }, __jsx("img", {
@@ -2447,21 +2389,21 @@ function SponsorCarousel() {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 67
+      lineNumber: 72
     },
     __self: this
   }))), __jsx("div", {
     className: "sponsor",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 68
+      lineNumber: 73
     },
     __self: this
   }, __jsx("a", {
     href: "http://www.applusidiada.com/en/",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 68
+      lineNumber: 73
     },
     __self: this
   }, __jsx("img", {
@@ -2473,21 +2415,21 @@ function SponsorCarousel() {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 68
+      lineNumber: 73
     },
     __self: this
   }))), __jsx("div", {
     className: "sponsor",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 69
+      lineNumber: 74
     },
     __self: this
   }, __jsx("a", {
     href: "http://www.applusidiada.com/en/",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 69
+      lineNumber: 74
     },
     __self: this
   }, __jsx("img", {
@@ -2499,21 +2441,21 @@ function SponsorCarousel() {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 69
+      lineNumber: 74
     },
     __self: this
   }))), __jsx("div", {
     className: "sponsor",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 70
+      lineNumber: 75
     },
     __self: this
   }, __jsx("a", {
     href: "http://www.applusidiada.com/en/",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 70
+      lineNumber: 75
     },
     __self: this
   }, __jsx("img", {
@@ -2525,21 +2467,21 @@ function SponsorCarousel() {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 70
+      lineNumber: 75
     },
     __self: this
   }))), __jsx("div", {
     className: "sponsor",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 71
+      lineNumber: 76
     },
     __self: this
   }, __jsx("a", {
     href: "http://www.applusidiada.com/en/",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 71
+      lineNumber: 76
     },
     __self: this
   }, __jsx("img", {
@@ -2551,21 +2493,21 @@ function SponsorCarousel() {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 71
+      lineNumber: 76
     },
     __self: this
   }))), __jsx("div", {
     className: "sponsor",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 72
+      lineNumber: 77
     },
     __self: this
   }, __jsx("a", {
     href: "http://www.applusidiada.com/en/",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 72
+      lineNumber: 77
     },
     __self: this
   }, __jsx("img", {
@@ -2577,7 +2519,7 @@ function SponsorCarousel() {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 72
+      lineNumber: 77
     },
     __self: this
   })))));
@@ -2604,7 +2546,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _styles_HomeStyles__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./styles/HomeStyles */ "./components/styles/HomeStyles.js");
 /* harmony import */ var _Card__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Card */ "./components/Card.js");
 /* harmony import */ var _Button__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Button */ "./components/Button.js");
-/* harmony import */ var _utils_mixins__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../utils/mixins */ "./utils/mixins.js");
+/* harmony import */ var react_reveal_withReveal__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-reveal/withReveal */ "./node_modules/react-reveal/withReveal.js");
+/* harmony import */ var react_reveal_withReveal__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react_reveal_withReveal__WEBPACK_IMPORTED_MODULE_6__);
 var _jsxFileName = "/mnt/c/Users/D.Hardiman/desktop/eurobrake/components/StudentSection.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -2614,59 +2557,48 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 
-function StudentSection() {
-  return __jsx(_styles_HomeStyles__WEBPACK_IMPORTED_MODULE_3__["StyledSection"], {
+
+var StudentCard = function StudentCard() {
+  return __jsx(_Card__WEBPACK_IMPORTED_MODULE_4__["Card"], {
+    right: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 13
+      lineNumber: 10
     },
     __self: this
   }, __jsx("h1", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 14
+      lineNumber: 11
     },
     __self: this
-  }, "Student Opportunities Programme"), __jsx("p", {
+  }, "Learn more about ESOP"), __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+    href: "/studentArea",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 15
+      lineNumber: 12
     },
     __self: this
-  }, "The EuroBrake Student Opportunities Programme (ESOP) offers 50 students from around the world the chance to attend EuroBrake 2020."), __jsx("p", {
+  }, __jsx(_Button__WEBPACK_IMPORTED_MODULE_5__["Button"], {
+    br: "500rem",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 16
+      lineNumber: 13
     },
     __self: this
-  }, "Selected students will be offered the opportunity to attend EuroBrake via a sponsorship package which offers a strong networking opportunities, a CV check/one to one career advice with HR representatives from the sponsor companies, access to the designated Student Lounge and much more."), __jsx("div", {
-    className: "innerContainer",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 18
-    },
-    __self: this
-  }, __jsx("div", {
-    className: "mediaBox",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 19
-    },
-    __self: this
-  }, __jsx("img", {
-    src: "/images/pic2.png",
-    alt: "EuroBrake Greating",
-    style: {
-      width: '100%',
-      height: '100%'
-    },
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 20
-    },
-    __self: this
-  })), Object(_utils_mixins__WEBPACK_IMPORTED_MODULE_6__["winWidth"])() ? __jsx(_Card__WEBPACK_IMPORTED_MODULE_4__["Card"], {
-    right: true,
+  }, "ESOP")));
+};
+
+var BounceStudentCard = react_reveal_withReveal__WEBPACK_IMPORTED_MODULE_6___default()(StudentCard, __jsx(react_reveal_Bounce__WEBPACK_IMPORTED_MODULE_2___default.a, {
+  left: true,
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 18
+  },
+  __self: undefined
+}));
+function StudentSection() {
+  return __jsx(_styles_HomeStyles__WEBPACK_IMPORTED_MODULE_3__["StyledSection"], {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 24
@@ -2678,56 +2610,51 @@ function StudentSection() {
       lineNumber: 25
     },
     __self: this
-  }, "Learn more about ESOP"), __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-    href: "/studentArea",
+  }, "Student Opportunities Programme"), __jsx("p", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 26
     },
     __self: this
-  }, __jsx(_Button__WEBPACK_IMPORTED_MODULE_5__["Button"], {
-    br: "500rem",
+  }, "The EuroBrake Student Opportunities Programme (ESOP) offers 50 students from around the world the chance to attend EuroBrake 2020."), __jsx("p", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 27
     },
     __self: this
-  }, "ESOP"))) : __jsx(react_reveal_Bounce__WEBPACK_IMPORTED_MODULE_2___default.a, {
-    ssrFadeout: true,
-    right: true,
+  }, "Selected students will be offered the opportunity to attend EuroBrake via a sponsorship package which offers a strong networking opportunities, a CV check/one to one career advice with HR representatives from the sponsor companies, access to the designated Student Lounge and much more."), __jsx("div", {
+    className: "innerContainer",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 29
+    },
+    __self: this
+  }, __jsx("div", {
+    className: "mediaBox",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 30
+    },
+    __self: this
+  }, __jsx("img", {
+    src: "/images/pic2.png",
+    alt: "EuroBrake Greating",
+    style: {
+      width: '100%',
+      height: '100%'
+    },
     __source: {
       fileName: _jsxFileName,
       lineNumber: 31
     },
     __self: this
-  }, __jsx(_Card__WEBPACK_IMPORTED_MODULE_4__["Card"], {
-    right: true,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 32
-    },
-    __self: this
-  }, __jsx("h1", {
+  })), __jsx(BounceStudentCard, {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 33
     },
     __self: this
-  }, "Learn more about ESOP"), __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-    href: "/studentArea",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 34
-    },
-    __self: this
-  }, __jsx(_Button__WEBPACK_IMPORTED_MODULE_5__["Button"], {
-    br: "500rem",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 35
-    },
-    __self: this
-  }, "ESOP"))))));
+  })));
 }
 
 /***/ }),
@@ -2829,7 +2756,7 @@ function StyledCarousel() {
     __self: this
   }, __jsx(StyledSlide, {
     style: {},
-    srcSet: "/images/pic2.png",
+    srcSet: "/images/barcelona.png",
     alt: "EuroBrake Greating",
     __source: {
       fileName: _jsxFileName,
@@ -2855,12 +2782,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var react_reveal_Bounce__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-reveal/Bounce */ "./node_modules/react-reveal/Bounce.js");
-/* harmony import */ var react_reveal_Bounce__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_reveal_Bounce__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _styles_HomeStyles__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../styles/HomeStyles */ "./components/styles/HomeStyles.js");
-/* harmony import */ var _Card__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../Card */ "./components/Card.js");
-/* harmony import */ var _Button__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../Button */ "./components/Button.js");
-/* harmony import */ var _utils_mixins__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../utils/mixins */ "./utils/mixins.js");
+/* harmony import */ var _styles_HomeStyles__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../styles/HomeStyles */ "./components/styles/HomeStyles.js");
+/* harmony import */ var _Card__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../Card */ "./components/Card.js");
+/* harmony import */ var _Button__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../Button */ "./components/Button.js");
+/* harmony import */ var react_reveal_Bounce__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-reveal/Bounce */ "./node_modules/react-reveal/Bounce.js");
+/* harmony import */ var react_reveal_Bounce__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react_reveal_Bounce__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var react_reveal_withReveal__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-reveal/withReveal */ "./node_modules/react-reveal/withReveal.js");
+/* harmony import */ var react_reveal_withReveal__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react_reveal_withReveal__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _utils_mixins__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../utils/mixins */ "./utils/mixins.js");
 var _jsxFileName = "/mnt/c/Users/D.Hardiman/desktop/eurobrake/components/exhibitors/ExhibitionSection.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -2870,37 +2799,81 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 
-function ExhibitionSection() {
-  return __jsx(_styles_HomeStyles__WEBPACK_IMPORTED_MODULE_3__["StyledSection"], {
+
+
+var ExhibitCard = function ExhibitCard() {
+  return __jsx(_Card__WEBPACK_IMPORTED_MODULE_3__["Card"], {
+    left: true,
+    style: {
+      opacity: '1'
+    },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 12
+      lineNumber: 11
     },
     __self: this
   }, __jsx("h1", {
     __source: {
       fileName: _jsxFileName,
+      lineNumber: 12
+    },
+    __self: this
+  }, "Partner your brand with EuroBrake"), __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+    href: "/exhibitAndSponsor",
+    __source: {
+      fileName: _jsxFileName,
       lineNumber: 13
+    },
+    __self: this
+  }, __jsx(_Button__WEBPACK_IMPORTED_MODULE_4__["Button"], {
+    br: "500rem",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 14
+    },
+    __self: this
+  }, "EXHIBIT/SPONSOR")));
+};
+
+var BounceExhibitCard = react_reveal_withReveal__WEBPACK_IMPORTED_MODULE_6___default()(ExhibitCard, __jsx(react_reveal_Bounce__WEBPACK_IMPORTED_MODULE_5___default.a, {
+  left: true,
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 19
+  },
+  __self: undefined
+}));
+function ExhibitionSection() {
+  return __jsx(_styles_HomeStyles__WEBPACK_IMPORTED_MODULE_2__["StyledSection"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 23
+    },
+    __self: this
+  }, __jsx("h1", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 24
     },
     __self: this
   }, "Exhibition and Sponsorship"), __jsx("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 14
+      lineNumber: 25
     },
     __self: this
   }, "EuroBrake\u2019s accompanying technical exhibition offers an ideal opportunity to present your company\u2019s products, services and technical capabilities to key decision-makers, from industry players to new entrants in specialist engineering."), __jsx("div", {
     className: "innerContainer",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 16
+      lineNumber: 27
     },
     __self: this
   }, __jsx("div", {
     className: "mediaBox",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 17
+      lineNumber: 28
     },
     __self: this
   }, __jsx("img", {
@@ -2912,73 +2885,21 @@ function ExhibitionSection() {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 18
-    },
-    __self: this
-  })), Object(_utils_mixins__WEBPACK_IMPORTED_MODULE_6__["winWidth"])() ? __jsx(_Card__WEBPACK_IMPORTED_MODULE_4__["Card"], {
-    left: true,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 21
-    },
-    __self: this
-  }, __jsx("h1", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 22
-    },
-    __self: this
-  }, "Partner your brand with EuroBrake"), __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-    href: "/exhibitAndSponsor",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 23
-    },
-    __self: this
-  }, __jsx(_Button__WEBPACK_IMPORTED_MODULE_5__["Button"], {
-    br: "500rem",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 24
-    },
-    __self: this
-  }, "EXHIBIT/SPONSOR"))) : __jsx(react_reveal_Bounce__WEBPACK_IMPORTED_MODULE_2___default.a, {
-    ssrFadeout: true,
-    left: true,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 28
-    },
-    __self: this
-  }, __jsx(_Card__WEBPACK_IMPORTED_MODULE_4__["Card"], {
-    left: true,
-    __source: {
-      fileName: _jsxFileName,
       lineNumber: 29
     },
     __self: this
-  }, __jsx("h1", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 30
-    },
-    __self: this
-  }, "Partner your brand with EuroBrake"), __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-    href: "/exhibitAndSponsor",
+  })), __jsx(BounceExhibitCard, {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 31
     },
     __self: this
-  }, __jsx(_Button__WEBPACK_IMPORTED_MODULE_5__["Button"], {
-    br: "500rem",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 32
-    },
-    __self: this
-  }, "EXHIBIT/SPONSOR"))))));
-}
+  })));
+} // {winWidth() ? 
+// :
+// <>
+// </>
+// }
 
 /***/ }),
 
@@ -64431,6 +64352,18 @@ function _interopRequireDefault(e){return e&&e.__esModule?e:{default:e}}function
 
 "use strict";
 function swipedetect(e,t){var a,s,n,o,d,i,u,c=e,p=t||function(e){};c.addEventListener("touchstart",function(e){var t=e.changedTouches[0];a="none",s=t.pageX,n=t.pageY,u=(new Date).getTime()},{passive:!0}),c.addEventListener("touchend",function(e){var t=e.changedTouches[0];o=t.pageX-s,d=t.pageY-n,i=(new Date).getTime()-u,i<=300&&(Math.abs(o)>=150&&Math.abs(d)<=100?a=o<0?"left":"right":Math.abs(d)>=150&&Math.abs(o)<=100&&(a=d<0?"up":"down")),p(a)},{passive:!0})}Object.defineProperty(exports,"__esModule",{value:!0}),exports.default=swipedetect,module.exports=exports.default;
+
+/***/ }),
+
+/***/ "./node_modules/react-reveal/withReveal.js":
+/*!*************************************************!*\
+  !*** ./node_modules/react-reveal/withReveal.js ***!
+  \*************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+function _interopRequireDefault(e){return e&&e.__esModule?e:{default:e}}function _objectWithoutProperties(e,t){var r={};for(var n in e)t.indexOf(n)>=0||Object.prototype.hasOwnProperty.call(e,n)&&(r[n]=e[n]);return r}function withReveal(e,t){var r=void 0;return"function"==typeof e&&"string"==typeof e.styledComponentId&&(r="innerRef"),function(n){var o=n.force,i=n.mountOnEnter,a=n.unmountOnExit,p=n.opposite,u=n.mirror,l=n.wait,c=n.onReveal,s=n.in,f=n.when,d=n.spy,x=n.collapse,v=n.onExited,_=n.enter,m=n.exit,O=n.appear,y=_objectWithoutProperties(n,["force","mountOnEnter","unmountOnExit","opposite","mirror","wait","onReveal","in","when","spy","collapse","onExited","enter","exit","appear"]);return _react2.default.createElement(t.type,_extends({force:o,mountOnEnter:i,unmountOnExit:a,opposite:p,mirror:u,wait:l,onReveal:c,in:s,when:f,spy:d,collapse:x,onExited:v,enter:_,exit:m,appear:O},t.props,{refProp:r}),_react2.default.createElement(e,y))}}Object.defineProperty(exports,"__esModule",{value:!0});var _extends=Object.assign||function(e){for(var t=1;t<arguments.length;t++){var r=arguments[t];for(var n in r)Object.prototype.hasOwnProperty.call(r,n)&&(e[n]=r[n])}return e},_react=__webpack_require__(/*! react */ "./node_modules/react/index.js"),_react2=_interopRequireDefault(_react);exports.default=withReveal,module.exports=exports.default;
 
 /***/ }),
 

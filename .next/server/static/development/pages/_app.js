@@ -1332,7 +1332,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 const SponsorContainer = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div.withConfig({
   displayName: "SponsorCarousel__SponsorContainer",
   componentId: "p6ud71-0"
-})(["margin-top:1rem;align-self:center;display:flex;flex-flow:column;align-items:center;width:", ";.sponsor-top{&_title{color:", ";font-family:", ";font-size:2rem;}}"], props => props.theme.minWidth, props => props.theme.primary, props => props.theme.MPLightIt);
+})(["margin-top:1rem;align-self:center;display:flex;flex-flow:column;align-items:center;width:", ";@media only screen  and (max-device-width:768px)  and (-webkit-min-device-pixel-ratio:2){width:", ";}.sponsor-top{&_title{color:", ";font-family:", ";font-size:2rem;}}"], props => props.theme.minWidth, props => props.theme.mobileWidth, props => props.theme.primary, props => props.theme.MPLightIt);
 const SponsorBox = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div.withConfig({
   displayName: "SponsorCarousel__SponsorBox",
   componentId: "p6ud71-1"
@@ -1343,7 +1343,7 @@ const CarouselUI = ({
 }) => __jsx(Container, {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 52
+    lineNumber: 57
   },
   __self: undefined
 }, children);
@@ -1353,14 +1353,14 @@ function SponsorCarousel() {
   return __jsx(SponsorContainer, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 57
+      lineNumber: 62
     },
     __self: this
   }, __jsx("div", {
     className: "sponsor-top",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 58
+      lineNumber: 63
     },
     __self: this
   }, __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_4___default.a, {
@@ -1368,27 +1368,27 @@ function SponsorCarousel() {
     className: "sponsor-top_title",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 59
+      lineNumber: 64
     },
     __self: this
   }, "Confirmed EuroBrake 2020 Sponsors")), __jsx(SponsorBox, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 61
+      lineNumber: 66
     },
     __self: this
   }, __jsx("div", {
     className: "sponsor",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 63
+      lineNumber: 68
     },
     __self: this
   }, __jsx("a", {
     href: "http://www.applusidiada.com/en/",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 63
+      lineNumber: 68
     },
     __self: this
   }, __jsx("img", {
@@ -1400,21 +1400,21 @@ function SponsorCarousel() {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 63
+      lineNumber: 68
     },
     __self: this
   }))), __jsx("div", {
     className: "sponsor",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 64
+      lineNumber: 69
     },
     __self: this
   }, __jsx("a", {
     href: "http://www.applusidiada.com/en/",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 64
+      lineNumber: 69
     },
     __self: this
   }, __jsx("img", {
@@ -1426,21 +1426,21 @@ function SponsorCarousel() {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 64
+      lineNumber: 69
     },
     __self: this
   }))), __jsx("div", {
     className: "sponsor",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 65
+      lineNumber: 70
     },
     __self: this
   }, __jsx("a", {
     href: "http://www.applusidiada.com/en/",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 65
+      lineNumber: 70
     },
     __self: this
   }, __jsx("img", {
@@ -1452,21 +1452,21 @@ function SponsorCarousel() {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 65
+      lineNumber: 70
     },
     __self: this
   }))), __jsx("div", {
     className: "sponsor",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 66
+      lineNumber: 71
     },
     __self: this
   }, __jsx("a", {
     href: "http://www.applusidiada.com/en/",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 66
+      lineNumber: 71
     },
     __self: this
   }, __jsx("img", {
@@ -1478,21 +1478,21 @@ function SponsorCarousel() {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 66
+      lineNumber: 71
     },
     __self: this
   }))), __jsx("div", {
     className: "sponsor",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 67
+      lineNumber: 72
     },
     __self: this
   }, __jsx("a", {
     href: "http://www.applusidiada.com/en/",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 67
+      lineNumber: 72
     },
     __self: this
   }, __jsx("img", {
@@ -1504,21 +1504,21 @@ function SponsorCarousel() {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 67
+      lineNumber: 72
     },
     __self: this
   }))), __jsx("div", {
     className: "sponsor",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 68
+      lineNumber: 73
     },
     __self: this
   }, __jsx("a", {
     href: "http://www.applusidiada.com/en/",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 68
+      lineNumber: 73
     },
     __self: this
   }, __jsx("img", {
@@ -1530,21 +1530,21 @@ function SponsorCarousel() {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 68
+      lineNumber: 73
     },
     __self: this
   }))), __jsx("div", {
     className: "sponsor",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 69
+      lineNumber: 74
     },
     __self: this
   }, __jsx("a", {
     href: "http://www.applusidiada.com/en/",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 69
+      lineNumber: 74
     },
     __self: this
   }, __jsx("img", {
@@ -1556,21 +1556,21 @@ function SponsorCarousel() {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 69
+      lineNumber: 74
     },
     __self: this
   }))), __jsx("div", {
     className: "sponsor",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 70
+      lineNumber: 75
     },
     __self: this
   }, __jsx("a", {
     href: "http://www.applusidiada.com/en/",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 70
+      lineNumber: 75
     },
     __self: this
   }, __jsx("img", {
@@ -1582,21 +1582,21 @@ function SponsorCarousel() {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 70
+      lineNumber: 75
     },
     __self: this
   }))), __jsx("div", {
     className: "sponsor",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 71
+      lineNumber: 76
     },
     __self: this
   }, __jsx("a", {
     href: "http://www.applusidiada.com/en/",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 71
+      lineNumber: 76
     },
     __self: this
   }, __jsx("img", {
@@ -1608,21 +1608,21 @@ function SponsorCarousel() {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 71
+      lineNumber: 76
     },
     __self: this
   }))), __jsx("div", {
     className: "sponsor",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 72
+      lineNumber: 77
     },
     __self: this
   }, __jsx("a", {
     href: "http://www.applusidiada.com/en/",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 72
+      lineNumber: 77
     },
     __self: this
   }, __jsx("img", {
@@ -1634,7 +1634,7 @@ function SponsorCarousel() {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 72
+      lineNumber: 77
     },
     __self: this
   })))));

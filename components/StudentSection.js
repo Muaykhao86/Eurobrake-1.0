@@ -4,7 +4,18 @@ import Bounce from 'react-reveal/Bounce';
 import { StyledSection } from './styles/HomeStyles';
 import { Card } from './Card';
 import { Button } from './Button';
-import {winWidth} from '../utils/mixins';
+import withReveal from 'react-reveal/withReveal';
+
+const StudentCard = () => (
+    <Card right>
+                    <h1>Learn more about ESOP</h1>
+                    <Link href="/studentArea">
+                    <Button br="500rem">ESOP</Button>
+                    </Link>
+                </Card>
+);
+
+const BounceStudentCard = withReveal(StudentCard, <Bounce left/>);
 
 
 
@@ -19,24 +30,7 @@ export default function StudentSection() {
                 <div className="mediaBox">
                     <img src="/images/pic2.png" alt="EuroBrake Greating" style={{ width: '100%', height: '100%' }} />
                 </div>
-
-                {winWidth() ? 
-                <Card right>
-                    <h1>Learn more about ESOP</h1>
-                    <Link href="/studentArea">
-                    <Button br="500rem">ESOP</Button>
-                    </Link>
-                </Card>
-                :
-                <Bounce ssrFadeout right>
-                <Card right>
-                    <h1>Learn more about ESOP</h1>
-                    <Link href="/studentArea">
-                    <Button br="500rem">ESOP</Button>
-                    </Link>
-                </Card>
-                </Bounce>
-                }
+                <BounceStudentCard/>
             </div>
         </StyledSection>
     )

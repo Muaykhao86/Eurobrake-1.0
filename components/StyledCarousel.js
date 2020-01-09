@@ -56,7 +56,7 @@ export default function StyledCarousel() {
                 <StyledSlide style={{}} srcSet="/images/pic1.png" alt="EuroBrake Greating"/> 
             </Slide>
             <Slide ssr right>
-                <StyledSlide style={{}} srcSet="/images/pic2.png" alt="EuroBrake Greating"/> 
+                <StyledSlide style={{}} srcSet="/images/barcelona.png" alt="EuroBrake Greating"/> 
             </Slide>
         </Carousel>
        
