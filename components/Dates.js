@@ -47,16 +47,16 @@ export default function Dates() {
         
         <StyledDates>
             <Typography gutterBottom as="h1" className="Dates-title" >Important Dates</Typography>
-            <Typography gutterBottom as="h1"  className="Dates-date-text-title">26 January 2020</Typography>
-            <Typography gutterBottom as="p"  className="Dates-date-text-title">Deadline for submission of review ready papers</Typography>
-            <Typography gutterBottom as="h1"  className="Dates-date-text-title">12 April 2020 </Typography>
-            <Typography gutterBottom as="p" className="Dates-date-text-title" >Final deadline for modifications to technical papers</Typography>
-            <Typography gutterBottom as="h1"  className="Dates-date-text-title">1 May 2020</Typography>
-            <Typography gutterBottom as="p" className="Dates-date-text-title" >Deadline for draft oral-only presentations, posters and presentations associated with a technical paper</Typography>
-            <Typography gutterBottom as="h1"  className="Dates-date-text-title">1 May 2020</Typography>
-            <Typography gutterBottom as="p"  className="Dates-date-text-title">Deadline for speakers to register</Typography>
-            <Typography gutterBottom as="h1"  className="Dates-date-text-title">24 May 2020</Typography>
-            <Typography gutterBottom as="p" className="Dates-date-text-title" >Deadline to upload PPTs for on-site presentation</Typography>
+            <Typography gutterBottom as="h1"  className="Dates-date">26 January 2020</Typography>
+            <Typography gutterBottom as="p"  className="Dates-text">Deadline for submission of review ready papers</Typography>
+            <Typography gutterBottom as="h1"  className="Dates-date">12 April 2020 </Typography>
+            <Typography gutterBottom as="p" className="Dates-text" >Final deadline for modifications to technical papers</Typography>
+            <Typography gutterBottom as="h1"  className="Dates-date">1 May 2020</Typography>
+            <Typography gutterBottom as="p" className="Dates-text" >Deadline for draft oral-only presentations, posters and presentations associated with a technical paper</Typography>
+            <Typography gutterBottom as="h1"  className="Dates-date">1 May 2020</Typography>
+            <Typography gutterBottom as="p"  className="Dates-text">Deadline for speakers to register</Typography>
+            <Typography gutterBottom as="h1"  className="Dates-date">24 May 2020</Typography>
+            <Typography gutterBottom as="p" className="Dates-text" >Deadline to upload PPTs for on-site presentation</Typography>
         </StyledDates>  
     )
 }

@@ -328,7 +328,25 @@ export const AbstractForm = (props) => {
                         </div>
                        
                         <Typography className="form-title">Secondary Author(s)</Typography>
-                        
+                        {values.secondary_authors.length == 0 &&
+                        <Button 
+                                                bs="false"
+                                                HBColor="transparent"
+                                                transform="scale(1.4)"
+                                                type="add" onClick={() => {
+                                                    push({
+                                                        title: '',
+                                                        firstname: '',
+                                                        lastname: '',
+                                                        email: '',
+                                                        company: '',
+                                                        country: '',
+                                                        is_presenting_author: ''
+                                                    });
+                                                }}>
+                                                    <AddCircle style={{ color: 'green'  , fontSize: '3rem', margin: '.5rem 0'}} />
+                            </Button>
+                         } 
                             <FieldArray name={`secondary_authors`} >
                                 {({ swap, push, remove, setSubmitting }) => (
                                     values.secondary_authors &&
@@ -503,6 +521,7 @@ export const AbstractForm = (props) => {
                                                     <AddCircle style={{ color: 'green'  , fontSize: '3rem', margin: '.5rem 0'}} />
                                                 </Button>
                                                 <Button 
+                                                 abs="false"
                                                  bs="false"
                                                 HBColor="transparent"
                                                 transform="scale(1.4)"
@@ -510,6 +529,7 @@ export const AbstractForm = (props) => {
                                                     <RemoveCircle style={{ color: 'red' , fontSize: '3rem', margin: '.5rem 0' }} />
                                                 </Button>
                                                 <Button 
+                                                 abs="false"
                                                  bs="false"
                                                 HBColor="transparent"
                                                 transform="scale(1.4)"
@@ -517,6 +537,7 @@ export const AbstractForm = (props) => {
                                                     <ArrowUpwardRounded style={{ color: 'red' , fontSize: '3rem', margin: '.5rem 0' }} />
                                                 </Button>
                                                 <Button 
+                                                 abs="false"
                                                  bs="false"
                                                 HBColor="transparent"
                                                 transform="scale(1.4)"

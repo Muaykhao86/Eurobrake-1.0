@@ -188,8 +188,9 @@ export default () => (
                     <Typography gutterBottom className="Exhibit Exhibit-bold  Exhibit-icon_text" style={{}}><MailIcon className="Exhibit-icon" width="20" height="20" /> sales@fisita.com</Typography>
                 </div>
                 <div className="button_box">
-
+                    
                     <Button
+                        href="https://www.fisita.com/documents/EuroBrake_Exhibition_Terms_Conditions_2020.pdf"
                         background="#134381"
                         br="100rem"
                         bcolor="#134381"

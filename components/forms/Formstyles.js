@@ -41,7 +41,9 @@ export const StyledForm = styled(Form)`
             align-items: flex-end;
 
             &_action{
-                justify-content: flex-end
+                 display: flex;
+                justify-content: flex-end;
+                align-items: center;
             }
         }
         &-label{

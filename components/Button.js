@@ -54,7 +54,7 @@ export const Button = styled.a`
 &:active{
         outline: none; 
         transform: translateY(-.1rem);
-        box-shadow: 0 2rem 2rem rgba(0, 0, 0, 0.5);
+        box-shadow: ${props => props.abs || '0 2rem 2rem rgba(0, 0, 0, 0.5)'};
     }
 `;
 
