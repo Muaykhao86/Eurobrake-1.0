@@ -76,8 +76,8 @@ class AuthorsArea extends Component {
         static async getInitialProps({ res }) {
         const { logintoken } = cookie.get() || {};
         console.log(logintoken)
-        console.log(logintoken.length)
-        if (logintoken.length > 1 ){
+        console.log(logintoken )
+        if (logintoken && logintoken != undefined && logintoken.length > 1){
         if (res) {
           res.writeHead(302, {
             Location: '/authorsAreaDash'
