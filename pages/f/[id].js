@@ -3,6 +3,7 @@ import React, { Component } from 'react'
 import cookies from 'next-cookies';
 import Router from 'next/router';
 import fetch from 'isomorphic-unfetch';
+import Lnk from 'next/link';
 import { LoginForm } from '../../components/forms/LoginForm';
 import { AbstractForm } from '../../components/forms/Abstract';
 import { Authorprofile } from '../../components/forms/Authorprofile';
@@ -16,7 +17,7 @@ import HeroSection from '../../components/HeroSection';
 
 const Form = props => {
     const { presets, __csrf_token } = props.data;
-    const {apiUrl} = props;
+    const {apiUrl, id} = props;// ? GETTIN FROM GET INITIAL PROPS
     console.log({apiUrl})
     return (
         <>
@@ -32,7 +33,7 @@ const Form = props => {
                         style={{ marginLeft: 'auto', color:"#FFF" }}
                     >Back to Dashboard</Button>
             </Link>
-            <AbstractForm editPaper="true" presets={presets} csrf={__csrf_token} apiUrl={apiUrl}/>;
+            <AbstractForm editPaper="true" presets={presets} csrf={__csrf_token} apiUrl={apiUrl} paperId={id}/>;
     </StyledPage>
         </>
     )
@@ -43,7 +44,7 @@ export default Form
 Form.getInitialProps = async context => {
     const { id } = context.query;
     const { logintoken } = cookies(context) || {};
-    const apiUrl = `https://prelude.eurobrake.net/edit/${id}`;
+    const apiUrl = `https://prelude.eurobrake.net/authors/edit/${id}`;
     console.log({ id, logintoken, apiUrl })
     const redirectOnError = () =>
         process.browser
@@ -62,7 +63,7 @@ Form.getInitialProps = async context => {
             const data = await response.json()
             if (data.status === 'success') {
                 console.log('res.ok', data)
-                return { data, apiUrl }
+                return { data, apiUrl, id }
             }
             else {
                 console.log('not reading success')
