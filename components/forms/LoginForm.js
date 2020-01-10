@@ -14,7 +14,7 @@ import Link from 'next/link';
 
 export const LoginForm = () => {
     const [Toggle, setToggle] = useState(false);
-    const url = Toggle ? 'https://prelude.eurobrake.net/reset' : 'https://prelude.eurobrake.net/login';
+    const url = Toggle ? 'https://prelude.eurobrake.net/authors/reset' : 'https://prelude.eurobrake.net/authors/login';
     console.log({url})
     return (
         <Formik

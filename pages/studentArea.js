@@ -29,7 +29,7 @@ export default () => (
     <HeroSection max="60%"  banner={FilledBanner}>
         EuroBrake Student Opportunities Programme (ESOP)
     </HeroSection>
-    <StyledPage mt="10rem">
+    <StyledPage >
 
     </StyledPage>
 </>

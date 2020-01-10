@@ -249,7 +249,7 @@ class AuthorsAreaDash extends Component {
                                                     padding="0.5rem 2rem"
                                                     style={{ margin: ".5rem 0" }}
                                                     fontSize="1.7rem"
-                                                    onClick={() => GetForm(`https://prelude.eurobrake.net/edit/${paper.papercode}`)}
+                                                    onClick={() => GetForm(`https://prelude.eurobrake.net/authors/edit/${paper.papercode}`)}
                                                 >
                                                     <CancelIcon style={{ fontSize: '3rem', marginRight: '1rem' }} />
                                                     WITHDRAW
@@ -285,7 +285,7 @@ class AuthorsAreaDash extends Component {
 AuthorsAreaDash.getInitialProps = async ctx => {
     // We use `nextCookie` to get the cookie and pass the token to the frontend in the `props`.
     const { logintoken } = cookies(ctx) || {};
-    const apiUrl = 'https://prelude.eurobrake.net/dashboard ';
+    const apiUrl = 'https://prelude.eurobrake.net/authors/dashboard ';
     const redirectOnError = () =>
         process.browser
             ? Router.push('/authorsArea')

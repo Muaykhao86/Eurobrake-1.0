@@ -136,7 +136,7 @@ export async function SendForm({ csrf, values, url }) {
             )
         }
     }
-    if(url === 'https://prelude.eurobrake.net/login' ){
+    if(url === 'https://prelude.eurobrake.net/authors/login' ){
         console.log({url, form});
         try {
             const response = await fetch(url, {

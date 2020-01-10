@@ -18,13 +18,13 @@ class OneForm extends Component {
    async componentDidMount (){
        if(this.props.paper){
             const {paper} = this.props
-            const formData = await  GetForm(`https://prelude.eurobrake.net/edit/${paper}`);
+            const formData = await  GetForm(`https://prelude.eurobrake.net/authors/edit/${paper}`);
             const presets = await formData.presets;
             await this.setState({presets: presets});
    }
        if(this.props.profile){
             const {profile} = this.props
-            const formData = await  GetForm(`https://prelude.eurobrake.net/edit/${profile}`);
+            const formData = await  GetForm(`https://prelude.eurobrake.net/authors/edit/${profile}`);
             const presets = await formData.presets;
             await this.setState({presets: presets});
    }
@@ -37,11 +37,11 @@ class OneForm extends Component {
        console.log(form, paper)
             {switch(form) {
                 case'abstract-edit' : 
-                return <AbstractForm editPaper="true" paper={paper} presets={presets}/>;
+                return <AbstractForm  paper={paper} presets={presets}/>;
                 case'abstract' : 
                 return <AbstractForm />;
                 case'exhibitor-edit' : 
-                return <Exhibitorprofile editPaper="true" />;
+                return <Exhibitorprofile  />;
                 case'exhibitor' : 
                 return <Exhibitorprofile />;
                 case'author-edit' : 

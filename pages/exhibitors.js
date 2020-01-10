@@ -30,7 +30,7 @@ export default class ExhibitorList extends Component {
 // ? CHANGE OVER FOR LOCAL HOST
 
     static async getInitialProps() {
-        const res = await fetch('https://prelude.eurobrake.net/exhibitors');
+        const res = await fetch('https://prelude.eurobrake.net/exhibitors/list');
         const data = await res.json().catch(error => console.log(error));
         return {
             exhibitors: data

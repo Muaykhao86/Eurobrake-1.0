@@ -19,7 +19,7 @@ export const AbstractForm = (props) => {
     // * dont think i need this now, can just check if there aere presets and if not just use epty schema
     const {editPaper,  presets, csrf, apiUrl} = props;
     const url = apiUrl;
-    console.log({editPaper,  presets})
+    console.log({editPaper,  presets, apiUrl})
     // ? If they choose to edit a abstarct paper we pass the paper code and il get its presets to fill in
     return (
         <Formik
