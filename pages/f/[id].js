@@ -6,7 +6,7 @@ import fetch from 'isomorphic-unfetch';
 import Link from 'next/link';
 import OneForm from '../../components/forms/OneForm';
 import { LoginForm } from '../../components/forms/LoginForm';
-import { Button } from '../components/Button';
+import { Button } from '../../components/Button';
 
 import { AbstractForm } from '../../components/forms/Abstract';
 import { Authorprofile } from '../../components/forms/Authorprofile';
