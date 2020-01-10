@@ -5,6 +5,8 @@ import ExhibitorCard from '../components/exhibitors/ExhibitorCard';
 import {expo} from '../components/exhibitors/testexpo';
 import HeroSection from '../components/HeroSection';
 import {StyledPage} from '../components/styles/PageStyles';
+import {FixedDates} from '../components/Dates';
+
 
 
 const StyledExhibitors = styled.div`
@@ -56,7 +58,9 @@ export default class ExhibitorList extends Component {
                 EuroBrake 2020 Exhibitor Directory
             </HeroSection>
             <StyledPage  >
-                <h1>Get to know the exhibitors</h1>
+            <FixedDates/>
+
+                <h1 style={{marginBottom: '5rem'}}>Get to know the exhibitors</h1>
                 <StyledExhibitors>
                     {exhibitors.map((company, i) => {
                         return (

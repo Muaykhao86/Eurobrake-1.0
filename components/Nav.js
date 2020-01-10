@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { Typography } from '@material-ui/core';
 import { NavStyles, Burger, TopBun, HiddenNavBG, HiddenContainer } from './styles/NavStyles';
 import {Button} from './Button';
-import Dates from './Dates';
+import {Dates} from './Dates';
 
 
 

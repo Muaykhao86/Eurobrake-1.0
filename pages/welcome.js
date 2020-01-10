@@ -8,6 +8,8 @@ import { Button } from '../components/Button';
 import { StyledBanner, StyledContainer } from '../components/styles/PageStyles';
 import { Beach, Cart, ChefHat, Globe, KF, Museum, Music, People, Sun } from '../components/Icons';
 import HotelBox from '../components/accomodation/HotelBox';
+import {FixedDates} from '../components/Dates';
+
 
 
 
@@ -136,6 +138,7 @@ export default () => (
             Discover Barcelona
         </HeroSection>
         <StyledPage className="Discover">
+            <FixedDates/>
 
             <Typography className="Discover-title" >The EuroBrake 2020 Venue</Typography>
             <Typography className="Discover-sub-title" >Barcelona International Convention Centre</Typography>

@@ -6,6 +6,8 @@ import HeroSection from '../components/HeroSection';
 import StopIcon from '@material-ui/icons/Stop';
 import { Button } from '../components/Button';
 import { Quote, MailIcon, PhoneIcon } from '../components/Icons';
+import {FixedDates} from '../components/Dates';
+
 
 
 const StyledPage = styled.div`
@@ -144,6 +146,8 @@ export default () => (
             Exhibition and Sponsorship
         </HeroSection>
         <StyledPage>
+            <FixedDates/>
+
             <div className="Exhibit">
 
                 <Typography gutterBottom className="Exhibit-title">Exhibit & Sponsor at EuroBrake</Typography>

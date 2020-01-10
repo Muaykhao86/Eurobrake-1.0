@@ -6,6 +6,8 @@ import ExpandMoreOutlinedIcon from '@material-ui/icons/ExpandMoreOutlined';
 import HeroSection from '../components/HeroSection';
 
 import {StyledPage, StyledBanner, StyledContainer} from '../components/styles/PageStyles';
+import {FixedDates} from '../components/Dates';
+
 
 const StyledDiv = styled.div`
     .disclaimer{
@@ -29,6 +31,8 @@ export default () => (
         Disclaimer
     </HeroSection>
     <StyledPage>
+            <FixedDates/>
+
     <StyledDiv>
     <Typography gutterBottom className="disclaimer-title"> Disclaimer</Typography>
     <Typography gutterBottom className="disclaimer">No liability will be accepted by FISITA (UK) Limited in connection with any web site controlled by a third party that may be accessed from this web site. FISITA (UK) Limited does not endorse or authorise the contents of any such site.</Typography>

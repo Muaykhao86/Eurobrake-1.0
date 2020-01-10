@@ -7,6 +7,8 @@ import { StyledBanner, StyledContainer } from '../components/styles/PageStyles';
 import InstructionsPopup from '../components/InstructionsPopup';
 import {Button } from '../components/Button';
 import Link from 'next/link';
+import {FixedDates} from '../components/Dates';
+
 
 
 const FilledBanner = () => (
@@ -93,6 +95,8 @@ class AuthorsAreaInstructions extends Component {
                     Author's Area Instructions & Templates
             </HeroSection>
                 <StyledPage mt="10rem">
+            <FixedDates/>
+
                     <div className="authors">
                     <div className="authors_top-box">
                     

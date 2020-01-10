@@ -5,6 +5,8 @@ import CountDownBanner from './CountDownBanner';
 import StyledCarousel from './StyledCarousel';
 
 const StyledHero = styled.div`
+    position: relative;
+    z-index: 10;
     min-width: 100%;
     min-height: ${props => props.h || props.theme.heroHeightBig };
       @media only screen 

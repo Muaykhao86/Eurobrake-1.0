@@ -4,20 +4,9 @@ import Footer from './Footer';
 import Meta from './Meta';
 import styled, {ThemeProvider, createGlobalStyle} from 'styled-components';
 
-const size = {
-  mobile: '26.5rem',// 425px
-  tablet: '48rem',// 768px
-  laptop: '81rem',// 1300px
-  desktop: '160rem'// 2560px
-}
 
-export const device = {
 
-  mobile: `(max-width: ${size.mobile})`,
-  tablet: `(max-width: ${size.tablet})`,
-  laptop: `(max-width: ${size.laptop})`,
-  desktop: `(max-width: ${size.desktop})`
-};
+
 
 const theme = {
     black: '#000',

@@ -8,6 +8,7 @@ import { Button } from '../components/Button';
 const CDBanner = styled.div`
     position: relative;
     align-self: flex-end;
+    z-index: 10;
     background-color: #134381;
     margin-top: 0;
     min-width: 100%;

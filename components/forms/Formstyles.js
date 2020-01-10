@@ -41,6 +41,7 @@ export const StyledForm = styled(Form)`
             align-items: flex-end;
 
             &_action{
+                align-self: flex-end;
                  display: flex;
                 justify-content: flex-end;
                 align-items: flex-end;

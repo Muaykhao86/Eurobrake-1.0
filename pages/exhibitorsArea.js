@@ -2,6 +2,8 @@ import React from 'react'
 import fetch from 'isomorphic-unfetch';
 import styled from 'styled-components';
 import HeroSection from '../components/HeroSection';
+import {FixedDates} from '../components/Dates';
+
 
 
 const DemoDiv = styled.form`
@@ -68,6 +70,8 @@ export default class ExhibitorsArea extends React.Component {
              <HeroSection>
                 Exhibitors Area
             </HeroSection>
+            <FixedDates/>
+
                 <DemoDiv>
 
             { loggedIn ?

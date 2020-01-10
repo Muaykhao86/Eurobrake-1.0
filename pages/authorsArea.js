@@ -11,6 +11,8 @@ import HeroSection from '../components/HeroSection';
 import { StyledBanner, StyledContainer } from '../components/styles/PageStyles';
 import { withAuthSync, logout, login } from '../utils/auth'
 import LoginExpandTable from '../components/LoginExpandTable';
+import {FixedDates} from '../components/Dates';
+
 
 
 const FilledBanner = () => (
@@ -109,6 +111,7 @@ class AuthorsArea extends Component {
                     AuthorsArea
             </HeroSection>
                 <StyledPage>
+            <FixedDates/>
                     <Typography className="authors-title">Welcome to the Author's Area</Typography>
                     <Typography gutterBottom className="authors">Presenting a paper at EuroBrake gives you the opportunity to share your latest technical ideas and achievements with influential specialists from around the world and to discuss your work with colleagues throughout the industrial and academic communities.</Typography>
                     <Typography gutterBottom className="authors">Once you have created your author account you can login at any time to amend your details and access important information. </Typography>

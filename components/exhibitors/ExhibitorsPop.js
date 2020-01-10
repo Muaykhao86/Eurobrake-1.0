@@ -65,7 +65,7 @@ width: 30vw;
   font-family: ${props => props.theme.MPSemiLight};
   font-size: 1.4rem;
   padding-top: 1rem;
-  overflow: scroll;
+  overflow: auto;
  }
  .ModalBooth{
   font-family: ${props => props.theme.MPBlack};
@@ -101,9 +101,18 @@ const fadeIn = keyframes`
   }
 `
 const StyledMapBox = styled.div`
-/* 
- min-width: 37.9rem;
-  min-height: 22.9rem; */
+position: ${props => props.full ? 'Fixed' : 'relative'};
+top: 0;
+/* left: 0;  */
+left: ${props => props.full ? '50%' : ''};
+right: ${props => props.full ? '50%' : ''};
+margin-left: ${props => props.full ?  '-50vw': '0'};
+margin-right: ${props => props.full ?  '-50vw': '0' };
+ 
+
+ background-color: ${props => props.theme.white};
+ width: ${props => props.width || '100%'};
+  height: ${props => props.width ||'100%'} ;
    border: 1px solid ${props => props.theme.primary};
   align-self: center;
   overflow: hidden;
@@ -191,7 +200,7 @@ const selectedSvg = `#prefix__booth-${booth}`;
             <Paper className="paper">
               <Grid
                 container
-                spacing={12}
+                spacing={1}
                 direction="row"
                 wrap= "wrap"
                 justify="flex-start"
@@ -209,19 +218,19 @@ const selectedSvg = `#prefix__booth-${booth}`;
                   <Typography gutterBottom className="ModalTitle" id="server-modal-title">{name}</Typography>
                 </Grid>
                 <Grid  item xs={1}  style={{}}>
-                  <PhoneIcon gutterBottom className="ModalIcon" />
+                  <PhoneIcon  className="ModalIcon" />
                 </Grid>
                 <Grid  item xs={5} >
                   <Typography gutterBottom className="ModalContact" id="server-modal-description">{phone}</Typography>
                 </Grid>
                 <Grid item xs={1}  style={{}}>
-                  <GlobeIcon gutterBottom className="ModalIcon"/>
+                  <GlobeIcon className="ModalIcon"/>
                 </Grid>
                 <Grid  item xs={5} >
                   <Typography gutterBottom className="ModalContact" id="server-modal-description">{website}</Typography>
                 </Grid>
                 <Grid  item xs={1}  style={{transform: 'translateY(.4rem)'}}>
-                  <MailIcon gutterBottom className="ModalIcon" />
+                  <MailIcon  className="ModalIcon" />
                 </Grid>
                 <Grid  item xs={5} >
                   <Typography gutterBottom className="ModalContact" id="server-modal-description">{email}</Typography>
@@ -233,11 +242,11 @@ const selectedSvg = `#prefix__booth-${booth}`;
                   <Typography className="ModalBooth" id="server-modal-description">Booth #{booth}</Typography>
                 </Grid>
                 <Grid item xs={6}>
-                  <a onClick={() => console.log('HEY')}><Typography className="ModalMapTitle" id="server-modal-description" style={{ textAlign: 'end' }}>View full screen map</Typography></a>
+                  <a onClick={() => console.log('HEY')}><Typography className="ModalMapTitle" id="server-modal-description" style={{ textAlign: 'end' }}>Click map for full screen</Typography></a>
                 </Grid>
                 <Grid item xs={12}>
-                  <StyledMapBox >
-                    <EBFloorPlan id="FP" booth={booth} width={svgWidth} height={svgHeight} onClick={setFull} />
+                  <StyledMapBox width={svgWidth} height={svgHeight} full={full}>
+                    <EBFloorPlan id="FP" booth={booth} height={svgHeight} width={svgWidth} onClick={() => setFull(full => !full)} />
                   </StyledMapBox>
                 </Grid>
               </Grid>

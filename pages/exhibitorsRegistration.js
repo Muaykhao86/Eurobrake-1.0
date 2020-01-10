@@ -7,7 +7,8 @@ import HeroSection from '../components/HeroSection';
 import ExpandTable from '../components/ExpandTable';
 import { Button } from '../components/Button';
 import {StyledBanner, StyledContainer} from '../components/styles/PageStyles';
-import {device} from '../components/Page';
+import {FixedDates} from '../components/Dates';
+
 
 
 
@@ -96,6 +97,8 @@ export default () => (
             EuroBrake 2020 Registration
             </HeroSection>
         <StyledPage >
+            <FixedDates/>
+
             <div className="Registration">
 
                 <Typography gutterBottom className="Registration-title">Delegate Registration</Typography>

@@ -8,7 +8,7 @@ import ExhibitionSection from '../components/exhibitors/ExhibitionSection';
 import StudentSection from '../components/StudentSection';
 import AuthorSection from '../components/AuthorSection';
 import HeroSection from '../components/HeroSection';
-import StyledCarousel from '../components/StyledCarousel';
+import {FixedDates} from '../components/Dates';
 
 
 export default () => (
@@ -20,6 +20,7 @@ export default () => (
             EuroBrake 2020
         </HeroSection> 
         <StyledContainer>
+            <FixedDates/>
             <AboutSection />
             <LocationSection />
             <AttendeesSection />

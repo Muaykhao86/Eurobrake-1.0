@@ -1,6 +1,8 @@
 import React from 'react'
 import styled from 'styled-components';
 import HeroSection from '../components/HeroSection';
+import {FixedDates} from '../components/Dates';
+
 
 
 
@@ -46,6 +48,8 @@ export default () => (
                 Book Now
     </HeroSection>
 <StyledPage>
+            <FixedDates/>
+
     <h1>Book your tickets now</h1>
     <Content src="https://www.eventsforce.net/fisita/14/register" />
 </StyledPage>    

@@ -5,6 +5,8 @@ import Typography from '@material-ui/core/Typography';
 import ExpandMoreOutlinedIcon from '@material-ui/icons/ExpandMoreOutlined';
 import Grid from '@material-ui/core/Grid';
 import { StyledPage, StyledBanner, StyledContainer } from '../components/styles/PageStyles';
+import {FixedDates} from '../components/Dates';
+
 
 const StyledAbout = styled.div`
         color: ${props => props.theme.primary};
@@ -130,6 +132,7 @@ export default () => (
             About EuroBrake
     </HeroSection>
         <StyledPage mt="3rem">
+            <FixedDates/>
             <StyledAbout >
                 <Typography className="about-title">Welcome</Typography>
                 <Typography gutterBottom className="about">The world’s largest conference and exhibition dedicated to braking technology.</Typography>

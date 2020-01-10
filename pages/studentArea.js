@@ -4,6 +4,8 @@ import HeroSection from '../components/HeroSection';
 import Typography from '@material-ui/core/Typography';
 import ExpandMoreOutlinedIcon from '@material-ui/icons/ExpandMoreOutlined';
 import {StyledPage, StyledBanner, StyledContainer} from '../components/styles/PageStyles';
+import {FixedDates} from '../components/Dates';
+
 
 
 
@@ -30,6 +32,7 @@ export default () => (
         EuroBrake Student Opportunities Programme (ESOP)
     </HeroSection>
     <StyledPage >
+            <FixedDates/>
 
     </StyledPage>
 </>

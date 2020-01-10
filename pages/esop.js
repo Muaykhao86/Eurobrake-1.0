@@ -7,6 +7,8 @@ import HeroSection from '../components/HeroSection';
 import StopIcon from '@material-ui/icons/Stop';
 import {Button} from '../components/Button';
 import {Quote2, MailIcon, PhoneIcon} from '../components/Icons';
+import {FixedDates} from '../components/Dates';
+
 
 
 const StyledPage = styled.div`
@@ -160,6 +162,8 @@ export default () => (
 
         </HeroSection>
         <StyledPage>
+            <FixedDates/>
+
             <div className="Esop">
             <Typography gutterBottom className="Esop-title ">Student Opportunities Programme</Typography>
             <div className="video-box margin-bottom1.5 margin-top5">

@@ -21,7 +21,7 @@ __webpack_require__.r(__webpack_exports__);
 var Button = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].a.withConfig({
   displayName: "Button",
   componentId: "sc-1t6v16c-0"
-})(["&,&:link,&:visited{display:flex;justify-content:center;align-items:center;text-align:center;text-transform:uppercase;text-decoration:none;font-size:", ";color:", ";background:", ";border:1px solid ", ";border-radius:", ";font-family:", ";letter-spacing:0;padding:", ";transition:all .2s;cursor:pointer;}&:hover{box-shadow:", ";transform:", ";color:", ";background-color:", ";}&::after{transform:scalex(1.4) scaleY(1.6);opacity:0;}&:focus{outline:none;}&:active{outline:none;transform:translateY(-.1rem);box-shadow:0 2rem 2rem rgba(0,0,0,0.5);}"], function (props) {
+})(["&,&:link,&:visited{display:flex;justify-content:center;align-items:center;text-align:center;text-transform:uppercase;text-decoration:none;font-size:", ";color:", ";background:", ";border:1px solid ", ";border-radius:", ";font-family:", ";letter-spacing:0;padding:", ";transition:all .2s;cursor:pointer;}&:hover{box-shadow:", ";transform:", ";color:", ";background-color:", ";}&::after{transform:scalex(1.4) scaleY(1.6);opacity:0;}&:focus{outline:none;}&:active{outline:none;transform:translateY(-.1rem);box-shadow:", ";}"], function (props) {
   return props.fontSize || '2.1rem';
 }, function (props) {
   return props.color || props.theme.white;
@@ -43,6 +43,8 @@ var Button = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].a.withCon
   return props.HColor ? props.Hcolor : '#FFF';
 }, function (props) {
   return props.HBColor ? props.HBColor : '#12377D';
+}, function (props) {
+  return props.abs || '0 2rem 2rem rgba(0, 0, 0, 0.5)';
 }); // const ButtonLink = React.forwardRef(({ className, href, hrefAs, children, prefetch }, ref) => (
 //     <Link href={href} as={hrefAs} prefetch ref={ref}>
 //         <a className={className}>
@@ -58,12 +60,13 @@ var Button = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].a.withCon
 /*!*****************************!*\
   !*** ./components/Dates.js ***!
   \*****************************/
-/*! exports provided: default */
+/*! exports provided: Dates, FixedDates */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Dates; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Dates", function() { return Dates; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FixedDates", function() { return FixedDates; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
@@ -76,106 +79,255 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 var StyledDates = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div.withConfig({
   displayName: "Dates__StyledDates",
   componentId: "sc-2eodxj-0"
-})(["max-width:", ";min-height:", ";background-color:", ";padding:4rem;display:flex;flex-flow:column;justify-content:space-between;font-size:2rem;"], function (props) {
+})(["max-width:", ";min-height:", ";background-color:", ";padding:2rem;display:flex;flex-flow:column;justify-content:space-between;font-size:2rem;.Dates{&-title{font-size:3rem;font-family:", ";color:", ";align-self:flex-start;max-width:90%;}&-date{font-size:2rem;font-family:", ";color:", ";align-self:flex-start;max-width:90%;}&-text{font-size:2rem;font-family:", ";color:", ";align-self:flex-start;max-width:90%;}}"], function (props) {
   return props.MW || '33rem';
 }, function (props) {
   return props.MW || '33rem';
 }, function (props) {
   return props.theme.primary;
+}, function (props) {
+  return props.theme.MPBlack;
+}, function (props) {
+  return props.theme.white;
+}, function (props) {
+  return props.theme.MPBold;
+}, function (props) {
+  return props.theme.white;
+}, function (props) {
+  return props.theme.MPLightIt;
+}, function (props) {
+  return props.theme.white;
 });
 function Dates() {
   return __jsx(StyledDates, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 24
+      lineNumber: 48
     },
     __self: this
   }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_2__["Typography"], {
     gutterBottom: true,
     as: "h1",
+    className: "Dates-title",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 25
+      lineNumber: 49
     },
     __self: this
   }, "Important Dates"), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_2__["Typography"], {
     gutterBottom: true,
     as: "h1",
+    className: "Dates-date",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 26
+      lineNumber: 50
     },
     __self: this
   }, "26 January 2020"), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_2__["Typography"], {
     gutterBottom: true,
     as: "p",
+    className: "Dates-text",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 27
+      lineNumber: 51
     },
     __self: this
   }, "Deadline for submission of review ready papers"), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_2__["Typography"], {
     gutterBottom: true,
     as: "h1",
+    className: "Dates-date",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 28
+      lineNumber: 52
     },
     __self: this
   }, "12 April 2020 "), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_2__["Typography"], {
     gutterBottom: true,
     as: "p",
+    className: "Dates-text",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 29
+      lineNumber: 53
     },
     __self: this
   }, "Final deadline for modifications to technical papers"), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_2__["Typography"], {
     gutterBottom: true,
     as: "h1",
+    className: "Dates-date",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 30
+      lineNumber: 54
     },
     __self: this
   }, "1 May 2020"), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_2__["Typography"], {
     gutterBottom: true,
     as: "p",
+    className: "Dates-text",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 31
+      lineNumber: 55
     },
     __self: this
   }, "Deadline for draft oral-only presentations, posters and presentations associated with a technical paper"), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_2__["Typography"], {
     gutterBottom: true,
     as: "h1",
+    className: "Dates-date",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 32
+      lineNumber: 56
     },
     __self: this
   }, "1 May 2020"), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_2__["Typography"], {
     gutterBottom: true,
     as: "p",
+    className: "Dates-text",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 33
+      lineNumber: 57
     },
     __self: this
   }, "Deadline for speakers to register"), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_2__["Typography"], {
     gutterBottom: true,
     as: "h1",
+    className: "Dates-date",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 34
+      lineNumber: 58
     },
     __self: this
   }, "24 May 2020"), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_2__["Typography"], {
     gutterBottom: true,
     as: "p",
+    className: "Dates-text",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 35
+      lineNumber: 59
+    },
+    __self: this
+  }, "Deadline to upload PPTs for on-site presentation"));
+}
+var StyledFixedDates = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div.withConfig({
+  displayName: "Dates__StyledFixedDates",
+  componentId: "sc-2eodxj-1"
+})(["position:fixed;z-index:1;top:14vh;right:0;width:25rem;max-height:50rem;background-color:", ";padding:2rem;display:flex;@media only screen  and (max-device-width:1000px)  and (-webkit-min-device-pixel-ratio:2){display:none;}flex-flow:column;justify-content:space-between;flex:1 1 auto;.Dates{&-title{font-size:2rem;font-family:", ";color:", ";align-self:flex-start;max-width:90%;}&-date{font-size:1.5rem;font-family:", ";color:", ";align-self:flex-start;max-width:90%;}&-text{font-size:1.5rem;font-family:", ";color:", ";align-self:flex-start;max-width:90%;}}"], function (props) {
+  return props.theme.primary;
+}, function (props) {
+  return props.theme.MPBlack;
+}, function (props) {
+  return props.theme.white;
+}, function (props) {
+  return props.theme.MPBold;
+}, function (props) {
+  return props.theme.white;
+}, function (props) {
+  return props.theme.MPLightIt;
+}, function (props) {
+  return props.theme.white;
+});
+function FixedDates() {
+  return __jsx(StyledFixedDates, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 117
+    },
+    __self: this
+  }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_2__["Typography"], {
+    gutterBottom: true,
+    as: "h1",
+    className: "Dates-title",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 118
+    },
+    __self: this
+  }, "Important Dates"), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_2__["Typography"], {
+    gutterBottom: true,
+    as: "h1",
+    className: "Dates-date",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 119
+    },
+    __self: this
+  }, "26 January 2020"), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_2__["Typography"], {
+    gutterBottom: true,
+    as: "p",
+    className: "Dates-text",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 120
+    },
+    __self: this
+  }, "Deadline for submission of review ready papers"), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_2__["Typography"], {
+    gutterBottom: true,
+    as: "h1",
+    className: "Dates-date",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 121
+    },
+    __self: this
+  }, "12 April 2020 "), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_2__["Typography"], {
+    gutterBottom: true,
+    as: "p",
+    className: "Dates-text",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 122
+    },
+    __self: this
+  }, "Final deadline for modifications to technical papers"), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_2__["Typography"], {
+    gutterBottom: true,
+    as: "h1",
+    className: "Dates-date",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 123
+    },
+    __self: this
+  }, "1 May 2020"), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_2__["Typography"], {
+    gutterBottom: true,
+    as: "p",
+    className: "Dates-text",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 124
+    },
+    __self: this
+  }, "Deadline for draft oral-only presentations, posters and presentations associated with a technical paper"), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_2__["Typography"], {
+    gutterBottom: true,
+    as: "h1",
+    className: "Dates-date",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 125
+    },
+    __self: this
+  }, "1 May 2020"), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_2__["Typography"], {
+    gutterBottom: true,
+    as: "p",
+    className: "Dates-text",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 126
+    },
+    __self: this
+  }, "Deadline for speakers to register"), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_2__["Typography"], {
+    gutterBottom: true,
+    as: "h1",
+    className: "Dates-date",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 127
+    },
+    __self: this
+  }, "24 May 2020"), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_2__["Typography"], {
+    gutterBottom: true,
+    as: "p",
+    className: "Dates-text",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 128
     },
     __self: this
   }, "Deadline to upload PPTs for on-site presentation"));
@@ -1099,7 +1251,7 @@ function (_Component) {
           lineNumber: 46
         },
         __self: this
-      }, __jsx(_Dates__WEBPACK_IMPORTED_MODULE_12__["default"], {
+      }, __jsx(_Dates__WEBPACK_IMPORTED_MODULE_12__["Dates"], {
         __source: {
           fileName: _jsxFileName,
           lineNumber: 47
@@ -1153,12 +1305,11 @@ function (_Component) {
 /*!****************************!*\
   !*** ./components/Page.js ***!
   \****************************/
-/*! exports provided: device, default */
+/*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "device", function() { return device; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Page; });
 /* harmony import */ var _babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/classCallCheck */ "./node_modules/@babel/runtime-corejs2/helpers/esm/classCallCheck.js");
 /* harmony import */ var _babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/createClass */ "./node_modules/@babel/runtime-corejs2/helpers/esm/createClass.js");
@@ -1196,22 +1347,6 @@ function _templateObject() {
 
 
 
-var size = {
-  mobile: '26.5rem',
-  // 425px
-  tablet: '48rem',
-  // 768px
-  laptop: '81rem',
-  // 1300px
-  desktop: '160rem' // 2560px
-
-};
-var device = {
-  mobile: "(max-width: ".concat(size.mobile, ")"),
-  tablet: "(max-width: ".concat(size.tablet, ")"),
-  laptop: "(max-width: ".concat(size.laptop, ")"),
-  desktop: "(max-width: ".concat(size.desktop, ")")
-};
 var theme = {
   black: '#000',
   white: '#FFF',
@@ -1260,37 +1395,37 @@ function (_Component) {
         theme: theme,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 145
+          lineNumber: 134
         },
         __self: this
       }, __jsx(GlobalStyle, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 146
+          lineNumber: 135
         },
         __self: this
       }), __jsx(StyledPage, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 147
+          lineNumber: 136
         },
         __self: this
       }, __jsx(_Meta__WEBPACK_IMPORTED_MODULE_9__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 148
+          lineNumber: 137
         },
         __self: this
       }), __jsx(_Header__WEBPACK_IMPORTED_MODULE_7__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 149
+          lineNumber: 138
         },
         __self: this
       }), this.props.children, __jsx(_Footer__WEBPACK_IMPORTED_MODULE_8__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 151
+          lineNumber: 140
         },
         __self: this
       })));

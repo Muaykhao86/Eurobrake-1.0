@@ -18,6 +18,12 @@ const StyledCard = styled(Card)`
   width: 27rem;
   min-height: 37rem;
   padding: 0 1rem;
+
+&&.MuiPaper-elevation1 {
+  box-shadow: 0px 5px 15px 3px rgba(0,0,0,0.2), 0px 5px 5px 0px rgba(0,0,0,0.14), 0px 1px 3px 0px rgba(0,0,0,0.12);
+   
+}
+
 `;
 
 const StyledContent = styled(CardContent)`
