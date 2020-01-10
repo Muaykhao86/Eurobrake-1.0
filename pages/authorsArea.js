@@ -75,7 +75,7 @@ const StyledPage = styled.div`
 class AuthorsArea extends Component {
         static async getInitialProps({ res }) {
         const { logintoken } = cookie.get() || {};
-        if (logintoken.length() > 1 ){
+        if (logintoken.length > 1 ){
         if (res) {
           res.writeHead(302, {
             Location: '/authorsAreaDash'
