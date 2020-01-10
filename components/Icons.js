@@ -306,6 +306,7 @@ const {width, height, color} = props;
 
 
 export class EBFloorPlan extends Component {
+
   // * BELOW : for mulitple booths target only the first one
 
   // ! NOTE TO SELF USE EFFECT IS LIKE COMOPNENT DID MOUNT, SHOULD UPDATE AND UNMOUNT IN ONE
@@ -333,14 +334,14 @@ export class EBFloorPlan extends Component {
    
 render(){
 
-
+console.log(this.props)
 // const {Snap} = this.state;
 // const map = Snap.select('#svgShell');
 // console.log('render', Snap);
 
 //
 return (  
-  <svg id="svgShell" viewBox="0 0 1715.57 1040.59" ref={this.props.mapref} {...this.props}>
+  <svg id="svgShell" width={this.props.width} height={this.props.height} viewBox="0 0 1715.57 1040.59" ref={this.props.mapref} {...this.props}>
     <defs>
       <style>
         {

@@ -233,11 +233,11 @@ const selectedSvg = `#prefix__booth-${booth}`;
                   <Typography className="ModalBooth" id="server-modal-description">Booth #{booth}</Typography>
                 </Grid>
                 <Grid item xs={6}>
-                  <Typography className="ModalMapTitle" id="server-modal-description" style={{ textAlign: 'end' }}>View full screen map</Typography>
+                  <a onClick={() => console.log('HEY')}><Typography className="ModalMapTitle" id="server-modal-description" style={{ textAlign: 'end' }}>View full screen map</Typography></a>
                 </Grid>
                 <Grid item xs={12}>
                   <StyledMapBox >
-                    <EBFloorPlan id="FP" booth={booth} open onClick={full} />
+                    <EBFloorPlan id="FP" booth={booth} open yaWantsomeProps="yes I Do" onClick={() => console.log('click')} />
                   </StyledMapBox>
                 </Grid>
               </Grid>
