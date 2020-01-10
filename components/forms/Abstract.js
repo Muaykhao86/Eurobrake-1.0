@@ -53,8 +53,8 @@ export const AbstractForm = (props) => {
 
                 const onSubmit = async () => {
                   values.__csrf_token = csrf;
-                  await SendForm({values, csrf, url})
-                    console.log('sending', values)
+                  {/* await SendForm({values, csrf, url}) */}
+                    console.log('sending', values, url)
                     
                     }
                 // ? NEED TO REDIRECT AFTER FORM SUBMISSION
