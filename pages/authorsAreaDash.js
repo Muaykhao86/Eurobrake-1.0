@@ -288,8 +288,8 @@ AuthorsAreaDash.getInitialProps = async ctx => {
     const apiUrl = 'https://prelude.eurobrake.net/authors/dashboard ';
     const redirectOnError = () =>
         process.browser
-            ? Router.push('/authorsArea')
-            : ctx.res.writeHead(301, { Location: '/authorsArea' })
+            ? Router.push('/')
+            : ctx.res.writeHead(301, { Location: '/' })
     if (logintoken) {
         try {
             const response = await fetch(apiUrl, {
