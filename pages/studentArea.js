@@ -8,7 +8,7 @@ import {FixedDates} from '../components/Dates';
 
 
 
-
+// * NEED TO SORT OUT A PAGE TO TEST FORMSA AND LINKS FORM ONE PAGE WOITH PIUT BEIN ONLINE AL THE TIME
 
 
 const FilledBanner = () => (
@@ -33,6 +33,7 @@ export default () => (
     </HeroSection>
     <StyledPage >
             <FixedDates/>
+
 
     </StyledPage>
 </>

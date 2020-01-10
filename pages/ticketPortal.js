@@ -32,7 +32,7 @@ const Content = styled.iframe`
     display: flex;
     flex: 1 1 auto;
     margin-top: 5rem;
-    width: 70vw;
+    max-width: 70vw;
     min-height: 75rem;
     background-color: transparent;
     padding: 3rem;
