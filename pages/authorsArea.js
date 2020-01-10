@@ -102,7 +102,7 @@ class AuthorsArea extends Component {
     render() {
         return (
             <>
-                <HeroSection banner={FilledBanner} t="30rem" max="55%">
+                <HeroSection banner={FilledBanner}  max="55%">
                     AuthorsArea
             </HeroSection>
                 <StyledPage>

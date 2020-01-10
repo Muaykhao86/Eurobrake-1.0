@@ -55,7 +55,7 @@ const trans = {
     spin0: 'rotate(0)',
     spin90: 'rotate(-90deg)',
     spin315: 'rotate(-315deg)',
-    scale100: 'scale(100)',
+    scale100: 'scale(107)',
     scale0: 'scale(0)',
     in: 'transform .6s cubic-bezier(0.22, 0.61, 0.36, 1) .3s',
     out: 'transform .6s cubic-bezier(.55,.055,.675,.19); .3 '
@@ -122,8 +122,10 @@ export const HiddenContainer = styled.div`
     padding: 2rem;
     margin: 2rem;
     transition: all .8s ease-in-out;
+    opacity: ${props => props.isOpen ? 
+    '1' : '0'};
     transform: ${props => props.isOpen ?
-        null : 'translateX(-200rem)'};
+        null : 'translateX(-250rem)'};
     min-width: 90vw;
     min-height: 90vh;
     /* border: 100px white solid; */

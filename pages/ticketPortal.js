@@ -42,7 +42,7 @@ const Content = styled.iframe`
 
 export default () => (
     <>
-     <HeroSection t="30rem">
+     <HeroSection >
                 Book Now
     </HeroSection>
 <StyledPage>

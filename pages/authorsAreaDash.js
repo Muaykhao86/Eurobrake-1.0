@@ -169,7 +169,8 @@ class AuthorsAreaDash extends Component {
         return (
             <>
 
-                <HeroSection banner={FilledBanner} t="30rem" max="55%">
+                <HeroSection banner={FilledBanner} 
+                 max="55%">
                     Author's Area Dashboard
             </HeroSection>
                 <StyledPage>

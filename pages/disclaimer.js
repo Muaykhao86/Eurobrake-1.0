@@ -25,7 +25,7 @@ const StyledDiv = styled.div`
    
 export default () => (
 <>
-    <HeroSection t="30rem" max="55%">
+    <HeroSection max="55%">
         Disclaimer
     </HeroSection>
     <StyledPage>

@@ -84,7 +84,7 @@ export const LoginForm = () => {
 
 
 const emptyInitial = {
-    email: '',
+    username: '',
     password: '',
 };
 

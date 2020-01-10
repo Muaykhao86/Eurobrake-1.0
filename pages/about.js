@@ -125,7 +125,6 @@ export default () => (
     <>
         <HeroSection
             fs="10rem"
-            t="30rem"
             max="57%"
         >
             About EuroBrake

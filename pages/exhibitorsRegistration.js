@@ -95,7 +95,7 @@ export default () => (
         <HeroSection banner={FilledBanner} max="55%">
             EuroBrake 2020 Registration
             </HeroSection>
-        <StyledPage mt="10rem">
+        <StyledPage >
             <div className="Registration">
 
                 <Typography gutterBottom className="Registration-title">Delegate Registration</Typography>

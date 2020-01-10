@@ -52,7 +52,7 @@ export default class ExhibitorList extends Component {
         console.log(this.props)
         return (
             <Fragment>
-            <HeroSection  max="65%" fs='9rem'>
+            <HeroSection  max="65%" >
                 EuroBrake 2020 Exhibitor Directory
             </HeroSection>
             <StyledPage  >

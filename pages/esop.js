@@ -148,8 +148,6 @@ const StyledQuote = styled.div`
     } */
 `;
 
-// ! NEED TO SORT OUT MEDIA QUERIS FOR TEXT DUE TO SVG NOT SCALING WITH FONT
-//  * OPTIONS ARE TO REDO QOUTE MARKS AND SET THE Z-INDEZX AS -100? 
 
 export default () => (
     <>

@@ -1157,7 +1157,7 @@ const theme = {
   MPLightIt: 'MyriadPro-LightIt',
   MPIt: 'MyriadPro-It',
   MPBlack: 'MyriadPro-Black',
-  heroHeightSml: '35vh',
+  heroHeightSml: '50vh',
   heroHeightBig: '100vh',
   laptopWidth: '65%',
   mobileWidth: '80%',
@@ -1411,7 +1411,7 @@ function SponsorCarousel() {
     },
     __self: this
   }, __jsx("a", {
-    href: "http://www.applusidiada.com/en/",
+    href: "http://www.itt.com/",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 69
@@ -1437,7 +1437,7 @@ function SponsorCarousel() {
     },
     __self: this
   }, __jsx("a", {
-    href: "http://www.applusidiada.com/en/",
+    href: "http://www.horiba.com/",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 70
@@ -1463,7 +1463,7 @@ function SponsorCarousel() {
     },
     __self: this
   }, __jsx("a", {
-    href: "http://www.applusidiada.com/en/",
+    href: "http://www.nofmetalcoatings.com/",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 71
@@ -1489,7 +1489,7 @@ function SponsorCarousel() {
     },
     __self: this
   }, __jsx("a", {
-    href: "http://www.applusidiada.com/en/",
+    href: "http://www.itaprochim.it/",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 72
@@ -1515,7 +1515,7 @@ function SponsorCarousel() {
     },
     __self: this
   }, __jsx("a", {
-    href: "http://www.applusidiada.com/en/",
+    href: "http://www.linkeng.com/",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 73
@@ -1541,7 +1541,7 @@ function SponsorCarousel() {
     },
     __self: this
   }, __jsx("a", {
-    href: "http://www.applusidiada.com/en/",
+    href: "http://www.fagorederlan.es/",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 74
@@ -1567,7 +1567,7 @@ function SponsorCarousel() {
     },
     __self: this
   }, __jsx("a", {
-    href: "http://www.applusidiada.com/en/",
+    href: "http://www.lapinus.com/",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 75
@@ -1593,7 +1593,7 @@ function SponsorCarousel() {
     },
     __self: this
   }, __jsx("a", {
-    href: "http://www.applusidiada.com/en/",
+    href: "http://www.sadeca.com/",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 76
@@ -1619,7 +1619,7 @@ function SponsorCarousel() {
     },
     __self: this
   }, __jsx("a", {
-    href: "http://www.applusidiada.com/en/",
+    href: "http://www.alroko.de/",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 77
@@ -1712,7 +1712,7 @@ const trans = {
   spin0: 'rotate(0)',
   spin90: 'rotate(-90deg)',
   spin315: 'rotate(-315deg)',
-  scale100: 'scale(100)',
+  scale100: 'scale(107)',
   scale0: 'scale(0)',
   in: 'transform .6s cubic-bezier(0.22, 0.61, 0.36, 1) .3s',
   out: 'transform .6s cubic-bezier(.55,.055,.675,.19); .3 '
@@ -1728,7 +1728,7 @@ const HiddenNavBG = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div
 const HiddenContainer = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({
   displayName: "NavStyles__HiddenContainer",
   componentId: "sc-1ltvdnj-5"
-})(["position:absolute;right:-15rem;top:0;display:flex;padding:2rem;margin:2rem;transition:all .8s ease-in-out;transform:", ";min-width:90vw;min-height:90vh;@media only screen  and (max-device-width:768px)  and (-webkit-min-device-pixel-ratio:2){min-height:30rem;}@media only screen  and (max-device-width:500px)  and (-webkit-min-device-pixel-ratio:2){flex-flow:column;margin:0;}.Nav-title{font-size:4rem;@media only screen  and (max-device-width:1200px)  and (-webkit-min-device-pixel-ratio:2){font-size:2.3rem;}}.Nav-title{margin-left:1rem;}.nav_box-1{flex:1 1 auto;border:2px solid white;padding:2rem;margin:2rem;display:flex;flex-flow:column;align-items:flex-start;}.nav_box-2{flex:1 1 auto;border:2px solid white;padding:2rem;margin:2rem;display:flex;flex-flow:column;align-items:flex-start;}.nav_box-3{flex:1 1 auto;border:2px solid white;padding:2rem;margin:2rem;display:flex;flex-flow:column;justify-content:space-between;}.nav_box-4{flex:1 1 auto;border:2px solid white;padding:2rem;margin:2rem;min-height:15rem;min-width:15rem;}.nav_box-5{flex:1 1 auto;border:2px solid white;padding:2rem;margin:2rem;min-height:15rem;min-width:15rem;}.nav_box-6{border:2px solid white;padding:2rem;margin:2rem;min-height:15rem;min-width:15rem;}"], props => props.isOpen ? null : 'translateX(-200rem)');
+})(["position:absolute;right:-15rem;top:0;display:flex;padding:2rem;margin:2rem;transition:all .8s ease-in-out;opacity:", ";transform:", ";min-width:90vw;min-height:90vh;@media only screen  and (max-device-width:768px)  and (-webkit-min-device-pixel-ratio:2){min-height:30rem;}@media only screen  and (max-device-width:500px)  and (-webkit-min-device-pixel-ratio:2){flex-flow:column;margin:0;}.Nav-title{font-size:4rem;@media only screen  and (max-device-width:1200px)  and (-webkit-min-device-pixel-ratio:2){font-size:2.3rem;}}.Nav-title{margin-left:1rem;}.nav_box-1{flex:1 1 auto;border:2px solid white;padding:2rem;margin:2rem;display:flex;flex-flow:column;align-items:flex-start;}.nav_box-2{flex:1 1 auto;border:2px solid white;padding:2rem;margin:2rem;display:flex;flex-flow:column;align-items:flex-start;}.nav_box-3{flex:1 1 auto;border:2px solid white;padding:2rem;margin:2rem;display:flex;flex-flow:column;justify-content:space-between;}.nav_box-4{flex:1 1 auto;border:2px solid white;padding:2rem;margin:2rem;min-height:15rem;min-width:15rem;}.nav_box-5{flex:1 1 auto;border:2px solid white;padding:2rem;margin:2rem;min-height:15rem;min-width:15rem;}.nav_box-6{border:2px solid white;padding:2rem;margin:2rem;min-height:15rem;min-width:15rem;}"], props => props.isOpen ? '1' : '0', props => props.isOpen ? null : 'translateX(-250rem)');
 
 /***/ }),
 

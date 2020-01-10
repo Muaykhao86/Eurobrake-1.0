@@ -51,11 +51,11 @@ export default function StyledCarousel() {
     return (
         <Overlay>
        
-        <Carousel  easing={'linear'} count={10} defaultWait={3000} /*wait for 1000 milliseconds*/>
-            <Slide ssr right >
+        <Carousel   count={10} defaultWait={3000} /*wait for 1000 milliseconds*/>
+            <Slide ssr left >
                 <StyledSlide style={{}} srcSet="/images/pic1.png" alt="EuroBrake Greating"/> 
             </Slide>
-            <Slide ssr right>
+            <Slide ssr left>
                 <StyledSlide style={{}} srcSet="/images/barcelona.png" alt="EuroBrake Greating"/> 
             </Slide>
         </Carousel>
