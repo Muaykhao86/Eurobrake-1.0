@@ -3,7 +3,8 @@ import React, { Component } from 'react'
 import cookies from 'next-cookies';
 import Router from 'next/router';
 import fetch from 'isomorphic-unfetch';
-import Lnk from 'next/link';
+import Link from 'next/link';
+import OneForm from '../../components/forms/OneForm';
 import { LoginForm } from '../../components/forms/LoginForm';
 import { AbstractForm } from '../../components/forms/Abstract';
 import { Authorprofile } from '../../components/forms/Authorprofile';
