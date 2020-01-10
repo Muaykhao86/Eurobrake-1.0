@@ -290,7 +290,7 @@ AuthorsAreaDash.getInitialProps = async ctx => {
         process.browser
             ? Router.push('/')
             : ctx.res.writeHead(301, { Location: '/' })
-            console.log({logintoken})
+            console.log('AAD', logintoken)
     if (logintoken) {
         try {
             const response = await fetch(apiUrl, {

@@ -24,14 +24,14 @@ const StyledDates = styled.div`
         max-width: 90%;
         }
         &-date{
-            font-size: 2.5rem;
+            font-size: 2rem;
         font-family: ${props => props.theme.MPBold};
         color: ${props => props.theme.white};
         align-self: flex-start;
         max-width: 90%;
         }
         &-text{
-            font-size: 2.5rem;
+            font-size: 2rem;
         font-family: ${props => props.theme.MPLightIt};
         color: ${props => props.theme.white};
         align-self: flex-start;

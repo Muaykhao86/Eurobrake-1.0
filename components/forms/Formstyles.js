@@ -43,7 +43,7 @@ export const StyledForm = styled(Form)`
             &_action{
                  display: flex;
                 justify-content: flex-end;
-                align-items: center;
+                align-items: flex-end;
             }
         }
         &-label{

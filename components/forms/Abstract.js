@@ -334,7 +334,7 @@ export const AbstractForm = (props) => {
                                                 HBColor="transparent"
                                                 transform="scale(1.4)"
                                                 type="add" onClick={() => {
-                                                    push({
+                                                    values.secondary_authors.push({
                                                         title: '',
                                                         firstname: '',
                                                         lastname: '',

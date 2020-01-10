@@ -121,6 +121,7 @@ export default function ServerModal(props) {
   const rootRef = useRef(null);
   const mapRef = useRef(null);
   const [open, setOpen] = useState(false);
+  const [full, setFull] = useState(false)
 
   const {
     name,
@@ -134,7 +135,8 @@ export default function ServerModal(props) {
     email,
   } = props;
 
-
+const svgWidth = full ? '100vw' : '';
+const svgHeight = full ? '100vh' : '';
 
 const selectedSvg = `#prefix__booth-${booth}`;
 
@@ -159,9 +161,7 @@ const selectedSvg = `#prefix__booth-${booth}`;
     return
   }
 
-  const full = () => {
-
-  }
+  
   
 
   return (
@@ -237,7 +237,7 @@ const selectedSvg = `#prefix__booth-${booth}`;
                 </Grid>
                 <Grid item xs={12}>
                   <StyledMapBox >
-                    <EBFloorPlan id="FP" booth={booth} open yaWantsomeProps="yes I Do" onClick={() => console.log('click')} />
+                    <EBFloorPlan id="FP" booth={booth} width={svgWidth} height={svgHeight} onClick={setFull} />
                   </StyledMapBox>
                 </Grid>
               </Grid>

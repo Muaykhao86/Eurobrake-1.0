@@ -39,7 +39,7 @@ return logintoken;
 // LOGOUT FUNCTION
 
 export const logout = async (ctx) => {
-  
+  // ? need to set up fetch req???
   await cookie.remove('logintoken')
  
   // To trigger the event listener we save some random data into the `logout` key
