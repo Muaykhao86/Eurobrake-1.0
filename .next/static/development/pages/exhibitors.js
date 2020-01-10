@@ -6566,7 +6566,7 @@ var CarouselUI = function CarouselUI(_ref) {
   return __jsx(Container, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 47
+      lineNumber: 46
     },
     __self: this
   }, children);
@@ -6577,7 +6577,7 @@ function StyledCarousel() {
   return __jsx(Overlay, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 52
+      lineNumber: 51
     },
     __self: this
   }, __jsx(Carousel, {
@@ -6587,7 +6587,7 @@ function StyledCarousel() {
     ,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 54
+      lineNumber: 53
     },
     __self: this
   }, __jsx(react_reveal_Slide__WEBPACK_IMPORTED_MODULE_3___default.a, {
@@ -6595,7 +6595,7 @@ function StyledCarousel() {
     left: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 55
+      lineNumber: 54
     },
     __self: this
   }, __jsx(StyledSlide, {
@@ -6604,7 +6604,7 @@ function StyledCarousel() {
     alt: "EuroBrake Greating",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 56
+      lineNumber: 55
     },
     __self: this
   })), __jsx(react_reveal_Slide__WEBPACK_IMPORTED_MODULE_3___default.a, {
@@ -6612,7 +6612,7 @@ function StyledCarousel() {
     left: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 58
+      lineNumber: 57
     },
     __self: this
   }, __jsx(StyledSlide, {
@@ -6621,7 +6621,7 @@ function StyledCarousel() {
     alt: "EuroBrake Greating",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 59
+      lineNumber: 58
     },
     __self: this
   }))));
@@ -6891,12 +6891,12 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 var StyledModal = styled_components__WEBPACK_IMPORTED_MODULE_6__["default"].div.withConfig({
   displayName: "ExhibitorsPop__StyledModal",
   componentId: "i20f48-0"
-})(["width:100%;height:100%;display:flex;flex:1;flex-flow:column;align-items:center;margin-top:5rem;justify-content:stretch;.paper{padding:2rem;margin:2rem;width:30vw;@media only screen  and (max-device-width:768px)  and (-webkit-min-device-pixel-ratio:2){width:70vw;}}.closeBtn{transform:rotate(45deg);font-size:2.5rem;}.ModalLogo{width:50%;margin-bottom:2rem;}.ModalTitle{font-family:", ";font-size:2.1rem;color:", ";}.ModalContact{font-family:", ";font-size:1.1rem;margin-right:.5rem;}.ModalIcon{transform:translateY(-1rem);width:80%;}.ModalSummary{max-height:15rem;font-family:", ";font-size:1.1rem;padding-top:1rem;overflow:scroll;}.ModalBooth{font-family:", ";font-size:1.7rem;color:", ";padding:1rem 0;}.ModalMapTitle{font-family:", ";font-size:1.7rem;color:", ";padding:1rem 0;}"], function (props) {
+})(["width:100%;height:100%;display:flex;flex:1;flex-flow:column;align-items:center;margin-top:5rem;justify-content:stretch;.paper{padding:2rem;margin:2rem;width:30vw;@media only screen  and (max-device-width:768px)  and (-webkit-min-device-pixel-ratio:2){width:70vw;}}.closeBtn{transform:rotate(45deg);font-size:2.5rem;}.ModalLogo{width:50%;margin-bottom:2rem;}.ModalTitle{font-family:", ";font-size:2.1rem;color:", ";}.ModalContact{font-family:", ";font-size:1.4rem;margin-right:.5rem;}.ModalIcon{transform:translateY(-.3rem);width:70%;height:70%;}.ModalSummary{max-height:15rem;font-family:", ";font-size:1.4rem;padding-top:1rem;overflow:scroll;}.ModalBooth{font-family:", ";font-size:1.7rem;color:", ";padding:1rem 0;}.ModalMapTitle{font-family:", ";font-size:1.7rem;color:", ";padding:1rem 0;}"], function (props) {
   return props.theme.MPSemibold;
 }, function (props) {
   return props.theme.primary;
 }, function (props) {
-  return props.theme.MPSemiLight;
+  return props.theme.MPLight;
 }, function (props) {
   return props.theme.MPSemiLight;
 }, function (props) {
@@ -6919,13 +6919,9 @@ function ServerModal(props) {
   var rootRef = Object(react__WEBPACK_IMPORTED_MODULE_0__["useRef"])(null);
   var mapRef = Object(react__WEBPACK_IMPORTED_MODULE_0__["useRef"])(null);
 
-  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(),
-      snap = _useState[0],
-      setSnap = _useState[1];
-
-  var _useState2 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false),
-      open = _useState2[0],
-      setOpen = _useState2[1];
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false),
+      open = _useState[0],
+      setOpen = _useState[1];
 
   var name = props.name,
       img = props.img,
@@ -7174,7 +7170,7 @@ function ServerModal(props) {
     item: true,
     xs: 1,
     style: {
-      transform: 'translateY(.3rem)'
+      transform: 'translateY(.4rem)'
     },
     __source: {
       fileName: _jsxFileName,
@@ -7257,7 +7253,7 @@ function ServerModal(props) {
       lineNumber: 236
     },
     __self: this
-  }, "View on map below")), __jsx(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_5__["default"], {
+  }, "View full screen map")), __jsx(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_5__["default"], {
     item: true,
     xs: 12,
     __source: {
@@ -76367,7 +76363,7 @@ function (_Component) {
 
 /***/ }),
 
-/***/ 2:
+/***/ 1:
 /*!********************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2Fexhibitors&absolutePagePath=%2Fmnt%2Fc%2FUsers%2FD.Hardiman%2Fdesktop%2Feurobrake%2Fpages%2Fexhibitors.js ***!
   \********************************************************************************************************************************************************/
@@ -76390,5 +76386,5 @@ module.exports = dll_ea92a4d9664833a26066;
 
 /***/ })
 
-},[[2,"static/runtime/webpack.js"]]]);
+},[[1,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=exhibitors.js.map

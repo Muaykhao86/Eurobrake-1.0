@@ -51,18 +51,19 @@ width: 30vw;
   color: ${props => props.theme.primary};
 }
  .ModalContact{
-  font-family: ${props => props.theme.MPSemiLight};
-  font-size: 1.1rem;
+  font-family: ${props => props.theme.MPLight};
+  font-size: 1.4rem;
   margin-right: .5rem;
  }
  .ModalIcon{
-   transform: translateY(-1rem);
-   width: 80%;
+   transform: translateY(-.3rem);
+   width: 70%;
+   height: 70%;
  }
  .ModalSummary{
   max-height: 15rem;
   font-family: ${props => props.theme.MPSemiLight};
-  font-size: 1.1rem;
+  font-size: 1.4rem;
   padding-top: 1rem;
   overflow: scroll;
  }
@@ -119,7 +120,6 @@ const StyledMapBox = styled.div`
 export default function ServerModal(props) {
   const rootRef = useRef(null);
   const mapRef = useRef(null);
-  const [snap, setSnap] = useState();
   const [open, setOpen] = useState(false);
 
   const {
@@ -220,7 +220,7 @@ const selectedSvg = `#prefix__booth-${booth}`;
                 <Grid  item xs={5} >
                   <Typography gutterBottom className="ModalContact" id="server-modal-description">{website}</Typography>
                 </Grid>
-                <Grid  item xs={1}  style={{transform: 'translateY(.3rem)'}}>
+                <Grid  item xs={1}  style={{transform: 'translateY(.4rem)'}}>
                   <MailIcon gutterBottom className="ModalIcon" />
                 </Grid>
                 <Grid  item xs={5} >
@@ -233,7 +233,7 @@ const selectedSvg = `#prefix__booth-${booth}`;
                   <Typography className="ModalBooth" id="server-modal-description">Booth #{booth}</Typography>
                 </Grid>
                 <Grid item xs={6}>
-                  <Typography className="ModalMapTitle" id="server-modal-description" style={{ textAlign: 'end' }}>View on map below</Typography>
+                  <Typography className="ModalMapTitle" id="server-modal-description" style={{ textAlign: 'end' }}>View full screen map</Typography>
                 </Grid>
                 <Grid item xs={12}>
                   <StyledMapBox >

@@ -24,7 +24,6 @@ height: 80vh;
 display: flex;
 position: relative;
 
-/* flex: 1 1 80%; */
 /* background-position: center; */
 background-color: black;
 /* object-fit: cover; */

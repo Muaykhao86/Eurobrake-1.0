@@ -75,7 +75,7 @@ const StyledPage = styled.div`
 class AuthorsArea extends Component {
         static async getInitialProps({ res }) {
         const { logintoken } = cookie.get() || {};
-        if (logintoken){
+        if (logintoken.length() > 1 ){
         if (res) {
           res.writeHead(302, {
             Location: '/authorsAreaDash'
@@ -86,6 +86,7 @@ class AuthorsArea extends Component {
         }
       }
         return {}
+        if(logintoken == {}) return
       }
     
     constructor(props) {
