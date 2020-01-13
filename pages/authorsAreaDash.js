@@ -118,6 +118,7 @@ const StyledInfoArea = styled.div`
     &-box{
         display: flex;
         align-items: flex-start;
+        justify-content: space-between;
     }}
 `;
 
@@ -275,6 +276,9 @@ class AuthorsAreaDash extends Component {
                                                         <CheckCircleIcon style={{ fontSize: '2rem', color: 'green', marginRight: '1rem' }} /> : <CancelIcon style={{ fontSize: '2rem', color: 'red', marginRight: '1rem' }} />}
                                                         <Link href="/f/[id]/[taskUrl]/[formType]/[taskType]/" as={`/f/${paper.papercode}/${task.url}/'tasks'/${task.task}`}>
                                                             <Typography gutterBottom className="paper_task">{task.task}</Typography>
+                                                            <Typography gutterBottom className="paper_task">{
+                                                                new Date(task.done)
+                                                                }</Typography>
                                                         </Link>
                                                     </div>
                                                     )
