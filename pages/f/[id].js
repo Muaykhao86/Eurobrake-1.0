@@ -23,8 +23,8 @@ const Form = props => {
     const { presets, __csrf_token, taskType, formType } = props.data;
     const {apiUrl, id} = props;// ? GETTIN FROM GET INITIAL PROPS
     console.log({apiUrl, id})
-    const formType = formType || '';
-    const taskType = taskType || '';
+    const FT = formType || '';
+    const TT = taskType || '';
     return (
         <>
         <HeroSection>
@@ -40,7 +40,7 @@ const Form = props => {
                         style={{ marginLeft: 'auto', color:"#FFF" }}
                     >Back to Dashboard</Button>
             </Link>
-            <OneForm form={formType} type={taskType} presets={presets} csrf={__csrf_token} apiUrl={apiUrl} paperId={id}/>
+            <OneForm form={FT} type={TT} presets={presets} csrf={__csrf_token} apiUrl={apiUrl} paperId={id}/>
     </StyledPage>
         </>
     )
