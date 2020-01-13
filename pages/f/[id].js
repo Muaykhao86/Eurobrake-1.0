@@ -46,6 +46,7 @@ Form.getInitialProps = async context => {
     const { logintoken } = cookies(context) || {};
     const apiUrl = `https://prelude.eurobrake.net/authors/edit/${id}`
     console.log('1st GIP', { id, logintoken, apiUrl, taskUrl, formType, taskType })
+    console.log('props', { id, logintoken, apiUrl, taskUrl, formType, taskType })
     const redirectOnError = () =>
         process.browser
             ? Router.push('/authorsArea')
