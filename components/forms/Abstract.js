@@ -3,7 +3,7 @@ import { Formik, Form, Field, FieldArray, FastField, ErrorMessage, } from 'formi
 import { TextField, RadioGroup, Select, Checkbox, } from 'formik-material-ui';
 import { AddCircle, RemoveCircle, ArrowUpwardRounded, ArrowDownwardRounded, } from '@material-ui/icons';
 import cookie from 'js-cookie';
-import { Typography } from '@material-ui/core/Typography';
+import  Typography  from '@material-ui/core/Typography';
 import { Button } from '../Button';
 import {titles, countries} from './FormSelects';
 import {AbstractSchema} from './FormControl';
