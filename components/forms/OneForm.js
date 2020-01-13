@@ -22,24 +22,23 @@ class OneForm extends Component {
 
        console.log(form, type, presets, csrf, apiUrl, paperId)
           
-          return <h1>check ythe console</h1>
-            // {switch(form) {
-            //     case'abstract' : 
-            //     return <AbstractForm type={type} presets={presets} csrf={csrf} apiUrl={apiUrl} paperId={paperId}/>;
-            //     case'exhibitor' : 
-            //     return <Exhibitorprofile type={type} presets={presets} csrf={csrf} apiUrl={apiUrl} paperId={paperId}/>;
-            //     case'author' : 
-            //     return <Authorprofile type={type} presets={presets} csrf={csrf} apiUrl={apiUrl} paperId={paperId} />;
-            //     case'esop' : 
-            //     return <Esop type={type} presets={presets} csrf={csrf} apiUrl={apiUrl} paperId={paperId}/>;
-            //     case'login' : 
-            //     return <LoginForm type={type} presets={presets} csrf={csrf} apiUrl={apiUrl} paperId={paperId}/>;
-            //     case'tasks' : 
-            //     return <Tasks type={type} presets={presets} csrf={csrf} apiUrl={apiUrl} paperId={paperId}/>;
-            //     default: 
-            //         return <Typography>No form found please contact info@eurobrake.net</Typography>;            
-            // }
-            // }
+            {switch(form) {
+                case'abstract' : 
+                return <AbstractForm type={type} presets={presets} csrf={csrf} apiUrl={apiUrl} paperId={paperId}/>;
+                case'exhibitor' : 
+                return <Exhibitorprofile type={type} presets={presets} csrf={csrf} apiUrl={apiUrl} paperId={paperId}/>;
+                case'author' : 
+                return <Authorprofile type={type} presets={presets} csrf={csrf} apiUrl={apiUrl} paperId={paperId} />;
+                case'esop' : 
+                return <Esop type={type} presets={presets} csrf={csrf} apiUrl={apiUrl} paperId={paperId}/>;
+                case'login' : 
+                return <LoginForm type={type} presets={presets} csrf={csrf} apiUrl={apiUrl} paperId={paperId}/>;
+                case'tasks' : 
+                return <Tasks type={type} presets={presets} csrf={csrf} apiUrl={apiUrl} paperId={paperId}/>;
+                default: 
+                    return <Typography>No form found please contact info@eurobrake.net</Typography>;            
+            }
+            }
     }
 }
 
