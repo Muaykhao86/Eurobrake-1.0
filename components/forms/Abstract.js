@@ -1,10 +1,10 @@
 import React, { Component, useState, useRef, useEffect } from 'react'
 import { Formik, Form, Field, FieldArray, FastField, ErrorMessage, } from 'formik';
-import { TextField, RadioGroup, Select, Checkbox } from 'formik-material-ui';
+import { TextField, RadioGroup, Select, Checkbox, } from 'formik-material-ui';
 import { AddCircle, RemoveCircle, ArrowUpwardRounded, ArrowDownwardRounded, } from '@material-ui/icons';
 import cookie from 'js-cookie';
+import { Typography } from '@material-ui/core/Typography';
 import { Button } from '../Button';
-import { Typography } from '@material-ui/core';
 import {titles, countries} from './FormSelects';
 import {AbstractSchema} from './FormControl';
 import {StyledForm} from './Formstyles';
@@ -16,10 +16,10 @@ export const AbstractForm = (props) => {
     const [presenter, setPresenter] = useState('');
   
     // if edit = true send back a preset form if not send a blank
-    // * dont think i need this now, can just check if there aere presets and if not just use epty schema
-    const {editPaper,  presets, csrf, apiUrl, paperId} = props;
+    // * above- dont think i need this now, can just check if there aere presets and if not just use epty schema
+    const { presets, csrf, apiUrl, paperId} = props;
     const url = `https://prelude.eurobrake.net/authors/submit/${paperId}`;
-    console.log({editPaper,  presets, apiUrl})
+    console.log({ presets, apiUrl})
     // ? If they choose to edit a abstarct paper we pass the paper code and il get its presets to fill in
     return (
         <Formik
@@ -326,23 +326,8 @@ export const AbstractForm = (props) => {
                                 </label>
                             </Field>
                         </div>
-                        // ! new section added back in // NEED TO CONFIRM IF OK
+                        {/* // ! new section added back in // NEED TO CONFIRM IF OK  */}
                         <Typography className="form-title">Your Abstract</Typography> 
-                         <div className="form-field">
-                           <label
-                                 htmlFor="label"
-                                 className="form-label">
-                                 Abstract:
-                         </label>
-                             <Field
-                                 className="form-input"
-                                 onClick={handleChange}
-                                 value={values.abstract}
-                                 style={{ color: '#134381' }}
-                                 name="abstract"
-                                 component={TextField}
-                             />
-                         </div>
                          <div className="form-field">
                              <label
                                  htmlFor="label"
@@ -356,6 +341,21 @@ export const AbstractForm = (props) => {
                                  style={{ color: '#134381' }}
                                  name="papertitle"
                                  component={TextField}
+                             />
+                         </div>
+                         <div className="form-field">
+                           <label
+                                 htmlFor="label"
+                                 className="form-label">
+                                 Abstract:
+                         </label>
+                             <Field
+                                 className="form-input"
+                                 onClick={handleChange}
+                                 value={values.abstract}
+                                 style={{ color: '#134381' }}
+                                 name="abstract"
+                                 component="textarea"
                              />
                          </div>
                        
@@ -536,6 +536,7 @@ export const AbstractForm = (props) => {
                                                 <div className="form-field_action">
 
                                                 <Button 
+                                                bcolor="transparent"
                                                 bs="false"
                                                 HBColor="transparent"
                                                 transform="scale(1.4)"
@@ -553,6 +554,7 @@ export const AbstractForm = (props) => {
                                                     <AddCircle style={{ color: 'green'  , fontSize: '3rem', margin: '.5rem 0'}} />
                                                 </Button>
                                                 <Button 
+                                                bcolor="transparent"
                                                  abs="false"
                                                  bs="false"
                                                 HBColor="transparent"
@@ -561,6 +563,7 @@ export const AbstractForm = (props) => {
                                                     <RemoveCircle style={{ color: 'red' , fontSize: '3rem', margin: '.5rem 0' }} />
                                                 </Button>
                                                 <Button 
+                                                bcolor="transparent"
                                                  abs="false"
                                                  bs="false"
                                                 HBColor="transparent"
@@ -569,6 +572,7 @@ export const AbstractForm = (props) => {
                                                     <ArrowUpwardRounded style={{ color: 'red' , fontSize: '3rem', margin: '.5rem 0' }} />
                                                 </Button>
                                                 <Button 
+                                                bcolor="transparent"
                                                  abs="false"
                                                  bs="false"
                                                 HBColor="transparent"

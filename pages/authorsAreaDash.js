@@ -233,7 +233,7 @@ class AuthorsAreaDash extends Component {
                                         <StyledBox key={paper.papercode}>
                                             <StyledActionArea>
                                                 <Typography gutterBottom className="action-paper">{paper.papercode}</Typography>
-                                                <Link href="/f/[id]" as={`/f/${paper.papercode}`}>
+                                                <Link href="/f/[id]" as={`/f/${paper.papercode}?formType='abstract'`}>
                                                 <Button
                                                     bcolor="#134381"
                                                     background="#134381"
@@ -259,14 +259,16 @@ class AuthorsAreaDash extends Component {
                                                 </Button>
                                             </StyledActionArea>
                                             <StyledInfoArea>
-                                                <>
+                                                <div>
                                                 <Typography className="paper-title">{paper.title}</Typography>
                                                 <Typography gutterBottom className="paper-type">{paper.paper_type.toUpperCase()}</Typography>
-                                                </>
+                                                </div>
                                                 {paper.tasks && paper.tasks.map(task => {
                                                     return (<div className="paper_task-box">
                                                         {task.done !== null ? <CheckCircleIcon style={{ fontSize: '2rem', color: 'green', marginRight: '1rem' }} /> : <CancelIcon style={{ fontSize: '2rem', color: 'red', marginRight: '1rem' }} />}
+                                                <Link href="/f/[id]" as={`/f/${paper.papercode}?url=${task.url}&formType='tasks'&taskType=${task.task}`}>
                                                         <Typography gutterBottom className="paper_task">{task.task}</Typography>
+                                                </Link>
                                                     </div>)
                                                 })}
                                             </StyledInfoArea>

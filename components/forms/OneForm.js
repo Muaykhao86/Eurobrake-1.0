@@ -4,7 +4,9 @@ import {AbstractForm} from './Abstract';
 import {Authorprofile} from './Authorprofile';
 import {Exhibitorprofile} from './Exhibitorprofile';
 import {Esop} from './Esop';
+import {Tasks} from './Tasks';
 import { GetForm } from './FormActions';
+import { Typography } from '@material-ui/core';
 
 
 class OneForm extends Component {
@@ -15,49 +17,28 @@ class OneForm extends Component {
    }
    }
 
-   async componentDidMount (){
-       if(this.props.paper){
-            const {paper} = this.props
-            const formData = await  GetForm(`https://prelude.eurobrake.net/authors/edit/${paper}`);
-            const presets = await formData.presets;
-            await this.setState({presets: presets});
-   }
-       if(this.props.profile){
-            const {profile} = this.props
-            const formData = await  GetForm(`https://prelude.eurobrake.net/authors/edit/${profile}`);
-            const presets = await formData.presets;
-            await this.setState({presets: presets});
-   }
-            return
-   }
-
     render() {
-        const {form, paper} = this.props;
-        const {presets} = this.state;
-       console.log(form, paper)
-            {switch(form) {
-                case'abstract-edit' : 
-                return <AbstractForm  paper={paper} presets={presets}/>;
-                case'abstract' : 
-                return <AbstractForm />;
-                case'exhibitor-edit' : 
-                return <Exhibitorprofile  />;
-                case'exhibitor' : 
-                return <Exhibitorprofile />;
-                case'author-edit' : 
-                return <Authorprofile editPaper="true" />;
-                case'author' : 
-                return <Authorprofile />;
-                case'esop-edit' : 
-                return <Esop editPaper="true" />;
-                case'esop' : 
-                return <Esop />;
-                case'login' : 
-                return <LoginForm />;
-                default: 
-                    return null;            
-            }
-            }
+        const {form,  type, presets, csrf, apiUrl, paperId,} = this.props;
+       console.log(form, type, presets, csrf, apiUrl, paperId)
+          
+          return <h1>check ythe console</h1>
+            // {switch(form) {
+            //     case'abstract' : 
+            //     return <AbstractForm type={type} presets={presets} csrf={csrf} apiUrl={apiUrl} paperId={paperId}/>;
+            //     case'exhibitor' : 
+            //     return <Exhibitorprofile type={type} presets={presets} csrf={csrf} apiUrl={apiUrl} paperId={paperId}/>;
+            //     case'author' : 
+            //     return <Authorprofile type={type} presets={presets} csrf={csrf} apiUrl={apiUrl} paperId={paperId} />;
+            //     case'esop' : 
+            //     return <Esop type={type} presets={presets} csrf={csrf} apiUrl={apiUrl} paperId={paperId}/>;
+            //     case'login' : 
+            //     return <LoginForm type={type} presets={presets} csrf={csrf} apiUrl={apiUrl} paperId={paperId}/>;
+            //     case'tasks' : 
+            //     return <Tasks type={type} presets={presets} csrf={csrf} apiUrl={apiUrl} paperId={paperId}/>;
+            //     default: 
+            //         return <Typography>No form found please contact info@eurobrake.net</Typography>;            
+            // }
+            // }
     }
 }
 

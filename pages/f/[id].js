@@ -20,13 +20,15 @@ import {FixedDates} from '../../components/Dates';
 
 
 const Form = props => {
-    const { presets, __csrf_token } = props.data;
+    const { presets, __csrf_token, taskType, formType } = props.data;
     const {apiUrl, id} = props;// ? GETTIN FROM GET INITIAL PROPS
-    console.log({apiUrl})
+    console.log({apiUrl, id})
+    const formType = formType || '';
+    const taskType = taskType || '';
     return (
         <>
         <HeroSection>
-            Edit your abstract details
+            Eurobrake 2020
             </HeroSection>
         <StyledPage>
             <FixedDates/>
@@ -38,7 +40,7 @@ const Form = props => {
                         style={{ marginLeft: 'auto', color:"#FFF" }}
                     >Back to Dashboard</Button>
             </Link>
-            <AbstractForm editPaper="true" presets={presets} csrf={__csrf_token} apiUrl={apiUrl} paperId={id}/>;
+            <OneForm form={formType} type={taskType} presets={presets} csrf={__csrf_token} apiUrl={apiUrl} paperId={id}/>
     </StyledPage>
         </>
     )
@@ -47,10 +49,10 @@ const Form = props => {
 export default Form
 
 Form.getInitialProps = async context => {
-    const { id } = context.query;
+    const { id, url, formType, taskType } = context.query;
     const { logintoken } = cookies(context) || {};
-    const apiUrl = `https://prelude.eurobrake.net/authors/edit/${id}`;
-    console.log({ id, logintoken, apiUrl })
+    const apiUrl = url ? url : `https://prelude.eurobrake.net/authors/edit/${id}`
+    console.log({ id, logintoken, apiUrl, url })
     const redirectOnError = () =>
         process.browser
             ? Router.push('/authorsArea')
@@ -67,8 +69,8 @@ Form.getInitialProps = async context => {
             })
             const data = await response.json()
             if (data.status === 'success') {
-                console.log('res.ok', data)
-                return { data, apiUrl, id }
+                console.log('res.ok GIP', data)
+                return { data, apiUrl, id, formType, taskType }
             }
             else {
                 console.log('not reading success')
