@@ -9,6 +9,8 @@ export const StyledForm = styled(Form)`
         align-items: center;
         min-width: 100%;
 
+        
+
     .MuiInput-underline:after {
         color: ${props => props.theme.primary};
     }

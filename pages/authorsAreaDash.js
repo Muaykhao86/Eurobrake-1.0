@@ -279,7 +279,7 @@ class AuthorsAreaDash extends Component {
                                                             <Typography gutterBottom className="paper_task">{task.task}</Typography>
                                                         </Link>
                                                             <Typography gutterBottom className="paper_task">{
-                                                                new Date(task.done)
+                                                                new Date(task.done).toDateString()
                                                                 }</Typography>
                                                     </div>
                                                     )
