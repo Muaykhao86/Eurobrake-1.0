@@ -1,11 +1,12 @@
 import React, { Component, useState } from 'react'
+import Link from 'next/link';
+import Typography from '@material-ui/core/Typography';
 import { Formik, Form, Field, } from 'formik';
 import { TextField} from 'formik-material-ui';
 import { StyledForm } from './Formstyles';
 import { Button } from '../Button';
 import { SendForm } from './FormActions';
-import { Typography } from '@material-ui/core/Typography';
-import Link from 'next/link';
+
 
 
 // async (values, actions) => {
