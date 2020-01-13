@@ -5,7 +5,7 @@ import Typography from '@material-ui/core/Typography';
 import ExpandMoreOutlinedIcon from '@material-ui/icons/ExpandMoreOutlined';
 import {StyledPage, StyledBanner, StyledContainer} from '../components/styles/PageStyles';
 import {FixedDates} from '../components/Dates';
-import { GetForm } from '../components../forms/FormActions';
+import { GetForm } from '../components/forms/FormActions';
 
 
 
