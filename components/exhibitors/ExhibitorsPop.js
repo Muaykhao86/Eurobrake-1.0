@@ -10,7 +10,6 @@ import IconButton from '@material-ui/core/IconButton';
 import AddCircleOutlineIcon from '@material-ui/icons/AddCircleOutline';
 import Typography from '@material-ui/core/Typography';
 import { MailIcon, PhoneIcon, GlobeIcon, EBFloorPlan } from '../Icons';
-import {device} from '../Page';
 
 
 const StyledModal = styled.div`
@@ -113,6 +112,11 @@ margin-right: ${props => props.full ?  '-50vw': '0' };
  background-color: ${props => props.theme.white};
  width: ${props => props.width || '100%'};
   height: ${props => props.width ||'100%'} ;
+   @media only screen 
+   and (max-device-width: 768px) 
+  and (-webkit-min-device-pixel-ratio: 2) { 
+  height: '100%' ;
+}
    border: 1px solid ${props => props.theme.primary};
   align-self: center;
   overflow: hidden;

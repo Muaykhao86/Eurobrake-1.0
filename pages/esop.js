@@ -28,6 +28,19 @@ const StyledPage = styled.div`
         color: ${props => props.theme.primary};
         font-family: ${props => props.theme.MPLight};
         font-size: 2rem;
+
+          &-icon{
+        position: absolute;
+        left: -29px;
+        top: 9px;
+
+        &_text{
+        line-height: 3.5rem;/* needed? */
+        position: relative;
+        margin-left: 3rem;
+        }
+    }
+    
     &-title{
         color: ${props => props.theme.primary};
         font-family: ${props => props.theme.MPSemibold};
@@ -192,9 +205,9 @@ export default () => (
             <Typography gutterBottom className="Esop ">The future embraces the challenges and opportunities of technology changes and trends so too do we at EuroBrake especially when it comes to inspiring the next generation of automotive engineers and technologists.</Typography>
             <Typography gutterBottom className="Esop ">As an ESOP 2020 sponsor you will have the opportunity to engage with students at EuroBrake; will offer you and your company an opportunity to meet students looking to develop and expand their knowledge of the world of braking.</Typography>
             <Typography gutterBottom className="Esop Esop-bold">Sponsorship opportunities start at just EUR 1,500.</Typography>
-            <Typography gutterBottom className="Esop  Esop-bold" style={{}}>For more information please contact FISITA: </Typography>
-            <Typography gutterBottom className="Esop  Esop-bold" style={{}}><PhoneIcon width="20" height="20" style={{marginRight: '1rem'}}/> +44 (0) 1279883470 </Typography>
-            <Typography gutterBottom className="Esop Esop-bold" style={{}}><MailIcon width="20" height="20" style={{marginRight: '1rem'}}/> sales@fisita.com</Typography>
+            <Typography gutterBottom className="Esop  Esop-bold" >For more information please contact FISITA: </Typography>
+            <Typography gutterBottom className="Esop  Esop-bold Esop_icon-text" style={{}}><PhoneIcon width="20" height="20" className="Esop_icon"/> +44 (0) 1279883470 </Typography>
+            <Typography gutterBottom className="Esop Esop-bold Esop_icon-text" style={{}}><MailIcon width="20" height="20" className="Esop_icon"/> sales@fisita.com</Typography>
             </div>
              <div className="button_box">
              <Button

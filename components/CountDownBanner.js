@@ -13,6 +13,11 @@ const CDBanner = styled.div`
     margin-top: 0;
     min-width: 100%;
     min-height: 20vh;
+      @media only screen 
+        and (max-device-width: 768px) 
+        and (-webkit-min-device-pixel-ratio: 2) {
+    min-height: 10vh;
+    }
     display: flex;
     justify-content: center;
     align-items: center;

@@ -326,6 +326,38 @@ export const AbstractForm = (props) => {
                                 </label>
                             </Field>
                         </div>
+                        // ! new section added back in // NEED TO CONFIRM IF OK
+                        <Typography className="form-title">Your Abstract</Typography> 
+                         <div className="form-field">
+                           <label
+                                 htmlFor="label"
+                                 className="form-label">
+                                 Abstract:
+                         </label>
+                             <Field
+                                 className="form-input"
+                                 onClick={handleChange}
+                                 value={values.abstract}
+                                 style={{ color: '#134381' }}
+                                 name="abstract"
+                                 component={TextField}
+                             />
+                         </div>
+                         <div className="form-field">
+                             <label
+                                 htmlFor="label"
+                                 className="form-label">
+                                 Paper Title:
+                         </label>
+                             <Field
+                                 className="form-input"
+                                 onClick={handleChange}
+                                 value={values.papertitle}
+                                 style={{ color: '#134381' }}
+                                 name="papertitle"
+                                 component={TextField}
+                             />
+                         </div>
                        
                         <Typography className="form-title">Secondary Author(s)</Typography>
                         {values.secondary_authors.length == 0 &&
@@ -563,6 +595,9 @@ export const AbstractForm = (props) => {
         </Formik>
     )
 };
+
+
+                       
 
 const presetEG = {
     abstract: "lorem ipsum",
