@@ -20,7 +20,17 @@ export default () => {
             const formData = await  GetForm(`https://prelude.eurobrake.net/authors/tasks/${type}/${paper}?definition=1`);
             const res = await formData;
            return  console.log({res});
-
+    }
+  const GetDefAbstract = async (paper) => {
+      console.log({paper})
+            const formData = await  GetForm(`https://prelude.eurobrake.net/authors/${paper}?definition=1`);
+            const res = await formData;
+           return  console.log({res});
+    }
+  const GetDefAuthor = async () => {
+            const formData = await  GetForm(`https://prelude.eurobrake.net/authors/author?definition=1`);
+            const res = await formData;
+           return  console.log({res});
     }
 
 return (
@@ -182,6 +192,8 @@ __proto__: Array(0)
 expects: "json"
 logintoken: "NjXwJEQG2nGrgZ894P7oh7"
 __proto__: Object */}
+        <button onClick={() => GetDefAbstract('EB2020-MDS-002')}>abstract</button>
+        <button onClick={() => GetDefAuthor()}>author details</button>
 
 
     </StyledPage>

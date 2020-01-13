@@ -95,6 +95,11 @@ const StyledInfoArea = styled.div`
     justify-content: space-between;
     align-items: flex-start;
 
+    .paper-summary{
+        align-self: flex-start;
+        justify-items: flex-start;
+    }
+
     .paper-title{
     font-size: 2rem;
     color: ${props => props.theme.MPRegular};
@@ -259,17 +264,20 @@ class AuthorsAreaDash extends Component {
                                                 </Button>
                                             </StyledActionArea>
                                             <StyledInfoArea>
-                                                <div>
+                                                <div className="paper-summary">
                                                 <Typography className="paper-title">{paper.title}</Typography>
                                                 <Typography gutterBottom className="paper-type">{paper.paper_type.toUpperCase()}</Typography>
                                                 </div>
                                                 {paper.tasks && paper.tasks.map(task => {
-                                                    return (<div className="paper_task-box">
-                                                        {task.done !== null ? <CheckCircleIcon style={{ fontSize: '2rem', color: 'green', marginRight: '1rem' }} /> : <CancelIcon style={{ fontSize: '2rem', color: 'red', marginRight: '1rem' }} />}
-                                                <Link href="/f/[id]" as={`/f/${paper.papercode}?url=${task.url}&formType='tasks'&taskType=${task.task}`}>
-                                                        <Typography gutterBottom className="paper_task">{task.task}</Typography>
-                                                </Link>
-                                                    </div>)
+                                                    return (
+                                                        <div className="paper_task-box">
+                                                        {task.done !== null ? 
+                                                        <CheckCircleIcon style={{ fontSize: '2rem', color: 'green', marginRight: '1rem' }} /> : <CancelIcon style={{ fontSize: '2rem', color: 'red', marginRight: '1rem' }} />}
+                                                        <Link href="/f/[id]" as={`/f/${paper.papercode}?url=${task.url}&formType='tasks'&taskType=${task.task}`}>
+                                                            <Typography gutterBottom className="paper_task">{task.task}</Typography>
+                                                        </Link>
+                                                    </div>
+                                                    )
                                                 })}
                                             </StyledInfoArea>
                                         </StyledBox>

@@ -34,17 +34,18 @@ export const AbstractSchema = Yup.object().shape({
         .required('Required'),
     is_presenting_author: Yup.string()
         .required('Required'),
-    submission_type: Yup.string()
-        .required('Required'),
-    presentationtype_full: Yup.string(),
+    // submission_type: Yup.string()
+    //     .required('Required'),
+    // presentationtype_full: Yup.string(),
     papertitle: Yup.string()
         .required('Required'),
-    theme: Yup.string()
-        .required('Required'),
-    subtheme: Yup.array().max(3, 'Please select max of three subthemes!')
-        .required('Required'),
+    // theme: Yup.string()
+    //     .required('Required'),
+    // subtheme: Yup.array().max(3, 'Please select max of three subthemes!')
+    //     .required('Required'),
     abstract: Yup.string()
-        .required('Required'),
+        .required('Required')
+        .max(750, 'Too Long!'),
     keywords: Yup.string()
         .required('Required'),
     previouspapers: Yup.string()

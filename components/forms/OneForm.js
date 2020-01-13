@@ -19,6 +19,7 @@ class OneForm extends Component {
 
     render() {
         const {form,  type, presets, csrf, apiUrl, paperId,} = this.props;
+
        console.log(form, type, presets, csrf, apiUrl, paperId)
           
           return <h1>check ythe console</h1>
