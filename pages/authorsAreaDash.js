@@ -240,7 +240,7 @@ class AuthorsAreaDash extends Component {
                                         <StyledBox key={paper.papercode}>
                                             <StyledActionArea>
                                                 <Typography gutterBottom className="action-paper">{paper.papercode}</Typography>
-                                                <Link href="/f/[id]" as={`/f/${paper.papercode}?formType='abstract'`}>
+                                                <Link href="/f/[id]" as={`/f/${paper.papercode}?formType=abstract`} passHref>
                                                 <Button
                                                     bcolor="#134381"
                                                     background="#134381"
@@ -277,7 +277,7 @@ class AuthorsAreaDash extends Component {
                                                         <CheckCircleIcon style={{ fontSize: '2rem', color: 'green', marginRight: '1rem' }} /> : <CancelIcon style={{ fontSize: '2rem', color: 'red', marginRight: '1rem' }} />}
                                                         {/* // ! URL IS MERGING THE FIELDS, NEED TO SEPERATE OR CHANGE AROUND */}
                                                         
-                                                        <Link href="/t/[id]/[formType]/[taskType]/[taskUrl]" as={`/t/${paper.papercode}/tasks/ppt/${task.url}`}>
+                                                        <Link href="/t/[id]/[formType]/[taskType]/[taskUrl]" as={`/t/${paper.papercode}/tasks/ppt/${task.url}`} passHref>
                                                             <Typography gutterBottom className="paper_task">{task.task}</Typography>
                                                         </Link>
                                                             <Typography gutterBottom className="paper_task">{
