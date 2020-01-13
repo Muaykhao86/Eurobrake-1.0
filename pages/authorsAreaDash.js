@@ -259,8 +259,10 @@ class AuthorsAreaDash extends Component {
                                                 </Button>
                                             </StyledActionArea>
                                             <StyledInfoArea>
+                                                <>
                                                 <Typography className="paper-title">{paper.title}</Typography>
                                                 <Typography gutterBottom className="paper-type">{paper.paper_type.toUpperCase()}</Typography>
+                                                </>
                                                 {paper.tasks && paper.tasks.map(task => {
                                                     return (<div className="paper_task-box">
                                                         {task.done !== null ? <CheckCircleIcon style={{ fontSize: '2rem', color: 'green', marginRight: '1rem' }} /> : <CancelIcon style={{ fontSize: '2rem', color: 'red', marginRight: '1rem' }} />}
