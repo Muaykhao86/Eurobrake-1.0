@@ -7,6 +7,7 @@ export const StyledPage = styled.div`
     flex-flow: column;
     align-self: center;
     width: ${props => props.theme.minWidth};
+    min-height: 50rem;
     background-color: ${props => props.theme.white};
     margin-top: 7rem;
    @media only screen 

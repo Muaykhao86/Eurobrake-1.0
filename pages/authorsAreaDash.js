@@ -273,7 +273,7 @@ class AuthorsAreaDash extends Component {
                                                         <div className="paper_task-box">
                                                         {task.done !== null ? 
                                                         <CheckCircleIcon style={{ fontSize: '2rem', color: 'green', marginRight: '1rem' }} /> : <CancelIcon style={{ fontSize: '2rem', color: 'red', marginRight: '1rem' }} />}
-                                                        <Link href="/f/[id]" as={`/f/${paper.papercode}?url=${task.url}&formType='tasks'&taskType=${task.task}`}>
+                                                        <Link href="/f/[id]/[taskUrl]/[formType]/[taskType]/" as={`/f/${paper.papercode}/${task.url}/'tasks'/${task.task}`}>
                                                             <Typography gutterBottom className="paper_task">{task.task}</Typography>
                                                         </Link>
                                                     </div>

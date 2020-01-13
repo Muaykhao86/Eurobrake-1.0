@@ -22,9 +22,9 @@ import {FixedDates} from '../../components/Dates';
 const Form = props => {
     const { presets, __csrf_token, taskType, formType } = props.data;
     const {apiUrl, id} = props;// ? GETTIN FROM GET INITIAL PROPS
-    console.log({apiUrl, id})
     const FT = formType || '';
     const TT = taskType || '';
+    console.log({apiUrl, id, FT, TT})
     return (
         <>
         <HeroSection>
@@ -49,10 +49,10 @@ const Form = props => {
 export default Form
 
 Form.getInitialProps = async context => {
-    const { id, url, formType, taskType } = context.query;
+    const { id, taskUrl, formType, taskType } = context.query;
     const { logintoken } = cookies(context) || {};
-    const apiUrl = url ? url : `https://prelude.eurobrake.net/authors/edit/${id}`
-    console.log({ id, logintoken, apiUrl, url })
+    const apiUrl = taskUrl ? taskUrl : `https://prelude.eurobrake.net/authors/edit/${id}`
+    console.log('1st GIP', { id, logintoken, apiUrl, taskUrl, formType, taskType })
     const redirectOnError = () =>
         process.browser
             ? Router.push('/authorsArea')
@@ -69,7 +69,7 @@ Form.getInitialProps = async context => {
             })
             const data = await response.json()
             if (data.status === 'success') {
-                console.log('res.ok GIP', data)
+                console.log('res.ok 2nd GIP', data)
                 return { data, apiUrl, id, formType, taskType }
             }
             else {
