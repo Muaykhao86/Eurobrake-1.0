@@ -112,6 +112,7 @@ const StyledInfoArea = styled.div`
 
     }
     .paper_task{
+        cursor: pointer;
     color: ${props => props.theme.black};
     font-size: 1.5rem;
 

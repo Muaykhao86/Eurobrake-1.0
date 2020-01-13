@@ -1252,6 +1252,7 @@ function (_Component) {
         },
         __self: this
       }, __jsx("a", {
+        onClick: this.handleClick,
         __source: {
           fileName: _jsxFileName,
           lineNumber: 45
@@ -1271,6 +1272,7 @@ function (_Component) {
         },
         __self: this
       }), __jsx(next_link__WEBPACK_IMPORTED_MODULE_8___default.a, {
+        onClick: this.handleClick,
         href: "/ticketPortal",
         __source: {
           fileName: _jsxFileName,
