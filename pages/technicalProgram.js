@@ -14,7 +14,7 @@ export default () => (
 <StyledPage>
             <FixedDates/>
 
-    <ExpandTable/>
+    <TechExpandTable/>
 </StyledPage>    
 </>
 

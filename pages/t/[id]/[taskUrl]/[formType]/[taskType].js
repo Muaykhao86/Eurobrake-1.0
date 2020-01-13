@@ -1,4 +1,3 @@
-
 import React, { Component } from 'react'
 import cookies from 'next-cookies';
 import Router from 'next/router';
@@ -7,18 +6,14 @@ import Link from 'next/link';
 import OneForm from '../../components/forms/OneForm';
 import { LoginForm } from '../../components/forms/LoginForm';
 import { Button } from '../../components/Button';
-
 import { AbstractForm } from '../../components/forms/Abstract';
 import { Authorprofile } from '../../components/forms/Authorprofile';
 import { Exhibitorprofile } from '../../components/forms/Exhibitorprofile';
 import { StyledPage } from '../../components/styles/PageStyles';
 import HeroSection from '../../components/HeroSection';
 import {FixedDates} from '../../components/Dates';
-
 // import { Esop } from './Esop';
 // import { GetFormSSR } from '../../components/forms/FormActions';
-
-
 const Form = props => {
     const { presets, __csrf_token, taskType, formType } = props.data;
     const {apiUrl, id} = props;// ? GETTIN FROM GET INITIAL PROPS
@@ -45,14 +40,12 @@ const Form = props => {
         </>
     )
 }
-
 export default Form
-
 Form.getInitialProps = async context => {
     const { id, taskUrl, formType, taskType } = context.query;
     const { logintoken } = cookies(context) || {};
-    const apiUrl = taskUrl ? taskUrl : `https://prelude.eurobrake.net/authors/edit/${id}`
-    console.log('1st GIP', { id, logintoken, apiUrl, taskUrl, formType, taskType })
+    const apiUrl = taskUrl ;
+    console.log('1st task folder GIP', { id, logintoken, apiUrl, taskUrl, formType, taskType })
     const redirectOnError = () =>
         process.browser
             ? Router.push('/authorsArea')
@@ -65,7 +58,6 @@ Form.getInitialProps = async context => {
                 headers: {
                     Authorization: 'Bearer ' + logintoken,
                 }
-
             })
             const data = await response.json()
             if (data.status === 'success') {
@@ -84,11 +76,8 @@ Form.getInitialProps = async context => {
             return await redirectOnError()
         }
     }
-
 }
-
     // const { form } = props;
-
     // switch (form) {
     //     case 'abstract-edit':
     //     case 'abstract':
@@ -109,5 +98,4 @@ Form.getInitialProps = async context => {
     //         return <LoginForm />;
     //     default:
     //         return null;
-
     // }
