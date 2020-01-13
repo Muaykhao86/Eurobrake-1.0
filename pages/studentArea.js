@@ -15,7 +15,7 @@ import { GetForm } from '../components/forms/FormActions';
    
 export default () => {
 
-  GetDef = async ({type, paper}) => {
+  const GetDef = async ({type, paper}) => {
             const formData = await  GetForm(`https://prelude.eurobrake.net/authors/tasks/${type}/${paper}?definition=1`);
             const res = await formData;
            return  console.log({res});
