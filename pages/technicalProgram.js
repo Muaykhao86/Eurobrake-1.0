@@ -1,5 +1,5 @@
 import React from 'react'
-import ExpandTable from '../components/ExpandTable';
+import TechExpandTable from '../components/ExpandTable';
 import HeroSection from '../components/HeroSection';
 
 import {StyledPage, IframeContent} from '../components/styles/PageStyles';
