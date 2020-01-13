@@ -25,7 +25,7 @@ export default () => {
 return (
 
 <>
-    <HeroSection max="60%"  banner={FilledBanner}>
+    <HeroSection max="60%"  >
     Testing of the forms we are     
     </HeroSection>
     <StyledPage >
