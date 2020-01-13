@@ -42,6 +42,7 @@ export default class Nav extends Component {
                         <Link href="/exhibitorsRegistration"><a onClick={this.handleClick}>Delegate Registration</a></Link>
                         <Link href="/authorsAreaInstructions"><a onClick={this.handleClick}>Authors Area Instructions & Templates</a></Link>
                         <Link href=""><a >Technical Program</a></Link>
+                        <Link href="/studentArea"><a>Testing</a></Link>
                     </div>
                     <div className="nav_box-3">
                            <Dates/>

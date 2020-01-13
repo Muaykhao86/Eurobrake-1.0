@@ -1,42 +1,45 @@
-import React from 'react'
+import React ,{useEffect} from 'react'
 import styled from 'styled-components';
 import HeroSection from '../components/HeroSection';
 import Typography from '@material-ui/core/Typography';
 import ExpandMoreOutlinedIcon from '@material-ui/icons/ExpandMoreOutlined';
 import {StyledPage, StyledBanner, StyledContainer} from '../components/styles/PageStyles';
 import {FixedDates} from '../components/Dates';
+import { GetForm } from '../components../forms/FormActions';
 
 
 
 // * NEED TO SORT OUT A PAGE TO TEST FORMSA AND LINKS FORM ONE PAGE WOITH PIUT BEIN ONLINE AL THE TIME
 
 
-const FilledBanner = () => (
-
-    <StyledBanner>
-        <StyledContainer>
-
-            <Typography className="banner-heading" >Apply now for a sponsored student pass</Typography>
-            <Typography className="banner-sub" >Deadline for applications is Friday 1 February 2020</Typography>
-            <div className="banner_bottom">
-                <ExpandMoreOutlinedIcon className="banner_bottom-icon" />
-                <Typography varient="h3" className="banner_bottom-details">See below for more details</Typography>
-            </div>
-        </StyledContainer>
-    </StyledBanner>
-)
    
-export default () => (
+export default () => {
+
+  GetDef = ({type, paper}) => {
+            const formData = await  GetForm(`https://prelude.eurobrake.net/authors/tasks/${type}/${paper}?definition=1`);
+            const presets = await formData.presets;
+            await this.setState({presets: presets});
+
+    }
+
+return (
+
 <>
     <HeroSection max="60%"  banner={FilledBanner}>
-        EuroBrake Student Opportunities Programme (ESOP)
+    Testing of the forms we are     
     </HeroSection>
     <StyledPage >
-            <FixedDates/>
+        <Typography>Get some definitions</Typography>
+        <button onclick={GetDef('paper','EB2020-MDS-002')}>Tech paper</button>
+        <button onclick={GetDef('ppt','EB2020-MDS-002')}>PPT</button>
+        <button onclick={GetDef('permissions','EB2020-MDS-002')}>permissions</button>
+        <button onclick={GetDef('poster-accept','EB2020-MDS-002')}>poster-accept</button>
+        <button onclick={GetDef('poster','EB2020-MDS-002')}>poster</button>
+        <button onclick={GetDef('pitchvideo','EB2020-MDS-002')}>pitchvideo</button>
 
 
     </StyledPage>
 </>
 
 
-) 
+)} 

@@ -1244,24 +1244,37 @@ function (_Component) {
           lineNumber: 44
         },
         __self: this
-      }, "Technical Program"))), __jsx("div", {
+      }, "Technical Program")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_8___default.a, {
+        href: "/studentArea",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 45
+        },
+        __self: this
+      }, __jsx("a", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 45
+        },
+        __self: this
+      }, "Testing"))), __jsx("div", {
         className: "nav_box-3",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 46
+          lineNumber: 47
         },
         __self: this
       }, __jsx(_Dates__WEBPACK_IMPORTED_MODULE_12__["Dates"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 47
+          lineNumber: 48
         },
         __self: this
       }), __jsx(next_link__WEBPACK_IMPORTED_MODULE_8___default.a, {
         href: "/ticketPortal",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 48
+          lineNumber: 49
         },
         __self: this
       }, __jsx(_Button__WEBPACK_IMPORTED_MODULE_11__["Button"], {
@@ -1271,7 +1284,7 @@ function (_Component) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 49
+          lineNumber: 50
         },
         __self: this
       }, "BOOK NOW")))), __jsx(_styles_NavStyles__WEBPACK_IMPORTED_MODULE_10__["Burger"], {
@@ -1279,7 +1292,7 @@ function (_Component) {
         onClick: this.handleClick,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 55
+          lineNumber: 56
         },
         __self: this
       }, __jsx(_styles_NavStyles__WEBPACK_IMPORTED_MODULE_10__["TopBun"], {
@@ -1287,7 +1300,7 @@ function (_Component) {
         sticky: this.props.sticky,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 56
+          lineNumber: 57
         },
         __self: this
       })));

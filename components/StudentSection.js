@@ -6,10 +6,11 @@ import { Card } from './Card';
 import { Button } from './Button';
 import withReveal from 'react-reveal/withReveal';
 
+
 const StudentCard = () => (
     <Card right>
                     <h1>Learn more about ESOP</h1>
-                    <Link href="/studentArea">
+                    <Link href="/esop">
                     <Button br="500rem">ESOP</Button>
                     </Link>
                 </Card>
