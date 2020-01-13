@@ -46,8 +46,8 @@ export default class Nav extends Component {
                     </div>
                     <div className="nav_box-3">
                            <Dates/>
-                        <Link onClick={this.handleClick} href="/ticketPortal">
-                        <Button style={{maxWidth: '35rem', maxHeight: '15rem'}}>
+                        <Link  href="/ticketPortal">
+                        <Button onClick={this.handleClick} style={{maxWidth: '35rem', maxHeight: '15rem'}}>
                             BOOK NOW
                         </Button>
                         </Link>
