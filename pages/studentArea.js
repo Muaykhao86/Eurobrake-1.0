@@ -15,10 +15,10 @@ import { GetForm } from '../components../forms/FormActions';
    
 export default () => {
 
-  GetDef = ({type, paper}) => {
+  GetDef = async ({type, paper}) => {
             const formData = await  GetForm(`https://prelude.eurobrake.net/authors/tasks/${type}/${paper}?definition=1`);
-            const presets = await formData.presets;
-            await this.setState({presets: presets});
+            const res = await formData;
+           return  console.log({res});
 
     }
 
@@ -30,12 +30,12 @@ return (
     </HeroSection>
     <StyledPage >
         <Typography>Get some definitions</Typography>
-        <button onclick={GetDef('paper','EB2020-MDS-002')}>Tech paper</button>
-        <button onclick={GetDef('ppt','EB2020-MDS-002')}>PPT</button>
-        <button onclick={GetDef('permissions','EB2020-MDS-002')}>permissions</button>
-        <button onclick={GetDef('poster-accept','EB2020-MDS-002')}>poster-accept</button>
-        <button onclick={GetDef('poster','EB2020-MDS-002')}>poster</button>
-        <button onclick={GetDef('pitchvideo','EB2020-MDS-002')}>pitchvideo</button>
+        <button onclick={() => GetDef('paper','EB2020-MDS-002')}>Tech paper</button>
+        <button onclick={() => GetDef('ppt','EB2020-MDS-002')}>PPT</button>
+        <button onclick={() => GetDef('permissions','EB2020-MDS-002')}>permissions</button>
+        <button onclick={() => GetDef('poster-accept','EB2020-MDS-002')}>poster-accept</button>
+        <button onclick={() => GetDef('poster','EB2020-MDS-002')}>poster</button>
+        <button onclick={() => GetDef('pitchvideo','EB2020-MDS-002')}>pitchvideo</button>
 
 
     </StyledPage>
