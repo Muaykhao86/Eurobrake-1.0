@@ -115,6 +115,11 @@ const StyledInfoArea = styled.div`
         cursor: pointer;
     color: ${props => props.theme.black};
     font-size: 1.5rem;
+    align-self: flex-start;
+
+    &:hover{
+        font-size: 1.7rem;
+    }
 
     &-date{
         
@@ -133,6 +138,7 @@ const StyledInfoArea = styled.div`
             display: flex;
             flex-flow: column;
             justify-content: space-between;
+            width: 95%;
         }
     }}
 `;
@@ -298,10 +304,10 @@ class AuthorsAreaDash extends Component {
                                                         <CheckCircleIcon style={{ fontSize: '2rem', color: 'green', marginRight: '1rem' }} /> : <CancelIcon style={{ fontSize: '2rem', color: 'red', marginRight: '1rem' }} />}
                                                         <Link 
                                                             href="/t/[id]/[formType]/[taskType]" 
-                                                            as={`/t/${paper.papercode}/tasks/${task.Type}`} >
+                                                            as={`/t/${paper.papercode}/tasks/${task.type}`} >
                                                             <Typography gutterBottom className="paper_task" >{task.task}</Typography>
                                                         </Link>
-                                                            <Typography gutterBottom className="paper_task-date">{task.done}</Typography>
+                                                            <Typography gutterBottom className="paper_task-date">{task.done == null ? 'Due' : task.done}</Typography>
                                                             <Typography gutterBottom className="paper_task-date">{task.due.slice(0, 10)}</Typography>
                                                     </div>
                                                     )
