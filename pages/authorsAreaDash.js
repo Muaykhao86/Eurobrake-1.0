@@ -117,7 +117,7 @@ const StyledInfoArea = styled.div`
     font-size: 1.5rem;
 
     &-date{
-        margin-right: auto;
+        margin-left: auto;
         font-size: 1.5rem;
         align-self: flex-end;
         color: red;

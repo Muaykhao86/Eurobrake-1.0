@@ -28,7 +28,7 @@ constructor(props) {
     //   poster
     //   bio
     //   pitchvideo
-
+    // * EACH WILL BE A COMPONENT
 }
 
 render(){
@@ -47,7 +47,7 @@ render(){
          initialValues={presets || emptyInitial}
             enableReinitialize
         >
-            {({ values}) => {
+            {({ values, handleChange,}) => {
                 console.log(values, 'Tasks')
                 return (
                     <StyledForm>
