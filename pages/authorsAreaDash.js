@@ -268,7 +268,6 @@ class AuthorsAreaDash extends Component {
                                                     style={{ margin: ".5rem 0" }}
                                                     fontSize="1.7rem"
                                                 >
-                                                    {/* onClick={() => GetForm(`https://prelude.eurobrake.net/authors/edit/${paper.papercode}?formType:'abstract`)} */}
                                                     <CancelIcon style={{ fontSize: '3rem', marginRight: '1rem' }} />
                                                     WITHDRAW
                                                 </Button>
@@ -295,7 +294,7 @@ class AuthorsAreaDash extends Component {
                                                         as={`/t/${paper.papercode}/${formType}/${taskType}`} >
                                                             <Typography gutterBottom className="paper_task">{task.task}</Typography>
                                                         </Link>
-                                                            <Typography gutterBottom className="paper_task">{task.due}</Typography>
+                                                            <Typography gutterBottom className="paper_task">{task.due.slice(0, 10)}</Typography>
                                                     </div>
                                                     )
                                                 })}
