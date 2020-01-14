@@ -42,10 +42,10 @@ const Form = props => {
 }
 export default Form
 Form.getInitialProps = async context => {
-    const { id, taskUrl, formType, taskType } = context.query;
+    const { id, formType, taskType } = context.query;
     const { logintoken } = cookies(context) || {};
-    const apiUrl = taskUrl ;
-    console.log('1st task folder GIP', { id, logintoken, apiUrl, taskUrl, formType, taskType })
+    const apiUrl = `https://prelude.eurobrake.net/authors/tasks/${taskType}/${id}` ;
+    console.log('1st task folder GIP', { id, logintoken, apiUrl, formType, taskType })
     const redirectOnError = () =>
         process.browser
             ? Router.push('/authorsArea')
