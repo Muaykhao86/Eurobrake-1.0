@@ -33,8 +33,8 @@ constructor(props) {
 
 render(){
 
-    const {presets, csrf, apiUrl, paperId, type} = props;
-    console.log(presets, csrf, apiUrl, paperId, type);
+    const {presets, csrf, apiUrl, paperId, type} = this.props;
+    console.log('tasks', presets, csrf, apiUrl, paperId, type);
     
     return (
         // ! NEED PRESETS FOR TASKS

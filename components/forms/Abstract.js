@@ -957,3 +957,217 @@ const emptyInitial = {
 
 // * DEFINITION 
 
+// form: Array(26)
+// 0:
+// title: "Primary Author"
+// type: "heading"
+// __proto__: Object
+// 1:
+// options: (13) [{…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}]
+// name: "author_title"
+// label: "Title:"
+// type: "select"
+// __proto__: Object
+// 2:
+// required: "Please provide your first name."
+// name: "author_firstname"
+// label: "First name(s):"
+// type: "text"
+// __proto__: Object
+// 3:
+// required: "Please provide your second (family) name."
+// name: "author_lastname"
+// label: "Second (family) name:"
+// type: "text"
+// __proto__: Object
+// 4:
+// required: "Please provide your email address."
+// name: "author_email"
+// label: "Email address:"
+// type: "email"
+// divider: 1
+// __proto__: Object
+// 5:
+// required: "Please provide your job title."
+// name: "author_jobtitle"
+// label: "Job title:"
+// type: "text"
+// divider: 1
+// __proto__: Object
+// 6:
+// required: "Please provide your company or organisation."
+// name: "author_company"
+// label: "Company/organisation:"
+// type: "text"
+// __proto__: Object
+// 7:
+// required: "Please provide your street address."
+// name: "author_address1"
+// label: "Address:"
+// type: "text"
+// __proto__: Object
+// 8:
+// name: "author_address2"
+// type: "text"
+// __proto__: Object
+// 9:
+// name: "author_address3"
+// type: "text"
+// __proto__: Object
+// 10:
+// required: "Please provide your city."
+// name: "author_city"
+// label: "City:"
+// type: "text"
+// __proto__: Object
+// 11:
+// name: "author_scp"
+// label: "State/county/province:"
+// type: "text"
+// __proto__: Object
+// 12:
+// name: "author_postal"
+// label: "Postal/zip code:"
+// type: "text"
+// __proto__: Object
+// 13:
+// required: "Please provide your country."
+// options: (83) [{…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}]
+// name: "author_country"
+// label: "Country:"
+// type: "select"
+// __proto__: Object
+// 14:
+// required: "Please provide your telephone number, including international code."
+// notes: "Please include the international code."
+// name: "author_phone"
+// label: "Telephone:"
+// type: "text"
+// divider: 1
+// __proto__: Object
+// 15:
+// options: (2) [{…}, {…}]
+// name: "is_presenting_author"
+// default: "no"
+// required: "Please indicate the presenting author."
+// type: "radio"
+// label: "Is this the presenting author?"
+// divider: 1
+// __proto__: Object
+// 16:
+// title: "Your Abstract"
+// type: "heading"
+// __proto__: Object
+// 17:
+// name: "papertitle"
+// required: "Please provide the title of your proposed submission."
+// notes: "Please use Title Case. DO NOT use block capitals."
+// type: "textarea"
+// label: "Title of your proposed submission:"
+// divider: 0
+// __proto__: Object
+// 18:
+// html: "↵					<p class="f_intro"><strong>Please type or paste the text of your abstract below (maximum 750 words).</strong></p> ↵	 				<p class="f_intro">Your abstract should clearly set out the main scientific, technical, economic and / or practical points to be addressed in your paper. In particular your abstract should indicate those aspects of the work which are new, innovative and unique.</p>↵				"
+// type: "html"
+// divider: 1
+// __proto__: Object
+// 19:
+// required: "Please provide the abstract for your submission."
+// name: "abstract"
+// label: "Your abstract:"
+// type: "textarea"
+// __proto__: Object
+// 20:
+// name: "keywords"
+// required: "Please provide some keywords for your abstract."
+// notes: "Please separate keywords with commas.  Please do not use block capitals."
+// type: "textarea"
+// label: "Please enter around 5 keywords that describe the main focus of your abstract:"
+// divider: 1
+// __proto__: Object
+// 21:
+// name: "previouspapers"
+// label: "Please give details of any previous papers you have published on this subject (if applicable)"
+// type: "textarea"
+// divider: 1
+// __proto__: Object
+// 22:
+// options: (2) [{…}, {…}]
+// name: "consider_for_journal"
+// default: "no"
+// notes: "Please note that your paper may require additional revisions in order to meet the qualifying criteria."
+// type: "radio"
+// label: "Do you wish your paper to be considered for inclusion in a list of the best papers given at EuroBrake to be published in an academic journal?"
+// divider: 1
+// __proto__: Object
+// 23:
+// title: "Secondary Author(s)"
+// type: "heading"
+// __proto__: Object
+// 24:
+// fields: Array(8)
+// 0:
+// name: "ref"
+// type: "hidden"
+// __proto__: Object
+// 1:
+// options: (13) [{…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}]
+// name: "title"
+// label: "Title:"
+// type: "select"
+// __proto__: Object
+// 2:
+// required: "Please provide each secondary author's first name."
+// name: "firstname"
+// label: "First name(s):"
+// type: "text"
+// __proto__: Object
+// 3:
+// required: "Please provide each secondary author's last name."
+// name: "lastname"
+// label: "Second (family) name:"
+// type: "text"
+// __proto__: Object
+// 4:
+// required: "Please provide each secondary author's email address."
+// name: "email"
+// label: "Email address:"
+// type: "email"
+// __proto__: Object
+// 5:
+// required: "Please provide each secondary author's company or organisation."
+// name: "company"
+// label: "Company/organisation:"
+// type: "text"
+// __proto__: Object
+// 6:
+// required: "Please provide each secondary author's country."
+// options: (83) [{…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}]
+// name: "country"
+// label: "Country:"
+// type: "select"
+// __proto__: Object
+// 7:
+// options: (2) [{…}, {…}]
+// name: "is_presenting_author"
+// default: "no"
+// required: "Please indicate the presenting author."
+// type: "radio"
+// label: "Is this the presenting author?"
+// divider: 1
+// __proto__: Object
+// length: 8
+// __proto__: Array(0)
+// name: "secondary_authors"
+// type: "repeater"
+// __proto__: Object
+// 25:
+// label: "Submit changes"
+// type: "submit"
+// divider: 1
+// __proto__: Object
+// length: 26
+// __proto__: Array(0)
+// expects: "json"
+// logintoken: "w070P7OsRIoxRr6KfcafJl"
+// __proto__: Object

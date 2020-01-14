@@ -123,6 +123,7 @@ const StyledInfoArea = styled.div`
     }
 
     &-box{
+        flex: 1 1 auto;
         display: flex;
         align-items: flex-start;
         justify-content: space-between;
