@@ -126,8 +126,14 @@ const StyledInfoArea = styled.div`
     &-box{
         
         display: flex;
-        align-items: stretch;
+        flex: 1;
         justify-content: space-between;
+
+        &-container{
+            display: flex;
+            flex-flow: column;
+            justify-content: space-between;
+        }
     }}
 `;
 
@@ -283,26 +289,24 @@ class AuthorsAreaDash extends Component {
                                                 <Typography className="paper-title">{paper.title}</Typography>
                                                 <Typography gutterBottom className="paper-type">{paper.paper_type.toUpperCase()}</Typography>
                                                 </div>
-                                                {paper.tasks && paper.tasks.map(task => {
-                                                    const formType = 'tasks';
-                                                    const taskType = 'ppt';
+                                                <div className="paper_task-box-container">
 
-                                                    const options = { year: 'numeric', month: 'long', day: 'numeric' };
+                                                {paper.tasks && paper.tasks.map(task => {
                                                     return (
                                                         <div className="paper_task-box">
                                                         {task.done !== null ? 
                                                         <CheckCircleIcon style={{ fontSize: '2rem', color: 'green', marginRight: '1rem' }} /> : <CancelIcon style={{ fontSize: '2rem', color: 'red', marginRight: '1rem' }} />}
-                                                        
-                                                          {/* href={{ pathname: '/t/[id]/[formType]/[taskType]/[taskUrl]', query: { formType: 'abstract' } }}  */}
                                                         <Link 
                                                             href="/t/[id]/[formType]/[taskType]" 
-                                                            as={`/t/${paper.papercode}/${formType}/${taskType}`} >
-                                                            <Typography gutterBottom className="paper_task" style={{marginRight: 'auto'}}>{task.task}</Typography>
+                                                            as={`/t/${paper.papercode}/tasks/${task.Type}`} >
+                                                            <Typography gutterBottom className="paper_task" >{task.task}</Typography>
                                                         </Link>
+                                                            <Typography gutterBottom className="paper_task-date">{task.done}</Typography>
                                                             <Typography gutterBottom className="paper_task-date">{task.due.slice(0, 10)}</Typography>
                                                     </div>
                                                     )
                                                 })}
+                                                </div>
                                             </StyledInfoArea>
                                         </StyledBox>
                                     )) :

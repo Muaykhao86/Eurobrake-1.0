@@ -56,25 +56,8 @@ render(){
                             <label
                                 htmlFor="label"
                                 className="form-label"
-                                style={{minWidth: '80%'}}
                                 >
-                                I have read the <Link href="/authorsAreaInstructions"><a >Instructions for Preparing your Powerpoint Presentation</a></Link> and have followed the guidance notes available there.
-                        </label>
-                            <Field
-                                className="form-input"
-                                value={values.accept}
-                                style={{ color: '#134381' }}
-                                name="accept"
-                                component={Checkbox}
-                                style={{minWidth: '20%'}}
-                            />
-                        </div>
-                         <div className="form-field">
-                            <label
-                                htmlFor="label"
-                                className="form-label"
-                                >
-                                I have read the <Link href="/authorsAreaInstructions"><a >Instructions for Preparing your Powerpoint Presentation</a></Link> and have followed the guidance notes available there.
+                                I have read the <Link href="/authorsAreaInstructions"><a className="form-link_bold" >Instructions for Preparing your Powerpoint Presentation</a></Link> and have followed the guidance notes available there.
                         </label>
                             <Field
                                 className="form-input"
