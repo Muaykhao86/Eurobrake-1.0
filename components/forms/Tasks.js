@@ -51,7 +51,7 @@ render(){
                 console.log(values, 'Tasks')
                 return (
                     <StyledForm>
-                        <Typography className="form-title">Powerpoint Task</Typography>
+                        <Typography className="form-title">{type}</Typography>
                          <div className="form-field">
                             <label
                                 htmlFor="label"
