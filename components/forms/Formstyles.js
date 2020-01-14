@@ -60,6 +60,11 @@ export const StyledForm = styled(Form)`
             font-family: ${props => props.theme.MPBoldIt};
             font-size: 2rem;
             color: ${props => props.theme.primary};
+
+                
+        .MuiInput-underline:before {
+            border-bottom: none;
+        }
         }
         &-link{
             cursor: pointer;

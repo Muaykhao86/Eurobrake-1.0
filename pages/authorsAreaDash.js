@@ -291,7 +291,7 @@ class AuthorsAreaDash extends Component {
                                                 <Typography gutterBottom className="paper-type">{paper.paper_type.toUpperCase()}</Typography>
                                             </div>
                                                         <Table className="" aria-label="simple table">
-                                                            <TableBody>
+                                                            <TableBody style={{width: '100%'}}>
                                                                 {paper.tasks && paper.tasks.map(task => (
                                                                     <TableRow key={task.task}>
                                                                         <StyledCell component="th" scope="row" className="">{task.done !== null ?
