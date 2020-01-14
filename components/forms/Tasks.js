@@ -32,6 +32,11 @@ constructor(props) {
 }
 
 render(){
+    const emptyInitial = {
+        accept: '',
+        ppt_filename: '',
+        author_notes: ''
+    }
 
     const {presets, csrf, apiUrl, paperId, type} = this.props;
     console.log('tasks', presets, csrf, apiUrl, paperId, type);
@@ -39,6 +44,7 @@ render(){
     return (
         // ! NEED PRESETS FOR TASKS
         <Formik
+         initialValues={presets || emptyInitial}
             enableReinitialize
         >
             {({ values}) => {

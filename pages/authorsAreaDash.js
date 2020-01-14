@@ -117,13 +117,14 @@ const StyledInfoArea = styled.div`
     font-size: 1.5rem;
 
     &-date{
-    font-size: 1.5rem;
+        margin-right: auto;
+        font-size: 1.5rem;
         align-self: flex-end;
         color: red;
     }
 
     &-box{
-        flex: 1 1 auto;
+        
         display: flex;
         align-items: flex-start;
         justify-content: space-between;
