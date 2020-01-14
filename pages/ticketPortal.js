@@ -30,6 +30,7 @@ const StyledPage = styled.div`
 const Content = styled.div`
     align-self: center;
     display: flex;
+    overflow: auto;
     justify-content: center;
     margin-top: 5rem;
     width: 70vw;
@@ -59,7 +60,7 @@ export default () => (
 
     <h1>Book your tickets now</h1>
     <Content>
-        <iframe src="https://www.eventsforce.net/fisita/14/register" frameborder="0" style={{width: '100%', height: '100%'}}/>
+        <iframe src="https://www.eventsforce.net/fisita/14/register" frameborder="0" style={{}}/>
      
     </Content>
 </StyledPage>    

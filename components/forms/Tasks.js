@@ -55,8 +55,10 @@ render(){
                          <div className="form-field">
                             <label
                                 htmlFor="label"
-                                className="form-label">
-                                I have read the <Link href="/authorsAreaInstructions"><a>Instructions for Preparing your Powerpoint Presentation</a></Link> and have followed the guidance.
+                                className="form-label"
+                                style={{width: '80%'}}
+                                >
+                                I have read the <Link href="/authorsAreaInstructions"><a >Instructions for Preparing your Powerpoint Presentation</a></Link> and have followed the guidance.
                         </label>
                             <Field
                                 className="form-input"
@@ -64,6 +66,7 @@ render(){
                                 style={{ color: '#134381' }}
                                 name="accept"
                                 component={Checkbox}
+                                style={{width: '20%'}}
                             />
                         </div>
                          <div className="form-field">
