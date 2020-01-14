@@ -2,7 +2,7 @@ import { useEffect } from 'react'
 import Router from 'next/router';
 import cookies from 'next-cookies';
 import cookie from 'js-cookie';
-import {GetForm} from '../components/forms/FormActions';
+import { GetForm } from '../components/forms/FormActions';
 
 
 
@@ -10,8 +10,8 @@ import {GetForm} from '../components/forms/FormActions';
 
 
 
-export const login = ({logintoken} ) => {
-  
+export const login = ({ logintoken }) => {
+
   cookie.set('logintoken', logintoken, { expires: 1 })
   Router.push('/authorsAreaDash')
 }
@@ -22,7 +22,7 @@ export const auth = ctx => {
 
   const { logintoken } = cookies(ctx);
   console.log('auth', logintoken)
-    // If there's no token, it means the user is not logged in.
+  // If there's no token, it means the user is not logged in.
   if (!logintoken) {
     if (ctx.req) {
       // If `ctx.req` is available it means we are on the server.
@@ -34,22 +34,23 @@ export const auth = ctx => {
     }
   }
 
-return logintoken;
+  return logintoken;
 
 }
 
 // LOGOUT FUNCTION
 
 export const logout = async (ctx) => {
- const url = 'https://prelude.eurobrake.net/authors/logout';
- await GetForm(url)
+  const url = 'https://prelude.eurobrake.net/authors/logout';
   // ? need to set up fetch req???
-  // await cookie.remove('logintoken')
- 
-  // // To trigger the event listener we save some random data into the `logout` key
-  // await window.localStorage.setItem("logout", Date.now());
+  await cookie.remove('logintoken')
 
-  // await Router.push("/authorsArea")
+  // To trigger the event listener we save some random data into the `logout` key
+  await window.localStorage.setItem("logout", Date.now());
+
+  await Router.push("/authorsArea")
+
+  await GetForm(url)
 };
 
 // IF LOGGED IN/ HAS TOKEN RETURN THE COMPONENT 

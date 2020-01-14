@@ -300,10 +300,10 @@ class AuthorsAreaDash extends Component {
                                                                             <Link
                                                                                 href="/t/[id]/[formType]/[taskType]"
                                                                                 as={`/t/${paper.papercode}/tasks/${task.type}`} >
-                                                                                <Typography gutterBottom className="paper_task" style={{width: '70%'}} >{task.task}</Typography>
+                                                                                <Typography gutterBottom className="paper_task" style={{width: '60%'}} >{task.task}</Typography>
                                                                             </Link></StyledCell>
-                                                                        <StyledCell align="left" className="paper_task-date" style={{width: '10%'}}>{task.done == null ? 'Due' : task.done}</StyledCell>
-                                                                        <StyledCell align="left" className="paper_task-date" style={{width: '10%'}}>{task.due.slice(0, 10)}</StyledCell>
+                                                                        <StyledCell align="left" className="paper_task-date" style={{width: '15%'}}>{task.done == null ? 'Due' : task.done}</StyledCell>
+                                                                        <StyledCell align="left" className="paper_task-date" style={{width: '15%'}}>{task.due.slice(0, 10)}</StyledCell>
                                                                     </TableRow>
                                                                 ))}
                                                             </TableBody>
@@ -325,7 +325,7 @@ class AuthorsAreaDash extends Component {
 
     }
 }
-
+// ! STILL PUSHING TO HOME WHEN WE WANT TOPUSHTO aUTHORS AREA LOGIN
 AuthorsAreaDash.getInitialProps = async ctx => {
     // We use `nextCookie` to get the cookie and pass the token to the frontend in the `props`.
     const { logintoken } = cookies(ctx) || {};

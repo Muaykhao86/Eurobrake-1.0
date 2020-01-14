@@ -34,7 +34,7 @@ const StyledPage = styled.div`
         left: -29px;
         top: 9px;
 
-        &_text{
+        &-text{
         line-height: 3.5rem;/* needed? */
         position: relative;
         margin-left: 3rem;
