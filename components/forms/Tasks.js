@@ -74,11 +74,13 @@ render(){
                                 File upload
                         </label>
                             <Field
-                                className="form-input"
+                                
+                                className="form-input_file"
                                 value={values.ppt_filename}
-                                style={{ width: '100%', color: '#134381' }}
+                                style={{ color: '#134381' }}
                                 name="ppt_filename"
                                 component={SimpleFileUpload}
+                                fullWidth
                             />
                         </div>
                          <div className="form-field">

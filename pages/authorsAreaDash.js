@@ -300,7 +300,7 @@ class AuthorsAreaDash extends Component {
                                                                             <Link
                                                                                 href="/t/[id]/[formType]/[taskType]"
                                                                                 as={`/t/${paper.papercode}/tasks/${task.type}`} >
-                                                                                <Typography gutterBottom className="paper_task" >{task.task}</Typography>
+                                                                                <Typography gutterBottom className="paper_task" style={{width: '31em'}} >{task.task}</Typography>
                                                                             </Link></StyledCell>
                                                                         <StyledCell align="left" className="paper_task-date">{task.done == null ? 'Due' : task.done}</StyledCell>
                                                                         <StyledCell align="left" className="paper_task-date">{task.due.slice(0, 10)}</StyledCell>
