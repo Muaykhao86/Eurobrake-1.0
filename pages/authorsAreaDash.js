@@ -282,6 +282,8 @@ class AuthorsAreaDash extends Component {
                                                 {paper.tasks && paper.tasks.map(task => {
                                                     const formType = 'tasks';
                                                     const taskType = 'ppt';
+
+                                                    const options = { year: 'numeric', month: 'long', day: 'numeric' };
                                                     return (
                                                         <div className="paper_task-box">
                                                         {task.done !== null ? 
@@ -293,7 +295,7 @@ class AuthorsAreaDash extends Component {
                                                         as={`/t/${paper.papercode}/${formType}/${taskType}`} >
                                                             <Typography gutterBottom className="paper_task">{task.task}</Typography>
                                                         </Link>
-                                                            <Typography gutterBottom className="paper_task">{task.due.toISOString().substring(0, 10)}</Typography>
+                                                            <Typography gutterBottom className="paper_task">{task.due.toLocaleDateString(undefined, options)}</Typography>
                                                     </div>
                                                     )
                                                 })}
