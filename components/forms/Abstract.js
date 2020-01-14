@@ -360,29 +360,10 @@ export const AbstractForm = (props) => {
                          </div>
                        
                         <Typography className="form-title">Secondary Author(s)</Typography>
-                        {values.secondary_authors.length == 0 &&
-                        <Button 
-                                                bs="false"
-                                                HBColor="transparent"
-                                                transform="scale(1.4)"
-                                                type="add" onClick={() => {
-                                                    values.secondary_authors.push({
-                                                        title: '',
-                                                        firstname: '',
-                                                        lastname: '',
-                                                        email: '',
-                                                        company: '',
-                                                        country: '',
-                                                        is_presenting_author: ''
-                                                    });
-                                                }}>
-                                                    <AddCircle style={{ color: 'green'  , fontSize: '3rem', margin: '.5rem 0'}} />
-                            </Button>
-                         } 
                             <FieldArray name={`secondary_authors`} >
                                 {({ swap, push, remove, setSubmitting }) => (
                                     values.secondary_authors &&
-                                    values.secondary_authors.length > 0 &&
+                                    values.secondary_authors.length > 0 ?
                                     (
                                         values.secondary_authors.map((author, index) => {
                                             const {is_presenting_author} = author; //? ONLY FUNCKING WORKS!!!
@@ -583,7 +564,28 @@ export const AbstractForm = (props) => {
                                                 </div>
                                             </div>
                                         )})
-                                    ))}
+                                    )
+                                    :
+                                    (
+                                                <Button 
+                                                bs="false"
+                                                HBColor="transparent"
+                                                transform="scale(1.4)"
+                                                type="add" onClick={() => {
+                                                    values.secondary_authors.push({
+                                                        title: '',
+                                                        firstname: '',
+                                                        lastname: '',
+                                                        email: '',
+                                                        company: '',
+                                                        country: '',
+                                                        is_presenting_author: ''
+                                                    });
+                                                }}>
+                                                    <AddCircle style={{ color: 'green'  , fontSize: '3rem', margin: '.5rem 0'}} />
+                                                </Button>
+                                    ) 
+                                    )}
                             </FieldArray>
                        
                         <Button 
