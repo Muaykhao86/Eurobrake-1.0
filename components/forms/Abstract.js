@@ -518,6 +518,7 @@ export const AbstractForm = (props) => {
 
                                                 <Button 
                                                 bcolor="transparent"
+                                                abs="false"
                                                 bs="false"
                                                 HBColor="transparent"
                                                 transform="scale(1.4)"
@@ -566,9 +567,12 @@ export const AbstractForm = (props) => {
                                         )})
                                     )
                                     :
+                       {/*  NEED TO TRIGGER A RENDER FOR THIS BUTTON */}
                                     (
                                                 <Button 
+                                                abs="false"
                                                 bs="false"
+                                                bcolor="transparent"
                                                 HBColor="transparent"
                                                 transform="scale(1.4)"
                                                 type="add" onClick={() => {
@@ -587,7 +591,6 @@ export const AbstractForm = (props) => {
                                     ) 
                                     )}
                             </FieldArray>
-                       
                         <Button 
                                 onClick={onSubmit}
                                 bcolor="#134381"

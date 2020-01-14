@@ -27,7 +27,7 @@ const StyledPage = styled.div`
     }
 `;
 
-const Content = styled.iframe`
+const Content = styled.div`
     align-self: center;
     display: flex;
     flex: 1 1 auto;
@@ -58,7 +58,10 @@ export default () => (
             <FixedDates/>
 
     <h1>Book your tickets now</h1>
-    <Content src="https://www.eventsforce.net/fisita/14/register" />
+    <Content>
+        <iframe src="https://www.eventsforce.net/fisita/14/register" frameborder="0"/>
+     
+    </Content>
 </StyledPage>    
 </>
 
