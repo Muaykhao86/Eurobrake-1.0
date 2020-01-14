@@ -2,7 +2,7 @@ import React, { Component, useState } from 'react'
 import Link from 'next/link';
 import Typography from '@material-ui/core/Typography';
 import { Formik, Form, Field, } from 'formik';
-import { TextField, SimpleFileUpload, CheckboxWithLabel} from 'formik-material-ui';
+import { TextField, SimpleFileUpload, CheckboxWithLabel, Checkbox} from 'formik-material-ui';
 import { StyledForm } from './Formstyles';
 import { Button } from '../Button';
 import { SendForm } from './FormActions';

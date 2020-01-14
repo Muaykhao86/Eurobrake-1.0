@@ -36,7 +36,7 @@ class OneForm extends Component {
                 case'tasks' : 
                 return <Tasks type={type} presets={presets} csrf={csrf} apiUrl={apiUrl} paperId={paperId}/>;
                 default: 
-                    return <Typography>No form found please contact info@eurobrake.net</Typography>;            
+                    return <Typography>No form found please try again or contact info@eurobrake.net</Typography>;            
             }
             }
     }

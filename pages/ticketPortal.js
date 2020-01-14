@@ -60,7 +60,7 @@ export default () => (
 
     <h1>Book your tickets now</h1>
     <Content>
-        <iframe src="https://www.eventsforce.net/fisita/14/register" frameborder="0" style={{}}/>
+        <iframe src="https://www.eventsforce.net/fisita/14/register" frameborder="0" style={{width: 'inherit'}}/>
      
     </Content>
 </StyledPage>    
