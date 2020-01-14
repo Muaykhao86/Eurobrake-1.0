@@ -82,7 +82,7 @@ const StyledActionArea = styled.div`
     flex: 1 1 33.33%;
     display: flex;
     flex-flow: column;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: flex-start;
 
     .action-paper{
