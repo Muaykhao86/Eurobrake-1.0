@@ -253,7 +253,7 @@ class AuthorsAreaDash extends Component {
                                                 <Typography gutterBottom className="action-paper">{paper.papercode}</Typography>
                                               <Link 
                                                         href="/t/[id]/[formType]" 
-                                                        as={`/t/${paper.papercode}/${formType}`} >
+                                                        as={`/t/${paper.papercode}/abstract`} >
                                                 <Button
                                                     bcolor="#134381"
                                                     background="#134381"
