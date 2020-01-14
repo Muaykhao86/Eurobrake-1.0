@@ -117,7 +117,7 @@ const StyledInfoArea = styled.div`
     font-size: 1.5rem;
 
     &-date{
-        margin-left: auto;
+        
         font-size: 1.5rem;
         align-self: flex-end;
         color: red;
@@ -254,8 +254,7 @@ class AuthorsAreaDash extends Component {
                                               <Link 
                                                         href="/f/[id]/[formType]" 
                                                         as={`/f/${paper.papercode}/abstract`} >
-                                                        <Typography>Edit Paper</Typography>
-                                                {/* <Button
+                                                <Button
                                                     bcolor="#134381"
                                                     background="#134381"
                                                     br="100rem"
@@ -264,7 +263,7 @@ class AuthorsAreaDash extends Component {
                                                     fontSize="1.7rem">
                                                     <CreateIcon style={{ fontSize: '3rem', marginRight: '1rem' }} />
                                                     EDIT PAPER
-                                                </Button> */}
+                                                </Button>
                                                 </Link>
                                                
                                                 <Button
@@ -298,7 +297,7 @@ class AuthorsAreaDash extends Component {
                                                         <Link 
                                                             href="/t/[id]/[formType]/[taskType]" 
                                                             as={`/t/${paper.papercode}/${formType}/${taskType}`} >
-                                                            <Typography gutterBottom className="paper_task">{task.task}</Typography>
+                                                            <Typography gutterBottom className="paper_task" style={{marginRight: 'auto'}}>{task.task}</Typography>
                                                         </Link>
                                                             <Typography gutterBottom className="paper_task-date">{task.due.slice(0, 10)}</Typography>
                                                     </div>

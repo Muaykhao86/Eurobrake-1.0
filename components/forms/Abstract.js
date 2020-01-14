@@ -540,7 +540,7 @@ export const AbstractForm = (props) => {
                                                  bs="false"
                                                 HBColor="transparent"
                                                 transform="scale(1.4)"
-                                                type="remove" onClick={() => values.secondary_authors.length > 1 && remove(index)}>
+                                                type="remove" onClick={() => values.secondary_authors.length >= 1 && remove(index)}>
                                                     <RemoveCircle style={{ color: 'red' , fontSize: '3rem', margin: '.5rem 0' }} />
                                                 </Button>
                                                 <Button 
