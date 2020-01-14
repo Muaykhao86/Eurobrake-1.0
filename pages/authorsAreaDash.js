@@ -254,7 +254,8 @@ class AuthorsAreaDash extends Component {
                                               <Link 
                                                         href="/t/[id]/[formType]" 
                                                         as={`/t/${paper.papercode}/abstract`} >
-                                                <Button
+                                                        <Typography>Edit Paper</Typography>
+                                                {/* <Button
                                                     bcolor="#134381"
                                                     background="#134381"
                                                     br="100rem"
@@ -263,7 +264,7 @@ class AuthorsAreaDash extends Component {
                                                     fontSize="1.7rem">
                                                     <CreateIcon style={{ fontSize: '3rem', marginRight: '1rem' }} />
                                                     EDIT PAPER
-                                                </Button>
+                                                </Button> */}
                                                 </Link>
                                                
                                                 <Button
