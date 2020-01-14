@@ -243,7 +243,7 @@ class AuthorsAreaDash extends Component {
                                                   {/* href=""
                                                  as={`/f/${paper.papercode}?formType=abstract`}  */}
                                                 <Link
-                                                href={{ pathname: '/f/[id]', query: { formType: 'abstract' } }}
+                                                href={{ pathname: '/f/[id]', query: { id: `${paper.papercode}`, formType: 'abstract' } }}
                                                >
                                                 <Button
                                                     bcolor="#134381"
@@ -263,7 +263,7 @@ class AuthorsAreaDash extends Component {
                                                     padding="0.5rem 2rem"
                                                     style={{ margin: ".5rem 0" }}
                                                     fontSize="1.7rem"
-                                                    onClick={() => GetForm(`https://prelude.eurobrake.net/authors/edit/${paper.papercode}`)}
+                                                    onClick={() => GetForm(`https://prelude.eurobrake.net/authors/edit/${paper.papercode}?formType:'abstract`)}
                                                 >
                                                     <CancelIcon style={{ fontSize: '3rem', marginRight: '1rem' }} />
                                                     WITHDRAW
@@ -279,16 +279,15 @@ class AuthorsAreaDash extends Component {
                                                         <div className="paper_task-box">
                                                         {task.done !== null ? 
                                                         <CheckCircleIcon style={{ fontSize: '2rem', color: 'green', marginRight: '1rem' }} /> : <CancelIcon style={{ fontSize: '2rem', color: 'red', marginRight: '1rem' }} />}
-                                                        {/* // ! URL IS MERGING THE FIELDS, NEED TO SEPERATE OR CHANGE AROUND */}
                                                         
+                                                          {/* href={{ pathname: '/t/[id]/[formType]/[taskType]/[taskUrl]', query: { formType: 'abstract' } }}  */}
                                                         <Link 
-                                                        
                                                         href="/t/[id]/[formType]/[taskType]" 
-                                                        as={`/t/${paper.papercode}/tasks/ppt`} >
+                                                        as={`/t/${paper.papercode}/formType: 'tasks'/taskType: 'ppt'`} >
                                                             <Typography gutterBottom className="paper_task">{task.task}</Typography>
                                                         </Link>
                                                             <Typography gutterBottom className="paper_task">{
-                                                                new Date(task.done).toDateString()
+                                                              task.done.substring(0, 10)        
                                                                 }</Typography>
                                                     </div>
                                                     )
