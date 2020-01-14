@@ -69,8 +69,7 @@ export const StyledForm = styled(Form)`
         }
         &-link_bold{
             cursor: pointer;
-            font-family: ${props => props.theme.MPBoldIt};
-            font-size: 1.7rem;
+            font-family: ${props => props.theme.MPBold};
             color: ${props => props.theme.primary};
         }
         &-radio{

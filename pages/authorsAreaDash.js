@@ -290,9 +290,6 @@ class AuthorsAreaDash extends Component {
                                                 <Typography className="paper-title">{paper.title}</Typography>
                                                 <Typography gutterBottom className="paper-type">{paper.paper_type.toUpperCase()}</Typography>
                                             </div>
-                                            <div className="paper_task-box-container">
-
-                                                
                                                         <Table className="" aria-label="simple table">
                                                             <TableBody>
                                                                 {paper.tasks && paper.tasks.map(task => (
@@ -311,9 +308,6 @@ class AuthorsAreaDash extends Component {
                                                                 ))}
                                                             </TableBody>
                                                         </Table>
-                                                    )
-                                                })}
-                                            </div>
                                         </StyledInfoArea>
                                     </StyledBox>
                                 )) :
