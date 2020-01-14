@@ -2,6 +2,8 @@ import React from 'react'
 import styled from 'styled-components';
 import { Typography } from '@material-ui/core';
 import withReveal from 'react-reveal/withReveal';
+import Bounce from 'react-reveal/Bounce';
+
 
 
 const StyledDates = styled.div`
