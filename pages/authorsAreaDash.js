@@ -294,16 +294,16 @@ class AuthorsAreaDash extends Component {
                                                             <TableBody style={{width: '100%'}}>
                                                                 {paper.tasks && paper.tasks.map(task => (
                                                                     <TableRow key={task.task}>
-                                                                        <StyledCell component="th" scope="row" className="">{task.done !== null ?
+                                                                        <StyledCell component="th" scope="row" className="" style={{width: '10%'}}>{task.done !== null ?
                                                                             <CheckCircleIcon style={{ fontSize: '2rem', color: 'green', marginRight: '1rem' }} /> : <CancelIcon style={{ fontSize: '2rem', color: 'red', marginRight: '1rem' }} />}</StyledCell>
                                                                         <StyledCell align="left" className="">
                                                                             <Link
                                                                                 href="/t/[id]/[formType]/[taskType]"
                                                                                 as={`/t/${paper.papercode}/tasks/${task.type}`} >
-                                                                                <Typography gutterBottom className="paper_task" style={{width: '31em'}} >{task.task}</Typography>
+                                                                                <Typography gutterBottom className="paper_task" style={{width: '70%'}} >{task.task}</Typography>
                                                                             </Link></StyledCell>
-                                                                        <StyledCell align="left" className="paper_task-date">{task.done == null ? 'Due' : task.done}</StyledCell>
-                                                                        <StyledCell align="left" className="paper_task-date">{task.due.slice(0, 10)}</StyledCell>
+                                                                        <StyledCell align="left" className="paper_task-date" style={{width: '10%'}}>{task.done == null ? 'Due' : task.done}</StyledCell>
+                                                                        <StyledCell align="left" className="paper_task-date" style={{width: '10%'}}>{task.due.slice(0, 10)}</StyledCell>
                                                                     </TableRow>
                                                                 ))}
                                                             </TableBody>

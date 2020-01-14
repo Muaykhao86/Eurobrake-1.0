@@ -61,7 +61,7 @@ export const StyledForm = styled(Form)`
             font-size: 2rem;
             color: ${props => props.theme.primary};
 
-            &_file{
+            &&_file{
                 width: 100%;
                  font-family: ${props => props.theme.MPBoldIt};
                  font-size: 2rem;

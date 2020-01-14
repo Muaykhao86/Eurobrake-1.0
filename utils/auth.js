@@ -2,6 +2,8 @@ import { useEffect } from 'react'
 import Router from 'next/router';
 import cookies from 'next-cookies';
 import cookie from 'js-cookie';
+import {GetForm} from '../components/forms/FormActions';
+
 
 
 
@@ -39,13 +41,15 @@ return logintoken;
 // LOGOUT FUNCTION
 
 export const logout = async (ctx) => {
+ const url = 'https://prelude.eurobrake.net/authors/logout';
+ await GetForm(url)
   // ? need to set up fetch req???
-  await cookie.remove('logintoken')
+  // await cookie.remove('logintoken')
  
-  // To trigger the event listener we save some random data into the `logout` key
-  await window.localStorage.setItem("logout", Date.now());
+  // // To trigger the event listener we save some random data into the `logout` key
+  // await window.localStorage.setItem("logout", Date.now());
 
-  await Router.push("/authorsArea")
+  // await Router.push("/authorsArea")
 };
 
 // IF LOGGED IN/ HAS TOKEN RETURN THE COMPONENT 
