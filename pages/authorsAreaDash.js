@@ -241,6 +241,9 @@ class AuthorsAreaDash extends Component {
                     </Button>
                         </div>
                         <Typography gutterBottom className="authors-title" style={{ fontSize: '3rem', borderTop: '2px solid #134381', borderBottom: '2px solid #134381' }}>Your submission(s)</Typography>
+                                                {/* <Link
+                                                href={{ pathname: `/f/${paper.papercode}`, query: { formType: 'abstract' } }}
+                                               > */}
                         {
                                 papers ?
 
@@ -248,11 +251,9 @@ class AuthorsAreaDash extends Component {
                                         <StyledBox key={paper.papercode}>
                                             <StyledActionArea>
                                                 <Typography gutterBottom className="action-paper">{paper.papercode}</Typography>
-                                                  {/* href=""
-                                                 as={`/f/${paper.papercode}?formType=abstract`}  */}
-                                                <Link
-                                                href={{ pathname: `/f/${paper.papercode}`, query: { formType: 'abstract' } }}
-                                               >
+                                              <Link 
+                                                        href="/t/[id]/[formType]" 
+                                                        as={`/t/${paper.papercode}/${formType}`} >
                                                 <Button
                                                     bcolor="#134381"
                                                     background="#134381"
