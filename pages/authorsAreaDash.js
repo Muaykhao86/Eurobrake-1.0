@@ -252,8 +252,8 @@ class AuthorsAreaDash extends Component {
                                             <StyledActionArea>
                                                 <Typography gutterBottom className="action-paper">{paper.papercode}</Typography>
                                               <Link 
-                                                        href="/t/[id]/[formType]" 
-                                                        as={`/t/${paper.papercode}/abstract`} >
+                                                        href="/f/[id]/[formType]" 
+                                                        as={`/f/${paper.papercode}/abstract`} >
                                                         <Typography>Edit Paper</Typography>
                                                 {/* <Button
                                                     bcolor="#134381"
@@ -296,8 +296,8 @@ class AuthorsAreaDash extends Component {
                                                         
                                                           {/* href={{ pathname: '/t/[id]/[formType]/[taskType]/[taskUrl]', query: { formType: 'abstract' } }}  */}
                                                         <Link 
-                                                        href="/t/[id]/[formType]/[taskType]" 
-                                                        as={`/t/${paper.papercode}/${formType}/${taskType}`} >
+                                                            href="/t/[id]/[formType]/[taskType]" 
+                                                            as={`/t/${paper.papercode}/${formType}/${taskType}`} >
                                                             <Typography gutterBottom className="paper_task">{task.task}</Typography>
                                                         </Link>
                                                             <Typography gutterBottom className="paper_task-date">{task.due.slice(0, 10)}</Typography>
