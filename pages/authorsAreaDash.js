@@ -292,12 +292,11 @@ class AuthorsAreaDash extends Component {
                                             </div>
                                             <div className="paper_task-box-container">
 
-                                                {paper.tasks && paper.tasks.map(task => {
-                                                    return (
+                                                
                                                         <Table className="" aria-label="simple table">
                                                             <TableBody>
-                                                                {delegateRows.map(row => (
-                                                                    <TableRow key={row.days}>
+                                                                {paper.tasks && paper.tasks.map(task => (
+                                                                    <TableRow key={task.task}>
                                                                         <StyledCell component="th" scope="row" className="">{task.done !== null ?
                                                                             <CheckCircleIcon style={{ fontSize: '2rem', color: 'green', marginRight: '1rem' }} /> : <CancelIcon style={{ fontSize: '2rem', color: 'red', marginRight: '1rem' }} />}</StyledCell>
                                                                         <StyledCell align="left" className="">
