@@ -23,7 +23,7 @@ export default () => {
     }
   const GetDefAbstract = async (paper) => {
       console.log({paper})
-            const formData = await  GetForm(`https://prelude.eurobrake.net/authors/${paper}?definition=1`);
+            const formData = await  GetForm(`https://prelude.eurobrake.net/authors/edit/${paper}?definition=1`);
             const res = await formData;
            return  console.log({res});
     }
@@ -151,7 +151,7 @@ __proto__: Array(0)
 expects: "json"
 logintoken: "6rL0apksDdqXRS5KzKUHXN"
 __proto__: Object */}
-        <button onClick={() => GetDef('poster-accept','EB2020-MDS-003')}>poster-accept</button>{/* NEED TO RE TEST*/}
+        <button onClick={() => GetDef('poster-accept','EB2020-MDS-003')}>poster-accept</button>
 {/* presets: {}
 __csrf_token: "f2857af069ab04253a9ae1f6599314c0d06f6bbc,3133ab2d1025f7de2177ae9a57f037e02b754187,1578920435"
 status: "success"

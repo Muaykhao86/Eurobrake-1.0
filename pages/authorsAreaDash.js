@@ -116,6 +116,12 @@ const StyledInfoArea = styled.div`
     color: ${props => props.theme.black};
     font-size: 1.5rem;
 
+    &-date{
+    font-size: 1.5rem;
+        align-self: flex-end;
+        color: red;
+    }
+
     &-box{
         display: flex;
         align-items: flex-start;
@@ -256,10 +262,7 @@ class AuthorsAreaDash extends Component {
                                                     EDIT PAPER
                                                 </Button>
                                                 </Link>
-                                                <Link
-                                                 href="/t/[id]" 
-                                                 as={`/f/${paper.papercode}?formType=abstract`} 
-                                               >
+                                               
                                                 <Button
                                                     bcolor="#134381"
                                                     background="#134381"
@@ -271,7 +274,6 @@ class AuthorsAreaDash extends Component {
                                                     <CancelIcon style={{ fontSize: '3rem', marginRight: '1rem' }} />
                                                     WITHDRAW
                                                 </Button>
-                                                </Link>
                                             </StyledActionArea>
                                             <StyledInfoArea>
                                                 <div className="paper-summary">
@@ -294,7 +296,7 @@ class AuthorsAreaDash extends Component {
                                                         as={`/t/${paper.papercode}/${formType}/${taskType}`} >
                                                             <Typography gutterBottom className="paper_task">{task.task}</Typography>
                                                         </Link>
-                                                            <Typography gutterBottom className="paper_task">{task.due.slice(0, 10)}</Typography>
+                                                            <Typography gutterBottom className="paper_task-date">{task.due.slice(0, 10)}</Typography>
                                                     </div>
                                                     )
                                                 })}

@@ -15,8 +15,8 @@ import {FixedDates} from '../../../../components/Dates';
 // import { Esop } from './Esop';
 // import { GetFormSSR } from '../../components/forms/FormActions';
 const Form = props => {
-    const { presets, __csrf_token, taskType, formType } = props.data;
-    const {apiUrl, id} = props;// ? GETTIN FROM GET INITIAL PROPS
+    const { presets, __csrf_token } = props.data;
+    const {apiUrl, id, taskType, formType} = props;// ? GETTIN FROM GET INITIAL PROPS
     const FT = formType || '';
     const TT = taskType || '';
     console.log({apiUrl, id, FT, TT})
