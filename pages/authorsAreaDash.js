@@ -295,7 +295,7 @@ class AuthorsAreaDash extends Component {
                                                         as={`/t/${paper.papercode}/${formType}/${taskType}`} >
                                                             <Typography gutterBottom className="paper_task">{task.task}</Typography>
                                                         </Link>
-                                                            <Typography gutterBottom className="paper_task">{task.due.toLocaleDateString(undefined, options)}</Typography>
+                                                            <Typography gutterBottom className="paper_task">{task.due}</Typography>
                                                     </div>
                                                     )
                                                 })}
