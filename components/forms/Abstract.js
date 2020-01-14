@@ -366,9 +366,8 @@ export const AbstractForm = (props) => {
                                     values.secondary_authors.length > 0 ?
                                     (
                                         values.secondary_authors.map((author, index) => {
-                                            const {is_presenting_author} = author; //? ONLY FUNCKING WORKS!!!
+                                            const {is_presenting_author} = author; 
                                             const second = `values.secondary_authors[${index}].is_presenting_author`;
-                                            console.log({is_presenting_author, author, second})
                                            return (
                                             <div key={index} className="form-secondary">
                                                 <div className="form-field">
@@ -575,7 +574,7 @@ export const AbstractForm = (props) => {
                                                 HBColor="transparent"
                                                 transform="scale(1.4)"
                                                 type="add" onClick={() => {
-                                                    values.secondary_authors.push({
+                                                    push({
                                                         title: '',
                                                         firstname: '',
                                                         lastname: '',

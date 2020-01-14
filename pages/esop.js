@@ -29,7 +29,7 @@ const StyledPage = styled.div`
         font-family: ${props => props.theme.MPLight};
         font-size: 2rem;
 
-          &-icon{
+          &_icon{
         position: absolute;
         left: -29px;
         top: 9px;
