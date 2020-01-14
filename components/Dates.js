@@ -1,6 +1,8 @@
 import React from 'react'
 import styled from 'styled-components';
 import { Typography } from '@material-ui/core';
+import withReveal from 'react-reveal/withReveal';
+
 
 const StyledDates = styled.div`
     max-width: ${props => props.MW || '33rem'};
@@ -109,8 +111,11 @@ const StyledFixedDates = styled.div`
         }
 
     }
-
 `;
+
+// * IF I PUT IT IN I NEED TO HACVE IT TRIGGER AFTER THE HERO IMAGE
+export const BounceFixedDates = withReveal(FixedDates, <Bounce left/>);
+
 export function FixedDates() {
     return (
         

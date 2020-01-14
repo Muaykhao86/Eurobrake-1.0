@@ -243,7 +243,7 @@ class AuthorsAreaDash extends Component {
                                                   {/* href=""
                                                  as={`/f/${paper.papercode}?formType=abstract`}  */}
                                                 <Link
-                                                href={{ pathname: '/f/[id]', query: { id: `${paper.papercode}`, formType: 'abstract' } }}
+                                                href={{ pathname: `/f/${paper.papercode}`, query: { formType: 'abstract' } }}
                                                >
                                                 <Button
                                                     bcolor="#134381"
@@ -256,6 +256,10 @@ class AuthorsAreaDash extends Component {
                                                     EDIT PAPER
                                                 </Button>
                                                 </Link>
+                                                <Link
+                                                 href="/t/[id]" 
+                                                 as={`/f/${paper.papercode}?formType=abstract`} 
+                                               >
                                                 <Button
                                                     bcolor="#134381"
                                                     background="#134381"
@@ -263,11 +267,12 @@ class AuthorsAreaDash extends Component {
                                                     padding="0.5rem 2rem"
                                                     style={{ margin: ".5rem 0" }}
                                                     fontSize="1.7rem"
-                                                    onClick={() => GetForm(`https://prelude.eurobrake.net/authors/edit/${paper.papercode}?formType:'abstract`)}
                                                 >
+                                                    {/* onClick={() => GetForm(`https://prelude.eurobrake.net/authors/edit/${paper.papercode}?formType:'abstract`)} */}
                                                     <CancelIcon style={{ fontSize: '3rem', marginRight: '1rem' }} />
                                                     WITHDRAW
                                                 </Button>
+                                                </Link>
                                             </StyledActionArea>
                                             <StyledInfoArea>
                                                 <div className="paper-summary">
@@ -275,6 +280,8 @@ class AuthorsAreaDash extends Component {
                                                 <Typography gutterBottom className="paper-type">{paper.paper_type.toUpperCase()}</Typography>
                                                 </div>
                                                 {paper.tasks && paper.tasks.map(task => {
+                                                    const formType = 'tasks';
+                                                    const taskType = 'ppt';
                                                     return (
                                                         <div className="paper_task-box">
                                                         {task.done !== null ? 
@@ -283,10 +290,10 @@ class AuthorsAreaDash extends Component {
                                                           {/* href={{ pathname: '/t/[id]/[formType]/[taskType]/[taskUrl]', query: { formType: 'abstract' } }}  */}
                                                         <Link 
                                                         href="/t/[id]/[formType]/[taskType]" 
-                                                        as={`/t/${paper.papercode}/formType: 'tasks'/taskType: 'ppt'`} >
+                                                        as={`/t/${paper.papercode}/${formType}/${taskType}`} >
                                                             <Typography gutterBottom className="paper_task">{task.task}</Typography>
                                                         </Link>
-                                                            <Typography gutterBottom className="paper_task">{task.done}</Typography>
+                                                            <Typography gutterBottom className="paper_task">{task.due.toISOString().substring(0, 10)}</Typography>
                                                     </div>
                                                     )
                                                 })}
