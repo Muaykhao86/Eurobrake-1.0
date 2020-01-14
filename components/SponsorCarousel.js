@@ -8,7 +8,7 @@ import Typography from '@material-ui/core/Typography';
 
 
 const SponsorContainer = styled.div`
-margin-top: 1rem;
+margin-top: 5rem;
 align-self: center;
 display: flex;
 flex-flow: column;

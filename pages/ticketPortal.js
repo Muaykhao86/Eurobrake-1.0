@@ -30,13 +30,13 @@ const StyledPage = styled.div`
 const Content = styled.div`
     align-self: center;
     display: flex;
-    flex: 1 1 auto;
+    justify-content: center;
     margin-top: 5rem;
-    max-width: 70vw;
+    width: 70vw;
       @media only screen 
   and (max-device-width: 768px) 
   and (-webkit-min-device-pixel-ratio: 2) { 
-    max-width: 80vw;    
+    width: 80vw;    
 }
 
     min-height: 75rem;
