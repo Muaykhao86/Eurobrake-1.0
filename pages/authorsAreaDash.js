@@ -286,9 +286,7 @@ class AuthorsAreaDash extends Component {
                                                         as={`/t/${paper.papercode}/formType: 'tasks'/taskType: 'ppt'`} >
                                                             <Typography gutterBottom className="paper_task">{task.task}</Typography>
                                                         </Link>
-                                                            <Typography gutterBottom className="paper_task">{
-                                                              task.done.substring(0, 10)        
-                                                                }</Typography>
+                                                            <Typography gutterBottom className="paper_task">{task.done}</Typography>
                                                     </div>
                                                     )
                                                 })}
