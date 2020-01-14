@@ -19,7 +19,6 @@ const Form = props => {
     const {apiUrl, id, taskType, formType} = props;// ? GETTIN FROM GET INITIAL PROPS
     const FT = formType || '';
     const TT = taskType || '';
-    console.log({apiUrl, id, FT, TT})
     return (
         <>
         <HeroSection>

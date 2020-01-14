@@ -2,7 +2,7 @@ import React, { Component, useState } from 'react'
 import Link from 'next/link';
 import Typography from '@material-ui/core/Typography';
 import { Formik, Form, Field, } from 'formik';
-import { TextField, SimpleFileUpload, Checkbox} from 'formik-material-ui';
+import { TextField, SimpleFileUpload, CheckboxWithLabel} from 'formik-material-ui';
 import { StyledForm } from './Formstyles';
 import { Button } from '../Button';
 import { SendForm } from './FormActions';
@@ -56,9 +56,9 @@ render(){
                             <label
                                 htmlFor="label"
                                 className="form-label"
-                                style={{width: '80%'}}
+                                style={{minWidth: '80%'}}
                                 >
-                                I have read the <Link href="/authorsAreaInstructions"><a >Instructions for Preparing your Powerpoint Presentation</a></Link> and have followed the guidance.
+                                I have read the <Link href="/authorsAreaInstructions"><a >Instructions for Preparing your Powerpoint Presentation</a></Link> and have followed the guidance notes available there.
                         </label>
                             <Field
                                 className="form-input"
@@ -66,7 +66,22 @@ render(){
                                 style={{ color: '#134381' }}
                                 name="accept"
                                 component={Checkbox}
-                                style={{width: '20%'}}
+                                style={{minWidth: '20%'}}
+                            />
+                        </div>
+                         <div className="form-field">
+                            <label
+                                htmlFor="label"
+                                className="form-label"
+                                >
+                                I have read the <Link href="/authorsAreaInstructions"><a >Instructions for Preparing your Powerpoint Presentation</a></Link> and have followed the guidance notes available there.
+                        </label>
+                            <Field
+                                className="form-input"
+                                value={values.accept}
+                                style={{ color: '#134381' }}
+                                name="accept"
+                                component={CheckboxWithLabel}
                             />
                         </div>
                          <div className="form-field">

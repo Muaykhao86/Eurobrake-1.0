@@ -122,7 +122,8 @@ class AuthorsAreaInstructions extends Component {
                     <Typography gutterBottom className="authors"> Before preparing your Technical Paper it is vital that you consult/download the Instructions (pdf) and Microsoft Word template so that your paper is formatted correctly. </Typography>
                     <Typography gutterBottom ><a href="https://www.fisita.com/documents/Instructions_for_Writing_Your_Technical_Paper.pdf">Instructions for Writing your Technical Paper (PDF document)</a>  </Typography>
                     <Typography gutterBottom ><a href="https://www.fisita.com/documents/Paper_Template_EuroBrake_new.docx"> Technical Paper Template (Microsoft Word document template) </a> </Typography>
-                    <Typography gutterBottom ><span className="authors authors-bold" > Technical Paper Example (PDF document) - coming soon </span>  </Typography>
+                    
+                    {/* <Typography gutterBottom ><span className="authors authors-bold" > Technical Paper Example (PDF document) - coming soon </span>  </Typography> */}
                     <Typography gutterBottom className="authors"> Please ensure your Technical paper is converted to PDF (files in any other format - i.e. Word - cannot be uploaded).  </Typography>
                     <Typography gutterBottom className="authors"> Final Versions of all approved technical papers, must be ready for publication in the EuroBrake 2020 Conference Proceedings by <span className="authors-bold">Wednesday 29 April 2020</span>, please ensure you submit your paper final version by then as it will be this version used in the EuroBrake 2020 Proceedings.  </Typography>
                     <Typography gutterBottom className="authors"> Please remember that your paper must be original material that has not been previously published and is not under review by another conference or journal. If your paper does not comply with this rule it will be rejected.</Typography>
@@ -134,7 +135,7 @@ class AuthorsAreaInstructions extends Component {
                     
                     <Typography className="authors-title" style={{fontSize: '3rem'}}>PowerPoint Presentation</Typography>
                     <Typography gutterBottom className="authors">All presentation data should be saved as PowerPoint files. All authors (i.e. those who have submitted a full written Technical Paper and those who are making an oral presentation only) should follow the guidelines below: </Typography>
-                    <Typography gutterBottom ><span className="authors-bold" style={{fontSize: '2rem', textDecoration:'line-through'}}>Instructions for Writing your PowerPoint Presentation (PDF document) </span> </Typography>
+                    <Typography gutterBottom ><a href="https://www.fisita.com/documents/PPT_Instructions.pdf">Instructions for Writing your PowerPoint Presentation (PDF document) </a> </Typography>
                     <Typography gutterBottom ><a href="https://www.fisita.com/documents/EuroBrake_2020_Presentation_Slides_Template.pptx">EuroBrake PowerPoint Template - 16:9 (PPT document)</a> </Typography>
                     <Typography className="authors-bold" style={{fontSize: '2rem' }}>Please restrict the use of company logos or trade names to the first and last slides only.</Typography>
                     
@@ -156,7 +157,7 @@ class AuthorsAreaInstructions extends Component {
                    
                     <Typography className="authors-title" style={{fontSize: '3rem'}}>Speaker's Biography</Typography>
                     <Typography gutterBottom className="authors">All authors who are taking part in one of the technical sessions must provide a short biography of the speaker who will deliver the presentation at the Conference. This biography will be used by the session chairman to introduce the speaker. Please refer to the following Guidelines document: </Typography>
-                    <Typography gutterBottom ><span className="authors-bold" style={{fontSize: '2rem', textDecoration:'line-through'}}>Guidelines for writing your biography (PDF document)</span></Typography>
+                    <Typography gutterBottom ><a href="https://www.fisita.com/documents/Guidelines_for_Writing_Your_Biography.pdf">Guidelines for writing your biography (PDF document)</a></Typography>
                    
                     <Typography className="authors-title" style={{fontSize: '3rem'}}>Audio Visual Facilities at the Conference</Typography>
                     <Typography gutterBottom className="authors">All presentation data should be saved as PowerPoint files. </Typography>
@@ -166,7 +167,7 @@ class AuthorsAreaInstructions extends Component {
                     <Typography className="authors-title" style={{fontSize: '3rem'}}>Poster Presentations</Typography>
                     <Typography gutterBottom className="authors">ALL accepted submissions must upload their draft poster as a pdf no later than <span className="authors-bold">Friday 1 May 2020. There will be NO extensions to this deadline.</span></Typography>
                     <Typography gutterBottom className="authors">Your draft poster will be checked and suggestions for modifications will be made by the Review Team within 2 weeks.</Typography>
-                    <Typography gutterBottom ><span className="authors-bold" style={{fontSize: '2rem', textDecoration:'line-through'}}>Instructions for Poster Presentations (PDF document) </span></Typography>
+                    <Typography gutterBottom ><a href="https://www.fisita.com/documents/Poster_Instructions.pdf">Instructions for Poster Presentations (PDF document) </a></Typography>
                     <Typography gutterBottom ><a href="https://www.fisita.com/documents/EuroBrake_2020_Pitch_Video_Template_Slide.pptx">Pitch Video PPT Slide Template</a></Typography>
                     <Typography gutterBottom className="authors">Please use the comments made by the Review Team to modify your poster and print this out and bring it with you to display on site. </Typography>
                     <Typography gutterBottom className="authors">Posters should be A0 size and in portrait orientation.</Typography>

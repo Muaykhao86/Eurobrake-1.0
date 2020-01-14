@@ -139,28 +139,6 @@ const StyledPage = styled.div`
 const StyledQuote = styled.div`
     margin-top: 5rem; 
     
-     /* position: relative; */
-/*
-    .Quote-text_box{
-
-        padding: 2.5rem;
-        position: absolute;
-        display: flex;
-        flex-flow: column;
-        justify-content: space-between;
-        height: 100%;
-        width: 90%;
-    }
-    .Quote-text{
-        flex: 1 1 auto;
-        color: white;
-        font-size: 2rem;
-        font-family: ${props => props.theme.MPLight};
-
-        &_bold{
-        font-family: ${props => props.theme.MPBold};
-    }
-    } */
 `;
 
 
