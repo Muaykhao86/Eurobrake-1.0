@@ -4,7 +4,6 @@ import {AbstractForm} from './Abstract';
 import {Authorprofile} from './Authorprofile';
 import {Exhibitorprofile} from './Exhibitorprofile';
 import {Esop} from './Esop';
-import {Tasks} from './Tasks';
 import { GetForm } from './FormActions';
 import Typography from '@material-ui/core/Typography';
 
