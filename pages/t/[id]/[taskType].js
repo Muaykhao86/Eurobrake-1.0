@@ -39,6 +39,7 @@ const Form = props => {
     )
 }
 export default Form
+
 Form.getInitialProps = async context => {
     const { id, taskType } = context.query;
     const { logintoken } = cookies(context) || {};
@@ -75,25 +76,3 @@ Form.getInitialProps = async context => {
         }
     }
 }
-    // const { form } = props;
-    // switch (form) {
-    //     case 'abstract-edit':
-    //     case 'abstract':
-    //         return <AbstractForm />;
-    //     case 'exhibitor-edit':
-    //         return <Exhibitorprofile editPaper="true" />;
-    //     case 'exhibitor':
-    //         return <Exhibitorprofile />;
-    //     case 'author-edit':
-    //         return <Authorprofile editPaper="true" />;
-    //     case 'author':
-    //         return <Authorprofile />;
-    //     case 'esop-edit':
-    //     // return <Esop editPaper="true" />;
-    //     case 'esop':
-    //     // return <Esop />;
-    //     case 'login':
-    //         return <LoginForm />;
-    //     default:
-    //         return null;
-    // }

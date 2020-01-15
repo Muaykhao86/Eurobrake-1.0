@@ -186,6 +186,7 @@ class AuthorsAreaDash extends Component {
     }
 
     prettyDate = (n) => {
+        console.log(n);
         switch(n) {
             case n == '01' || n == '21' || n == '31':
                 return n+'st'
@@ -214,7 +215,6 @@ class AuthorsAreaDash extends Component {
         console.log({ papers, data })
         return (
             <>
-
                 <HeroSection banner={FilledBanner}
                     max="55%">
                     Author's Area Dashboard
@@ -227,10 +227,6 @@ class AuthorsAreaDash extends Component {
                         <Typography className="authors-title">{`Hi ${firstname}`}</Typography>
                         <Typography gutterBottom className="authors_sub-title">Welcome to the Author's Area</Typography>
                         <div className="authors_action-box">
-                            {/* <Popup>
-                                <CreateIcon style={{ fontSize: '3rem', marginRight: '1rem' }} />
-                                UPLOAD FILE TEST
-                            </Popup> */}
                             <Link href="/authorsAreaInstructions">
                                 <Button
                                     bcolor="#134381"
@@ -271,9 +267,6 @@ class AuthorsAreaDash extends Component {
                     </Button>
                         </div>
                         <Typography gutterBottom className="authors-title" style={{ fontSize: '3rem', borderTop: '2px solid #134381', borderBottom: '2px solid #134381' }}>Your submission(s)</Typography>
-                        {/* <Link
-                                                href={{ pathname: `/f/${paper.papercode}`, query: { formType: 'abstract' } }}
-                                               > */}
                         {
                             papers ?
 
@@ -344,8 +337,8 @@ class AuthorsAreaDash extends Component {
                                                                                 as={`/t/${paper.papercode}/${task.type}`} >
                                                                                 <Typography gutterBottom className="paper_task" style={{width: '65%'}} >{task.task}</Typography>
                                                                             </Link></StyledCell>
-                                                                        <StyledCell align="left" className="paper_task-date" style={{width: '15%'}}>{task.done == null ? 'Due' : prettierDone + " " + monthDone + " " + yearDone }</StyledCell>
-                                                                        <StyledCell align="left" className="paper_task-date" style={{width: '15%'}}>{prettierDate + " " + niceMonth + " " + taskYear}</StyledCell>
+                                                                        <StyledCell align="left" className="paper_task-date" style={{width: '25%'}}>{task.done == null ? 'Due' : prettierDone + " " + monthDone + " " + yearDone }</StyledCell>
+                                                                        <StyledCell align="left" className="paper_task-date" style={{width: '25%'}}>{prettierDate + " " + niceMonth + " " + taskYear}</StyledCell>
                                                                     </TableRow>
                                                                 )}
                                                                 )}
