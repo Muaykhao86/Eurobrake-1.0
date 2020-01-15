@@ -13,16 +13,16 @@ import {Permissions} from '../components/forms/TaskType/Permissions';
 
 // * NEED TO SORT OUT A PAGE TO TEST FORMSA AND LINKS FORM ONE PAGE WOITH PIUT BEIN ONLINE AL THE TIME
 
-export default () => (
-    <>
-    <HeroSection>
-        Complete your task
-    </HeroSection>
-    <StyledPage>
-        <Poster/>
-    </StyledPage>
-    </>
-)
+// export default () => (
+//     <>
+//     <HeroSection>
+//         Complete your task
+//     </HeroSection>
+//     <StyledPage>
+//         <Poster/>
+//     </StyledPage>
+//     </>
+// )
 
    
 export default () => {
