@@ -83,7 +83,7 @@ const StyledActionArea = styled.div`
     display: flex;
     flex-flow: column;
     justify-content: flex-end;
-    align-items: flex-end;
+    align-items: flex-start;
 
     .action-paper{
         color: ${props => props.theme.black};
@@ -99,9 +99,7 @@ const StyledInfoArea = styled.div`
     justify-content: space-between;
     align-items: flex-start;
 
-    .MuiTableCell-root {
-    padding: 0;
-    }
+    
     
     .paper-summary{
         align-self: flex-start;
@@ -137,7 +135,7 @@ const StyledInfoArea = styled.div`
 const StyledCell = styled(TableCell)`
   &&.MuiTableCell-root {
     border-bottom: 0;
-    padding: .5rem;
+    padding: 0rem;
     }
 
 

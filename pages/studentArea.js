@@ -25,34 +25,34 @@ export default () => (
 )
 
    
-// export default () => {
+export default () => {
 
-//   const GetDef = async (type, paper) => {
-//       console.log({type, paper})
-//             const formData = await  GetForm(`https://prelude.eurobrake.net/authors/tasks/${type}/${paper}?definition=1`);
-//             const res = await formData;
-//            return  console.log({res});
-//     }
-//   const GetDefAbstract = async (paper) => {
-//       console.log({paper})
-//             const formData = await  GetForm(`https://prelude.eurobrake.net/authors/edit/${paper}?definition=1`);
-//             const res = await formData;
-//            return  console.log({res});
-//     }
-//   const GetDefAuthor = async () => {
-//             const formData = await  GetForm(`https://prelude.eurobrake.net/authors/author?definition=1`);
-//             const res = await formData;
-//            return  console.log({res});
-//     }
+  const GetDef = async (type, paper) => {
+      console.log({type, paper})
+            const formData = await  GetForm(`https://prelude.eurobrake.net/authors/tasks/${type}/${paper}?definition=1`);
+            const res = await formData;
+           return  console.log({res});
+    }
+  const GetDefAbstract = async (paper) => {
+      console.log({paper})
+            const formData = await  GetForm(`https://prelude.eurobrake.net/authors/edit/${paper}?definition=1`);
+            const res = await formData;
+           return  console.log({res});
+    }
+  const GetDefAuthor = async () => {
+            const formData = await  GetForm(`https://prelude.eurobrake.net/authors/author?definition=1`);
+            const res = await formData;
+           return  console.log({res});
+    }
 
-// return (
-// <>
-//     <HeroSection max="60%"  >
-//     Testing of the forms we are     
-//     </HeroSection>
-//     <StyledPage >
+return (
+<>
+    <HeroSection max="60%"  >
+    Testing of the forms     
+    </HeroSection>
+    <StyledPage >
 //         <Typography>Get some definitions</Typography>
-//         <button onClick={() => GetDef('paper','EB2020-MDS-001')}>Tech paper</button>
+        <button onClick={() => GetDef('paper','EB2020-MDS-001')}>Tech paper</button>
 //        {/* presets: {}
 // __csrf_token: "a1a18d88b90168cb0c3da91c40c6db779d5750f5,e20751081fe215e40f0ca53fdbd618ec1ea4989a,1578920366"
 // status: "success"
@@ -100,7 +100,7 @@ export default () => (
 // __proto__: Array(0)
 // expects: "formdata"
 // logintoken: "NjXwJEQG2nGrgZ894P7oh7" */}
-//         <button onClick={() => GetDef('ppt','EB2020-MDS-002')}>PPT</button>
+        <button onClick={() => GetDef('ppt','EB2020-MDS-002')}>PPT</button>
 //         {/*presets: {}
 // __csrf_token: "7b93eaa451b408e1cf83dbae998f29f1072de6f7,422d0986d94f6957c0b0ba6cb380ce638dd654aa,1578919293"
 // status: "success"
@@ -137,7 +137,7 @@ export default () => (
 // __proto__: Array(0)
 // expects: "formdata"
 // logintoken: "6rL0apksDdqXRS5KzKUHXN" */}
-//         <button onClick={() => GetDef('permissions','EB2020-MDS-002')}>permissions</button>
+        <button onClick={() => GetDef('permissions','EB2020-MDS-002')}>permissions</button>
 // {/* presets: {}
 // __csrf_token: "4857efa581698029ebe300bc0db7fadf1830c9e6,9abd2676c8ddcca5e1006b05bc5aac9f0ca72953,1578919565"
 // status: "success"
@@ -162,7 +162,7 @@ export default () => (
 // expects: "json"
 // logintoken: "6rL0apksDdqXRS5KzKUHXN"
 // __proto__: Object */}
-//         <button onClick={() => GetDef('poster-accept','EB2020-MDS-003')}>poster-accept</button>
+        <button onClick={() => GetDef('poster-accept','EB2020-MDS-003')}>poster-accept</button>
 // {/* presets: {}
 // __csrf_token: "f2857af069ab04253a9ae1f6599314c0d06f6bbc,3133ab2d1025f7de2177ae9a57f037e02b754187,1578920435"
 // status: "success"
@@ -182,11 +182,11 @@ export default () => (
 // __proto__: Array(0)
 // expects: "json"
 // logintoken: "NjXwJEQG2nGrgZ894P7oh7" */}
-//         <button onClick={() => GetDef('poster','EB2020-MDS-002')}>poster</button>
+        <button onClick={() => GetDef('poster','EB2020-MDS-002')}>poster</button>
 // {/* // ? NEED TO TESXT WIOTH A VALID PAPER */}
 //         <button onClick={() => GetDef('pitchvideo','EB2020-MDS-002')}>pitchvideo</button>
 // {/* // ? NEED TO TESXT WIOTH A VALID PAPER  */}
-//         <button onClick={() => GetDef('bio','EB2020-MDS-002')}>bio</button>
+        <button onClick={() => GetDef('bio','EB2020-MDS-002')}>bio</button>
 // {/* presets: {}
 // __csrf_token: "efbea024ec39ce5aa6b54418fdd348d8a129e247,85f49fed2d31dee1a6ac1ecd663c3001f541c5f0,1578920492"
 // status: "success"
@@ -203,9 +203,9 @@ export default () => (
 // expects: "json"
 // logintoken: "NjXwJEQG2nGrgZ894P7oh7"
 // __proto__: Object */}
-//         <button onClick={() => GetDefAbstract('EB2020-MDS-002')}>abstract</button>
-//         <button onClick={() => GetDefAuthor()}>author details</button>
+        <button onClick={() => GetDefAbstract('EB2020-MDS-002')}>abstract</button>
+        <button onClick={() => GetDefAuthor()}>author details</button>
 
-//     </StyledPage>
-// </>
-// )} 
+    </StyledPage>
+</>
+)}  
