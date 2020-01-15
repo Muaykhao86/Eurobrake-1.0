@@ -15,22 +15,13 @@ import InstructionsPopup from '../../InstructionsPopup';
 //                 await Sendtask({ values, url })
 //             }
 
-export class Tasks extends Component{
+export class Paper extends Component{
 constructor(props) {
     super(props);
     this.state = {
         taskType: ''
     }
-    // todo => depending on the task name I will render the task dynamicly 
-    // * will have 
-    //   paper
-    //   ppt
-    //   permissions
-    //   poster-accept
-    //   poster
-    //   bio
-    //   pitchvideo
-    // * EACH WILL BE A COMPONENT
+    
 }
 
 render(){
