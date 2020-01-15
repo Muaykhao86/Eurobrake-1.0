@@ -3,9 +3,9 @@ import Link from 'next/link';
 import Typography from '@material-ui/core/Typography';
 import { Formik,  Field, } from 'formik';
 import { TextField, SimpleFileUpload, CheckboxWithLabel, Checkbox, RadioGroup} from 'formik-material-ui';
-import { Button } from '../Button';
-import { SendForm } from './FormActions';
-import {StyledTask} from './Taskstyles';
+import { Button } from '../../Button';
+import { SendForm } from '../FormActions';
+import {StyledTask} from '../Taskstyles';
 
 
 

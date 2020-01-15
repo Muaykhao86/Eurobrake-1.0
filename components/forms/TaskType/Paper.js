@@ -6,7 +6,7 @@ import { TextField, SimpleFileUpload, CheckboxWithLabel, Checkbox} from 'formik-
 import { Button } from '../../Button';
 import { SendForm } from '../FormActions';
 import {StyledTask} from '../Taskstyles';
-import InstructionsPopup from '../../InstructionsPopup';
+import InstructionsPopup from '../../../InstructionsPopup';
 
 
 
