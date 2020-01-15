@@ -79,7 +79,8 @@ const StyledBox = styled.div`
 `;
 
 const StyledActionArea = styled.div`
-    flex: 1 1 20%;
+    flex: 1 1 30%;
+    margin-right: 1rem;
     display: flex;
     flex-flow: column;
     justify-content: space-between;
@@ -93,7 +94,7 @@ const StyledActionArea = styled.div`
 `;
 
 const StyledInfoArea = styled.div`
-    flex: 1 1 80%;
+    flex: 1 1 70%;
     display: flex;
     flex-flow: column;
     justify-content: space-between;
@@ -323,8 +324,8 @@ class AuthorsAreaDash extends Component {
                                                                             let yearDone = doneDate.getFullYear();
                                                                             let niceDate = this.pad(taskDate);
                                                                             let niceDone = this.pad(dateDone);
-                                                                            let prettierDate = this.prettyDate(niceDate);
-                                                                            let prettierDone = this.prettyDate(niceDone);
+                                                                            {/* let prettierDate = this.prettyDate(niceDate); */}
+                                                                            {/* let prettierDone = this.prettyDate(niceDone); */}
                                                                             let niceMonth = monthNames[taskMonth];
                                                                             let niceMonthDone = monthNames[monthDone];
 
@@ -336,10 +337,10 @@ class AuthorsAreaDash extends Component {
                                                                             <Link
                                                                                 href="/t/[id]/[taskType]"
                                                                                 as={`/t/${paper.papercode}/${task.type}`} >
-                                                                                <Typography gutterBottom className="paper_task" style={{width: '70%'}} >{task.task}</Typography>
+                                                                                <Typography gutterBottom className="paper_task" style={{width: '75%'}} >{task.task}</Typography>
                                                                             </Link></StyledCell>
-                                                                        <StyledCell align="left" className="paper_task-date" style={{width: '30%'}}>{task.done == null ? 'Due' : prettierDone + " " + niceMonthDone + " " + yearDone }</StyledCell>
-                                                                        <StyledCell align="left" className="paper_task-date" style={{width: '30%'}}>{prettierDate + " " + niceMonth + " " + taskYear}</StyledCell>
+                                                                        <StyledCell align="left" className="paper_task-date" style={{width: '26%'}}>{task.done == null ? 'Due' : niceDone + " " + niceMonthDone + " " + yearDone }</StyledCell>
+                                                                        <StyledCell align="left" className="paper_task-date" style={{width: '26%'}}>{niceDate + " " + niceMonth + " " + taskYear}</StyledCell>
                                                                     </TableRow>
                                                                 )}
                                                                 )}
