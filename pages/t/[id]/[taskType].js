@@ -9,7 +9,7 @@ import { Button } from '../../../components/Button';
 import { AbstractForm } from '../../../components/forms/Abstract';
 import { Authorprofile } from '../../../components/forms/Authorprofile';
 import { Exhibitorprofile } from '../../../components/forms/Exhibitorprofile';
-import { StyledPage } from '/../../../components/styles/PageStyles';
+import { StyledPage } from '../../../components/styles/PageStyles';
 import HeroSection from '../../../components/HeroSection';
 import {FixedDates} from '../../../components/Dates';
 
