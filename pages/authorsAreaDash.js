@@ -182,18 +182,18 @@ class AuthorsAreaDash extends Component {
     }
 
     pad = (n) => {
-      return  n < 10 ? '0'+ n : n  
+      return  n < '10' ? '0'+ n : n  
     }
 
     prettyDate = (n) => {
         switch(n) {
-            case n == 01 || n == 21 || n == 31:
+            case n == '01' || n == '21' || n == '31':
                 return n+'st'
                 break;
-            case n == 02 || n == 22 : 
+            case n == '02' || n == '22' : 
                 return n+'nd'
                 break;
-            case n == 03 || n == 23 :
+            case n == '03' || n == '23' :
                 return n+'rd'
                 break;
             default: 
