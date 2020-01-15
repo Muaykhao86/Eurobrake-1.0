@@ -79,7 +79,7 @@ const StyledBox = styled.div`
 `;
 
 const StyledActionArea = styled.div`
-    flex: 1 1 33.33%;
+    flex: 1 1 20%;
     display: flex;
     flex-flow: column;
     justify-content: space-between;
@@ -93,7 +93,7 @@ const StyledActionArea = styled.div`
 `;
 
 const StyledInfoArea = styled.div`
-    flex: 1 1 66.66%;
+    flex: 1 1 80%;
     display: flex;
     flex-flow: column;
     justify-content: space-between;
@@ -125,6 +125,7 @@ const StyledInfoArea = styled.div`
    
 
     &-date{
+
         font-size: 1.5rem;
         align-self: flex-end;
         color: red;
@@ -188,13 +189,13 @@ class AuthorsAreaDash extends Component {
     prettyDate = (n) => {
         console.log(n);
         switch(n) {
-            case n == '01' || n == '21' || n == '31':
+            case n === '01' || n == '21' || n == '31':
                 return n+'st'
                 break;
-            case n == '02' || n == '22' : 
+            case n === '02' || n == '22' : 
                 return n+'nd'
                 break;
-            case n == '03' || n == '23' :
+            case n === '03' || n == '23' :
                 return n+'rd'
                 break;
             default: 
@@ -321,11 +322,11 @@ class AuthorsAreaDash extends Component {
                                                                             let taskYear = dueDate.getFullYear();
                                                                             let yearDone = doneDate.getFullYear();
                                                                             let niceDate = this.pad(taskDate);
-                                                                            let niceDone = this.pad(doneDate);
+                                                                            let niceDone = this.pad(dateDone);
                                                                             let prettierDate = this.prettyDate(niceDate);
                                                                             let prettierDone = this.prettyDate(niceDone);
                                                                             let niceMonth = monthNames[taskMonth];
-                                                                            let MonthDone = monthNames[taskMonth];
+                                                                            let monthDone = monthNames[taskMonth];
 
                                                                 return (
                                                                     <TableRow key={task.task}>
@@ -335,10 +336,10 @@ class AuthorsAreaDash extends Component {
                                                                             <Link
                                                                                 href="/t/[id]/[taskType]"
                                                                                 as={`/t/${paper.papercode}/${task.type}`} >
-                                                                                <Typography gutterBottom className="paper_task" style={{width: '65%'}} >{task.task}</Typography>
+                                                                                <Typography gutterBottom className="paper_task" style={{width: '70%'}} >{task.task}</Typography>
                                                                             </Link></StyledCell>
-                                                                        <StyledCell align="left" className="paper_task-date" style={{width: '25%'}}>{task.done == null ? 'Due' : prettierDone + " " + monthDone + " " + yearDone }</StyledCell>
-                                                                        <StyledCell align="left" className="paper_task-date" style={{width: '25%'}}>{prettierDate + " " + niceMonth + " " + taskYear}</StyledCell>
+                                                                        <StyledCell align="left" className="paper_task-date" style={{width: '30%'}}>{task.done == null ? 'Due' : prettierDone + " " + monthDone + " " + yearDone }</StyledCell>
+                                                                        <StyledCell align="left" className="paper_task-date" style={{width: '30%'}}>{prettierDate + " " + niceMonth + " " + taskYear}</StyledCell>
                                                                     </TableRow>
                                                                 )}
                                                                 )}

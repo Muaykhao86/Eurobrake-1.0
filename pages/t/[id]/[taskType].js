@@ -15,8 +15,7 @@ import {FixedDates} from '../../../components/Dates';
 
 const Form = props => {
     const { presets, __csrf_token } = props.data;
-    const {apiUrl, id, taskType, formType} = props;// ? GETTIN FROM GET INITIAL PROPS
-    const FT = formType || '';
+    const {apiUrl, id, taskType} = props;// ? GETTIN FROM GET INITIAL PROPS
     const TT = taskType || '';
     return (
         <>
@@ -33,7 +32,7 @@ const Form = props => {
                         style={{ marginLeft: 'auto', color:"#FFF" }}
                     >Back to Dashboard</Button>
             </Link>
-            <OneTask form={FT} type={TT} presets={presets} csrf={__csrf_token} apiUrl={apiUrl} paperId={id}/>
+            <OneTask  type={TT} presets={presets} csrf={__csrf_token} apiUrl={apiUrl} paperId={id}/>
     </StyledPage>
         </>
     )
@@ -61,7 +60,7 @@ Form.getInitialProps = async context => {
             const data = await response.json()
             if (data.status === 'success') {
                 console.log('res.ok 2nd GIP', data)
-                return { data, apiUrl, id, formType, taskType }
+                return { data, apiUrl, id, taskType }
             }
             else {
                 console.log('not reading success')

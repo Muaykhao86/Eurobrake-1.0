@@ -18,9 +18,9 @@ class OneTask extends Component {
    }
 
     render() {
-        const {form,  type, presets, csrf, apiUrl, paperId,} = this.props;
+        const {type, presets, csrf, apiUrl, paperId,} = this.props;
 
-       console.log('1task', form, type, presets, csrf, apiUrl, paperId)
+       console.log('1task', type, presets, csrf, apiUrl, paperId)
           
             {switch(type) {
                 case'paper' : 
