@@ -189,11 +189,12 @@ export default () => (
             </div>
              <div className="button_box">
              <Button
+             href="https://www.eurobrake.net/exhibition/brochure.pdf"
             background="#134381"
             br="100rem"
             bcolor="#134381"
             style={{margin: '3.5rem 0'}}
-            >DOWNLOAD THE sPONSORSHIP BROUCHURE HERE</Button>
+            >DOWNLOAD THE SPONSORSHIP BROUCHURE HERE</Button>
             </div>
              </div>
         </StyledPage>

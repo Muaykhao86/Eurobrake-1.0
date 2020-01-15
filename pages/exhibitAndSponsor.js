@@ -160,6 +160,7 @@ export default () => (
                 <div className="button_box">
 
                     <Button
+                    href="https://www.eurobrake.net/exhibition/brochure.pdf"
                         background="#134381"
                         br="100rem"
                         bcolor="#134381"

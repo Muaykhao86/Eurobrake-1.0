@@ -82,7 +82,7 @@ const StyledActionArea = styled.div`
     flex: 1 1 33.33%;
     display: flex;
     flex-flow: column;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: flex-start;
 
     .action-paper{
@@ -260,6 +260,7 @@ class AuthorsAreaDash extends Component {
                                     <StyledBox key={paper.papercode}>
                                         <StyledActionArea>
                                             <Typography gutterBottom className="action-paper">{paper.papercode}</Typography>
+                                            <div className="">
                                             <Link
                                                 href="/f/[id]/[formType]"
                                                 as={`/f/${paper.papercode}/abstract`} >
@@ -286,6 +287,7 @@ class AuthorsAreaDash extends Component {
                                                 <CancelIcon style={{ fontSize: '3rem', marginRight: '1rem' }} />
                                                 WITHDRAW
                                                 </Button>
+                                            </div>
                                         </StyledActionArea>
                                         <StyledInfoArea>
                                             <div className="paper-summary">

@@ -121,7 +121,9 @@ export default () => (
                     </Typography>
                 <ExpandTable />
             </div>
+                        <Link  href="/ticketPortal">
             <Button br="100rem" bcolor="#134381" background="#134381" style={{maxWidth: "24rem", margin: "5rem 0"}}>book now</Button>
+                        </Link>
             <div className="">
 
                 <Typography gutterBottom className="Registration">Please note:</Typography>
@@ -139,7 +141,10 @@ export default () => (
                 <Typography className="Registration">For more information or help with registration, please call:</Typography>
                 <Typography className="Registration"><span className=" Registration-bold ">+44 (0) 1279883470</span> or email <span className="Registration-bold ">info@eurobrake.net</span></Typography>
             </div>
+                        <Link  href="/ticketPortal">
+
             <Button br="100rem" bcolor="#134381" background="#134381" style={{maxWidth: "24rem", margin: "5rem 0"}}>book now</Button>
+                        </Link>
         </StyledPage>
     </>
 )

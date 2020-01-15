@@ -30,7 +30,7 @@ const StyledPage = styled.div`
 const Content = styled.div`
     align-self: center;
     display: flex;
-    overflow: scroll;
+    overflow: auto;
     justify-content: center;
     margin-top: 5rem;
     width: 70vw;
@@ -38,6 +38,7 @@ const Content = styled.div`
   and (max-device-width: 768px) 
   and (-webkit-min-device-pixel-ratio: 2) { 
     width: 80vw;    
+    /* overflow: scroll; */
 }
 
     min-height: 75rem;
