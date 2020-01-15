@@ -60,19 +60,26 @@ var Button = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].a.withCon
 /*!*****************************!*\
   !*** ./components/Dates.js ***!
   \*****************************/
-/*! exports provided: Dates, FixedDates */
+/*! exports provided: Dates, BounceFixedDates, FixedDates */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Dates", function() { return Dates; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BounceFixedDates", function() { return BounceFixedDates; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FixedDates", function() { return FixedDates; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
 /* harmony import */ var _material_ui_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @material-ui/core */ "./node_modules/@material-ui/core/esm/index.js");
+/* harmony import */ var react_reveal_withReveal__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-reveal/withReveal */ "./node_modules/react-reveal/withReveal.js");
+/* harmony import */ var react_reveal_withReveal__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_reveal_withReveal__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var react_reveal_Bounce__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-reveal/Bounce */ "./node_modules/react-reveal/Bounce.js");
+/* harmony import */ var react_reveal_Bounce__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_reveal_Bounce__WEBPACK_IMPORTED_MODULE_4__);
 var _jsxFileName = "/mnt/c/Users/D.Hardiman/desktop/eurobrake/components/Dates.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
 
 
 
@@ -102,7 +109,7 @@ function Dates() {
   return __jsx(StyledDates, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 48
+      lineNumber: 52
     },
     __self: this
   }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_2__["Typography"], {
@@ -111,7 +118,7 @@ function Dates() {
     className: "Dates-title",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 49
+      lineNumber: 53
     },
     __self: this
   }, "Important Dates"), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_2__["Typography"], {
@@ -120,7 +127,7 @@ function Dates() {
     className: "Dates-date",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 50
+      lineNumber: 54
     },
     __self: this
   }, "26 January 2020"), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_2__["Typography"], {
@@ -129,7 +136,7 @@ function Dates() {
     className: "Dates-text",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 51
+      lineNumber: 55
     },
     __self: this
   }, "Deadline for submission of review ready papers"), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_2__["Typography"], {
@@ -138,7 +145,7 @@ function Dates() {
     className: "Dates-date",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 52
+      lineNumber: 56
     },
     __self: this
   }, "12 April 2020 "), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_2__["Typography"], {
@@ -147,7 +154,7 @@ function Dates() {
     className: "Dates-text",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 53
+      lineNumber: 57
     },
     __self: this
   }, "Final deadline for modifications to technical papers"), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_2__["Typography"], {
@@ -156,7 +163,7 @@ function Dates() {
     className: "Dates-date",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 54
+      lineNumber: 58
     },
     __self: this
   }, "1 May 2020"), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_2__["Typography"], {
@@ -165,7 +172,7 @@ function Dates() {
     className: "Dates-text",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 55
+      lineNumber: 59
     },
     __self: this
   }, "Deadline for draft oral-only presentations, posters and presentations associated with a technical paper"), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_2__["Typography"], {
@@ -174,7 +181,7 @@ function Dates() {
     className: "Dates-date",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 56
+      lineNumber: 60
     },
     __self: this
   }, "1 May 2020"), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_2__["Typography"], {
@@ -183,7 +190,7 @@ function Dates() {
     className: "Dates-text",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 57
+      lineNumber: 61
     },
     __self: this
   }, "Deadline for speakers to register"), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_2__["Typography"], {
@@ -192,7 +199,7 @@ function Dates() {
     className: "Dates-date",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 58
+      lineNumber: 62
     },
     __self: this
   }, "24 May 2020"), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_2__["Typography"], {
@@ -201,7 +208,7 @@ function Dates() {
     className: "Dates-text",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 59
+      lineNumber: 63
     },
     __self: this
   }, "Deadline to upload PPTs for on-site presentation"));
@@ -223,12 +230,21 @@ var StyledFixedDates = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"]
   return props.theme.MPLightIt;
 }, function (props) {
   return props.theme.white;
-});
+}); // * IF I PUT IT IN I NEED TO HACVE IT TRIGGER AFTER THE HERO IMAGE
+
+var BounceFixedDates = react_reveal_withReveal__WEBPACK_IMPORTED_MODULE_3___default()(FixedDates, __jsx(react_reveal_Bounce__WEBPACK_IMPORTED_MODULE_4___default.a, {
+  left: true,
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 119
+  },
+  __self: undefined
+}));
 function FixedDates() {
   return __jsx(StyledFixedDates, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 117
+      lineNumber: 124
     },
     __self: this
   }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_2__["Typography"], {
@@ -237,7 +253,7 @@ function FixedDates() {
     className: "Dates-title",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 118
+      lineNumber: 125
     },
     __self: this
   }, "Important Dates"), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_2__["Typography"], {
@@ -246,7 +262,7 @@ function FixedDates() {
     className: "Dates-date",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 119
+      lineNumber: 126
     },
     __self: this
   }, "26 January 2020"), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_2__["Typography"], {
@@ -255,7 +271,7 @@ function FixedDates() {
     className: "Dates-text",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 120
+      lineNumber: 127
     },
     __self: this
   }, "Deadline for submission of review ready papers"), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_2__["Typography"], {
@@ -264,7 +280,7 @@ function FixedDates() {
     className: "Dates-date",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 121
+      lineNumber: 128
     },
     __self: this
   }, "12 April 2020 "), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_2__["Typography"], {
@@ -273,7 +289,7 @@ function FixedDates() {
     className: "Dates-text",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 122
+      lineNumber: 129
     },
     __self: this
   }, "Final deadline for modifications to technical papers"), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_2__["Typography"], {
@@ -282,7 +298,7 @@ function FixedDates() {
     className: "Dates-date",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 123
+      lineNumber: 130
     },
     __self: this
   }, "1 May 2020"), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_2__["Typography"], {
@@ -291,7 +307,7 @@ function FixedDates() {
     className: "Dates-text",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 124
+      lineNumber: 131
     },
     __self: this
   }, "Deadline for draft oral-only presentations, posters and presentations associated with a technical paper"), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_2__["Typography"], {
@@ -300,7 +316,7 @@ function FixedDates() {
     className: "Dates-date",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 125
+      lineNumber: 132
     },
     __self: this
   }, "1 May 2020"), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_2__["Typography"], {
@@ -309,7 +325,7 @@ function FixedDates() {
     className: "Dates-text",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 126
+      lineNumber: 133
     },
     __self: this
   }, "Deadline for speakers to register"), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_2__["Typography"], {
@@ -318,7 +334,7 @@ function FixedDates() {
     className: "Dates-date",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 127
+      lineNumber: 134
     },
     __self: this
   }, "24 May 2020"), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_2__["Typography"], {
@@ -327,7 +343,7 @@ function FixedDates() {
     className: "Dates-text",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 128
+      lineNumber: 135
     },
     __self: this
   }, "Deadline to upload PPTs for on-site presentation"));
@@ -1272,7 +1288,6 @@ function (_Component) {
         },
         __self: this
       }), __jsx(next_link__WEBPACK_IMPORTED_MODULE_8___default.a, {
-        onClick: this.handleClick,
         href: "/ticketPortal",
         __source: {
           fileName: _jsxFileName,
@@ -1280,6 +1295,7 @@ function (_Component) {
         },
         __self: this
       }, __jsx(_Button__WEBPACK_IMPORTED_MODULE_11__["Button"], {
+        onClick: this.handleClick,
         style: {
           maxWidth: '35rem',
           maxHeight: '15rem'
@@ -1482,7 +1498,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 var SponsorContainer = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div.withConfig({
   displayName: "SponsorCarousel__SponsorContainer",
   componentId: "p6ud71-0"
-})(["margin-top:1rem;align-self:center;display:flex;flex-flow:column;align-items:center;width:", ";@media only screen  and (max-device-width:768px)  and (-webkit-min-device-pixel-ratio:2){width:", ";}.sponsor-top{&_title{color:", ";font-family:", ";font-size:2rem;}}"], function (props) {
+})(["margin-top:5rem;align-self:center;display:flex;flex-flow:column;align-items:center;width:", ";@media only screen  and (max-device-width:768px)  and (-webkit-min-device-pixel-ratio:2){width:", ";}.sponsor-top{&_title{color:", ";font-family:", ";font-size:2rem;}}"], function (props) {
   return props.theme.minWidth;
 }, function (props) {
   return props.theme.mobileWidth;
@@ -63386,6 +63402,18 @@ if (false) {} else {
 
 /***/ }),
 
+/***/ "./node_modules/react-reveal/Bounce.js":
+/*!*********************************************!*\
+  !*** ./node_modules/react-reveal/Bounce.js ***!
+  \*********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+function _interopRequireDefault(o){return o&&o.__esModule?o:{default:o}}function _objectWithoutProperties(o,n){var r={};for(var t in o)n.indexOf(t)>=0||Object.prototype.hasOwnProperty.call(o,t)&&(r[t]=o[t]);return r}function make(o,n){var r=n.left,t=n.right,e=n.up,a=n.down,p=n.top,i=n.bottom,s=n.mirror,l=n.opposite,u=(r?1:0)|(t?2:0)|(p||a?4:0)|(i||e?8:0)|(s?16:0)|(l?32:0)|(o?64:0);if(lookup.hasOwnProperty(u))return lookup[u];if(!s!=!(o&&l)){var d=[t,r,i,p,a,e];r=d[0],t=d[1],p=d[2],i=d[3],e=d[4],a=d[5]}var f=r||t,c=p||i||e||a,m=f||c,y=void 0,v=void 0,_=void 0,b=void 0,x=void 0,T=void 0,g=void 0,h=void 0,k=void 0,w=void 0,q=void 0,O=void 0,P=void 0,j=void 0;return o?(b=f?(t?"-":"")+"20px":0,x=c?(e||i?"":"-")+"10px":"0",T=(a||p?"":"-")+"20px",P=f?(r?"-":"")+"2000px":"0",j=c?(a||p?"-":"")+"2000px":"0"):(v=f?(r?"-":"")+"3000px":"0",_=c?(a||p?"-":"")+"3000px":"0",g=f?(t?"-":"")+"25px":"0",h=c?(e||i?"-":"")+"25px":"0",k=f?(r?"-":"")+"10px":"0",w=c?(a||p?"-":"")+"10px":"0",q=f?(t?"-":"")+"5px":"0",O=c?(e||i?"-":"")+"5px":"0"),y=m?o?"\n        20% {\n          transform: translate3d("+b+", "+x+", 0);\n          }\n        "+(c?"40%, 45% {\n            opacity: 1;\n            transform: translate3d(0, "+T+", 0);\n          }":"")+"\n          to {\n            opacity: 0;\n            transform: translate3d("+P+", "+j+", 0);\n        }\n      ":"from, 60%, 75%, 90%, to {\n        animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);\n      }\n      from {\n        opacity: 0;\n        transform: translate3d("+v+", "+_+", 0);\n      }\n      60% {\n        opacity: 1;\n        transform: translate3d("+g+", "+h+", 0);\n      }\n      75% {\n        transform: translate3d("+k+", "+w+", 0);\n      }\n      90% {\n        transform: translate3d("+q+", "+O+", 0);\n      }\n      to {\n        transform: none;\n      }":o?"20% {\n          transform: scale3d(.9, .9, .9);\n        }\n        50%, 55% {\n          opacity: 1;\n          transform: scale3d(1.1, 1.1, 1.1);\n        }\n        to {\n          opacity: 0;\n          transform: scale3d(.3, .3, .3);\n      }":"from, 20%, 40%, 60%, 80%, to {\n        animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);\n      }\n      0% {\n        opacity: 0;\n        transform: scale3d(.3, .3, .3);\n      }\n      20% {\n        transform: scale3d(1.1, 1.1, 1.1);\n      }\n      40% {\n        transform: scale3d(.9, .9, .9);\n      }\n      60% {\n        opacity: 1;\n        transform: scale3d(1.03, 1.03, 1.03);\n      }\n      80% {\n        transform: scale3d(.97, .97, .97);\n      }\n      to {\n        opacity: 1;\n        transform: scale3d(1, 1, 1);\n      }",lookup[u]=(0,_globals.animation)(y),lookup[u]}function Bounce(){var o=arguments.length>0&&void 0!==arguments[0]?arguments[0]:_globals.defaults,n=o.children,r=(o.out,o.forever),t=o.timeout,e=o.duration,a=void 0===e?_globals.defaults.duration:e,p=o.delay,i=void 0===p?_globals.defaults.delay:p,s=o.count,l=void 0===s?_globals.defaults.count:s,u=_objectWithoutProperties(o,["children","out","forever","timeout","duration","delay","count"]),d={make:make,duration:void 0===t?a:t,delay:i,forever:r,count:l,style:{animationFillMode:"both"},reverse:u.left};return(0,_wrap2.default)(u,d,d,n)}Object.defineProperty(exports,"__esModule",{value:!0});var _propTypes=__webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js"),_wrap=__webpack_require__(/*! ./wrap */ "./node_modules/react-reveal/wrap.js"),_wrap2=_interopRequireDefault(_wrap),_globals=__webpack_require__(/*! ./globals */ "./node_modules/react-reveal/globals.js"),propTypes={out:_propTypes.bool,left:_propTypes.bool,right:_propTypes.bool,top:_propTypes.bool,bottom:_propTypes.bool,mirror:_propTypes.bool,opposite:_propTypes.bool,duration:_propTypes.number,timeout:_propTypes.number,delay:_propTypes.number,count:_propTypes.number,forever:_propTypes.bool},lookup={};Bounce.propTypes=propTypes,exports.default=Bounce,module.exports=exports.default;
+
+/***/ }),
+
 /***/ "./node_modules/react-reveal/RevealBase.js":
 /*!*************************************************!*\
   !*** ./node_modules/react-reveal/RevealBase.js ***!
@@ -63443,6 +63471,18 @@ function _interopRequireDefault(e){return e&&e.__esModule?e:{default:e}}function
 
 "use strict";
 function swipedetect(e,t){var a,s,n,o,d,i,u,c=e,p=t||function(e){};c.addEventListener("touchstart",function(e){var t=e.changedTouches[0];a="none",s=t.pageX,n=t.pageY,u=(new Date).getTime()},{passive:!0}),c.addEventListener("touchend",function(e){var t=e.changedTouches[0];o=t.pageX-s,d=t.pageY-n,i=(new Date).getTime()-u,i<=300&&(Math.abs(o)>=150&&Math.abs(d)<=100?a=o<0?"left":"right":Math.abs(d)>=150&&Math.abs(o)<=100&&(a=d<0?"up":"down")),p(a)},{passive:!0})}Object.defineProperty(exports,"__esModule",{value:!0}),exports.default=swipedetect,module.exports=exports.default;
+
+/***/ }),
+
+/***/ "./node_modules/react-reveal/withReveal.js":
+/*!*************************************************!*\
+  !*** ./node_modules/react-reveal/withReveal.js ***!
+  \*************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+function _interopRequireDefault(e){return e&&e.__esModule?e:{default:e}}function _objectWithoutProperties(e,t){var r={};for(var n in e)t.indexOf(n)>=0||Object.prototype.hasOwnProperty.call(e,n)&&(r[n]=e[n]);return r}function withReveal(e,t){var r=void 0;return"function"==typeof e&&"string"==typeof e.styledComponentId&&(r="innerRef"),function(n){var o=n.force,i=n.mountOnEnter,a=n.unmountOnExit,p=n.opposite,u=n.mirror,l=n.wait,c=n.onReveal,s=n.in,f=n.when,d=n.spy,x=n.collapse,v=n.onExited,_=n.enter,m=n.exit,O=n.appear,y=_objectWithoutProperties(n,["force","mountOnEnter","unmountOnExit","opposite","mirror","wait","onReveal","in","when","spy","collapse","onExited","enter","exit","appear"]);return _react2.default.createElement(t.type,_extends({force:o,mountOnEnter:i,unmountOnExit:a,opposite:p,mirror:u,wait:l,onReveal:c,in:s,when:f,spy:d,collapse:x,onExited:v,enter:_,exit:m,appear:O},t.props,{refProp:r}),_react2.default.createElement(e,y))}}Object.defineProperty(exports,"__esModule",{value:!0});var _extends=Object.assign||function(e){for(var t=1;t<arguments.length;t++){var r=arguments[t];for(var n in r)Object.prototype.hasOwnProperty.call(r,n)&&(e[n]=r[n])}return e},_react=__webpack_require__(/*! react */ "./node_modules/react/index.js"),_react2=_interopRequireDefault(_react);exports.default=withReveal,module.exports=exports.default;
 
 /***/ }),
 

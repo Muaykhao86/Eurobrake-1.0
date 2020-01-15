@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Form, } from 'Formik';
+import { Form } from 'formik';
 
 
 export const StyledTask = styled(Form)`
@@ -9,13 +9,21 @@ export const StyledTask = styled(Form)`
         align-items: center;
         min-width: 100%;
 
-        
+     
+     a{
+            cursor: pointer;
+            font-family: ${props => props.theme.MPBold};
+            color: ${props => props.theme.primary};
+        }
+     .MuiInput-underline:before {
+                    border-bottom: none;
+                }   
 
     .MuiInput-underline:after {
         color: ${props => props.theme.primary};
     }
 
-    .MuiTaskHelperText-root {
+    .MuiFormHelperText-root {
         font-size: 1.5rem;
     }
 
@@ -25,14 +33,44 @@ export const StyledTask = styled(Form)`
             color: ${props => props.theme.primary};
     }
    
-        .Task{
+        .task{
+             color: ${props => props.theme.primary};
+        font-family: ${props => props.theme.MPLight};
+        font-size: 2rem;
 
-        &-secondary{
+        
+         
+         &-radio{
+            /* text-align: end; */
+            align-self: flex-start;
+           
+        }
+
+        &-notes{
         display: flex;
         flex-flow: column;
         justify-content: space-between;
         align-items: center;
         min-width: 100%;
+
+        &-label{
+            min-width: 100%;
+            font-family: ${props => props.theme.MPLight};
+            font-size: 2.6rem;
+            color: ${props => props.theme.primary};
+        
+        
+        
+        }
+        &-input{
+            margin: 2rem 0;
+            min-width: 100%;
+            min-height: 15rem;
+            font-family: ${props => props.theme.MPBoldIt};
+            font-size: 2rem;
+            color: ${props => props.theme.primary};
+
+        }
         }
             
         &-field{
@@ -40,8 +78,18 @@ export const StyledTask = styled(Form)`
             width: 100%;
             display: flex;
             justify-content: space-between;
-            align-items: flex-end;
 
+            &-radio{
+                width: 100%;
+               display: flex;
+               flex-flow: column;
+            }
+
+            &-copy{
+                width: 100%;
+                display: flex;
+                flex-flow: column;
+            }  
             &_action{
                 align-self: flex-end;
                  display: flex;
@@ -49,7 +97,36 @@ export const StyledTask = styled(Form)`
                 align-items: flex-end;
             }
         }
+
+      
+
+        &-checkboxField{
+            min-width: 100%;
+            font-family: ${props => props.theme.MPLight};
+            font-size: 2.6rem;
+            color: ${props => props.theme.primary};
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 1rem;
+
+
+            .MuiIconButton-colorSecondary:hover {
+                background-color: transparent;
+            }
+           
+
+            .MuiSvgIcon-root {
+            font-size: 4rem;
+            }
+            &-label{
+            }
+            &-box{
+                align-self: flex-end;
+            }
+        }
         &-label{
+            align-self: flex-start;
             min-width: 33.3%;
             font-family: ${props => props.theme.MPLight};
             font-size: 2.6rem;
@@ -60,38 +137,32 @@ export const StyledTask = styled(Form)`
             font-family: ${props => props.theme.MPBoldIt};
             font-size: 2rem;
             color: ${props => props.theme.primary};
-
-            &&_file{
-                width: 100%;
-                 font-family: ${props => props.theme.MPBoldIt};
-                 font-size: 2rem;
-                color: ${props => props.theme.primary};
-
-                .MuiInput-underline:before {
-                    border-bottom: none;
-                }
-            }
         }
+
         &-link{
             cursor: pointer;
             font-family: ${props => props.theme.MPBoldIt};
             font-size: 1.7rem;
             color: ${props => props.theme.primary};
         }
-        &-link_bold{
+
+         &-link_bold{
             cursor: pointer;
             font-family: ${props => props.theme.MPBold};
             color: ${props => props.theme.primary};
         }
-        &-radio{
-            text-align: end;
+         &_bold{
+            font-family: ${props => props.theme.MPBold};
+            color: ${props => props.theme.primary};
         }
+      
+       
         &-title{
         color: ${props => props.theme.primary};
         font-family: ${props => props.theme.MPSemibold};
         font-size: 3rem;
         align-self: flex-start;
         margin: 2rem 0;
-    }
+        }
         }
     `;

@@ -3,7 +3,7 @@ import cookies from 'next-cookies';
 import Router from 'next/router';
 import fetch from 'isomorphic-unfetch';
 import Link from 'next/link';
-import OneForm from '../../../../components/forms/OneForm';
+import OneTask from '../../../../components/forms/OneTask';
 import { LoginForm } from '../../../../components/forms/LoginForm';
 import { Button } from '../../../../components/Button';
 import { AbstractForm } from '../../../../components/forms/Abstract';
@@ -34,7 +34,7 @@ const Form = props => {
                         style={{ marginLeft: 'auto', color:"#FFF" }}
                     >Back to Dashboard</Button>
             </Link>
-            <OneForm form={FT} type={TT} presets={presets} csrf={__csrf_token} apiUrl={apiUrl} paperId={id}/>
+            <OneTask form={FT} type={TT} presets={presets} csrf={__csrf_token} apiUrl={apiUrl} paperId={id}/>
     </StyledPage>
         </>
     )
