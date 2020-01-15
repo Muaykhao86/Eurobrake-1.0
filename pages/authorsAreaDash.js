@@ -82,8 +82,8 @@ const StyledActionArea = styled.div`
     flex: 1 1 33.33%;
     display: flex;
     flex-flow: column;
-    justify-content: flex-start;
-    align-items: flex-start;
+    justify-content: flex-end;
+    align-items: flex-end;
 
     .action-paper{
         color: ${props => props.theme.black};
@@ -99,6 +99,10 @@ const StyledInfoArea = styled.div`
     justify-content: space-between;
     align-items: flex-start;
 
+    .MuiTableCell-root {
+    padding: 0;
+    }
+    
     .paper-summary{
         align-self: flex-start;
         justify-items: flex-start;
@@ -300,7 +304,7 @@ class AuthorsAreaDash extends Component {
                                                                             <Link
                                                                                 href="/t/[id]/[formType]/[taskType]"
                                                                                 as={`/t/${paper.papercode}/tasks/${task.type}`} >
-                                                                                <Typography gutterBottom className="paper_task" style={{width: '60%'}} >{task.task}</Typography>
+                                                                                <Typography gutterBottom className="paper_task" style={{width: '65%'}} >{task.task}</Typography>
                                                                             </Link></StyledCell>
                                                                         <StyledCell align="left" className="paper_task-date" style={{width: '15%'}}>{task.done == null ? 'Due' : task.done}</StyledCell>
                                                                         <StyledCell align="left" className="paper_task-date" style={{width: '15%'}}>{task.due.slice(0, 10)}</StyledCell>
