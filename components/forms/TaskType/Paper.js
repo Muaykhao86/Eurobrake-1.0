@@ -5,7 +5,7 @@ import { Formik,  Field, } from 'formik';
 import { TextField, SimpleFileUpload, CheckboxWithLabel, Checkbox} from 'formik-material-ui';
 import { Button } from '../../Button';
 import { SendForm } from '../FormActions';
-import {StyledTask} from '../Taskstyles';
+import { StyledTask } from '../TaskStyles';
 import InstructionsPopup from '../../InstructionsPopup';
 
 
