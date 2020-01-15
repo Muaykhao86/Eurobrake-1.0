@@ -34,7 +34,7 @@ constructor(props) {
 render(){
     const emptyInitial = {
         accept: '',
-        pitchvideo_filename: '',        
+        poster_filename: '',        
         author_notes: '',
         ok_to_publish_poster: ''
     }
@@ -87,7 +87,7 @@ render(){
                                 className="task-input"
                                 value={values.poster_filename}
                                 style={{ color: '#134381' }}
-                                name="pitchvideo_filename"
+                                name="poster_filename"
                                 component={SimpleFileUpload}
                                 fullWidth
                             />
@@ -122,7 +122,7 @@ render(){
                                 className="task-radio"
                                 value={values.ok_to_publish_poster}
                                 style={{ color: '#134381' }}
-                                name="ok_to_publish_pitchvideo"
+                                name="ok_to_publish_poster"
                                 component={RadioGroup}
                             >
                                 <label
