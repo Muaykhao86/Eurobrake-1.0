@@ -5,7 +5,7 @@ import { Formik,  Field, } from 'formik';
 import { TextField, SimpleFileUpload, CheckboxWithLabel, Checkbox, RadioGroup} from 'formik-material-ui';
 import { Button } from '../../Button';
 import { SendForm } from '../FormActions';
-import {StyledTask} from '../Taskstyles';
+import { StyledTask } from '../Taskstyles';
 
 
 
@@ -19,16 +19,7 @@ constructor(props) {
     this.state = {
         taskType: ''
     }
-    // todo => depending on the task name I will render the task dynamicly 
-    // * will have 
-    //   paper
-    //   ppt
-    //   permissions
-    //   poster-accept
-    //   poster
-    //   bio
-    //   pitchvideo
-    // * EACH WILL BE A COMPONENT
+ 
 }
 
 render(){
