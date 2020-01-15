@@ -20,7 +20,7 @@ class OneTask extends Component {
     render() {
         const {form,  type, presets, csrf, apiUrl, paperId,} = this.props;
 
-       console.log('1form', form, type, presets, csrf, apiUrl, paperId)
+       console.log('1task', form, type, presets, csrf, apiUrl, paperId)
           
             {switch(type) {
                 case'paper' : 
@@ -45,7 +45,7 @@ class OneTask extends Component {
 }
 
 // export default withAuthSync(Edit)
-export default OneForm
+export default OneTask
 
 
 // !
