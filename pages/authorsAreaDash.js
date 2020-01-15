@@ -326,7 +326,7 @@ class AuthorsAreaDash extends Component {
                                                                             let prettierDate = this.prettyDate(niceDate);
                                                                             let prettierDone = this.prettyDate(niceDone);
                                                                             let niceMonth = monthNames[taskMonth];
-                                                                            let monthDone = monthNames[taskMonth];
+                                                                            let niceMonthDone = monthNames[monthDone];
 
                                                                 return (
                                                                     <TableRow key={task.task}>
@@ -338,7 +338,7 @@ class AuthorsAreaDash extends Component {
                                                                                 as={`/t/${paper.papercode}/${task.type}`} >
                                                                                 <Typography gutterBottom className="paper_task" style={{width: '70%'}} >{task.task}</Typography>
                                                                             </Link></StyledCell>
-                                                                        <StyledCell align="left" className="paper_task-date" style={{width: '30%'}}>{task.done == null ? 'Due' : prettierDone + " " + monthDone + " " + yearDone }</StyledCell>
+                                                                        <StyledCell align="left" className="paper_task-date" style={{width: '30%'}}>{task.done == null ? 'Due' : prettierDone + " " + niceMonthDone + " " + yearDone }</StyledCell>
                                                                         <StyledCell align="left" className="paper_task-date" style={{width: '30%'}}>{prettierDate + " " + niceMonth + " " + taskYear}</StyledCell>
                                                                     </TableRow>
                                                                 )}
