@@ -12,8 +12,7 @@ import { Exhibitorprofile } from '../../../../components/forms/Exhibitorprofile'
 import { StyledPage } from '../../../../components/styles/PageStyles';
 import HeroSection from '../../../../components/HeroSection';
 import {FixedDates} from '../../../../components/Dates';
-// import { Esop } from './Esop';
-// import { GetFormSSR } from '../../components/forms/FormActions';
+
 const Form = props => {
     const { presets, __csrf_token } = props.data;
     const {apiUrl, id, taskType, formType} = props;// ? GETTIN FROM GET INITIAL PROPS
@@ -41,10 +40,10 @@ const Form = props => {
 }
 export default Form
 Form.getInitialProps = async context => {
-    const { id, formType, taskType } = context.query;
+    const { id, taskType } = context.query;
     const { logintoken } = cookies(context) || {};
     const apiUrl = `https://prelude.eurobrake.net/authors/tasks/${taskType}/${id}` ;
-    console.log('1st task folder GIP', { id, logintoken, apiUrl, formType, taskType })
+    console.log('1st task folder GIP', { id, logintoken, apiUrl, taskType })
     const redirectOnError = () =>
         process.browser
             ? Router.push('/authorsArea')

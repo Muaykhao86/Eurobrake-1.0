@@ -181,10 +181,31 @@ class AuthorsAreaDash extends Component {
         })) : null
     }
 
+    pad = (n) => {
+      return  n < 10 ? '0'+ n : n  
+    }
+
+    prettyDate = (n) => {
+        switch(n) {
+            case n == 01 || n == 21 || n == 31:
+                return n+'st'
+                break;
+            case n == 02 || n == 22 : 
+                return n+'nd'
+                break;
+            case n == 03 || n == 23 :
+                return n+'rd'
+                break;
+            default: 
+                return n+'th'
+
+        }
+    }
 
 
     render() {
         // const papers = '';
+        const monthNames = ["January", "Febuary", "March", "April", "June", "July", "August", "September", "October", "November", "December"]
         const { editForm, formType } = this.state;
         const { firstname } = this.props.authorData.author;
         const { papers } = this.props.authorData;
@@ -296,20 +317,38 @@ class AuthorsAreaDash extends Component {
                                             </div>
                                                         <Table className="" aria-label="simple table">
                                                             <TableBody style={{width: '100%'}}>
-                                                                {paper.tasks && paper.tasks.map(task => (
+                                                                {paper.tasks && paper.tasks.map(task => {
+
+                                                                           let dueDate = new Date(task.due);
+                                                                           let doneDate = new Date(task.done);
+                                                                            let taskDate = dueDate.getDate();
+                                                                            let dateDone = doneDate.getDate();
+                                                                            let taskMonth = dueDate.getMonth();
+                                                                            let monthDone = doneDate.getMonth();
+                                                                            let taskYear = dueDate.getFullYear();
+                                                                            let yearDone = doneDate.getFullYear();
+                                                                            let niceDate = this.pad(taskDate);
+                                                                            let niceDone = this.pad(doneDate);
+                                                                            let prettierDate = this.prettyDate(niceDate);
+                                                                            let prettierDone = this.prettyDate(niceDone);
+                                                                            let niceMonth = monthNames[taskMonth];
+                                                                            let MonthDone = monthNames[taskMonth];
+
+                                                                return (
                                                                     <TableRow key={task.task}>
                                                                         <StyledCell component="th" scope="row" className="" style={{width: '10%'}}>{task.done !== null ?
                                                                             <CheckCircleIcon style={{ fontSize: '2rem', color: 'green', marginRight: '1rem' }} /> : <CancelIcon style={{ fontSize: '2rem', color: 'red', marginRight: '1rem' }} />}</StyledCell>
                                                                         <StyledCell align="left" className="">
                                                                             <Link
-                                                                                href="/t/[id]/[formType]/[taskType]"
-                                                                                as={`/t/${paper.papercode}/tasks/${task.type}`} >
+                                                                                href="/t/[id]/[taskType]"
+                                                                                as={`/t/${paper.papercode}/${task.type}`} >
                                                                                 <Typography gutterBottom className="paper_task" style={{width: '65%'}} >{task.task}</Typography>
                                                                             </Link></StyledCell>
-                                                                        <StyledCell align="left" className="paper_task-date" style={{width: '15%'}}>{task.done == null ? 'Due' : task.done}</StyledCell>
-                                                                        <StyledCell align="left" className="paper_task-date" style={{width: '15%'}}>{task.due.slice(0, 10)}</StyledCell>
+                                                                        <StyledCell align="left" className="paper_task-date" style={{width: '15%'}}>{task.done == null ? 'Due' : prettierDone + " " + monthDone + " " + yearDone }</StyledCell>
+                                                                        <StyledCell align="left" className="paper_task-date" style={{width: '15%'}}>{prettierDate + " " + niceMonth + " " + taskYear}</StyledCell>
                                                                     </TableRow>
-                                                                ))}
+                                                                )}
+                                                                )}
                                                             </TableBody>
                                                         </Table>
                                         </StyledInfoArea>
