@@ -48,7 +48,6 @@ export const Paper = (props) => {
         <Formik
          initialValues={emptyInitial}
             validationSchema={PaperSchema}
-            validationSchema={LoginSchema}
 
             enableReinitialize
         >
