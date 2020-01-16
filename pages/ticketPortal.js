@@ -38,7 +38,7 @@ const Content = styled.div`
   and (max-device-width: 768px) 
   and (-webkit-min-device-pixel-ratio: 2) { 
     width: 80vw;    
-    /* overflow: scroll; */
+    overflow: scroll;
 }
 
     min-height: 75rem;

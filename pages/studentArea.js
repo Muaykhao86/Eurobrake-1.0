@@ -6,7 +6,7 @@ import ExpandMoreOutlinedIcon from '@material-ui/icons/ExpandMoreOutlined';
 import {StyledPage, StyledBanner, StyledContainer} from '../components/styles/PageStyles';
 import {FixedDates} from '../components/Dates';
 import { GetForm } from '../components/forms/FormActions';
-import {Poster} from '../components/forms/TaskType/Poster';
+import {Paper} from '../components/forms/TaskType/Paper';
 import {Permissions} from '../components/forms/TaskType/Permissions';
 
 
@@ -52,6 +52,7 @@ return (
     </HeroSection>
     <StyledPage >
 //         <Typography>Get some definitions</Typography>
+<Paper/>
         <button onClick={() => GetDef('paper','EB2020-MDS-001')}>Tech paper</button>
 //        {/* presets: {}
 // __csrf_token: "a1a18d88b90168cb0c3da91c40c6db779d5750f5,e20751081fe215e40f0ca53fdbd618ec1ea4989a,1578920366"

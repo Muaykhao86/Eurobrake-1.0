@@ -29,7 +29,7 @@ class OneTask extends Component {
                 return <PPT type={type} presets={presets} csrf={csrf} apiUrl={apiUrl} paperId={paperId}/>;
                 case'permissions' : 
                 return <Permissions type={type} presets={presets} csrf={csrf} apiUrl={apiUrl} paperId={paperId} />;
-                case'poster_accept' : 
+                case'posteraccept' : 
                 return <AcceptPoster type={type} presets={presets} csrf={csrf} apiUrl={apiUrl} paperId={paperId}/>;
                 case'poster' : 
                 return <Poster type={type} presets={presets} csrf={csrf} apiUrl={apiUrl} paperId={paperId}/>;

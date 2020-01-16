@@ -26,7 +26,8 @@ export const Paper = (props) => {
     }
 
     const {presets, csrf, apiUrl, paperId, type} = props;
-    console.log('tasks', presets, csrf, apiUrl, paperId, type);
+    const url = `https://prelude.eurobrake.net/authors/tasks/paper/${paperId}`;
+    console.log('tasks', presets, csrf, apiUrl, paperId, type, url);
     
     return (
         // ! NEED PRESETS FOR TASKS
@@ -40,16 +41,6 @@ export const Paper = (props) => {
             {({ values, handleChange}) => {
                 console.log(values, 'Tasks')
                 
-
-                 const handleCheckedBox = (event) => {
-                    const { target } = event;
-                    const value = target.value;
-                    const name = target.name;
-
-                    value === true ? 
-                    setFieldValue(name, 'yes') : null;
-                    return console.log({ values })
-                }
                 
                 const onSubmit = async () => {
                   values.__csrf_token = csrf;
@@ -73,9 +64,10 @@ export const Paper = (props) => {
                                 I have used the templates available in the <Link href="/authorsAreaInstructions"><a className="task-link_bold" >Instructions and Templates</a></Link> section of the Author’s Area and I have also followed the guidance notes available there.
                         </label>
                             <Field
-                                onChange={() => handleCheckedBox(event)}
+                                onPress={() =>  setFieldValue('accept', 'yes')}
                                 className="task-checkboxField-box"
                                 style={{ color: '#134381', }}
+                                value={values.accept}
                                 name="accept"
                                 component={CheckboxWithLabel}
                             >
@@ -130,6 +122,7 @@ export const Paper = (props) => {
                                 I agree to assign copyright in this paper to FISITA (UK) Ltd.
                         </label>
                             <Field
+                                onClick={() =>  setFieldValue('copyright', 'yes')}
                                 className="task-checkboxField-box"
                                 value={values.copyright}
                                 style={{ color: '#134381', }}
