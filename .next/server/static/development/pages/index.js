@@ -815,7 +815,7 @@ function Dates() {
       lineNumber: 58
     },
     __self: this
-  }, "1 May 2020"), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_2__["Typography"], {
+  }, "01 May 2020"), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_2__["Typography"], {
     gutterBottom: true,
     as: "p",
     className: "Dates-text",
@@ -833,7 +833,7 @@ function Dates() {
       lineNumber: 60
     },
     __self: this
-  }, "1 May 2020"), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_2__["Typography"], {
+  }, "01 May 2020"), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_2__["Typography"], {
     gutterBottom: true,
     as: "p",
     className: "Dates-text",
@@ -936,7 +936,7 @@ function FixedDates() {
       lineNumber: 130
     },
     __self: this
-  }, "1 May 2020"), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_2__["Typography"], {
+  }, "01 May 2020"), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_2__["Typography"], {
     gutterBottom: true,
     as: "p",
     className: "Dates-text",
@@ -954,7 +954,7 @@ function FixedDates() {
       lineNumber: 132
     },
     __self: this
-  }, "1 May 2020"), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_2__["Typography"], {
+  }, "01 May 2020"), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_2__["Typography"], {
     gutterBottom: true,
     as: "p",
     className: "Dates-text",

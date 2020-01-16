@@ -7,31 +7,25 @@ import { Button } from '../../Button';
 import { SendForm } from '../FormActions';
 import { StyledTask } from '../TaskStyles';
 import InstructionsPopup from '../../InstructionsPopup';
+import {PaperSchema} from '../TaskControl';
 
 
 
 
-// async (values, actions) => {
-//                 await Sendtask({ values, url })
-//             }
 
-export class Paper extends Component{
-constructor(props) {
-    super(props);
-    this.state = {
-        taskType: ''
-    }
-    
-}
 
-render(){
+
+export const Paper = () => {
+
+
     const emptyInitial = {
         accept: '',
         ppt_filename: '',
-        author_notes: ''
+        author_notes: '',
+        __csrf_token: ''
     }
 
-    const {presets, csrf, apiUrl, paperId, type} = this.props;
+    const {presets, csrf, apiUrl, paperId, type} = props;
     console.log('tasks', presets, csrf, apiUrl, paperId, type);
     
     return (
@@ -40,15 +34,36 @@ render(){
 
         <Formik
          initialValues={emptyInitial}
+            validationSchema={PaperSchema}
             enableReinitialize
         >
             {({ values, handleChange}) => {
                 console.log(values, 'Tasks')
+                
+
+                 const handleCheckedBox = (event) => {
+                    const { target } = event;
+                    const value = target.value;
+                    const name = target.name;
+
+                    value === true ? 
+                    setFieldValue(name, 'yes') : null;
+                    return console.log({ values })
+                }
+                
+                const onSubmit = async () => {
+                  values.__csrf_token = csrf;
+                  {/* await SendForm({values, csrf, url}) */}
+                    console.log('sending', values, url)
+                    
+                    }
+
                 return (
                     <StyledTask>
                         <Typography className="task-title">{paperId}</Typography>
                         <Typography className="task-title">Please upload your paper PDF using the form below.</Typography>
                          <div className="task-checkboxField">
+                            {/* REQUIRED */}
                             <label
                                 htmlFor="label"
                                 className="task-checkboxField-label"
@@ -58,8 +73,8 @@ render(){
                                 I have used the templates available in the <Link href="/authorsAreaInstructions"><a className="task-link_bold" >Instructions and Templates</a></Link> section of the Author’s Area and I have also followed the guidance notes available there.
                         </label>
                             <Field
+                                onChange={() => handleCheckedBox(event)}
                                 className="task-checkboxField-box"
-                                value={values.accept}
                                 style={{ color: '#134381', }}
                                 name="accept"
                                 component={CheckboxWithLabel}
@@ -68,6 +83,7 @@ render(){
                             </Field>
                         </div>
                          <div className="task-field">
+                            {/* REQUIRED AND FILE MUST BE A PDF */}
                             <label
                                 htmlFor="label"
                                 className="task-label">
@@ -77,7 +93,7 @@ render(){
                                 className="task-input"
                                 value={values.technicalpaper_filename}
                                 style={{ color: '#134381' }}
-                                name="ppt_filename"
+                                name="technicalpaper_filename"
                                 component={SimpleFileUpload}
                                 fullWidth
                             />
@@ -104,6 +120,7 @@ render(){
                          </div>
                           <div className="task-checkboxField">
 
+                            {/* REQUIRED */}
                             <label
                                 htmlFor="label"
                                 className="task-checkboxField-label"
@@ -116,7 +133,7 @@ render(){
                                 className="task-checkboxField-box"
                                 value={values.copyright}
                                 style={{ color: '#134381', }}
-                                name="accept"
+                                name="copyright"
                                 component={CheckboxWithLabel}
                             >
                             
@@ -124,7 +141,7 @@ render(){
                         </div>
                        
                         <Button 
-                            onClick={() => console.log(values)}
+                            onClick={onSubmit}
 
                             bcolor="#134381"
                             background="#134381"
@@ -141,7 +158,7 @@ render(){
         </Formik>
     )
 };
-}
+
 
 
 

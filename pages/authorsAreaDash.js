@@ -329,6 +329,7 @@ class AuthorsAreaDash extends Component {
                                                                             let niceMonth = monthNames[taskMonth];
                                                                             let niceMonthDone = monthNames[monthDone];
 
+                                                                            // todo PASS TITLE TO TASK OR ABSTRACT PAGE
                                                                 return (
                                                                     <TableRow key={task.task}>
                                                                         <StyledCell component="th" scope="row" className="" style={{width: '10%'}}>{task.done !== null ?

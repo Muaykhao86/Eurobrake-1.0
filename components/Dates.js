@@ -55,9 +55,9 @@ export function Dates() {
             <Typography gutterBottom as="p"  className="Dates-text">Deadline for submission of review ready papers</Typography>
             <Typography gutterBottom as="h1"  className="Dates-date">12 April 2020 </Typography>
             <Typography gutterBottom as="p" className="Dates-text" >Final deadline for modifications to technical papers</Typography>
-            <Typography gutterBottom as="h1"  className="Dates-date">1 May 2020</Typography>
+            <Typography gutterBottom as="h1"  className="Dates-date">01 May 2020</Typography>
             <Typography gutterBottom as="p" className="Dates-text" >Deadline for draft oral-only presentations, posters and presentations associated with a technical paper</Typography>
-            <Typography gutterBottom as="h1"  className="Dates-date">1 May 2020</Typography>
+            <Typography gutterBottom as="h1"  className="Dates-date">01 May 2020</Typography>
             <Typography gutterBottom as="p"  className="Dates-text">Deadline for speakers to register</Typography>
             <Typography gutterBottom as="h1"  className="Dates-date">24 May 2020</Typography>
             <Typography gutterBottom as="p" className="Dates-text" >Deadline to upload PPTs for on-site presentation</Typography>
@@ -127,9 +127,9 @@ export function FixedDates() {
             <Typography gutterBottom as="p"  className="Dates-text">Deadline for submission of review ready papers</Typography>
             <Typography gutterBottom as="h1"  className="Dates-date">12 April 2020 </Typography>
             <Typography gutterBottom as="p" className="Dates-text" >Final deadline for modifications to technical papers</Typography>
-            <Typography gutterBottom as="h1"  className="Dates-date">1 May 2020</Typography>
+            <Typography gutterBottom as="h1"  className="Dates-date">01 May 2020</Typography>
             <Typography gutterBottom as="p" className="Dates-text" >Deadline for draft oral-only presentations, posters and presentations associated with a technical paper</Typography>
-            <Typography gutterBottom as="h1"  className="Dates-date">1 May 2020</Typography>
+            <Typography gutterBottom as="h1"  className="Dates-date">01 May 2020</Typography>
             <Typography gutterBottom as="p"  className="Dates-text">Deadline for speakers to register</Typography>
             <Typography gutterBottom as="h1"  className="Dates-date">24 May 2020</Typography>
             <Typography gutterBottom as="p" className="Dates-text" >Deadline to upload PPTs for on-site presentation</Typography>
