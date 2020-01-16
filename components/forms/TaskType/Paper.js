@@ -48,9 +48,11 @@ export const Paper = (props) => {
         <Formik
          initialValues={emptyInitial}
             validationSchema={PaperSchema}
+            validationSchema={LoginSchema}
+
             enableReinitialize
         >
-            {({ values, handleChange, setFieldValue, isValidating}) => {
+            {({ values, handleChange, setFieldValue, isValidating, validateForm}) => {
                 console.log(values, isValidating, 'Tasks')
                 
                 const handleCheckBox = async () => {
@@ -64,6 +66,7 @@ export const Paper = (props) => {
                 }
                 const onSubmit = async () => {
                   values.__csrf_token = csrf
+                  await validateForm()
                   await handleCheckBox()
                   {/* await SendForm({values, csrf, url}) */}
                     console.log('sending', values, url)
