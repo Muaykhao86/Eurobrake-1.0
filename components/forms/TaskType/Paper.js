@@ -15,7 +15,7 @@ import {PaperSchema} from '../TaskControl';
 
 
 
-export const Paper = () => {
+export const Paper = (props) => {
 
 
     const emptyInitial = {
