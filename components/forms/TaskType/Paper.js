@@ -7,11 +7,24 @@ import { Button } from '../../Button';
 import { SendForm } from '../FormActions';
 import { StyledTask } from '../TaskStyles';
 import InstructionsPopup from '../../InstructionsPopup';
-import {PaperSchema} from '../TaskControl';
+// import {PaperSchema} from '../TaskControl';
 
 
 
+import * as Yup from 'yup';
 
+// export 
+const PaperSchema = Yup.object().shape({
+    accept: Yup.string()
+        .required('Required'),
+    technicalpaper_filename: Yup.mixed()
+        .required('Required'),
+    author_notes: Yup.string()
+    .max(750, 'too many words'),
+    copyright: Yup.string()
+        .required('Required'),
+});
+ 
 
 
 
@@ -22,7 +35,6 @@ export const Paper = (props) => {
         accept: '',
         ppt_filename: '',
         author_notes: '',
-        __csrf_token: ''
     }
 
     const {presets, csrf, apiUrl, paperId, type} = props;
@@ -38,7 +50,7 @@ export const Paper = (props) => {
             validationSchema={PaperSchema}
             enableReinitialize
         >
-            {({ values, handleChange}) => {
+            {({ values, handleChange, setFieldValue}) => {
                 console.log(values, 'Tasks')
                 
                 
@@ -64,7 +76,10 @@ export const Paper = (props) => {
                                 I have used the templates available in the <Link href="/authorsAreaInstructions"><a className="task-link_bold" >Instructions and Templates</a></Link> section of the Author’s Area and I have also followed the guidance notes available there.
                         </label>
                             <Field
-                                onPress={() =>  setFieldValue('accept', 'yes')}
+                                onClick={async (e) =>  {
+                                  await  console.log(e.target.value)
+                                  await  setFieldValue('accept', 'yes')
+                                    }}
                                 className="task-checkboxField-box"
                                 style={{ color: '#134381', }}
                                 value={values.accept}
