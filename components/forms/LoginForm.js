@@ -23,7 +23,12 @@ export const LoginForm = () => {
             validationSchema={LoginSchema}
             enableReinitialize
         >
-            {({ values, handleChange,handleSubmit }) => {
+            {({ values, handleChange, validateForm }) => {
+
+                const onSubmit = () => {
+                    SendForm({url, values})
+                }
+
                 return (
                     <StyledForm>
                         {Toggle && <Typography className="form-title">Please enter your email to reset your password</Typography>}
@@ -63,10 +68,7 @@ export const LoginForm = () => {
                         </div>
                         }
                         <Button 
-                            onClick={() => {
-                                handleSubmit()
-                                {/* SendForm({url, values}) */}
-                                }}
+                            onClick={() => validateForm().then(errors => Object.keys(errors).length === 0 && onSubmit())}
                             bcolor="#134381"
                             background="#134381"
                             br="100rem"
