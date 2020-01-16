@@ -32,7 +32,7 @@ export const Paper = (props) => {
 
             enableReinitialize
         >
-            {({ values, handleChange, setFieldValue, isValidating, validateForm}) => {
+            {({ values, handleChange, setFieldValue, isValidating, validateForm, handleSubmit}) => {
                 console.log(values, isValidating, 'Tasks')
                 
                 const handleCheckBox = async () => {
@@ -44,12 +44,14 @@ export const Paper = (props) => {
                     copyright === false && setFieldValue('copyright', '')
                    return
                 }
+
                 const onSubmit = async () => {
                   values.__csrf_token = csrf
-                  await validateForm(values)
+                    await handleSubmit()
+                  await validateForm()
                   await handleCheckBox()
                   {/* await SendForm({values, csrf, url}) */}
-                    console.log('sending', values, url)
+                   await console.log('sending', values, url)
                     
                     }
 
