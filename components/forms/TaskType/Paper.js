@@ -7,26 +7,7 @@ import { Button } from '../../Button';
 import { SendForm } from '../FormActions';
 import { StyledTask } from '../TaskStyles';
 import InstructionsPopup from '../../InstructionsPopup';
-// import {PaperSchema} from '../TaskControl';
-
-
-
-import * as Yup from 'yup';
-
-// export 
-const PaperSchema = Yup.object().shape({
-    accept: Yup.string()
-        .required('Required'),
-    technicalpaper_filename: Yup.mixed()
-        .required('Required'),
-    author_notes: Yup.string()
-    .max(750, 'too many words'),
-    copyright: Yup.string()
-        .required('Required'),
-});
- 
-
-
+import {PaperSchema} from '../TaskControl';
 
 export const Paper = (props) => {
 
@@ -65,7 +46,7 @@ export const Paper = (props) => {
                 }
                 const onSubmit = async () => {
                   values.__csrf_token = csrf
-                  await validateForm()
+                  await validateForm(values)
                   await handleCheckBox()
                   {/* await SendForm({values, csrf, url}) */}
                     console.log('sending', values, url)

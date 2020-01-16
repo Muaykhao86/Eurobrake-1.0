@@ -5,7 +5,7 @@ export const PaperSchema = Yup.object().shape({
     technicalpaper_filename: Yup.mixed()
         .required('Required'),
     author_notes: Yup.string()
-    .max(750, 'too many words'),
+    .max(100, 'too many words'),
     copyright: Yup.bool().oneOf([true], 'Required').required('Required'),
 });
  
