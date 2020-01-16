@@ -50,12 +50,21 @@ export const Paper = (props) => {
             validationSchema={PaperSchema}
             enableReinitialize
         >
-            {({ values, handleChange, setFieldValue}) => {
-                console.log(values, 'Tasks')
+            {({ values, handleChange, setFieldValue, isValidating}) => {
+                console.log(values, isValidating, 'Tasks')
                 
-                
+                const handleCheckBox = async () => {
+                    const accept = values.accept;
+                    const copyright = values.copyright;
+                    accept === true && setFieldValue('accept', 'yes')
+                    accept === false && setFieldValue('accept', '')
+                    copyright === true && setFieldValue('copyright', 'yes')
+                    copyright === false && setFieldValue('copyright', '')
+                   return
+                }
                 const onSubmit = async () => {
-                  values.__csrf_token = csrf;
+                  values.__csrf_token = csrf
+                  await handleCheckBox()
                   {/* await SendForm({values, csrf, url}) */}
                     console.log('sending', values, url)
                     
@@ -76,10 +85,7 @@ export const Paper = (props) => {
                                 I have used the templates available in the <Link href="/authorsAreaInstructions"><a className="task-link_bold" >Instructions and Templates</a></Link> section of the Author’s Area and I have also followed the guidance notes available there.
                         </label>
                             <Field
-                                onClick={async (e) =>  {
-                                  await  console.log(e.target.value)
-                                  await  setFieldValue('accept', 'yes')
-                                    }}
+                                onClick={handleChange}
                                 className="task-checkboxField-box"
                                 style={{ color: '#134381', }}
                                 value={values.accept}
@@ -137,7 +143,7 @@ export const Paper = (props) => {
                                 I agree to assign copyright in this paper to FISITA (UK) Ltd.
                         </label>
                             <Field
-                                onClick={() =>  setFieldValue('copyright', 'yes')}
+                                onClick={handleChange}
                                 className="task-checkboxField-box"
                                 value={values.copyright}
                                 style={{ color: '#134381', }}

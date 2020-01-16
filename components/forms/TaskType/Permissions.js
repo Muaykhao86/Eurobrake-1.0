@@ -21,16 +21,7 @@ constructor(props) {
     this.state = {
         taskType: ''
     }
-    // todo => depending on the task name I will render the task dynamicly 
-    // * will have 
-    //   paper
-    //   ppt
-    //   permissions
-    //   poster-accept
-    //   poster
-    //   bio
-    //   pitchvideo
-    // * EACH WILL BE A COMPONENT
+
 }
 
 render(){

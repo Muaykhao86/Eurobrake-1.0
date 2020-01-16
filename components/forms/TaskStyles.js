@@ -74,7 +74,7 @@ export const StyledTask = styled(Form)`
         }
             
         &-field{
-            margin: 1rem 0;
+            margin: 2rem 0;
             width: 100%;
             display: flex;
             justify-content: space-between;
@@ -108,7 +108,7 @@ export const StyledTask = styled(Form)`
             display: flex;
             align-items: center;
             justify-content: space-between;
-            margin-bottom: 1rem;
+            margin: 2rem 0;
 
 
             .MuiIconButton-colorSecondary:hover {

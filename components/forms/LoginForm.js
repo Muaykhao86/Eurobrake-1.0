@@ -5,6 +5,7 @@ import { StyledForm } from './Formstyles';
 import { Button } from '../Button';
 import { SendForm } from './FormActions';
 import { Typography } from '@material-ui/core';
+import {LoginSchema} from './FormControl';
 import Link from 'next/link';
 
 
@@ -19,10 +20,10 @@ export const LoginForm = () => {
     return (
         <Formik
             initialValues={emptyInitial}
+            validationSchema={LoginSchema}
             enableReinitialize
         >
             {({ values, handleChange }) => {
-                console.log(values)
                 return (
                     <StyledForm>
                         {Toggle && <Typography className="form-title">Please enter your email to reset your password</Typography>}

@@ -1,5 +1,13 @@
 import * as Yup from 'yup';
 
+export const LoginSchema = Yup.object().shape({
+    username: Yup.string()
+        .email()
+        .required('Required'),
+    password: Yup.string()
+        .required('Required'),
+});
+        
 export const AbstractSchema = Yup.object().shape({
     author_firstname: Yup.string()
         .min(2, 'Too Short!')
