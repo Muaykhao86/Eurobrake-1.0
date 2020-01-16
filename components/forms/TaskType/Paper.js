@@ -32,8 +32,7 @@ export const Paper = (props) => {
 
             enableReinitialize
         >
-            {({ values, handleChange, setFieldValue, isValidating, validateForm, handleSubmit}) => {
-                console.log(values, isValidating, 'Tasks')
+            {({ values, handleChange, setFieldValue, isValidating, validateForm, handleSubmit, errors }) => {
                 
                 const handleCheckBox = async () => {
                     const accept = values.accept;
@@ -45,15 +44,18 @@ export const Paper = (props) => {
                    return
                 }
 
-                const onSubmit = async () => {
+                const onSubmit = () => {
                   values.__csrf_token = csrf
-                    await handleSubmit()
-                  await validateForm()
-                  await handleCheckBox()
-                  {/* await SendForm({values, csrf, url}) */}
-                   await console.log('sending', values, url)
+                    console.log('submitting')
+                 {/* console.log(errors) */}
+                {/* errors && console.log('submit')  */}
+                }
+                {/* const validateFile = (value, errors) => {
                     
-                    }
+                  const fileType = value.type || '';
+                  fileType !== 'application/pdf' ? errors.technicalpaper_filename = 'File type must be PDF!' : null;
+                    console.log(fileType)
+                } */}
 
                 return (
                     <StyledTask>
@@ -64,21 +66,20 @@ export const Paper = (props) => {
                             <label
                                 htmlFor="label"
                                 className="task-checkboxField-label"
-                                style={{ color: '#134381' }}
+                                style={{ color: '#134381', width: '80%' }}
 
                                 >
                                 I have used the templates available in the <Link href="/authorsAreaInstructions"><a className="task-link_bold" >Instructions and Templates</a></Link> section of the Author’s Area and I have also followed the guidance notes available there.
                         </label>
                             <Field
-                                onClick={handleChange}
                                 className="task-checkboxField-box"
                                 style={{ color: '#134381', }}
                                 value={values.accept}
                                 name="accept"
-                                component={CheckboxWithLabel}
+                                component={Checkbox}
                             >
-                            
                             </Field>
+                           {errors.accept && <label style={{position: 'absolute', bottom: '-1rem', right: '1rem', color: 'red', fontSize: '1.5rem'}}>{errors.accept}</label>}
                         </div>
                          <div className="task-field">
                             {/* REQUIRED AND FILE MUST BE A PDF */}
@@ -95,6 +96,7 @@ export const Paper = (props) => {
                                 component={SimpleFileUpload}
                                 fullWidth
                             />
+                           {errors.technicalpaper_filename && <label style={{position: 'absolute', bottom: '-1rem', right: '1rem', color: 'red', fontSize: '1.5rem'}}>{errors.technicalpaper_filename}</label>}
                         </div>
                          <div className="task-notes">
                            <label
@@ -122,26 +124,24 @@ export const Paper = (props) => {
                             <label
                                 htmlFor="label"
                                 className="task-checkboxField-label"
-                                style={{ color: '#134381' }}
+                                style={{ color: '#134381'}}
 
                                 >
                                 I agree to assign copyright in this paper to FISITA (UK) Ltd.
                         </label>
                             <Field
-                                onClick={handleChange}
                                 className="task-checkboxField-box"
                                 value={values.copyright}
                                 style={{ color: '#134381', }}
                                 name="copyright"
-                                component={CheckboxWithLabel}
+                                component={Checkbox}
                             >
-                            
                             </Field>
+                           {errors.copyright && <label style={{position: 'absolute', bottom: '-1rem', right: '1rem', color: 'red' , fontSize: '1.5rem' }}>{errors.copyright}</label>}
                         </div>
                        
                         <Button 
-                            onClick={onSubmit}
-
+                            onClick={() => validateForm().then(errors => Object.keys(errors).length === 0 && onSubmit())}
                             bcolor="#134381"
                             background="#134381"
                             br="100rem"

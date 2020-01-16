@@ -74,6 +74,7 @@ export const StyledTask = styled(Form)`
         }
             
         &-field{
+            position: relative;
             margin: 2rem 0;
             width: 100%;
             display: flex;
@@ -101,6 +102,7 @@ export const StyledTask = styled(Form)`
       
 
         &-checkboxField{
+            position: relative;
             min-width: 100%;
             font-family: ${props => props.theme.MPLight};
             font-size: 2.6rem;
