@@ -30,6 +30,7 @@ const StyledPage = styled.div`
 const Content = styled.div`
     align-self: center;
     display: flex;
+     -webkit-overflow-scrolling: touch;
    overflow: scroll;
     justify-content: center;
     margin-top: 5rem;

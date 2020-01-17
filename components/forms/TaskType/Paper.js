@@ -79,7 +79,7 @@ export const Paper = (props) => {
                                 component={Checkbox}
                             >
                             </Field>
-                           {errors.accept && <label style={{position: 'absolute', bottom: '-1rem', right: '1rem', color: 'red', fontSize: '1.5rem'}}>{errors.accept}</label>}
+                           {errors.accept && <label style={{position: 'absolute', bottom: '-1rem', right: '1rem', color: '#ff0000', fontSize: '1.5rem'}}>{errors.accept}</label>}
                         </div>
                          <div className="task-field">
                             {/* REQUIRED AND FILE MUST BE A PDF */}
@@ -96,7 +96,7 @@ export const Paper = (props) => {
                                 component={SimpleFileUpload}
                                 fullWidth
                             />
-                           {errors.technicalpaper_filename && <label style={{position: 'absolute', bottom: '-1rem', right: '1rem', color: 'red', fontSize: '1.5rem'}}>{errors.technicalpaper_filename}</label>}
+                           {errors.technicalpaper_filename && <label style={{position: 'absolute', bottom: '-1rem', right: '1rem', color: '#ff0000', fontSize: '1.5rem'}}>{errors.technicalpaper_filename}</label>}
                         </div>
                          <div className="task-notes">
                            <label
@@ -137,7 +137,7 @@ export const Paper = (props) => {
                                 component={Checkbox}
                             >
                             </Field>
-                           {errors.copyright && <label style={{position: 'absolute', bottom: '-1rem', right: '1rem', color: 'red' , fontSize: '1.5rem' }}>{errors.copyright}</label>}
+                           {errors.copyright && <label style={{position: 'absolute', bottom: '-1rem', right: '1rem', color: '#ff0000' , fontSize: '1.5rem' }}>{errors.copyright}</label>}
                         </div>
                        
                         <Button 
