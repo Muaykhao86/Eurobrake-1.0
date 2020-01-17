@@ -30,7 +30,8 @@ const StyledPage = styled.div`
 const Content = styled.div`
     align-self: center;
     display: flex;
-    overflow: auto;
+    overflow-y: hidden;
+    overflow-x: scroll;
     justify-content: center;
     margin-top: 5rem;
     width: 70vw;
@@ -38,7 +39,6 @@ const Content = styled.div`
   and (max-device-width: 768px) 
   and (-webkit-min-device-pixel-ratio: 2) { 
     width: 80vw;    
-    overflow: scroll;
 }
 
     min-height: 75rem;
@@ -61,7 +61,7 @@ export default () => (
 
     <h1>Book your tickets now</h1>
     <Content>
-        <iframe src="https://www.eventsforce.net/fisita/14/register" frameborder="0" style={{width: 'inherit'}}/>
+        <iframe src="https://www.eventsforce.net/fisita/14/register" frameborder="0" style={{width: '70vw'}}/>
      
     </Content>
 </StyledPage>    
