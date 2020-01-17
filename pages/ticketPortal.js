@@ -35,11 +35,11 @@ const Content = styled.div`
     justify-content: center;
     margin-top: 5rem;
     width: 70vw;
-      @media only screen 
+      /* @media only screen 
   and (max-device-width: 768px) 
   and (-webkit-min-device-pixel-ratio: 2) { 
-    width: 80vw;    
-}
+    width: 80vw;     */
+/* } */
 
     min-height: 75rem;
     background-color: transparent;
