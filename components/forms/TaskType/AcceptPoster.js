@@ -6,6 +6,7 @@ import { TextField, SimpleFileUpload, CheckboxWithLabel, Checkbox, RadioGroup} f
 import { Button } from '../../Button';
 import { SendForm } from '../FormActions';
 import { StyledTask } from '../TaskStyles';
+import {AcceptPosterSchema } from '../TaskControl';
 
 
 
@@ -13,33 +14,36 @@ import { StyledTask } from '../TaskStyles';
 //                 await Sendtask({ values, url })
 //             }
 
-export class AcceptPoster extends Component{
-constructor(props) {
-    super(props);
-    this.state = {
-        taskType: ''
-    }
-
-}
-
-render(){
+export const AcceptPoster = (props) => {
     const emptyInitial = {
        accept_poster_invitation: ''
     }
 
-    const {presets, csrf, apiUrl, paperId, type} = this.props;
+    const {presets, csrf, apiUrl, paperId, type} = props;
     console.log('tasks', presets, csrf, apiUrl, paperId, type);
     
     return (
-        // ! NEED PRESETS FOR TASKS
-
-
         <Formik
          initialValues={emptyInitial}
+         validationSchema={AcceptPosterSchema }
             enableReinitialize
         >
-            {({ values, handleChange}) => {
+            {({ values, handleChange,  setFieldValue, isValidating, validateForm, handleSubmit, errors}) => {
                 console.log(values, 'Tasks')
+                   const handleCheckBox = async () => {
+                    const accept = values.accept;
+                    const copyright = values.copyright;
+                    accept === true && setFieldValue('accept', 'yes')
+                    accept === false && setFieldValue('accept', '')
+                    copyright === true && setFieldValue('copyright', 'yes')
+                    copyright === false && setFieldValue('copyright', '')
+                   return
+                }
+
+                const onSubmit = () => {
+                  values.__csrf_token = csrf
+                    console.log('submitting', values)
+              }
                 return (
                     <StyledTask>
                         <Typography className="task-title">{paperId}</Typography>
@@ -89,10 +93,11 @@ render(){
                                     />
                                 </label>
                             </Field>
+                            {errors.accept_poster_invitation  && <label style={{position: 'absolute', bottom: '-1rem', right: '1rem', color: '#ff0000', fontSize: '1.5rem'}}>{errors.accept_poster_invitation}</label>}
                         </div>
-                       
                         <Button 
-                            onClick={() => console.log(values)}
+                            onClick={() => validateForm().then(errors => Object.keys(errors).length === 0 && onSubmit())}
+
                             bcolor="#134381"
                             background="#134381"
                             br="100rem"
@@ -108,7 +113,6 @@ render(){
         </Formik>
     )
 };
-}
 
 
 

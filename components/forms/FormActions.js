@@ -5,7 +5,7 @@ import { login} from '../../utils/auth';
 
 
 export async function GetFormSSR({url, context}) {
-    // We use `nextCookie` to get the cookie and pass the token to the frontend in the `props`.
+    // use `nextCookie` to get the cookie and pass the token to the frontend in the `props`.
     const { logintoken } = cookies(context);
     console.log({logintoken})
     try {
@@ -66,15 +66,31 @@ export async function GetForm(url) {
     return
 }
 
-export async function SendFile({ csrf, file }) {
-    const formData = new FormData();
+// const getFormData = (object) => {
+//    console.log(object)
+//     const formData = new FormData();
+//     for ( var key in object ) {
+//     formData.append(key, object[key]);
+// }
+//     // Object.keys(object).forEach(key => formData.append(key, object[key]));
+//     return formData;
+// }
+    
+export async function SendFile({ values, url }) {
     const { logintoken } = cookie.get();
-    formData.append('__csrf_token', csrf);
-    formData.append('filename', file);
-    console.log({ logintoken, csrf, file })
+    const formData = new FormData();
+    values.accept && values.accept === true ? values.accept = 'yes' : null;
+    values.copyright && values.copyright === true ? values.copyright = 'yes' : null;
+    
+    Object.keys(values).forEach(key => {   
+      formData.append(key, values[key])});
+    
+  
+    // formData.append('filename', file);
+    console.log({ logintoken,  url})
     if (logintoken && csrf && file) {
         try {
-            const apiUrl = 'https://prelude.eurobrake.net/upload';
+            const apiUrl = url;
             const response = await fetch(apiUrl, {
                 method: 'POST',
                 body: formData,
@@ -97,7 +113,7 @@ export async function SendFile({ csrf, file }) {
             console.error(
                 'Failed to get form, please try again', error
             )
-            // this.setState({ error: error.message });
+            this.setState({ error: error.message });
         }
     }
 

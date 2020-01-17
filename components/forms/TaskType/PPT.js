@@ -6,6 +6,8 @@ import { TextField, SimpleFileUpload, CheckboxWithLabel, Checkbox} from 'formik-
 import { Button } from '../../Button';
 import { SendForm } from '../FormActions';
 import { StyledTask } from '../TaskStyles';
+import {PPTSchema} from '../TaskControl';
+
 
 
 
@@ -13,44 +15,43 @@ import { StyledTask } from '../TaskStyles';
 //                 await Sendtask({ values, url })
 //             }
 
-export class PPT extends Component{
-constructor(props) {
-    super(props);
-    this.state = {
-        taskType: ''
-    }
-    // todo => depending on the task name I will render the task dynamicly 
-    // * will have 
-    //   paper
-    //   ppt
-    //   permissions
-    //   poster-accept
-    //   poster
-    //   bio
-    //   pitchvideo
-    // * EACH WILL BE A COMPONENT
-}
+export const PPT = (props) => {
 
-render(){
+
     const emptyInitial = {
         accept: '',
         ppt_filename: '',
         author_notes: ''
     }
 
-    const {presets, csrf, apiUrl, paperId, type} = this.props;
+    const {presets, csrf, apiUrl, paperId, type} = props;
     console.log('tasks', presets, csrf, apiUrl, paperId, type);
+    const url = `https://prelude.eurobrake.net/authors/tasks/paper/${paperId}`;
+    
     
     return (
-        // ! NEED PRESETS FOR TASKS
-
-
         <Formik
          initialValues={emptyInitial}
+            validationSchema={PPTSchema}
+
             enableReinitialize
         >
-            {({ values, handleChange}) => {
-                console.log(values, 'Tasks')
+            {({ values, handleChange, setFieldValue, isValidating, validateForm, handleSubmit, errors }) => {
+                 const handleCheckBox = async () => {
+                    const accept = values.accept;
+                    const copyright = values.copyright;
+                    accept === true && setFieldValue('accept', 'yes')
+                    accept === false && setFieldValue('accept', '')
+                    copyright === true && setFieldValue('copyright', 'yes')
+                    copyright === false && setFieldValue('copyright', '')
+                   return
+                }
+
+                const onSubmit = () => {
+                  values.__csrf_token = csrf
+                    console.log('submitting', values)
+              }
+              console.log(errors)
                 return (
                     <StyledTask>
                         <Typography className="task-title">{paperId}</Typography>
@@ -71,8 +72,8 @@ render(){
                                 name="accept"
                                 component={CheckboxWithLabel}
                             >
-                            
                             </Field>
+                            {errors.accept && <label style={{position: 'absolute', bottom: '-1rem', right: '1rem', color: '#ff0000', fontSize: '1.5rem'}}>{errors.accept}</label>}
                         </div>
                          <div className="task-field">
                             <label
@@ -88,6 +89,7 @@ render(){
                                 component={SimpleFileUpload}
                                 fullWidth
                             />
+                            {errors.ppt_filename && <label style={{position: 'absolute', bottom: '-2rem', right: '1rem', color: '#ff0000', fontSize: '1.5rem'}}>{errors.ppt_filename}</label>}
                         </div>
                          <div className="task-notes">
                            <label
@@ -106,7 +108,7 @@ render(){
                          </div>
                        
                         <Button 
-                            onClick={() => console.log(values)}
+                            onClick={() => validateForm().then(errors => Object.keys(errors).length === 0 && onSubmit())}
                             bcolor="#134381"
                             background="#134381"
                             br="100rem"
@@ -122,7 +124,7 @@ render(){
         </Formik>
     )
 };
-}
+
 
 
 

@@ -7,6 +7,7 @@ import { Button } from '../../Button';
 import { SendForm } from '../FormActions';
 import { StyledTask } from '../TaskStyles';
 import InstructionsPopup from '../../InstructionsPopup';
+import {PermissionSchema} from '../TaskControl';
 
 
 
@@ -15,21 +16,12 @@ import InstructionsPopup from '../../InstructionsPopup';
 //                 await Sendtask({ values, url })
 //             }
 
-export class Permissions extends Component{
-constructor(props) {
-    super(props);
-    this.state = {
-        taskType: ''
-    }
-
-}
-
-render(){
+export const Permissions = (props) => {
     const emptyInitial = {
        ok_to_publish_ppt: ''
     }
 
-    const {presets, csrf, apiUrl, paperId, type} = this.props;
+    const {presets, csrf, apiUrl, paperId, type} = props;
     console.log('tasks', presets, csrf, apiUrl, paperId, type);
     
     return (
@@ -38,10 +30,26 @@ render(){
 
         <Formik
          initialValues={emptyInitial}
+            validationSchema={PermissionSchema}
+
             enableReinitialize
         >
-            {({ values, handleChange}) => {
+            {({ values, handleChange, setFieldValue, isValidating, validateForm, handleSubmit, errors}) => {
                 console.log(values, 'Tasks')
+                  const handleCheckBox = async () => {
+                    const accept = values.accept;
+                    const copyright = values.copyright;
+                    accept === true && setFieldValue('accept', 'yes')
+                    accept === false && setFieldValue('accept', '')
+                    copyright === true && setFieldValue('copyright', 'yes')
+                    copyright === false && setFieldValue('copyright', '')
+                   return
+                }
+
+                const onSubmit = () => {
+                  values.__csrf_token = csrf
+                    console.log('submitting', values)
+              }
                 return (
                     <StyledTask>
                         <Typography className="task-title">{paperId}</Typography>
@@ -90,9 +98,10 @@ render(){
                                     />
                                 </label>
                             </Field>
+                            {errors.ok_to_publish_ppt && <label style={{position: 'absolute', bottom: '-1rem', right: '1rem', color: '#ff0000', fontSize: '1.5rem'}}>{errors.ok_to_publish_ppt}</label>}
                         </div>
                         <Button 
-                            onClick={() => console.log(values)}
+                            onClick={() => validateForm().then(errors => Object.keys(errors).length === 0 && onSubmit())}
 
                             bcolor="#134381"
                             background="#134381"
@@ -109,7 +118,7 @@ render(){
         </Formik>
     )
 };
-}
+
 
 
 

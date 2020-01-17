@@ -4,7 +4,7 @@ import Typography from '@material-ui/core/Typography';
 import { Formik,  Field, } from 'formik';
 import { TextField, SimpleFileUpload, CheckboxWithLabel, Checkbox} from 'formik-material-ui';
 import { Button } from '../../Button';
-import { SendForm } from '../FormActions';
+import { SendFile } from '../FormActions';
 import { StyledTask } from '../TaskStyles';
 import InstructionsPopup from '../../InstructionsPopup';
 import {PaperSchema} from '../TaskControl';
@@ -14,8 +14,9 @@ export const Paper = (props) => {
 
     const emptyInitial = {
         accept: '',
-        ppt_filename: '',
+        technicalpaper_filename: '',
         author_notes: '',
+        copyright: '',
     }
 
     const {presets, csrf, apiUrl, paperId, type} = props;
@@ -29,34 +30,19 @@ export const Paper = (props) => {
         <Formik
          initialValues={emptyInitial}
             validationSchema={PaperSchema}
-
             enableReinitialize
         >
             {({ values, handleChange, setFieldValue, isValidating, validateForm, handleSubmit, errors }) => {
-                
-                const handleCheckBox = async () => {
-                    const accept = values.accept;
-                    const copyright = values.copyright;
-                    accept === true && setFieldValue('accept', 'yes')
-                    accept === false && setFieldValue('accept', '')
-                    copyright === true && setFieldValue('copyright', 'yes')
-                    copyright === false && setFieldValue('copyright', '')
-                   return
-                }
-
+{/*                 
+                console.log(values)
+                console.log('errors', errors) */}
                 const onSubmit = () => {
                   values.__csrf_token = csrf
+                 
                     console.log('submitting')
-                 {/* console.log(errors) */}
-                {/* errors && console.log('submit')  */}
-                }
-                {/* const validateFile = (value, errors) => {
-                    
-                  const fileType = value.type || '';
-                  fileType !== 'application/pdf' ? errors.technicalpaper_filename = 'File type must be PDF!' : null;
-                    console.log(fileType)
-                } */}
-
+                    SendFile({values, url})
+              }
+    
                 return (
                     <StyledTask>
                         <Typography className="task-title">{paperId}</Typography>
@@ -96,7 +82,7 @@ export const Paper = (props) => {
                                 component={SimpleFileUpload}
                                 fullWidth
                             />
-                           {errors.technicalpaper_filename && <label style={{position: 'absolute', bottom: '-1rem', right: '1rem', color: '#ff0000', fontSize: '1.5rem'}}>{errors.technicalpaper_filename}</label>}
+                           {errors.technicalpaper_filename && <label style={{position: 'absolute', bottom: '-2rem', right: '1rem', color: '#ff0000', fontSize: '1.5rem'}}>{errors.technicalpaper_filename}</label>}
                         </div>
                          <div className="task-notes">
                            <label
@@ -137,7 +123,8 @@ export const Paper = (props) => {
                                 component={Checkbox}
                             >
                             </Field>
-                           {errors.copyright && <label style={{position: 'absolute', bottom: '-1rem', right: '1rem', color: '#ff0000' , fontSize: '1.5rem' }}>{errors.copyright}</label>}
+                            {errors.copyright && <label style={{position: 'absolute', bottom: '-1rem', right: '1rem', color: '#ff0000', fontSize: '1.5rem'}}>{errors.copyright}</label>}
+
                         </div>
                        
                         <Button 

@@ -13,43 +13,38 @@ import { StyledTask } from '../TaskStyles';
 //                 await Sendtask({ values, url })
 //             }
 
-export class PitchVideo extends Component{
-constructor(props) {
-    super(props);
-    this.state = {
-        taskType: ''
-    }
-    // todo => depending on the task name I will render the task dynamicly 
-    // * will have 
-    //   paper
-    //   ppt
-    //   permissions
-    //   poster-accept
-    //   poster
-    //   bio
-    //   pitchvideo
-    // * EACH WILL BE A COMPONENT
-}
-
-render(){
+export const PitchVideo = (props) => {
     const emptyInitial = {
         pitchvideo_filename: '',
         ok_to_publish_pitchvideo: ''
     }
 
-    const {presets, csrf, apiUrl, paperId, type} = this.props;
+    const {presets, csrf, apiUrl, paperId, type} = props;
     console.log('tasks', presets, csrf, apiUrl, paperId, type);
     
     return (
-        // ! NEED PRESETS FOR TASKS
-
-
         <Formik
          initialValues={emptyInitial}
             enableReinitialize
         >
-            {({ values, handleChange}) => {
+            {({ values, handleChange, setFieldValue, isValidating, validateForm, handleSubmit, errors}) => {
+            
                 console.log(values, 'Tasks')
+
+                const handleCheckBox = async () => {
+                    const accept = values.accept;
+                    const copyright = values.copyright;
+                    accept === true && setFieldValue('accept', 'yes')
+                    accept === false && setFieldValue('accept', '')
+                    copyright === true && setFieldValue('copyright', 'yes')
+                    copyright === false && setFieldValue('copyright', '')
+                   return
+                }
+
+                const onSubmit = () => {
+                  values.__csrf_token = csrf
+                    console.log('submitting', values)
+              }
                 return (
                     <StyledTask>
                         <Typography className="task-title">{paperId}</Typography>
@@ -70,6 +65,8 @@ render(){
                                 component={SimpleFileUpload}
                                 fullWidth
                             />
+                           {errors.pitchvideo_filename && <label style={{position: 'absolute', bottom: '-1rem', right: '1rem', color: '#ff0000', fontSize: '1.5rem'}}>{errors.pitchvideo_filename}</label>}
+
                         </div>
 
                         
@@ -117,10 +114,13 @@ render(){
                                     />
                                 </label>
                             </Field>
+                            {errors.ok_to_publish_pitchvideo && <label style={{position: 'absolute', bottom: '-1rem', right: '1rem', color: '#ff0000', fontSize: '1.5rem'}}>{errors.ok_to_publish_pitchvideo}</label>}
+
                         </div>
                        
                         <Button 
-                            onClick={() => console.log(values)}
+                            onClick={() => validateForm().then(errors => Object.keys(errors).length === 0 && onSubmit())}
+
                             bcolor="#134381"
                             background="#134381"
                             br="100rem"
@@ -136,7 +136,7 @@ render(){
         </Formik>
     )
 };
-}
+
 
 
 

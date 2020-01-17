@@ -6,6 +6,7 @@ import { TextField, SimpleFileUpload, CheckboxWithLabel, Checkbox} from 'formik-
 import { Button } from '../../Button';
 import { SendForm } from '../FormActions';
 import { StyledTask } from '../TaskStyles';
+import {BioSchema} from '../TaskControl';
 
 
 
@@ -13,42 +14,38 @@ import { StyledTask } from '../TaskStyles';
 //                 await Sendtask({ values, url })
 //             }
 
-export class Bio extends Component{
-constructor(props) {
-    super(props);
-    this.state = {
-        taskType: ''
-    }
-    // todo => depending on the task name I will render the task dynamicly 
-    // * will have 
-    //   paper
-    //   ppt
-    //   permissions
-    //   poster-accept
-    //   poster
-    //   bio
-    //   pitchvideo
-    // * EACH WILL BE A COMPONENT
-}
+export const Bio = (props) => {
 
-render(){
     const emptyInitial = {
-        biography: ''
+        biography: '',
+        
     }
 
-    const {presets, csrf, apiUrl, paperId, type} = this.props;
+    const {presets, csrf, apiUrl, paperId, type} = props;
     console.log('tasks', presets, csrf, apiUrl, paperId, type);
     
     return (
-        // ! NEED PRESETS FOR TASKS
-
-
-        <Formik
+            <Formik
          initialValues={emptyInitial}
+         validationSchema={BioSchema}
             enableReinitialize
         >
-            {({ values, handleChange}) => {
-                console.log(values, 'Tasks')
+            {({ values, handleChange, setFieldValue, isValidating, validateForm, handleSubmit, errors }) => {
+                console.log(errors, 'Tasks')
+                const handleCheckBox = async () => {
+                    const accept = values.accept;
+                    const copyright = values.copyright;
+                    accept === true && setFieldValue('accept', 'yes')
+                    accept === false && setFieldValue('accept', '')
+                    copyright === true && setFieldValue('copyright', 'yes')
+                    copyright === false && setFieldValue('copyright', '')
+                   return
+                }
+
+                const onSubmit = () => {
+                  values.__csrf_token = csrf
+                    console.log('submitting', values)
+              }
                 return (
                     <StyledTask>
                         <Typography className="task-title">{paperId}</Typography>
@@ -71,11 +68,14 @@ render(){
                                  name="biography"
                                  component="textarea"
                              />
+                            {errors.biography && <label style={{position: 'absolute', bottom: '-1rem', right: '1rem', color: '#ff0000', fontSize: '1.5rem'}}>{errors.biography}</label>}
+                            {errors.biography && values.biography && <label style={{position: 'absolute', bottom: '-3rem', right: '1rem', color: '#ff0000', fontSize: '1.5rem'}}>{'Words' + ' ' + values.biography.match(/[\w\d\’\'-]+/gi).length}</label>}
+                            
                          </div>
-                        {/* <Typography className="task-title">Presenting Author</Typography> */}
                        
                         <Button 
-                            onClick={() => console.log(values)}
+                            onClick={() => validateForm().then(errors => Object.keys(errors).length === 0 && onSubmit())}
+                           
                             bcolor="#134381"
                             background="#134381"
                             br="100rem"
@@ -91,7 +91,7 @@ render(){
         </Formik>
     )
 };
-}
+
 
 
 

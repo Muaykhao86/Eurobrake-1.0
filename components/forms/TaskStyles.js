@@ -47,6 +47,8 @@ export const StyledTask = styled(Form)`
         }
 
         &-notes{
+            font-family: ${props => props.theme.MPLight};
+        position: relative;
         display: flex;
         flex-flow: column;
         justify-content: space-between;
@@ -78,9 +80,11 @@ export const StyledTask = styled(Form)`
             margin: 2rem 0;
             width: 100%;
             display: flex;
+            font-family: ${props => props.theme.MPLight};
             justify-content: space-between;
 
             &-radio{
+                position: relative;
                 width: 100%;
                display: flex;
                flex-flow: column;

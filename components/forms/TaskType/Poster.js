@@ -6,6 +6,9 @@ import { TextField, SimpleFileUpload, CheckboxWithLabel, Checkbox, RadioGroup} f
 import { Button } from '../../Button';
 import { SendForm } from '../FormActions';
 import { StyledTask } from '../TaskStyles';
+import {PosterSchema} from '../TaskControl';
+
+
 
 
 
@@ -13,16 +16,7 @@ import { StyledTask } from '../TaskStyles';
 //                 await Sendtask({ values, url })
 //             }
 
-export class Poster extends Component{
-constructor(props) {
-    super(props);
-    this.state = {
-        taskType: ''
-    }
- 
-}
-
-render(){
+export const Poster = (props) => {
     const emptyInitial = {
         accept: '',
         poster_filename: '',        
@@ -30,19 +24,31 @@ render(){
         ok_to_publish_poster: ''
     }
 
-    const {presets, csrf, apiUrl, paperId, type} = this.props;
+    const {presets, csrf, apiUrl, paperId, type} = props;
     console.log('tasks', presets, csrf, apiUrl, paperId, type);
     
     return (
-        // ! NEED PRESETS FOR TASKS
-
-
         <Formik
          initialValues={emptyInitial}
+         validationSchema={PosterSchema}
             enableReinitialize
         >
-            {({ values, handleChange}) => {
+            {({ values, handleChange, isValidating, validateForm, handleSubmit, errors }) => {
                 console.log(values, 'Tasks')
+                  const handleCheckBox = async () => {
+                    const accept = values.accept;
+                    const copyright = values.copyright;
+                    accept === true && setFieldValue('accept', 'yes')
+                    accept === false && setFieldValue('accept', '')
+                    copyright === true && setFieldValue('copyright', 'yes')
+                    copyright === false && setFieldValue('copyright', '')
+                   return
+                }
+
+                const onSubmit = () => {
+                  values.__csrf_token = csrf
+                    console.log('submitting')
+              }
                 return (
                     <StyledTask>
                         <Typography className="task-title">{paperId}</Typography>
@@ -65,14 +71,15 @@ render(){
                                 name="accept"
                                 component={CheckboxWithLabel}
                             >
-                            
                             </Field>
+                           {errors.accept && <label style={{position: 'absolute', bottom: '-1rem', right: '1rem', color: '#ff0000', fontSize: '1.5rem'}}>{errors.accept}</label>}
+
                         </div>
                         <div className="task-field" style={{marginBottom: '2rem'}}>
                             <label
                                 htmlFor="label"
                                 className="task-label">
-                                Pitch video slide upload
+                               Poster PDF upload:
                         </label>
                             <Field
                                 className="task-input"
@@ -82,8 +89,8 @@ render(){
                                 component={SimpleFileUpload}
                                 fullWidth
                             />
+                           {errors.poster_filename && <label style={{position: 'absolute', bottom: '-2rem', right: '1rem', color: '#ff0000', fontSize: '1.5rem'}}>{errors.poster_filename}</label>}
                         </div>
-                       
                         <div className="task-notes">
                            <label
                                  htmlFor="label"
@@ -145,10 +152,12 @@ render(){
                                     />
                                 </label>
                             </Field>
+                            {errors.ok_to_publish_poster && <label style={{position: 'absolute', bottom: '-1rem', right: '1rem', color: '#ff0000', fontSize: '1.5rem'}}>{errors.ok_to_publish_poster}</label>}
+
                         </div>
                        
                         <Button 
-                            onClick={() => console.log(values)}
+                            onClick={() => validateForm().then(errors => Object.keys(errors).length === 0 && onSubmit())}
                             bcolor="#134381"
                             background="#134381"
                             br="100rem"
@@ -164,7 +173,7 @@ render(){
         </Formik>
     )
 };
-}
+
 
 
 
