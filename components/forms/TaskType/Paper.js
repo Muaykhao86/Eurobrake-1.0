@@ -40,7 +40,7 @@ export const Paper = (props) => {
                   values.__csrf_token = csrf
                  
                     console.log('submitting')
-                    SendFile({values, url})
+                    SendFile({values, url, csrf})
               }
     
                 return (

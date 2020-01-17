@@ -66,17 +66,7 @@ export async function GetForm(url) {
     return
 }
 
-// const getFormData = (object) => {
-//    console.log(object)
-//     const formData = new FormData();
-//     for ( var key in object ) {
-//     formData.append(key, object[key]);
-// }
-//     // Object.keys(object).forEach(key => formData.append(key, object[key]));
-//     return formData;
-// }
-    
-export async function SendFile({ values, url }) {
+export async function SendFile({ values, url, csrf }) {
     const { logintoken } = cookie.get();
     const formData = new FormData();
     values.accept && values.accept === true ? values.accept = 'yes' : null;
