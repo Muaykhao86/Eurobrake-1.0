@@ -76,9 +76,8 @@ export async function SendFile({ values, url, csrf }) {
       formData.append(key, values[key])});
     
   
-    // formData.append('filename', file);
     console.log({ logintoken,  url})
-    if (logintoken && csrf && file) {
+    if (logintoken && csrf ) {
         try {
             const apiUrl = url;
             const response = await fetch(apiUrl, {
