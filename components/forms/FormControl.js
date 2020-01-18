@@ -79,7 +79,6 @@ export const AbstractSchema = yup.object().shape({
             is_presenting_author: yup.string()
                 .required('Required'),
         }))
-        // abstract 750 words!
 });
 
 export const EsopSchema = yup.object().shape({

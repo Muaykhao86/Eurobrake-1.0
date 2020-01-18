@@ -1,4 +1,63 @@
 
+ export const Q1 = [
+    { value: "", label: "—" },
+    { value: "A165CDBC-20D0-11EA-826D-F61235FD9979", label: "1 bar" },
+    { value: "A16AAD6E-20D0-11EA-A384-B33F5C328649", label: "10 bar" },
+    { value: "A16F63D6-20D0-11EA-8562-FD37E816F125", label: "100 bar" },
+    { value: "A172A816-20D0-11EA-80FE-D8458B75FA68", label: "1000 bar" },
+    
+];
+
+ export const Q2 = [
+    { value: "", label: "—" },
+    { value: "A176A588-20D0-11EA-B1C4-8343322A4354", label: "1 Friction Brake → 2 Generator Brake → 3 Eddy Current Brake" },
+    { value: "A17B2ACC-20D0-11EA-A903-CE3765AA6FE0", label: "1 Generator Brake → 2 Friction Brake → 3 Eddy Current Brake" },
+    { value: "A180ECE6-20D0-11EA-BA13-97766A999418", label: "1 Generator Brake → 2 Eddy Current Brake → 3 Friction Brake" },
+    { value: "A1860366-20D0-11EA-BE22-EA8B4F279291", label: "1 Eddy Current Brake → 2 Generator Brake → 3 Friction Brake" },
+    
+];
+
+ export const Q3 = [
+    { value: "", label: "—" },
+    { value: "A18AAF42-20D0-11EA-AA93-E948962C4B22", label: "due to presence of binders in the friction material, brake wear particles can not be smaller than 0.1mm" },
+    { value: "A190544C-20D0-11EA-ADCD-A3842C77181C", label: "most of recent studies have shown that brake wear particles can not be inhaled" },
+    { value: "A1939814-20D0-11EA-A356-B5B2593A37F3", label: "a great ratio of brake wear particles are of size smaller than 10µm and can be airborne" },
+    { value: "A198076E-20D0-11EA-838B-F8CC47638AE5", label: "a great ratio of brake wear particles are of size smaller than 10µm and can be airborne" },
+ 
+];
+
+
+export const Q4 = [
+    { id: "Intelligent Braking and Braking Control", name: "question_4_answer", value: "A19B58F6-20D0-11EA-9309-935393B87AAD" },
+    { id: "Environmentally-friendly Braking Systems", name: "question_4_answer", value: "A19E91B0-20D0-11EA-AB5D-AB5B61C559F4" },
+    { id: "Fundamentals of Brakes", name: "question_4_answer", value: "A1A24D32-20D0-11EA-B1F0-A6A4B80BF983" },
+    { id: "Manufacturing and Markets", name: "question_4_answer", value: "A1A7FEA8-20D0-11EA-AA7C-B2647AB84FAD" },
+    { id: "Materials and Design", name: "question_4_answer", value: "C05F2F38-20D0-11EA-804F-FDD4E3525F0E" },
+    { id: "Simulation, Testing, Innovative Development Processes", name: "question_4_answer", value: "C06226AC-20D0-11EA-B13B-CBC741D97AFF" }
+];
+
+export const Sessions = [
+    { id: "Entering the industry: demands, skills, requirements", name: "roundtable", value: "F7059506-F3D9-11E8-A30E-9AD9C8D4F5B4" },
+    { id: "Industry vs. Academia: perspectives and opportunities", name: "roundtable", value: "159C9B5E-F3DA-11E8-AE3E-B6BAC8C8E3D3" },
+    { id: "“What do you think/want in terms of transportation of the future?”", name: "roundtable", value: "1F8B71DA-F3DA-11E8-B265-F39A91630592" },
+    { id: "Rail Brake Industry: challenges and approaches", name: "roundtable", value: "2AF19DBA-F3DA-11E8-B364-F69E03A1B279" },
+    { id: "Other (please specify)", name: "roundtable", value: "3CA6AA5A-F3DA-11E8-B5C4-A947D1EF668C" },
+];
+
+export const Marketing = [
+    { value: "", label: "—" },
+    { value: "E65CB08C-BACE-11E5-A83B-776E5EAB70CB", label: "Student/friend" },
+    { value: "E6580A28-BACE-11E5-9185-766E5EAB70CB", label: "Your Future In Automotive newsletter" },
+    { value: "E660DAA4-BACE-11E5-87E7-786E5EAB70CB", label: "Professor/lecturer at university" },
+    { value: "E6658DCE-BACE-11E5-B56F-796E5EAB70CB", label: "The Engineer" },
+    { value: "E66A6D26-BACE-11E5-BF16-7A6E5EAB70CB", label: "National engineering society (e.g. SAE, VDI, IMechE)" },
+    { value: "E6744A44-BACE-11E5-BF92-7C6E5EAB70CB", label: "FISITA website" },
+    { value: "E678E1E4-BACE-11E5-BD4E-7D6E5EAB70CB", label: "Facebook" },
+    { value: "E67D8618-BACE-11E5-8005-7E6E5EAB70CB", label: "Twitter" },
+    { value: "FCD1C142-F620-11E7-A0BD-F5BDAD3900A6", label: "LinkedIn" },
+    { value: "E682897E-BACE-11E5-BFDD-7F6E5EAB70CB", label: "Other (please specify)" },
+];
+
  export const titles = [
     { value: "", label: "—" },
     { value: "Mr.", label: "Mr." },

@@ -358,6 +358,8 @@ export const AbstractForm = (props) => {
                                  component="textarea"
                              />
                          </div>
+                        { values.abstract && <label style={{position: 'absolute', bottom: '-3rem', right: '1rem', color: '#ff0000', fontSize: '1.5rem'}}>{'Words' + ' ' + values.abstract.match(/[\w\d\’\'-]+/gi).length}</label>}
+
                        
                         <Typography className="form-title">Secondary Author(s)</Typography>
                             <FieldArray name={`secondary_authors`} >
@@ -367,7 +369,7 @@ export const AbstractForm = (props) => {
                                     (
                                         values.secondary_authors.map((author, index) => {
                                             const {is_presenting_author} = author; 
-                                            const second = `values.secondary_authors[${index}].is_presenting_author`;
+                                            {/* const second = `values.secondary_authors[${index}].is_presenting_author`; */}
                                            return (
                                             <div key={index} className="form-secondary">
                                                 <div className="form-field">
