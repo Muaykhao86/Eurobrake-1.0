@@ -499,9 +499,10 @@ export const Esop = () => {
                             </Field>
                         </div>
                         <Typography className="form-title">Your entry</Typography>
-                        <div className="form-field">
+                        <div className="form-field_file">
                             {/* REQUIRED AND FILE MUST BE A PDF */}
-                            <Typography className="form-label">Upload a PDF or Microsoft Word document of your CV/resumé here. Documents must not exceed 2 A4 pages and must be submitted in English.</Typography>
+                            <Typography  className="form-label" style={{minWidth: '100%'}}>Upload a PDF or Microsoft Word document of your CV/resumé here. Documents must not exceed 2 A4 pages and must be submitted in English.</Typography>
+                            <div className="form-field_file-box">
 
                             <label
                                 htmlFor="label"
@@ -509,7 +510,7 @@ export const Esop = () => {
                                 Upload your CV/resumé:
                         </label>
                             <Field
-                                className="form-input"
+                                className="form-input_file"
                                 value={values.cv_filename_uploader}
                                 style={{ color: '#134381' }}
                                 name="cv_filename_uploader"
@@ -517,6 +518,7 @@ export const Esop = () => {
                                 fullWidth
                             />
                             {errors.cv_filename_uploader && <label style={{ position: 'absolute', bottom: '-2rem', right: '1rem', color: '#ff0000', fontSize: '1.5rem' }}>{errors.cv_filename_uploader}</label>}
+                            </div>
                         </div>
                         <div className="form-notes">
                             <label
@@ -525,7 +527,7 @@ export const Esop = () => {
                                 Your personal statement – Tell us why you would like a sponsored student place at EuroBrake 2020 (150–250 words):
                          </label>
                             <Field
-                                className="form-input"
+                                className="form-notes-input"
                                 onClick={handleChange}
                                 value={values.personal_statement}
                                 style={{ color: '#134381' }}
@@ -535,9 +537,10 @@ export const Esop = () => {
                         </div>
 
 
-                        <div className="form-field">
+                        <div className="form-field_file">
                             {/* REQUIRED AND FILE MUST BE A PDF */}
                             <Typography className="form-label">Upload a photo, PDF or Microsoft Word document of a letter or ID card indicating your status as student.</Typography>
+                            <div className="form-field_file-box">
 
                             <label
                                 htmlFor="label"
@@ -554,18 +557,19 @@ export const Esop = () => {
                             />
                             {errors.student_status_filename_uploader && <label style={{ position: 'absolute', bottom: '-2rem', right: '1rem', color: '#ff0000', fontSize: '1.5rem' }}>{errors.student_status_filename_uploader}</label>}
                         </div>
+                        </div>
 
-                        <div className="form-field">
+                        <div className="form-field_question">
                             <label
                                 htmlFor="label"
                                 className="form-label">
                                 Question 1: In what range does the brake pressure apply during emergency braking?
                         </label>
                             <Field
-                                className="form-input"
+                                className="form-input_question"
                                 onClick={handleChange}
                                 value={values.question_1_answer}
-                                style={{ color: '#134381' }}
+                                style={{ color: '#134381', }}
                                 name="question_1_answer"
                                 component={Select}
                             >
@@ -574,14 +578,14 @@ export const Esop = () => {
                             </Field>
                         </div>
 
-                        <div className="form-field">
+                        <div className="form-field_question">
                             <label
                                 htmlFor="label"
                                 className="form-label">
                                 Question 2: Sort the frequency of use of different brake systems in modern High Speed Trains
                         </label>
                             <Field
-                                className="form-input"
+                                className="form-input_question"
                                 onClick={handleChange}
                                 value={values.question_2_answer}
                                 style={{ color: '#134381' }}
@@ -593,14 +597,14 @@ export const Esop = () => {
                             </Field>
                         </div>
 
-                        <div className="form-field">
+                        <div className="form-field_question">
                             <label
                                 htmlFor="label"
                                 className="form-label">
                                 Question 3: Health relevance of brake wear particles becomes an important issue in brake industry. Find a correct answer:
                         </label>
                             <Field
-                                className="form-input"
+                                className="form-input_question"
                                 onClick={handleChange}
                                 value={values.question_3_answer}
                                 style={{ color: '#134381' }}
@@ -611,126 +615,123 @@ export const Esop = () => {
                                     <option key={i} style={{ fontSize: '1.5rem', cursor: 'pointer' }} value={option.value}>{option.label}</option>)}
                             </Field>
                         </div>
-                        <div className="form-field">
+                        <div className="form-field_question" style={{ width: '100%'}}>
                             <label
                                 htmlFor="question_4_answer"
                                 className="form-label">
                                 Question 4: Can you list three of the Conference Topics at EuroBrake 2020?
                         </label>
-                        
-                        <FieldArray
-                            name="question_4_answer"
-                        >
-                            {({ swap, push, remove, setSubmitting }) => (
-                                Q4.map((question) => (
-                                    <div
-                                        key={question.id}
-                                        className="task-checkboxField">
-                                        <label
-                                            htmlFor={question.name}
-                                            className="task-checkboxField-label"
-                                            style={{ color: '#134381', width: '80%' }}
 
-                                        >
-                                            {question.id}
-                                        </label>
-                                        <input
-                                            checked={values.question_4_answer && values.question_4_answer.includes(question.value)}
-                                            onChange={e => {
-                                                e.target.checked ? push(question.value) : values.question_4_answer && remove(values.question_4_answer.value)
-                                            }}
-                                            className="task-checkboxField-box"
-                                            style={{ color: '#134381', }}
-                                            value={question.value}
-                                            name={question.name}
-                                            type="checkbox"
-                                            id={question.id}
-                                       />
-                                        
-                                        {errors.accept && <label style={{ position: 'absolute', bottom: '-1rem', right: '1rem', color: '#ff0000', fontSize: '1.5rem' }}>{errors.accept}</label>}
-                                    </div>
-                                )))}
-                        </FieldArray>
+                            <FieldArray
+                                name="question_4_answer"
+                            >
+                                {({ swap, push, remove, setSubmitting }) => (
+                                    Q4.map((question) => (
+                                        <div
+                                            key={question.id}
+                                            className="form-checkboxField">
+                                            <label
+                                                htmlFor={question.name}
+                                                className="form-checkboxField-label"
+                                                style={{ color: '#134381', width: '80%' }}
+
+                                            >
+                                                {question.id}
+                                            </label>
+                                            <input
+                                                checked={values.question_4_answer && values.question_4_answer.includes(question.value)}
+                                                onChange={e => {
+                                                    e.target.checked ? push(question.value) : values.question_4_answer && remove(values.question_4_answer.value)
+                                                }}
+                                                className="form-checkboxField-box"
+                                                style={{ color: '#134381', }}
+                                                value={question.value}
+                                                name={question.name}
+                                                type="checkbox"
+                                                id={question.id}
+                                            />
+
+                                            {errors.accept && <label style={{ position: 'absolute', bottom: '-1rem', right: '1rem', color: '#ff0000', fontSize: '1.5rem' }}>{errors.accept}</label>}
+                                        </div>
+                                    )))}
+                            </FieldArray>
                         </div>
                         <Typography className="form-title"> Additional Information</Typography>
-                        <div className="form-field">
+                        <div className="form-field_question">
                             <label
                                 htmlFor="youtube_url"
                                 className="form-label">
                                 If you have a short video outlining your motivation for applying for ESOP or your interest in the braking industry you can include a YouTube link here:
                             </label>
                             <Field
+                                placeholder="This is optional and won’t affect the judging process."
                                 className="form-input"
                                 onClick={handleChange}
                                 value={values.university_address3}
-                                style={{ color: '#134381' }}
+                                style={{ color: '#134381' , marginTop: '1rem'}}
                                 name="youtube_url"
                                 component={TextField}
                             />
-                            <label
-                                htmlFor="youtube_url"
-                                className="form-label">
-                               This is optional and won’t affect the judging process.
-                            </label>
                         </div>
 
-                        <div className="form-field">
-                        <label
+                        <div className="form-field_question">
+                            <label
                                 htmlFor="roundtable"
                                 className="form-label">
-                               ‘Round Table’ sessions will take place as part of the ESOP 2020 programme – providing a unique opportunity for all students to meet with and learn from industry and academia experts. Please leave details below if there are any topics you would like to see discussed in a Round Table session:
+                                ‘Round Table’ sessions will take place as part of the ESOP 2020 programme – providing a unique opportunity for all students to meet with and learn from industry and academia experts. Please leave details below if there are any topics you would like to see discussed in a Round Table session:
                         </label>
-                        <FieldArray
-                            name="roundtable"
-                        >
-                            {({ swap, push, remove, setSubmitting,  }) => (
-                                Sessions.map((session) => (
-                                    <div
-                                        key={session.id}
-                                        className="task-checkboxField">
-                                        <label
-                                            htmlFor={session.name}
-                                            className="task-checkboxField-label"
-                                            style={{ color: '#134381', width: '80%' }}
+                            <FieldArray
+                                name="roundtable"
+                            >
+                                {({ swap, push, remove, setSubmitting, }) => (
+                                    Sessions.map((session) => (
+                                        <div
+                                            key={session.id}
+                                            className="form-checkboxField">
+                                            <label
+                                                htmlFor={session.name}
+                                                className="form-checkboxField-label"
+                                                style={{ color: '#134381', width: '80%' }}
 
-                                        >
-                                            {session.id}
-                                        </label>
-                                        {console.log(values)}
-                                        <input
-                                            checked={values.roundtable && values.roundtable.includes(session.value)}
-                                            onChange={e => {
-                                                e.target.checked ? push(session.value) : values.roundtable && remove(values.roundtable.value)
-                                            }}
-                                            className="task-checkboxField-box"
-                                            style={{ color: '#134381', }}
-                                            value={session.value}
-                                            name={session.name}
-                                            type="checkbox"
-                                            id={session.id}
-                                       />
-                                        
-                                        {errors.roundtable && <label style={{ position: 'absolute', bottom: '-1rem', right: '1rem', color: '#ff0000', fontSize: '1.5rem' }}>{errors.roundtable}</label>}
-                                    </div>
-                                )))}
-                        </FieldArray>
-                        
-                         {values.roundtable && values.roundtable.includes('3CA6AA5A-F3DA-11E8-B5C4-A947D1EF668C') &&
-                            <Field
-                                className="form-input"
-                                onClick={handleChange}
-                                value={values.roundtable_other}
-                                style={{ color: '#134381' }}
-                                name="roundtable_other"
-                                component={TextField}
-                            />
-                        }
-                         </div>
-                        
-                        <div className="form-field">
+                                            >
+                                                {session.id}
+                                            </label>
+                                            <input
+                                                checked={values.roundtable && values.roundtable.includes(session.value)}
+                                                onChange={e => {
+                                                    e.target.checked ? push(session.value) : values.roundtable && remove(values.roundtable.value)
+                                                }}
+                                                className="form-checkboxField-box"
+                                                style={{ color: '#134381', }}
+                                                value={session.value}
+                                                name={session.name}
+                                                type="checkbox"
+                                                id={session.id}
+                                            />
+
+                                            {errors.roundtable && <label style={{ position: 'absolute', bottom: '-1rem', right: '1rem', color: '#ff0000', fontSize: '1.5rem' }}>{errors.roundtable}</label>}
+                                        </div>
+                                    )))}
+                            </FieldArray>
+
+                            {values.roundtable && values.roundtable.includes('3CA6AA5A-F3DA-11E8-B5C4-A947D1EF668C') &&
+                                <Field
+                                    placeholder="Please specify"
+                                    className="form-input"
+                                    onClick={handleChange}
+                                    value={values.roundtable_other}
+                                    style={{ color: '#134381' }}
+                                    name="roundtable_other"
+                                    component={TextField}
+                                />
+                            }
+                        </div>
+
+                        <div className="form-field_question">
                             <label
                                 htmlFor="marketing"
-                                className="form-label">
+                                className="form-label"
+                                style={{marginBottom: '1rem'}}>
                                 Where did you hear about the EuroBrake Student Opportunities Programme?
                         </label>
                             <Field
@@ -744,16 +745,17 @@ export const Esop = () => {
                                 {Marketing.map((option, i) =>
                                     <option key={i} style={{ fontSize: '1.5rem', cursor: 'pointer' }} value={option.value}>{option.label}</option>)}
                             </Field>
-                        {values.marketing === 'E682897E-BACE-11E5-BFDD-7F6E5EAB70CB' &&
-                            <Field
-                                className="form-input"
-                                onClick={handleChange}
-                                value={values.marketing_other}
-                                style={{ color: '#134381' }}
-                                name="marketing_other"
-                                component={TextField}
-                            />
-                        }
+                            {values.marketing === 'E682897E-BACE-11E5-BFDD-7F6E5EAB70CB' &&
+                                <Field
+                                    placeholder="Please specify"
+                                    className="form-input"
+                                    onClick={handleChange}
+                                    value={values.marketing_other}
+                                    style={{ color: '#134381', margin: '1rem 0' }}
+                                    name="marketing_other"
+                                    component={TextField}
+                                />
+                            }
                             {errors.student_level_current && <label style={{ position: 'absolute', bottom: '-1rem', right: '1rem', color: '#ff0000', fontSize: '1.5rem' }}>{errors.student_level_current}</label>}
 
                         </div>
@@ -761,7 +763,7 @@ export const Esop = () => {
                             <label
                                 htmlFor="label"
                                 className="form-label">
-                               Have you participated in any other FISITA student initiatives?
+                                Have you participated in any other FISITA student initiatives?
                         </label>
                             <Field
                                 className="form-radio"
@@ -798,140 +800,137 @@ export const Esop = () => {
                                         id="previous_participant_opt_no"
                                     />
                                 </label>
-                               
+
                             </Field>
                             {errors.student_level_current && <label style={{ position: 'absolute', bottom: '-1rem', right: '1rem', color: '#ff0000', fontSize: '1.5rem' }}>{errors.student_level_current}</label>}
                         </div>
                         <Typography gutterBottom className="form-title">Additional Information</Typography>
                         <Typography gutterBottom className="form-label">Please note that by submitting a registration form for ESOP, you indicate your consent to us passing the personal information you have disclosed to us, including your CV, to the ESOP Sponsor Companies, so that they can contact you with details of career and/or work placement opportunities within their organisations, or to arrange a meeting with you at EuroBrake if you are selected to attend.</Typography>
                         <Typography gutterBottom className="form-label">Here at FISITA we take your privacy seriously and will only use your personal information to set up and administer your account and/or membership and to provide the products and services you have requested from us.</Typography>
-                        <div className="task-checkboxField">
+                        <div className="form-checkboxField">
                             {/* REQUIRED */}
                             <label
                                 htmlFor="consent_sponsors"
-                                className="task-checkboxField-label"
+                                className="form-checkboxField-label"
                                 style={{ color: '#134381', width: '80%' }}
 
-                                >
-                                 If you do not consent to us passing on your details, please tick here
+                            >
+                                If you do not consent to us passing on your details, please tick here
                         </label>
-                            <Field
-                                className="task-checkboxField-box"
+                            <input
+                                className="form-checkboxField-box"
                                 style={{ color: '#134381', }}
                                 value={values.consent_sponsors}
                                 name="consent_sponsors"
-                                component={Checkbox}
-                            >
-                            </Field>
-                           {errors.consent_sponsors && <label style={{position: 'absolute', bottom: '-1rem', right: '1rem', color: '#ff0000', fontSize: '1.5rem'}}>{errors.consent_sponsors}</label>}
+                                type="checkbox"
+                            />
+                            {errors.consent_sponsors && <label style={{ position: 'absolute', bottom: '-1rem', right: '1rem', color: '#ff0000', fontSize: '1.5rem' }}>{errors.consent_sponsors}</label>}
                         </div>
                         <Typography gutterBottom className="form-label">However, from time to time we would like to contact you by email with details of the following:</Typography>
-                         <div className="task-checkboxField">
+                        <div className="form-checkboxField">
                             {/* REQUIRED */}
                             <label
                                 htmlFor="consent_fiec"
-                                className="task-checkboxField-label"
+                                className="form-checkboxField-label"
                                 style={{ color: '#134381', width: '80%' }}
 
-                                >
+                            >
                                 Membership of FISITA International Engineering Community (FIEC)
                         </label>
-                            <Field
-                                className="task-checkboxField-box"
+                            <input
+                                className="form-checkboxField-box"
                                 style={{ color: '#134381', }}
                                 value={values.consent_fiec}
                                 name="consent_fiec"
-                                component={Checkbox}
-                            >
-                            </Field>
-                           {errors.consent_fiec && <label style={{position: 'absolute', bottom: '-1rem', right: '1rem', color: '#ff0000', fontSize: '1.5rem'}}>{errors.consent_fiec}</label>}
-                        </div> <div className="task-checkboxField">
+                                type="checkbox"
+                            />
+                            {errors.consent_fiec && <label style={{ position: 'absolute', bottom: '-1rem', right: '1rem', color: '#ff0000', fontSize: '1.5rem' }}>{errors.consent_fiec}</label>}
+                        </div> 
+                        <div className="form-checkboxField">
                             {/* REQUIRED */}
                             <label
                                 htmlFor="consent_wep"
                                 className="task-checkboxField-label"
                                 style={{ color: '#134381', width: '80%' }}
 
-                                >
-                                 Career & work placement opportunities via FISITA Work Experience Programme
+                            >
+                                Career & work placement opportunities via FISITA Work Experience Programme
                         </label>
-                            <Field
-                                className="task-checkboxField-box"
+                            <input
+                                className="form-checkboxField-box"
                                 style={{ color: '#134381', }}
                                 value={values.consent_wep}
                                 name="consent_wep"
-                                component={Checkbox}
-                            >
-                            </Field>
-                           {errors.consent_wep && <label style={{position: 'absolute', bottom: '-1rem', right: '1rem', color: '#ff0000', fontSize: '1.5rem'}}>{errors.consent_wep}</label>}
-                        </div> <div className="task-checkboxField">
+                                type="checkbox"                            
+                            />
+                            {errors.consent_wep && <label style={{ position: 'absolute', bottom: '-1rem', right: '1rem', color: '#ff0000', fontSize: '1.5rem' }}>{errors.consent_wep}</label>}
+                        </div> <div className="form-checkboxField">
                             {/* REQUIRED */}
                             <label
                                 htmlFor="consent_events"
-                                className="task-checkboxField-label"
+                                className="form-checkboxField-label"
                                 style={{ color: '#134381', width: '80%' }}
 
-                                >
+                            >
                                 Opportunities for students at upcoming FISITA events
                         </label>
-                            <Field
-                                className="task-checkboxField-box"
+                            <input
+                                className="form-checkboxField-box"
                                 style={{ color: '#134381', }}
                                 value={values.consent_events}
                                 name="consent_events"
-                                component={Checkbox}
-                            >
-                            </Field>
-                           {errors.consent_events && <label style={{position: 'absolute', bottom: '-1rem', right: '1rem', color: '#ff0000', fontSize: '1.5rem'}}>{errors.consent_events}</label>}
-                        </div> <div className="task-checkboxField">
+                                type="checkbox"                            
+                            />
+                            {errors.consent_events && <label style={{ position: 'absolute', bottom: '-1rem', right: '1rem', color: '#ff0000', fontSize: '1.5rem' }}>{errors.consent_events}</label>}
+                        </div> 
+                        <div className="form-checkboxField">
                             {/* REQUIRED */}
                             <label
                                 htmlFor="consent_bursary"
-                                className="task-checkboxField-label"
+                                className="form-checkboxField-label"
                                 style={{ color: '#134381', width: '80%' }}
-
-                                >
-                                 Opportunities for funding via FISITA Travel Bursary Scheme
+                            >
+                                Opportunities for funding via FISITA Travel Bursary Scheme
                         </label>
-                            <Field
-                                className="task-checkboxField-box"
+                            <input
+                                className="form-checkboxField-box"
                                 style={{ color: '#134381', }}
                                 value={values.consent_bursary}
                                 name="consent_bursary"
-                                component={Checkbox}
-                            >
-                            </Field>
-                           {errors.consent_bursary && <label style={{position: 'absolute', bottom: '-1rem', right: '1rem', color: '#ff0000', fontSize: '1.5rem'}}>{errors.consent_bursary}</label>}
-                        </div> <div className="task-checkboxField">
+                                type="checkbox"                            
+                            />
+                            {errors.consent_bursary && <label style={{ position: 'absolute', bottom: '-1rem', right: '1rem', color: '#ff0000', fontSize: '1.5rem' }}>{errors.consent_bursary}</label>}
+                        </div> 
+                        <div className="form-checkboxField">
                             {/* REQUIRED */}
                             <label
                                 htmlFor="consent_yfia"
-                                className="task-checkboxField-label"
+                                className="form-checkboxField-label"
                                 style={{ color: '#134381', width: '80%' }}
 
-                                >
+                            >
                                 Subscription to “Your Future in Automotive” newsletter
                         </label>
-                            <Field
-                                className="task-checkboxField-box"
+                            <input
+                                className="form-checkboxField-box"
                                 style={{ color: '#134381', }}
                                 value={values.consent_yfia}
                                 name="consent_yfia"
-                                component={Checkbox}
-                            >
-                            </Field>
-                           {errors.consent_yfia && <label style={{position: 'absolute', bottom: '-1rem', right: '1rem', color: '#ff0000', fontSize: '1.5rem'}}>{errors.consent_yfia}</label>}
+                                type="checkbox"
+                            />
+                            {errors.consent_yfia && <label style={{ position: 'absolute', bottom: '-1rem', right: '1rem', color: '#ff0000', fontSize: '1.5rem' }}>{errors.consent_yfia}</label>}
                         </div>
-                        <Typography gutterBottom className="form-label">Please tick the box(es) above for each purpose you consent to us contacting you about.</Typography>
-                        <Typography gutterBottom className="form-label">For more detailed information, please see our <Link href="/privacyPolicy"><a>privacy policy.</a></Link></Typography>
-                        <Typography gutterBottom className="form-label">For further details contact Hayley Millar, Education Manager at <a href="mailto:h.millar@fisita.com">h.millar@fisita.com.</a></Typography>
+
+                        <Typography gutterBottom style={{}} className="form-label">Please tick the box(es) above for each purpose you consent to us contacting you about.</Typography>
+                        <Typography gutterBottom style={{}} className="form-label">For more detailed information, please see our <Link href="/privacyPolicy"><a>privacy policy.</a></Link></Typography>
+                        <Typography gutterBottom style={{}} className="form-label">For further details contact Hayley Millar, Education Manager at <a href="mailto:h.millar@fisita.com">h.millar@fisita.com.</a></Typography>
 
 
                         <Button type="submit"
                             bcolor="#134381"
                             background="#134381"
                             br="100rem"
-                            style={{ margin: ".5rem 0" }}
+                            style={{ margin: ".5rem 0", color: '#FFF' }}
                             fontSize="1.7rem">Submit</Button>
                     </StyledForm>
                 )

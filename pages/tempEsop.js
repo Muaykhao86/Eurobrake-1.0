@@ -9,7 +9,7 @@ import {FixedDates} from '../components/Dates';
 export default () => (
     <>
      <HeroSection  max="55%">
-                Technical Program
+                Esop application
     </HeroSection>
 <StyledPage>
             <FixedDates/>

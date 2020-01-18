@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 5);
+/******/ 	return __webpack_require__(__webpack_require__.s = 4);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -4184,7 +4184,7 @@ const Esop = () => {
       },
       __self: undefined
     }, "Your entry"), __jsx("div", {
-      className: "form-field",
+      className: "form-field_file",
       __source: {
         fileName: _jsxFileName,
         lineNumber: 502
@@ -4192,21 +4192,31 @@ const Esop = () => {
       __self: undefined
     }, __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_4___default.a, {
       className: "form-label",
+      style: {
+        minWidth: '100%'
+      },
       __source: {
         fileName: _jsxFileName,
         lineNumber: 504
       },
       __self: undefined
-    }, "Upload a PDF or Microsoft Word document of your CV/resum\xE9 here. Documents must not exceed 2 A4 pages and must be submitted in English."), __jsx("label", {
+    }, "Upload a PDF or Microsoft Word document of your CV/resum\xE9 here. Documents must not exceed 2 A4 pages and must be submitted in English."), __jsx("div", {
+      className: "form-field_file-box",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 505
+      },
+      __self: undefined
+    }, __jsx("label", {
       htmlFor: "label",
       className: "form-label",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 506
+        lineNumber: 507
       },
       __self: undefined
     }, "Upload your CV/resum\xE9:"), __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Field"], {
-      className: "form-input",
+      className: "form-input_file",
       value: values.cv_filename_uploader,
       style: {
         color: '#134381'
@@ -4216,7 +4226,7 @@ const Esop = () => {
       fullWidth: true,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 511
+        lineNumber: 512
       },
       __self: undefined
     }), errors.cv_filename_uploader && __jsx("label", {
@@ -4229,14 +4239,14 @@ const Esop = () => {
       },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 519
+        lineNumber: 520
       },
       __self: undefined
-    }, errors.cv_filename_uploader)), __jsx("div", {
+    }, errors.cv_filename_uploader))), __jsx("div", {
       className: "form-notes",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 521
+        lineNumber: 523
       },
       __self: undefined
     }, __jsx("label", {
@@ -4244,11 +4254,11 @@ const Esop = () => {
       className: "form-label",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 522
+        lineNumber: 524
       },
       __self: undefined
     }, "Your personal statement \u2013 Tell us why you would like a sponsored student place at EuroBrake 2020 (150\u2013250 words):"), __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Field"], {
-      className: "form-input",
+      className: "form-notes-input",
       onClick: handleChange,
       value: values.personal_statement,
       style: {
@@ -4258,29 +4268,36 @@ const Esop = () => {
       component: "textarea",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 527
+        lineNumber: 529
       },
       __self: undefined
     })), __jsx("div", {
-      className: "form-field",
+      className: "form-field_file",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 538
+        lineNumber: 540
       },
       __self: undefined
     }, __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_4___default.a, {
       className: "form-label",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 540
+        lineNumber: 542
       },
       __self: undefined
-    }, "Upload a photo, PDF or Microsoft Word document of a letter or ID card indicating your status as student."), __jsx("label", {
+    }, "Upload a photo, PDF or Microsoft Word document of a letter or ID card indicating your status as student."), __jsx("div", {
+      className: "form-field_file-box",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 543
+      },
+      __self: undefined
+    }, __jsx("label", {
       htmlFor: "label",
       className: "form-label",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 542
+        lineNumber: 545
       },
       __self: undefined
     }, "Upload proof of your status as student:"), __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Field"], {
@@ -4294,7 +4311,7 @@ const Esop = () => {
       fullWidth: true,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 547
+        lineNumber: 550
       },
       __self: undefined
     }), errors.student_status_filename_uploader && __jsx("label", {
@@ -4307,14 +4324,14 @@ const Esop = () => {
       },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 555
+        lineNumber: 558
       },
       __self: undefined
-    }, errors.student_status_filename_uploader)), __jsx("div", {
-      className: "form-field",
+    }, errors.student_status_filename_uploader))), __jsx("div", {
+      className: "form-field_question",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 558
+        lineNumber: 562
       },
       __self: undefined
     }, __jsx("label", {
@@ -4322,11 +4339,11 @@ const Esop = () => {
       className: "form-label",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 559
+        lineNumber: 563
       },
       __self: undefined
     }, "Question 1: In what range does the brake pressure apply during emergency braking?"), __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Field"], {
-      className: "form-input",
+      className: "form-input_question",
       onClick: handleChange,
       value: values.question_1_answer,
       style: {
@@ -4336,7 +4353,7 @@ const Esop = () => {
       component: formik_material_ui__WEBPACK_IMPORTED_MODULE_5__["Select"],
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 564
+        lineNumber: 568
       },
       __self: undefined
     }, _FormSelects__WEBPACK_IMPORTED_MODULE_7__["Q1"].map((option, i) => __jsx("option", {
@@ -4348,14 +4365,14 @@ const Esop = () => {
       value: option.value,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 573
+        lineNumber: 577
       },
       __self: undefined
     }, option.label)))), __jsx("div", {
-      className: "form-field",
+      className: "form-field_question",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 577
+        lineNumber: 581
       },
       __self: undefined
     }, __jsx("label", {
@@ -4363,11 +4380,11 @@ const Esop = () => {
       className: "form-label",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 578
+        lineNumber: 582
       },
       __self: undefined
     }, "Question 2: Sort the frequency of use of different brake systems in modern High Speed Trains"), __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Field"], {
-      className: "form-input",
+      className: "form-input_question",
       onClick: handleChange,
       value: values.question_2_answer,
       style: {
@@ -4377,7 +4394,7 @@ const Esop = () => {
       component: formik_material_ui__WEBPACK_IMPORTED_MODULE_5__["Select"],
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 583
+        lineNumber: 587
       },
       __self: undefined
     }, _FormSelects__WEBPACK_IMPORTED_MODULE_7__["Q2"].map((option, i) => __jsx("option", {
@@ -4389,14 +4406,14 @@ const Esop = () => {
       value: option.value,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 592
+        lineNumber: 596
       },
       __self: undefined
     }, option.label)))), __jsx("div", {
-      className: "form-field",
+      className: "form-field_question",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 596
+        lineNumber: 600
       },
       __self: undefined
     }, __jsx("label", {
@@ -4404,11 +4421,11 @@ const Esop = () => {
       className: "form-label",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 597
+        lineNumber: 601
       },
       __self: undefined
     }, "Question 3: Health relevance of brake wear particles becomes an important issue in brake industry. Find a correct answer:"), __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Field"], {
-      className: "form-input",
+      className: "form-input_question",
       onClick: handleChange,
       value: values.question_3_answer,
       style: {
@@ -4418,7 +4435,7 @@ const Esop = () => {
       component: formik_material_ui__WEBPACK_IMPORTED_MODULE_5__["Select"],
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 602
+        lineNumber: 606
       },
       __self: undefined
     }, _FormSelects__WEBPACK_IMPORTED_MODULE_7__["Q3"].map((option, i) => __jsx("option", {
@@ -4430,14 +4447,17 @@ const Esop = () => {
       value: option.value,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 611
+        lineNumber: 615
       },
       __self: undefined
     }, option.label)))), __jsx("div", {
-      className: "form-field",
+      className: "form-field_question",
+      style: {
+        width: '100%'
+      },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 614
+        lineNumber: 618
       },
       __self: undefined
     }, __jsx("label", {
@@ -4445,14 +4465,14 @@ const Esop = () => {
       className: "form-label",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 615
+        lineNumber: 619
       },
       __self: undefined
     }, "Question 4: Can you list three of the Conference Topics at EuroBrake 2020?"), __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["FieldArray"], {
       name: "question_4_answer",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 621
+        lineNumber: 625
       },
       __self: undefined
     }, ({
@@ -4462,22 +4482,22 @@ const Esop = () => {
       setSubmitting
     }) => _FormSelects__WEBPACK_IMPORTED_MODULE_7__["Q4"].map(question => __jsx("div", {
       key: question.id,
-      className: "task-checkboxField",
+      className: "form-checkboxField",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 626
+        lineNumber: 630
       },
       __self: undefined
     }, __jsx("label", {
       htmlFor: question.name,
-      className: "task-checkboxField-label",
+      className: "form-checkboxField-label",
       style: {
         color: '#134381',
         width: '80%'
       },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 629
+        lineNumber: 633
       },
       __self: undefined
     }, question.id), __jsx("input", {
@@ -4485,7 +4505,7 @@ const Esop = () => {
       onChange: e => {
         e.target.checked ? push(question.value) : values.question_4_answer && remove(values.question_4_answer.value);
       },
-      className: "task-checkboxField-box",
+      className: "form-checkboxField-box",
       style: {
         color: '#134381'
       },
@@ -4495,7 +4515,7 @@ const Esop = () => {
       id: question.id,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 637
+        lineNumber: 641
       },
       __self: undefined
     }), errors.accept && __jsx("label", {
@@ -4508,21 +4528,21 @@ const Esop = () => {
       },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 650
+        lineNumber: 654
       },
       __self: undefined
     }, errors.accept))))), __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_4___default.a, {
       className: "form-title",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 655
+        lineNumber: 659
       },
       __self: undefined
     }, " Additional Information"), __jsx("div", {
-      className: "form-field",
+      className: "form-field_question",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 656
+        lineNumber: 660
       },
       __self: undefined
     }, __jsx("label", {
@@ -4530,33 +4550,27 @@ const Esop = () => {
       className: "form-label",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 657
+        lineNumber: 661
       },
       __self: undefined
     }, "If you have a short video outlining your motivation for applying for ESOP or your interest in the braking industry you can include a YouTube link here:"), __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Field"], {
+      placeholder: "This is optional and won\u2019t affect the judging process.",
       className: "form-input",
       onClick: handleChange,
       value: values.university_address3,
       style: {
-        color: '#134381'
+        color: '#134381',
+        marginTop: '1rem'
       },
       name: "youtube_url",
       component: formik_material_ui__WEBPACK_IMPORTED_MODULE_5__["TextField"],
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 662
+        lineNumber: 666
       },
       __self: undefined
-    }), __jsx("label", {
-      htmlFor: "youtube_url",
-      className: "form-label",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 670
-      },
-      __self: undefined
-    }, "This is optional and won\u2019t affect the judging process.")), __jsx("div", {
-      className: "form-field",
+    })), __jsx("div", {
+      className: "form-field_question",
       __source: {
         fileName: _jsxFileName,
         lineNumber: 677
@@ -4584,7 +4598,7 @@ const Esop = () => {
       setSubmitting
     }) => _FormSelects__WEBPACK_IMPORTED_MODULE_7__["Sessions"].map(session => __jsx("div", {
       key: session.id,
-      className: "task-checkboxField",
+      className: "form-checkboxField",
       __source: {
         fileName: _jsxFileName,
         lineNumber: 688
@@ -4592,7 +4606,7 @@ const Esop = () => {
       __self: undefined
     }, __jsx("label", {
       htmlFor: session.name,
-      className: "task-checkboxField-label",
+      className: "form-checkboxField-label",
       style: {
         color: '#134381',
         width: '80%'
@@ -4602,12 +4616,12 @@ const Esop = () => {
         lineNumber: 691
       },
       __self: undefined
-    }, session.id), console.log(values), __jsx("input", {
+    }, session.id), __jsx("input", {
       checked: values.roundtable && values.roundtable.includes(session.value),
       onChange: e => {
         e.target.checked ? push(session.value) : values.roundtable && remove(values.roundtable.value);
       },
-      className: "task-checkboxField-box",
+      className: "form-checkboxField-box",
       style: {
         color: '#134381'
       },
@@ -4617,7 +4631,7 @@ const Esop = () => {
       id: session.id,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 700
+        lineNumber: 699
       },
       __self: undefined
     }), errors.roundtable && __jsx("label", {
@@ -4630,10 +4644,11 @@ const Esop = () => {
       },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 713
+        lineNumber: 712
       },
       __self: undefined
     }, errors.roundtable)))), values.roundtable && values.roundtable.includes('3CA6AA5A-F3DA-11E8-B5C4-A947D1EF668C') && __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Field"], {
+      placeholder: "Please specify",
       className: "form-input",
       onClick: handleChange,
       value: values.roundtable_other,
@@ -4644,11 +4659,11 @@ const Esop = () => {
       component: formik_material_ui__WEBPACK_IMPORTED_MODULE_5__["TextField"],
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 719
+        lineNumber: 718
       },
       __self: undefined
     })), __jsx("div", {
-      className: "form-field",
+      className: "form-field_question",
       __source: {
         fileName: _jsxFileName,
         lineNumber: 730
@@ -4657,6 +4672,9 @@ const Esop = () => {
     }, __jsx("label", {
       htmlFor: "marketing",
       className: "form-label",
+      style: {
+        marginBottom: '1rem'
+      },
       __source: {
         fileName: _jsxFileName,
         lineNumber: 731
@@ -4673,7 +4691,7 @@ const Esop = () => {
       component: formik_material_ui__WEBPACK_IMPORTED_MODULE_5__["Select"],
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 736
+        lineNumber: 737
       },
       __self: undefined
     }, _FormSelects__WEBPACK_IMPORTED_MODULE_7__["Marketing"].map((option, i) => __jsx("option", {
@@ -4685,21 +4703,23 @@ const Esop = () => {
       value: option.value,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 745
+        lineNumber: 746
       },
       __self: undefined
     }, option.label))), values.marketing === 'E682897E-BACE-11E5-BFDD-7F6E5EAB70CB' && __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Field"], {
+      placeholder: "Please specify",
       className: "form-input",
       onClick: handleChange,
       value: values.marketing_other,
       style: {
-        color: '#134381'
+        color: '#134381',
+        margin: '1rem 0'
       },
       name: "marketing_other",
       component: formik_material_ui__WEBPACK_IMPORTED_MODULE_5__["TextField"],
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 748
+        lineNumber: 749
       },
       __self: undefined
     }), errors.student_level_current && __jsx("label", {
@@ -4712,14 +4732,14 @@ const Esop = () => {
       },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 757
+        lineNumber: 759
       },
       __self: undefined
     }, errors.student_level_current)), __jsx("div", {
       className: "form-field-radio",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 760
+        lineNumber: 762
       },
       __self: undefined
     }, __jsx("label", {
@@ -4727,7 +4747,7 @@ const Esop = () => {
       className: "form-label",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 761
+        lineNumber: 763
       },
       __self: undefined
     }, "Have you participated in any other FISITA student initiatives?"), __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Field"], {
@@ -4740,7 +4760,7 @@ const Esop = () => {
       component: formik_material_ui__WEBPACK_IMPORTED_MODULE_5__["RadioGroup"],
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 766
+        lineNumber: 768
       },
       __self: undefined
     }, __jsx("label", {
@@ -4751,7 +4771,7 @@ const Esop = () => {
       className: "form-label",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 773
+        lineNumber: 775
       },
       __self: undefined
     }, "Yes", __jsx("input", {
@@ -4765,7 +4785,7 @@ const Esop = () => {
       id: "previous_participant_opt_yes",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 778
+        lineNumber: 780
       },
       __self: undefined
     })), __jsx("label", {
@@ -4776,7 +4796,7 @@ const Esop = () => {
       className: "form-label",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 787
+        lineNumber: 789
       },
       __self: undefined
     }, "No", __jsx("input", {
@@ -4790,7 +4810,7 @@ const Esop = () => {
       id: "previous_participant_opt_no",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 792
+        lineNumber: 794
       },
       __self: undefined
     }))), errors.student_level_current && __jsx("label", {
@@ -4803,7 +4823,7 @@ const Esop = () => {
       },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 803
+        lineNumber: 805
       },
       __self: undefined
     }, errors.student_level_current)), __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_4___default.a, {
@@ -4811,7 +4831,7 @@ const Esop = () => {
       className: "form-title",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 805
+        lineNumber: 807
       },
       __self: undefined
     }, "Additional Information"), __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_4___default.a, {
@@ -4819,7 +4839,7 @@ const Esop = () => {
       className: "form-label",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 806
+        lineNumber: 808
       },
       __self: undefined
     }, "Please note that by submitting a registration form for ESOP, you indicate your consent to us passing the personal information you have disclosed to us, including your CV, to the ESOP Sponsor Companies, so that they can contact you with details of career and/or work placement opportunities within their organisations, or to arrange a meeting with you at EuroBrake if you are selected to attend."), __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_4___default.a, {
@@ -4827,39 +4847,39 @@ const Esop = () => {
       className: "form-label",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 807
+        lineNumber: 809
       },
       __self: undefined
     }, "Here at FISITA we take your privacy seriously and will only use your personal information to set up and administer your account and/or membership and to provide the products and services you have requested from us."), __jsx("div", {
-      className: "task-checkboxField",
+      className: "form-checkboxField",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 808
+        lineNumber: 810
       },
       __self: undefined
     }, __jsx("label", {
       htmlFor: "consent_sponsors",
-      className: "task-checkboxField-label",
+      className: "form-checkboxField-label",
       style: {
         color: '#134381',
         width: '80%'
       },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 810
+        lineNumber: 812
       },
       __self: undefined
-    }, "If you do not consent to us passing on your details, please tick here"), __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Field"], {
-      className: "task-checkboxField-box",
+    }, "If you do not consent to us passing on your details, please tick here"), __jsx("input", {
+      className: "form-checkboxField-box",
       style: {
         color: '#134381'
       },
       value: values.consent_sponsors,
       name: "consent_sponsors",
-      component: formik_material_ui__WEBPACK_IMPORTED_MODULE_5__["Checkbox"],
+      type: "checkbox",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 818
+        lineNumber: 820
       },
       __self: undefined
     }), errors.consent_sponsors && __jsx("label", {
@@ -4872,7 +4892,7 @@ const Esop = () => {
       },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 826
+        lineNumber: 827
       },
       __self: undefined
     }, errors.consent_sponsors)), __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_4___default.a, {
@@ -4880,39 +4900,39 @@ const Esop = () => {
       className: "form-label",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 828
+        lineNumber: 829
       },
       __self: undefined
     }, "However, from time to time we would like to contact you by email with details of the following:"), __jsx("div", {
-      className: "task-checkboxField",
+      className: "form-checkboxField",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 829
+        lineNumber: 830
       },
       __self: undefined
     }, __jsx("label", {
       htmlFor: "consent_fiec",
-      className: "task-checkboxField-label",
+      className: "form-checkboxField-label",
       style: {
         color: '#134381',
         width: '80%'
       },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 831
+        lineNumber: 832
       },
       __self: undefined
-    }, "Membership of FISITA International Engineering Community (FIEC)"), __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Field"], {
-      className: "task-checkboxField-box",
+    }, "Membership of FISITA International Engineering Community (FIEC)"), __jsx("input", {
+      className: "form-checkboxField-box",
       style: {
         color: '#134381'
       },
       value: values.consent_fiec,
       name: "consent_fiec",
-      component: formik_material_ui__WEBPACK_IMPORTED_MODULE_5__["Checkbox"],
+      type: "checkbox",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 839
+        lineNumber: 840
       },
       __self: undefined
     }), errors.consent_fiec && __jsx("label", {
@@ -4928,11 +4948,11 @@ const Esop = () => {
         lineNumber: 847
       },
       __self: undefined
-    }, errors.consent_fiec)), " ", __jsx("div", {
-      className: "task-checkboxField",
+    }, errors.consent_fiec)), __jsx("div", {
+      className: "form-checkboxField",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 848
+        lineNumber: 849
       },
       __self: undefined
     }, __jsx("label", {
@@ -4944,20 +4964,20 @@ const Esop = () => {
       },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 850
+        lineNumber: 851
       },
       __self: undefined
-    }, "Career & work placement opportunities via FISITA Work Experience Programme"), __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Field"], {
-      className: "task-checkboxField-box",
+    }, "Career & work placement opportunities via FISITA Work Experience Programme"), __jsx("input", {
+      className: "form-checkboxField-box",
       style: {
         color: '#134381'
       },
       value: values.consent_wep,
       name: "consent_wep",
-      component: formik_material_ui__WEBPACK_IMPORTED_MODULE_5__["Checkbox"],
+      type: "checkbox",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 858
+        lineNumber: 859
       },
       __self: undefined
     }), errors.consent_wep && __jsx("label", {
@@ -4974,7 +4994,7 @@ const Esop = () => {
       },
       __self: undefined
     }, errors.consent_wep)), " ", __jsx("div", {
-      className: "task-checkboxField",
+      className: "form-checkboxField",
       __source: {
         fileName: _jsxFileName,
         lineNumber: 867
@@ -4982,7 +5002,7 @@ const Esop = () => {
       __self: undefined
     }, __jsx("label", {
       htmlFor: "consent_events",
-      className: "task-checkboxField-label",
+      className: "form-checkboxField-label",
       style: {
         color: '#134381',
         width: '80%'
@@ -4992,14 +5012,14 @@ const Esop = () => {
         lineNumber: 869
       },
       __self: undefined
-    }, "Opportunities for students at upcoming FISITA events"), __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Field"], {
-      className: "task-checkboxField-box",
+    }, "Opportunities for students at upcoming FISITA events"), __jsx("input", {
+      className: "form-checkboxField-box",
       style: {
         color: '#134381'
       },
       value: values.consent_events,
       name: "consent_events",
-      component: formik_material_ui__WEBPACK_IMPORTED_MODULE_5__["Checkbox"],
+      type: "checkbox",
       __source: {
         fileName: _jsxFileName,
         lineNumber: 877
@@ -5015,11 +5035,11 @@ const Esop = () => {
       },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 885
+        lineNumber: 884
       },
       __self: undefined
-    }, errors.consent_events)), " ", __jsx("div", {
-      className: "task-checkboxField",
+    }, errors.consent_events)), __jsx("div", {
+      className: "form-checkboxField",
       __source: {
         fileName: _jsxFileName,
         lineNumber: 886
@@ -5027,7 +5047,7 @@ const Esop = () => {
       __self: undefined
     }, __jsx("label", {
       htmlFor: "consent_bursary",
-      className: "task-checkboxField-label",
+      className: "form-checkboxField-label",
       style: {
         color: '#134381',
         width: '80%'
@@ -5037,17 +5057,17 @@ const Esop = () => {
         lineNumber: 888
       },
       __self: undefined
-    }, "Opportunities for funding via FISITA Travel Bursary Scheme"), __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Field"], {
-      className: "task-checkboxField-box",
+    }, "Opportunities for funding via FISITA Travel Bursary Scheme"), __jsx("input", {
+      className: "form-checkboxField-box",
       style: {
         color: '#134381'
       },
       value: values.consent_bursary,
       name: "consent_bursary",
-      component: formik_material_ui__WEBPACK_IMPORTED_MODULE_5__["Checkbox"],
+      type: "checkbox",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 896
+        lineNumber: 895
       },
       __self: undefined
     }), errors.consent_bursary && __jsx("label", {
@@ -5060,39 +5080,39 @@ const Esop = () => {
       },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 904
+        lineNumber: 902
       },
       __self: undefined
-    }, errors.consent_bursary)), " ", __jsx("div", {
-      className: "task-checkboxField",
+    }, errors.consent_bursary)), __jsx("div", {
+      className: "form-checkboxField",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 905
+        lineNumber: 904
       },
       __self: undefined
     }, __jsx("label", {
       htmlFor: "consent_yfia",
-      className: "task-checkboxField-label",
+      className: "form-checkboxField-label",
       style: {
         color: '#134381',
         width: '80%'
       },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 907
+        lineNumber: 906
       },
       __self: undefined
-    }, "Subscription to \u201CYour Future in Automotive\u201D newsletter"), __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Field"], {
-      className: "task-checkboxField-box",
+    }, "Subscription to \u201CYour Future in Automotive\u201D newsletter"), __jsx("input", {
+      className: "form-checkboxField-box",
       style: {
         color: '#134381'
       },
       value: values.consent_yfia,
       name: "consent_yfia",
-      component: formik_material_ui__WEBPACK_IMPORTED_MODULE_5__["Checkbox"],
+      type: "checkbox",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 915
+        lineNumber: 914
       },
       __self: undefined
     }), errors.consent_yfia && __jsx("label", {
@@ -5105,51 +5125,54 @@ const Esop = () => {
       },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 923
+        lineNumber: 921
       },
       __self: undefined
     }, errors.consent_yfia)), __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_4___default.a, {
       gutterBottom: true,
+      style: {},
+      className: "form-label",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 924
+      },
+      __self: undefined
+    }, "Please tick the box(es) above for each purpose you consent to us contacting you about."), __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_4___default.a, {
+      gutterBottom: true,
+      style: {},
       className: "form-label",
       __source: {
         fileName: _jsxFileName,
         lineNumber: 925
       },
       __self: undefined
-    }, "Please tick the box(es) above for each purpose you consent to us contacting you about."), __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_4___default.a, {
-      gutterBottom: true,
-      className: "form-label",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 926
-      },
-      __self: undefined
     }, "For more detailed information, please see our ", __jsx(next_link__WEBPACK_IMPORTED_MODULE_3___default.a, {
       href: "/privacyPolicy",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 926
+        lineNumber: 925
       },
       __self: undefined
     }, __jsx("a", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 926
+        lineNumber: 925
       },
       __self: undefined
     }, "privacy policy."))), __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_4___default.a, {
       gutterBottom: true,
+      style: {},
       className: "form-label",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 927
+        lineNumber: 926
       },
       __self: undefined
     }, "For further details contact Hayley Millar, Education Manager at ", __jsx("a", {
       href: "mailto:h.millar@fisita.com",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 927
+        lineNumber: 926
       },
       __self: undefined
     }, "h.millar@fisita.com.")), __jsx(_Button__WEBPACK_IMPORTED_MODULE_6__["Button"], {
@@ -5158,12 +5181,13 @@ const Esop = () => {
       background: "#134381",
       br: "100rem",
       style: {
-        margin: ".5rem 0"
+        margin: ".5rem 0",
+        color: '#FFF'
       },
       fontSize: "1.7rem",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 930
+        lineNumber: 929
       },
       __self: undefined
     }, "Submit"));
@@ -6017,7 +6041,7 @@ __webpack_require__.r(__webpack_exports__);
 const StyledForm = styled_components__WEBPACK_IMPORTED_MODULE_0___default()(formik__WEBPACK_IMPORTED_MODULE_1__["Form"]).withConfig({
   displayName: "Formstyles__StyledForm",
   componentId: "sc-1mvqi50-0"
-})(["display:flex;flex-flow:column;justify-content:space-between;align-items:center;min-width:100%;.MuiInput-underline:after{color:", ";}.MuiFormHelperText-root{font-size:1.5rem;}.MuiInputBase-root{font-family:", ";font-size:2rem;color:", ";}.form{&-secondary{display:flex;flex-flow:column;justify-content:space-between;align-items:center;min-width:100%;}&-field{margin:1rem 0;width:100%;display:flex;justify-content:space-between;align-items:flex-end;&_action{align-self:flex-end;display:flex;justify-content:flex-end;align-items:flex-end;}}&-label{min-width:33.3%;font-family:", ";font-size:2.6rem;color:", ";}&-input{min-width:66.6%;font-family:", ";font-size:2rem;color:", ";&&_file{width:100%;font-family:", ";font-size:2rem;color:", ";.MuiInput-underline:before{border-bottom:none;}}}&-link{cursor:pointer;font-family:", ";font-size:1.7rem;color:", ";}&-link_bold{cursor:pointer;font-family:", ";color:", ";}&-radio{text-align:end;}&-title{color:", ";font-family:", ";font-size:3rem;align-self:flex-start;margin:2rem 0;}}"], props => props.theme.primary, props => props.theme.MPBoldIt, props => props.theme.primary, props => props.theme.MPLight, props => props.theme.primary, props => props.theme.MPBoldIt, props => props.theme.primary, props => props.theme.MPBoldIt, props => props.theme.primary, props => props.theme.MPBoldIt, props => props.theme.primary, props => props.theme.MPBold, props => props.theme.primary, props => props.theme.primary, props => props.theme.MPSemibold);
+})(["display:flex;flex-flow:column;justify-content:space-between;align-items:center;min-width:100%;a{cursor:pointer;font-family:", ";color:", ";}.MuiInput-underline:after{color:", ";}.MuiFormHelperText-root{font-size:1.5rem;}.MuiInputBase-root{font-family:", ";font-size:2rem;color:", ";}.form{&-secondary{display:flex;flex-flow:column;justify-content:space-between;align-items:center;min-width:100%;}&-radio{margin:2rem 0;align-self:flex-end;text-align:end;}&-field{position:relative;margin:2rem 0;width:100%;display:flex;font-family:", ";justify-content:space-between;&-radio{position:relative;width:100%;display:flex;flex-flow:column;margin:1rem 0;}&-copy{width:100%;display:flex;flex-flow:column;}&_action{align-self:flex-end;display:flex;justify-content:flex-end;align-items:flex-end;}}&-notes{font-family:", ";position:relative;display:flex;flex-flow:column;justify-content:space-between;align-items:center;min-width:100%;&-label{min-width:100%;font-family:", ";font-size:2.6rem;color:", ";}&-input{margin:2rem 0;min-width:100%;min-height:15rem;font-family:", ";font-size:2rem;color:", ";}}&-checkboxField{position:relative;min-width:100%;font-family:", ";font-size:2.6rem;color:", ";display:flex;align-items:center;justify-content:space-between;margin:2rem 0;.MuiIconButton-colorSecondary:hover{background-color:transparent;}.MuiSvgIcon-root{font-size:4rem;}&-box{align-self:flex-end;}}&-field{margin:1rem 0;width:100%;display:flex;justify-content:space-between;align-items:flex-end;&_question{margin:1rem 0;display:flex;flex-flow:column;}&_file{display:flex;flex-flow:column;&-box{width:100%;margin:2rem;display:flex;justify-content:space-between;.MuiInput-underline:before{border-bottom:none;}}}&_action{align-self:flex-end;display:flex;justify-content:flex-end;align-items:flex-end;}}&-label{min-width:33.3%;font-family:", ";font-size:2.6rem;color:", ";}&-input{min-width:66.6%;font-family:", ";font-size:2rem;color:", ";&_question{width:66.66%;align-self:flex-end;margin:1rem 0;}&&_file{width:100%;font-family:", ";font-size:2rem;color:", ";.MuiInput-underline:before{border-bottom:none;}}}&-link{cursor:pointer;font-family:", ";font-size:1.7rem;color:", ";}&-link_bold{cursor:pointer;font-family:", ";color:", ";}&-title{color:", ";font-family:", ";font-size:3rem;align-self:flex-start;margin:2rem 0;}}"], props => props.theme.MPBold, props => props.theme.primary, props => props.theme.primary, props => props.theme.MPBoldIt, props => props.theme.primary, props => props.theme.MPLight, props => props.theme.MPLight, props => props.theme.MPLight, props => props.theme.primary, props => props.theme.MPBoldIt, props => props.theme.primary, props => props.theme.MPLight, props => props.theme.primary, props => props.theme.MPLight, props => props.theme.primary, props => props.theme.MPBoldIt, props => props.theme.primary, props => props.theme.MPBoldIt, props => props.theme.primary, props => props.theme.MPBoldIt, props => props.theme.primary, props => props.theme.MPBold, props => props.theme.primary, props => props.theme.primary, props => props.theme.MPSemibold);
 
 /***/ }),
 
@@ -10818,7 +10842,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
     lineNumber: 11
   },
   __self: undefined
-}, "Technical Program"), __jsx(_components_styles_PageStyles__WEBPACK_IMPORTED_MODULE_4__["StyledPage"], {
+}, "Esop application"), __jsx(_components_styles_PageStyles__WEBPACK_IMPORTED_MODULE_4__["StyledPage"], {
   __source: {
     fileName: _jsxFileName,
     lineNumber: 14
@@ -10840,7 +10864,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 /***/ }),
 
-/***/ 5:
+/***/ 4:
 /*!*********************************!*\
   !*** multi ./pages/tempEsop.js ***!
   \*********************************/
