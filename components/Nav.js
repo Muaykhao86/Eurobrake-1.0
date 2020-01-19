@@ -20,7 +20,7 @@ export default class Nav extends Component {
         super(props)
 
         this.state = {
-            isOpen: true,
+            isOpen: false,
         }
     }
 
