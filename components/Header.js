@@ -21,7 +21,7 @@ const HeaderBar = styled.div`
     }
 `;
 
-const HeaderLogo = styled.img.attrs(props => ({
+export const HeaderLogo = styled.img.attrs(props => ({
     src: "/images/logo.png",
     alt: "Logo"
 }))`max-width: 16.8rem;

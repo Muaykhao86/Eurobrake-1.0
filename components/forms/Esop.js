@@ -5,7 +5,7 @@ import Typography from '@material-ui/core/Typography';
 import { TextField, Select, RadioGroup, CheckboxWithLabel, Checkbox, SimpleFileUpload } from 'formik-material-ui';
 import { Button } from '../Button';
 import { titles, countries, Q1, Q2, Q3, Q4, Marketing, Sessions } from './FormSelects';
-import { AbstractSchema } from './FormControl';
+import { EsopSchema } from './FormControl';
 import { StyledForm } from './Formstyles';
 
 const members = [];
@@ -15,18 +15,20 @@ export const Esop = () => {
     return (
         <Formik
             initialValues={emptyInitial}
-            onSubmit={(values, actions) => {
-                setTimeout(() => {
-                    alert(JSON.stringify(values, null, 2));
-                    actions.setSubmitting(false);
-                }, 1000)
-            }}
+            validationSchema={EsopSchema}
             enableReinitialize
         >
             {({ values, handleChange, setFieldValue, isValidating, validateForm, handleSubmit, errors, isSubmitting }) => {
+
+                const onSubmit = () => {
+                validateForm()
+                  values.__csrf_token = csrf
+                    console.log('submitting', values)
+              }
+
                 return (
                     <StyledForm>
-                        <Typography className="form-title">About you</Typography>
+                        <Typography className="form-title" style={{marginTop: '4rem'}}>About you</Typography>
                         <div className="form-field">
                             <label
                                 htmlFor="label"
@@ -222,13 +224,13 @@ export const Esop = () => {
                                 className="form-label">
                                 Place of birth
                         </label>
-                            <div className="form-input" style={{ display: 'flex', flexFlow: 'column' }}>
+                            <div className="form-input" >
                                 <Field
                                     placeholder="City"
                                     className="form-input"
                                     onClick={handleChange}
                                     value={values.student_jobtitle}
-                                    style={{ color: '#134381', marginBottom: '1rem' }}
+                                    style={{ color: '#134381', marginBottom: '2rem', width: '100%' }}
                                     name="birth_city"
                                     component={TextField}
                                 />
@@ -237,13 +239,13 @@ export const Esop = () => {
                                     className="form-input"
                                     onClick={handleChange}
                                     value={values.student_jobtitle}
-                                    style={{ color: '#134381' }}
+                                    style={{ color: '#134381', width: '100%' }}
                                     name="birth_country"
                                     component={TextField}
                                 />
                             </div>
                         </div>
-                        <Typography className="form-title">Your University or HE Institution</Typography>
+                        <Typography className="form-title" style={{marginTop: '4rem'}}>Your University or HE Institution</Typography>
                         <div className="form-field-radio">
                             <label
                                 htmlFor="label"
@@ -498,10 +500,10 @@ export const Esop = () => {
                                     <option key={i} style={{ fontSize: '1.5rem', cursor: 'pointer' }} value={option.value}>{option.label}</option>)}
                             </Field>
                         </div>
-                        <Typography className="form-title">Your entry</Typography>
+                        <Typography className="form-title" style={{marginTop: '4rem'}}>Your entry</Typography>
                         <div className="form-field_file">
                             {/* REQUIRED AND FILE MUST BE A PDF */}
-                            <Typography  className="form-label" style={{minWidth: '100%'}}>Upload a PDF or Microsoft Word document of your CV/resumé here. Documents must not exceed 2 A4 pages and must be submitted in English.</Typography>
+                            <Typography  className="form-label" style={{minWidth: '100%', fontSize: '2rem'}}>Upload a PDF or Microsoft Word document of your CV/resumé here. Documents must not exceed 2 A4 pages and must be submitted in English.</Typography>
                             <div className="form-field_file-box">
 
                             <label
@@ -523,8 +525,16 @@ export const Esop = () => {
                         <div className="form-notes">
                             <label
                                 htmlFor="label"
-                                className="form-label">
-                                Your personal statement – Tell us why you would like a sponsored student place at EuroBrake 2020 (150–250 words):
+                                className="form-label"
+                                
+                                style={{fontSize: '2rem', marginBottom: '4rem'}}>
+                                Tell us why you would like a sponsored student place at EuroBrake 2020 
+                         </label>
+                            <label
+                                htmlFor="label"
+                                className="form-label"
+                                >
+                                Your personal statement (150–250 words):
                          </label>
                             <Field
                                 className="form-notes-input"
@@ -534,12 +544,15 @@ export const Esop = () => {
                                 name="personal_statement"
                                 component="textarea"
                             />
+                            {errors.personal_statement && <label style={{position: 'absolute', bottom: '2rem', right: '1rem', color: '#ff0000', fontSize: '1.5rem'}}>{errors.personal_statement}</label>}
+                            {errors.personal_statement && values.personal_statement && <label style={{position: 'absolute', bottom: '0', right: '1rem', color: '#ff0000', fontSize: '1.5rem'}}>{'Words' + ' ' + values.personal_statement.match(/[\w\d\’\'-]+/gi).length}</label>}
+                        
                         </div>
-
-
                         <div className="form-field_file">
                             {/* REQUIRED AND FILE MUST BE A PDF */}
-                            <Typography className="form-label">Upload a photo, PDF or Microsoft Word document of a letter or ID card indicating your status as student.</Typography>
+                            <Typography className="form-label"
+                            style={{fontSize: '2rem'}}
+                            >Upload a photo, PDF or Microsoft Word document of a letter or ID card indicating your status as student.</Typography>
                             <div className="form-field_file-box">
 
                             <label
@@ -548,7 +561,7 @@ export const Esop = () => {
                                 Upload proof of your status as student:
                         </label>
                             <Field
-                                className="form-input"
+                                className="form-input_file"
                                 value={values.cv_filename_uploader}
                                 style={{ color: '#134381' }}
                                 name="student_status_filename_uploader"
@@ -615,10 +628,11 @@ export const Esop = () => {
                                     <option key={i} style={{ fontSize: '1.5rem', cursor: 'pointer' }} value={option.value}>{option.label}</option>)}
                             </Field>
                         </div>
-                        <div className="form-field_question" style={{ width: '100%'}}>
+                        <div className="form-field_question" >
                             <label
                                 htmlFor="question_4_answer"
-                                className="form-label">
+                                className="form-label"
+                                style={{marginBottom: '4rem'}}>
                                 Question 4: Can you list three of the Conference Topics at EuroBrake 2020?
                         </label>
 
@@ -650,17 +664,17 @@ export const Esop = () => {
                                                 type="checkbox"
                                                 id={question.id}
                                             />
-
-                                            {errors.accept && <label style={{ position: 'absolute', bottom: '-1rem', right: '1rem', color: '#ff0000', fontSize: '1.5rem' }}>{errors.accept}</label>}
                                         </div>
                                     )))}
                             </FieldArray>
+                            {errors.question_4_answer && <label style={{ position: 'absolute', bottom: '-1rem', right: '0', color: '#ff0000', fontSize: '1.5rem' }}>{errors.question_4_answer}</label>}
                         </div>
                         <Typography className="form-title"> Additional Information</Typography>
                         <div className="form-field_question">
                             <label
                                 htmlFor="youtube_url"
-                                className="form-label">
+                                className="form-label"
+                                style={{fontSize: '2rem'}}>
                                 If you have a short video outlining your motivation for applying for ESOP or your interest in the braking industry you can include a YouTube link here:
                             </label>
                             <Field
@@ -668,7 +682,7 @@ export const Esop = () => {
                                 className="form-input"
                                 onClick={handleChange}
                                 value={values.university_address3}
-                                style={{ color: '#134381' , marginTop: '1rem'}}
+                                style={{ color: '#134381' , margin: '4rem 0', Width: '66.6%'}}
                                 name="youtube_url"
                                 component={TextField}
                             />
@@ -677,8 +691,17 @@ export const Esop = () => {
                         <div className="form-field_question">
                             <label
                                 htmlFor="roundtable"
-                                className="form-label">
-                                ‘Round Table’ sessions will take place as part of the ESOP 2020 programme – providing a unique opportunity for all students to meet with and learn from industry and academia experts. Please leave details below if there are any topics you would like to see discussed in a Round Table session:
+                                className="form-label"
+                                style={{marginBottom: '1rem', fontSize: '2rem'}}
+                                >
+                                ‘Round Table’ sessions will take place as part of the ESOP 2020 programme – providing a unique opportunity for all students to meet with and learn from industry and academia experts. 
+                        </label>
+                            <label
+                                htmlFor="roundtable"
+                                className="form-label"
+                                style={{marginBottom: '3rem', fontSize: '2rem'}}
+                                >
+                                 Please leave details below if there are any topics you would like to see discussed in a Round Table session:
                         </label>
                             <FieldArray
                                 name="roundtable"
@@ -731,11 +754,12 @@ export const Esop = () => {
                             <label
                                 htmlFor="marketing"
                                 className="form-label"
-                                style={{marginBottom: '1rem'}}>
+                                    style={{marginTop: '4rem'}}
+                                >
                                 Where did you hear about the EuroBrake Student Opportunities Programme?
                         </label>
                             <Field
-                                className="form-input"
+                                className="form-input_question"
                                 onClick={handleChange}
                                 value={values.marketing}
                                 style={{ color: '#134381' }}
@@ -804,10 +828,11 @@ export const Esop = () => {
                             </Field>
                             {errors.student_level_current && <label style={{ position: 'absolute', bottom: '-1rem', right: '1rem', color: '#ff0000', fontSize: '1.5rem' }}>{errors.student_level_current}</label>}
                         </div>
-                        <Typography gutterBottom className="form-title">Additional Information</Typography>
-                        <Typography gutterBottom className="form-label">Please note that by submitting a registration form for ESOP, you indicate your consent to us passing the personal information you have disclosed to us, including your CV, to the ESOP Sponsor Companies, so that they can contact you with details of career and/or work placement opportunities within their organisations, or to arrange a meeting with you at EuroBrake if you are selected to attend.</Typography>
-                        <Typography gutterBottom className="form-label">Here at FISITA we take your privacy seriously and will only use your personal information to set up and administer your account and/or membership and to provide the products and services you have requested from us.</Typography>
-                        <div className="form-checkboxField">
+                        <Typography gutterBottom className="form-title" >Additional Information</Typography>
+                        <Typography gutterBottom className="form-label" style={{fontSize: '2rem'}}>Please note that by submitting a registration form for ESOP, you indicate your consent to us passing the personal information you have disclosed to us, including your CV, to the ESOP Sponsor Companies, so that they can contact you with details of career and/or work placement opportunities within their organisations, or to arrange a meeting with you at EuroBrake if you are selected to attend.</Typography>
+                        <Typography gutterBottom className="form-label" style={{fontSize: '2rem'}}>Here at FISITA we take your privacy seriously and will only use your personal information to set up and administer your account and/or membership and to provide the products and services you have requested from us.</Typography>
+                        <div className="form-checkboxField"
+                            style={{margin: '4rem 0'}}>
                             {/* REQUIRED */}
                             <label
                                 htmlFor="consent_sponsors"
@@ -826,7 +851,7 @@ export const Esop = () => {
                             />
                             {errors.consent_sponsors && <label style={{ position: 'absolute', bottom: '-1rem', right: '1rem', color: '#ff0000', fontSize: '1.5rem' }}>{errors.consent_sponsors}</label>}
                         </div>
-                        <Typography gutterBottom className="form-label">However, from time to time we would like to contact you by email with details of the following:</Typography>
+                        <Typography gutterBottom className="form-label" style={{marginBottom: '3rem', fontSize: '2rem'}}>However, from time to time we would like to contact you by email with details of the following:</Typography>
                         <div className="form-checkboxField">
                             {/* REQUIRED */}
                             <label
@@ -901,12 +926,13 @@ export const Esop = () => {
                             />
                             {errors.consent_bursary && <label style={{ position: 'absolute', bottom: '-1rem', right: '1rem', color: '#ff0000', fontSize: '1.5rem' }}>{errors.consent_bursary}</label>}
                         </div> 
-                        <div className="form-checkboxField">
+                        <div className="form-checkboxField"
+                        style={{marginBottom: '4rem'}} >
                             {/* REQUIRED */}
                             <label
                                 htmlFor="consent_yfia"
                                 className="form-checkboxField-label"
-                                style={{ color: '#134381', width: '80%' }}
+                                style={{ color: '#134381', width: '80%'}}
 
                             >
                                 Subscription to “Your Future in Automotive” newsletter
@@ -921,16 +947,23 @@ export const Esop = () => {
                             {errors.consent_yfia && <label style={{ position: 'absolute', bottom: '-1rem', right: '1rem', color: '#ff0000', fontSize: '1.5rem' }}>{errors.consent_yfia}</label>}
                         </div>
 
-                        <Typography gutterBottom style={{}} className="form-label">Please tick the box(es) above for each purpose you consent to us contacting you about.</Typography>
-                        <Typography gutterBottom style={{}} className="form-label">For more detailed information, please see our <Link href="/privacyPolicy"><a>privacy policy.</a></Link></Typography>
-                        <Typography gutterBottom style={{}} className="form-label">For further details contact Hayley Millar, Education Manager at <a href="mailto:h.millar@fisita.com">h.millar@fisita.com.</a></Typography>
+                        <Typography gutterBottom  className="form-label"
+                        style={{fontSize: '2rem'}}
+                        >Please tick the box(es) above for each purpose you consent to us contacting you about.</Typography>
+                        <Typography gutterBottom  className="form-label"
+                        style={{fontSize: '2rem'}}
+                        >For more detailed information, please see our <Link href="/privacyPolicy"><a>privacy policy.</a></Link></Typography>
+                        <Typography gutterBottom  className="form-label"
+                        style={{fontSize: '2rem'}}
+                        >For further details contact Hayley Millar, Education Manager at <a href="mailto:h.millar@fisita.com">h.millar@fisita.com.</a></Typography>
 
 
-                        <Button type="submit"
+                        <Button 
+                            onClick={() => validateForm().then(errors => Object.keys(errors).length === 0 && onSubmit())}
                             bcolor="#134381"
                             background="#134381"
                             br="100rem"
-                            style={{ margin: ".5rem 0", color: '#FFF' }}
+                            style={{ margin: "4rem 0", color: '#FFF' }}
                             fontSize="1.7rem">Submit</Button>
                     </StyledForm>
                 )
@@ -951,7 +984,6 @@ const emptyInitial = {
     student_firstname: '',
     student_lastname: '',
     student_email: '',
-    student_jobtitle: '',
     student_company: '',
     student_address1: '',
     student_address2: '',
@@ -960,17 +992,39 @@ const emptyInitial = {
     student_scp: '',
     student_postal: '',
     student_country: '',
-    student_phone: '',
-    student_fax: '',
     student_membersociety: '',
+    birth_city: '',
+    birth_country: '',
+    student_level_current: '',
+    student_level_seeking: '',
+    university_course: '',
+    university_name: '',
+    university_address1: '',
+    university_address2: '',
+    university_address3: '',
+    university_city: '',
+    university_scp: '',
+    university_postal: '',
     university_country: '',
+    cv_filename_uploader: '',
+    personal_statement: '',
+    student_status_filename_uploader: '',
     question_1_answer: '',
     question_2_answer: '',
     question_3_answer: '',
     question_4_answer: [],
-    marketing: '',
+    youtube_url: '',
     roundtable: [],
+    roundtable_other: '',
+    marketing: '',
+    marketing_other: '',
     previous_participant: '',
+    consent_sponsors: '',
+    consent_fiec: '',
+    consent_wep: '',
+    consent_bursary: '',
+    consent_events: '',
+    consent_yfia: '',
     __csrf_token: ''
 
 }

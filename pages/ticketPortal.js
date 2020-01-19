@@ -32,7 +32,7 @@ const Content = styled.div`
     display: flex;
     /* MOBILE SCROLLING */
      -webkit-overflow-scrolling: touch;
-    overflow: scroll;
+    overflow: auto;
     justify-content: center;
     margin-top: 5rem;
     width: 70vw;

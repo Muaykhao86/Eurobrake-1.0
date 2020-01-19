@@ -7,13 +7,14 @@ import Bounce from 'react-reveal/Bounce';
 
 
 const StyledDates = styled.div`
-    max-width: ${props => props.MW || '33rem'};
-    min-height: ${props => props.MW ||'33rem'};
+   max-width: ${props => props.MW || '33rem'};
+   max-height: ${props => props.MH ||'33rem'};
     background-color: ${props => props.theme.primary};
     padding: 2rem;
     
 
     display: flex;
+    flex: 1 1 auto;
     flex-flow: column;
     justify-content: space-between;
 
@@ -46,21 +47,21 @@ const StyledDates = styled.div`
 
 `;
 
-export function Dates() {
+export function Dates(props) {
     return (
         
-        <StyledDates>
+        <StyledDates MW={props.MW} MH={props.MH}>
             <Typography gutterBottom as="h1" className="Dates-title" >Important Dates</Typography>
-            <Typography gutterBottom as="h1"  className="Dates-date">26 January 2020</Typography>
-            <Typography gutterBottom as="p"  className="Dates-text">Deadline for submission of review ready papers</Typography>
-            <Typography gutterBottom as="h1"  className="Dates-date">12 April 2020 </Typography>
-            <Typography gutterBottom as="p" className="Dates-text" >Final deadline for modifications to technical papers</Typography>
-            <Typography gutterBottom as="h1"  className="Dates-date">01 May 2020</Typography>
-            <Typography gutterBottom as="p" className="Dates-text" >Deadline for draft oral-only presentations, posters and presentations associated with a technical paper</Typography>
-            <Typography gutterBottom as="h1"  className="Dates-date">01 May 2020</Typography>
-            <Typography gutterBottom as="p"  className="Dates-text">Deadline for speakers to register</Typography>
-            <Typography gutterBottom as="h1"  className="Dates-date">24 May 2020</Typography>
-            <Typography gutterBottom as="p" className="Dates-text" >Deadline to upload PPTs for on-site presentation</Typography>
+            <Typography  as="h1"  className="Dates-date">26 January 2020</Typography>
+            <Typography  as="p"  className="Dates-text">Deadline for submission of review ready papers</Typography>
+            <Typography  as="h1"  className="Dates-date">12 April 2020 </Typography>
+            <Typography  as="p" className="Dates-text" >Final deadline for modifications to technical papers</Typography>
+            <Typography  as="h1"  className="Dates-date">01 May 2020</Typography>
+            <Typography  as="p" className="Dates-text" >Deadline for draft oral-only presentations, posters and presentations associated with a technical paper</Typography>
+            <Typography  as="h1"  className="Dates-date">01 May 2020</Typography>
+            <Typography  as="p"  className="Dates-text">Deadline for speakers to register</Typography>
+            <Typography  as="h1"  className="Dates-date">24 May 2020</Typography>
+            <Typography  as="p" className="Dates-text" >Deadline to upload PPTs for on-site presentation</Typography>
         </StyledDates>  
     )
 }

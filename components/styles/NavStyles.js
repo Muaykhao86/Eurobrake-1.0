@@ -9,7 +9,7 @@ export const NavStyles = styled.div`
     z-index: 200;
     a{  
         font-family: ${props => props.theme.MPBold};
-        font-size: 3rem;
+        font-size: 2.6rem;
         color: ${props => props.sticky ?
         props.theme.white : props.theme.secondary};
         margin: 1rem;
@@ -119,6 +119,7 @@ export const HiddenContainer = styled.div`
     right: -15rem;
     top: 0;
     display:flex;
+    flex-flow: row wrap;
     padding: 2rem;
     margin: 2rem;
     transition: all .8s ease-in-out;
@@ -134,23 +135,16 @@ export const HiddenContainer = styled.div`
         and (-webkit-min-device-pixel-ratio: 2) { 
     min-height: 30rem;                 
 }
-         @media only screen 
-        and (max-device-width: 500px) 
-        and (-webkit-min-device-pixel-ratio: 2) { 
-    flex-flow: column;        
-    margin: 0;
-}
-
-
-   .Nav-title{
-        font-size: 4rem;
-            @media only screen 
-        and (max-device-width: 1200px) 
-        and (-webkit-min-device-pixel-ratio: 2) { 
-    font-size: 2.3rem;               
-}
-
-    }   
+     
+    .nav_container-1{
+        margin-top: 5rem;
+        height: 100%;
+        display: flex;
+        flex-flow: row;
+        flex: 1 1 auto;
+        align-items: center;
+    }
+  
 
     .Nav-title{
         margin-left: 1rem;
@@ -158,59 +152,39 @@ export const HiddenContainer = styled.div`
     
     .nav_box-1{
         flex: 1 1 auto;
-        border: 2px solid white;
+        /* border: 10px solid white; */
         padding: 2rem;
         margin: 2rem;
         /* background-color: orangered; */
         display: flex;
         flex-flow: column;
+        justify-content: flex-start;
         align-items: flex-start;
     }
     .nav_box-2{
+        max-height: 70rem;
+        
         flex: 1 1 auto;
-        border: 2px solid white;
+        /* border: 10px solid white; */
         padding: 2rem;
         margin: 2rem;
         display: flex;
         flex-flow: column;
+        justify-content: center;
         align-items: flex-start;
     }
     .nav_box-3{
+
+        min-height: 70rem;
+        /* min-height: 85rem; */
+        width: 30rem;
         flex: 1 1 auto;
-        border: 2px solid white;
-        padding: 2rem;
         margin: 2rem;
-        /* background-color: goldenrod; */
          display: flex;
         flex-flow: column;
+        align-items: center;
         justify-content: space-between;
     }
-    .nav_box-4{
-        flex: 1 1 auto;
-        border: 2px solid white;
-        padding: 2rem;
-        margin: 2rem;
-        /* background-color: sandybrown; */
-        min-height: 15rem;
-        min-width: 15rem;
-    }
-    .nav_box-5{
-        flex: 1 1 auto;
-        border: 2px solid white;
-        padding: 2rem;
-        margin: 2rem;
-        
-        /* background-color: sandybrown; */
-        min-height: 15rem;
-        min-width: 15rem;
-    }
-    .nav_box-6{
-        border: 2px solid white;
-        padding: 2rem;
-        margin: 2rem;
-        
-        min-height: 15rem;
-        min-width: 15rem;
-    }
+    
 
 `;
