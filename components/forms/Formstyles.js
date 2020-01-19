@@ -9,11 +9,7 @@ export const StyledForm = styled(Form)`
         align-items: center;
         min-width: 100%;
 
-       a{
-            cursor: pointer;
-            font-family: ${props => props.theme.MPBold};
-            color: ${props => props.theme.primary};
-        }
+    
  
      .MuiInput-underline:before {
                color: ${props => props.theme.primary};
