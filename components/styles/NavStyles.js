@@ -48,14 +48,14 @@ export const Burger = styled.div`
     display: flex;
     align-items: center;
     z-index: 300;
-    transition: all 10s linear;
+    transition: all .6s linear;
     /* background-color: salmon; */
       @media only screen 
         and (max-device-width: 768px) 
         and (-webkit-min-device-pixel-ratio: 2) { 
     width: 8rem;  
     height: 8rem;  
-    left:${props => props.isOpen ? '2rem' : '-6rem'};
+    left:${props => props.isOpen ? '2rem' : '-8rem'};
     top: ${props => props.isOpen ? '-2rem' : '-4rem'};
 }
 `;

@@ -83,58 +83,93 @@ const StyledCell = styled(TableCell)`
      font-size: 2rem;
     color: ${props => props.theme.primary};
   }
+  &&.StyledCell-sesh{
+    font-family: ${props => props.theme.MPLight};
+     font-size: 2rem;
+    color: ${props => props.theme.primary};
+  }
 
 
 `;
 
-export default function ExpandTable() {
+export default function TechExpandTable() {
   const [expanded, setExpanded] = React.useState('panel1');
 
   const handleChange = panel => (event, newExpanded) => {
     setExpanded(newExpanded ? panel : false);
   };
 
-  function createData(days, Early, Full, walk) {
-    return { days, Early, Full, walk };
+  function createData(time, session, sessionName) {
+    return { time, session, sessionName };
   }
 
   
 
-  const delegateRows = [
-    createData('3 x days', 940, 1180),
-    createData('2 x days', 640, 800),
-    createData('1 x days', 320, 400),
+  const tuesday = [
+    createData('10:00–12:00', 'Student Introductory Lecture', ''),
+    createData('10:30–12:30', 'Registration and light lunch', ''),
+    createData('13:00–13:15', 'Opening Ceremony', ''),
+    createData('14:00–14:20', 'Break', ''),
+    createData('14:40–16:00', 'Technical Sessions', ''),
+    createData('', '', 'Brake Components in Transition'),
+    createData('', '', 'Creep-groan Noise'),
+    createData('', '', 'Electrification of Commercial Vehicles and Effects on Pneumatic Braking Systems'),
+    createData('16:00–16:20',  'Break', ''),
+    createData('16:20–18:00', 'Technical Sessions', ''),
+     createData('', '', 'Fundamentals: Big Data Analytics and Uncertainty'),
+    createData('', '', 'Innovative Raw Materials'),
+    createData('', '', 'Innovative Technologies and Functions in Electronic Brake Systems'),
+    createData('18:00–19:30',  'Welcome Reception', ''),
+
   ];
-  const delegateMemberRows = [
-    createData('3 x days', 846, 1000),
-    createData('2 x days', 576, 720),
-    createData('1 x days', 288, 360),
+  const wednesday = [
+    createData('08:30–10:10', 'Technical Sessions', ''),
+     createData('', '', 'New Brake Control Strategies'),
+    createData('', '', 'Fundamentals: Friction, Wear and Brake Emissions'),
+    createData('', '', 'Squeal Noise: Simulation and Test Methods'),
+    createData('10:10–10:40', 'Break', ''),
+    createData('10:40–12:20', 'Technical Sessions', ''),
+     createData('', '', 'Brake Emissions: Macroscopic Level Part 1'),
+    createData('', '', 'Friction Induced Vibrations'),
+    createData('',  '','Innovative Brake System Design Approaches'),
+    createData('12:20–13:50', 'Lunch', ''),
+    createData('12:30–13:30', 'Open Seminar', ''),
+    createData('13:50–15:30', 'Technical Sessions', ''),
+     createData('', '', 'Advanced Formulations'),
+    createData('', '', 'Brake Emissions: Macroscopic Level Part 2'),
+    createData('', '', 'Poster Session'),
+    createData('15:30–16:00', 'Break', ''),
+    createData('16:00–17:40', 'Technical Sessions', ''),
+     createData('', '', 'Brake Emissions: Microscopic Level'),
+    createData('', '', 'Long Life Friction Materials: Opportunities and Challenges'),
+    createData('', '', 'NVH challenges of Brakes in Electric Vehicles'),
+    createData('18:00–19:00', 'Drinks Reception', ''),
+    createData('19:00–22:30', 'EuroBrake Dinner including Awards', ''),
+   
   ];
-  const studentRows = [
-    createData('3 x days', 170, 170),
-    createData('2 x days', 170, 170),
-    createData('1 x days', 170, 170),
+  const thursday = [
+    createData('08:30–10:10', 'Technical Sessions', ''),
+     createData('', '',  'Environmental Friendly Formulations'),
+    createData('', '',  'Progressive Disc Coatings'),
+    createData('', '',  'Virtual Development of Electronic Brake Systems'),
+    createData('10:10–10:40', 'Break', ''),
+    createData('10:40–12:20', 'Technical Sessions', ''),
+     createData('', '',  'Innovative Brake Rotors'),
+    createData('', '',  'Strategy Panel'),
+    createData('12:20–13:20', 'Lunch', ''),
+    createData('13:20–15:00', 'Technical Sessions', ''),
+     createData('', '',  'Advanced Manufacturing with integrated Quality Control Friction Material'),
+    createData('', '',  'Challenges Around the Physical Characterisation of Brake Discs: Theory and Metrology'),
+    createData('',  '', 'Latest Developments in Motorsport and Motorbike Brake Systems'),
+    createData('15:00–15:30', 'Break', ''),
+    createData('15:30–17:10', 'Technical Sessions', ''),
+     createData('',  '', 'Artificial Intelligence and Machine Learning'),
+    createData('', '',  'Fundamentals of Friction'),
+    createData('', '',  'International Regulations and Standards - ISO Project Review'),
+    createData('17:10–18:10', 'Farewell Drinks Reception', ''),
+    
   ];
-  const expoRows = [
-    createData('3 x days', 220, 250, 280),
-    createData('2 x days', 150, 180, 200),
-    createData('1 x days', 70, 100, 150),
-  ];
-  const academicRows = [
-    createData('3 x days', 658, 826),
-    createData('2 x days', 448, 560),
-    createData('1 x days', 224, 280),
-  ];
-  const academicSessionRows = [
-    createData('3 x days', 348, 348),
-    createData('2 x days', 237, 237),
-    createData('1 x days', 118, 118),
-  ];
-  const sessionRows = [
-    createData('3 x days', 517, 517),
-    createData('2 x days', 352, 352),
-    createData('1 x days', 176, 176),
-  ];
+  
 
   return (
     <div>
@@ -142,186 +177,74 @@ export default function ExpandTable() {
         <ExpansionPanelSummary aria-controls="panel1d-content" id="panel1d-header">
           <div className="table_summary-box">
             {expanded === 'panel1' ? <RemoveCircle className="table-icon" /> : <AddCircle className="table-icon" />}
-            <Typography className="table-heading">Delegate</Typography>
+            <Typography className="table-heading">Tuesday 2 June</Typography>
           </div>
           {expanded !== 'panel1' ?
-            <Typography className="table-sub">Click to reveal prices</Typography>
+            <Typography className="table-sub">Click to reveal timings and sessions</Typography>
             : null}
         </ExpansionPanelSummary>
         <ExpansionPanelDetails>
           <Table className="" aria-label="simple table">
             <TableBody>
-              {delegateRows.map(row => (
-                <TableRow key={row.days}>
-                  <StyledCell component="th" scope="row" className="StyledCell-title">{row.days}</StyledCell>
-                  <StyledCell align="left" className="StyledCell-title">Earlybird price</StyledCell>
-                  <StyledCell align="left" className="StyledCell-data">&euro; {row.Early.toFixed(2)}</StyledCell>
-                  <StyledCell align="left" className="StyledCell-title">Full Price</StyledCell>
-                  <StyledCell align="left" className="StyledCell-data">&euro; {row.Full.toFixed(2)}</StyledCell>
+              {tuesday.map(row => (
+                <TableRow key={row.time}>
+                  <StyledCell component="th" scope="row" className="StyledCell-title">{row.time}</StyledCell>
+                  {row.sessionName ? <StyledCell align="left" className="StyledCell-sesh">{row.sessionName}</StyledCell> : <StyledCell align="left" className="StyledCell-data">{row.session}</StyledCell>}
                 </TableRow>
               ))}
             </TableBody>
           </Table>
         </ExpansionPanelDetails>
       </ExpansionPanel>
+     
       <ExpansionPanel square expanded={expanded === 'panel2'} onChange={handleChange('panel2')} style={{ boxShadow: '0 0 0 0 rgba(0,0,0,0)' }}>
         <ExpansionPanelSummary aria-controls="panel2d-content" id="panel2d-header">
           <div className="table_summary-box">
             {expanded === 'panel2' ? <RemoveCircle className="table-icon" /> : <AddCircle className="table-icon" />}
-            <Typography className="table-heading">Delegate - Member Society</Typography>
+            <Typography className="table-heading">Wednesday 3 June</Typography>
           </div>
           {expanded !== 'panel2' ?
-            <Typography className="table-sub">Click to reveal prices</Typography>
+            <Typography className="table-sub">Click to reveal timimgs and sessions</Typography>
             : null}
         </ExpansionPanelSummary>
         <ExpansionPanelDetails>
            <Table className="" aria-label="simple table">
             <TableBody>
-              {delegateMemberRows.map(row => (
-                <TableRow key={row.days}>
-                  <StyledCell component="th" scope="row" className="StyledCell-title">{row.days}</StyledCell>
-                  <StyledCell align="left" className="StyledCell-title">Earlybird price</StyledCell>
-                  <StyledCell align="left" className="StyledCell-data">&euro; {row.Early.toFixed(2)}</StyledCell>
-                  <StyledCell align="left" className="StyledCell-title">Full Price</StyledCell>
-                  <StyledCell align="left" className="StyledCell-data">&euro; {row.Full.toFixed(2)}</StyledCell>
+              {wednesday.map(row => (
+                <TableRow key={row.time}>
+                   <StyledCell component="th" scope="row" className="StyledCell-title">{row.time}</StyledCell>
+                    {row.sessionName ? <StyledCell align="left" className="StyledCell-sesh">{row.sessionName}</StyledCell> : <StyledCell align="left" className="StyledCell-data">{row.session}</StyledCell>}
                 </TableRow>
               ))}
             </TableBody>
           </Table>
         </ExpansionPanelDetails>
       </ExpansionPanel>
+      
       <ExpansionPanel square expanded={expanded === 'panel3'} onChange={handleChange('panel3')} style={{ boxShadow: '0 0 0 0 rgba(0,0,0,0)' }}>
         <ExpansionPanelSummary aria-controls="panel3d-content" id="panel3d-header">
           <div className="table_summary-box">
             {expanded === 'panel3' ? <RemoveCircle className="table-icon" /> : <AddCircle className="table-icon" />}
-            <Typography className="table-heading">Student</Typography>
+            <Typography className="table-heading">Thursday 4 June</Typography>
           </div>
           {expanded !== 'panel3' ?
-            <Typography className="table-sub">Click to reveal prices</Typography>
+            <Typography className="table-sub">Click to reveal timings and sessions</Typography>
             : null}
         </ExpansionPanelSummary>
         <ExpansionPanelDetails>
             <Table className="" aria-label="simple table">
             <TableBody>
-              {studentRows.map(row => (
-                <TableRow key={row.days}>
-                  <StyledCell component="th" scope="row" className="StyledCell-title">{row.days}</StyledCell>
-                  <StyledCell align="left" className="StyledCell-title">Earlybird price</StyledCell>
-                  <StyledCell align="left" className="StyledCell-data">&euro; {row.Early.toFixed(2)}</StyledCell>
-                  <StyledCell align="left" className="StyledCell-title">Full Price</StyledCell>
-                  <StyledCell align="left" className="StyledCell-data">&euro; {row.Full.toFixed(2)}</StyledCell>
+              {thursday.map(row => (
+                <TableRow key={row.time}>
+                  <StyledCell component="th" scope="row" className="StyledCell-title">{row.time}</StyledCell>
+                  {row.sessionName ? <StyledCell align="left" className="StyledCell-sesh">{row.sessionName}</StyledCell> : <StyledCell align="left" className="StyledCell-data">{row.session}</StyledCell>}
                 </TableRow>
               ))}
             </TableBody>
           </Table>
         </ExpansionPanelDetails>
       </ExpansionPanel>
-      <ExpansionPanel square expanded={expanded === 'panel4'} onChange={handleChange('panel4')} style={{ boxShadow: '0 0 0 0 rgba(0,0,0,0)' }}>
-        <ExpansionPanelSummary aria-controls="panel4d-content" id="panel4d-header">
-          <div className="table_summary-box">
-            {expanded === 'panel4' ? <RemoveCircle className="table-icon" /> : <AddCircle className="table-icon" />}
-            <Typography className="table-heading">Expo Only</Typography>
-          </div>
-          {expanded !== 'panel4' ?
-            <Typography className="table-sub">Click to reveal prices</Typography>
-            : null}
-        </ExpansionPanelSummary>
-        <ExpansionPanelDetails>
-            <Table className="" aria-label="simple table">
-            <TableBody>
-              {expoRows.map(row => (
-                <TableRow key={row.days}>
-                  <StyledCell component="th" scope="row" className="StyledCell-title">{row.days}</StyledCell>
-                  <StyledCell align="left" className="StyledCell-title">Earlybird price</StyledCell>
-                  <StyledCell align="left" className="StyledCell-data">&euro; {row.Early.toFixed(2)}</StyledCell>
-                  <StyledCell align="left" className="StyledCell-title">Full Price</StyledCell>
-                  <StyledCell align="left" className="StyledCell-data">&euro; {row.Full.toFixed(2)}</StyledCell>
-                  <StyledCell align="left" className="StyledCell-title">Walk in</StyledCell>
-                  <StyledCell align="left" className="StyledCell-data">&euro; {row.walk.toFixed(2)}</StyledCell>
-                </TableRow>
-              ))}
-            </TableBody>
-          </Table>
-        </ExpansionPanelDetails>
-      </ExpansionPanel>
-      <ExpansionPanel square expanded={expanded === 'panel5'} onChange={handleChange('panel5')} style={{ boxShadow: '0 0 0 0 rgba(0,0,0,0)' }}>
-        <ExpansionPanelSummary aria-controls="panel5d-content" id="panel5d-header">
-          <div className="table_summary-box">
-            {expanded === 'panel5' ? <RemoveCircle className="table-icon" /> : <AddCircle className="table-icon" />}
-            <Typography className="table-heading">Academic</Typography>
-          </div>
-          {expanded !== 'panel5' ?
-            <Typography className="table-sub">Click to reveal prices</Typography>
-            : null}
-        </ExpansionPanelSummary>
-        <ExpansionPanelDetails>
-            <Table className="" aria-label="simple table">
-            <TableBody>
-              {academicRows.map(row => (
-                <TableRow key={row.days}>
-                  <StyledCell component="th" scope="row" className="StyledCell-title">{row.days}</StyledCell>
-                  <StyledCell align="left" className="StyledCell-title">Earlybird price</StyledCell>
-                  <StyledCell align="left" className="StyledCell-data">&euro; {row.Early.toFixed(2)}</StyledCell>
-                  <StyledCell align="left" className="StyledCell-title">Full Price</StyledCell>
-                  <StyledCell align="left" className="StyledCell-data">&euro; {row.Full.toFixed(2)}</StyledCell>
-                </TableRow>
-              ))}
-            </TableBody>
-          </Table>
-        </ExpansionPanelDetails>
-      </ExpansionPanel>
-      <ExpansionPanel square expanded={expanded === 'panel6'} onChange={handleChange('panel6')} style={{ boxShadow: '0 0 0 0 rgba(0,0,0,0)' }}>
-        <ExpansionPanelSummary aria-controls="panel6d-content" id="panel6d-header">
-          <div className="table_summary-box">
-            {expanded === 'panel6' ? <RemoveCircle className="table-icon" /> : <AddCircle className="table-icon" />}
-            <Typography className="table-heading">Academic Session - Chair/Speaker/Author</Typography>
-          </div>
-          {expanded !== 'panel6' ?
-            <Typography className="table-sub">Click to reveal prices</Typography>
-            : null}
-        </ExpansionPanelSummary>
-        <ExpansionPanelDetails>
-            <Table className="" aria-label="simple table">
-            <TableBody>
-              {academicSessionRows.map(row => (
-                <TableRow key={row.days}>
-                  <StyledCell component="th" scope="row" className="StyledCell-title">{row.days}</StyledCell>
-                  <StyledCell align="left" className="StyledCell-title">Earlybird price</StyledCell>
-                  <StyledCell align="left" className="StyledCell-data">&euro; {row.Early.toFixed(2)}</StyledCell>
-                  <StyledCell align="left" className="StyledCell-title">Full Price</StyledCell>
-                  <StyledCell align="left" className="StyledCell-data">&euro; {row.Full.toFixed(2)}</StyledCell>
-                </TableRow>
-              ))}
-            </TableBody>
-          </Table>
-        </ExpansionPanelDetails>
-      </ExpansionPanel>
-      <ExpansionPanel square expanded={expanded === 'panel7'} onChange={handleChange('panel7')} style={{ boxShadow: '0 0 0 0 rgba(0,0,0,0)' }}>
-        <ExpansionPanelSummary aria-controls="panel7d-content" id="panel7d-header">
-          <div className="table_summary-box">
-            {expanded === 'panel7' ? <RemoveCircle className="table-icon" /> : <AddCircle className="table-icon" />}
-            <Typography className="table-heading">Session - Chair/Speaker/Author</Typography>
-          </div>
-          {expanded !== 'panel7' ?
-            <Typography className="table-sub">Click to reveal prices</Typography>
-            : null}
-        </ExpansionPanelSummary>
-        <ExpansionPanelDetails>
-            <Table className="" aria-label="simple table">
-            <TableBody>
-              {sessionRows.map(row => (
-                <TableRow key={row.days}>
-                  <StyledCell component="th" scope="row" className="StyledCell-title">{row.days}</StyledCell>
-                  <StyledCell align="left" className="StyledCell-title">Earlybird price</StyledCell>
-                  <StyledCell align="left" className="StyledCell-data">&euro; {row.Early.toFixed(2)}</StyledCell>
-                  <StyledCell align="left" className="StyledCell-title">Full Price</StyledCell>
-                  <StyledCell align="left" className="StyledCell-data">&euro; {row.Full.toFixed(2)}</StyledCell>
-                </TableRow>
-              ))}
-            </TableBody>
-          </Table>
-        </ExpansionPanelDetails>
-      </ExpansionPanel>
+   
     </div>
   );
 }

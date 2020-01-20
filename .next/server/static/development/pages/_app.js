@@ -1113,69 +1113,70 @@ class Nav extends react__WEBPACK_IMPORTED_MODULE_1__["Component"] {
       href: "/welcome",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 49
+        lineNumber: 48
       },
       __self: this
     }, __jsx("a", {
       onClick: this.handleClick,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 49
+        lineNumber: 48
       },
       __self: this
     }, "Welcome to Barcelona")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
       href: "/exhibitors",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 50
+        lineNumber: 49
       },
       __self: this
     }, __jsx("a", {
       onClick: this.handleClick,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 50
+        lineNumber: 49
       },
       __self: this
     }, "Exhibitors List")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
       href: "/exhibitorsRegistration",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 51
+        lineNumber: 50
       },
       __self: this
     }, __jsx("a", {
       onClick: this.handleClick,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 51
+        lineNumber: 50
       },
       __self: this
     }, "Delegate Registration")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
-      href: "",
+      href: "/technicalProgram",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 52
-      },
-      __self: this
-    }, __jsx("a", {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 52
-      },
-      __self: this
-    }, "Technical Program (comming soon)")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
-      href: "/studentArea",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 53
+        lineNumber: 51
       },
       __self: this
     }, __jsx("a", {
       onClick: this.handleClick,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 53
+        lineNumber: 51
+      },
+      __self: this
+    }, "Technical Program")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
+      href: "/studentArea",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 52
+      },
+      __self: this
+    }, __jsx("a", {
+      onClick: this.handleClick,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 52
       },
       __self: this
     }, "Testing"))), __jsx("div", {
@@ -1185,14 +1186,14 @@ class Nav extends react__WEBPACK_IMPORTED_MODULE_1__["Component"] {
       },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 56
+        lineNumber: 55
       },
       __self: this
     }, __jsx(_Dates__WEBPACK_IMPORTED_MODULE_7__["Dates"], {
       MW: "35rem",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 57
+        lineNumber: 56
       },
       __self: this
     })))), __jsx(_styles_NavStyles__WEBPACK_IMPORTED_MODULE_5__["Burger"], {
@@ -1200,7 +1201,7 @@ class Nav extends react__WEBPACK_IMPORTED_MODULE_1__["Component"] {
       onClick: this.handleClick,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 66
+        lineNumber: 65
       },
       __self: this
     }, __jsx(_styles_NavStyles__WEBPACK_IMPORTED_MODULE_5__["TopBun"], {
@@ -1208,7 +1209,7 @@ class Nav extends react__WEBPACK_IMPORTED_MODULE_1__["Component"] {
       sticky: this.props.sticky,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 67
+        lineNumber: 66
       },
       __self: this
     })));
@@ -1803,7 +1804,7 @@ const Rotate = styled_components__WEBPACK_IMPORTED_MODULE_0___default()(_BaseAni
 const Burger = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({
   displayName: "NavStyles__Burger",
   componentId: "sc-1ltvdnj-2"
-})(["position:absolute;top:-2rem;left:-4rem;margin:0 1rem;width:4rem;height:4rem;cursor:pointer;display:flex;align-items:center;z-index:300;transition:all 10s linear;@media only screen  and (max-device-width:768px)  and (-webkit-min-device-pixel-ratio:2){width:8rem;height:8rem;left:", ";top:", ";}"], props => props.isOpen ? '2rem' : '-6rem', props => props.isOpen ? '-2rem' : '-4rem');
+})(["position:absolute;top:-2rem;left:-4rem;margin:0 1rem;width:4rem;height:4rem;cursor:pointer;display:flex;align-items:center;z-index:300;transition:all .6s linear;@media only screen  and (max-device-width:768px)  and (-webkit-min-device-pixel-ratio:2){width:8rem;height:8rem;left:", ";top:", ";}"], props => props.isOpen ? '2rem' : '-8rem', props => props.isOpen ? '-2rem' : '-4rem');
 const trans = {
   up: 'translateY(1.2rem)',
   stay: 'translateY(0)',

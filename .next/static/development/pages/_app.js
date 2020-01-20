@@ -1185,69 +1185,70 @@ function (_Component) {
         href: "/welcome",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 49
+          lineNumber: 48
         },
         __self: this
       }, __jsx("a", {
         onClick: this.handleClick,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 49
+          lineNumber: 48
         },
         __self: this
       }, "Welcome to Barcelona")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_8___default.a, {
         href: "/exhibitors",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 50
+          lineNumber: 49
         },
         __self: this
       }, __jsx("a", {
         onClick: this.handleClick,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 50
+          lineNumber: 49
         },
         __self: this
       }, "Exhibitors List")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_8___default.a, {
         href: "/exhibitorsRegistration",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 51
+          lineNumber: 50
         },
         __self: this
       }, __jsx("a", {
         onClick: this.handleClick,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 51
+          lineNumber: 50
         },
         __self: this
       }, "Delegate Registration")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_8___default.a, {
-        href: "",
+        href: "/technicalProgram",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 52
-        },
-        __self: this
-      }, __jsx("a", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 52
-        },
-        __self: this
-      }, "Technical Program (comming soon)")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_8___default.a, {
-        href: "/studentArea",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 53
+          lineNumber: 51
         },
         __self: this
       }, __jsx("a", {
         onClick: this.handleClick,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 53
+          lineNumber: 51
+        },
+        __self: this
+      }, "Technical Program")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_8___default.a, {
+        href: "/studentArea",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 52
+        },
+        __self: this
+      }, __jsx("a", {
+        onClick: this.handleClick,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 52
         },
         __self: this
       }, "Testing"))), __jsx("div", {
@@ -1257,14 +1258,14 @@ function (_Component) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 56
+          lineNumber: 55
         },
         __self: this
       }, __jsx(_Dates__WEBPACK_IMPORTED_MODULE_13__["Dates"], {
         MW: "35rem",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 57
+          lineNumber: 56
         },
         __self: this
       })))), __jsx(_styles_NavStyles__WEBPACK_IMPORTED_MODULE_11__["Burger"], {
@@ -1272,7 +1273,7 @@ function (_Component) {
         onClick: this.handleClick,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 66
+          lineNumber: 65
         },
         __self: this
       }, __jsx(_styles_NavStyles__WEBPACK_IMPORTED_MODULE_11__["TopBun"], {
@@ -1280,7 +1281,7 @@ function (_Component) {
         sticky: this.props.sticky,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 67
+          lineNumber: 66
         },
         __self: this
       })));
@@ -1859,8 +1860,8 @@ var Rotate = Object(styled_components__WEBPACK_IMPORTED_MODULE_0__["default"])(_
 var Burger = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
   displayName: "NavStyles__Burger",
   componentId: "sc-1ltvdnj-2"
-})(["position:absolute;top:-2rem;left:-4rem;margin:0 1rem;width:4rem;height:4rem;cursor:pointer;display:flex;align-items:center;z-index:300;transition:all 10s linear;@media only screen  and (max-device-width:768px)  and (-webkit-min-device-pixel-ratio:2){width:8rem;height:8rem;left:", ";top:", ";}"], function (props) {
-  return props.isOpen ? '2rem' : '-6rem';
+})(["position:absolute;top:-2rem;left:-4rem;margin:0 1rem;width:4rem;height:4rem;cursor:pointer;display:flex;align-items:center;z-index:300;transition:all .6s linear;@media only screen  and (max-device-width:768px)  and (-webkit-min-device-pixel-ratio:2){width:8rem;height:8rem;left:", ";top:", ";}"], function (props) {
+  return props.isOpen ? '2rem' : '-8rem';
 }, function (props) {
   return props.isOpen ? '-2rem' : '-4rem';
 });

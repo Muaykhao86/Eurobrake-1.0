@@ -45,11 +45,10 @@ export default class Nav extends Component {
                             <Link href="/exhibitorsArea"><a onClick={this.handleClick}>Exhibitors Area</a></Link>
                             <Link href="/esop"><a onClick={this.handleClick}>Student Opportunities Programme</a></Link>
                             <Link href="/exhibitAndSponsor"><a onClick={this.handleClick}>Exhibition And Sponsorship</a></Link>
-                            {/* <Typography gutterBottom className="Nav-title">Quick Links</Typography> */}
                             <Link href="/welcome"><a onClick={this.handleClick}>Welcome to Barcelona</a></Link>
                             <Link href="/exhibitors"><a onClick={this.handleClick}>Exhibitors List</a></Link>
                             <Link href="/exhibitorsRegistration"><a onClick={this.handleClick}>Delegate Registration</a></Link>
-                            <Link href=""><a >Technical Program (comming soon)</a></Link>
+                            <Link href="/technicalProgram"><a onClick={this.handleClick}>Technical Program</a></Link>
                             <Link href="/studentArea" ><a onClick={this.handleClick}>Testing</a></Link>
                         </div>
        
