@@ -1243,7 +1243,7 @@ const theme = {
   MPLightIt: 'MyriadPro-LightIt',
   MPIt: 'MyriadPro-It',
   MPBlack: 'MyriadPro-Black',
-  heroHeightSml: '50vh',
+  heroHeightSml: '30vh',
   heroHeightBig: '100vh',
   laptopWidth: '65%',
   mobileWidth: '80%',

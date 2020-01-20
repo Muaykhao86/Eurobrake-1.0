@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 4);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -1474,7 +1474,7 @@ const StyledHero = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div.
 const StyledText = styled_components__WEBPACK_IMPORTED_MODULE_1___default()(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_2___default.a).withConfig({
   displayName: "HeroSection__StyledText",
   componentId: "sc-1rt21yv-1"
-})(["position:absolute;z-index:10;top:", ";@media only screen  and (max-device-width:768px)  and (-webkit-min-device-pixel-ratio:2){top:", ";}align-self:center;width:", ";line-height:", ";color:", ";text-align:center;text-shadow:0px 3px 50px #0000008C;&&.MuiTypography-body1{font-size:", ";font-family:", ";line-height:1;}"], props => props.t || '26rem', props => props.t || '14rem', props => props.max || props.theme.minWidth, props => props.LH || '1', props => props.theme.white, props => props.fs || '12rem', props => props.theme.MPBlack);
+})(["position:absolute;z-index:10;top:", ";@media only screen  and (max-device-width:768px)  and (-webkit-min-device-pixel-ratio:2){top:", ";}align-self:center;width:", ";line-height:", ";color:", ";text-align:center;text-shadow:0px 3px 50px #0000008C;&&.MuiTypography-body1{font-size:", ";font-family:", ";line-height:1;}"], props => props.t || '26rem', props => props.t || '14rem', props => props.max || '100%', props => props.LH || '1', props => props.theme.white, props => props.fs || '12rem', props => props.theme.MPBlack);
 function HeroSection(props) {
   const {
     t,
@@ -2055,7 +2055,7 @@ const theme = {
   MPLightIt: 'MyriadPro-LightIt',
   MPIt: 'MyriadPro-It',
   MPBlack: 'MyriadPro-Black',
-  heroHeightSml: '50vh',
+  heroHeightSml: '30vh',
   heroHeightBig: '100vh',
   laptopWidth: '65%',
   mobileWidth: '80%',
@@ -2701,7 +2701,7 @@ const Overlay = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div.wit
 const Container = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div.withConfig({
   displayName: "StyledCarousel__Container",
   componentId: "zmlu3k-1"
-})(["width:100%;height:80vh;@media only screen  and (max-device-width:768px)  and (-webkit-min-device-pixel-ratio:2){height:", ";}display:flex;position:relative;background-color:black;"], props => props.h || props.theme.heroHeightSml);
+})(["width:100%;height:80vh;.react-reveal{height:100%;}@media only screen  and (max-device-width:768px)  and (-webkit-min-device-pixel-ratio:2){height:", ";}display:flex;position:relative;background-color:black;"], props => props.h || props.theme.heroHeightSml);
 const StyledSlide = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.img.withConfig({
   displayName: "StyledCarousel__StyledSlide",
   componentId: "zmlu3k-2"
@@ -2712,7 +2712,7 @@ const CarouselUI = ({
 }) => __jsx(Container, {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 44
+    lineNumber: 48
   },
   __self: undefined
 }, children);
@@ -2722,7 +2722,7 @@ function StyledCarousel() {
   return __jsx(Overlay, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 49
+      lineNumber: 53
     },
     __self: this
   }, __jsx(Carousel, {
@@ -2732,41 +2732,45 @@ function StyledCarousel() {
     ,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 51
+      lineNumber: 55
     },
     __self: this
   }, __jsx(react_reveal_Slide__WEBPACK_IMPORTED_MODULE_3___default.a, {
     ssr: true,
     left: true,
+    style: {
+      height: '100%'
+    },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 52
+      lineNumber: 56
     },
     __self: this
   }, __jsx(StyledSlide, {
-    style: {},
     srcSet: "/images/pic1.png",
     alt: "EuroBrake Greating",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 53
+      lineNumber: 57
     },
     __self: this
   })), __jsx(react_reveal_Slide__WEBPACK_IMPORTED_MODULE_3___default.a, {
     ssr: true,
     left: true,
+    style: {
+      height: '100%'
+    },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 55
+      lineNumber: 59
     },
     __self: this
   }, __jsx(StyledSlide, {
-    style: {},
     srcSet: "/images/barcelona.png",
     alt: "EuroBrake Greating",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 56
+      lineNumber: 60
     },
     __self: this
   }))));
@@ -7672,6 +7676,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 /* harmony default export */ __webpack_exports__["default"] = (() => __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx(_components_HeroSection__WEBPACK_IMPORTED_MODULE_9__["default"], {
   cara: true,
+  max: "90%",
   src: "/images/barcelona.png",
   __source: {
     fileName: _jsxFileName,
@@ -7681,49 +7686,49 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 }, "EuroBrake 2020"), __jsx(_components_styles_HomeStyles__WEBPACK_IMPORTED_MODULE_2__["StyledContainer"], {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 22
+    lineNumber: 23
   },
   __self: undefined
 }, __jsx(_components_Dates__WEBPACK_IMPORTED_MODULE_10__["FixedDates"], {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 23
+    lineNumber: 24
   },
   __self: undefined
 }), __jsx(_components_AboutSection__WEBPACK_IMPORTED_MODULE_3__["default"], {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 24
+    lineNumber: 25
   },
   __self: undefined
 }), __jsx(_components_LocationSection__WEBPACK_IMPORTED_MODULE_4__["default"], {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 25
+    lineNumber: 26
   },
   __self: undefined
 }), __jsx(_components_AttendeesSection__WEBPACK_IMPORTED_MODULE_5__["default"], {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 26
+    lineNumber: 27
   },
   __self: undefined
 }), __jsx(_components_exhibitors_ExhibitionSection__WEBPACK_IMPORTED_MODULE_6__["default"], {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 27
+    lineNumber: 28
   },
   __self: undefined
 }), __jsx(_components_StudentSection__WEBPACK_IMPORTED_MODULE_7__["default"], {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 28
+    lineNumber: 29
   },
   __self: undefined
 }), __jsx(_components_AuthorSection__WEBPACK_IMPORTED_MODULE_8__["default"], {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 29
+    lineNumber: 30
   },
   __self: undefined
 }))));
@@ -7746,7 +7751,7 @@ const winWidth = () => {
 
 /***/ }),
 
-/***/ 4:
+/***/ 3:
 /*!******************************!*\
   !*** multi ./pages/index.js ***!
   \******************************/

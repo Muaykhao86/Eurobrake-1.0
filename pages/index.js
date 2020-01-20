@@ -15,6 +15,7 @@ export default () => (
     <>       
         <HeroSection 
          cara
+         max="90%"
          src="/images/barcelona.png" 
          >
             EuroBrake 2020

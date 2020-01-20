@@ -15,6 +15,10 @@ overflow: hidden;
 const Container = styled.div`
 width: 100%;
 height: 80vh;
+
+.react-reveal{
+    height: 100%;
+}
  @media only screen 
         and (max-device-width: 768px) 
         and (-webkit-min-device-pixel-ratio: 2) {
@@ -24,8 +28,8 @@ display: flex;
 position: relative;
 
 /* background-position: center; */
-background-color: black;
 /* object-fit: cover; */
+background-color: black;
 `;
 
 const StyledSlide = styled.img`
@@ -49,11 +53,11 @@ export default function StyledCarousel() {
         <Overlay>
        
         <Carousel   count={10} defaultWait={3000} /*wait for 1000 milliseconds*/>
-            <Slide ssr left >
-                <StyledSlide style={{}} srcSet="/images/pic1.png" alt="EuroBrake Greating"/> 
+            <Slide ssr left style={{height: '100%'}}>
+                <StyledSlide  srcSet="/images/pic1.png" alt="EuroBrake Greating"/> 
             </Slide>
-            <Slide ssr left>
-                <StyledSlide style={{}} srcSet="/images/barcelona.png" alt="EuroBrake Greating"/> 
+            <Slide ssr left style={{height: '100%'}}>
+                <StyledSlide  srcSet="/images/barcelona.png" alt="EuroBrake Greating"/> 
             </Slide>
         </Carousel>
        
