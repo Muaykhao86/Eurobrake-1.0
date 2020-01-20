@@ -68,7 +68,7 @@ export const AcceptPoster = (props) => {
                                 <label
                                     style={{ margin: '1rem' }}
                                     htmlFor="label"
-                                    className="task-label">
+                                    className="task-label-radio">
                                          Yes, I will make a poster presentation
                                         <input
                                         onChange={handleChange}                                        
@@ -82,7 +82,7 @@ export const AcceptPoster = (props) => {
                                 <label
                                     style={{ margin: '1rem' }}
                                     htmlFor="label"
-                                    className="task-label">
+                                    className="task-label-radio">
                                     No, please withdraw my paper from EuroBrake 2020
                                         <input
                                     style={{ margin: '1rem' }}

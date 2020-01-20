@@ -262,7 +262,7 @@ export const Esop = () => {
                                 <label
                                     style={{ margin: '1rem' }}
                                     htmlFor="label"
-                                    className="form-label">
+                                    className="form-label-radio">
                                     None
                                         <input
                                         onChange={handleChange}
@@ -276,7 +276,7 @@ export const Esop = () => {
                                 <label
                                     style={{ margin: '1rem' }}
                                     htmlFor="label"
-                                    className="form-label">
+                                    className="form-label-radio">
                                     Bachelor or equivalent
                                         <input
                                         style={{ margin: '1rem' }}
@@ -290,7 +290,7 @@ export const Esop = () => {
                                 <label
                                     style={{ margin: '1rem' }}
                                     htmlFor="label"
-                                    className="form-label">
+                                    className="form-label-radio">
                                     Master or equivalent
                                         <input
                                         style={{ margin: '1rem' }}
@@ -320,7 +320,7 @@ export const Esop = () => {
                                 <label
                                     style={{ margin: '1rem' }}
                                     htmlFor="label"
-                                    className="form-label">
+                                    className="form-label-radio">
                                     Bachelor or equivalent
                                         <input
                                         style={{ margin: '1rem' }}
@@ -334,7 +334,7 @@ export const Esop = () => {
                                 <label
                                     style={{ margin: '1rem' }}
                                     htmlFor="label"
-                                    className="form-label">
+                                    className="form-label-radio">
                                     Master or equivalent
                                         <input
                                         style={{ margin: '1rem' }}
@@ -348,7 +348,7 @@ export const Esop = () => {
                                 <label
                                     style={{ margin: '1rem' }}
                                     htmlFor="label"
-                                    className="form-label">
+                                    className="form-label-radio">
                                     PhD. or equivalent
                                         <input
                                         onChange={handleChange}
@@ -589,6 +589,8 @@ export const Esop = () => {
                                 {Q1.map((option, i) =>
                                     <option key={i} style={{ fontSize: '1.5rem', cursor: 'pointer' }} value={option.value}>{option.label}</option>)}
                             </Field>
+                            {errors.question_1_answer && <label style={{ position: 'absolute', bottom: '-1rem', right: '1rem', color: '#ff0000', fontSize: '1.5rem' }}>{errors.question_1_answer}</label>}
+
                         </div>
 
                         <div className="form-field_question">
@@ -608,6 +610,7 @@ export const Esop = () => {
                                 {Q2.map((option, i) =>
                                     <option key={i} style={{ fontSize: '1.5rem', cursor: 'pointer' }} value={option.value}>{option.label}</option>)}
                             </Field>
+                            {errors.question_2_answer && <label style={{ position: 'absolute', bottom: '-1rem', right: '1rem', color: '#ff0000', fontSize: '1.5rem' }}>{errors.question_2_answer}</label>}
                         </div>
 
                         <div className="form-field_question">
@@ -627,6 +630,8 @@ export const Esop = () => {
                                 {Q3.map((option, i) =>
                                     <option key={i} style={{ fontSize: '1.5rem', cursor: 'pointer' }} value={option.value}>{option.label}</option>)}
                             </Field>
+                            {errors.question_3_answer && <label style={{ position: 'absolute', bottom: '-1rem', right: '1rem', color: '#ff0000', fontSize: '1.5rem' }}>{errors.question_3_answer}</label>}
+
                         </div>
                         <div className="form-field_question" >
                             <label
@@ -799,7 +804,7 @@ export const Esop = () => {
                                 <label
                                     style={{ margin: '1rem' }}
                                     htmlFor="previous_participant_opt_yes"
-                                    className="form-label">
+                                    className="form-label-radio">
                                     Yes
                                         <input
                                         onChange={handleChange}
@@ -813,7 +818,7 @@ export const Esop = () => {
                                 <label
                                     style={{ margin: '1rem' }}
                                     htmlFor="previous_participant_opt_no"
-                                    className="form-label">
+                                    className="form-label-radio">
                                     No
                                         <input
                                         style={{ margin: '1rem' }}

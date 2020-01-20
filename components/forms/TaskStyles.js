@@ -38,11 +38,11 @@ export const StyledTask = styled(Form)`
         font-family: ${props => props.theme.MPLight};
         font-size: 2rem;
 
-        
          
          &-radio{
-            /* text-align: end; */
-            align-self: flex-start;
+            text-align: end;
+            align-content: flex-end;
+            align-self: flex-end;
            
         }
 
@@ -84,7 +84,10 @@ export const StyledTask = styled(Form)`
             justify-content: space-between;
 
             &-radio{
+                text-align: end;
                 position: relative;
+            align-items: flex-end;
+                align-content: flex-end;
                 width: 100%;
                display: flex;
                flex-flow: column;
@@ -137,6 +140,13 @@ export const StyledTask = styled(Form)`
             font-family: ${props => props.theme.MPLight};
             font-size: 2.6rem;
             color: ${props => props.theme.primary};
+
+            &-radio{
+            font-family: ${props => props.theme.MPLight};
+            font-size: 2.6rem;
+            color: ${props => props.theme.primary};
+                align-self: flex-end;
+            }
         }
         &-input{
             min-width: 66.6%;

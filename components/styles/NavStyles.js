@@ -36,6 +36,7 @@ export const Rotate = styled(BaseAnimation)`
     transform-origin: center center;
 `;
 
+
 export const Burger = styled.div`
     position: absolute;
     top:  -2rem;

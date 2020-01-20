@@ -25,7 +25,7 @@ export default () => (
         Complete your task
     </HeroSection>
     <StyledPage>
-            <Paper/>
+            <Poster/>
     </StyledPage>
     </>
 )

@@ -89,7 +89,7 @@ export const PitchVideo = (props) => {
                                 <label
                                     style={{ margin: '1rem' }}
                                     htmlFor="label"
-                                    className="task-label">
+                                    className="task-label-radio">
                                     Yes, I grant permission for my presentation to be included
                                         <input
                                         onChange={handleChange}                                        
@@ -103,7 +103,7 @@ export const PitchVideo = (props) => {
                                 <label
                                     style={{ margin: '1rem' }}
                                     htmlFor="label"
-                                    className="task-label">
+                                    className="task-label-radio">
                                     No, I do not grant permission
                                         <input
                                     style={{ margin: '1rem' }}

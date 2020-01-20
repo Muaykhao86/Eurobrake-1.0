@@ -70,7 +70,7 @@ export default () => (
             <Typography className="Esop">The deadline for applications is<span className="Esop-bold"> Monday 3rd February.</span></Typography>
             <Typography className="Esop">If you have any questions please contact <span className="Esop-bold"><a href="mailto:h.millar@fisita.com">Hayley Millar</a></span>, Education Manager at FISITA.</Typography>
             <FixedDates />
-            <Esop />
+            <Esop/>
         </StyledPage>
     </>
 

@@ -353,7 +353,7 @@ export const AbstractForm = (props) => {
                                  className="form-input"
                                  onClick={handleChange}
                                  value={values.abstract}
-                                 style={{ color: '#134381' }}
+                                 style={{ color: '#134381' , minHeight: '15rem'}}
                                  name="abstract"
                                  component="textarea"
                              />

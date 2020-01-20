@@ -44,7 +44,6 @@ export const StyledForm = styled(Form)`
           &-radio{
             margin: 2rem 0;
             align-self: flex-end;
-            text-align: end;
            
         }
         
@@ -73,6 +72,7 @@ export const StyledForm = styled(Form)`
                 flex-flow: column; 
 
             &-box{
+                    position: relative;
                 width: 100%;
                 margin: 4rem 0;
                 display: flex;
@@ -169,6 +169,14 @@ export const StyledForm = styled(Form)`
             font-family: ${props => props.theme.MPLight};
             font-size: 2.6rem;
             color: ${props => props.theme.primary};
+
+            &-radio{
+                text-align: end;
+                 font-family: ${props => props.theme.MPLight};
+            font-size: 2.6rem;
+            color: ${props => props.theme.primary};
+
+            }
         }
         &-input{
             align-self: flex-end;
@@ -184,6 +192,7 @@ export const StyledForm = styled(Form)`
             }
 
             &_file{
+            
                 width: 100%;
                  font-family: ${props => props.theme.MPBoldIt};
                  font-size: 2rem;
