@@ -984,18 +984,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/assertThisInitialized */ "./node_modules/@babel/runtime-corejs2/helpers/esm/assertThisInitialized.js");
 /* harmony import */ var _babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/inherits */ "./node_modules/@babel/runtime-corejs2/helpers/esm/inherits.js");
 /* harmony import */ var _babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/defineProperty */ "./node_modules/@babel/runtime-corejs2/helpers/esm/defineProperty.js");
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral */ "./node_modules/@babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_9__);
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
-/* harmony import */ var _material_ui_core__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @material-ui/core */ "./node_modules/@material-ui/core/esm/index.js");
-/* harmony import */ var _styles_NavStyles__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./styles/NavStyles */ "./components/styles/NavStyles.js");
-/* harmony import */ var _Button__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./Button */ "./components/Button.js");
-/* harmony import */ var _Dates__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./Dates */ "./components/Dates.js");
-/* harmony import */ var _Header__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./Header */ "./components/Header.js");
-
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
+/* harmony import */ var _material_ui_core__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @material-ui/core */ "./node_modules/@material-ui/core/esm/index.js");
+/* harmony import */ var _styles_NavStyles__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./styles/NavStyles */ "./components/styles/NavStyles.js");
+/* harmony import */ var _Button__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./Button */ "./components/Button.js");
+/* harmony import */ var _Dates__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./Dates */ "./components/Dates.js");
+/* harmony import */ var _Header__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./Header */ "./components/Header.js");
 
 
 
@@ -1004,17 +1002,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var _jsxFileName = "/mnt/c/Users/D.Hardiman/desktop/eurobrake/components/Nav.js";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement;
-
-function _templateObject() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_7__["default"])(["max-width: 40rem;\n    cursor: pointer;\n"]);
-
-  _templateObject = function _templateObject() {
-    return data;
-  };
-
-  return data;
-}
+var __jsx = react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement;
 
 
 
@@ -1023,13 +1011,15 @@ function _templateObject() {
 
 
 
-
-var NavLogo = styled_components__WEBPACK_IMPORTED_MODULE_10__["default"].img.attrs(function (props) {
+var NavLogo = styled_components__WEBPACK_IMPORTED_MODULE_9__["default"].img.attrs(function (props) {
   return {
     src: "/images/logo.png",
     alt: "Logo"
   };
-})(_templateObject());
+}).withConfig({
+  displayName: "Nav__NavLogo",
+  componentId: "r7d7s0-0"
+})(["max-width:40rem;cursor:pointer;"]);
 
 var Nav =
 /*#__PURE__*/
@@ -1052,7 +1042,7 @@ function (_Component) {
     });
 
     _this.state = {
-      isOpen: true
+      isOpen: false
     };
     return _this;
   }
@@ -1060,20 +1050,20 @@ function (_Component) {
   Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__["default"])(Nav, [{
     key: "render",
     value: function render() {
-      return __jsx(_styles_NavStyles__WEBPACK_IMPORTED_MODULE_12__["NavStyles"], {
+      return __jsx(_styles_NavStyles__WEBPACK_IMPORTED_MODULE_11__["NavStyles"], {
         __source: {
           fileName: _jsxFileName,
           lineNumber: 33
         },
         __self: this
-      }, __jsx(_styles_NavStyles__WEBPACK_IMPORTED_MODULE_12__["HiddenNavBG"], {
+      }, __jsx(_styles_NavStyles__WEBPACK_IMPORTED_MODULE_11__["HiddenNavBG"], {
         isOpen: this.state.isOpen,
         __source: {
           fileName: _jsxFileName,
           lineNumber: 34
         },
         __self: this
-      }), __jsx(_styles_NavStyles__WEBPACK_IMPORTED_MODULE_12__["HiddenContainer"], {
+      }), __jsx(_styles_NavStyles__WEBPACK_IMPORTED_MODULE_11__["HiddenContainer"], {
         isOpen: this.state.isOpen,
         __source: {
           fileName: _jsxFileName,
@@ -1107,7 +1097,7 @@ function (_Component) {
           lineNumber: 40
         },
         __self: this
-      }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_9___default.a, {
+      }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_8___default.a, {
         href: "/",
         __source: {
           fileName: _jsxFileName,
@@ -1121,7 +1111,7 @@ function (_Component) {
           lineNumber: 41
         },
         __self: this
-      }, "Home")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_9___default.a, {
+      }, "Home")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_8___default.a, {
         href: "/about",
         __source: {
           fileName: _jsxFileName,
@@ -1135,7 +1125,7 @@ function (_Component) {
           lineNumber: 42
         },
         __self: this
-      }, "About")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_9___default.a, {
+      }, "About")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_8___default.a, {
         href: "/authorsArea",
         __source: {
           fileName: _jsxFileName,
@@ -1149,7 +1139,7 @@ function (_Component) {
           lineNumber: 43
         },
         __self: this
-      }, "Authors Area")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_9___default.a, {
+      }, "Authors Area")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_8___default.a, {
         href: "/exhibitorsArea",
         __source: {
           fileName: _jsxFileName,
@@ -1163,7 +1153,7 @@ function (_Component) {
           lineNumber: 44
         },
         __self: this
-      }, "Exhibitors Area")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_9___default.a, {
+      }, "Exhibitors Area")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_8___default.a, {
         href: "/esop",
         __source: {
           fileName: _jsxFileName,
@@ -1177,7 +1167,7 @@ function (_Component) {
           lineNumber: 45
         },
         __self: this
-      }, "Student Opportunities Programme")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_9___default.a, {
+      }, "Student Opportunities Programme")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_8___default.a, {
         href: "/exhibitAndSponsor",
         __source: {
           fileName: _jsxFileName,
@@ -1191,7 +1181,7 @@ function (_Component) {
           lineNumber: 46
         },
         __self: this
-      }, "Exhibition And Sponsorship")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_9___default.a, {
+      }, "Exhibition And Sponsorship")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_8___default.a, {
         href: "/welcome",
         __source: {
           fileName: _jsxFileName,
@@ -1205,7 +1195,7 @@ function (_Component) {
           lineNumber: 48
         },
         __self: this
-      }, "Welcome to Barcelona")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_9___default.a, {
+      }, "Welcome to Barcelona")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_8___default.a, {
         href: "/exhibitors",
         __source: {
           fileName: _jsxFileName,
@@ -1219,7 +1209,7 @@ function (_Component) {
           lineNumber: 49
         },
         __self: this
-      }, "Exhibitors List")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_9___default.a, {
+      }, "Exhibitors List")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_8___default.a, {
         href: "/exhibitorsRegistration",
         __source: {
           fileName: _jsxFileName,
@@ -1233,7 +1223,7 @@ function (_Component) {
           lineNumber: 50
         },
         __self: this
-      }, "Delegate Registration")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_9___default.a, {
+      }, "Delegate Registration")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_8___default.a, {
         href: "",
         __source: {
           fileName: _jsxFileName,
@@ -1246,7 +1236,7 @@ function (_Component) {
           lineNumber: 51
         },
         __self: this
-      }, "Technical Program (comming soon)")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_9___default.a, {
+      }, "Technical Program (comming soon)")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_8___default.a, {
         href: "/studentArea",
         __source: {
           fileName: _jsxFileName,
@@ -1270,21 +1260,21 @@ function (_Component) {
           lineNumber: 55
         },
         __self: this
-      }, __jsx(_Dates__WEBPACK_IMPORTED_MODULE_14__["Dates"], {
+      }, __jsx(_Dates__WEBPACK_IMPORTED_MODULE_13__["Dates"], {
         MW: "35rem",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 56
         },
         __self: this
-      }), __jsx(next_link__WEBPACK_IMPORTED_MODULE_9___default.a, {
+      }), __jsx(next_link__WEBPACK_IMPORTED_MODULE_8___default.a, {
         href: "/ticketPortal",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 57
         },
         __self: this
-      }, __jsx(_Button__WEBPACK_IMPORTED_MODULE_13__["Button"], {
+      }, __jsx(_Button__WEBPACK_IMPORTED_MODULE_12__["Button"], {
         onClick: this.handleClick,
         style: {
           border: 'none',
@@ -1299,7 +1289,7 @@ function (_Component) {
           lineNumber: 58
         },
         __self: this
-      }, "BOOK NOW"))))), __jsx(_styles_NavStyles__WEBPACK_IMPORTED_MODULE_12__["Burger"], {
+      }, "BOOK NOW"))))), __jsx(_styles_NavStyles__WEBPACK_IMPORTED_MODULE_11__["Burger"], {
         isOpen: this.state.isOpen,
         onClick: this.handleClick,
         __source: {
@@ -1307,7 +1297,7 @@ function (_Component) {
           lineNumber: 65
         },
         __self: this
-      }, __jsx(_styles_NavStyles__WEBPACK_IMPORTED_MODULE_12__["TopBun"], {
+      }, __jsx(_styles_NavStyles__WEBPACK_IMPORTED_MODULE_11__["TopBun"], {
         isOpen: this.state.isOpen,
         sticky: this.props.sticky,
         __source: {
@@ -1320,7 +1310,7 @@ function (_Component) {
   }]);
 
   return Nav;
-}(react__WEBPACK_IMPORTED_MODULE_8__["Component"]);
+}(react__WEBPACK_IMPORTED_MODULE_7__["Component"]);
 
 
 
@@ -1935,7 +1925,7 @@ var HiddenNavBG = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.
 var HiddenContainer = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
   displayName: "NavStyles__HiddenContainer",
   componentId: "sc-1ltvdnj-5"
-})(["position:absolute;right:-15rem;top:0;display:flex;flex-flow:row wrap;padding:2rem;margin:2rem;transition:all .8s ease-in-out;opacity:", ";transform:", ";min-width:90vw;min-height:90vh;@media only screen  and (max-device-width:768px)  and (-webkit-min-device-pixel-ratio:2){min-height:30rem;}.nav_container-1{margin-top:5rem;height:100%;display:flex;flex-flow:row;flex:1 1 auto;align-items:center;}.Nav-title{margin-left:1rem;}.nav_box-1{flex:1 1 auto;padding:2rem;margin:2rem;display:flex;flex-flow:column;justify-content:flex-start;align-items:flex-start;}.nav_box-2{max-height:70rem;flex:1 1 auto;padding:2rem;margin:2rem;display:flex;flex-flow:column;justify-content:center;align-items:flex-start;}.nav_box-3{min-height:70rem;width:30rem;flex:1 1 auto;margin:2rem;display:flex;flex-flow:column;align-items:center;justify-content:space-between;}"], function (props) {
+})(["position:absolute;right:-15rem;top:0;display:flex;flex-flow:row wrap;padding:2rem;margin:2rem;transition:all .8s ease-in-out;opacity:", ";transform:", ";min-width:90vw;min-height:90vh;.nav_container-1{margin-top:5rem;height:100%;display:flex;flex-flow:row;flex:1 1 auto;align-items:center;}.Nav-title{margin-left:1rem;}.nav_box-1{flex:1 1 auto;padding:2rem;margin:2rem;display:flex;flex-flow:column;justify-content:flex-start;align-items:flex-start;}.nav_box-2{max-height:70rem;flex:1 1 auto;padding:2rem;margin:2rem;display:flex;flex-flow:column;justify-content:center;align-items:flex-start;}.nav_box-3{min-height:70rem;width:30rem;flex:1 1 auto;margin:2rem;display:flex;flex-flow:column;align-items:center;justify-content:space-between;}"], function (props) {
   return props.isOpen ? '1' : '0';
 }, function (props) {
   return props.isOpen ? null : 'translateX(-250rem)';

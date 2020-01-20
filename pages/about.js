@@ -126,7 +126,6 @@ const StyledProfile = styled.div`
 export default () => (
     <>
         <HeroSection
-            fs="10rem"
             max="57%"
         >
             About EuroBrake

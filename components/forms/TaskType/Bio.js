@@ -45,6 +45,7 @@ export const Bio = (props) => {
                 const onSubmit = () => {
                   values.__csrf_token = csrf
                     console.log('submitting', values)
+                    SendForm({values, url, csrf})
               }
                 return (
                     <StyledTask>

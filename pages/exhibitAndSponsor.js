@@ -139,7 +139,6 @@ const StyledQuote = styled.div`
 export default () => (
     <>
         <HeroSection
-            t="30rem"
             max="55%"
             src="/images/BarClip.png"
         >

@@ -4,7 +4,7 @@ import Typography from '@material-ui/core/Typography';
 import { Formik,  Field, } from 'formik';
 import { TextField, SimpleFileUpload, CheckboxWithLabel, Checkbox} from 'formik-material-ui';
 import { Button } from '../../Button';
-import { SendForm } from '../FormActions';
+import { SendFile } from '../FormActions';
 import { StyledTask } from '../TaskStyles';
 import {PPTSchema} from '../TaskControl';
 
@@ -50,6 +50,7 @@ export const PPT = (props) => {
                 const onSubmit = () => {
                   values.__csrf_token = csrf
                     console.log('submitting', values)
+                    SendFile({values, url, csrf})
               }
               console.log(errors)
                 return (

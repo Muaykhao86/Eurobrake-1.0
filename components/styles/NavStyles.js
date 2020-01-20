@@ -130,11 +130,11 @@ export const HiddenContainer = styled.div`
     min-width: 90vw;
     min-height: 90vh;
     /* border: 100px white solid; */
-         @media only screen 
+         /* @media only screen 
         and (max-device-width: 768px) 
         and (-webkit-min-device-pixel-ratio: 2) { 
     min-height: 30rem;                 
-}
+} */
      
     .nav_container-1{
         margin-top: 5rem;
