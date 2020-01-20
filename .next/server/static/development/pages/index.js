@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 4);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -1353,7 +1353,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 const HeaderBar = styled_components__WEBPACK_IMPORTED_MODULE_3___default.a.div.withConfig({
   displayName: "Header__HeaderBar",
   componentId: "zfe6h7-0"
-})(["color:white;position:fixed;background-color:", ";min-width:100%;height:10rem;display:flex;justify-content:flex-end;align-items:center;z-index:100;.logo{margin-left:10rem;margin-right:auto;}"], props => props.sticky ? "#134381" : "transparent");
+})(["color:white;position:fixed;background-color:", ";min-width:100%;height:10rem;display:flex;justify-content:flex-end;align-items:center;z-index:100;.logo{margin-left:10rem;margin-right:auto;}"], props => props.theme.primary);
 const HeaderLogo = styled_components__WEBPACK_IMPORTED_MODULE_3___default.a.img.attrs(props => ({
   src: "/images/logo.png",
   alt: "Logo"
@@ -1432,21 +1432,7 @@ class Header extends react__WEBPACK_IMPORTED_MODULE_1__["Component"] {
         lineNumber: 95
       },
       __self: this
-    }), __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
-      href: "/ticketPortal",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 96
-      },
-      __self: this
-    }, __jsx(HeaderButton, {
-      sticky: this.state.sticky,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 97
-      },
-      __self: this
-    }, "Book now")));
+    }));
   }
 
 }
@@ -1484,7 +1470,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 const StyledHero = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div.withConfig({
   displayName: "HeroSection__StyledHero",
   componentId: "sc-1rt21yv-0"
-})(["position:relative;z-index:10;min-width:100%;min-height:", ";@media only screen  and (max-device-width:768px)  and (-webkit-min-device-pixel-ratio:2){min-height:", ";}display:flex;flex-flow:column;img{flex:2 1 80%;object-fit:cover;}.banner{display:flex;}"], props => props.h || props.theme.heroHeightBig, props => props.h || props.theme.heroHeightSml);
+})(["position:relative;padding-top:10rem;z-index:10;min-width:100%;min-height:", ";@media only screen  and (max-device-width:768px)  and (-webkit-min-device-pixel-ratio:2){min-height:", ";}display:flex;flex-flow:column;img{flex:2 1 80%;object-fit:cover;}.banner{display:flex;}"], props => props.h || props.theme.heroHeightBig, props => props.h || props.theme.heroHeightSml);
 const StyledText = styled_components__WEBPACK_IMPORTED_MODULE_1___default()(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_2___default.a).withConfig({
   displayName: "HeroSection__StyledText",
   componentId: "sc-1rt21yv-1"
@@ -1499,13 +1485,13 @@ function HeroSection(props) {
   return __jsx(StyledHero, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 55
+      lineNumber: 56
     },
     __self: this
   }, cara ? __jsx(_StyledCarousel__WEBPACK_IMPORTED_MODULE_4__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 57
+      lineNumber: 58
     },
     __self: this
   }) : __jsx("img", {
@@ -1513,7 +1499,7 @@ function HeroSection(props) {
     alt: "EuroBrake Greating",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 58
+      lineNumber: 59
     },
     __self: this
   }), __jsx(StyledText, {
@@ -1522,26 +1508,26 @@ function HeroSection(props) {
     fs: fs,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 60
+      lineNumber: 61
     },
     __self: this
   }, props.children), __jsx("div", {
     className: "banner",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 63
+      lineNumber: 64
     },
     __self: this
   }, props.banner ? __jsx(props.banner, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 64
+      lineNumber: 65
     },
     __self: this
   }) : __jsx(_CountDownBanner__WEBPACK_IMPORTED_MODULE_3__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 64
+      lineNumber: 65
     },
     __self: this
   })));
@@ -2719,14 +2705,14 @@ const Container = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div.w
 const StyledSlide = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.img.withConfig({
   displayName: "StyledCarousel__StyledSlide",
   componentId: "zmlu3k-2"
-})(["width:110%;height:100%;@media only screen  and (max-device-width:768px)  and (-webkit-min-device-pixel-ratio:2){height:", ";}"], props => props.h || props.theme.heroHeightSml);
+})(["width:100%;height:100%;@media only screen  and (max-device-width:768px)  and (-webkit-min-device-pixel-ratio:2){height:", ";}"], props => props.h || props.theme.heroHeightSml);
 
 const CarouselUI = ({
   children
 }) => __jsx(Container, {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 46
+    lineNumber: 44
   },
   __self: undefined
 }, children);
@@ -2736,7 +2722,7 @@ function StyledCarousel() {
   return __jsx(Overlay, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 51
+      lineNumber: 49
     },
     __self: this
   }, __jsx(Carousel, {
@@ -2746,7 +2732,7 @@ function StyledCarousel() {
     ,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 53
+      lineNumber: 51
     },
     __self: this
   }, __jsx(react_reveal_Slide__WEBPACK_IMPORTED_MODULE_3___default.a, {
@@ -2754,7 +2740,7 @@ function StyledCarousel() {
     left: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 54
+      lineNumber: 52
     },
     __self: this
   }, __jsx(StyledSlide, {
@@ -2763,7 +2749,7 @@ function StyledCarousel() {
     alt: "EuroBrake Greating",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 55
+      lineNumber: 53
     },
     __self: this
   })), __jsx(react_reveal_Slide__WEBPACK_IMPORTED_MODULE_3___default.a, {
@@ -2771,7 +2757,7 @@ function StyledCarousel() {
     left: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 57
+      lineNumber: 55
     },
     __self: this
   }, __jsx(StyledSlide, {
@@ -2780,7 +2766,7 @@ function StyledCarousel() {
     alt: "EuroBrake Greating",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 58
+      lineNumber: 56
     },
     __self: this
   }))));
@@ -3001,7 +2987,7 @@ __webpack_require__.r(__webpack_exports__);
 const NavStyles = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({
   displayName: "NavStyles",
   componentId: "sc-1ltvdnj-0"
-})(["display:flex;position:absolute;transform:translateX(-20rem);z-index:200;a{font-family:", ";font-size:2.6rem;color:", ";margin:1rem;text-transform:uppercase;cursor:pointer;z-index:100;@media only screen  and (max-device-width:1200px)  and (-webkit-min-device-pixel-ratio:2){font-size:2.3rem;}}"], props => props.theme.MPBold, props => props.sticky ? props.theme.white : props.theme.secondary);
+})(["display:flex;position:absolute;transform:translateX(-20rem);z-index:200;a{font-family:", ";font-size:2.6rem;color:", ";margin:1rem;text-transform:uppercase;cursor:pointer;z-index:100;@media only screen  and (max-device-width:1200px)  and (-webkit-min-device-pixel-ratio:2){font-size:2.3rem;}}"], props => props.theme.MPBold, props => props.theme.secondary);
 const Rotate360 = Object(styled_components__WEBPACK_IMPORTED_MODULE_0__["keyframes"])(["100%{transform:rotate(360deg);}"]);
 const Rotate = styled_components__WEBPACK_IMPORTED_MODULE_0___default()(_BaseAnimation__WEBPACK_IMPORTED_MODULE_1__["default"]).withConfig({
   displayName: "NavStyles__Rotate",
@@ -3010,7 +2996,7 @@ const Rotate = styled_components__WEBPACK_IMPORTED_MODULE_0___default()(_BaseAni
 const Burger = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({
   displayName: "NavStyles__Burger",
   componentId: "sc-1ltvdnj-2"
-})(["position:absolute;top:-2rem;left:-4rem;margin:0 1rem;width:4rem;height:4rem;cursor:pointer;display:flex;align-items:center;z-index:300;transition:all .6s linear;@media only screen  and (max-device-width:768px)  and (-webkit-min-device-pixel-ratio:2){width:8rem;height:8rem;left:", ";top:", ";}"], props => props.isOpen ? '2rem' : '-8rem', props => props.isOpen ? '-2rem' : '-4rem');
+})(["position:absolute;top:-4rem;left:5rem;margin:0 1rem;width:6rem;height:8rem;cursor:pointer;display:flex;align-items:center;z-index:300;transition:all .6s linear;"]);
 const trans = {
   up: 'translateY(1.2rem)',
   stay: 'translateY(0)',
@@ -3026,11 +3012,11 @@ const trans = {
 const TopBun = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({
   displayName: "NavStyles__TopBun",
   componentId: "sc-1ltvdnj-3"
-})(["position:relative;width:100%;height:.2rem;transition:", ";background-color:", ";transform:", ";@media only screen  and (max-device-width:768px)  and (-webkit-min-device-pixel-ratio:2){height:.5rem;}&:before{width:100%;height:100%;position:absolute;transition:top .2s ease-out,transform .22s cubic-bezier(.215,.61,.355,1) .12s;top:", ";content:'';transform:", ";border-bottom:2px solid ", ";@media only screen  and (max-device-width:768px)  and (-webkit-min-device-pixel-ratio:2){border-bottom:5px solid ", ";top:", ";}}&:after{border-bottom:2px solid ", ";width:100%;height:100%;position:absolute;content:'';transition:top .2s ease-out;top:", ";@media only screen  and (max-device-width:768px)  and (-webkit-min-device-pixel-ratio:2){border-bottom:5px solid ", ";top:", ";}}"], props => props.isOpen ? trans.in : trans.out, props => props.sticky ? props.theme.white : props.theme.secondary, props => props.isOpen ? trans.spin315 : trans.spin0, props => props.isOpen ? 0 : '-1.2rem', props => props.isOpen ? trans.spin90 : trans.spin0, props => props.sticky ? props.theme.white : props.theme.secondary, props => props.sticky ? props.theme.white : props.theme.secondary, props => props.isOpen ? 0 : '-2rem', props => props.sticky ? props.theme.white : props.theme.secondary, props => props.isOpen ? 0 : '1.2rem', props => props.sticky ? props.theme.white : props.theme.secondary, props => props.isOpen ? 0 : '2rem');
+})(["position:relative;width:100%;height:.3rem;transition:", ";background-color:", ";transform:", ";&:before{width:100%;height:100%;position:absolute;transition:top .2s ease-out,transform .22s cubic-bezier(.215,.61,.355,1) .12s;top:", ";content:'';transform:", ";border-bottom:3px solid ", ";}&:after{border-bottom:3px solid ", ";width:100%;height:100%;position:absolute;content:'';transition:top .2s ease-out;top:", ";}"], props => props.isOpen ? trans.in : trans.out, props => props.theme.white, props => props.isOpen ? trans.spin315 : trans.spin0, props => props.isOpen ? 0 : '-1.6rem', props => props.isOpen ? trans.spin90 : trans.spin0, props => props.theme.white, props => props.theme.white, props => props.isOpen ? 0 : '1.6rem');
 const HiddenNavBG = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({
   displayName: "NavStyles__HiddenNavBG",
   componentId: "sc-1ltvdnj-4"
-})(["background-color:", ";position:absolute;top:-4rem;right:0rem;width:5rem;height:5rem;border-radius:50%;transition:transform .8s ease-in-out;transform:", ";"], props => props.theme.primary, props => props.isOpen ? trans.scale100 : trans.scale0);
+})(["background-color:", ";position:absolute;top:-3rem;left:8rem;width:5rem;height:5rem;border-radius:50%;transition:transform .8s ease-in-out;transform:", ";"], props => props.theme.primary, props => props.isOpen ? trans.scale100 : trans.scale0);
 const HiddenContainer = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({
   displayName: "NavStyles__HiddenContainer",
   componentId: "sc-1ltvdnj-5"
@@ -7760,7 +7746,7 @@ const winWidth = () => {
 
 /***/ }),
 
-/***/ 3:
+/***/ 4:
 /*!******************************!*\
   !*** multi ./pages/index.js ***!
   \******************************/

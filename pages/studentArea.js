@@ -14,6 +14,7 @@ import {PitchVideo} from '../components/forms/TaskType/PitchVideo';
 import {PPT} from '../components/forms/TaskType/PPT';
 import {Permissions} from '../components/forms/TaskType/Permissions';
 import {LoginForm} from '../components/forms/LoginForm';
+import {AbstractForm} from '../components/forms/Abstract';
 
 
 
@@ -25,7 +26,7 @@ export default () => (
         Complete your task
     </HeroSection>
     <StyledPage>
-            <Poster/>
+            <AbstractForm/>
     </StyledPage>
     </>
 )

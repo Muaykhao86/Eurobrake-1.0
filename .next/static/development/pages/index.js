@@ -1412,7 +1412,7 @@ var HeaderBar = styled_components__WEBPACK_IMPORTED_MODULE_9__["default"].div.wi
   displayName: "Header__HeaderBar",
   componentId: "zfe6h7-0"
 })(["color:white;position:fixed;background-color:", ";min-width:100%;height:10rem;display:flex;justify-content:flex-end;align-items:center;z-index:100;.logo{margin-left:10rem;margin-right:auto;}"], function (props) {
-  return props.sticky ? "#134381" : "transparent";
+  return props.theme.primary;
 });
 var HeaderLogo = styled_components__WEBPACK_IMPORTED_MODULE_9__["default"].img.attrs(function (props) {
   return {
@@ -1523,21 +1523,7 @@ function (_Component) {
           lineNumber: 95
         },
         __self: this
-      }), __jsx(next_link__WEBPACK_IMPORTED_MODULE_8___default.a, {
-        href: "/ticketPortal",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 96
-        },
-        __self: this
-      }, __jsx(HeaderButton, {
-        sticky: this.state.sticky,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 97
-        },
-        __self: this
-      }, "Book now")));
+      }));
     }
   }]);
 
@@ -1576,7 +1562,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 var StyledHero = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div.withConfig({
   displayName: "HeroSection__StyledHero",
   componentId: "sc-1rt21yv-0"
-})(["position:relative;z-index:10;min-width:100%;min-height:", ";@media only screen  and (max-device-width:768px)  and (-webkit-min-device-pixel-ratio:2){min-height:", ";}display:flex;flex-flow:column;img{flex:2 1 80%;object-fit:cover;}.banner{display:flex;}"], function (props) {
+})(["position:relative;padding-top:10rem;z-index:10;min-width:100%;min-height:", ";@media only screen  and (max-device-width:768px)  and (-webkit-min-device-pixel-ratio:2){min-height:", ";}display:flex;flex-flow:column;img{flex:2 1 80%;object-fit:cover;}.banner{display:flex;}"], function (props) {
   return props.h || props.theme.heroHeightBig;
 }, function (props) {
   return props.h || props.theme.heroHeightSml;
@@ -1607,13 +1593,13 @@ function HeroSection(props) {
   return __jsx(StyledHero, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 55
+      lineNumber: 56
     },
     __self: this
   }, cara ? __jsx(_StyledCarousel__WEBPACK_IMPORTED_MODULE_4__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 57
+      lineNumber: 58
     },
     __self: this
   }) : __jsx("img", {
@@ -1621,7 +1607,7 @@ function HeroSection(props) {
     alt: "EuroBrake Greating",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 58
+      lineNumber: 59
     },
     __self: this
   }), __jsx(StyledText, {
@@ -1630,26 +1616,26 @@ function HeroSection(props) {
     fs: fs,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 60
+      lineNumber: 61
     },
     __self: this
   }, props.children), __jsx("div", {
     className: "banner",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 63
+      lineNumber: 64
     },
     __self: this
   }, props.banner ? __jsx(props.banner, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 64
+      lineNumber: 65
     },
     __self: this
   }) : __jsx(_CountDownBanner__WEBPACK_IMPORTED_MODULE_3__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 64
+      lineNumber: 65
     },
     __self: this
   })));
@@ -2826,7 +2812,7 @@ var Container = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div.wi
 var StyledSlide = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].img.withConfig({
   displayName: "StyledCarousel__StyledSlide",
   componentId: "zmlu3k-2"
-})(["width:110%;height:100%;@media only screen  and (max-device-width:768px)  and (-webkit-min-device-pixel-ratio:2){height:", ";}"], function (props) {
+})(["width:100%;height:100%;@media only screen  and (max-device-width:768px)  and (-webkit-min-device-pixel-ratio:2){height:", ";}"], function (props) {
   return props.h || props.theme.heroHeightSml;
 });
 
@@ -2835,7 +2821,7 @@ var CarouselUI = function CarouselUI(_ref) {
   return __jsx(Container, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 46
+      lineNumber: 44
     },
     __self: this
   }, children);
@@ -2846,7 +2832,7 @@ function StyledCarousel() {
   return __jsx(Overlay, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 51
+      lineNumber: 49
     },
     __self: this
   }, __jsx(Carousel, {
@@ -2856,7 +2842,7 @@ function StyledCarousel() {
     ,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 53
+      lineNumber: 51
     },
     __self: this
   }, __jsx(react_reveal_Slide__WEBPACK_IMPORTED_MODULE_3___default.a, {
@@ -2864,7 +2850,7 @@ function StyledCarousel() {
     left: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 54
+      lineNumber: 52
     },
     __self: this
   }, __jsx(StyledSlide, {
@@ -2873,7 +2859,7 @@ function StyledCarousel() {
     alt: "EuroBrake Greating",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 55
+      lineNumber: 53
     },
     __self: this
   })), __jsx(react_reveal_Slide__WEBPACK_IMPORTED_MODULE_3___default.a, {
@@ -2881,7 +2867,7 @@ function StyledCarousel() {
     left: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 57
+      lineNumber: 55
     },
     __self: this
   }, __jsx(StyledSlide, {
@@ -2890,7 +2876,7 @@ function StyledCarousel() {
     alt: "EuroBrake Greating",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 58
+      lineNumber: 56
     },
     __self: this
   }))));
@@ -3143,7 +3129,7 @@ var NavStyles = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.wi
 })(["display:flex;position:absolute;transform:translateX(-20rem);z-index:200;a{font-family:", ";font-size:2.6rem;color:", ";margin:1rem;text-transform:uppercase;cursor:pointer;z-index:100;@media only screen  and (max-device-width:1200px)  and (-webkit-min-device-pixel-ratio:2){font-size:2.3rem;}}"], function (props) {
   return props.theme.MPBold;
 }, function (props) {
-  return props.sticky ? props.theme.white : props.theme.secondary;
+  return props.theme.secondary;
 });
 var Rotate360 = Object(styled_components__WEBPACK_IMPORTED_MODULE_0__["keyframes"])(["100%{transform:rotate(360deg);}"]);
 var Rotate = Object(styled_components__WEBPACK_IMPORTED_MODULE_0__["default"])(_BaseAnimation__WEBPACK_IMPORTED_MODULE_1__["default"]).withConfig({
@@ -3153,11 +3139,7 @@ var Rotate = Object(styled_components__WEBPACK_IMPORTED_MODULE_0__["default"])(_
 var Burger = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
   displayName: "NavStyles__Burger",
   componentId: "sc-1ltvdnj-2"
-})(["position:absolute;top:-2rem;left:-4rem;margin:0 1rem;width:4rem;height:4rem;cursor:pointer;display:flex;align-items:center;z-index:300;transition:all .6s linear;@media only screen  and (max-device-width:768px)  and (-webkit-min-device-pixel-ratio:2){width:8rem;height:8rem;left:", ";top:", ";}"], function (props) {
-  return props.isOpen ? '2rem' : '-8rem';
-}, function (props) {
-  return props.isOpen ? '-2rem' : '-4rem';
-});
+})(["position:absolute;top:-4rem;left:5rem;margin:0 1rem;width:6rem;height:8rem;cursor:pointer;display:flex;align-items:center;z-index:300;transition:all .6s linear;"]);
 var trans = {
   up: 'translateY(1.2rem)',
   stay: 'translateY(0)',
@@ -3173,35 +3155,27 @@ var trans = {
 var TopBun = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
   displayName: "NavStyles__TopBun",
   componentId: "sc-1ltvdnj-3"
-})(["position:relative;width:100%;height:.2rem;transition:", ";background-color:", ";transform:", ";@media only screen  and (max-device-width:768px)  and (-webkit-min-device-pixel-ratio:2){height:.5rem;}&:before{width:100%;height:100%;position:absolute;transition:top .2s ease-out,transform .22s cubic-bezier(.215,.61,.355,1) .12s;top:", ";content:'';transform:", ";border-bottom:2px solid ", ";@media only screen  and (max-device-width:768px)  and (-webkit-min-device-pixel-ratio:2){border-bottom:5px solid ", ";top:", ";}}&:after{border-bottom:2px solid ", ";width:100%;height:100%;position:absolute;content:'';transition:top .2s ease-out;top:", ";@media only screen  and (max-device-width:768px)  and (-webkit-min-device-pixel-ratio:2){border-bottom:5px solid ", ";top:", ";}}"], function (props) {
+})(["position:relative;width:100%;height:.3rem;transition:", ";background-color:", ";transform:", ";&:before{width:100%;height:100%;position:absolute;transition:top .2s ease-out,transform .22s cubic-bezier(.215,.61,.355,1) .12s;top:", ";content:'';transform:", ";border-bottom:3px solid ", ";}&:after{border-bottom:3px solid ", ";width:100%;height:100%;position:absolute;content:'';transition:top .2s ease-out;top:", ";}"], function (props) {
   return props.isOpen ? trans["in"] : trans.out;
 }, function (props) {
-  return props.sticky ? props.theme.white : props.theme.secondary;
+  return props.theme.white;
 }, function (props) {
   return props.isOpen ? trans.spin315 : trans.spin0;
 }, function (props) {
-  return props.isOpen ? 0 : '-1.2rem';
+  return props.isOpen ? 0 : '-1.6rem';
 }, function (props) {
   return props.isOpen ? trans.spin90 : trans.spin0;
 }, function (props) {
-  return props.sticky ? props.theme.white : props.theme.secondary;
+  return props.theme.white;
 }, function (props) {
-  return props.sticky ? props.theme.white : props.theme.secondary;
+  return props.theme.white;
 }, function (props) {
-  return props.isOpen ? 0 : '-2rem';
-}, function (props) {
-  return props.sticky ? props.theme.white : props.theme.secondary;
-}, function (props) {
-  return props.isOpen ? 0 : '1.2rem';
-}, function (props) {
-  return props.sticky ? props.theme.white : props.theme.secondary;
-}, function (props) {
-  return props.isOpen ? 0 : '2rem';
+  return props.isOpen ? 0 : '1.6rem';
 });
 var HiddenNavBG = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
   displayName: "NavStyles__HiddenNavBG",
   componentId: "sc-1ltvdnj-4"
-})(["background-color:", ";position:absolute;top:-4rem;right:0rem;width:5rem;height:5rem;border-radius:50%;transition:transform .8s ease-in-out;transform:", ";"], function (props) {
+})(["background-color:", ";position:absolute;top:-3rem;left:8rem;width:5rem;height:5rem;border-radius:50%;transition:transform .8s ease-in-out;transform:", ";"], function (props) {
   return props.theme.primary;
 }, function (props) {
   return props.isOpen ? trans.scale100 : trans.scale0;
@@ -70831,7 +70805,7 @@ var winWidth = function winWidth() {
 
 /***/ }),
 
-/***/ 0:
+/***/ 1:
 /*!*****************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2F&absolutePagePath=%2Fmnt%2Fc%2FUsers%2FD.Hardiman%2Fdesktop%2Feurobrake%2Fpages%2Findex.js ***!
   \*****************************************************************************************************************************************/
@@ -70854,5 +70828,5 @@ module.exports = dll_ea92a4d9664833a26066;
 
 /***/ })
 
-},[[0,"static/runtime/webpack.js"]]]);
+},[[1,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=index.js.map

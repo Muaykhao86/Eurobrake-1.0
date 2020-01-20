@@ -26,6 +26,8 @@ export const Poster = (props) => {
 
     const {presets, csrf, apiUrl, paperId, type} = props;
     console.log('tasks', presets, csrf, apiUrl, paperId, type);
+    const url = `https://prelude.eurobrake.net/authors/tasks/poster/${paperId}`;
+
     
     return (
         <Formik

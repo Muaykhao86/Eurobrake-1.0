@@ -13,7 +13,6 @@ overflow: hidden;
 
 
 const Container = styled.div`
-
 width: 100%;
 height: 80vh;
  @media only screen 
@@ -30,8 +29,7 @@ background-color: black;
 `;
 
 const StyledSlide = styled.img`
-/* position: absolute; */
-width: 110%;
+width: 100%;
 height: 100% ;
        @media only screen 
         and (max-device-width: 768px) 

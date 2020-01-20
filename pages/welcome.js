@@ -161,7 +161,7 @@ export default () => (
             <Typography gutterBottom className="Discover" >The Barcelona International Convention Centre (CCIB) is a leading venue for international events. </Typography>
             <Typography gutterBottom className="Discover" >Enjoying a privileged location in modern, cosmopolitan Barcelona, the CCIB can be found within the city’s new business and technology district, known as Districte de la Innovació or 22@.</Typography>
             <Typography gutterBottom className="Discover" > With its easy access, excellent links to public transport and the airport, and more than 4,500 hotel rooms in its immediate vicinity, the CCIB is a first-class destination within the business tourism sector.</Typography>
-            <Button br="100rem" bcolor="#134381" background="#134381" style={{ maxWidth: "24rem", margin: "5rem 0" }}>VIsit CCIB</Button>
+            <Button href="https://ccib.es/en/" br="100rem" bcolor="#134381" background="#134381" style={{ maxWidth: "24rem", margin: "5rem 0" }}>VIsit CCIB</Button>
             <Typography className="Discover-sub-title" >Discover Barcelona...</Typography>
 
             <div className="grid ">

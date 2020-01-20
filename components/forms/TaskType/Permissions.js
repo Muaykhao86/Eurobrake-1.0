@@ -23,6 +23,7 @@ export const Permissions = (props) => {
 
     const {presets, csrf, apiUrl, paperId, type} = props;
     console.log('tasks', presets, csrf, apiUrl, paperId, type);
+    const url = `https://prelude.eurobrake.net/authors/tasks/permissions/${paperId}`;
     
     return (
         // ! NEED PRESETS FOR TASKS

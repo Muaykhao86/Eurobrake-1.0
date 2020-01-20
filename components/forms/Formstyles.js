@@ -41,22 +41,29 @@ export const StyledForm = styled(Form)`
         min-width: 100%;
         }
 
-          &-radio{
+        &-radio{
             margin: 2rem 0;
             align-self: flex-end;
            
         }
-        
-
-              
+      
         &-field{
             position: relative;
-            margin: 2rem 0;
+            margin: 1rem 0;
             width: 100%;
             display: flex;
             font-family: ${props => props.theme.MPLight};
             justify-content: space-between;
             align-items: flex-end;
+
+            &_action{
+                background-color: ${props => props.theme.primary2};
+                position: absolute;
+                top: -7rem;
+                /* border: 3px solid ${props => props.theme.primary}; */
+                display: flex;
+                align-self: flex-end;
+            }
 
             &_question{
                 position: relative;
@@ -81,16 +88,9 @@ export const StyledForm = styled(Form)`
                     border-bottom: none;
                 }
             }
-
-            &_action{
-                align-self: flex-end;
-                 display: flex;
-                justify-content: flex-end;
-                align-items: flex-end;
-            }
         }
 
-            &-radio{
+        &-radio{
                 position: relative;
                 width: 100%;
                display: flex;
@@ -103,12 +103,7 @@ export const StyledForm = styled(Form)`
                 display: flex;
                 flex-flow: column;
             }  
-            &_action{
-                align-self: flex-end;
-                 display: flex;
-                justify-content: flex-end;
-                align-items: flex-end;
-            }
+            
         }
 
        &-notes{
@@ -120,15 +115,14 @@ export const StyledForm = styled(Form)`
         align-items: center;
         min-width: 100%;
 
-        &-label{
+            &-label{
             min-width: 100%;
             font-family: ${props => props.theme.MPLight};
-            font-size: 2.6rem;
+            font-size: 2rem;
             color: ${props => props.theme.primary};
-      
-        
-        }
-          &-input{
+            }
+
+            &-input{
             margin-top: 2rem ;
             margin-bottom: 4rem ;
             min-width: 100%;
@@ -136,8 +130,7 @@ export const StyledForm = styled(Form)`
             font-family: ${props => props.theme.MPBoldIt};
             font-size: 2rem;
             color: ${props => props.theme.primary};
-
-        }
+            }
         
         }
 
@@ -167,17 +160,18 @@ export const StyledForm = styled(Form)`
             align-self: flex-start;
             min-width: 33.3%;
             font-family: ${props => props.theme.MPLight};
-            font-size: 2.6rem;
+            font-size: 2rem;
             color: ${props => props.theme.primary};
 
             &-radio{
                 text-align: end;
                  font-family: ${props => props.theme.MPLight};
-            font-size: 2.6rem;
+            font-size: 2rem;
             color: ${props => props.theme.primary};
 
             }
         }
+
         &-input{
             align-self: flex-end;
             width: 66.6%;
@@ -209,6 +203,7 @@ export const StyledForm = styled(Form)`
             font-size: 1.7rem;
             color: ${props => props.theme.primary};
         }
+        
         &-link_bold{
             cursor: pointer;
             font-family: ${props => props.theme.MPBold};
@@ -221,6 +216,6 @@ export const StyledForm = styled(Form)`
         font-size: 3rem;
         align-self: flex-start;
         margin: 2rem 0;
+            }
     }
-        }
     `;

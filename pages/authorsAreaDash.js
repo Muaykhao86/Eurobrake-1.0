@@ -291,7 +291,7 @@ class AuthorsAreaDash extends Component {
                                         <StyledInfoArea>
                                             <div className="paper-summary">
                                                 <Typography className="paper-title">{paper.title}</Typography>
-                                                <Typography gutterBottom className="paper-type">{paper.paper_type.toUpperCase()}</Typography>
+                                                <Typography gutterBottom className="paper-type">{paper.paper_type === 'full' ? (paper.paper_type.toUpperCase() + ' ' + '+' + ' ' + paper.presentation_type.toUpperCase()) : (paper.paper_type)}</Typography>
                                             </div>
                                                         <Table className="" aria-label="simple table">
                                                             <TableBody style={{width: '100%'}}>

@@ -58,7 +58,7 @@ export const StyledTask = styled(Form)`
         &-label{
             min-width: 100%;
             font-family: ${props => props.theme.MPLight};
-            font-size: 2.6rem;
+            font-size: 2rem;
             color: ${props => props.theme.primary};
         
         
@@ -112,7 +112,7 @@ export const StyledTask = styled(Form)`
             position: relative;
             min-width: 100%;
             font-family: ${props => props.theme.MPLight};
-            font-size: 2.6rem;
+            font-size: 2rem;
             color: ${props => props.theme.primary};
             display: flex;
             align-items: center;
@@ -138,12 +138,12 @@ export const StyledTask = styled(Form)`
             align-self: flex-start;
             min-width: 33.3%;
             font-family: ${props => props.theme.MPLight};
-            font-size: 2.6rem;
+            font-size: 2rem;
             color: ${props => props.theme.primary};
 
             &-radio{
             font-family: ${props => props.theme.MPLight};
-            font-size: 2.6rem;
+            font-size: 2rem;
             color: ${props => props.theme.primary};
                 align-self: flex-end;
             }

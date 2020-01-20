@@ -10,8 +10,7 @@ export const NavStyles = styled.div`
     a{  
         font-family: ${props => props.theme.MPBold};
         font-size: 2.6rem;
-        color: ${props => props.sticky ?
-        props.theme.white : props.theme.secondary};
+        color: ${props =>  props.theme.secondary};
         margin: 1rem;
         text-transform: uppercase;
         cursor: pointer;
@@ -39,25 +38,18 @@ export const Rotate = styled(BaseAnimation)`
 
 export const Burger = styled.div`
     position: absolute;
-    top:  -2rem;
-    left: -4rem;
+    top:  -4rem;
+    left: 5rem;
     margin: 0 1rem;
-    width: 4rem;
-    height: 4rem; 
+    width: 6rem;
+    height: 8rem; 
     cursor: pointer; 
     display: flex;
     align-items: center;
     z-index: 300;
     transition: all .6s linear;
     /* background-color: salmon; */
-      @media only screen 
-        and (max-device-width: 768px) 
-        and (-webkit-min-device-pixel-ratio: 2) { 
-    width: 8rem;  
-    height: 8rem;  
-    left:${props => props.isOpen ? '2rem' : '-8rem'};
-    top: ${props => props.isOpen ? '-2rem' : '-4rem'};
-}
+     
 `;
 
 const trans = {
@@ -76,19 +68,13 @@ const trans = {
 export const TopBun = styled.div`
     position: relative;
     width: 100%;
-    height: .2rem;
+    height: .3rem;
     transition: ${props => props.isOpen ?
         trans.in : trans.out}; 
-    background-color: ${props => props.sticky ?
-        props.theme.white : props.theme.secondary};
+    background-color: ${props => props.theme.white};
     transform: ${props => props.isOpen ?
         trans.spin315 : trans.spin0};
-     @media only screen 
-        and (max-device-width: 768px) 
-        and (-webkit-min-device-pixel-ratio: 2) { 
-    height:  .5rem;            
-   
-}
+    
             
 &:before {
     width: 100%;
@@ -96,40 +82,24 @@ export const TopBun = styled.div`
     position: absolute;
     transition: top .2s ease-out, transform .22s cubic-bezier(.215,.61,.355,1) .12s;
     top: ${props => props.isOpen ?
-        0 : '-1.2rem'} ;
+        0 : '-1.6rem'} ;
     content: '';
     transform: ${props => props.isOpen ?
         trans.spin90 : trans.spin0};
-    border-bottom:2px solid ${props => props.sticky ?
-        props.theme.white : props.theme.secondary};
-     @media only screen 
-        and (max-device-width: 768px) 
-        and (-webkit-min-device-pixel-ratio: 2) { 
-    border-bottom:5px solid ${props => props.sticky ?
-        props.theme.white : props.theme.secondary};
-    top: ${props => props.isOpen ?
-        0 : '-2rem'} ;
-}
+    border-bottom:3px solid ${props => props.theme.white};
+    
 }
 
 &:after {
-    border-bottom: 2px solid ${props => props.sticky ?
-        props.theme.white : props.theme.secondary};
+    border-bottom: 3px solid ${props => props.theme.white};
     width: 100%;
     height: 100%;
     position: absolute;
     content: '';
     transition: top .2s ease-out;
     top: ${props => props.isOpen ?
-        0 : '1.2rem'};
-     @media only screen 
-        and (max-device-width: 768px) 
-        and (-webkit-min-device-pixel-ratio: 2) { 
-    border-bottom:5px solid ${props => props.sticky ?
-        props.theme.white : props.theme.secondary};
-   top: ${props => props.isOpen ?
-        0 : '2rem'};
-}
+        0 : '1.6rem'};
+   
 }`
 
 ;
@@ -138,8 +108,8 @@ export const TopBun = styled.div`
 export const HiddenNavBG = styled.div`
     background-color: ${props => props.theme.primary}; 
     position: absolute;
-    top: -4rem;
-    right: 0rem;
+    top: -3rem;
+    left: 8rem;
     width: 5rem;
     height: 5rem;
     border-radius: 50%;

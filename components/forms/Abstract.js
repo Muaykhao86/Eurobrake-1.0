@@ -286,17 +286,16 @@ export const AbstractForm = (props) => {
                                 Is this the presenting author?
                         </label>
                             <Field
-                                className="form-radio"
+                                className="form-field"
                                 value={values.is_presenting_author}
-                                style={{ color: '#134381' }}
+                                style={{ color: '#134381' , alignSelf: 'flexStart', margin: '0'}}
                                 name="is_presenting_author"
                                 component={RadioGroup}
                             >
                                 <label
-                                    style={{ margin: '1rem' }}
+                                    style={{ margin: ' 0' }}
                                     htmlFor="label"
                                     className="form-label">
-                                    Yes
                                         <input
                                         checked={values.is_presenting_author === 'yes'}
                                         onChange={(event) => {
@@ -306,13 +305,15 @@ export const AbstractForm = (props) => {
                                         type="radio"
                                         name="is_presenting_author"
                                         value="yes"
+                                    style={{ margin: '1rem' }}
+
                                     />
+                                    Yes
                                 </label>
                                 <label
-                                    style={{ margin: '1rem' }}
+                                    style={{ margin: '1rem 0' }}
                                     htmlFor="label"
                                     className="form-label">
-                                    No
                                         <input
                                         onChange={(event) => {
                                             onPresenterChange(event)
@@ -322,7 +323,10 @@ export const AbstractForm = (props) => {
                                         type="radio"
                                         name="is_presenting_author"
                                         value="no"
+                                    style={{ margin: '1rem' }}
+
                                     />
+                                    No
                                 </label>
                             </Field>
                         </div>
@@ -475,17 +479,16 @@ export const AbstractForm = (props) => {
                                                         Is this the presenting Author?
                                                     </label>
                                                     <Field
-                                                        className="form-radio"
-                                                        style={{ color: '#134381' }}
+                                                        className="form-field"
+                                                        style={{ color: '#134381', alignSelf: 'flexStart', margin: '0' }}
                                                         value={`secondary_authors[${index}].is_presenting_author`}
                                                         component={RadioGroup}
                                                         name={`secondary_authors[${index}].is_presenting_author`}
                                                     >
                                                         <label
-                                                            style={{ margin: '1rem' }}
+                                                            style={{ margin: '0' }}
                                                             htmlFor="label"
                                                             className="form-label">
-                                                            Yes
                                                                 <input
                                                                 checked={is_presenting_author === 'yes'}
                                                                 onChange={(event) => {
@@ -495,13 +498,15 @@ export const AbstractForm = (props) => {
                                                                 type="radio"
                                                                 value="yes"
                                                                 name={`secondary_authors[${index}].is_presenting_author`}
+                                                                style={{ margin: '1rem' }}
+
                                                             />
+                                                            Yes
                                                         </label>
                                                         <label
-                                                            style={{ margin: '1rem' }}
+                                                            style={{ margin: '1rem 0 ' }}
                                                             htmlFor="label"
                                                             className="form-label">
-                                                            No
                                                                 <input
                                                                 checked={is_presenting_author !== 'yes'}
                                                                 onChange={(event) => {
@@ -511,13 +516,19 @@ export const AbstractForm = (props) => {
                                                                 type="radio"
                                                                 value="no"
                                                                 name={`secondary_authors[${index}].is_presenting_author`}
+                                                                style={{ margin: '1rem' }}
+
                                                             />
+                                                            No
                                                         </label>
                                                     </Field>
                                                 </div>
+                                                <div className="form-field">
+
                                                 <div className="form-field_action">
 
                                                 <Button 
+                                                padding=".5rem"
                                                 bcolor="transparent"
                                                 abs="false"
                                                 bs="false"
@@ -537,6 +548,7 @@ export const AbstractForm = (props) => {
                                                     <AddCircle style={{ color: 'green'  , fontSize: '3rem', margin: '.5rem 0'}} />
                                                 </Button>
                                                 <Button 
+                                                padding='.5rem'
                                                 bcolor="transparent"
                                                  abs="false"
                                                  bs="false"
@@ -546,6 +558,7 @@ export const AbstractForm = (props) => {
                                                     <RemoveCircle style={{ color: 'red' , fontSize: '3rem', margin: '.5rem 0' }} />
                                                 </Button>
                                                 <Button 
+                                                padding='.5rem'
                                                 bcolor="transparent"
                                                  abs="false"
                                                  bs="false"
@@ -555,6 +568,7 @@ export const AbstractForm = (props) => {
                                                     <ArrowUpwardRounded style={{ color: 'red' , fontSize: '3rem', margin: '.5rem 0' }} />
                                                 </Button>
                                                 <Button 
+                                                padding='.5rem'
                                                 bcolor="transparent"
                                                  abs="false"
                                                  bs="false"
@@ -563,6 +577,7 @@ export const AbstractForm = (props) => {
                                                 type="downgrade" onClick={() => values.secondary_authors.length > 1 && index !== values.secondary_authors.length - 1 && swap(index, index + 1)}>
                                                     <ArrowDownwardRounded style={{ color: 'red'  , fontSize: '3rem', margin: '.5rem 0'}} />
                                                 </Button>
+                                                </div>
                                                 </div>
                                             </div>
                                         )})

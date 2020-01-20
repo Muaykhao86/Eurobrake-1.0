@@ -6,8 +6,8 @@ import Nav from './Nav';
 const HeaderBar = styled.div`
     color: white;
     position: fixed;
-    background-color: ${props => props.sticky ? 
-    "#134381" : "transparent"};
+    background-color: ${props => props.theme.primary};
+    /*  "#134381" : "transparent"}; */
     min-width: 100%;
     height: 10rem;
     display: flex;
@@ -93,9 +93,9 @@ const HeaderButton = styled.button`
             </a>
             </Link>
             <Nav sticky={this.state.sticky} />
-            <Link href="/ticketPortal">
+            {/* <Link href="/ticketPortal">
             <HeaderButton sticky={this.state.sticky}>Book now</HeaderButton>
-            </Link>
+            </Link> */}
         </HeaderBar>
     
         )

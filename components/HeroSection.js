@@ -6,6 +6,7 @@ import StyledCarousel from './StyledCarousel';
 
 const StyledHero = styled.div`
     position: relative;
+    padding-top: 10rem;
     z-index: 10;
     min-width: 100%;
     min-height: ${props => props.h || props.theme.heroHeightBig };
