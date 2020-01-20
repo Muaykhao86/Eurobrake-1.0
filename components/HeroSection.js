@@ -38,7 +38,7 @@ const StyledText = styled(Typography)`
     top: ${props => props.t || '14rem'};
     }
     align-self: center;
-    /* width: ${props => props.max || props.theme.minWidth }; */
+    width: ${props => props.max || props.theme.minWidth };
     line-height: ${props => props.LH || '1'};
     color: ${props => props.theme.white};
     text-align: center;

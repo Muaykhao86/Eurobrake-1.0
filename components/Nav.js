@@ -12,6 +12,7 @@ export const NavLogo = styled.img.attrs(props => ({
     src: "/images/logo.png",
     alt: "Logo"
 }))`max-width: 40rem;
+   
     cursor: pointer;
 `;
 
@@ -52,13 +53,13 @@ export default class Nav extends Component {
                             <Link href="/studentArea" ><a onClick={this.handleClick}>Testing</a></Link>
                         </div>
        
-                        <div className="nav_box-3" style={{ border: '3px solid #F9B721'  }}>
+                        <div className="nav_box-3" style={{ marginTop: '2rem' }}>
                             <Dates MW="35rem" />
-                            <Link href="/ticketPortal">
-                                <Button onClick={this.handleClick} style={{ border: 'none', borderTop: '3px solid #F9B721', color: '#FFF', width: '100%', height: '10rem', margin: '0' }}>
+                            {/* <Link href="/ticketPortal">
+                                <Button className="nav-button" onClick={this.handleClick} style={{ border: 'none',  color: '#FFF', width: '100%', height: '10rem', margin: '0' }}>
                                     BOOK NOW
                         </Button>
-                            </Link>
+                            </Link> */}
                         </div>
                     </div>
                 </HiddenContainer>

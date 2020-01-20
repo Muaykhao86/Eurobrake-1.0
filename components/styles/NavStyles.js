@@ -37,6 +37,9 @@ export const Rotate = styled(BaseAnimation)`
 `;
 
 export const Burger = styled.div`
+    position: absolute;
+    top:  -2rem;
+    left: -4rem;
     margin: 0 1rem;
     width: 4rem;
     height: 4rem; 
@@ -46,6 +49,14 @@ export const Burger = styled.div`
     z-index: 300;
     transition: all 10s linear;
     /* background-color: salmon; */
+      @media only screen 
+        and (max-device-width: 768px) 
+        and (-webkit-min-device-pixel-ratio: 2) { 
+    width: 8rem;  
+    height: 8rem;  
+    left:${props => props.isOpen ? '2rem' : '-6rem'};
+    top: ${props => props.isOpen ? '-2rem' : '-4rem'};
+}
 `;
 
 const trans = {
@@ -53,8 +64,8 @@ const trans = {
     stay: 'translateY(0)',
     down: 'translateY(-1.2rem)',
     spin0: 'rotate(0)',
-    spin90: 'rotate(-90deg)',
-    spin315: 'rotate(-315deg)',
+    spin90: 'rotate(90deg)',
+    spin315: 'rotate(315deg)',
     scale100: 'scale(107)',
     scale0: 'scale(0)',
     in: 'transform .6s cubic-bezier(0.22, 0.61, 0.36, 1) .3s',
@@ -71,6 +82,12 @@ export const TopBun = styled.div`
         props.theme.white : props.theme.secondary};
     transform: ${props => props.isOpen ?
         trans.spin315 : trans.spin0};
+     @media only screen 
+        and (max-device-width: 768px) 
+        and (-webkit-min-device-pixel-ratio: 2) { 
+    height:  .5rem;            
+   
+}
             
 &:before {
     width: 100%;
@@ -84,6 +101,14 @@ export const TopBun = styled.div`
         trans.spin90 : trans.spin0};
     border-bottom:2px solid ${props => props.sticky ?
         props.theme.white : props.theme.secondary};
+     @media only screen 
+        and (max-device-width: 768px) 
+        and (-webkit-min-device-pixel-ratio: 2) { 
+    border-bottom:5px solid ${props => props.sticky ?
+        props.theme.white : props.theme.secondary};
+    top: ${props => props.isOpen ?
+        0 : '-2rem'} ;
+}
 }
 
 &:after {
@@ -96,8 +121,17 @@ export const TopBun = styled.div`
     transition: top .2s ease-out;
     top: ${props => props.isOpen ?
         0 : '1.2rem'};
-   
-}`;
+     @media only screen 
+        and (max-device-width: 768px) 
+        and (-webkit-min-device-pixel-ratio: 2) { 
+    border-bottom:5px solid ${props => props.sticky ?
+        props.theme.white : props.theme.secondary};
+   top: ${props => props.isOpen ?
+        0 : '2rem'};
+}
+}`
+
+;
 
 
 export const HiddenNavBG = styled.div`
@@ -119,6 +153,8 @@ export const HiddenContainer = styled.div`
     right: -15rem;
     top: 0;
     display:flex;
+    align-items: flex-start;
+    justify-content: flex-start;
     flex-flow: row wrap;
     padding: 2rem;
     margin: 2rem;
@@ -130,19 +166,27 @@ export const HiddenContainer = styled.div`
     min-width: 90vw;
     min-height: 90vh;
     /* border: 100px white solid; */
-         /* @media only screen 
+         @media only screen 
         and (max-device-width: 768px) 
         and (-webkit-min-device-pixel-ratio: 2) { 
-    min-height: 30rem;                 
-} */
-     
+    min-height: 27vh;                 
+   
+}
+
+
+
     .nav_container-1{
         margin-top: 5rem;
         height: 100%;
         display: flex;
         flex-flow: row;
         flex: 1 1 auto;
-        align-items: center;
+        align-items: flex-start;
+         @media only screen 
+        and (max-device-width: 768px) 
+        and (-webkit-min-device-pixel-ratio: 2) { 
+        margin-top: 0;             
+}
     }
   
 
@@ -151,6 +195,7 @@ export const HiddenContainer = styled.div`
     } 
     
     .nav_box-1{
+        max-height: 20rem;
         flex: 1 1 auto;
         /* border: 10px solid white; */
         padding: 2rem;
@@ -160,6 +205,12 @@ export const HiddenContainer = styled.div`
         flex-flow: column;
         justify-content: flex-start;
         align-items: flex-start;
+         @media only screen 
+        and (max-device-width: 768px) 
+        and (-webkit-min-device-pixel-ratio: 2) { 
+       padding: 0;
+       margin: 0;            
+}
     }
     .nav_box-2{
         max-height: 70rem;
@@ -175,7 +226,7 @@ export const HiddenContainer = styled.div`
     }
     .nav_box-3{
 
-        min-height: 70rem;
+        min-height: 55rem;
         /* min-height: 85rem; */
         width: 30rem;
         flex: 1 1 auto;
