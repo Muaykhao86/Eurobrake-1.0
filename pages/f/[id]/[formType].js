@@ -46,17 +46,9 @@ Form.getInitialProps = async context => {
     const { logintoken } = cookies(context) || {};
     let apiUrl = '';
     
-        switch (formType) {
-        case 'author' :
-                apiUrl = `https://prelude.eurobrake.net/authors/profile` ;
-        
-        case 'reset' :
-             apiUrl = `https://prelude.eurobrake.net/authors/reset/${id}`;
-        
-        default :
-             apiUrl = `https://prelude.eurobrake.net/authors/edit/${id}`;
-     } 
-    
+   if(formType == 'author') apiUrl = `https://prelude.eurobrake.net/authors/profile` 
+   if(formType == 'reset') apiUrl = `https://prelude.eurobrake.net/authors/profile` 
+   if(formType != 'reset' && formType != 'author') apiUrl = `https://prelude.eurobrake.net/authors/edit/${id}`
    
     console.log('1st GIP', { id, logintoken, apiUrl, taskUrl, formType, taskType })
     console.log('props', { id, logintoken, apiUrl, taskUrl, formType, taskType })
@@ -64,8 +56,10 @@ Form.getInitialProps = async context => {
         process.browser
             ? Router.push('/authorsArea')
             : context.res.writeHead(301, { Location: '/authorsArea' })
-    if(formType === 'reset') return {}
-    else if (logintoken) {
+
+    if(formType === 'reset') return { apiUrl, id, formType, taskType}
+   
+   else if (logintoken) {
         try {
             const response = await fetch(apiUrl, {
                 credentials: 'include',
