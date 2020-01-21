@@ -14,7 +14,7 @@ import {LoginSchema} from './FormControl';
 
 export const ResetForm = (props) => {
     // const [Toggle, setToggle] = useState(false);
-    const url =  `https://prelude.eurobrake.net/authors/reset${props.paperId}`;
+    const url =  `https://prelude.eurobrake.net/authors/reset/${props.paperId}`;
     console.log({url})
     return (
         <Formik

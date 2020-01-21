@@ -88,7 +88,8 @@ Form.getInitialProps = async context => {
             console.log(error)
             return await redirectOnError()
         }
-    }
+    
+    }     
 }
     // const { form } = props;
     // switch (form) {

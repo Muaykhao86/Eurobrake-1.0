@@ -157,9 +157,10 @@ function Footer() {
                     <a href="" >Contact Us</a>
                     <Link href="/privacyPolicy"><a >Privacy Policy</a></Link>
                     </div>
-                   
-                    <Typography className="heading-copy">Copyright © 2020 FISITA</Typography>
-                    <FLogoWhite width="10rem" height="10rem"/>
+                    <div className="" style="display: flex">
+                    <Typography className="heading-copy" style={{marginLeft: '2rem'}}>Copyright © 2020 FISITA</Typography>
+                    <FLogoWhite width="10rem" height="5rem"/>
+                    </div>
                 </div>
                 <div className="ftr_container-right">
                     {/* <Typography className="heading">Visit the CCIB wesbsite <a href="https://ccib.es/en/" style={{color: '#F9B721'}}>HERE</a></Typography> */}
