@@ -43,6 +43,7 @@ export async function GetForm(url) {
         const apiUrl = url;
         const response = await fetch(apiUrl, {
             credentials: 'include',
+             cache: 'no-cache',
             headers: {
                 Authorization: 'Bearer ' + logintoken,
             }
