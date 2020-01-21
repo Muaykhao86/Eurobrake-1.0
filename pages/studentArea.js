@@ -35,19 +35,16 @@ import {AbstractForm} from '../components/forms/Abstract';
 export default () => {
 
   const GetproDef = async () => {
-      console.log({type, paper})
             const formData = await  GetForm(`https://prelude.eurobrake.net/authors/profile?definition=1`);
             const res = await formData;
            return  console.log({res});
     }
   const GetpassDef = async () => {
-      console.log({paper})
             const formData = await  GetForm(`https://prelude.eurobrake.net/authors/reset?definition=1`);
             const res = await formData;
            return  console.log({res});
     }
   const GetresetDef = async () => {
-      console.log({paper})
             const formData = await  GetForm(`https://prelude.eurobrake.net/authors/reset/XC8Z3FWxDuQtk68qVs3uwF?definition=1`);
             const res = await formData;
            return  console.log({res});

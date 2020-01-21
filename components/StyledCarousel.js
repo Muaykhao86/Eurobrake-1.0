@@ -60,10 +60,13 @@ export default function StyledCarousel() {
                 <StyledSlide src="https://live.staticflickr.com/65535/48016136483_351aca498d_k.jpg" alt="EuroBrake greeting"/>
             </Slide>
             <Slide ssr left style={{height: '100%'}}>
-                <StyledSlide src="https://www.flickr.com/photos/eurobrake/48016271432/in/album-72157708965910476/"  alt="EuroBrake greeting"/>
+                <StyledSlide src="https://live.staticflickr.com/65535/48016136483_351aca498d_k.jpg" alt="EuroBrake greeting"/>
             </Slide>
             <Slide ssr left style={{height: '100%'}}>
-                <StyledSlide src="https://www.flickr.com/photos/eurobrake/48016256367/in/album-72157708965910476/"  alt="EuroBrake greeting"/>
+                <StyledSlide src="https://live.staticflickr.com/65535/48016271432_55407a4514_b.jpg" alt="EuroBrake greeting"/>
+            </Slide>
+            <Slide ssr left style={{height: '100%'}}>
+                <StyledSlide src="https://live.staticflickr.com/65535/48016256367_84a9d1b927_b.jpg" alt="EuroBrake greeting"/>
             </Slide>
         </Carousel>
        
