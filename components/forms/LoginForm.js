@@ -79,7 +79,7 @@ export const LoginForm = () => {
                         </Button>
                         
                         <Link
-                            href="/f/[id]/[taskType]"
+                            href="/f/[id]/[formType]"
                             as={`/f/XC8Z3FWxDuQtk68qVs3uwF/reset`} >
                         <a onClick={() => setToggle(Toggle => !Toggle)}>
                            <Typography className="form-link"> Forgotten your password?</Typography> 

@@ -15,7 +15,7 @@ import {FixedDates} from '../../../components/Dates';
 // import { Esop } from './Esop';
 // import { GetFormSSR } from '../../components/forms/FormActions';
 const Form = props => {
-    const { presets, __csrf_token, } = props.data;
+    const { presets, __csrf_token, } = props.data || {};
     const {apiUrl, id, formType, taskType} = props;// ? GETTIN FROM GET INITIAL PROPS
     const FT = formType || '';
     const TT = taskType || '';
@@ -42,20 +42,21 @@ const Form = props => {
 }
 export default Form
 Form.getInitialProps = async context => {
-    const { id, taskUrl, formType, taskType } = context.query;
+    const { id, taskUrl, formType, taskType } = context.query ;
     const { logintoken } = cookies(context) || {};
-    const apiUrl = () => {
+    const apiUrl = '';
+    
         switch (formType) {
         case 'author' :
-                return `https://prelude.eurobrake.net/authors/profile` ;
+                apiUrl = `https://prelude.eurobrake.net/authors/profile` ;
         
         case 'reset' :
-                return `https://prelude.eurobrake.net/authors/reset/${id}`;
+             apiUrl = `https://prelude.eurobrake.net/authors/reset/${id}`;
         
         default :
-        return `https://prelude.eurobrake.net/authors/edit/${id}`;
+             apiUrl = `https://prelude.eurobrake.net/authors/edit/${id}`;
      } 
-    }
+    
    
     console.log('1st GIP', { id, logintoken, apiUrl, taskUrl, formType, taskType })
     console.log('props', { id, logintoken, apiUrl, taskUrl, formType, taskType })
@@ -92,25 +93,4 @@ Form.getInitialProps = async context => {
     
     }     
 }
-    // const { form } = props;
-    // switch (form) {
-    //     case 'abstract-edit':
-    //     case 'abstract':
-    //         return <AbstractForm />;
-    //     case 'exhibitor-edit':
-    //         return <Exhibitorprofile editPaper="true" />;
-    //     case 'exhibitor':
-    //         return <Exhibitorprofile />;
-    //     case 'author-edit':
-    //         return <Authorprofile editPaper="true" />;
-    //     case 'author':
-    //         return <Authorprofile />;
-    //     case 'esop-edit':
-    //     // return <Esop editPaper="true" />;
-    //     case 'esop':
-    //     // return <Esop />;
-    //     case 'login':
-    //         return <LoginForm />;
-    //     default:
-    //         return null;
-    // }
+   
