@@ -19,6 +19,8 @@ const FooterBar = styled.div`
     position: absolute;
     bottom: 0;
     padding: 2rem;
+    border-top: 5px solid ${props => props.theme.secondary};
+
 
     .ftr_top-box{
         display: flex;

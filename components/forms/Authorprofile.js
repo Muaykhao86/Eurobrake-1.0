@@ -9,6 +9,8 @@ import { SendForm } from './FormActions';
 
 
 export const Authorprofile = (props) => {
+    const [Toggle, setToggle] = useState(false);
+
     const { presets, csrf, apiUrl, paperId} = props;
     console.log({ presets, apiUrl})
     
@@ -25,13 +27,18 @@ export const Authorprofile = (props) => {
             enableReinitialize
         >
             {({ values, handleChange, errors, validateForm}) => {
-                   const onSubmit = () => {
+                   const onSubmit = async () => {
                   values.__csrf_token = csrf
                     console.log('submitting')
-                    SendFile({values, url, csrf})
+                  let res =  await SendForm({values, url, csrf});
+                  let data = res.json()
+                  console.log({data})
+                  data.status = success && setToggle(Toggle => !Toggle)
               }
 
                 return (
+                    <>
+                    {Toggle && <h1>It onllllllllllllly works</h1>}
                     <StyledForm>
                         <div className="form-field">
                             <label
@@ -305,6 +312,7 @@ export const Authorprofile = (props) => {
                                 style={{ margin: "3rem" }}
                                 fontSize="1.7rem">Submit</Button>
                     </StyledForm>
+                    </>                
                 )
             }}
         </Formik>

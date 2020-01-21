@@ -13,6 +13,8 @@ const CDBanner = styled.div`
     margin-top: 0;
     min-width: 100%;
     min-height: 20vh;
+    border-top: 5px solid ${props => props.theme.secondary};
+
       @media only screen 
         and (max-device-width: 768px) 
         and (-webkit-min-device-pixel-ratio: 2) {

@@ -91,6 +91,8 @@ export const StyledBanner = styled.div`
     justify-content: center;
     align-items: center;
     color: white; 
+    border-top: 5px solid ${props => props.theme.secondary};
+
 `;
 
 export const StyledContainer = styled.div`

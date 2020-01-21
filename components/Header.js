@@ -14,6 +14,7 @@ const HeaderBar = styled.div`
     justify-content: flex-end;
     align-items: center;
     z-index: 100;
+    border-bottom: 5px solid ${props => props.theme.secondary};
 
     .logo{
         margin-left: 10rem;
