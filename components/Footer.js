@@ -157,9 +157,9 @@ function Footer() {
                     <a href="" >Contact Us</a>
                     <Link href="/privacyPolicy"><a >Privacy Policy</a></Link>
                     </div>
-                    <div className="" style={{display: 'flex', justifyContent: 'center', height: '3rem'}}>
-                    <Typography className="heading-copy" style={{marginRight: '2rem'}}>Copyright © 2020 FISITA</Typography>
-                    <FLogoWhite width="10rem" height="2rem"/>
+                    <div className="" style={{display: 'flex', justifyContent: 'center', alignItems: 'baseline', height: '3rem'}}>
+                    <Typography className="heading-copy" style={{marginRight: '8rem'}}>Copyright © 2020 FISITA</Typography>
+                <a href="https://www.fisita.com/"><FLogoWhite width="18rem" height="5rem"/></a>
                     </div>
                 </div>
                 <div className="ftr_container-right">

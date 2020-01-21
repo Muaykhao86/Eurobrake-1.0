@@ -44,7 +44,7 @@ export default Form
 Form.getInitialProps = async context => {
     const { id, taskUrl, formType, taskType } = context.query ;
     const { logintoken } = cookies(context) || {};
-    const apiUrl = '';
+    let apiUrl = '';
     
         switch (formType) {
         case 'author' :
