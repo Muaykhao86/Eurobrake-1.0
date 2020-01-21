@@ -63,7 +63,8 @@ Form.getInitialProps = async context => {
         process.browser
             ? Router.push('/authorsArea')
             : context.res.writeHead(301, { Location: '/authorsArea' })
-    if (logintoken) {
+    if(formType === 'reset') return {}
+    else if (logintoken) {
         try {
             const response = await fetch(apiUrl, {
                 credentials: 'include',

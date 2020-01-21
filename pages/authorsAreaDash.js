@@ -226,7 +226,7 @@ class AuthorsAreaDash extends Component {
                     </Button>
                             </Link>
 
-                            <Link href="/f/[id]/[formType]" as={`/f/${profile}/author`}>
+                            <Link href="/f/[id]/[formType]" as={`/f/profile/author`}>
                                 <Button
                                     bcolor="#134381"
                                     padding="0.5rem 2rem"
