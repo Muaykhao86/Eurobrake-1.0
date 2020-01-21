@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import {LoginForm} from './LoginForm';
+import {ResetForm} from './ResetForm';
 import {AbstractForm} from './Abstract';
 import {Authorprofile} from './Authorprofile';
 import {Exhibitorprofile} from './Exhibitorprofile';
@@ -32,6 +33,8 @@ class OneForm extends Component {
                 return <Esop type={type} presets={presets} csrf={csrf} apiUrl={apiUrl} paperId={paperId}/>;
                 case'login' : 
                 return <LoginForm type={type} presets={presets} csrf={csrf} apiUrl={apiUrl} paperId={paperId}/>;
+                case'reset' : 
+                return <ResetForm type={type} presets={presets} csrf={csrf} apiUrl={apiUrl} paperId={paperId}/>;
                 default: 
                     return <Typography>No form found please try again or contact info@eurobrake.net</Typography>;            
             }

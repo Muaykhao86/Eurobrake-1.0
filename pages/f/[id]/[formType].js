@@ -44,7 +44,19 @@ export default Form
 Form.getInitialProps = async context => {
     const { id, taskUrl, formType, taskType } = context.query;
     const { logintoken } = cookies(context) || {};
-    const apiUrl = `https://prelude.eurobrake.net/authors/edit/${id}`
+    const apiUrl = () => {
+        switch (formType) {
+        case 'author' :
+                return `https://prelude.eurobrake.net/authors/profile` ;
+        
+        case 'reset' :
+                return `https://prelude.eurobrake.net/authors/reset/${id}`;
+        
+        default :
+        return `https://prelude.eurobrake.net/authors/edit/${id}`;
+     } 
+    }
+   
     console.log('1st GIP', { id, logintoken, apiUrl, taskUrl, formType, taskType })
     console.log('props', { id, logintoken, apiUrl, taskUrl, formType, taskType })
     const redirectOnError = () =>

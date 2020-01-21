@@ -5,18 +5,17 @@ import { Button } from '../Button';
 import {titles, countries} from './FormSelects';
 import {AbstractSchema} from './FormControl';
 import {StyledForm} from './Formstyles';
-import { GetForm } from './FormActions';
+import { SendForm } from './FormActions';
 
 
-export const Authorprofile = ({editPaper = false}) => {
-    useEffect(() => {
-       console.log({editPaper})
-      
-    }, [editPaper])
+export const Authorprofile = (props) => {
+    const { presets, csrf, apiUrl, paperId} = props;
+    console.log({ presets, apiUrl})
+    
   
     return (
         <Formik
-            initialValues={ emptyInitial }
+            initialValues={ presets || emptyInitial }
             onSubmit={(values, actions) => {
                 setTimeout(() => {
                     alert(JSON.stringify(values, null, 2));
@@ -25,7 +24,12 @@ export const Authorprofile = ({editPaper = false}) => {
             }}
             enableReinitialize
         >
-            {({ values, handleChange}) => {
+            {({ values, handleChange, errors, validateForm}) => {
+                   const onSubmit = () => {
+                  values.__csrf_token = csrf
+                    console.log('submitting')
+                    SendFile({values, url, csrf})
+              }
 
                 return (
                     <StyledForm>
@@ -38,9 +42,9 @@ export const Authorprofile = ({editPaper = false}) => {
                             <Field
                                 className="form-input"
                                 onClick={handleChange}
-                                value={values.author_title}
+                                value={values.title}
                                 style={{ color: '#134381' }}
-                                name="author_title"
+                                name="title"
                                 component={Select}
                             >
                                 {titles.map((option, i) =>
@@ -56,9 +60,9 @@ export const Authorprofile = ({editPaper = false}) => {
                             <Field
                                 className="form-input"
                                 onClick={handleChange}
-                                value={values.author_firstname}
+                                value={values.firstname}
                                 style={{ color: '#134381' }}
-                                name="author_firstname"
+                                name="firstname"
                                 component={TextField}
                             />
                         </div>
@@ -71,9 +75,9 @@ export const Authorprofile = ({editPaper = false}) => {
                             <Field
                                 className="form-input"
                                 onClick={handleChange}
-                                value={values.author_lastname}
+                                value={values.lastname}
                                 style={{ color: '#134381' }}
-                                name="author_lastname"
+                                name="lastname"
                                 component={TextField}
                             />
                         </div>
@@ -86,9 +90,9 @@ export const Authorprofile = ({editPaper = false}) => {
                             <Field
                                 className="form-input"
                                 onClick={handleChange}
-                                value={values.author_email}
+                                value={values.email}
                                 style={{ color: '#134381' }}
-                                name="author_email"
+                                name="email"
                                 component={TextField}
                             />
                         </div>
@@ -101,9 +105,9 @@ export const Authorprofile = ({editPaper = false}) => {
                             <Field
                                 className="form-input"
                                 onClick={handleChange}
-                                value={values.author_jobtitle}
+                                value={values.jobtitle}
                                 style={{ color: '#134381' }}
-                                name="author_jobtitle"
+                                name="jobtitle"
                                 component={TextField}
                             />
                         </div>
@@ -116,9 +120,9 @@ export const Authorprofile = ({editPaper = false}) => {
                             <Field
                                 className="form-input"
                                 onClick={handleChange}
-                                value={values.author_company}
+                                value={values.company}
                                 style={{ color: '#134381' }}
-                                name="author_company"
+                                name="company"
                                 component={TextField}
                             />
                         </div>
@@ -131,9 +135,9 @@ export const Authorprofile = ({editPaper = false}) => {
                             <Field
                                 className="form-input"
                                 onClick={handleChange}
-                                value={values.author_address1}
+                                value={values.address1}
                                 style={{ color: '#134381' }}
-                                name="author_address1"
+                                name="address1"
                                 component={TextField}
                             />
                         </div>
@@ -146,9 +150,9 @@ export const Authorprofile = ({editPaper = false}) => {
                             <Field
                                 className="form-input"
                                 onClick={handleChange}
-                                value={values.author_address2}
+                                value={values.address2}
                                 style={{ color: '#134381' }}
-                                name="author_address2"
+                                name="address2"
                                 component={TextField}
                             />
                         </div>
@@ -161,9 +165,9 @@ export const Authorprofile = ({editPaper = false}) => {
                             <Field
                                 className="form-input"
                                 onClick={handleChange}
-                                value={values.author_address3}
+                                value={values.address3}
                                 style={{ color: '#134381' }}
-                                name="author_address3"
+                                name="address3"
                                 component={TextField}
                             />
                         </div>
@@ -176,9 +180,9 @@ export const Authorprofile = ({editPaper = false}) => {
                             <Field
                                 className="form-input"
                                 onClick={handleChange}
-                                value={values.author_city}
+                                value={values.city}
                                 style={{ color: '#134381' }}
-                                name="author_city"
+                                name="city"
                                 component={TextField}
                             />
                         </div>
@@ -191,9 +195,9 @@ export const Authorprofile = ({editPaper = false}) => {
                             <Field
                                 className="form-input"
                                 onClick={handleChange}
-                                value={values.author_scp}
+                                value={values.scp}
                                 style={{ color: '#134381' }}
-                                name="author_scp"
+                                name="scp"
                                 component={TextField}
                             />
                         </div>
@@ -206,9 +210,9 @@ export const Authorprofile = ({editPaper = false}) => {
                             <Field
                                 className="form-input"
                                 onClick={handleChange}
-                                value={values.author_postal}
+                                value={values.postal}
                                 style={{ color: '#134381' }}
-                                name="author_postal"
+                                name="postal"
                                 component={TextField}
                             />
                         </div>
@@ -221,9 +225,9 @@ export const Authorprofile = ({editPaper = false}) => {
                             <Field
                                 className="form-input"
                                 onClick={handleChange}
-                                value={values.author_country}
+                                value={values.country}
                                 style={{ color: '#134381' }}
-                                name="author_country"
+                                name="country"
                                 component={Select}
                             >
                                 {countries.map((option, i) =>
@@ -239,9 +243,9 @@ export const Authorprofile = ({editPaper = false}) => {
                             <Field
                                 className="form-input"
                                 onClick={handleChange}
-                                value={values.author_phone}
+                                value={values.phone}
                                 style={{ color: '#134381' }}
-                                name="author_phone"
+                                name="phone"
                                 component={TextField}
                             />
                         </div>
@@ -254,9 +258,9 @@ export const Authorprofile = ({editPaper = false}) => {
                             <Field
                                 className="form-input"
                                 onClick={handleChange}
-                                value={values.author_fax}
+                                value={values.fax}
                                 style={{ color: '#134381' }}
-                                name="author_fax"
+                                name="fax"
                                 component={TextField}
                             />
                         </div>
@@ -269,9 +273,9 @@ export const Authorprofile = ({editPaper = false}) => {
                             <Field
                                 className="form-input"
                                 onClick={handleChange}
-                                value={values.author_phone}
+                                value={values.password}
                                 style={{ color: '#134381' }}
-                                name="author_password"
+                                name="password"
                                 component={TextField}
                             />
                         </div>
@@ -284,22 +288,22 @@ export const Authorprofile = ({editPaper = false}) => {
                             <Field
                                 className="form-input"
                                 onClick={handleChange}
-                                value={values.author_phone}
+                                value={values.password}
                                 style={{ color: '#134381' }}
-                                name="author_password_confirm"
+                                name="confirm_password"
                                 component={TextField}
                             />
                         </div>
   
                        
-                        <Button type="submit" 
-                         bcolor="#134381"
+                        <Button 
+                                onClick={() => validateForm().then(errors => Object.keys(errors).length === 0 && onSubmit())}
+                                bcolor="#134381"
                                 background="#134381"
                                 br="100rem"
                                 padding=".5rem 4rem"
                                 style={{ margin: "3rem" }}
                                 fontSize="1.7rem">Submit</Button>
-                        {console.log('main', values.is_presenting_author, 'second', values.secondary_authors)}
                     </StyledForm>
                 )
             }}
@@ -307,45 +311,25 @@ export const Authorprofile = ({editPaper = false}) => {
     )
 };
 
-// const presets = {
-//     author_title: "Mr.",
-//     author_firstname: "Andrew",
-//     author_lastname: "Green",
-//     author_email: "andrew@article7.co.uk",
-//     author_jobtitle: "Director",
-//     author_company: "Article Seven Limited",
-//     author_address1: "10 Hamilton Road",
-//     author_address2: null,
-//     author_address3: null,
-//     author_city: "Sidcup",
-//     author_scp: "Kent",
-//     author_country: "GB",
-//     author_postal: "DA15 7HB",
-//     author_phone: "+44 20 8305 1224",
-//     author_fax: '',
-//     author_password: '',
-//     author_password_confirmed: '',
-//     __csrf_token: "5d159fb224ed613dce89a64553f36f5eda1fa97c,2caaa318bb55c8c19d660a1e420d1c602dfc59f9,1576603105"
-// }
 
 const emptyInitial = {
-    author_title: '',
-    author_firstname: '',
-    author_lastname: '',
-    author_email: '',
-    author_jobtitle: '',
-    author_company: '',
-    author_address1: '',
-    author_address2: '',
-    author_address3: '',
-    author_city: '',
-    author_scp: '',
-    author_postal: '',
-    author_country: '',
-    author_phone: '',
-    author_fax: '',
-    author_password: '',
-    author_password_confirmed: '',
+    title: '',
+    firstname: '',
+    lastname: '',
+    email: '',
+    jobtitle: '',
+    company: '',
+    address1: '',
+    address2: '',
+    address3: '',
+    city: '',
+    scp: '',
+    postal: '',
+    country: '',
+    phone: '',
+    fax: '',
+    password: '',
+    confirmed_password: '',
     __csrf_token: ''
 
 }

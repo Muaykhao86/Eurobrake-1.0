@@ -6,16 +6,15 @@ import { Button } from '../Button';
 import { SendForm } from './FormActions';
 import { Typography } from '@material-ui/core';
 import {LoginSchema} from './FormControl';
-import Link from 'next/link';
 
 
 // async (values, actions) => {
 //                 await SendForm({ values, url })
 //             }
 
-export const LoginForm = () => {
-    const [Toggle, setToggle] = useState(false);
-    const url = Toggle ? 'https://prelude.eurobrake.net/authors/reset' : 'https://prelude.eurobrake.net/authors/login';
+export const ResetForm = (props) => {
+    // const [Toggle, setToggle] = useState(false);
+    const url =  `https://prelude.eurobrake.net/authors/reset${props.paperId}`;
     console.log({url})
     return (
         <Formik
@@ -31,25 +30,8 @@ export const LoginForm = () => {
 
                 return (
                     <StyledForm>
-                        {Toggle && <Typography className="form-title">Please enter your email to reset your password</Typography>}
+                    <Typography className="form-title">Please provide your new password</Typography>
 
-                        <div className="form-field">
-                            <label
-                                htmlFor="label"
-                                className="form-label">
-                                Email:
-                        </label>
-                            <Field
-                                type="email"
-                                className="form-input"
-                                onClick={handleChange}
-                                value={values.username}
-                                style={{ color: '#134381' }}
-                                name="username"
-                                component={TextField}
-                            />
-                        </div>
-                        {!Toggle &&
                         <div className="form-field">
                             <label
                                 htmlFor="label"
@@ -57,16 +39,34 @@ export const LoginForm = () => {
                                 Password:
                         </label>
                             <Field
+                                disallow_autocomplete='1'
                                 type="password"
                                 className="form-input"
                                 onClick={handleChange}
-                                value={values.password}
+                                value={values.new_password}
                                 style={{ color: '#134381' }}
-                                name="password"
+                                name="new_password"
                                 component={TextField}
                             />
                         </div>
-                        }
+                     
+                        <div className="form-field">
+                            <label
+                                htmlFor="label"
+                                className="form-label">
+                                Confirm Password:
+                        </label>
+                            <Field
+                                type="password"
+                                className="form-input"
+                                onClick={handleChange}
+                                value={values.confirm_password}
+                                style={{ color: '#134381' }}
+                                name="confirm_password"
+                                component={TextField}
+                            />
+                        </div>
+                      
                         <Button 
                             onClick={() => validateForm().then(errors => Object.keys(errors).length === 0 && onSubmit())}
                             bcolor="#134381"
@@ -75,29 +75,21 @@ export const LoginForm = () => {
                             style={{ margin: "3rem" }}
                             padding=".5rem 4rem"
                             fontSize="1.7rem">
-                            {Toggle ? 'Reset' : 'Login'}
+                            Reset
                         </Button>
-                        
-                        <Link
-                            href="/t/[id]/[taskType]"
-                            as={`/t/XC8Z3FWxDuQtk68qVs3uwF/reset`} >
-                        <a onClick={() => setToggle(Toggle => !Toggle)}>
-                           <Typography className="form-link"> `Forgotten your password?`</Typography> 
-                        </a>
-                        </Link>
                     </StyledForm>
                 )
             }}
         </Formik>
     )
 };
-// ? For now im by passin the email link just to check what i have with a reset token
 
 
 const emptyInitial = {
-    username: '',
-    password: '',
+    new_password: '',
+    confirm_password: '',
 };
+
 
 
 

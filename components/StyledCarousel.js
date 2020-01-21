@@ -63,7 +63,7 @@ export default function StyledCarousel() {
                 <StyledSlide src="https://live.staticflickr.com/65535/48016271432_55407a4514_b.jpg" alt="EuroBrake greeting"/>
             </Slide>
             <Slide ssr left style={{height: '100%'}}>
-                <StyledSlide src="https://live.staticflickr.com/65535/48016256367_84a9d1b927_b.jpg" alt="EuroBrake greeting"/>
+                <StyledSlide src="https://live.staticflickr.com/65535/48016162516_6cb09426e3_b.jpg" alt="EuroBrake greeting"/>
             </Slide>
         </Carousel>
        

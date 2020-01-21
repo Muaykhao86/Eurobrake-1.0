@@ -5,7 +5,7 @@ import MapContainer from './GoogleMaps';
 import Typography from '@material-ui/core/Typography';
 import { Button } from './Button';
 import SponsorCarousel from './SponsorCarousel';
-
+import {FLogoWhite} from './Icons';
 
 
 const FooterBar = styled.div`
@@ -159,6 +159,7 @@ function Footer() {
                     </div>
                    
                     <Typography className="heading-copy">Copyright © 2020 FISITA</Typography>
+                    <FLogoWhite width="10rem" height="10rem"/>
                 </div>
                 <div className="ftr_container-right">
                     {/* <Typography className="heading">Visit the CCIB wesbsite <a href="https://ccib.es/en/" style={{color: '#F9B721'}}>HERE</a></Typography> */}

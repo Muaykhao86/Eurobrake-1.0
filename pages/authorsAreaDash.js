@@ -170,7 +170,7 @@ class AuthorsAreaDash extends Component {
             editForm: false,
             formType: '',
             paper: '',
-            profile: '',//will get rid of when i have profile props
+            profile: 'profile',//will get rid of when i have profile props
         }
     }
 
@@ -226,7 +226,7 @@ class AuthorsAreaDash extends Component {
                     </Button>
                             </Link>
 
-                            <Link href="/f/[id]" as={`/f/${profile}`}>
+                            <Link href="/f/[id]/[formType]" as={`/f/${profile}/author`}>
                                 <Button
                                     bcolor="#134381"
                                     padding="0.5rem 2rem"
@@ -347,7 +347,7 @@ class AuthorsAreaDash extends Component {
 
     }
 }
-// ! STILL PUSHING TO HOME WHEN WE WANT TOPUSHTO aUTHORS AREA LOGIN
+// ! STILL PUSHING TO HOME WHEN WE WANT TOPUSHTO aUTHORS AREA LOGIN => on fault
 AuthorsAreaDash.getInitialProps = async ctx => {
     // We use `nextCookie` to get the cookie and pass the token to the frontend in the `props`.
     const { logintoken } = cookies(ctx) || {};
