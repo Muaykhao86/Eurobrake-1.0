@@ -1583,13 +1583,16 @@ var StyledText = Object(styled_components__WEBPACK_IMPORTED_MODULE_1__["default"
 }, function (props) {
   return props.fs || '12rem';
 }, function (props) {
-  return props.theme.MPBlack;
+  return props.sfont ? props.theme.MPLight : props.theme.MPBlack;
 });
 function HeroSection(props) {
   var t = props.t,
       max = props.max,
       fs = props.fs,
-      cara = props.cara;
+      cara = props.cara,
+      st = props.st,
+      smax = props.smax,
+      sfs = props.sfs;
   return __jsx(StyledHero, {
     __source: {
       fileName: _jsxFileName,
@@ -1619,23 +1622,33 @@ function HeroSection(props) {
       lineNumber: 61
     },
     __self: this
-  }, props.children), __jsx("div", {
-    className: "banner",
+  }, props.children), __jsx(StyledText, {
+    t: st,
+    max: smax,
+    fs: sfs,
+    sfont: "true",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 64
     },
     __self: this
+  }, props.secondary), __jsx("div", {
+    className: "banner",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 67
+    },
+    __self: this
   }, props.banner ? __jsx(props.banner, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 65
+      lineNumber: 68
     },
     __self: this
   }) : __jsx(_CountDownBanner__WEBPACK_IMPORTED_MODULE_3__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 65
+      lineNumber: 68
     },
     __self: this
   })));
@@ -2857,7 +2870,7 @@ function StyledCarousel() {
     },
     __self: this
   }, __jsx(StyledSlide, {
-    srcSet: "/images/pic1.png",
+    srcSet: "/images/main.jpg",
     alt: "EuroBrake Greating",
     __source: {
       fileName: _jsxFileName,
@@ -2876,11 +2889,49 @@ function StyledCarousel() {
     },
     __self: this
   }, __jsx(StyledSlide, {
-    srcSet: "/images/barcelona.png",
-    alt: "EuroBrake Greating",
+    src: "https://live.staticflickr.com/65535/48016136483_351aca498d_k.jpg",
+    alt: "EuroBrake greeting",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 60
+    },
+    __self: this
+  })), __jsx(react_reveal_Slide__WEBPACK_IMPORTED_MODULE_3___default.a, {
+    ssr: true,
+    left: true,
+    style: {
+      height: '100%'
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 62
+    },
+    __self: this
+  }, __jsx(StyledSlide, {
+    src: "https://www.flickr.com/photos/eurobrake/48016271432/in/album-72157708965910476/",
+    alt: "EuroBrake greeting",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 63
+    },
+    __self: this
+  })), __jsx(react_reveal_Slide__WEBPACK_IMPORTED_MODULE_3___default.a, {
+    ssr: true,
+    left: true,
+    style: {
+      height: '100%'
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 65
+    },
+    __self: this
+  }, __jsx(StyledSlide, {
+    src: "https://www.flickr.com/photos/eurobrake/48016256367/in/album-72157708965910476/",
+    alt: "EuroBrake greeting",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 66
     },
     __self: this
   }))));
@@ -70731,60 +70782,63 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 /* harmony default export */ __webpack_exports__["default"] = (function () {
   return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx(_components_HeroSection__WEBPACK_IMPORTED_MODULE_9__["default"], {
+    sfs: "8rem",
+    st: "65rem",
     cara: true,
-    max: "90%",
-    src: "/images/barcelona.png",
+    max: "60%",
+    src: "/images/main.jpg",
+    secondary: "Secure your tickets by this date",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 16
     },
     __self: this
-  }, "EuroBrake 2020"), __jsx(_components_styles_HomeStyles__WEBPACK_IMPORTED_MODULE_2__["StyledContainer"], {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 23
-    },
-    __self: this
-  }, __jsx(_components_Dates__WEBPACK_IMPORTED_MODULE_10__["FixedDates"], {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 24
-    },
-    __self: this
-  }), __jsx(_components_AboutSection__WEBPACK_IMPORTED_MODULE_3__["default"], {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 25
-    },
-    __self: this
-  }), __jsx(_components_LocationSection__WEBPACK_IMPORTED_MODULE_4__["default"], {
+  }, "Book your Early Bird tickets for EuroBrake 2020"), __jsx(_components_styles_HomeStyles__WEBPACK_IMPORTED_MODULE_2__["StyledContainer"], {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 26
     },
     __self: this
-  }), __jsx(_components_AttendeesSection__WEBPACK_IMPORTED_MODULE_5__["default"], {
+  }, __jsx(_components_Dates__WEBPACK_IMPORTED_MODULE_10__["FixedDates"], {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 27
     },
     __self: this
-  }), __jsx(_components_exhibitors_ExhibitionSection__WEBPACK_IMPORTED_MODULE_6__["default"], {
+  }), __jsx(_components_AboutSection__WEBPACK_IMPORTED_MODULE_3__["default"], {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 28
     },
     __self: this
-  }), __jsx(_components_StudentSection__WEBPACK_IMPORTED_MODULE_7__["default"], {
+  }), __jsx(_components_LocationSection__WEBPACK_IMPORTED_MODULE_4__["default"], {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 29
     },
     __self: this
-  }), __jsx(_components_AuthorSection__WEBPACK_IMPORTED_MODULE_8__["default"], {
+  }), __jsx(_components_AttendeesSection__WEBPACK_IMPORTED_MODULE_5__["default"], {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 30
+    },
+    __self: this
+  }), __jsx(_components_exhibitors_ExhibitionSection__WEBPACK_IMPORTED_MODULE_6__["default"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 31
+    },
+    __self: this
+  }), __jsx(_components_StudentSection__WEBPACK_IMPORTED_MODULE_7__["default"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 32
+    },
+    __self: this
+  }), __jsx(_components_AuthorSection__WEBPACK_IMPORTED_MODULE_8__["default"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 33
     },
     __self: this
   })));

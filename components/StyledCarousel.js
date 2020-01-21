@@ -54,10 +54,16 @@ export default function StyledCarousel() {
        
         <Carousel   count={10} defaultWait={3000} /*wait for 1000 milliseconds*/>
             <Slide ssr left style={{height: '100%'}}>
-                <StyledSlide  srcSet="/images/pic1.png" alt="EuroBrake Greating"/> 
+                <StyledSlide  srcSet="/images/main.jpg" alt="EuroBrake Greating"/> 
             </Slide>
             <Slide ssr left style={{height: '100%'}}>
-                <StyledSlide  srcSet="/images/barcelona.png" alt="EuroBrake Greating"/> 
+                <StyledSlide src="https://live.staticflickr.com/65535/48016136483_351aca498d_k.jpg" alt="EuroBrake greeting"/>
+            </Slide>
+            <Slide ssr left style={{height: '100%'}}>
+                <StyledSlide src="https://www.flickr.com/photos/eurobrake/48016271432/in/album-72157708965910476/"  alt="EuroBrake greeting"/>
+            </Slide>
+            <Slide ssr left style={{height: '100%'}}>
+                <StyledSlide src="https://www.flickr.com/photos/eurobrake/48016256367/in/album-72157708965910476/"  alt="EuroBrake greeting"/>
             </Slide>
         </Carousel>
        

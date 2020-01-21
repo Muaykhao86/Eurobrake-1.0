@@ -46,12 +46,12 @@ const StyledText = styled(Typography)`
     text-shadow: 0px 3px 50px #0000008C;
 &&.MuiTypography-body1 {
         font-size: ${props => props.fs || '12rem'};
-        font-family:${props => props.theme.MPBlack};
+        font-family:${props => props.sfont? props.theme.MPLight : props.theme.MPBlack};
         line-height: 1;
 }
 `;
 export default function HeroSection(props) {
-    const { t, max, fs, cara } = props;
+    const { t, max, fs, cara, st, smax, sfs} = props;
     return (
         <StyledHero>
              {cara ? 
@@ -60,6 +60,9 @@ export default function HeroSection(props) {
              }   
             <StyledText t={t} max={max} fs={fs}>
                 {props.children}
+            </StyledText>
+            <StyledText t={st} max={smax} fs={sfs} sfont="true">
+                {props.secondary}
             </StyledText>
             <div className="banner">
             {props.banner ? <props.banner  /> : <CountDownBanner />}

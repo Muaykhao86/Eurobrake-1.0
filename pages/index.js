@@ -14,11 +14,14 @@ import {FixedDates} from '../components/Dates';
 export default () => (
     <>       
         <HeroSection 
+        sfs="8rem"
+        st="65rem"
          cara
-         max="90%"
-         src="/images/barcelona.png" 
+         max="60%"
+         src="/images/main.jpg" 
+         secondary="Secure your tickets by this date"
          >
-            EuroBrake 2020
+            Book your Early Bird tickets for EuroBrake 2020  
         </HeroSection> 
         <StyledContainer>
             <FixedDates/>
