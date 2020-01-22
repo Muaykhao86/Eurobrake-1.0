@@ -1,13 +1,29 @@
-import React from 'react'
+import React ,{Component, useState}from 'react'
 import styled from 'styled-components';
 import Link from 'next/link';
 import Typography from '@material-ui/core/Typography';
 import HeroSection from '../components/HeroSection';
 import StopIcon from '@material-ui/icons/Stop';
 import { Button } from '../components/Button';
-import { Quote, MailIcon, PhoneIcon } from '../components/Icons';
+import { Quote, MailIcon, PhoneIcon , EBFloorPlan} from '../components/Icons';
 import {FixedDates} from '../components/Dates';
 
+
+const StyledFloorPlan = styled.div`
+    background-color: #FFF;
+     width: ${props => props.width || '100%'};
+     height: ${props => props.height ||'100%'} ;
+    /* height: 60rem; */
+    display: flex;
+    position: ${props => props.full ? 'Fixed' : 'relative'};
+    z-index: ${props => props.full ? '1000': '90'};
+    top: 0;
+    left: ${props => props.full ? '50%' : ''};
+    right: ${props => props.full ? '50%' : ''};
+    margin-left: ${props => props.full ?  '-50vw': '0'};
+    margin-right: ${props => props.full ?  '-50vw': '0' };
+
+`;
 
 
 const StyledPage = styled.div`
@@ -136,7 +152,12 @@ const StyledQuote = styled.div`
 // ! NEED TO SORT OUT MEDIA QUERIS FOR TEXT DUE TO SVG NOT SCALING WITH FONT
 //  * OPTIONS ARE TO REDO QOUTE MARKS AND SET THE Z-INDEZX AS -100? 
 
-export default () => (
+export default () => {
+     const [full, setFull] = useState(false)
+    const svgWidth = full ? '100vw' : '1000';
+const svgHeight = full ? '100vh' : '';
+    
+    return (
     <>
         <HeroSection
             max="55%"
@@ -201,10 +222,16 @@ export default () => (
                         style={{ margin: '3.5rem 0' }}
                     >DOWNLOAD THE EXHBITOR TERMS & CONDITIONS</Button>
                 </div>
+                <Typography gutterBottom className="Exhibit-title">View the event floor plan</Typography>
+                <Typography gutterBottom className="Exhibit">Click the image to zoom in and out</Typography>
+
+                <StyledFloorPlan height={svgHeight} width={svgWidth} full={full}>
+                    <EBFloorPlan height={svgHeight} width={svgWidth} onClick={() => setFull(full => !full)}/>
+                </StyledFloorPlan>
             </div>
         </StyledPage>
     </>
-)
+)}
 
 
 

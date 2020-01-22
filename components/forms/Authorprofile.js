@@ -3,7 +3,7 @@ import { Formik, Form, Field } from 'formik';
 import { TextField, Select} from 'formik-material-ui';
 import { Button } from '../Button';
 import {titles, countries} from './FormSelects';
-import {AbstractSchema} from './FormControl';
+import {AuthorSchema} from './FormControl';
 import {StyledForm} from './Formstyles';
 import { SendForm } from './FormActions';
 
@@ -18,21 +18,32 @@ export const Authorprofile = (props) => {
     return (
         <Formik
             initialValues={ presets || emptyInitial }
+            validationSchema={AuthorSchema}
             enableReinitialize
         >
-            {({ values, handleChange, errors, validateForm}) => {
+            {({ values, handleChange, errors, validateForm,}) => {
+                   
+                   
+                   const allTouched = async () => {
+                     await Object.keys(values).forEach(key => {   
+                        setFieldTouched(key, true)});
+
+                       await validateForm().then(errors => Object.keys(errors).length === 0 && onSubmit())
+                }
+                   
                    const onSubmit = async () => {
                   values.__csrf_token = csrf
                     console.log('submitting')
                   let res =  await SendForm({values, url, csrf});
-                  let data = res.json()
-                  console.log({data})
-                  data.status == success && setToggle(Toggle => !Toggle)
+                  let status = await await res && res.status;
+                  console.log({status})
+                 status && data.status == 'success' && setToggle(Toggle => !Toggle)
+                  return status
               }
 
                 return (
                     <>
-                    {Toggle && <h1>It onllllllllllllly works</h1>}
+                    {Toggle && <h1>It onllllllllllllly works {status}</h1>}
                     <StyledForm>
                         <div className="form-field">
                             <label
@@ -242,6 +253,7 @@ export const Authorprofile = (props) => {
                                 Phone:
                         </label>
                             <Field
+                                 placeholder="Please use the international code"
                                 className="form-input"
                                 onClick={handleChange}
                                 value={values.phone}
@@ -257,6 +269,7 @@ export const Authorprofile = (props) => {
                                 Fax:
                         </label>
                             <Field
+                                 placeholder="Please use the international code"
                                 className="form-input"
                                 onClick={handleChange}
                                 value={values.fax}
@@ -272,6 +285,7 @@ export const Authorprofile = (props) => {
                                 Choose a Password:
                         </label>
                             <Field
+                                placeholder="If you dont wish to change your password please leave blank"
                                 className="form-input"
                                 onClick={handleChange}
                                 value={values.password}
@@ -287,6 +301,7 @@ export const Authorprofile = (props) => {
                                 Confirm password:
                         </label>
                             <Field
+                                placeholder="If you dont wish to change your password please leave blank"
                                 className="form-input"
                                 onClick={handleChange}
                                 value={values.password}
@@ -298,7 +313,7 @@ export const Authorprofile = (props) => {
   
                        
                         <Button 
-                                onClick={() => validateForm().then(errors => Object.keys(errors).length === 0 && onSubmit())}
+                                onClick={() =>  allTouched()}
                                 bcolor="#134381"
                                 background="#134381"
                                 br="100rem"

@@ -1,5 +1,42 @@
 import * as yup from 'yup';
 
+
+
+
+
+export const AuthorSchema = yup.object().shape({
+    title: yup.string(),
+    firstname: yup.string().required('Required'),
+    lastname:yup.string().required('Required'),
+    email: yup.string().required('Required')
+    .email(),
+    jobtitle:yup.string().required('Required'),
+    company: yup.string().required('Required'),
+    address1: yup.string().required('Required'),
+    address2: yup.string(),
+    address3: yup.string(),
+    city:yup.string().required('Required'),
+    scp:yup.string(),
+    postal: yup.string(),
+    country: yup.string().required('Required'),
+    phone: yup.string().required('Required'),
+    fax: yup.string(),
+    password:yup.string()
+    .password(),
+    confirmed_password: yup.string()
+    .password()
+
+})
+
+export const ResetSchema = yup.object().shape({
+     new_password:  yup.string().required('Required')
+     .min(8, 'Password must be a least 8 characters long'),
+    confirm_password: yup.string().required('Required')
+    .min(8, 'Password must be a least 8 characters long')
+     .oneOf([yup.ref('new_password'), null],'Passwords must match')
+    
+});
+        
 export const LoginSchema = yup.object().shape({
     username: yup.string()
         .email()

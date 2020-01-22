@@ -12,11 +12,19 @@
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],
-    "/authorsArea": [
+    "/exhibitAndSponsor": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],
-    "/studentArea": [
+    "/exhibitors": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
+    ],
+    "/f/[id]/[formType]": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
+    ],
+    "/next/dist/pages/_error": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ]

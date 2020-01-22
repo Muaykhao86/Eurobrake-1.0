@@ -341,21 +341,14 @@ export class EBFloorPlan extends Component {
   // ! I HAD TO TAKE THE QUERY SELECTORS INTO USE EFFECT AS THAT IS WHAT IS FIRING FIRST 
   // ! SORT YOUR SELECTORS THEN YOUR LOGIC!
   componentDidMount = () => {
-    // let Snap = import('snapsvg'); 
-    // console.log({Snap})
-    // let map = this.props.mapref;
-    // console.log({map});
-    // console.log('please fucking work')
-
-    // Snap.then(snap => console.log(snap(map)));
-
-    let booth = this.props.booth.length > 3 ? this.props.booth.slice(0, 2) : this.props.booth;
-    let propBooth3 = document.querySelector(`#prefix__booth-${booth}`);
-    let propBooth4 = propBooth3.firstChild;// * IT WORKS!!!
+   
+  
+    let bN = this.props.booth && this.props.booth.length > 3 ? this.props.booth.slice(0, 2) : this.props.booth;
+    let propBooth3 = document.querySelector(`#prefix__booth-${bN}`);
+    let propBooth4 = this.props.booth && propBooth3.firstChild;// * IT WORKS!!!
     let selectedBooth = propBooth4 || null;
     console.log({ selectedBooth })
-  if (selectedBooth !== null) selectedBooth.classList.toggle("findMe");
-  
+  selectedBooth !== null && selectedBooth.classList.toggle("findMe");
   }
 
 

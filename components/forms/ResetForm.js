@@ -1,11 +1,11 @@
 import React, { Component, useState } from 'react'
-import { Formik, Form, Field, } from 'formik';
+import { Formik, Form, Field, ErrorMessage } from 'formik';
 import { TextField} from 'formik-material-ui';
 import { StyledForm } from './Formstyles';
 import { Button } from '../Button';
 import { SendForm } from './FormActions';
 import { Typography } from '@material-ui/core';
-import {LoginSchema} from './FormControl';
+import {ResetSchema} from './FormControl';
 
 
 // async (values, actions) => {
@@ -13,23 +13,39 @@ import {LoginSchema} from './FormControl';
 //             }
 
 export const ResetForm = (props) => {
-    // const [Toggle, setToggle] = useState(false);
+    const [Toggle, setToggle] = useState(false);
     const url =  `https://prelude.eurobrake.net/authors/reset/${props.paperId}`;
     console.log({url})
     return (
         <Formik
             initialValues={emptyInitial}
-            validationSchema={LoginSchema}
+            validationSchema={ResetSchema}
             enableReinitialize
         >
-            {({ values, handleChange, validateForm }) => {
+            {({ values, handleChange, validateForm, errors, setFieldTouched, handleSubmit, submitForm }) => {
 
-                const onSubmit = () => {
-                    SendForm({url, values})
+                const allTouched = async () => {
+                     await Object.keys(values).forEach(key => {   
+                        setFieldTouched(key, true)});
+
+                       await validateForm().then(errors => Object.keys(errors).length === 0 && onSubmit())
+                }
+
+
+                const onSubmit = async () => {
+                console.log('click')
+                    let FT = 'reset';
+                  let res =  await SendForm({values, url, FT});
+                  let status = await res && res.status ;
+                  console.log({status})
+                  status && status == 'success' && setToggle(Toggle => !Toggle)
+                  return status
                 }
 
                 return (
                     <StyledForm>
+                    {Toggle && <h1>It onllllllllllllly works {status}</h1>}
+                    {console.log({errors})}
                     <Typography className="form-title">Please provide your new password</Typography>
 
                         <div className="form-field">
@@ -39,7 +55,6 @@ export const ResetForm = (props) => {
                                 Password:
                         </label>
                             <Field
-                                disallow_autocomplete='1'
                                 type="password"
                                 className="form-input"
                                 onClick={handleChange}
@@ -52,7 +67,7 @@ export const ResetForm = (props) => {
                      
                         <div className="form-field">
                             <label
-                                htmlFor="label"
+                                htmlFor="confirm_password"
                                 className="form-label">
                                 Confirm Password:
                         </label>
@@ -68,7 +83,7 @@ export const ResetForm = (props) => {
                         </div>
                       
                         <Button 
-                            onClick={() => validateForm().then(errors => Object.keys(errors).length === 0 && onSubmit())}
+                            onClick={() => allTouched()}
                             bcolor="#134381"
                             background="#134381"
                             br="100rem"

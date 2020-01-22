@@ -64,7 +64,7 @@ export async function GetForm(url) {
         )
         // return error.message
     }
-    return
+    return 
 }
 
 export async function SendFile({ values, url, csrf }) {
@@ -111,10 +111,10 @@ export async function SendFile({ values, url, csrf }) {
 }
 
 
-export async function SendForm({ csrf, values, url }) {
+export async function SendForm({ csrf, values, url, FT }) {
     const form = JSON.stringify(values);
     const { logintoken } = cookie.get();
-        console.log({url, form});
+        console.log({url, form, FT});
     if (logintoken && csrf && form) {
         try {
             const apiUrl = url;
@@ -131,6 +131,7 @@ export async function SendForm({ csrf, values, url }) {
 
             if (data.status === 'success') {
                 console.log('getForm', data);
+                return data
             } else {
                 let error = new Error(data.error)
                 error.response = response
@@ -169,6 +170,35 @@ export async function SendForm({ csrf, values, url }) {
         } catch (error) {
             console.error(
                 'Failed to login, please try again', error
+            )
+         }
+        }
+    if(FT === 'reset' ){
+        console.log({url, form});
+        try {
+            const response = await fetch(url, {
+                method: 'POST', 
+                credentials: 'include',
+                body: form,
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+            });
+         
+            const data = await response.json()
+
+            if (data.status === 'success') {
+            console.log('getForm', data);
+            return data
+
+            } else {
+                let error = new Error(data.error)
+                error.response = response
+                throw error
+            }
+        } catch (error) {
+            console.error(
+                'Failed to reset, please try again', error
             )
          }
         }

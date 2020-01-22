@@ -111,12 +111,12 @@ margin-right: ${props => props.full ?  '-50vw': '0' };
 
  background-color: ${props => props.theme.white};
  width: ${props => props.width || '100%'};
-  height: ${props => props.width ||'100%'} ;
-   @media only screen 
+  height: ${props => props.height ||'100%'} ;
+   /* @media only screen 
    and (max-device-width: 768px) 
   and (-webkit-min-device-pixel-ratio: 2) { 
   height: '100%' ;
-}
+} */
    border: 1px solid ${props => props.theme.primary};
   align-self: center;
   overflow: hidden;
