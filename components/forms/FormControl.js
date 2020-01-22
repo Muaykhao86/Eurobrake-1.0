@@ -5,7 +5,7 @@ import * as yup from 'yup';
 
 
 export const AuthorSchema = yup.object().shape({
-    title: yup.string(),
+    title: yup.string().nullable(),
     firstname: yup.string().required('Required'),
     lastname:yup.string().required('Required'),
     email: yup.string().required('Required')
