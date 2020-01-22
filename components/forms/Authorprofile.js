@@ -39,7 +39,7 @@ export const Authorprofile = (props) => {
                   let res =  await SendForm({values, url, csrf});
                   let status = await  res && res.status;
                   console.log({status})
-                 status && data.status == 'success' && setToggle(Toggle => !Toggle)
+                 status && status == 'success' && setToggle(Toggle => !Toggle)
                   return status
               }
 
