@@ -19,52 +19,52 @@ import {AbstractForm} from '../components/forms/Abstract';
 
 
 
-// export default () => (
-//     <>
-//     <HeroSection>
-//         Complete your task
-//     </HeroSection>
-//     <StyledPage>
-//             <AbstractForm/>
-//     </StyledPage>
-//     </>
-// )
+export default () => (
+    <>
+    <HeroSection>
+        Complete your task
+    </HeroSection>
+    <StyledPage>
+            <PPT/>
+    </StyledPage>
+    </>
+)
         {/* <Paper/> */}
 
    
-export default () => {
+// export default () => {
 
-  const GetproDef = async () => {
-            const formData = await  GetForm(`https://prelude.eurobrake.net/authors/profile?definition=1`);
-            const res = await formData;
-           return  console.log({res});
-    }
-  const GetpassDef = async () => {
-            const formData = await  GetForm(`https://prelude.eurobrake.net/authors/reset?definition=1`);
-            const res = await formData;
-           return  console.log({res});
-    }
-  const GetresetDef = async () => {
-            const formData = await  GetForm(`https://prelude.eurobrake.net/authors/reset/XC8Z3FWxDuQtk68qVs3uwF?definition=1`);
-            const res = await formData;
-           return  console.log({res});
-    }
+//   const GetproDef = async () => {
+//             const formData = await  GetForm(`https://prelude.eurobrake.net/authors/profile?definition=1`);
+//             const res = await formData;
+//            return  console.log({res});
+//     }
+//   const GetpassDef = async () => {
+//             const formData = await  GetForm(`https://prelude.eurobrake.net/authors/reset?definition=1`);
+//             const res = await formData;
+//            return  console.log({res});
+//     }
+//   const GetresetDef = async () => {
+//             const formData = await  GetForm(`https://prelude.eurobrake.net/authors/reset/XC8Z3FWxDuQtk68qVs3uwF?definition=1`);
+//             const res = await formData;
+//            return  console.log({res});
+//     }
  
 
-return (
-<>
-    <HeroSection max="60%"  >
-    Testing of the forms     
-    </HeroSection>
-    <StyledPage >
-//         <Typography>Get some definitions</Typography>
+// return (
+// <>
+//     <HeroSection max="60%"  >
+//     Testing of the forms     
+//     </HeroSection>
+//     <StyledPage >
+// //         <Typography>Get some definitions</Typography>
 
-        <button onClick={() => GetproDef()}>profile</button>
-        <button onClick={() => GetpassDef()}>password</button>
-        <button onClick={() => GetresetDef()}>passreset</button>
-    </StyledPage>
-</>
-)}  
+//         <button onClick={() => GetproDef()}>profile</button>
+//         <button onClick={() => GetpassDef()}>password</button>
+//         <button onClick={() => GetresetDef()}>passreset</button>
+//     </StyledPage>
+// </>
+// )}  
        
        {/* presets: {}
 __csrf_token: "a1a18d88b90168cb0c3da91c40c6db779d5750f5,e20751081fe215e40f0ca53fdbd618ec1ea4989a,1578920366"

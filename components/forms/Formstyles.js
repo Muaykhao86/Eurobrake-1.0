@@ -57,12 +57,14 @@ export const StyledForm = styled(Form)`
             align-items: flex-end;
 
             &_action{
-                background-color: ${props => props.theme.primary2};
                 position: absolute;
-                top: -7rem;
                 /* border: 3px solid ${props => props.theme.primary}; */
                 display: flex;
                 align-self: flex-end;
+                justify-content: flex-end;
+                right: 0rem;
+                width: 40rem;
+                top: -10rem;
             }
 
             &_question{
@@ -95,6 +97,7 @@ export const StyledForm = styled(Form)`
                 width: 100%;
                display: flex;
                flex-flow: column;
+               justify-content: flex-start;
                margin: 1rem 0;
             }
 

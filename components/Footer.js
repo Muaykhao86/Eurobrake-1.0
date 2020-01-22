@@ -5,7 +5,7 @@ import MapContainer from './GoogleMaps';
 import Typography from '@material-ui/core/Typography';
 import { Button } from './Button';
 import SponsorCarousel from './SponsorCarousel';
-import {FLogoWhite} from './Icons';
+import { FLogoWhite } from './Icons';
 
 
 const FooterBar = styled.div`
@@ -66,14 +66,19 @@ const FooterBar = styled.div`
     }
 
     .ftr_newsletter-box{
-        /* padding: 1rem; */
-        /* border: 1px solid #FFF; */
+     
         display: flex;
         flex: 1 1 auto;
-        flex-flow: row;
-        align-items: center;
-        justify-content: space-between;
-        margin-top: 2.5rem;
+        flex-flow: column;
+        /* align-items: flex-start; */
+        justify-content: flex-start;
+        margin-bottom: 1rem;
+        &_title{
+        margin-bottom: 2.5rem;
+        text-transform: uppercase;
+        font-size: 2rem;
+        font-family: ${props => props.theme.MPBold};
+        }
     }
   
     .ftr_container-icons{
@@ -132,36 +137,32 @@ function Footer() {
             <FooterBar>
                 <div className="ftr_middle-links">
                     <div className="ftr_top-box">
-
-                    <div className="ftr_container-icons">
-                        <a className="social" href="http://www.linkedin.com/groups/EuroBrake-4282205?trk=myg_ugrp_ovr">
-                            <img src="/images/LinkedIn@2000x.png" alt="Linkedin" style={{ maxWidth: '3rem' }} />
-                        </a>
-                        <a className="social" href="http://www.facebook.com/pages/FISITA-International-Federation-of-Automotive-Engineering-Societies/123022704532">
-                            <img src="/images/Facebook@2000x.png" alt="Facebook" style={{ maxWidth: '3rem' }} />
-                        </a>
-                        <a className="social" href="http://twitter.com/FISITAhq">
-                            <img src="/images/Twitter@2000x.png" alt="Twitter" style={{ maxWidth: '3rem' }} />
-                        </a>
-                        <a className="social" href="https://www.flickr.com/photos/eurobrake/albums/72157681368290774">
-                            <img src="/images/flickr-icon@2000w.png" alt="Flickr" style={{ maxWidth: '3rem' }} />
-                        </a>
-                    </div>
-                      <div className="ftr_newsletter-box">
-                        <label htmlFor="Newsletter" style={{ margimRight: 'auto' }}>Newsletter</label>
-                        <input type="email" name="Newsletter" id="" />
-                        <Button padding=".3rem 1.5rem" style={{ fontSize: "1.5rem" }}>submit</Button>
+                        <div className="ftr_newsletter-box" >
+                        <Typography className="ftr_newsletter-box_title" >Sign up for our Newsletter</Typography>
+                          <div className="" style={{display: 'flex'}}>
+                            <div className="" style={{display: 'flex', alignItems: 'center'}}>
+                                <label htmlFor="name">Name</label>
+                                <input type="text" name="name" id="" />
+                            </div>
+                            <div className="" style={{display: 'flex', alignItems: 'center'}}>
+                                <label htmlFor="Newsletter" >Email</label>
+                                <input type="email" name="Newsletter" id="" />
+                            </div>
+                            <Button padding=".5rem " style={{ fontSize: "1rem", height: '2rem', alignSelf: 'center'}}>submit</Button>
+                          </div>
                         </div>
+
+                       
                     </div>
 
                     <div className="ftr_middle-links_links">
-                    <Link href="/disclaimer"><a >Disclaimer</a></Link>
-                    <a href="" >Contact Us</a>
-                    <Link href="/privacyPolicy"><a >Privacy Policy</a></Link>
+                        <Link href="/disclaimer"><a >Disclaimer</a></Link>
+                        <a href="" >Contact Us</a>
+                        <Link href="/privacyPolicy"><a >Privacy Policy</a></Link>
                     </div>
-                    <div className="" style={{display: 'flex', justifyContent: 'center', alignItems: 'baseline', height: '3rem'}}>
-                    <Typography className="heading-copy" style={{marginRight: '8rem'}}>Copyright © 2020 FISITA</Typography>
-                <a href="https://www.fisita.com/"><FLogoWhite width="18rem" height="5rem"/></a>
+                    <div className="" style={{ display: 'flex', justifyContent: 'center', alignItems: 'baseline', height: '3rem' }}>
+                        <Typography className="heading-copy" style={{ marginRight: '8rem' }}>Copyright © 2020 FISITA</Typography>
+                        <a href="https://www.fisita.com/"><FLogoWhite width="18rem" height="5rem" /></a>
                     </div>
                 </div>
                 <div className="ftr_container-right">

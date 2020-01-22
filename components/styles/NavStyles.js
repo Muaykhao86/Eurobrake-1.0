@@ -199,7 +199,7 @@ export const HiddenContainer = styled.div`
 
         min-height: 55rem;
         /* min-height: 85rem; */
-        width: 30rem;
+        width: 25rem;
         flex: 1 1 auto;
         margin: 2rem;
          display: flex;

@@ -13,17 +13,11 @@ export const Authorprofile = (props) => {
 
     const { presets, csrf, apiUrl, paperId} = props;
     console.log({ presets, apiUrl})
-    
+    const url = apiUrl;
   
     return (
         <Formik
             initialValues={ presets || emptyInitial }
-            onSubmit={(values, actions) => {
-                setTimeout(() => {
-                    alert(JSON.stringify(values, null, 2));
-                    actions.setSubmitting(false);
-                }, 1000)
-            }}
             enableReinitialize
         >
             {({ values, handleChange, errors, validateForm}) => {
@@ -33,7 +27,7 @@ export const Authorprofile = (props) => {
                   let res =  await SendForm({values, url, csrf});
                   let data = res.json()
                   console.log({data})
-                  data.status = success && setToggle(Toggle => !Toggle)
+                  data.status == success && setToggle(Toggle => !Toggle)
               }
 
                 return (

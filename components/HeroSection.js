@@ -22,7 +22,7 @@ const StyledHero = styled.div`
         flex: 2 1 80%;
         object-fit: cover;
     }
-     
+   
     .banner{
         display: flex;
         /* flex: 1 1 20%; */
@@ -54,6 +54,8 @@ export default function HeroSection(props) {
     const { t, max, fs, cara, st, smax, sfs} = props;
     return (
         <StyledHero>
+            {/* <div className="styledoverlay"> */}
+
              {cara ? 
             <StyledCarousel /> :
             <img srcSet={props.src ? props.src : "/images/pic11.png"} alt="EuroBrake Greating" />
@@ -67,6 +69,7 @@ export default function HeroSection(props) {
             <div className="banner">
             {props.banner ? <props.banner  /> : <CountDownBanner />}
             </div>
+            {/* </div> */}
         </StyledHero>
     )
 }

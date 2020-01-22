@@ -113,7 +113,7 @@ const StyledInfoArea = styled.div`
 
     }
     .paper-type{
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: ${props => props.theme.black};
     font-family: ${props => props.theme.MPLightIt};
 
@@ -291,7 +291,7 @@ class AuthorsAreaDash extends Component {
                                         <StyledInfoArea>
                                             <div className="paper-summary">
                                                 <Typography className="paper-title">{paper.title}</Typography>
-                                                <Typography gutterBottom className="paper-type">{paper.paper_type === 'full' ? (paper.paper_type.toUpperCase() + ' ' + '+' + ' ' + paper.presentation_type.toUpperCase()) : (paper.paper_type)}</Typography>
+                                                <Typography gutterBottom className="paper-type">{paper.paper_type === 'full' ? (paper.paper_type.toUpperCase() + ' ' + '+' + ' ' + paper.presentation_type.toUpperCase()) : (paper.paper_type.toUpperCase())}</Typography>
                                             </div>
                                                         <Table className="" aria-label="simple table">
                                                             <TableBody style={{width: '100%'}}>

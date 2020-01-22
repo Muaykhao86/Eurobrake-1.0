@@ -51,7 +51,7 @@ const Carousel = makeCarousel(CarouselUI);
 export default function StyledCarousel() {
     return (
         <Overlay>
-       
+       {/* Find the fauilt and pu t the overlay on the */}
         <Carousel   count={10} defaultWait={3000} /*wait for 1000 milliseconds*/>
             <Slide ssr left style={{height: '100%'}}>
                 <StyledSlide  srcSet="/images/main.jpg" alt="EuroBrake Greating"/> 
@@ -68,6 +68,5 @@ export default function StyledCarousel() {
         </Carousel>
        
         </Overlay>
-        
     )
 }

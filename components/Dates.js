@@ -7,12 +7,12 @@ import Bounce from 'react-reveal/Bounce';
 
 
 const StyledDates = styled.div`
-   max-width: ${props => props.MW || '33rem'};
-   max-height: ${props => props.MH ||'33rem'};
-    background-color: ${props => props.theme.primary};
+   max-width:100%;
+   max-height: 100%;
+   background-color: ${props => props.theme.primary};
     padding: 2rem;
     
-
+    border: 5px solid ${props => props.theme.secondary};
     display: flex;
     flex: 1 1 auto;
     flex-flow: column;
@@ -74,7 +74,8 @@ const StyledFixedDates = styled.div`
     width: 25rem;
     max-height: 50rem; 
     background-color: ${props => props.theme.primary};
-    padding: 2rem;
+    padding: 1rem;
+    border: 5px solid ${props => props.theme.secondary};
     
 
     display: flex;

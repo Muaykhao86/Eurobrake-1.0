@@ -54,7 +54,7 @@ export const Bio = (props) => {
                         <Typography className="task-title">Biographical information</Typography>
                         <Typography gutterBottom className="task-label">Please provide biographical details for <span className="task_bold" > the author who will be presenting your paper </span> at EuroBrake. The session chair will use the biography to introduce the presenter. Please ensure the biography is no more than 100 words. Guidelines and an example biography are provided for reference.</Typography>
                        
-                        <Typography className="task-title" style={{textDecoration: 'underline'}}><a >Guidelines for writing your biography</a></Typography>
+                        <Typography className="task-title" style={{textDecoration: 'underline'}}><Link href="https://www.fisita.com/documents/Guidelines_for_Writing_Your_Biography.pdf"><a >Guidelines for writing your biography</a></Link></Typography>
                         <Typography className="task-title">Presenting Author</Typography>
                          <div className="task-notes">
                            <label

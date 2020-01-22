@@ -40,9 +40,9 @@ export const StyledTask = styled(Form)`
 
          
          &-radio{
-            text-align: end;
-            align-content: flex-end;
-            align-self: flex-end;
+            /* text-align: end;
+            align-content: flex-end; */
+            align-self: flex-start;
            
         }
 
@@ -84,13 +84,12 @@ export const StyledTask = styled(Form)`
             justify-content: space-between;
 
             &-radio{
-                text-align: end;
+                /* text-align: end; */
                 position: relative;
-            align-items: flex-end;
-                align-content: flex-end;
                 width: 100%;
                display: flex;
                flex-flow: column;
+              
             }
 
             &-copy{
@@ -129,6 +128,7 @@ export const StyledTask = styled(Form)`
             font-size: 4rem;
             }
             &-label{
+                width: 80%;
             }
             &-box{
                 align-self: flex-end;
@@ -145,7 +145,7 @@ export const StyledTask = styled(Form)`
             font-family: ${props => props.theme.MPLight};
             font-size: 2rem;
             color: ${props => props.theme.primary};
-                align-self: flex-end;
+                align-self: flex-start;
             }
         }
         &-input{

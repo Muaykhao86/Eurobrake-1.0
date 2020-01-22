@@ -75,7 +75,6 @@ export const Permissions = (props) => {
                                     style={{ margin: '1rem' }}
                                     htmlFor="label"
                                     className="task-label-radio">
-                                    Yes, I grant permission for my presentation to be included
                                         <input
                                         onChange={handleChange}                                        
                                         style={{ margin: '1rem' }}
@@ -84,12 +83,12 @@ export const Permissions = (props) => {
                                         value="yes"
                                         id="yes"
                                     />
+                                    Yes, I grant permission for my presentation to be included
                                 </label>
                                 <label
                                     style={{ margin: '1rem' }}
                                     htmlFor="label"
                                     className="task-label-radio">
-                                    No, I do not grant permission
                                         <input
                                     style={{ margin: '1rem' }}
                                         onChange={handleChange}                                        
@@ -98,6 +97,7 @@ export const Permissions = (props) => {
                                         value="no"
                                         id="no"
                                     />
+                                    No, I do not grant permission
                                 </label>
                             </Field>
                             {errors.ok_to_publish_ppt && <label style={{position: 'absolute', bottom: '-1rem', right: '1rem', color: '#ff0000', fontSize: '1.5rem'}}>{errors.ok_to_publish_ppt}</label>}

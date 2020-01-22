@@ -25,8 +25,8 @@ export const LoginForm = () => {
         >
             {({ values, handleChange, validateForm }) => {
 
-                const onSubmit = () => {
-                    SendForm({url, values})
+                const onSubmit = async () => {
+                    await SendForm({url, values})
                 }
 
                 return (

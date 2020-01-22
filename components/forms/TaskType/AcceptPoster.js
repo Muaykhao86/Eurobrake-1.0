@@ -70,7 +70,6 @@ export const AcceptPoster = (props) => {
                                     style={{ margin: '1rem' }}
                                     htmlFor="label"
                                     className="task-label-radio">
-                                         Yes, I will make a poster presentation
                                         <input
                                         onChange={handleChange}                                        
                                         style={{ margin: '1rem' }}
@@ -79,12 +78,12 @@ export const AcceptPoster = (props) => {
                                         value="yes"
                                         id="yes"
                                     />
+                                         Yes, I will make a poster presentation
                                 </label>
                                 <label
                                     style={{ margin: '1rem' }}
                                     htmlFor="label"
                                     className="task-label-radio">
-                                    No, please withdraw my paper from EuroBrake 2020
                                         <input
                                     style={{ margin: '1rem' }}
                                         onChange={handleChange}                                        
@@ -93,6 +92,7 @@ export const AcceptPoster = (props) => {
                                         value="no"
                                         id="no"
                                     />
+                                    No, please withdraw my paper from EuroBrake 2020
                                 </label>
                             </Field>
                             {errors.accept_poster_invitation  && <label style={{position: 'absolute', bottom: '-1rem', right: '1rem', color: '#ff0000', fontSize: '1.5rem'}}>{errors.accept_poster_invitation}</label>}

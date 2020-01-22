@@ -6,6 +6,7 @@ import { TextField, SimpleFileUpload, CheckboxWithLabel, Checkbox, RadioGroup} f
 import { Button } from '../../Button';
 import { SendForm, SendFile } from '../FormActions';
 import { StyledTask } from '../TaskStyles';
+import {PitchVideoSchema} from '../TaskControl';
 
 
 
@@ -26,12 +27,13 @@ export const PitchVideo = (props) => {
     return (
         <Formik
          initialValues={emptyInitial}
+         validationSchema={PitchVideoSchema}
             enableReinitialize
         >
             {({ values, handleChange, setFieldValue, isValidating, validateForm, handleSubmit, errors}) => {
             
                 console.log(values, 'Tasks')
-
+                console.log({errors})
                 const handleCheckBox = async () => {
                     const accept = values.accept;
                     const copyright = values.copyright;
@@ -67,7 +69,7 @@ export const PitchVideo = (props) => {
                                 component={SimpleFileUpload}
                                 fullWidth
                             />
-                           {errors.pitchvideo_filename && <label style={{position: 'absolute', bottom: '-1rem', right: '1rem', color: '#ff0000', fontSize: '1.5rem'}}>{errors.pitchvideo_filename}</label>}
+                           {errors.pitchvideo_filename && <label style={{position: 'absolute', bottom: '-2rem', right: '1rem', color: '#ff0000', fontSize: '1.5rem'}}>{errors.pitchvideo_filename}</label>}
 
                         </div>
 
@@ -91,7 +93,6 @@ export const PitchVideo = (props) => {
                                     style={{ margin: '1rem' }}
                                     htmlFor="label"
                                     className="task-label-radio">
-                                    Yes, I grant permission for my presentation to be included
                                         <input
                                         onChange={handleChange}                                        
                                         style={{ margin: '1rem' }}
@@ -100,12 +101,12 @@ export const PitchVideo = (props) => {
                                         value="yes"
                                         id="yes"
                                     />
+                                    Yes, I grant permission for my presentation to be included
                                 </label>
                                 <label
                                     style={{ margin: '1rem' }}
                                     htmlFor="label"
                                     className="task-label-radio">
-                                    No, I do not grant permission
                                         <input
                                     style={{ margin: '1rem' }}
                                         onChange={handleChange}                                        
@@ -114,6 +115,7 @@ export const PitchVideo = (props) => {
                                         value="no"
                                         id="no"
                                     />
+                                    No, I do not grant permission
                                 </label>
                             </Field>
                             {errors.ok_to_publish_pitchvideo && <label style={{position: 'absolute', bottom: '-1rem', right: '1rem', color: '#ff0000', fontSize: '1.5rem'}}>{errors.ok_to_publish_pitchvideo}</label>}
