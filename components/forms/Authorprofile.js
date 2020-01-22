@@ -10,6 +10,7 @@ import { SendForm } from './FormActions';
 
 export const Authorprofile = (props) => {
     const [Toggle, setToggle] = useState(false);
+    const [Status, setStatus] = useState(null);
 
     const { presets, csrf, apiUrl, paperId} = props;
     console.log({ presets, apiUrl})
@@ -37,15 +38,15 @@ export const Authorprofile = (props) => {
                   values.__csrf_token = csrf
                     console.log('submitting')
                   let res =  await SendForm({values, url, csrf});
-                  let status = await  res && res.status;
+                  let data = await  res && res.status;
                   console.log({status})
-                 status && status == 'success' && setToggle(Toggle => !Toggle)
-                  return status
+                 data && setStatus(data) && setToggle(Toggle => !Toggle)
+                  return 
               }
 
                 return (
                     <>
-                    {Toggle && <h1>It onllllllllllllly works {status}</h1>}
+                    {Toggle && <h1>{Status}</h1>}
                     <StyledForm>
                         <div className="form-field">
                             <label

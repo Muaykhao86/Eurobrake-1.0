@@ -39,13 +39,13 @@ export default () => {
             const res = await formData;
            return  console.log({res});
     }
-  const GetpassDef = async () => {
-            const formData = await  GetForm(`https://prelude.eurobrake.net/authors/reset?definition=1`);
+  const GetcontactDef = async () => {
+            const formData = await  GetForm(`https://prelude.eurobrake.net/signup?definition=1`);
             const res = await formData;
            return  console.log({res});
     }
-  const GetresetDef = async () => {
-            const formData = await  GetForm(`https://prelude.eurobrake.net/authors/reset/XC8Z3FWxDuQtk68qVs3uwF?definition=1`);
+  const GetsignupDef = async () => {
+            const formData = await  GetForm(`https://prelude.eurobrake.net/contact?definition=1`);
             const res = await formData;
            return  console.log({res});
     }
@@ -60,6 +60,8 @@ return (
 //         <Typography>Get some definitions</Typography>
 
         <button onClick={() => GetesopDef()}>esop</button>
+        <button onClick={() => GetcontactDef()}>contact</button>
+        <button onClick={() => GetsignupDef()}>signup</button>
         {/* <button onClick={() => GetpassDef()}>password</button>
         <button onClick={() => GetresetDef()}>passreset</button> */}
     </StyledPage>

@@ -1,3 +1,20 @@
+
+export const Initiatives = [
+{value: "34879B0E-EDA4-11E8-8900-211FD1687A99", label: "ESOP 2018"},
+{value: "8BF4E2A0-F536-11E7-A610-F078B456E719", label: "ESOP 2017"},
+{value: "7C594902-E24B-11E6-A7C8-781D5EAB70CB", label: "EuroBrake Student Innovation Competition 2016"},
+{value: "8A774260-BEBA-11E5-98B0-46765EAB70CB", label: "Daimler Student Innovation Competition 2015"},
+{value: "8A7B6A16-BEBA-11E5-AB5E-47765EAB70CB", label: "Islands of Excellence at FISITA 2016"},
+{value: "8A7FBB48-BEBA-11E5-99C1-48765EAB70CB", label: "Travelling Fellowship at FISITA 2016"},
+{value: "8A83F190-BEBA-11E5-94F1-49765EAB70CB", label: "Student Congress at FISITA 2016"},
+{value: "34879ECE-EDA4-11E8-8900-211FD1687A99", label: "Islands of Excellence at FISITA 2018"},
+{value: "3487A0C2-EDA4-11E8-8900-211FD1687A99", label: "Travelling Fellowship at FISITA 2018"},
+{value: "3487A284-EDA4-11E8-8900-211FD1687A99", label: "Student Congress at FISITA 2018"},
+{value: "8A8C5D3A-BEBA-11E5-AD15-4B765EAB70CB", label: "FISITA Travel Bursary recipient"},
+{value: "87A141F2-E24B-11E6-A84A-811D5EAB70CB", label: "FISITA Work Experience Programme placement"},
+{value: "9EC8166C-E24B-11E6-A67E-861D5EAB70CB", label: "Other (please specify)"},
+]
+
 export const members = [
 {value: "", label: "—"},
 {value: "951E78EA-C357-11E5-B990-AE7F885BA637", label: "AAA - Academic Automotive Association"},

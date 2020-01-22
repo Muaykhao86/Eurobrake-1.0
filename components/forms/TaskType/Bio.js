@@ -33,15 +33,6 @@ export const Bio = (props) => {
         >
             {({ values, handleChange, setFieldValue, isValidating, validateForm, handleSubmit, errors }) => {
                 console.log(errors, 'Tasks')
-                const handleCheckBox = async () => {
-                    const accept = values.accept;
-                    const copyright = values.copyright;
-                    accept === true && setFieldValue('accept', 'yes')
-                    accept === false && setFieldValue('accept', '')
-                    copyright === true && setFieldValue('copyright', 'yes')
-                    copyright === false && setFieldValue('copyright', '')
-                   return
-                }
 
                 const onSubmit = () => {
                   values.__csrf_token = csrf

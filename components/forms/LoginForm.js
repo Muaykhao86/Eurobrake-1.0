@@ -14,7 +14,10 @@ import Link from 'next/link';
 //             }
 
 export const LoginForm = () => {
+    const [Reset, setReset] = useState(false);
     const [Toggle, setToggle] = useState(false);
+    const [Status, setStatus] = useState(null);
+
     const url = Toggle ? 'https://prelude.eurobrake.net/authors/reset' : 'https://prelude.eurobrake.net/authors/login';
     console.log({url})
     return (
@@ -26,12 +29,17 @@ export const LoginForm = () => {
             {({ values, handleChange, validateForm }) => {
 
                 const onSubmit = async () => {
-                    await SendForm({url, values})
-                }
+                   const res = await SendForm({url, values});
+                   const data = await res && res.status;  
+                   console.log({status})
+                  data && setStatus(data) && setToggle(Toggle => !Toggle)
+                    return              
+              }
 
                 return (
                     <StyledForm>
-                        {Toggle && <Typography className="form-title">Please enter your email to reset your password</Typography>}
+                        {Reset && <Typography className="form-title">Please enter your email to reset your password</Typography>}
+                        {Toggle && <Typography className="form-title">{Status}</Typography>}
 
                         <div className="form-field">
                             <label
@@ -49,7 +57,7 @@ export const LoginForm = () => {
                                 component={TextField}
                             />
                         </div>
-                        {!Toggle &&
+                        {!Reset &&
                         <div className="form-field">
                             <label
                                 htmlFor="label"
@@ -75,13 +83,13 @@ export const LoginForm = () => {
                             style={{ margin: "3rem" }}
                             padding=".5rem 4rem"
                             fontSize="1.7rem">
-                            {Toggle ? 'Reset' : 'Login'}
+                            {Reset ? 'Reset' : 'Login'}
                         </Button>
                         
                         <Link
                             href="/f/[id]/[formType]"
                             as={`/f/XC8Z3FWxDuQtk68qVs3uwF/reset`} >
-                        <a onClick={() => setToggle(Toggle => !Toggle)}>
+                        <a onClick={() => setReset(Reset => !Reset)}>
                            <Typography className="form-link"> Forgotten your password?</Typography> 
                         </a>
                         </Link>

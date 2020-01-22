@@ -31,7 +31,7 @@ export const AcceptPoster = (props) => {
         >
             {({ values, handleChange,  setFieldValue, isValidating, validateForm, handleSubmit, errors}) => {
                 console.log(values, 'Tasks')
-                   const handleCheckBox = async () => {
+                   {/* const handleCheckBox = async () => {
                     const accept = values.accept;
                     const copyright = values.copyright;
                     accept === true && setFieldValue('accept', 'yes')
@@ -39,7 +39,7 @@ export const AcceptPoster = (props) => {
                     copyright === true && setFieldValue('copyright', 'yes')
                     copyright === false && setFieldValue('copyright', '')
                    return
-                }
+                } */}
 
                 const onSubmit = () => {
                   values.__csrf_token = csrf

@@ -13,8 +13,8 @@ import {SendForm} from './FormActions';
 
 
 export const AbstractForm = (props) => {
-    const [presenter, setPresenter] = useState('');
-  
+    const [Toggle, setToggle] = useState(false);
+    const [Status, setStatus] = useState(null);
     // if edit = true send back a preset form if not send a blank
     // * above- dont think i need this now, can just check if there aere presets and if not just use epty schema
     const { presets, csrf, apiUrl, paperId} = props;
@@ -39,8 +39,6 @@ export const AbstractForm = (props) => {
                         console.log('gonna change...', input.name, 'cos it aint the same as...', name, ) 
                     })}
                 }
-
-
                 const onPresenterChange = (event) => {
                     const { target } = event;
                     const value = target.value;
@@ -50,12 +48,21 @@ export const AbstractForm = (props) => {
                     allNo({ name });
                     return console.log({ values })
                 }
+                
+                const allTouched = async () => {
+                     await Object.keys(values).forEach(key => {   
+                        setFieldTouched(key, true)});
+                       await validateForm().then(errors => Object.keys(errors).length === 0 && onSubmit())
+                }
 
                 const onSubmit = async () => {
                   values.__csrf_token = csrf;
-                  {/* await SendForm({values, csrf, url}) */}
                     console.log('sending', values, url)
-                    
+                 let res = await SendForm({values, csrf, url})
+                  let data = await res && res.status ;
+                  console.log({status})
+                  data && setStatus(data) && setToggle(Toggle => !Toggle)
+                  return  
                     }
                 // ? NEED TO REDIRECT AFTER FORM SUBMISSION
                 // ? NEED TO DO VALIDATION
@@ -279,14 +286,14 @@ export const AbstractForm = (props) => {
                                 component={TextField}
                             />
                         </div>
-                        <div className="form-field">
+                        <div className="form-field-radio">
                             <label
                                 htmlFor="label"
                                 className="form-label">
                                 Is this the presenting author?
                         </label>
                             <Field
-                                className="form-field"
+                                className="form-field-radio"
                                 value={values.is_presenting_author}
                                 style={{ color: '#134381' , alignSelf: 'flexStart', margin: '0'}}
                                 name="is_presenting_author"
@@ -295,7 +302,7 @@ export const AbstractForm = (props) => {
                                 <label
                                     style={{ margin: ' 0' }}
                                     htmlFor="label"
-                                    className="form-label">
+                                    className="form-label-radio">
                                         <input
                                         checked={values.is_presenting_author === 'yes'}
                                         onChange={(event) => {
@@ -313,7 +320,7 @@ export const AbstractForm = (props) => {
                                 <label
                                     style={{ margin: '1rem 0' }}
                                     htmlFor="label"
-                                    className="form-label">
+                                    className="form-label-radio">
                                         <input
                                         onChange={(event) => {
                                             onPresenterChange(event)
@@ -472,14 +479,14 @@ export const AbstractForm = (props) => {
                                     <option key={i} style={{ fontSize: '1.5rem', cursor: 'pointer' }} value={option.value}>{option.label}</option>)}
                                                     </Field>
                                                 </div>
-                                                <div className="form-field">
+                                                <div className="form-field-radio">
                                                     <label
                                                         htmlFor="label"
-                                                        className="form-label">
+                                                        className="form-label-">
                                                         Is this the presenting Author?
                                                     </label>
                                                     <Field
-                                                        className="form-field"
+                                                        className="form-field-radio"
                                                         style={{ color: '#134381', alignSelf: 'flexStart', margin: '0' }}
                                                         value={`secondary_authors[${index}].is_presenting_author`}
                                                         component={RadioGroup}
@@ -488,7 +495,7 @@ export const AbstractForm = (props) => {
                                                         <label
                                                             style={{ margin: '0' }}
                                                             htmlFor="label"
-                                                            className="form-label">
+                                                            className="form-label-radio">
                                                                 <input
                                                                 checked={is_presenting_author === 'yes'}
                                                                 onChange={(event) => {
@@ -506,7 +513,7 @@ export const AbstractForm = (props) => {
                                                         <label
                                                             style={{ margin: '1rem 0 ' }}
                                                             htmlFor="label"
-                                                            className="form-label">
+                                                            className="form-label-radio">
                                                                 <input
                                                                 checked={is_presenting_author !== 'yes'}
                                                                 onChange={(event) => {
@@ -607,12 +614,14 @@ export const AbstractForm = (props) => {
                                     )}
                             </FieldArray>
                         <Button 
-                                onClick={onSubmit}
+                                onClick={allTouched}
                                 bcolor="#134381"
                                 background="#134381"
                                 br="100rem"
                                 style={{ margin: ".5rem 0" }}
                                 fontSize="1.7rem">Submit</Button>
+                    {Toggle && <Typography gutterBottom className="form-title">{Status}</Typography>}
+
                     </StyledForm>
                 )
             }}
@@ -621,46 +630,6 @@ export const AbstractForm = (props) => {
 };
 
 
-                       
-
-const presetEG = {
-    abstract: "lorem ipsum",
-    author_address1: "10 Hamilton Road",
-    author_address2: null,
-    author_address3: null,
-    author_city: "Sidcup",
-    author_company: "Article Seven Limited",
-    author_country: "GB",
-    author_email: "andrew@article7.co.uk",
-    author_firstname: "Andrew",
-    author_jobtitle: "Director",
-    author_lastname: "Green",
-    author_phone: "+44 20 8305 1224",
-    author_postal: "DA15 7HB",
-    author_scp: "Kent",
-    author_title: "Mr.",
-    consider_for_journal: "no",
-    is_presenting_author: "yes",
-    keywords: "lorem, ipsum",
-    papertitle: "Duis aute irure dolor",
-    presentationtype_full: "programme",
-    previouspapers: null,
-    secondary_authors: [
-        {
-            company: "Article Seven",
-            country: "GB",
-            email: "ava@article7.co.uk",
-            firstname: "Ava",
-            is_presenting_author: "no",
-            lastname: "Green",
-            ref: "2399A3C8-1823-11EA-BBE7-BDC53B013130",
-            title: null,
-        }],
-    submission_type: "full",
-    subtheme: ["3DB1BDC0-9414-11E8-81E9-D82DD1471F92"],
-    theme: "925B5F3C-7865-11E7-8659-8C8422753A7C",
-    __csrf_token: "5d159fb224ed613dce89a64553f36f5eda1fa97c,2caaa318bb55c8c19d660a1e420d1c602dfc59f9,1576603105"
-}
 
 const emptyInitial = {
     author_title: '',
@@ -678,13 +647,13 @@ const emptyInitial = {
     author_country: '',
     author_phone: '',
     is_presenting_author: '',
-    submission_type: '',
-    presentationtype_full: '',
+    // submission_type: '',
+    // presentationtype_full: '',
     papertitle: '',
-    theme: '',
-    subtheme: [],
+    // theme: '',
+    // subtheme: [],
     abstract: '',
-    keywords: '',
+    // keywords: '',
     previouspapers: '',
     consider_for_journal: '',
     secondary_authors: [{
@@ -700,6 +669,46 @@ const emptyInitial = {
     __csrf_token: '',
 
 }
+                       
+
+// const presetEG = {
+//     abstract: "lorem ipsum",
+//     author_address1: "10 Hamilton Road",
+//     author_address2: null,
+//     author_address3: null,
+//     author_city: "Sidcup",
+//     author_company: "Article Seven Limited",
+//     author_country: "GB",
+//     author_email: "andrew@article7.co.uk",
+//     author_firstname: "Andrew",
+//     author_jobtitle: "Director",
+//     author_lastname: "Green",
+//     author_phone: "+44 20 8305 1224",
+//     author_postal: "DA15 7HB",
+//     author_scp: "Kent",
+//     author_title: "Mr.",
+//     consider_for_journal: "no",
+//     is_presenting_author: "yes",
+//     keywords: "lorem, ipsum",
+//     papertitle: "Duis aute irure dolor",
+//     presentationtype_full: "programme",
+//     previouspapers: null,
+//     secondary_authors: [
+//         {
+//             company: "Article Seven",
+//             country: "GB",
+//             email: "ava@article7.co.uk",
+//             firstname: "Ava",
+//             is_presenting_author: "no",
+//             lastname: "Green",
+//             ref: "2399A3C8-1823-11EA-BBE7-BDC53B013130",
+//             title: null,
+//         }],
+//     submission_type: "full",
+//     subtheme: ["3DB1BDC0-9414-11E8-81E9-D82DD1471F92"],
+//     theme: "925B5F3C-7865-11E7-8659-8C8422753A7C",
+//     __csrf_token: "5d159fb224ed613dce89a64553f36f5eda1fa97c,2caaa318bb55c8c19d660a1e420d1c602dfc59f9,1576603105"
+// }
 
 // ! NOT NEEDED ANYMORE !!!! 
 //  <h1>Your Abstract</h1>

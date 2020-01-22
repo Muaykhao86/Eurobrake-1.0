@@ -33,9 +33,7 @@ export const Paper = (props) => {
             enableReinitialize
         >
             {({ values, handleChange, setFieldValue, isValidating, validateForm, handleSubmit, errors }) => {
-{/*                 
-                console.log(values)
-                console.log('errors', errors) */}
+
                 const onSubmit = () => {
                   values.__csrf_token = csrf
                  

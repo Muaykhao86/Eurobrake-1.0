@@ -14,6 +14,8 @@ import {ResetSchema} from './FormControl';
 
 export const ResetForm = (props) => {
     const [Toggle, setToggle] = useState(false);
+    const [Status, setStatus] = useState(null);
+
     const url =  `https://prelude.eurobrake.net/authors/reset/${props.paperId}`;
     console.log({url})
     return (
@@ -36,15 +38,15 @@ export const ResetForm = (props) => {
                 console.log('click')
                     let FT = 'reset';
                   let res =  await SendForm({values, url, FT});
-                  let status = await res && res.status ;
+                  let data = await res && res.status ;
                   console.log({status})
-                  status && status == 'success' && setToggle(Toggle => !Toggle)
-                  return status
+                  data && setStatus(data) && setToggle(Toggle => !Toggle)
+                  return 
                 }
 
                 return (
                     <StyledForm>
-                    {Toggle && <h1>It onllllllllllllly works {status}</h1>}
+                    {Toggle && <Typography gutterBottom className="form-title">{Status}</Typography>}
                     {console.log({errors})}
                     <Typography className="form-title">Please provide your new password</Typography>
 

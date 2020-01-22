@@ -42,8 +42,7 @@ export const StyledForm = styled(Form)`
         }
 
         &-radio{
-            margin: 2rem 0;
-            align-self: flex-end;
+            align-self: flex-start;
            
         }
       
@@ -88,16 +87,15 @@ export const StyledForm = styled(Form)`
                 justify-content: space-between;
                 .MuiInput-underline:before {
                     border-bottom: none;
+                    }
                 }
             }
-        }
 
         &-radio{
                 position: relative;
                 width: 100%;
                display: flex;
                flex-flow: column;
-               justify-content: flex-start;
                margin: 1rem 0;
             }
 
@@ -141,7 +139,7 @@ export const StyledForm = styled(Form)`
             position: relative;
             min-width: 100%;
             font-family: ${props => props.theme.MPLight};
-            font-size: 2.6rem;
+            font-size: 2rem;
             color: ${props => props.theme.primary};
             display: flex;
             align-items: center;
@@ -167,7 +165,7 @@ export const StyledForm = styled(Form)`
             color: ${props => props.theme.primary};
 
             &-radio{
-                text-align: end;
+                align-self: flex-start;
                  font-family: ${props => props.theme.MPLight};
             font-size: 2rem;
             color: ${props => props.theme.primary};

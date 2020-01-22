@@ -4,25 +4,43 @@ import Link from 'next/link';
 import Typography from '@material-ui/core/Typography';
 import { TextField, Select, RadioGroup, CheckboxWithLabel, Checkbox, SimpleFileUpload } from 'formik-material-ui';
 import { Button } from '../Button';
-import { titles, countries, Q1, Q2, Q3, Q4, Marketing, Sessions, members } from './FormSelects';
+import { titles, countries, Q1, Q2, Q3, Q4, Marketing, Sessions, members, Initiatives } from './FormSelects';
 import { EsopSchema } from './FormControl';
 import { StyledForm } from './Formstyles';
+import {SendFile} from './FormActions';
+
 
 
 export const Esop = () => {
+ const [Toggle, setToggle] = useState(false);
+    const [Status, setStatus] = useState(null);
+    const { presets, csrf, apiUrl} = props;
+    const url = `https://prelude.eurobrake.net/esop`;
 
     return (
         <Formik
-            initialValues={emptyInitial}
+            initialValues={emptyInitial || presets}
             validationSchema={EsopSchema}
             enableReinitialize
         >
             {({ values, handleChange, setFieldValue, isValidating, validateForm, handleSubmit, errors, isSubmitting }) => {
 
+
+                    const allTouched = async () => {
+                     await Object.keys(values).forEach(key => {   
+                        setFieldTouched(key, true)});
+                       await validateForm().then(errors => Object.keys(errors).length === 0 && onSubmit())
+                }
+
                 const onSubmit = () => {
-                validateForm()
                   values.__csrf_token = csrf
                     console.log('submitting', values)
+                 let res = await SendFile({values, csrf, url})
+                    let data = await res && res.status ;
+                  console.log({status})
+                  data && setStatus(data) && setToggle(Toggle => !Toggle)
+                  return 
+                
               }
 
                 return (
@@ -832,6 +850,50 @@ export const Esop = () => {
                             </Field>
                             {errors.student_level_current && <label style={{ position: 'absolute', bottom: '-1rem', right: '1rem', color: '#ff0000', fontSize: '1.5rem' }}>{errors.student_level_current}</label>}
                         </div>
+                        <FieldArray
+                                name="initiatives"
+                            >
+                                {({ swap, push, remove, setSubmitting, }) => (
+                                    Initiatives.map((init) => (
+                                        <div
+                                            key={init.id}
+                                            className="form-checkboxField">
+                                            <label
+                                                htmlFor={init.name}
+                                                className="form-checkboxField-label"
+                                                style={{ color: '#134381', width: '80%' }}
+
+                                            >
+                                                {init.id}
+                                            </label>
+                                            <input
+                                                checked={values.initiatives && values.initiatives.includes(init.value)}
+                                                onChange={e => {
+                                                    e.target.checked ? push(init.value) : values.init && remove(values.init.value)
+                                                }}
+                                                className="form-checkboxField-box"
+                                                style={{ color: '#134381', }}
+                                                value={session.value}
+                                                name={session.name}
+                                                type="checkbox"
+                                                id={session.id}
+                                            />
+
+                                            {errors.initiatives && <label style={{ position: 'absolute', bottom: '-1rem', right: '1rem', color: '#ff0000', fontSize: '1.5rem' }}>{errors.initiatives}</label>}
+                                            {values.initiatives === '9EC8166C-E24B-11E6-A67E-861D5EAB70CB' &&
+                                            <Field
+                                                placeholder="Please specify"
+                                                className="form-input"
+                                                onClick={handleChange}
+                                                value={values.initiatives_other}
+                                                style={{ color: '#134381', margin: '1rem 0' }}
+                                                name="initiatives_other"
+                                                component={TextField}
+                                            />
+                                        }
+                                        </div>
+                                    )))}
+                            </FieldArray>
                         <Typography gutterBottom className="form-title" >Additional Information</Typography>
                         <Typography gutterBottom className="form-label" style={{fontSize: '2rem'}}>Please note that by submitting a registration form for ESOP, you indicate your consent to us passing the personal information you have disclosed to us, including your CV, to the ESOP Sponsor Companies, so that they can contact you with details of career and/or work placement opportunities within their organisations, or to arrange a meeting with you at EuroBrake if you are selected to attend.</Typography>
                         <Typography gutterBottom className="form-label" style={{fontSize: '2rem'}}>Here at FISITA we take your privacy seriously and will only use your personal information to set up and administer your account and/or membership and to provide the products and services you have requested from us.</Typography>
@@ -963,12 +1025,14 @@ export const Esop = () => {
 
 
                         <Button 
-                            onClick={() => validateForm().then(errors => Object.keys(errors).length === 0 && onSubmit())}
+                            onClick={() => allTouched()}
                             bcolor="#134381"
                             background="#134381"
                             br="100rem"
                             style={{ margin: "4rem 0", color: '#FFF' }}
                             fontSize="1.7rem">Submit</Button>
+                    {Toggle && <Typography gutterBottom className="form-title">{Status}</Typography>}
+
                     </StyledForm>
                 )
             }}
@@ -1023,6 +1087,8 @@ const emptyInitial = {
     marketing: '',
     marketing_other: '',
     previous_participant: '',
+    initiatives: [],
+    initiatives_other: '',
     consent_sponsors: '',
     consent_fiec: '',
     consent_wep: '',

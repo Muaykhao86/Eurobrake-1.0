@@ -46,6 +46,12 @@ const StyledText = styled(Typography)`
     text-shadow: 0px 3px 50px #0000008C;
 &&.MuiTypography-body1 {
         font-size: ${props => props.fs || '12rem'};
+         @media only screen 
+        and (max-device-width: 768px) 
+        and (-webkit-min-device-pixel-ratio: 2) {
+        font-size: ${props => props.mfs || '10rem'};
+    }
+
         font-family:${props => props.sfont? props.theme.MPLight : props.theme.MPBlack};
         line-height: 1;
 }

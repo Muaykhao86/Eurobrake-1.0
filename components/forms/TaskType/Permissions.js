@@ -10,12 +10,6 @@ import InstructionsPopup from '../../InstructionsPopup';
 import {PermissionSchema} from '../TaskControl';
 
 
-
-
-// async (values, actions) => {
-//                 await Sendtask({ values, url })
-//             }
-
 export const Permissions = (props) => {
     const emptyInitial = {
        ok_to_publish_ppt: ''
@@ -37,15 +31,6 @@ export const Permissions = (props) => {
         >
             {({ values, handleChange, setFieldValue, isValidating, validateForm, handleSubmit, errors}) => {
                 console.log(values, 'Tasks')
-                  const handleCheckBox = async () => {
-                    const accept = values.accept;
-                    const copyright = values.copyright;
-                    accept === true && setFieldValue('accept', 'yes')
-                    accept === false && setFieldValue('accept', '')
-                    copyright === true && setFieldValue('copyright', 'yes')
-                    copyright === false && setFieldValue('copyright', '')
-                   return
-                }
 
                 const onSubmit = () => {
                   values.__csrf_token = csrf

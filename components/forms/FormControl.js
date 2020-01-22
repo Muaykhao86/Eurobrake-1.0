@@ -36,21 +36,16 @@ export const ResetSchema = yup.object().shape({
 });
         
 export const LoginSchema = yup.object().shape({
-    username: yup.string()
-        .email()
-        .required('Required'),
-    password: yup.string()
-        .required('Required'),
+    username: yup.string().required('Required')
+        .email('Please enter a valid email'),
+    password: yup.string().required('Required'),
 });
         
 export const AbstractSchema = yup.object().shape({
+    author_title: yup.string().nullable(),
     author_firstname: yup.string()
-        .min(2, 'Too Short!')
-        .max(50, 'Too Long!')
         .required('Required'),
     author_lastname: yup.string()
-        .min(2, 'Too Short!')
-        .max(50, 'Too Long!')
         .required('Required'),
     author_email: yup.string()
         .email()
@@ -61,8 +56,8 @@ export const AbstractSchema = yup.object().shape({
         .required('Required'),
     author_address1: yup.string()
         .required('Required'),
-    author_address2: yup.string(),
-    author_address3: yup.string(),
+    author_address2: yup.string().nullable(),
+    author_address3: yup.string().nullable(),
     author_city: yup.string()
         .required('Required'),
     author_scp: yup.string()
@@ -87,17 +82,15 @@ export const AbstractSchema = yup.object().shape({
     abstract: yup.string()
         .required('Required')
         .max(750, 'Too Long!'),
-    keywords: yup.string()
-        .required('Required'),
-    previouspapers: yup.string()
-        .required('Required'),
-    consider_for_journal: yup.string()
-        .required('Required'),
+    // keywords: yup.string()
+    //     .required('Required'),
+    // previouspapers: yup.string()
+    //     .required('Required'),
+    // consider_for_journal: yup.string()
+    //     .required('Required'),
     secondary_authors: yup.array()
         .of(yup.object().shape({
-            title: yup.string()
-                .nullable()
-                .required('Required'),
+            title: yup.string().nullable(),
             firstname: yup.string()
                 .required('Required'),
             lastname: yup.string()
@@ -119,30 +112,30 @@ export const AbstractSchema = yup.object().shape({
     ];
 
 export const EsopSchema = yup.object().shape({
-    student_title: yup.string(),
+    student_title: yup.string().nullable(),
     student_firstname: yup.string().required('Required'),
     student_lastname: yup.string().required('Required'),
     student_email: yup.string().required('Required'),
     student_address1: yup.string().required('Required'),
-    student_address2: yup.string(),
-    student_address3: yup.string(),
+    student_address2: yup.string().nullable(),
+    student_address3: yup.string().nullable(),
     student_city: yup.string().required('Required'),
-    student_scp: yup.string(),
-    student_postal: yup.string(),
+    student_scp: yup.string().nullable(),
+    student_postal: yup.string().nullable(),
     student_country: yup.string().required('Required'),
-    student_membersociety: yup.string(),
-    birth_city: yup.string(),
-    birth_country: yup.string(),
+    student_membersociety: yup.string().nullable(),
+    birth_city: yup.string().nullable(),
+    birth_country: yup.string().nullable(),
     student_level_current: yup.string().required('Required'),
     student_level_seeking: yup.string().required('Required'),
     university_course: yup.string().required('Required'),
     university_name: yup.string().required('Required'),
-    university_address1: yup.string(),
-    university_address2: yup.string(),
-    university_address3: yup.string(),
+    university_address1: yup.string().nullable(),
+    university_address2: yup.string().nullable(),
+    university_address3: yup.string().nullable(),
     university_city: yup.string().required('Required'),
-    university_scp: yup.string(),
-    university_postal: yup.string(),
+    university_scp: yup.string().nullable(),
+    university_postal: yup.string().nullable(),
     university_country: yup.string().required('Required'),
     cv_filename_uploader: yup.mixed().required('Required')
     .test("fileFormat",
@@ -169,19 +162,20 @@ export const EsopSchema = yup.object().shape({
     question_1_answer: yup.string().required('Required'),
     question_2_answer: yup.string().required('Required'),
     question_3_answer: yup.string().required('Required'),
-    question_4_answer: yup.array().required('Required').max(3, 'Please select only three').min(3, 'Please select three')
-    ,
-    youtube_url: yup.string(),
-    roundtable: yup.array(),
-    roundtable_other: yup.string(),
+    question_4_answer: yup.array().required('Required').max(3, 'Please select only three').min(3, 'Please select three'),
+    youtube_url: yup.string().nullable(),
+    roundtable: yup.array().nullable(),
+    roundtable_other: yup.string().nullable(),
     marketing: yup.string().required('Required'),
-    marketing_other: yup.string(),
+    marketing_other: yup.string().nullable(),
     previous_participant: yup.string().required('Required'),
-    consent_sponsors: yup.string(),
-    consent_fiec: yup.string(),
-    consent_wep: yup.string(),
-    consent_bursary: yup.string(),
-    consent_events: yup.string(),
-    consent_yfia: yup.string(),
+    initiatives: yup.array().nullable(),
+    initiatives_other: yup.string().nullable(),
+    consent_sponsors: yup.string().nullable(),
+    consent_fiec: yup.string().nullable(),
+    consent_wep: yup.string().nullable(),
+    consent_bursary: yup.string().nullable(),
+    consent_events: yup.string().nullable(),
+    consent_yfia: yup.string().nullable(),
     __csrf_token: yup.string()
 });
