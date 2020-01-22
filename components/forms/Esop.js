@@ -4,11 +4,10 @@ import Link from 'next/link';
 import Typography from '@material-ui/core/Typography';
 import { TextField, Select, RadioGroup, CheckboxWithLabel, Checkbox, SimpleFileUpload } from 'formik-material-ui';
 import { Button } from '../Button';
-import { titles, countries, Q1, Q2, Q3, Q4, Marketing, Sessions } from './FormSelects';
+import { titles, countries, Q1, Q2, Q3, Q4, Marketing, Sessions, members } from './FormSelects';
 import { EsopSchema } from './FormControl';
 import { StyledForm } from './Formstyles';
 
-const members = [];
 
 export const Esop = () => {
 

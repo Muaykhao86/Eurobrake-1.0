@@ -119,62 +119,35 @@ export const AbstractSchema = yup.object().shape({
     ];
 
 export const EsopSchema = yup.object().shape({
-
-    student_title: yup.string()
-    ,
-    student_firstname: yup.string().required('Required')
-    ,
-    student_lastname: yup.string().required('Required')
-    ,
-    student_email: yup.string().required('Required')
-    ,
-    student_address1: yup.string().required('Required')
-    ,
-    student_address2: yup.string()
-    ,
-    student_address3: yup.string()
-    ,
-    student_city: yup.string().required('Required')
-    ,
-    student_scp: yup.string()
-    ,
-    student_postal: yup.string()
-    ,
-    student_country: yup.string().required('Required')
-    ,
-    student_membersociety: yup.string()
-    ,
-    birth_city: yup.string()
-    ,
-    birth_country: yup.string()
-    ,
-    student_level_current: yup.string().required('Required')
-    ,
-    student_level_seeking: yup.string().required('Required')
-    ,
-    university_course: yup.string().required('Required')
-    ,
-    university_name: yup.string().required('Required')
-    ,
-    university_address1: yup.string()
-    ,
-    university_address2: yup.string()
-    ,
-    university_address3: yup.string()
-    ,
-    university_city: yup.string().required('Required')
-    ,
-    university_scp: yup.string()
-    ,
-    university_postal: yup.string()
-    ,
-    university_country: yup.string().required('Required')
-    ,
+    student_title: yup.string(),
+    student_firstname: yup.string().required('Required'),
+    student_lastname: yup.string().required('Required'),
+    student_email: yup.string().required('Required'),
+    student_address1: yup.string().required('Required'),
+    student_address2: yup.string(),
+    student_address3: yup.string(),
+    student_city: yup.string().required('Required'),
+    student_scp: yup.string(),
+    student_postal: yup.string(),
+    student_country: yup.string().required('Required'),
+    student_membersociety: yup.string(),
+    birth_city: yup.string(),
+    birth_country: yup.string(),
+    student_level_current: yup.string().required('Required'),
+    student_level_seeking: yup.string().required('Required'),
+    university_course: yup.string().required('Required'),
+    university_name: yup.string().required('Required'),
+    university_address1: yup.string(),
+    university_address2: yup.string(),
+    university_address3: yup.string(),
+    university_city: yup.string().required('Required'),
+    university_scp: yup.string(),
+    university_postal: yup.string(),
+    university_country: yup.string().required('Required'),
     cv_filename_uploader: yup.mixed().required('Required')
     .test("fileFormat",
           "Unsupported Format",
-          value => value && PDF_SUPPORTED_FORMATS.includes(value.type))
-    ,
+          value => value && PDF_SUPPORTED_FORMATS.includes(value.type)),
     personal_statement: yup.string().required('Required')
       .test(
         'wordCount',
@@ -191,40 +164,24 @@ export const EsopSchema = yup.object().shape({
           value.match(/[\w\d\’\'-]+/gi)
           .length >= 150
           // split(' ').length <= 100 
-      )
-    ,
-    student_status_filename_uploader: yup.string().required('Required')
-    ,
-    question_1_answer: yup.string().required('Required')
-    ,
-    question_2_answer: yup.string().required('Required')
-    ,
-    question_3_answer: yup.string().required('Required')
-    ,
+      ),
+    student_status_filename_uploader: yup.string().required('Required'),
+    question_1_answer: yup.string().required('Required'),
+    question_2_answer: yup.string().required('Required'),
+    question_3_answer: yup.string().required('Required'),
     question_4_answer: yup.array().required('Required').max(3, 'Please select only three').min(3, 'Please select three')
     ,
-    youtube_url: yup.string()
-    ,
-    // roundtable: [],
-    roundtable_other: yup.string()
-    ,
-    marketing: yup.string().required('Required')
-    ,
-    marketing_other: yup.string()
-    ,
-    previous_participant: yup.string().required('Required')
-    ,
-    consent_sponsors: yup.string()
-    ,
-    consent_fiec: yup.string()
-    ,
-    consent_wep: yup.string()
-    ,
-    consent_bursary: yup.string()
-    ,
-    consent_events: yup.string()
-    ,
-    consent_yfia: yup.string()
-    ,
+    youtube_url: yup.string(),
+    roundtable: yup.array(),
+    roundtable_other: yup.string(),
+    marketing: yup.string().required('Required'),
+    marketing_other: yup.string(),
+    previous_participant: yup.string().required('Required'),
+    consent_sponsors: yup.string(),
+    consent_fiec: yup.string(),
+    consent_wep: yup.string(),
+    consent_bursary: yup.string(),
+    consent_events: yup.string(),
+    consent_yfia: yup.string(),
     __csrf_token: yup.string()
 });

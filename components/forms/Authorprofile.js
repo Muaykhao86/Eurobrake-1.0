@@ -21,7 +21,7 @@ export const Authorprofile = (props) => {
             validationSchema={AuthorSchema}
             enableReinitialize
         >
-            {({ values, handleChange, errors, validateForm,}) => {
+            {({ values, handleChange, validateForm, errors, setFieldTouched, handleSubmit, submitForm}) => {
                    
                    
                    const allTouched = async () => {
