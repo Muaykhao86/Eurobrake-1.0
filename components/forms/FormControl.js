@@ -21,10 +21,8 @@ export const AuthorSchema = yup.object().shape({
     country: yup.string().required('Required'),
     phone: yup.string().required('Required'),
     fax: yup.string(),
-    password:yup.string()
-    .password(),
+    password:yup.string(),
     confirmed_password: yup.string()
-    .password()
 
 })
 
