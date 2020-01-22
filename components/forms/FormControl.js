@@ -13,16 +13,16 @@ export const AuthorSchema = yup.object().shape({
     jobtitle:yup.string().required('Required'),
     company: yup.string().required('Required'),
     address1: yup.string().required('Required'),
-    address2: yup.string(),
-    address3: yup.string(),
+    address2: yup.string().nullable(),
+    address3: yup.string().nullable(),
     city:yup.string().required('Required'),
-    scp:yup.string(),
-    postal: yup.string(),
+    scp:yup.string().nullable(),
+    postal: yup.string().nullable(),
     country: yup.string().required('Required'),
     phone: yup.string().required('Required'),
-    fax: yup.string(),
-    password:yup.string(),
-    confirmed_password: yup.string()
+    fax: yup.string().nullable(),
+    password:yup.string().nullable(),
+    confirmed_password: yup.string().nullable()
 
 })
 
