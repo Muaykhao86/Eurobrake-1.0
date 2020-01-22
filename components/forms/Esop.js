@@ -873,10 +873,10 @@ export const Esop = (props) => {
                                                 }}
                                                 className="form-checkboxField-box"
                                                 style={{ color: '#134381', }}
-                                                value={session.value}
-                                                name={session.name}
+                                                value={init.value}
+                                                name={init.name}
                                                 type="checkbox"
-                                                id={session.id}
+                                                id={init.id}
                                             />
 
                                             {errors.initiatives && <label style={{ position: 'absolute', bottom: '-1rem', right: '1rem', color: '#ff0000', fontSize: '1.5rem' }}>{errors.initiatives}</label>}
