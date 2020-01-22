@@ -32,7 +32,7 @@ export const Esop = () => {
                        await validateForm().then(errors => Object.keys(errors).length === 0 && onSubmit())
                 }
 
-                const onSubmit = () => {
+                const onSubmit = async () => {
                   values.__csrf_token = csrf
                     console.log('submitting', values)
                  let res = await SendFile({values, csrf, url})
@@ -280,7 +280,6 @@ export const Esop = () => {
                                     style={{ margin: '1rem' }}
                                     htmlFor="label"
                                     className="form-label-radio">
-                                    None
                                         <input
                                         onChange={handleChange}
                                         style={{ margin: '1rem' }}
@@ -289,12 +288,12 @@ export const Esop = () => {
                                         value="none"
                                         id="student_level_current_none"
                                     />
+                                    None
                                 </label>
                                 <label
                                     style={{ margin: '1rem' }}
                                     htmlFor="label"
                                     className="form-label-radio">
-                                    Bachelor or equivalent
                                         <input
                                         style={{ margin: '1rem' }}
                                         onChange={handleChange}
@@ -303,12 +302,12 @@ export const Esop = () => {
                                         value="Bachelor"
                                         id="student_level_current_Bachelor"
                                     />
+                                    Bachelor or equivalent
                                 </label>
                                 <label
                                     style={{ margin: '1rem' }}
                                     htmlFor="label"
                                     className="form-label-radio">
-                                    Master or equivalent
                                         <input
                                         style={{ margin: '1rem' }}
                                         onChange={handleChange}
@@ -317,6 +316,7 @@ export const Esop = () => {
                                         value="Master"
                                         id="student_level_current_Master"
                                     />
+                                    Master or equivalent
                                 </label>
                             </Field>
                             {errors.student_level_current && <label style={{ position: 'absolute', bottom: '-1rem', right: '1rem', color: '#ff0000', fontSize: '1.5rem' }}>{errors.student_level_current}</label>}
@@ -338,7 +338,6 @@ export const Esop = () => {
                                     style={{ margin: '1rem' }}
                                     htmlFor="label"
                                     className="form-label-radio">
-                                    Bachelor or equivalent
                                         <input
                                         style={{ margin: '1rem' }}
                                         onChange={handleChange}
@@ -347,12 +346,12 @@ export const Esop = () => {
                                         value="Bachelor"
                                         id="student_level_seeking_Bachelor"
                                     />
+                                    Bachelor or equivalent
                                 </label>
                                 <label
                                     style={{ margin: '1rem' }}
                                     htmlFor="label"
                                     className="form-label-radio">
-                                    Master or equivalent
                                         <input
                                         style={{ margin: '1rem' }}
                                         onChange={handleChange}
@@ -361,12 +360,12 @@ export const Esop = () => {
                                         value="Master"
                                         id="student_level_seeking_Master"
                                     />
+                                    Master or equivalent
                                 </label>
                                 <label
                                     style={{ margin: '1rem' }}
                                     htmlFor="label"
                                     className="form-label-radio">
-                                    PhD. or equivalent
                                         <input
                                         onChange={handleChange}
                                         style={{ margin: '1rem' }}
@@ -375,6 +374,7 @@ export const Esop = () => {
                                         value="PhD"
                                         id="student_level_seeking_PhD"
                                     />
+                                    PhD. or equivalent
                                 </label>
                             </Field>
                             {errors.student_level_seeking && <label style={{ position: 'absolute', bottom: '-1rem', right: '1rem', color: '#ff0000', fontSize: '1.5rem' }}>{errors.student_level_seeking}</label>}
@@ -822,7 +822,6 @@ export const Esop = () => {
                                     style={{ margin: '1rem' }}
                                     htmlFor="previous_participant_opt_yes"
                                     className="form-label-radio">
-                                    Yes
                                         <input
                                         onChange={handleChange}
                                         style={{ margin: '1rem' }}
@@ -831,12 +830,12 @@ export const Esop = () => {
                                         value="yes"
                                         id="previous_participant_opt_yes"
                                     />
+                                    Yes
                                 </label>
                                 <label
                                     style={{ margin: '1rem' }}
                                     htmlFor="previous_participant_opt_no"
                                     className="form-label-radio">
-                                    No
                                         <input
                                         style={{ margin: '1rem' }}
                                         onChange={handleChange}
@@ -845,6 +844,7 @@ export const Esop = () => {
                                         value='no'
                                         id="previous_participant_opt_no"
                                     />
+                                    No
                                 </label>
 
                             </Field>
