@@ -25,6 +25,8 @@ export const Authorprofile = (props) => {
                    
                    
                    const allTouched = async () => {
+                       console.log('touched!')
+                       console.log({errors})
                      await Object.keys(values).forEach(key => {   
                         setFieldTouched(key, true)});
 
@@ -35,7 +37,7 @@ export const Authorprofile = (props) => {
                   values.__csrf_token = csrf
                     console.log('submitting')
                   let res =  await SendForm({values, url, csrf});
-                  let status = await await res && res.status;
+                  let status = await  res && res.status;
                   console.log({status})
                  status && data.status == 'success' && setToggle(Toggle => !Toggle)
                   return status
