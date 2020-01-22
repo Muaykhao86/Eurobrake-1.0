@@ -11,7 +11,7 @@ import {SendFile} from './FormActions';
 
 
 
-export const Esop = () => {
+export const Esop = (props) => {
  const [Toggle, setToggle] = useState(false);
     const [Status, setStatus] = useState(null);
     const { presets, csrf, apiUrl} = props;
