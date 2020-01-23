@@ -294,7 +294,7 @@ class AuthorsAreaDash extends Component {
                                             </Link>
 
                                             <Button
-                                                onClick={() => this.handleWithdrawn(papercode)}
+                                                onClick={() => this.handleWithdrawn({papercode})}
                                                 bcolor="#134381"
                                                 background={paper.withdrawn ? "#ff0000" : "#134381"}
                                                 br="100rem"

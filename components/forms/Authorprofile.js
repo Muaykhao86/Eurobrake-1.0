@@ -42,10 +42,11 @@ export const Authorprofile = (props) => {
                   values.__csrf_token = csrf
                     console.log('submitting')
                   let res =  await SendForm({values, url, csrf});
-                  let data= await  res;
-                  let dataStatus= await  res && res.data.status;
+                  let data = await  res;
+                  let dataStatus= await  res && res.status;
                   console.log({data})
-                 data && setStatus(dataStatus) && setToggle(true) && setLoading(false)
+                 data && setToggle(true) && setLoading(false)
+                 {/* && setStatus(dataStatus) */}
                   return 
               }
 
