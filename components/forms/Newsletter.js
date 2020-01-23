@@ -23,16 +23,24 @@ export const Newsletter = () => {
         >
             {({ values, handleChange, validateForm }) => {
 
-                const onSubmit = async () => {
-                   setLoading(true);
-                  {/* values.__csrf_token = csrf */}
-                    console.log('submitting')
-                  let res =  await SendForm({values, url, FT});
-                  let data = await  res && res.status;
-                  console.log({status})
-                 data && setStatus(data) && setToggle(true) && setLoading(false)
-                  return 
+              const onSubmit = async () => {
+                 await setLoading(true);
+                values.__csrf_token = csrf
+                  await  console.log('submitting')
+                  let res =  await SendForm({values, url, csrf});
+                  let data = await  res;
+                  let dataStatus= await  data && data.status;
+                  setStatus(dataStatus)
+                  console.log({data})
+                  let result = async () => {
+                  await  setLoading(false)
+                  await setToggle(true)
+                   }    
+                  
+                return result()
+                 
               }
+
 
                 return (
                     <StyledForm>

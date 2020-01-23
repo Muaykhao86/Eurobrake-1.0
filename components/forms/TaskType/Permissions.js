@@ -45,15 +45,22 @@ export const Permissions = (props) => {
                        await validateForm().then(errors => Object.keys(errors).length === 0 && onSubmit())
                 }
                    
-                   const onSubmit = async () => {
-                    setLoading(true);
-                  values.__csrf_token = csrf
-                    console.log('submitting')
-                  let res =  await SendForm({values, url, csrf});
-                  let data = await  res && res.status;
-                  console.log({status})
-                 data && setStatus(data) && setToggle(true) && setLoading(false)
-                  return 
+                     const onSubmit = async () => {
+                 await setLoading(true);
+                values.__csrf_token = csrf
+                  await  console.log('submitting')
+                  let res =  await SendFile({values, url, csrf});
+                  let data = await  res;
+                  let dataStatus= await  data && data.status;
+                  setStatus(dataStatus)
+                  console.log({data})
+                  let result = async () => {
+                  await  setLoading(false)
+                  await setToggle(true)
+                   }    
+                  
+                return result()
+                 
               }
 
              
