@@ -352,7 +352,6 @@ export const AbstractForm = (props) => {
                             {errors.is_presenting_author && <label style={{ position: 'absolute', bottom: '-1rem', right: '1rem', color: '#ff0000', fontSize: '1.5rem' }}>{errors.is_presenting_author}</label>}
 
                         </div>
-                        {/* // ! new section added back in // NEED TO CONFIRM IF OK  */}
                         <Typography className="form-title">Your Abstract</Typography> 
                          <div className="form-field">
                              <label
@@ -383,8 +382,8 @@ export const AbstractForm = (props) => {
                                  name="abstract"
                                  component="textarea"
                              />
-                        { values.abstract && <label style={{position: 'absolute', bottom: '-3rem', right: '1rem', color: '#ff0000', fontSize: '1.5rem'}}>{'Words' + ' ' + values.abstract.match(/[\w\d\’\'-]+/gi).length}</label>}
-                        {errors.abstract && <label style={{ position: 'absolute', bottom: '-1rem', right: '1rem', color: '#ff0000', fontSize: '1.5rem' }}>{errors.abstract}</label>}
+                        {errors.abstract && <label style={{ position: 'absolute', bottom: '2rem', right: '1rem', color: '#ff0000', fontSize: '1.5rem' }}>{errors.abstract}</label>}
+                        {errors.abstract && values.abstract && <label style={{position: 'absolute', bottom: '0', right: '1rem', color: '#ff0000', fontSize: '1.5rem'}}>{'Words' + ' ' + values.abstract.match(/[\w\d\’\'-]+/gi).length}</label>}
                          </div>
                         
                         {console.log({values})}
