@@ -161,6 +161,8 @@ const [Loading, setLoading] = useState(false);
                            style={{ alignSelf: 'center', color: '#FFF' }}>
                             {Status ? Status : 'submit'}
                         </Button>}
+                    {Toggle && <Typography className="form-title" style={{alignSelf: 'center'}}>{Status.toUppercase()}</Typography>}
+
                     </StyledTask>
                 )
             }}

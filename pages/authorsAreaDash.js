@@ -197,7 +197,7 @@ class AuthorsAreaDash extends Component {
         // let get = await GetForm({url});
         // let data = await get;
         // let csrf = await data && data.__csrf_token ;
-        let res = await SendForm({url, csrf, FT})
+        let res = await SendForm({url,  FT})
         let resData = await res
         console.log('withdrawn', {data})
         await data && this.setState((loading, data)=>({status: data, loading: !loading}))
