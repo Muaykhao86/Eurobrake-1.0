@@ -193,9 +193,10 @@ class AuthorsAreaDash extends Component {
        await  this.setState(loading => ({loading: !loading}));
         const FT = 'withdraw'
         const url = `https://prelude.eurobrake.net/authors/withdrawn/${papercode}`;
+        console.log('withdrawn', url)
         let get = await GetForm({url});
         let data = await get;
-        let csrf =await data && data.__csrf_token ;
+        let csrf = await data && data.__csrf_token ;
         // let res = await SendForm({url, csrf, FT})
         // let resData = await res
         console.log('withdrawn', {data})

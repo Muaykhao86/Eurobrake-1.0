@@ -1039,7 +1039,7 @@ export const Esop = (props) => {
                             background="#134381"
                             br="100rem"
                             style={{ margin: "4rem 0", color: '#FFF' }}
-                            fontSize="1.7rem">Submit</Button>
+                            fontSize="2rem">Submit</Button>
                     {Toggle && <Typography gutterBottom className="form-title">{Status}</Typography>}
 
                     </StyledForm>

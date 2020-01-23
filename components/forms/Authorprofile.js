@@ -43,10 +43,12 @@ export const Authorprofile = (props) => {
                     console.log('submitting')
                   let res =  await SendForm({values, url, csrf});
                   let data = await  res;
-                  let dataStatus= await  res && res.status;
+                  let jd = await data.data;
+                  let dataStatus= await  data && data.status;
                   console.log({data})
-                 data && setToggle(true) && setLoading(false)
-                 {/* && setStatus(dataStatus) */}
+                  console.log({jd})
+                 data &&  setStatus(dataStatus) &&  setToggle(true) && setLoading(false)
+                
                   return 
               }
 
