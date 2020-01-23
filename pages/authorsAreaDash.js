@@ -189,7 +189,7 @@ class AuthorsAreaDash extends Component {
       return  n < '10' ? '0'+ n : n  
     }
 
-    handleWithdrawn = async (papercode) => {
+    handleWithdrawn = async ({papercode}) => {
        await  this.setState(loading => ({loading: !loading}));
         const FT = 'withdraw'
         const url = `https://prelude.eurobrake.net/authors/withdrawn/${papercode}`;
@@ -271,14 +271,16 @@ class AuthorsAreaDash extends Component {
                         {
                             papers ?
 
-                                papers.map((paper) => (
-                                    <StyledBox key={paper.papercode}>
+                                papers.map((paper) => {
+                                    const papercode = paper.papercode; 
+                                    return (
+                                    <StyledBox key={papercode}>
                                         <StyledActionArea>
-                                            <Typography gutterBottom className="action-paper">{paper.papercode}</Typography>
+                                            <Typography gutterBottom className="action-paper">{papercode}</Typography>
                                             <div className="">
                                             <Link
                                                 href="/f/[id]/[formType]"
-                                                as={`/f/${paper.papercode}/abstract`} >
+                                                as={`/f/${papercode}/abstract`} >
                                                 <Button
                                                     bcolor="#134381"
                                                     background="#134381"
@@ -292,7 +294,7 @@ class AuthorsAreaDash extends Component {
                                             </Link>
 
                                             <Button
-                                                onClick={() => this.handleWithdrawn(paper.papercode)}
+                                                onClick={() => this.handleWithdrawn(papercode)}
                                                 bcolor="#134381"
                                                 background={paper.withdrawn ? "#ff0000" : "#134381"}
                                                 br="100rem"
@@ -349,7 +351,7 @@ class AuthorsAreaDash extends Component {
                                                         </Table>
                                         </StyledInfoArea>
                                     </StyledBox>
-                                )) :
+                                )}) :
                                 <StyledBox>
                                     <Typography gutterBottom className="authors-it" style={{ fontSize: '2rem' }}>You haven't submitted any abstracts yet</Typography>
                                 </StyledBox>
