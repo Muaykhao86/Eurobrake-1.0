@@ -16,7 +16,6 @@ export const Newsletter = () => {
     const [Status, setStatus] = useState(null);
     const FT = "newsletter"
     const url = 'https://prelude.eurobrake.net/signup';
-    console.log({url})
     return (
         <Formik
             initialValues={emptyInitial}

@@ -46,15 +46,14 @@ export const Authorprofile = (props) => {
                   let jd = await data.data;
                   let dataStatus= await  data && data.status;
                   console.log({data})
-                  data && console.log(data.status) && setLoading(false)
-                  data && setStatus(dataStatus) && setToggle(true) && setLoading(false) && console.log('finished!')
-                return
+                  let result = await data && console.log(data.status) && setLoading(false).setToggle(true)
+                  
+                return result
                  
               }
 
                 return (
                     <>
-                    {Toggle && <Typography className="form-title">{Status}</Typography>}
                     <StyledForm>
                         <div className="form-field">
                             <label
