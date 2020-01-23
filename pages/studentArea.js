@@ -50,7 +50,7 @@ export default () => {
            return  console.log({res});
     }
  const GetwithDef = async () => {
-            const formData = await  GetForm(`https://prelude.eurobrake.net/withdraw?definition=1`);
+            const formData = await  GetForm(`https://prelude.eurobrake.net/withdraw/EB2020-MDS-003?definition=1`);
             const res = await formData;
            return  console.log({res});
     }

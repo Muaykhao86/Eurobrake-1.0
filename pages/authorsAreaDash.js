@@ -198,7 +198,7 @@ class AuthorsAreaDash extends Component {
         let csrf =await data && data.__csrf_token ;
         // let res = await SendForm({url, csrf, FT})
         // let resData = await res
-        console.log({data})
+        console.log('withdrawn', {data})
         await data && this.setState((loading, data)=>({status: ata, loading: !loading}))
 
     }
@@ -292,7 +292,7 @@ class AuthorsAreaDash extends Component {
                                             </Link>
 
                                             <Button
-                                                onClick={() => handleWithdrawn(paper.papercode)}
+                                                onClick={() => this.handleWithdrawn(paper.papercode)}
                                                 bcolor="#134381"
                                                 background={paper.withdrawn ? "#ff0000" : "#134381"}
                                                 br="100rem"

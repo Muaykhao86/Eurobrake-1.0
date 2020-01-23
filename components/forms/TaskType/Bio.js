@@ -89,7 +89,7 @@ export const Bio = (props) => {
                          bcolor="#134381"
                                 background="#134381"
                                 br="100rem"
-                                style={{ margin: ".5rem 0" }}
+                                style={{ margin: ".5rem 0" , color: '#FFF'}}
                                 fontSize="2rem"
                         onClick={allTouched}
                            style={{ fontSize: "1rem", height: '2rem', alignSelf: 'center'}}>

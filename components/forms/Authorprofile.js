@@ -325,7 +325,7 @@ export const Authorprofile = (props) => {
                                 background="#134381"
                                 br="100rem"
                                 padding=".5rem 4rem"
-                                style={{ margin: "3rem" }}
+                                style={{ margin: "3rem", color: '#FFF' }}
                                 fontSize="1.7rem">Submit</Button>
                                 {Loading && <CircularProgress size={24} className="loading"/>}
                     {Toggle && <Typography className="form-title">{Status}</Typography>}

@@ -20,6 +20,11 @@ height: 80vh;
     height: 100%;
 }
  @media only screen 
+        and (max-device-width: 1200px) 
+        and (-webkit-min-device-pixel-ratio: 2) {
+    height: ${props => props.h || props.theme.heroHeightMed};
+    }  
+ @media only screen 
         and (max-device-width: 768px) 
         and (-webkit-min-device-pixel-ratio: 2) {
     height: ${props => props.h || props.theme.heroHeightSml };
@@ -35,6 +40,11 @@ background-color: black;
 const StyledSlide = styled.img`
 width: 100%;
 height: 100% ;
+       @media only screen 
+        and (max-device-width: 1200px) 
+        and (-webkit-min-device-pixel-ratio: 2) {
+    height: ${props => props.h || props.theme.heroHeightMed };
+    } 
        @media only screen 
         and (max-device-width: 768px) 
         and (-webkit-min-device-pixel-ratio: 2) {

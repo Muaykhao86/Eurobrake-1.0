@@ -759,7 +759,19 @@ export const Esop = (props) => {
                                     )))}
                             </FieldArray>
                         </div>
-                        <div className="form-field" style={{justifyContent: 'flex-end'}}></div>
+                        <div className="form-field" style={{justifyContent: 'flex-end'}}>
+                             {values.roundtable.includes('3CA6AA5A-F3DA-11E8-B5C4-A947D1EF668C') &&
+                                        <Field
+                                            placeholder="Please specify"
+                                            className="form-input"
+                                            onClick={handleChange}
+                                            value={values.roundtable_other}
+                                            style={{ color: '#134381', margin: '1rem 0' }}
+                                            name="roundtable_other"
+                                            component={TextField}
+                                        />
+                        }                            
+                        </div>
 
                         <div className="form-field_question">
                             <label

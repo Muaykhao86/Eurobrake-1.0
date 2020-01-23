@@ -6,6 +6,7 @@ import { StyledForm } from './Formstyles';
 import { Button } from '../Button';
 import { SendForm } from './FormActions';
 import {ContactSchema} from './FormControl';
+import { Typography } from '@material-ui/core';
 
 
 
@@ -49,6 +50,7 @@ export const ContactForm = (props) => {
 
                 return (
                     <StyledForm>
+                    <Typography gutterBottom className="form-title" >Contact us</Typography>
                         <div className="form-field">
                             <label
                                 htmlFor="name"
@@ -183,13 +185,14 @@ export const ContactForm = (props) => {
                          bcolor="#134381"
                                 background="#134381"
                                 br="100rem"
-                                style={{ margin: ".5rem 0" }}
+                                style={{ margin: ".5rem 0", color: '#FFF' }}
                                 fontSize="2rem"
                         onClick={allTouched}
                            style={{ fontSize: "1rem", height: '2rem', alignSelf: 'center'}}>
                             {Status ? Status : 'submit'}
                         </Button>}
                     </StyledForm>
+                    
                 )
             }}
         </Formik>

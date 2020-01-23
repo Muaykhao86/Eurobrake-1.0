@@ -11,6 +11,11 @@ const StyledHero = styled.div`
     min-width: 100%;
     min-height: ${props => props.h || props.theme.heroHeightBig };
       @media only screen 
+        and (max-device-width: 1200px) 
+        and (-webkit-min-device-pixel-ratio: 2) {
+    min-height: ${props => props.h || props.theme.heroHeightMed };
+    }
+      @media only screen 
         and (max-device-width: 768px) 
         and (-webkit-min-device-pixel-ratio: 2) {
     min-height: ${props => props.h || props.theme.heroHeightSml };
@@ -34,9 +39,14 @@ const StyledText = styled(Typography)`
     z-index: 10;
     top: ${props => props.t || '26rem'};
      @media only screen 
+        and (max-device-width: 1200px) 
+        and (-webkit-min-device-pixel-ratio: 2) {
+    top: ${props => props.mmt ||props.smt || '19rem'};
+    }
+     @media only screen 
         and (max-device-width: 768px) 
         and (-webkit-min-device-pixel-ratio: 2) {
-    top: ${props => props.mT || '14rem'};
+    top: ${props => props.mt|| props.smt || '14rem'};
     }
     align-self: center;
     width: ${props => props.max ||  '100%'};
@@ -47,6 +57,12 @@ const StyledText = styled(Typography)`
     
 &&.MuiTypography-body1 {
         font-size: ${props => props.fs ||  props.sfs || '12rem'};
+         @media only screen 
+        and (max-device-width: 1200px) 
+        and (-webkit-min-device-pixel-ratio: 2) {
+        font-size: '9rem';
+         width: ${props =>  '80%'};
+    }
          @media only screen 
         and (max-device-width: 768px) 
         and (-webkit-min-device-pixel-ratio: 2) {
@@ -59,7 +75,7 @@ const StyledText = styled(Typography)`
 }
 `;
 export default function HeroSection(props) {
-    const { t, max, fs, cara, st, smax, sfs, scolor, mfs, msfs, mMax, smt, mT} = props;
+    const { t, max, fs, cara, st, smax, sfs, scolor, mfs, msfs, mMax, smt, mt, smmt, mmt} = props;
     return (
         <StyledHero>
             {/* <div className="styledoverlay"> */}
@@ -68,10 +84,10 @@ export default function HeroSection(props) {
             <StyledCarousel /> :
             <img srcSet={props.src ? props.src : "/images/pic11.png"} alt="EuroBrake Greating" />
              }   
-            <StyledText t={t} mt={mT} max={max} fs={fs} mfs={mfs} mMax={mMax}>
+            <StyledText t={t} mt={mt}mmt={mmt} max={max} fs={fs} mfs={mfs} mMax={mMax}>
                 {props.children}
             </StyledText>
-            <StyledText t={st} mT={smt} max={smax} fs={sfs} color={scolor} msfs={msfs} sfont="true">
+            <StyledText t={st} mt={smt} mmt={smmt} max={smax} fs={sfs} color={scolor} msfs={msfs} sfont="true">
                 {props.secondary}
             </StyledText>
             <div className="banner">
