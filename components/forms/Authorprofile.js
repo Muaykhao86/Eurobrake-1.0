@@ -38,17 +38,21 @@ export const Authorprofile = (props) => {
                 }
                    
                    const onSubmit = async () => {
-                    setLoading(true);
-                  values.__csrf_token = csrf
-                    console.log('submitting')
+                 await setLoading(true);
+                values.__csrf_token = csrf
+                  await  console.log('submitting')
                   let res =  await SendForm({values, url, csrf});
                   let data = await  res;
                   let jd = await data.data;
                   let dataStatus= await  data && data.status;
+                  setStatus(dataStatus)
                   console.log({data})
-                  let result = await data && console.log(data.status) && setLoading(false).setToggle(true)
+                  let result = async () => {
+                  await  setLoading(false)
+                  await setToggle(true)
+                   }    
                   
-                return result
+                return result()
                  
               }
 
