@@ -1,6 +1,16 @@
 import * as yup from 'yup';
 
-
+export const ContactSchema = yup.object().shape({
+    name: yup.string().nullable(),
+    firstname: yup.string().required('Required'),
+    lastname:yup.string().required('Required'),
+    jobtitle:yup.string().nullable(),
+    company: yup.string().required('Required'),
+    address: yup.string().nullable(),
+    email: yup.string().required('Required')
+    .email(),
+    enquiry: yup.string().required('Required')
+})
 
 
 
@@ -107,9 +117,16 @@ export const AbstractSchema = yup.object().shape({
         }))
 });
 
- const PDF_SUPPORTED_FORMATS = [
-     'application/pdf'
+ const CV_SUPPORTED_FORMATS = [
+     'application/pdf', 'application/msword', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'
     ];
+
+ const PROOF_SUPPORTED_FORMATS = [
+     'application/pdf', 'application/msword', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'
+    ];
+
+  const FILE_SIZE = 5033164800 ;
+
 
 export const EsopSchema = yup.object().shape({
     student_title: yup.string().nullable(),
@@ -140,7 +157,7 @@ export const EsopSchema = yup.object().shape({
     cv_filename_uploader: yup.mixed().required('Required')
     .test("fileFormat",
           "Unsupported Format",
-          value => value && PDF_SUPPORTED_FORMATS.includes(value.type)),
+          value => value && CV_SUPPORTED_FORMATS.includes(value.type)),
     personal_statement: yup.string().required('Required')
       .test(
         'wordCount',
@@ -158,7 +175,15 @@ export const EsopSchema = yup.object().shape({
           .length >= 150
           // split(' ').length <= 100 
       ),
-    student_status_filename_uploader: yup.string().required('Required'),
+    student_status_filename_uploader: yup.string().required('Required')
+    .test("fileFormat",
+          "Unsupported Format",
+          value => value && PROOF_SUPPORTED_FORMATS.includes(value.type))
+    .test(
+          "fileSize",
+          "File too large",
+          value => value && value.size <= FILE_SIZE
+        ),
     question_1_answer: yup.string().required('Required'),
     question_2_answer: yup.string().required('Required'),
     question_3_answer: yup.string().required('Required'),

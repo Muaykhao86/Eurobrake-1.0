@@ -23,7 +23,7 @@ export const Esop = (props) => {
             validationSchema={EsopSchema}
             enableReinitialize
         >
-            {({ values, handleChange, setFieldValue, isValidating, validateForm, handleSubmit, errors, isSubmitting }) => {
+            {({ values, handleChange, setFieldTouched, isValidating, validateForm, handleSubmit, errors, isSubmitting }) => {
 
 
                     const allTouched = async () => {
@@ -266,7 +266,7 @@ export const Esop = (props) => {
                         <div className="form-field-radio">
                             <label
                                 htmlFor="label"
-                                className="form-label">
+                                className="form-label-radio">
                                 What level of education have you achieved?
                         </label>
                             <Field
@@ -279,7 +279,7 @@ export const Esop = (props) => {
                                 <label
                                     style={{ margin: '1rem' }}
                                     htmlFor="label"
-                                    className="form-label-radio">
+                                    className="form-label">
                                         <input
                                         onChange={handleChange}
                                         style={{ margin: '1rem' }}
@@ -293,7 +293,7 @@ export const Esop = (props) => {
                                 <label
                                     style={{ margin: '1rem' }}
                                     htmlFor="label"
-                                    className="form-label-radio">
+                                    className="form-label">
                                         <input
                                         style={{ margin: '1rem' }}
                                         onChange={handleChange}
@@ -307,7 +307,7 @@ export const Esop = (props) => {
                                 <label
                                     style={{ margin: '1rem' }}
                                     htmlFor="label"
-                                    className="form-label-radio">
+                                    className="form-label">
                                         <input
                                         style={{ margin: '1rem' }}
                                         onChange={handleChange}
@@ -324,7 +324,7 @@ export const Esop = (props) => {
                         <div className="form-field-radio">
                             <label
                                 htmlFor="label"
-                                className="form-label">
+                                className="form-label-radio">
                                 What degree are you currently studying towards?
                         </label>
                             <Field
@@ -337,7 +337,7 @@ export const Esop = (props) => {
                                 <label
                                     style={{ margin: '1rem' }}
                                     htmlFor="label"
-                                    className="form-label-radio">
+                                    className="form-label">
                                         <input
                                         style={{ margin: '1rem' }}
                                         onChange={handleChange}
@@ -351,7 +351,7 @@ export const Esop = (props) => {
                                 <label
                                     style={{ margin: '1rem' }}
                                     htmlFor="label"
-                                    className="form-label-radio">
+                                    className="form-label">
                                         <input
                                         style={{ margin: '1rem' }}
                                         onChange={handleChange}
@@ -365,7 +365,7 @@ export const Esop = (props) => {
                                 <label
                                     style={{ margin: '1rem' }}
                                     htmlFor="label"
-                                    className="form-label-radio">
+                                    className="form-label">
                                         <input
                                         onChange={handleChange}
                                         style={{ margin: '1rem' }}
@@ -592,7 +592,7 @@ export const Esop = (props) => {
                         <div className="form-field_question">
                             <label
                                 htmlFor="label"
-                                className="form-label">
+                                className="form-label_question">
                                 Question 1: In what range does the brake pressure apply during emergency braking?
                         </label>
                             <Field
@@ -613,7 +613,7 @@ export const Esop = (props) => {
                         <div className="form-field_question">
                             <label
                                 htmlFor="label"
-                                className="form-label">
+                                className="form-label_question">
                                 Question 2: Sort the frequency of use of different brake systems in modern High Speed Trains
                         </label>
                             <Field
@@ -633,7 +633,7 @@ export const Esop = (props) => {
                         <div className="form-field_question">
                             <label
                                 htmlFor="label"
-                                className="form-label">
+                                className="form-label_question">
                                 Question 3: Health relevance of brake wear particles becomes an important issue in brake industry. Find a correct answer:
                         </label>
                             <Field
@@ -650,7 +650,7 @@ export const Esop = (props) => {
                             {errors.question_3_answer && <label style={{ position: 'absolute', bottom: '-1rem', right: '1rem', color: '#ff0000', fontSize: '1.5rem' }}>{errors.question_3_answer}</label>}
 
                         </div>
-                        <div className="form-field_question" >
+                        <div className="form-field_question-check" >
                             <label
                                 htmlFor="question_4_answer"
                                 className="form-label"
@@ -695,7 +695,7 @@ export const Esop = (props) => {
                         <div className="form-field_question">
                             <label
                                 htmlFor="youtube_url"
-                                className="form-label"
+                                className="form-label_question"
                                 style={{fontSize: '2rem'}}>
                                 If you have a short video outlining your motivation for applying for ESOP or your interest in the braking industry you can include a YouTube link here:
                             </label>
@@ -710,7 +710,7 @@ export const Esop = (props) => {
                             />
                         </div>
 
-                        <div className="form-field_question">
+                        <div className="form-field_question-check">
                             <label
                                 htmlFor="roundtable"
                                 className="form-label"
@@ -758,24 +758,13 @@ export const Esop = (props) => {
                                         </div>
                                     )))}
                             </FieldArray>
-
-                            {values.roundtable && values.roundtable.includes('3CA6AA5A-F3DA-11E8-B5C4-A947D1EF668C') &&
-                                <Field
-                                    placeholder="Please specify"
-                                    className="form-input"
-                                    onClick={handleChange}
-                                    value={values.roundtable_other}
-                                    style={{ color: '#134381' }}
-                                    name="roundtable_other"
-                                    component={TextField}
-                                />
-                            }
                         </div>
+                        <div className="form-field" style={{justifyContent: 'flex-end'}}></div>
 
                         <div className="form-field_question">
                             <label
                                 htmlFor="marketing"
-                                className="form-label"
+                                className="form-label_question"
                                     style={{marginTop: '4rem'}}
                                 >
                                 Where did you hear about the EuroBrake Student Opportunities Programme?
@@ -791,24 +780,25 @@ export const Esop = (props) => {
                                 {Marketing.map((option, i) =>
                                     <option key={i} style={{ fontSize: '1.5rem', cursor: 'pointer' }} value={option.value}>{option.label}</option>)}
                             </Field>
+                            {errors.student_level_current && <label style={{ position: 'absolute', bottom: '-1rem', right: '1rem', color: '#ff0000', fontSize: '1.5rem' }}>{errors.student_level_current}</label>}
+
+                        </div>
+                        <div className="form-field" style={{justifyContent: 'flex-end'}}>   
                             {values.marketing === 'E682897E-BACE-11E5-BFDD-7F6E5EAB70CB' &&
                                 <Field
                                     placeholder="Please specify"
                                     className="form-input"
                                     onClick={handleChange}
                                     value={values.marketing_other}
-                                    style={{ color: '#134381', margin: '1rem 0' }}
+                                    style={{ color: '#134381', margin: '1rem 0', }}
                                     name="marketing_other"
                                     component={TextField}
                                 />
-                            }
-                            {errors.student_level_current && <label style={{ position: 'absolute', bottom: '-1rem', right: '1rem', color: '#ff0000', fontSize: '1.5rem' }}>{errors.student_level_current}</label>}
-
-                        </div>
+                            }</div>
                         <div className="form-field-radio">
                             <label
                                 htmlFor="label"
-                                className="form-label">
+                                className="form-label-radio">
                                 Have you participated in any other FISITA student initiatives?
                         </label>
                             <Field
@@ -850,50 +840,57 @@ export const Esop = (props) => {
                             </Field>
                             {errors.student_level_current && <label style={{ position: 'absolute', bottom: '-1rem', right: '1rem', color: '#ff0000', fontSize: '1.5rem' }}>{errors.student_level_current}</label>}
                         </div>
-                        <FieldArray
-                                name="initiatives"
-                            >
-                                {({ swap, push, remove, setSubmitting, }) => (
-                                    Initiatives.map((init) => (
-                                        <div
-                                            key={init.id}
-                                            className="form-checkboxField">
-                                            <label
-                                                htmlFor={init.name}
-                                                className="form-checkboxField-label"
-                                                style={{ color: '#134381', width: '80%' }}
 
-                                            >
-                                                {init.id}
-                                            </label>
-                                            <input
-                                                checked={values.initiatives && values.initiatives.includes(init.value)}
-                                                onChange={e => {
-                                                    e.target.checked ? push(init.value) : values.init && remove(values.init.value)
-                                                }}
-                                                className="form-checkboxField-box"
-                                                style={{ color: '#134381', }}
-                                                value={init.value}
-                                                name={init.name}
-                                                type="checkbox"
-                                                id={init.id}
-                                            />
+                    {values.previous_participant === 'yes' && 
+                    <>
+                    <Typography className="form-label">Which of the following have you participated in?</Typography>
+                    <FieldArray
+                            name="initiatives"
+                        >
+                            {({ swap, push, remove, setSubmitting}) => (
+                                Initiatives.map((init) => (
+                                    <div
+                                        key={init.label}
+                                        className="form-checkboxField">
+                                        <label
+                                            htmlFor={init.label}
+                                            className="form-checkboxField-label"
+                                            style={{ color: '#134381', width: '80%' }}
 
-                                            {errors.initiatives && <label style={{ position: 'absolute', bottom: '-1rem', right: '1rem', color: '#ff0000', fontSize: '1.5rem' }}>{errors.initiatives}</label>}
-                                            {values.initiatives === '9EC8166C-E24B-11E6-A67E-861D5EAB70CB' &&
-                                            <Field
-                                                placeholder="Please specify"
-                                                className="form-input"
-                                                onClick={handleChange}
-                                                value={values.initiatives_other}
-                                                style={{ color: '#134381', margin: '1rem 0' }}
-                                                name="initiatives_other"
-                                                component={TextField}
-                                            />
-                                        }
-                                        </div>
-                                    )))}
-                            </FieldArray>
+                                        >
+                                            {init.label}
+                                        </label>
+                                        <input
+                                            checked={values.initiatives && values.initiatives.includes(init.value)}
+                                            onChange={e => {
+                                                e.target.checked ? push(init.value) : values.init && remove(values.init.value)
+                                            }}
+                                            className="form-checkboxField-box"
+                                            style={{ color: '#134381', }}
+                                            value={init.value}
+                                            name={init.label}
+                                            type="checkbox"
+                                            id={init.label}
+                                        />
+                                        {errors.initiatives && <label style={{ position: 'absolute', bottom: '-1rem', right: '1rem', color: '#ff0000', fontSize: '1.5rem' }}>{errors.initiatives}</label>}
+                                    </div>
+                                )))}
+                        </FieldArray>
+                       </>}
+                       <div className="form-field" style={{justifyContent: 'flex-end'}}>
+                           {values.initiatives.includes('9EC8166C-E24B-11E6-A67E-861D5EAB70CB') &&
+                                        <Field
+                                            placeholder="Please specify"
+                                            className="form-input"
+                                            onClick={handleChange}
+                                            value={values.initiatives_other}
+                                            style={{ color: '#134381', margin: '1rem 0' }}
+                                            name="initiatives_other"
+                                            component={TextField}
+                                        />
+                        }
+                       </div>
+                        
                         <Typography gutterBottom className="form-title" >Additional Information</Typography>
                         <Typography gutterBottom className="form-label" style={{fontSize: '2rem'}}>Please note that by submitting a registration form for ESOP, you indicate your consent to us passing the personal information you have disclosed to us, including your CV, to the ESOP Sponsor Companies, so that they can contact you with details of career and/or work placement opportunities within their organisations, or to arrange a meeting with you at EuroBrake if you are selected to attend.</Typography>
                         <Typography gutterBottom className="form-label" style={{fontSize: '2rem'}}>Here at FISITA we take your privacy seriously and will only use your personal information to set up and administer your account and/or membership and to provide the products and services you have requested from us.</Typography>

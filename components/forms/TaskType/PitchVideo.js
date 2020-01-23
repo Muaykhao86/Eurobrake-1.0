@@ -2,6 +2,8 @@ import React, { Component, useState } from 'react'
 import Link from 'next/link';
 import Typography from '@material-ui/core/Typography';
 import { Formik,  Field, } from 'formik';
+import CircularProgress from '@material-ui/core/CircularProgress';
+
 import { TextField, SimpleFileUpload, CheckboxWithLabel, Checkbox, RadioGroup} from 'formik-material-ui';
 import { Button } from '../../Button';
 import { SendForm, SendFile } from '../FormActions';
@@ -15,6 +17,9 @@ import {PitchVideoSchema} from '../TaskControl';
 //             }
 
 export const PitchVideo = (props) => {
+        const [Loading, setLoading] = useState(false);
+    const [Toggle, setToggle] = useState(false);
+    const [Status, setStatus] = useState(null);
     const emptyInitial = {
         pitchvideo_filename: '',
         ok_to_publish_pitchvideo: ''
@@ -30,15 +35,27 @@ export const PitchVideo = (props) => {
          validationSchema={PitchVideoSchema}
             enableReinitialize
         >
-            {({ values, handleChange, setFieldValue, isValidating, validateForm, handleSubmit, errors}) => {
+            {({ values, handleChange, setFieldTouched, isValidating, validateForm, handleSubmit, errors}) => {
             
-                console.log(values, 'Tasks')
-                console.log({errors})
-              
-                const onSubmit = () => {
+               
+                   const allTouched = async () => {
+                       console.log('touched!')
+                       console.log({errors})
+                     await Object.keys(values).forEach(key => {   
+                        setFieldTouched(key, true)});
+
+                       await validateForm().then(errors => Object.keys(errors).length === 0 && onSubmit())
+                }
+                   
+                   const onSubmit = async () => {
+                    setLoading(true);
                   values.__csrf_token = csrf
-                    console.log('submitting', values)
-                    SendFile({values, url, csrf})
+                    console.log('submitting')
+                  let res =  await SendFile({values, url, csrf});
+                  let data = await  res && res.status;
+                  console.log({status})
+                 data && setStatus(data) && setToggle(true) && setLoading(false)
+                  return 
               }
                 return (
                     <StyledTask>
@@ -113,17 +130,17 @@ export const PitchVideo = (props) => {
 
                         </div>
                        
-                        <Button 
-                            onClick={() => validateForm().then(errors => Object.keys(errors).length === 0 && onSubmit())}
-
-                            bcolor="#134381"
-                            background="#134381"
-                            br="100rem"
-                            style={{ margin: "3rem", color: '#FFF' }}
-                            padding=".5rem 4rem"
-                            fontSize="1.7rem">
-                            Send
-                        </Button>
+                        {Loading ?  <CircularProgress size={24} className="loading"/> : 
+                       <Button 
+                         bcolor="#134381"
+                                background="#134381"
+                                br="100rem"
+                                style={{ margin: ".5rem 0" }}
+                                fontSize="2rem"
+                        onClick={allTouched}
+                           style={{ fontSize: "1rem", height: '2rem', alignSelf: 'center'}}>
+                            {Status ? Status : 'submit'}
+                        </Button>}
                         
                     </StyledTask>
                 )

@@ -1,16 +1,19 @@
 import React, { Component, useState, useEffect } from 'react'
 import { Formik, Form, Field } from 'formik';
 import { TextField, Select} from 'formik-material-ui';
+import CircularProgress from '@material-ui/core/CircularProgress';
 import { Button } from '../Button';
 import {titles, countries} from './FormSelects';
 import {AuthorSchema} from './FormControl';
 import {StyledForm} from './Formstyles';
 import { SendForm } from './FormActions';
+import { Typography } from '@material-ui/core';
 
 
 export const Authorprofile = (props) => {
     const [Toggle, setToggle] = useState(false);
     const [Status, setStatus] = useState(null);
+    const [Loading, setLoading] = useState(false);
 
     const { presets, csrf, apiUrl, paperId} = props;
     console.log({ presets, apiUrl})
@@ -35,18 +38,19 @@ export const Authorprofile = (props) => {
                 }
                    
                    const onSubmit = async () => {
+                    setLoading(true);
                   values.__csrf_token = csrf
                     console.log('submitting')
                   let res =  await SendForm({values, url, csrf});
                   let data = await  res && res.status;
                   console.log({status})
-                 data && setStatus(data) && setToggle(Toggle => !Toggle)
+                 data && setStatus(data) && setToggle(true) && setLoading(false)
                   return 
               }
 
                 return (
                     <>
-                    {Toggle && <h1>{Status}</h1>}
+                    {Toggle && <Typography className="form-title">{Status}</Typography>}
                     <StyledForm>
                         <div className="form-field">
                             <label
@@ -323,6 +327,9 @@ export const Authorprofile = (props) => {
                                 padding=".5rem 4rem"
                                 style={{ margin: "3rem" }}
                                 fontSize="1.7rem">Submit</Button>
+                                {Loading && <CircularProgress size={24} className="loading"/>}
+                    {Toggle && <Typography className="form-title">{Status}</Typography>}
+
                     </StyledForm>
                     </>                
                 )

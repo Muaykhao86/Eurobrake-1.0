@@ -43,6 +43,7 @@ export const StyledForm = styled(Form)`
 
         &-radio{
             align-self: flex-start;
+            
            
         }
       
@@ -54,6 +55,16 @@ export const StyledForm = styled(Form)`
             font-family: ${props => props.theme.MPLight};
             justify-content: space-between;
             align-items: flex-end;
+
+            &-news{
+                .MuiInputBase-input {
+                    padding: 0;
+                    margin: 0;
+                }
+                .MuiInput-underline:before {
+                border-bottom: 1px solid rgba(255, 255, 255, 1);
+                }
+            }
 
             &_action{
                 position: absolute;
@@ -71,7 +82,14 @@ export const StyledForm = styled(Form)`
                 width: 100%;
                 margin: 1rem 0;
                 display: flex;
+
+                &-check{
+                    position: relative;
+                width: 100%;
+                margin: 1rem 0;
+                display: flex;
                 flex-flow: column;
+                }
             }
 
             &_file{
@@ -95,7 +113,6 @@ export const StyledForm = styled(Form)`
                 position: relative;
                 width: 100%;
                display: flex;
-               flex-flow: column;
                margin: 1rem 0;
             }
 
@@ -165,11 +182,21 @@ export const StyledForm = styled(Form)`
             color: ${props => props.theme.primary};
 
             &-radio{
+                max-width: 33.33%;
                 align-self: flex-start;
                  font-family: ${props => props.theme.MPLight};
             font-size: 2rem;
             color: ${props => props.theme.primary};
+            }
+            &_question{
+                max-width: 33.33%;
+                align-self: flex-start;
+                 font-family: ${props => props.theme.MPLight};
+            font-size: 2rem;
+            color: ${props => props.theme.primary};
+            }
 
+            &-news{
             }
         }
 
@@ -184,6 +211,10 @@ export const StyledForm = styled(Form)`
                 width: 66.66%;
                 align-self: flex-end;
                 margin: 4rem 0;
+            }
+
+            &-news{
+                margin:0 2rem ;
             }
 
             &_file{

@@ -5,7 +5,7 @@ import {AbstractForm} from './Abstract';
 import {Authorprofile} from './Authorprofile';
 import {Exhibitorprofile} from './Exhibitorprofile';
 import {Esop} from './Esop';
-import { GetForm } from './FormActions';
+import {ContactForm} from './Contact';
 import Typography from '@material-ui/core/Typography';
 
 
@@ -35,6 +35,8 @@ class OneForm extends Component {
                 return <LoginForm type={type} presets={presets} csrf={csrf} apiUrl={apiUrl} paperId={paperId}/>;
                 case'reset' : 
                 return <ResetForm type={type} presets={presets} csrf={csrf} apiUrl={apiUrl} paperId={paperId}/>;
+                case'contact' : 
+                return <ContactForm type={type} presets={presets} csrf={csrf} apiUrl={apiUrl} paperId={paperId}/>;
                 default: 
                     return <Typography>No form found please try again or contact info@eurobrake.net</Typography>;            
             }

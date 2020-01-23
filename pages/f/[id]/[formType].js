@@ -45,10 +45,10 @@ Form.getInitialProps = async context => {
     const { id, taskUrl, formType, taskType } = context.query ;
     const { logintoken } = cookies(context) || {};
     let apiUrl = '';
-    
+   if(formType == 'contact') apiUrl = `https://prelude.eurobrake.net/contact` 
    if(formType == 'author') apiUrl = `https://prelude.eurobrake.net/authors/profile` 
    if(formType == 'reset') apiUrl = `https://prelude.eurobrake.net/authors/profile` 
-   if(formType != 'reset' && formType != 'author') apiUrl = `https://prelude.eurobrake.net/authors/edit/${id}`
+   if(formType != 'reset' && formType != 'author' && formType != 'contact') apiUrl = `https://prelude.eurobrake.net/authors/edit/${id}`
    
     console.log('1st GIP', { id, logintoken, apiUrl, taskUrl, formType, taskType })
     console.log('props', { id, logintoken, apiUrl, taskUrl, formType, taskType })
@@ -57,8 +57,30 @@ Form.getInitialProps = async context => {
             ? Router.push('/authorsArea')
             : context.res.writeHead(301, { Location: '/authorsArea' })
 
-    if(formType === 'reset') return { apiUrl, id, formType, taskType}
-   
+    if(formType === 'reset') return { apiUrl, id, formType, taskType}// todo sort out real call
+    if(formType === 'contact') {
+        try {
+            const response = await fetch(apiUrl, {
+                credentials: 'include',
+                cache: 'no-cache',
+            })
+            const data = await response.json()
+            if (data.status === 'success') {
+                console.log('res.ok 2nd GIP', data)
+                return { data, apiUrl, id, formType, taskType }
+            }
+            else {
+                console.log('not reading success')
+                console.log('stringyfied', JSON.stringify(data))
+                // https://github.com/developit/unfetch#caveats
+                return redirectOnError()
+            }
+        } catch (error) {
+            // Implementation or Network error
+            console.log(error)
+            return await redirectOnError()
+        }
+    }
    else if (logintoken) {
         try {
             const response = await fetch(apiUrl, {

@@ -126,7 +126,8 @@ export default function LoginExpandTable() {
             : null}
         </ExpansionPanelSummary>
         <ExpansionPanelDetails>
-          <OneForm form='author' />
+            <Typography className="table-sub">We are not currently accepting new authors</Typography>
+          {/* <OneForm form='author' /> */}
         </ExpansionPanelDetails>
       </ExpansionPanel>
     </div>

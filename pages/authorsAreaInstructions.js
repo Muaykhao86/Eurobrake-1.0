@@ -169,6 +169,7 @@ class AuthorsAreaInstructions extends Component {
                     <Typography gutterBottom className="authors">Your draft poster will be checked and suggestions for modifications will be made by the Review Team within 2 weeks.</Typography>
                     <Typography gutterBottom ><a href="https://www.fisita.com/documents/Poster_Instructions.pdf">Instructions for Poster Presentations (PDF document) </a></Typography>
                     <Typography gutterBottom ><a href="https://www.fisita.com/documents/EuroBrake_2020_Pitch_Video_Template_Slide.pptx">Pitch Video PPT Slide Template</a></Typography>
+                    <Typography gutterBottom ><a href="https://www.fisita.com/documents/EuroBrake_2020_Pitch_Video_Template_Slide_with_video.pptx">Pitch Video example</a></Typography>
                     <Typography gutterBottom className="authors">Please use the comments made by the Review Team to modify your poster and print this out and bring it with you to display on site. </Typography>
                     <Typography gutterBottom className="authors">Posters should be A0 size and in portrait orientation.</Typography>
                    

@@ -49,7 +49,13 @@ export default () => {
             const res = await formData;
            return  console.log({res});
     }
+ const GetwithDef = async () => {
+            const formData = await  GetForm(`https://prelude.eurobrake.net/withdraw?definition=1`);
+            const res = await formData;
+           return  console.log({res});
+    }
  
+  
 
 return (
 <>
@@ -62,8 +68,10 @@ return (
         <button onClick={() => GetesopDef()}>esop</button>
         <button onClick={() => GetcontactDef()}>contact</button>
         <button onClick={() => GetsignupDef()}>signup</button>
+        <button onClick={() => GetwithDef()}>withdrwn</button>
         {/* <button onClick={() => GetpassDef()}>password</button>
         <button onClick={() => GetresetDef()}>passreset</button> */}
+        {/* <AbstractForm/> */}
     </StyledPage>
 </>
 )}  

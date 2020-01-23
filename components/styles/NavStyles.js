@@ -71,7 +71,7 @@ export const TopBun = styled.div`
     height: .3rem;
     transition: ${props => props.isOpen ?
         trans.in : trans.out}; 
-    background-color: ${props => props.theme.white};
+    background-color: ${props => props.theme.secondary};
     transform: ${props => props.isOpen ?
         trans.spin315 : trans.spin0};
     
@@ -86,12 +86,12 @@ export const TopBun = styled.div`
     content: '';
     transform: ${props => props.isOpen ?
         trans.spin90 : trans.spin0};
-    border-bottom:3px solid ${props => props.theme.white};
+    border-bottom:3px solid ${props => props.theme.secondary};
     
 }
 
 &:after {
-    border-bottom: 3px solid ${props => props.theme.white};
+    border-bottom: 3px solid ${props => props.theme.secondary};
     width: 100%;
     height: 100%;
     position: absolute;

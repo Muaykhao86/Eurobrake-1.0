@@ -15,11 +15,16 @@ export default () => (
     <>       
         <HeroSection 
         sfs="8rem"
+        mfs="8rem"
+        msfs="5rem"
+        scolor="#F9B721"
         st="65rem"
+        smt='41rem'
          cara
          max="60%"
+         mMax="80%"
          src="/images/main.jpg" 
-         secondary="Secure your tickets by this date"
+         secondary="Secure your tickets by xx-xx-xx"
          >
             Book your Early Bird tickets for EuroBrake 2020  
         </HeroSection> 

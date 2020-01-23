@@ -3,6 +3,8 @@ import { Formik, Form, Field, FieldArray, FastField, ErrorMessage, } from 'formi
 import { TextField, RadioGroup, Select, Checkbox, } from 'formik-material-ui';
 import { AddCircle, RemoveCircle, ArrowUpwardRounded, ArrowDownwardRounded, } from '@material-ui/icons';
 import cookie from 'js-cookie';
+import CircularProgress from '@material-ui/core/CircularProgress';
+
 import  Typography  from '@material-ui/core/Typography';
 import { Button } from '../Button';
 import {titles, countries} from './FormSelects';
@@ -13,6 +15,7 @@ import {SendForm} from './FormActions';
 
 
 export const AbstractForm = (props) => {
+    const [Loading, setLoading] = useState(false);
     const [Toggle, setToggle] = useState(false);
     const [Status, setStatus] = useState(null);
     // if edit = true send back a preset form if not send a blank
@@ -28,7 +31,7 @@ export const AbstractForm = (props) => {
             validationSchema={AbstractSchema}
             enableReinitialize
         >
-            {({ values, isSubmitting, isValidating, handleChange, setFieldValue }) => {
+            {({ values, isSubmitting, isValidating, handleChange, setFieldValue, setFieldTouched }) => {
           
                 const allNo = ({name}) => {
                     if(process.browser){
@@ -56,14 +59,16 @@ export const AbstractForm = (props) => {
                 }
 
                 const onSubmit = async () => {
-                  values.__csrf_token = csrf;
-                    console.log('sending', values, url)
-                 let res = await SendForm({values, csrf, url})
-                  let data = await res && res.status ;
+                     setLoading(true);
+                  values.__csrf_token = csrf
+                    console.log('submitting')
+                  let res =  await SendForm({values, url, csrf, FT});
+                  let data = await  res && res.status;
                   console.log({status})
-                  data && setStatus(data) && setToggle(Toggle => !Toggle)
-                  return  
+                 data && setStatus(data) && setToggle(true) && setLoading(false)
+                 return
                     }
+
                 // ? NEED TO REDIRECT AFTER FORM SUBMISSION
                 // ? NEED TO DO VALIDATION
                 // ? sECONDARY AUTHORS => IF THERE ARE NONE WE NEED THE OPTION TO ADD IN A NEW ONE
@@ -482,7 +487,7 @@ export const AbstractForm = (props) => {
                                                 <div className="form-field-radio">
                                                     <label
                                                         htmlFor="label"
-                                                        className="form-label-">
+                                                        className="form-label">
                                                         Is this the presenting Author?
                                                     </label>
                                                     <Field
@@ -613,15 +618,17 @@ export const AbstractForm = (props) => {
                                     ) 
                                     )}
                             </FieldArray>
-                        <Button 
-                                onClick={allTouched}
-                                bcolor="#134381"
+                        {Loading ?  <CircularProgress size={24} className="loading"/> : 
+                       <Button 
+                         bcolor="#134381"
                                 background="#134381"
                                 br="100rem"
                                 style={{ margin: ".5rem 0" }}
-                                fontSize="1.7rem">Submit</Button>
-                    {Toggle && <Typography gutterBottom className="form-title">{Status}</Typography>}
-
+                                fontSize="2rem"
+                        onClick={allTouched}
+                           style={{ fontSize: "1rem", height: '2rem', alignSelf: 'center'}}>
+                            {Status ? Status : 'submit'}
+                        </Button>}
                     </StyledForm>
                 )
             }}

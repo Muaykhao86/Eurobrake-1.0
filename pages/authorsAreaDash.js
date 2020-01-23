@@ -20,7 +20,7 @@ import { withAuthSync, logout, login } from '../utils/auth'
 import HeroSection from '../components/HeroSection';
 import { Button } from '../components/Button';
 import { StyledBanner, StyledContainer } from '../components/styles/PageStyles';
-import { GetForm } from '../components/forms/FormActions';
+import { GetForm, SendForm } from '../components/forms/FormActions';
 import { FixedDates } from '../components/Dates';
 
 
@@ -170,6 +170,8 @@ class AuthorsAreaDash extends Component {
             editForm: false,
             formType: '',
             paper: '',
+            loading: 'false',
+            status: undefined,
             profile: 'profile',//will get rid of when i have profile props
         }
     }
@@ -185,6 +187,20 @@ class AuthorsAreaDash extends Component {
 
     pad = (n) => {
       return  n < '10' ? '0'+ n : n  
+    }
+
+    handleWithdrawn = async (papercode) => {
+       await  this.setState(loading => ({loading: !loading}));
+        const FT = 'withdraw'
+        const url = `https://prelude.eurobrake.net/authors/withdrawn/${papercode}`;
+        let get = await GetForm({url});
+        let data = await get;
+        let csrf =await data && data.__csrf_token ;
+        // let res = await SendForm({url, csrf, FT})
+        // let resData = await res
+        console.log({data})
+        await data && this.setState((loading, data)=>({status: ata, loading: !loading}))
+
     }
 
  
@@ -276,15 +292,16 @@ class AuthorsAreaDash extends Component {
                                             </Link>
 
                                             <Button
+                                                onClick={() => handleWithdrawn(paper.papercode)}
                                                 bcolor="#134381"
-                                                background="#134381"
+                                                background={paper.withdrawn ? "#ff0000" : "#134381"}
                                                 br="100rem"
                                                 padding="0.5rem 2rem"
                                                 style={{ margin: ".5rem 0" }}
                                                 fontSize="1.7rem"
                                             >
-                                                <CancelIcon style={{ fontSize: '3rem', marginRight: '1rem' }} />
-                                                WITHDRAW
+                                                {paper.withdrawn ? null : <CancelIcon style={{ fontSize: '3rem', marginRight: '1rem' }} />}
+                                                {paper.withdrawn ? 'WITHDRAWN' :'WITHDRAW'}
                                                 </Button>
                                             </div>
                                         </StyledActionArea>

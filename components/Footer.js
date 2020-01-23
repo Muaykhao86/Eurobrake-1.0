@@ -6,13 +6,13 @@ import Typography from '@material-ui/core/Typography';
 import { Button } from './Button';
 import SponsorCarousel from './SponsorCarousel';
 import { FLogoWhite } from './Icons';
-
+import {Newsletter} from '../components/forms/Newsletter';
 
 const FooterBar = styled.div`
     color: ${props => props.theme.white};
     background: ${props => props.theme.primary};
     min-width: 100%;
-    min-height: 10rem;
+    min-height: 20rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -25,6 +25,7 @@ const FooterBar = styled.div`
     .ftr_top-box{
         display: flex;
         flex-flow: row wrap;
+        margin-bottom: 1rem;
     }
 
     .heading-copy{
@@ -36,7 +37,7 @@ const FooterBar = styled.div`
     }
   
     .ftr_middle-links{
-        min-height: 20rem;
+        min-height: 24rem;
         margin: 0 1rem;
         padding: .2rem;
        flex: 1 1 auto;
@@ -66,15 +67,14 @@ const FooterBar = styled.div`
     }
 
     .ftr_newsletter-box{
-     
+        max-height: 6.5rem;
         display: flex;
         flex: 1 1 auto;
         flex-flow: column;
         /* align-items: flex-start; */
-        justify-content: flex-start;
+        justify-content: space-between;
         margin-bottom: 1rem;
         &_title{
-        margin-bottom: 2.5rem;
         text-transform: uppercase;
         font-size: 2rem;
         font-family: ${props => props.theme.MPBold};
@@ -131,38 +131,32 @@ align-content: flex-end;
 `;
 
 function Footer() {
+
+   
     return (
         <StyledFooter>
             <SponsorCarousel />
             <FooterBar>
                 <div className="ftr_middle-links">
                     <div className="ftr_top-box">
-                        <div className="ftr_newsletter-box" >
-                        <Typography className="ftr_newsletter-box_title" >Sign up for our Newsletter</Typography>
-                          <div className="" style={{display: 'flex'}}>
-                            <div className="" style={{display: 'flex', alignItems: 'center'}}>
-                                <label htmlFor="name">Name</label>
-                                <input type="text" name="name" id="" />
-                            </div>
-                            <div className="" style={{display: 'flex', alignItems: 'center'}}>
-                                <label htmlFor="Newsletter" >Email</label>
-                                <input type="email" name="Newsletter" id="" />
-                            </div>
-                            <Button padding=".5rem " style={{ fontSize: "1rem", height: '2rem', alignSelf: 'center'}}>submit</Button>
-                          </div>
-                        </div>
 
                        
+                    <a href="https://www.fisita.com/"><FLogoWhite width="16rem" height="5rem" /></a>
                     </div>
 
+                        <div className="ftr_newsletter-box" >
+                        <Typography className="ftr_newsletter-box_title" >Sign up for our Newsletter</Typography>
+                        <Newsletter/>
+                        </div>
                     <div className="ftr_middle-links_links">
                         <Link href="/disclaimer"><a >Disclaimer</a></Link>
-                        <a href="" >Contact Us</a>
+                         <Link
+                            href="/f/[id]/[formType]"
+                            as={`/f/FISITA/contact`} ><a >Contact Us</a></Link>
                         <Link href="/privacyPolicy"><a >Privacy Policy</a></Link>
                     </div>
                     <div className="" style={{ display: 'flex', justifyContent: 'center', alignItems: 'baseline', height: '3rem' }}>
-                        <Typography className="heading-copy" style={{ marginRight: '8rem' }}>Copyright © 2020 FISITA</Typography>
-                        <a href="https://www.fisita.com/"><FLogoWhite width="18rem" height="5rem" /></a>
+                        <Typography className="heading-copy" style={{ marginRight: '8rem' , merginTop: '2rem'}}>Copyright © 2020 FISITA</Typography>
                     </div>
                 </div>
                 <div className="ftr_container-right">
