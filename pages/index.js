@@ -24,7 +24,7 @@ export default () => (
          max="60%"
          mMax="80%"
          src="/images/main.jpg" 
-         secondary="Secure your tickets by xx-xx-xx"
+         secondary="Secure your tickets by 1 April 2020"
          >
             Book your Early Bird tickets for EuroBrake 2020  
         </HeroSection> 

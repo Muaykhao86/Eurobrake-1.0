@@ -31,7 +31,7 @@ export const AbstractForm = (props) => {
             validationSchema={AbstractSchema}
             enableReinitialize
         >
-            {({ values, isSubmitting, isValidating, handleChange, setFieldValue, setFieldTouched, validateForm }) => {
+            {({ values, isSubmitting, isValidating, handleChange, setFieldValue, setFieldTouched, validateForm, errors }) => {
           
                 const allNo = ({name}) => {
                     if(process.browser){
