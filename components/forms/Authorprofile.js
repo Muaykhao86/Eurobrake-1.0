@@ -46,10 +46,10 @@ export const Authorprofile = (props) => {
                   let jd = await data.data;
                   let dataStatus= await  data && data.status;
                   console.log({data})
-                  console.log({jd})
-                 data &&  setStatus(dataStatus) &&  setToggle(true) && setLoading(false)
-                
-                  return 
+                  data && console.log(data.status) && setLoading(false)
+                  data && setStatus(dataStatus) && setToggle(true) && setLoading(false) && console.log('finished!')
+                return
+                 
               }
 
                 return (

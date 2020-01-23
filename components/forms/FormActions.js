@@ -233,6 +233,34 @@ export async function SendForm({ csrf, values, url, FT }) {
             )
          }
         }
+    if(FT === 'withdraw' ){
+        console.log({url});
+        try {
+            const response = await fetch(url, {
+                method: 'POST', 
+                credentials: 'include',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+            });
+         
+            const data = await response.json()
+
+            if (data.status === 'success') {
+            console.log('getForm', data);
+            return data
+
+            } else {
+                let error = new Error(data.error)
+                error.response = response
+                throw error
+            }
+        } catch (error) {
+            console.error(
+                'Failed to reset, please try again', error
+            )
+         }
+        }
     return
     }
 
