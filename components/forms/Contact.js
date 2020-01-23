@@ -198,7 +198,7 @@ export const ContactForm = (props) => {
                            style={{ alignSelf: 'center', color: '#FFF' }}>
                             {Status ? Status : 'submit'}
                         </Button>}
-                    {Toggle && <Typography className="form-title" style={{alignSelf: 'center'}}>{Status.toUppercase()}</Typography>}
+                    {Toggle && <Typography className="form-title" style={{alignSelf: 'center'}}>{Status && Status.toUppercase()}</Typography>}
 
                     </StyledForm>
                     

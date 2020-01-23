@@ -336,7 +336,7 @@ export const Authorprofile = (props) => {
                                 style={{ margin: "3rem", color: '#FFF' }}
                                 fontSize="1.7rem">Submit</Button>
                                 }
-                    {Toggle && <Typography className="form-title" style={{alignSelf: 'center'}}>{Status.toUppercase()}</Typography>}
+                    {Toggle && <Typography className="form-title" style={{alignSelf: 'center'}}>{Status && Status.toUppercase()}</Typography>}
 
                     </StyledForm>
                     </>                

@@ -349,6 +349,8 @@ export const AbstractForm = (props) => {
                                     No
                                 </label>
                             </Field>
+                            {errors.is_presenting_author && <label style={{ position: 'absolute', bottom: '-1rem', right: '1rem', color: '#ff0000', fontSize: '1.5rem' }}>{errors.is_presenting_author}</label>}
+
                         </div>
                         {/* // ! new section added back in // NEED TO CONFIRM IF OK  */}
                         <Typography className="form-title">Your Abstract</Typography> 
@@ -381,10 +383,64 @@ export const AbstractForm = (props) => {
                                  name="abstract"
                                  component="textarea"
                              />
-                         </div>
                         { values.abstract && <label style={{position: 'absolute', bottom: '-3rem', right: '1rem', color: '#ff0000', fontSize: '1.5rem'}}>{'Words' + ' ' + values.abstract.match(/[\w\d\’\'-]+/gi).length}</label>}
+                        {errors.abstract && <label style={{ position: 'absolute', bottom: '-1rem', right: '1rem', color: '#ff0000', fontSize: '1.5rem' }}>{errors.abstract}</label>}
+                         </div>
+                        
+                        {console.log({values})}
+                        {console.log({errors})}
+                         <div className="form-field-radio">
+                            <label
+                                htmlFor="label"
+                                className="form-label">
+                                Is this the presenting author?
+                        </label>
+                            <Field
+                                className="form-field-radio"
+                                value={values.consider_for_journal}
+                                style={{ color: '#134381' , alignSelf: 'flexStart', margin: '0'}}
+                                name="consider_for_journal"
+                                component={RadioGroup}
+                            >
+                                <label
+                                    style={{ margin: ' 0' }}
+                                    htmlFor="label"
+                                    className="form-label-radio">
+                                        <input
+                                        checked={values.consider_for_journal === 'yes'}
+                                        onChange={(event) => {
+                                            onPresenterChange(event)
+                                        }
+                                        }
+                                        type="radio"
+                                        name="consider_for_journal"
+                                        value="yes"
+                                    style={{ margin: '1rem' }}
 
-                       
+                                    />
+                                    Yes
+                                </label>
+                                <label
+                                    style={{ margin: '1rem 0' }}
+                                    htmlFor="label"
+                                    className="form-label-radio">
+                                        <input
+                                        onChange={(event) => {
+                                            onPresenterChange(event)
+                                        }
+                                        }
+                                        checked={values.consider_for_journal !== 'yes'}
+                                        type="radio"
+                                        name="consider_for_journal"
+                                        value="no"
+                                    style={{ margin: '1rem' }}
+
+                                    />
+                                    No
+                                </label>
+                            </Field>
+                        </div>
+
                         <Typography className="form-title">Secondary Author(s)</Typography>
                             <FieldArray name={`secondary_authors`} >
                                 {({ swap, push, remove, setSubmitting }) => (
@@ -542,6 +598,8 @@ export const AbstractForm = (props) => {
                                                             No
                                                         </label>
                                                     </Field>
+                            {errors.is_presenting_author && <label style={{ position: 'absolute', bottom: '-1rem', right: '1rem', color: '#ff0000', fontSize: '1.5rem' }}>{errors.is_presenting_author}</label>}
+
                                                 </div>
                                                 <div className="form-field">
 
@@ -636,7 +694,7 @@ export const AbstractForm = (props) => {
                            style={{ alignSelf: 'center', color: '#FFF' }}>
                             {Status ? Status : 'submit'}
                         </Button>}
-                    {Toggle && <Typography className="form-title" style={{alignSelf: 'center'}}>{Status.toUppercase()}</Typography>}
+                    {Toggle && <Typography className="form-title" style={{alignSelf: 'center'}}>{Status && Status.toUppercase()}</Typography>}
 
                     </StyledForm>
                 )

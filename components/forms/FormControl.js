@@ -53,51 +53,33 @@ export const LoginSchema = yup.object().shape({
         
 export const AbstractSchema = yup.object().shape({
     author_title: yup.string().nullable(),
-    author_firstname: yup.string()
-        .required('Required'),
-    author_lastname: yup.string()
-        .required('Required'),
-    author_email: yup.string()
-        .email()
-        .required('Required'),
-    author_jobtitle: yup.string()
-        .required('Required'),
-    author_company: yup.string()
-        .required('Required'),
-    author_address1: yup.string()
-        .required('Required'),
+    author_firstname: yup.string().required('Required'),
+    author_lastname: yup.string().required('Required'),
+    author_email: yup.string().required('Required')
+        .email(),
+    author_jobtitle: yup.string().required('Required'),
+    author_company: yup.string().required('Required'),
+    author_address1: yup.string().required('Required'),
     author_address2: yup.string().nullable(),
     author_address3: yup.string().nullable(),
-    author_city: yup.string()
-        .required('Required'),
-    author_scp: yup.string()
-        .required('Required'),
-    author_postal: yup.string()
-        .required('Required'),
-    author_country: yup.string()
-        .required('Required'),
-    author_phone: yup.string()
-        .required('Required'),
-    is_presenting_author: yup.string()
-        .required('Required'),
-    // submission_type: yup.string()
-    //     .required('Required'),
-    // presentationtype_full: yup.string(),
+    author_city: yup.string().required('Required'),
+    author_scp: yup.string().required('Required'),
+    author_postal: yup.string().required('Required'),
+    author_country: yup.string().required('Required'),
+    author_phone: yup.string().required('Required'),
+    is_presenting_author: yup.string().required('Required'),
     papertitle: yup.string()
-        .required('Required'),
-    // theme: yup.string()
-    //     .required('Required'),
-    // subtheme: yup.array().max(3, 'Please select max of three subthemes!')
-    //     .required('Required'),
-    abstract: yup.string()
-        .required('Required')
-        .max(750, 'Too Long!'),
-    // keywords: yup.string()
-    //     .required('Required'),
-    // previouspapers: yup.string()
-    //     .required('Required'),
-    // consider_for_journal: yup.string()
-    //     .required('Required'),
+        .required('Required'),   
+    abstract: yup.string().required('Required')
+      .test(
+        'wordCount',
+        'Max 750 words',
+        value => value && 
+          value.match(/[\w\d\’\'-]+/gi)
+          .length <= 750
+          // split(' ').length <= 100 
+      ),
+    consider_for_journal: yup.string().nullable(),
     secondary_authors: yup.array()
         .of(yup.object().shape({
             title: yup.string().nullable(),
