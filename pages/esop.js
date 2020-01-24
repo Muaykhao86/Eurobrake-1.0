@@ -7,7 +7,7 @@ import HeroSection from '../components/HeroSection';
 import StopIcon from '@material-ui/icons/Stop';
 import {Button} from '../components/Button';
 import {Quote2, MailIcon, PhoneIcon} from '../components/Icons';
-import {FixedDates} from '../components/Dates';
+import {FixedDates, FixedBox} from '../components/Dates';
 import {Esop} from '../components/forms/Esop';
 
 
@@ -155,7 +155,7 @@ export default () => (
         </HeroSection>
         <StyledPage>
             <FixedDates/>
-
+            <FixedBox/>
             <div className="Esop">
             <Typography gutterBottom className="Esop-title ">Student Opportunities Programme</Typography>
             <div className="video-box margin-bottom1.5 margin-top5">

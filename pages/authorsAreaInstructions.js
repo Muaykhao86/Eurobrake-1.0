@@ -7,7 +7,7 @@ import { StyledBanner, StyledContainer } from '../components/styles/PageStyles';
 import InstructionsPopup from '../components/InstructionsPopup';
 import {Button } from '../components/Button';
 import Link from 'next/link';
-import {FixedDates} from '../components/Dates';
+import {FixedDates, FixedBox} from '../components/Dates';
 
 
 
@@ -96,7 +96,7 @@ class AuthorsAreaInstructions extends Component {
             </HeroSection>
                 <StyledPage mt="10rem">
             <FixedDates/>
-
+            <FixedBox/>
                     <div className="authors">
                     <div className="authors_top-box">
                     

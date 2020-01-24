@@ -7,7 +7,7 @@ import HeroSection from '../components/HeroSection';
 
 import { StyledPage, StyledBanner, StyledContainer } from '../components/styles/PageStyles';
 
-import {FixedDates} from '../components/Dates';
+import {FixedDates, FixedBox} from '../components/Dates';
 
 const StyledDiv = styled.div`
     .privacy{
@@ -48,7 +48,7 @@ export default () => (
     </HeroSection>
         <StyledPage>
             <FixedDates/>
-
+            <FixedBox/>
             <StyledDiv>
                 <Typography gutterBottom className="privacy-title"> Privacy policy</Typography>
                 <Typography gutterBottom className="privacy">The publisher of this web site is FISITA (UK) Limited, a wholly owned company of FISITA. We have developed this Privacy Policy to advise users of this site about our policy regarding 

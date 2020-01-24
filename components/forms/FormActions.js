@@ -31,7 +31,7 @@ export async function GetFormSSR({url, context}) {
         console.error(
             'Failed to get form, please try again', error
         )
-        // return error.message
+        return data
     }
     return
 }
@@ -62,7 +62,7 @@ export async function GetForm(url) {
         console.error(
             'Failed to get form, please try again', error
         )
-        // return error.message
+        return data
     }
     return 
 }
@@ -105,6 +105,7 @@ export async function SendFile({ values, url, csrf }) {
                 'Failed to get form, please try again', error
             )
             this.setState({ error: error.message });
+            return data
         }
     }
 
@@ -142,8 +143,9 @@ export async function SendForm({ csrf, values, url, FT }) {
             }
         } catch (error) {
             console.error(
-                'Failed to get form, please try again', error
+                'Failed to send form, please try again', error
             )
+                return data
         }
     }
     if(url === 'https://prelude.eurobrake.net/authors/login' ){
@@ -163,7 +165,7 @@ export async function SendForm({ csrf, values, url, FT }) {
             if (data.status === 'success') {
                 const { logintoken } = data;
                 await login({ logintoken })
-                return {}
+                return data
 
             } else {
                 let error = new Error(data.error)
@@ -174,6 +176,7 @@ export async function SendForm({ csrf, values, url, FT }) {
             console.error(
                 'Failed to login, please try again', error
             )
+            return data
          }
         }
     if(FT === 'reset' ){
@@ -203,6 +206,7 @@ export async function SendForm({ csrf, values, url, FT }) {
             console.error(
                 'Failed to reset, please try again', error
             )
+            return data
          }
         }
     if(FT === 'newsletter' || FT === 'contact'){
@@ -230,8 +234,9 @@ export async function SendForm({ csrf, values, url, FT }) {
             }
         } catch (error) {
             console.error(
-                'Failed to reset, please try again', error
+                'Failed to send form, please try again', error
             )
+            return data
          }
         }
     if(FT === 'withdraw' ){
@@ -258,8 +263,9 @@ export async function SendForm({ csrf, values, url, FT }) {
             }
         } catch (error) {
             console.error(
-                'Failed to reset, please try again', error
+                'Failed to withdraw, please try again', error
             )
+            return data
          }
         }
     return

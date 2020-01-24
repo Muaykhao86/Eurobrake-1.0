@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components';
 import HeroSection from '../components/HeroSection';
-import {FixedDates} from '../components/Dates';
+import {FixedDates, FixedBox} from '../components/Dates';
 
 
 
@@ -59,6 +59,7 @@ export default () => (
     </HeroSection>
 <StyledPage>
             <FixedDates/>
+            <FixedBox/>
 
     <h1>Book your tickets now</h1>
     <Content>

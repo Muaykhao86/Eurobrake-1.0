@@ -10,6 +10,14 @@ export const ContactSchema = yup.object().shape({
     email: yup.string().required('Required')
     .email(),
     enquiry: yup.string().required('Required')
+     .test(
+        'wordCount',
+        'Max 750 words',
+        value => value && 
+          value.match(/[\w\d\’\'-]+/gi)
+          .length <= 750
+          // split(' ').length <= 100 
+      ),
 })
 
 

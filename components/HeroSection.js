@@ -67,7 +67,7 @@ const StyledText = styled(Typography)`
         and (max-device-width: 768px) 
         and (-webkit-min-device-pixel-ratio: 2) {
         font-size: ${props => props.mfs || props.msfs || '10rem'};
-         width: ${props =>  props.mMax|| '100%'};
+         width: ${props =>  props.mmax|| '100%'};
     }
 
         font-family:${props => props.sfont? props.theme.MPLight : props.theme.MPBlack};
@@ -75,7 +75,7 @@ const StyledText = styled(Typography)`
 }
 `;
 export default function HeroSection(props) {
-    const { t, max, fs, cara, st, smax, sfs, scolor, mfs, msfs, mMax, smt, mt, smmt, mmt} = props;
+    const { t, max, fs, cara, st, smax, sfs, scolor, mfs, msfs, mmax, smt, mt, smmt, mmt} = props;
     return (
         <StyledHero>
             {/* <div className="styledoverlay"> */}
@@ -84,7 +84,7 @@ export default function HeroSection(props) {
             <StyledCarousel /> :
             <img srcSet={props.src ? props.src : "/images/pic11.png"} alt="EuroBrake Greating" />
              }   
-            <StyledText t={t} mt={mt}mmt={mmt} max={max} fs={fs} mfs={mfs} mMax={mMax}>
+            <StyledText t={t} mt={mt}mmt={mmt} max={max} fs={fs} mfs={mfs} mmax={mmax}>
                 {props.children}
             </StyledText>
             <StyledText t={st} mt={smt} mmt={smmt} max={smax} fs={sfs} color={scolor} msfs={msfs} sfont="true">

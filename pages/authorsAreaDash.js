@@ -21,7 +21,7 @@ import HeroSection from '../components/HeroSection';
 import { Button } from '../components/Button';
 import { StyledBanner, StyledContainer } from '../components/styles/PageStyles';
 import { GetForm, SendForm } from '../components/forms/FormActions';
-import { FixedDates } from '../components/Dates';
+import { FixedDates, FixedBox } from '../components/Dates';
 
 
 const StyledPage = styled.div`
@@ -223,6 +223,7 @@ class AuthorsAreaDash extends Component {
             </HeroSection>
                 <StyledPage>
                     <FixedDates />
+                    <FixedBox />
 
                     <div className="authors">
 

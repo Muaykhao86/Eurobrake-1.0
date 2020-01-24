@@ -6,9 +6,9 @@ import ExpandMoreOutlinedIcon from '@material-ui/icons/ExpandMoreOutlined';
 import HeroSection from '../components/HeroSection';
 import { Button } from '../components/Button';
 import { StyledBanner, StyledContainer } from '../components/styles/PageStyles';
-import { Beach, Cart, ChefHat, Globe, KF, Museum, Music, People, Sun } from '../components/Icons';
+import { Beach, Cart, ChefHat, Globe, KF, Museum, Music, People, Sun, SmlLogo } from '../components/Icons';
 import HotelBox from '../components/accomodation/HotelBox';
-import {FixedDates} from '../components/Dates';
+import {FixedDates, FixedBox} from '../components/Dates';
 
 
 
@@ -53,7 +53,7 @@ const StyledPage = styled.div`
 
 
     .EBIconBox{
-        background-color: goldenrod;
+        /* background-color: goldenrod; */
         align-self: flex-end;        
         width: 10rem;
         height: 10rem;
@@ -139,7 +139,7 @@ export default () => (
         </HeroSection>
         <StyledPage className="Discover">
             <FixedDates/>
-
+            <FixedBox/>
             <Typography className="Discover-title" >The EuroBrake 2020 Venue</Typography>
             <Typography className="Discover-sub-title" >Barcelona International Convention Centre</Typography>
             <div className="CCIBBox">
@@ -155,7 +155,9 @@ export default () => (
                     <Typography gutterBottom className="Discover" style={{color: 'white'}}><span className="Discover-bold">500m </span>from the beach </Typography>
                     </div>
 
-                    <div className="EBIconBox"></div>
+                    <div className="EBIconBox">
+                        <SmlLogo width="10rem" height="10rem" />
+                    </div>
                 </div>
             </div>
             <Typography gutterBottom className="Discover" >The Barcelona International Convention Centre (CCIB) is a leading venue for international events. </Typography>

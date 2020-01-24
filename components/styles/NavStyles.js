@@ -7,21 +7,8 @@ export const NavStyles = styled.div`
     position: absolute;
     transform: translateX(-20rem);
     z-index: 200;
-    a{  
-        font-family: ${props => props.theme.MPBold};
-        font-size: 2.6rem;
-        color: ${props =>  props.theme.secondary};
-        margin: 1rem;
-        text-transform: uppercase;
-        cursor: pointer;
-        z-index: 100;
-
-           @media only screen 
-        and (max-device-width: 1200px) 
-        and (-webkit-min-device-pixel-ratio: 2) { 
-    font-size: 2.3rem;               
-}
-    }
+   
+    
 `;
 const Rotate360 = keyframes`
    
@@ -120,34 +107,46 @@ export const HiddenNavBG = styled.div`
 
 
 export const HiddenContainer = styled.div`
+        border: 10px solid white;
     position: absolute;
-    right: -15rem;
-    top: 0;
+    right: -20rem;
+    top: -5rem;
     display:flex;
     align-items: flex-start;
     justify-content: flex-start;
-    flex-flow: row wrap;
+    flex-flow: column;
     padding: 2rem;
-    margin: 2rem;
     transition: all .8s ease-in-out;
     opacity: ${props => props.isOpen ? 
     '1' : '0'};
     transform: ${props => props.isOpen ?
         null : 'translateX(-250rem)'};
-    min-width: 90vw;
-    min-height: 90vh;
-    /* border: 100px white solid; */
+    min-width: 99vw;
+    min-height: 99vh;
          @media only screen 
         and (max-device-width: 768px) 
         and (-webkit-min-device-pixel-ratio: 2) { 
     min-height: 27vh;                 
    
-}
+}   
 
+    .nav{
+    &-title{
+        width: 40%;
+        font-size: 2rem;
+        font-family: ${props => props.theme.MPLightIt};
+        color: ${props => props.theme.white};
+    }
+   
+    &-links{
+        font-size: 2rem;
+        font-family: ${props => props.theme.MPBlack};
+        color: ${props => props.theme.white};
+    }
 
-
-    .nav_container-1{
-        margin-top: 5rem;
+    &_container-1{
+        width: 100%;
+        border: 10px solid white;
         height: 100%;
         display: flex;
         flex-flow: row;
@@ -157,25 +156,42 @@ export const HiddenContainer = styled.div`
         and (max-device-width: 768px) 
         and (-webkit-min-device-pixel-ratio: 2) { 
         margin-top: 0;             
-}
+        }
     }
   
-
-    .Nav-title{
-        margin-left: 1rem;
-    } 
     
-    .nav_box-1{
-        max-height: 20rem;
-        flex: 1 1 auto;
-        /* border: 10px solid white; */
-        padding: 2rem;
-        margin: 2rem;
-        /* background-color: orangered; */
+    &-inner{
         display: flex;
         flex-flow: column;
-        justify-content: flex-start;
-        align-items: flex-start;
+        &-title{
+        
+        font-size: 3rem;
+        font-family: ${props => props.theme.MPSemibold};
+        color: ${props => props.theme.secondary};
+        }
+        &-text{
+            font-size: 3rem;
+        font-family: ${props => props.theme.MPLight};
+        color: ${props => props.theme.white};
+        }
+       
+
+
+    } 
+    
+    &_box-1{
+        margin-left: 5rem;
+        padding: 2rem;
+        width: 70%;
+        max-height: 20rem;
+        flex: 1 1 auto;
+        border: 10px solid white;
+        /* padding: 2rem;
+        margin: 2rem; */
+        /* background-color: orangered; */
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
          @media only screen 
         and (max-device-width: 768px) 
         and (-webkit-min-device-pixel-ratio: 2) { 
@@ -183,23 +199,48 @@ export const HiddenContainer = styled.div`
        margin: 0;            
 }
     }
-    .nav_box-2{
-        max-height: 70rem;
+    &_box-middle{
+        height: 50rem;
         
         flex: 1 1 auto;
-        /* border: 10px solid white; */
-        padding: 2rem;
+        border: 10px solid white;
         margin: 2rem;
         display: flex;
-        flex-flow: column;
-        justify-content: center;
-        align-items: flex-start;
-    }
-    .nav_box-3{
+        flex-flow: row;
+        justify-content: space-between;
 
-        min-height: 55rem;
+      
+        &-1{
+            display: flex;
+            flex-flow: column;
+            justify-content: space-between;
+            width: 30rem;
+            height: 50rem;
+            background-color: goldenrod;
+
+        }
+
+        &-2{
+            
+            width: 30rem;
+            height: 50rem;
+            background-color: goldenrod;
+        }
+        &-3{
+            width: 30rem;
+            height: 50rem;
+            background-color: goldenrod;
+
+        }
+
+
+    }
+    &_box-right{
+
+        border: 10px solid white;
+        height: 50rem;
         /* min-height: 85rem; */
-        width: 25rem;
+        max-width: 30rem;
         flex: 1 1 auto;
         margin: 2rem;
          display: flex;
@@ -208,5 +249,19 @@ export const HiddenContainer = styled.div`
         justify-content: space-between;
     }
     
+    &_box-left{
+
+        border: 10px solid white;
+        height: 50rem;
+        /* min-height: 85rem; */
+        max-width: 30rem;
+        flex: 1 1 auto;
+        margin: 2rem;
+         display: flex;
+        flex-flow: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
 
 `;

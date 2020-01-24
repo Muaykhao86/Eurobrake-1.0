@@ -6,7 +6,7 @@ import ExpandMoreOutlinedIcon from '@material-ui/icons/ExpandMoreOutlined';
 import HeroSection from '../components/HeroSection';
 
 import {StyledPage, StyledBanner, StyledContainer} from '../components/styles/PageStyles';
-import {FixedDates} from '../components/Dates';
+import {FixedDates, FixedBox} from '../components/Dates';
 
 
 const StyledDiv = styled.div`
@@ -32,6 +32,7 @@ export default () => (
     </HeroSection>
     <StyledPage>
             <FixedDates/>
+            <FixedBox/>
 
     <StyledDiv>
     <Typography gutterBottom className="disclaimer-title"> Disclaimer</Typography>

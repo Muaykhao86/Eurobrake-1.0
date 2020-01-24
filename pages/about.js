@@ -5,7 +5,7 @@ import Typography from '@material-ui/core/Typography';
 import ExpandMoreOutlinedIcon from '@material-ui/icons/ExpandMoreOutlined';
 import Grid from '@material-ui/core/Grid';
 import { StyledPage, StyledBanner, StyledContainer } from '../components/styles/PageStyles';
-import {FixedDates} from '../components/Dates';
+import {FixedDates, FixedBox} from '../components/Dates';
 
 
 const StyledAbout = styled.div`
@@ -132,6 +132,7 @@ export default () => (
     </HeroSection>
         <StyledPage mt="3rem">
             <FixedDates/>
+            <FixedBox/>
             <StyledAbout >
                 <Typography className="about-title">Welcome</Typography>
                 <Typography gutterBottom className="about">The world’s largest conference and exhibition dedicated to braking technology.</Typography>
@@ -460,7 +461,7 @@ export default () => (
                     <Grid item xs={3}>
                         <StyledProfile className="profile">
                             <div className="profile-mediabox">
-                                <img  src="/images/MichaelLingg.png" alt="profilePicture" className="profile-media" />
+                                <img  src="/images/MichaelLingg.png" alt="profilePicture" className="profile-media" style={{position: 'relative', top: '5rem'}}/>
                             </div>
                             <div className="profile_description">
                                 <Typography className="profile profile_description-title">
@@ -520,7 +521,7 @@ export default () => (
                     <Grid item xs={3}>
                         <StyledProfile className="profile">
                             <div className="profile-mediabox">
-                                <img  src="/images/MeyerManfred.png" alt="profilePicture" className="profile-media" />
+                                <img  src="/images/MeyerManfred.png" alt="profilePicture" className="profile-media" style={{position: 'relative', top: '3rem'}}/>
                             </div>
                             <div className="profile_description">
                                 <Typography className="profile profile_description-title">

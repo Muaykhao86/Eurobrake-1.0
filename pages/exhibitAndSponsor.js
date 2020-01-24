@@ -5,7 +5,7 @@ import Typography from '@material-ui/core/Typography';
 import HeroSection from '../components/HeroSection';
 import StopIcon from '@material-ui/icons/Stop';
 import { Button } from '../components/Button';
-import { Quote, MailIcon, PhoneIcon , EBFloorPlan} from '../components/Icons';
+import { Quote, MailIcon, PhoneIcon , EBFloorPlan, SmlLogo} from '../components/Icons';
 import {FixedDates} from '../components/Dates';
 
 

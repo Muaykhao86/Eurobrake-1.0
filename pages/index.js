@@ -8,7 +8,7 @@ import ExhibitionSection from '../components/exhibitors/ExhibitionSection';
 import StudentSection from '../components/StudentSection';
 import AuthorSection from '../components/AuthorSection';
 import HeroSection from '../components/HeroSection';
-import {FixedDates} from '../components/Dates';
+import {FixedDates, FixedBox} from '../components/Dates';
 
 
 export default () => (
@@ -22,7 +22,7 @@ export default () => (
         smt='41rem'
          cara
          max="60%"
-         mMax="80%"
+         mmax="80%"
          src="/images/main.jpg" 
          secondary="Secure your tickets by 1 April 2020"
          >
@@ -30,6 +30,7 @@ export default () => (
         </HeroSection> 
         <StyledContainer>
             <FixedDates/>
+            <FixedBox/>
             <AboutSection />
             <LocationSection />
             <AttendeesSection />

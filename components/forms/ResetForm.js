@@ -3,6 +3,8 @@ import { Formik, Form, Field, ErrorMessage } from 'formik';
 import { TextField} from 'formik-material-ui';
 import { StyledForm } from './Formstyles';
 import { Button } from '../Button';
+import CircularProgress from '@material-ui/core/CircularProgress';
+
 import { SendForm } from './FormActions';
 import { Typography } from '@material-ui/core';
 import {ResetSchema} from './FormControl';
@@ -14,6 +16,8 @@ import {ResetSchema} from './FormControl';
 
 export const ResetForm = (props) => {
     const [Toggle, setToggle] = useState(false);
+  const [Loading, setLoading] = useState(false);
+
     const [Status, setStatus] = useState(null);
 
     const url =  `https://prelude.eurobrake.net/authors/reset/${props.paperId}`;
@@ -38,15 +42,20 @@ export const ResetForm = (props) => {
                 console.log('click')
                     let FT = 'reset';
                   let res =  await SendForm({values, url, FT});
-                  let data = await res && res.status ;
-                  console.log({status})
-                  data && setStatus(data) && setToggle(Toggle => !Toggle)
-                  return 
+                  let data = await  res;
+                  let dataStatus= await  data && data.status;
+                  setStatus(dataStatus)
+                  console.log({data})
+                  let result = async () => {
+                  await  setLoading(false)
+                  await setToggle(true)
+                   }    
+                  
+                return result() 
                 }
 
                 return (
                     <StyledForm>
-                    {Toggle && <Typography gutterBottom className="form-title">{Status}</Typography>}
                     {console.log({errors})}
                     <Typography className="form-title">Please provide your new password</Typography>
 
@@ -83,7 +92,7 @@ export const ResetForm = (props) => {
                                 component={TextField}
                             />
                         </div>
-                      
+                        {Loading ?  <CircularProgress size={24} className="loading"/> : 
                         <Button 
                             onClick={() => allTouched()}
                             bcolor="#134381"
@@ -93,7 +102,8 @@ export const ResetForm = (props) => {
                             padding=".5rem 4rem"
                             fontSize="1.7rem">
                             Reset
-                        </Button>
+                        </Button>}
+                    {Toggle && <Typography gutterBottom className="form-title" style={{alignSelf: 'center',textTransform: 'uppercase'}}>{Status}</Typography>}
                     </StyledForm>
                 )
             }}

@@ -7,7 +7,7 @@ import HeroSection from '../components/HeroSection';
 import ExpandTable from '../components/ExpandTable';
 import { Button } from '../components/Button';
 import {StyledBanner, StyledContainer} from '../components/styles/PageStyles';
-import {FixedDates} from '../components/Dates';
+import {FixedDates, FixedBox} from '../components/Dates';
 
 
 
@@ -98,6 +98,7 @@ export default () => (
             </HeroSection>
         <StyledPage >
             <FixedDates/>
+            <FixedBox/>
 
             <div className="Registration">
 

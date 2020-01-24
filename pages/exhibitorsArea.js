@@ -2,7 +2,7 @@ import React from 'react'
 import fetch from 'isomorphic-unfetch';
 import styled from 'styled-components';
 import HeroSection from '../components/HeroSection';
-import {FixedDates} from '../components/Dates';
+import {FixedDates, FixedBox} from '../components/Dates';
 
 
 
@@ -71,6 +71,7 @@ export default class ExhibitorsArea extends React.Component {
                 Exhibitors Area
             </HeroSection>
             <FixedDates/>
+            <FixedBox/>
 
                 <DemoDiv>
 

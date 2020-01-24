@@ -27,7 +27,7 @@ export const Bio = (props) => {
 
     const {presets, csrf, apiUrl, paperId, type} = props;
     console.log('tasks', presets, csrf, apiUrl, paperId, type);
-    const url = `https://prelude.eurobrake.net/authors/tasks/biography/${paperId}`;
+    const url = `https://prelude.eurobrake.net/authors/tasks/bio/${paperId}`;
     
     return (
             <Formik
@@ -101,7 +101,7 @@ export const Bio = (props) => {
                                 fontSize="2rem"
                         onClick={allTouched}
                            style={{ alignSelf: 'center', color: '#FFF'}}>
-                            submmit
+                            submit
                         </Button>}
                     {Toggle && <Typography className="form-title" style={{alignSelf: 'center', textTransform: 'uppercase'}}>{Status}</Typography>}
 

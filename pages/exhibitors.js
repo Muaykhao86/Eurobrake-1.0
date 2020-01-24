@@ -5,7 +5,7 @@ import ExhibitorCard from '../components/exhibitors/ExhibitorCard';
 import {expo} from '../components/exhibitors/testexpo';
 import HeroSection from '../components/HeroSection';
 import {StyledPage} from '../components/styles/PageStyles';
-import {FixedDates} from '../components/Dates';
+import {FixedDates, FixedBox} from '../components/Dates';
 
 
 
@@ -59,7 +59,7 @@ export default class ExhibitorList extends Component {
             </HeroSection>
             <StyledPage  >
             <FixedDates/>
-
+            <FixedBox/>
                 <h1 style={{marginBottom: '5rem'}}>Get to know the exhibitors</h1>
                 <StyledExhibitors>
                     {exhibitors.map((company, i) => {

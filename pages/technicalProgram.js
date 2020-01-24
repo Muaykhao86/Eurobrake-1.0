@@ -4,7 +4,7 @@ import Typography from '@material-ui/core/Typography';
 import HeroSection from '../components/HeroSection';
 
 import {StyledPage, IframeContent} from '../components/styles/PageStyles';
-import {FixedDates} from '../components/Dates';
+import {FixedDates, FixedBox} from '../components/Dates';
 
 
 export default () => (
@@ -16,6 +16,7 @@ export default () => (
                 <Typography gutterBottom className="Page-title">Technical Program</Typography>
 
             <FixedDates/>
+            <FixedBox/>
 
     <TechExpandTable/>
 </StyledPage>    

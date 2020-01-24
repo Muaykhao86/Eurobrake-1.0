@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import Typography from '@material-ui/core/Typography';
 import HeroSection from '../components/HeroSection';
 import { Esop } from '../components/forms/Esop';
-import { FixedDates } from '../components/Dates';
+import { FixedDates, FixedBox } from '../components/Dates';
 
 
 
@@ -70,6 +70,7 @@ export default () => (
             <Typography className="Esop">The deadline for applications is<span className="Esop-bold"> Monday 3rd February.</span></Typography>
             <Typography className="Esop">If you have any questions please contact <span className="Esop-bold"><a href="mailto:h.millar@fisita.com">Hayley Millar</a></span>, Education Manager at FISITA.</Typography>
             <FixedDates />
+            <FixedBox />
             <Esop/>
         </StyledPage>
     </>
