@@ -1048,7 +1048,7 @@ export const Esop = (props) => {
                             br="100rem"
                             style={{ margin: "4rem 0", color: '#FFF' }}
                             fontSize="2rem">Submit</Button>
-                    {Toggle && <Typography className="form-title" style={{alignSelf: 'center'}}>{Status && Status.toUppercase()}</Typography>}
+                    {Toggle && <Typography className="form-title" style={{alignSelf: 'center', textTransform: 'uppercase'}}>{Status}</Typography>}
 
                     </StyledForm>
                 )

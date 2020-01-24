@@ -199,7 +199,7 @@ class AuthorsAreaDash extends Component {
         // let csrf = await data && data.__csrf_token ;
         let res = await SendForm({url,  FT})
         let resData = await res
-        console.log('withdrawn', {data})
+        console.log('withdrawn', {resdata})
         await data && this.setState((loading, data)=>({status: data, loading: !loading}))
 
     }
@@ -372,10 +372,17 @@ AuthorsAreaDash.getInitialProps = async ctx => {
     // We use `nextCookie` to get the cookie and pass the token to the frontend in the `props`.
     const { logintoken } = cookies(ctx) || {};
     const apiUrl = 'https://prelude.eurobrake.net/authors/dashboard ';
-    const redirectOnError = () =>
-        process.browser
-            ? Router.push('/')
-            : ctx.res.writeHead(301, { Location: '/' })
+    
+    const redirectOnError = async () => {
+    const count = 0;
+    await  count ++
+    if(count < 3) {
+     await process.browser ? Router.push('/authors') : ctx.res.writeHead(301, { Location: '/authors' })
+    }else{
+        await logout()
+    }
+    }
+
     console.log('AAD', logintoken)
     if (logintoken) {
         try {

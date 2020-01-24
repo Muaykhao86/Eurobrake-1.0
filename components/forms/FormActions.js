@@ -112,11 +112,11 @@ export async function SendFile({ values, url, csrf }) {
 
 
 export async function SendForm({ csrf, values, url, FT }) {
-     values.accept && values.accept === true ? values.accept = 'yes' : null;
-    values.copyright && values.copyright === true ? values.copyright = 'yes' : null;
+     values && values.accept && values.accept === true ? values.accept = 'yes' : null;
+    values && values.copyright && values.copyright === true ? values.copyright = 'yes' : null;
     const form = JSON.stringify(values);
     const { logintoken } = cookie.get();
-        console.log({url, form, FT});
+        console.log({url, form, FT, csrf});
     if (logintoken && csrf && form) {
         try {
             const apiUrl = url;

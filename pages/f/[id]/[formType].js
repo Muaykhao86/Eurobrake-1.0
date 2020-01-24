@@ -19,7 +19,7 @@ const Form = props => {
     const {apiUrl, id, formType, taskType} = props;// ? GETTIN FROM GET INITIAL PROPS
     const FT = formType || '';
     const TT = taskType || '';
-    console.log({apiUrl, id, FT, TT})
+    console.log('uniform',{apiUrl, id, FT, TT, __csrf_token, presets})
     return (
         <>
         <HeroSection>
@@ -66,7 +66,7 @@ Form.getInitialProps = async context => {
             })
             const data = await response.json()
             if (data.status === 'success') {
-                console.log('res.ok 2nd GIP', data)
+                console.log('res.ok uniform GIP', data)
                 return { data, apiUrl, id, formType, taskType }
             }
             else {

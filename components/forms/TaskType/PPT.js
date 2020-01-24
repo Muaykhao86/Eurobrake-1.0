@@ -127,9 +127,9 @@ export const PPT = (props) => {
                                 fontSize="2rem"
                         onClick={allTouched}
                            style={{  alignSelf: 'center', color: '#FFF'}}>
-                            {Status ? Status : 'submit'}
+                            submit
                         </Button>}
-                    {Toggle && <Typography className="form-title" style={{alignSelf: 'center'}}>{Status && Status.toUppercase()}</Typography>}
+                    {Toggle && <Typography className="form-title" style={{alignSelf: 'center',textTransform: 'uppercase'}}>{Status}</Typography>}
                         
                     </StyledTask>
                 )
