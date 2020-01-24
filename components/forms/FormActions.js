@@ -93,6 +93,7 @@ export async function SendFile({ values, url, csrf }) {
             await console.log({ data })
             if (data.status === 'success') {
                 console.log('getForm', data);
+                return data
 
             } else {
                 let error = new Error(data.error)
@@ -204,7 +205,7 @@ export async function SendForm({ csrf, values, url, FT }) {
             )
          }
         }
-    if(FT === 'newsletter' || FT === 'contact' && csrf ){
+    if(FT === 'newsletter' || FT === 'contact'){
         console.log({url, form});
         try {
             const response = await fetch(url, {

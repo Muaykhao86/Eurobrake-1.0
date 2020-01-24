@@ -39,9 +39,8 @@ export const ContactForm = (props) => {
                    
                     const onSubmit = async () => {
                  await setLoading(true);
-                values.__csrf_token = csrf
                   await  console.log('submitting')
-                  let res =  await SendForm({values, url, csrf});
+                  let res =  await SendForm({values, url});
                   let data = await  res;
                   let dataStatus= await  data && data.status;
                   setStatus(dataStatus)

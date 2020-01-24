@@ -192,7 +192,7 @@ class AuthorsAreaDash extends Component {
     handleWithdrawn = async ({papercode}) => {
        await  this.setState(loading => ({loading: !loading}));
         const FT = 'withdraw'
-        const url = `https://prelude.eurobrake.net/authors/withdrawn/${papercode}`;
+        const url = `https://prelude.eurobrake.net/authors/withdraw/${papercode}`;
         console.log('withdrawn', url)
         // let get = await GetForm({url});
         // let data = await get;

@@ -61,6 +61,7 @@ export const Poster = (props) => {
                   let dataStatus= await  data && data.status;
                   setStatus(dataStatus)
                   console.log({data})
+                  console.log({dataStatus})
                   let result = async () => {
                   await  setLoading(false)
                   await setToggle(true)
