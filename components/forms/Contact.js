@@ -40,7 +40,8 @@ export const ContactForm = (props) => {
                     const onSubmit = async () => {
                  await setLoading(true);
                   await  console.log('submitting')
-                  let res =  await SendForm({values, url});
+                  let FT = 'contact';
+                  let res =  await SendForm({values, url, FT});
                   let data = await  res;
                   let dataStatus= await  data && data.status;
                   setStatus(dataStatus)
