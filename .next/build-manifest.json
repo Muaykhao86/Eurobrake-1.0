@@ -16,11 +16,11 @@
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],
-    "/index": [
+    "/exhibitAndSponsor": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],
-    "/welcome": [
+    "/index": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ]

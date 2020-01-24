@@ -213,6 +213,7 @@ const StyledFixedBox = styled.div`
         align-items: center;
         justify-content: center;
         flex: 1 1 auto;
+      
     }
 `;
 
@@ -223,7 +224,8 @@ export function FixedBox() {
             <Typography gutterBottom as="h1" className="Box-title" >Book your Early Bird Tickets for EuroBrake</Typography>
             <Typography gutterBottom as="p"  className="Box-text-it">Secure your tickets by 1 April 2020</Typography>
             <Typography gutterBottom as="h1"  className="Box-date"> Europe's braking technology conference & exhibition</Typography>
-            <Typography gutterBottom as="p" className="Box-text" >2-4 June 2020 CCIB, Barcelona, Spain</Typography>
+            <Typography gutterBottom as="p" className="Box-text" >2-4 June 2020,</Typography>
+            <Typography gutterBottom as="p" className="Box-text" >CCIB, Barcelona, Spain</Typography>
             <Link href="/ticketPortal">
                 <Button br="500rem" padding="1rem" fontSize="1.5rem" style={{marginTop: '1rem'}}>Book Now</Button>
             </Link>           
@@ -305,9 +307,10 @@ export function Box(props) {
             <Typography gutterBottom as="h1" className="Box-title" >Book your Early Bird Tickets for EuroBrake</Typography>
             <Typography gutterBottom as="p"  className="Box-text-it">Secure your tickets by 1 April 2020</Typography>
             <Typography gutterBottom as="h1"  className="Box-date"> Europe's braking technology conference & exhibition</Typography>
-            <Typography gutterBottom as="p" className="Box-text" >2-4 June 2020 CCIB, Barcelona, Spain</Typography>
+            <Typography gutterBottom as="p" className="Box-text" >2-4 June 2020,</Typography>
+            <Typography gutterBottom as="p" className="Box-text" >CCIB, Barcelona, Spain</Typography>
             <Link href="/ticketPortal">
-                <Button br="500rem" padding="1rem" fontSize="1.5rem" style={{ color: '#FFF', fontSize: '1.5rem', margin: '0',marginTop: '1rem',}}>Book Now</Button>
+                <Button onClick={props.handleClick} br="500rem" padding="1rem" fontSize="1.5rem" style={{ color: '#FFF', fontSize: '1.5rem', margin: '0',marginTop: '1rem',}}>Book Now</Button>
             </Link>           
             <div className="logo_box">
                 <SmlLogo width="10rem" height="10rem"/>

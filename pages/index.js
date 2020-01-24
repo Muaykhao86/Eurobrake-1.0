@@ -14,15 +14,13 @@ import {FixedDates, FixedBox} from '../components/Dates';
 export default () => (
     <>       
         <HeroSection 
-        sfs="8rem"
-        mfs="8rem"
-        msfs="5rem"
         scolor="#F9B721"
-        st="65rem"
-        smt='41rem'
          cara
-         max="60%"
-         mmax="80%"
+         sfs="8rem"
+         tsfs="6rem"
+         msfs="9rem"
+         tst="55%"
+         mst="50%"
          src="/images/main.jpg" 
          secondary="Secure your tickets by 1 April 2020"
          >

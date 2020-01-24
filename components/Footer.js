@@ -144,10 +144,10 @@ function Footer() {
                     <a href="https://www.fisita.com/"><FLogoWhite width="16rem" height="5rem" /></a>
                     </div>
 
-                        <div className="ftr_newsletter-box" >
+                        {/* <div className="ftr_newsletter-box" >
                         <Typography className="ftr_newsletter-box_title" >Sign up for our Newsletter</Typography>
                         <Newsletter/>
-                        </div>
+                        </div> */}
                     <div className="ftr_middle-links_links">
                         <Link href="/disclaimer"><a >Disclaimer</a></Link>
                          <Link

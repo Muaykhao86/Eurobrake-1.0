@@ -36,6 +36,11 @@ const HeaderBar = styled.div`
         flex-flow: column;
         justify-content: center;
         align-items: center;
+         @media only screen 
+        and (max-device-width: 1200px) 
+        and (-webkit-min-device-pixel-ratio: 2) {
+      left: 30rem;
+    }
         
         &-title{
         font-size: 1.8rem;

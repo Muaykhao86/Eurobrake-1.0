@@ -6,7 +6,7 @@ import HeroSection from '../components/HeroSection';
 import StopIcon from '@material-ui/icons/Stop';
 import { Button } from '../components/Button';
 import { Quote, MailIcon, PhoneIcon , EBFloorPlan, SmlLogo} from '../components/Icons';
-import {FixedDates} from '../components/Dates';
+import {FixedDates, FixedBox} from '../components/Dates';
 
 
 const StyledFloorPlan = styled.div`
@@ -149,8 +149,6 @@ const StyledQuote = styled.div`
     margin-top: 5rem; 
     `;
 
-// ! NEED TO SORT OUT MEDIA QUERIS FOR TEXT DUE TO SVG NOT SCALING WITH FONT
-//  * OPTIONS ARE TO REDO QOUTE MARKS AND SET THE Z-INDEZX AS -100? 
 
 export default () => {
      const [full, setFull] = useState(false)
@@ -167,6 +165,7 @@ const svgHeight = full ? '100vh' : '';
         </HeroSection>
         <StyledPage>
             <FixedDates/>
+            <FixedBox/>
 
             <div className="Exhibit">
 

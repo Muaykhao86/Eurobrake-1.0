@@ -22,6 +22,7 @@ const theme = {
     MPLightIt: 'MyriadPro-LightIt',
     MPIt: 'MyriadPro-It',
     MPBlack: 'MyriadPro-Black',
+    MPBlackIt: 'MyriadPro-BlackIt',
     heroHeightSml: '30vh',
     heroHeightSml: '60vh',
     heroHeightBig: '100vh',
@@ -92,6 +93,13 @@ const GlobalStyle = createGlobalStyle`
     @font-face {
     font-family: 'MyriadPro-Black';
     src: url('/fonts/MyriadPro-Black.otf');
+    font-weight: 300;
+    font-display: auto;
+    font-style: normal;
+    };
+    @font-face {
+    font-family: 'MyriadPro-BlackIt';
+    src: url('/fonts/MyriadPro-BlackIt.otf');
     font-weight: 300;
     font-display: auto;
     font-style: normal;

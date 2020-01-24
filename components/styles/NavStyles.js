@@ -107,7 +107,7 @@ export const HiddenNavBG = styled.div`
 
 
 export const HiddenContainer = styled.div`
-        border: 10px solid white;
+        /* border: 10px solid white; */
     position: absolute;
     right: -20rem;
     top: -5rem;
@@ -132,26 +132,39 @@ export const HiddenContainer = styled.div`
 
     .nav{
     &-title{
-        width: 40%;
         font-size: 2rem;
         font-family: ${props => props.theme.MPLightIt};
         color: ${props => props.theme.white};
+
+        &-box{
+            display: flex;
+            flex-flow: column;
+            align-items: flex-start;
+            margin-bottom: 3rem;
+        }
     }
    
     &-links{
         font-size: 2rem;
-        font-family: ${props => props.theme.MPBlack};
+        font-family: ${props => props.theme.MPBlackIt};
         color: ${props => props.theme.white};
+
+        &-box{
+            display: flex;
+            flex-flow: column;
+            align-items: flex-start;
+            margin-bottom: 3rem;
+        }
     }
 
     &_container-1{
         width: 100%;
-        border: 10px solid white;
+        /* border: 10px solid white; */
         height: 100%;
         display: flex;
         flex-flow: row;
         flex: 1 1 auto;
-        align-items: flex-start;
+        justify-content: space-between;
          @media only screen 
         and (max-device-width: 768px) 
         and (-webkit-min-device-pixel-ratio: 2) { 
@@ -164,15 +177,24 @@ export const HiddenContainer = styled.div`
         display: flex;
         flex-flow: column;
         &-title{
-        
         font-size: 3rem;
         font-family: ${props => props.theme.MPSemibold};
         color: ${props => props.theme.secondary};
+        @media only screen 
+        and (max-device-width: 1500px) 
+        and (-webkit-min-device-pixel-ratio: 2) {
+      font-size: 2rem;
+    }
         }
         &-text{
             font-size: 3rem;
         font-family: ${props => props.theme.MPLight};
         color: ${props => props.theme.white};
+         @media only screen 
+        and (max-device-width: 1500px) 
+        and (-webkit-min-device-pixel-ratio: 2) {
+      font-size: 2rem;
+    }
         }
        
 
@@ -183,53 +205,54 @@ export const HiddenContainer = styled.div`
         margin-left: 5rem;
         padding: 2rem;
         width: 70%;
+         @media only screen 
+        and (max-device-width: 1700px) 
+        and (-webkit-min-device-pixel-ratio: 2) {
+        
+        width: 80%;
+    }
         max-height: 20rem;
         flex: 1 1 auto;
-        border: 10px solid white;
-        /* padding: 2rem;
-        margin: 2rem; */
+        /* border: 10px solid white; */
+        padding-bottom: 4rem;
         /* background-color: orangered; */
         display: flex;
         justify-content: space-between;
         align-items: flex-end;
-         @media only screen 
-        and (max-device-width: 768px) 
-        and (-webkit-min-device-pixel-ratio: 2) { 
-       padding: 0;
-       margin: 0;            
-}
+       
     }
     &_box-middle{
         height: 50rem;
-        
+        max-width: 95rem;
         flex: 1 1 auto;
-        border: 10px solid white;
+        /* border: 10px solid white; */
         margin: 2rem;
+        padding: 2rem;
         display: flex;
         flex-flow: row;
-        justify-content: space-between;
+        justify-content: space-between
+;
 
       
         &-1{
             display: flex;
             flex-flow: column;
-            justify-content: space-between;
-            width: 30rem;
+            width: 26rem;
             height: 50rem;
-            background-color: goldenrod;
+            /* background-color: goldenrod; */
 
         }
 
         &-2{
             
-            width: 30rem;
+            width: 26rem;
             height: 50rem;
-            background-color: goldenrod;
+            /* background-color: goldenrod; */
         }
         &-3{
-            width: 30rem;
+            width: 15rem;
             height: 50rem;
-            background-color: goldenrod;
+            /* background-color: goldenrod; */
 
         }
 
@@ -237,10 +260,10 @@ export const HiddenContainer = styled.div`
     }
     &_box-right{
 
-        border: 10px solid white;
+        /* border: 10px solid white; */
         height: 50rem;
         /* min-height: 85rem; */
-        max-width: 30rem;
+        max-width: 26rem;
         flex: 1 1 auto;
         margin: 2rem;
          display: flex;
@@ -251,16 +274,29 @@ export const HiddenContainer = styled.div`
     
     &_box-left{
 
-        border: 10px solid white;
+        /* border: 10px solid white; */
         height: 50rem;
         /* min-height: 85rem; */
-        max-width: 30rem;
+        max-width: 26rem;
         flex: 1 1 auto;
         margin: 2rem;
          display: flex;
         flex-flow: column;
         align-items: center;
         justify-content: space-between;
+    }
+
+    &_box-bottom{
+        margin-left: 5rem;
+        display: flex;
+        flex-flow: row;
+        align-items: flex-end;
+
+        &-text{
+            font-size: 1.5rem;
+            margin-right: 2rem;
+        }
+
     }
 }
 

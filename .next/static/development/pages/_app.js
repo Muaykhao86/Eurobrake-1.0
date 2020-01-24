@@ -376,7 +376,7 @@ function FixedBox() {
   return __jsx(StyledFixedBox, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 222
+      lineNumber: 223
     },
     __self: this
   }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_3__["Typography"], {
@@ -385,7 +385,7 @@ function FixedBox() {
     className: "Box-title",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 223
+      lineNumber: 224
     },
     __self: this
   }, "Book your Early Bird Tickets for EuroBrake"), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_3__["Typography"], {
@@ -394,7 +394,7 @@ function FixedBox() {
     className: "Box-text-it",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 224
+      lineNumber: 225
     },
     __self: this
   }, "Secure your tickets by 1 April 2020"), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_3__["Typography"], {
@@ -403,7 +403,7 @@ function FixedBox() {
     className: "Box-date",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 225
+      lineNumber: 226
     },
     __self: this
   }, " Europe's braking technology conference & exhibition"), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_3__["Typography"], {
@@ -412,14 +412,23 @@ function FixedBox() {
     className: "Box-text",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 226
+      lineNumber: 227
     },
     __self: this
-  }, "2-4 June 2020 CCIB, Barcelona, Spain"), __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
+  }, "2-4 June 2020,"), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_3__["Typography"], {
+    gutterBottom: true,
+    as: "p",
+    className: "Box-text",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 228
+    },
+    __self: this
+  }, "CCIB, Barcelona, Spain"), __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
     href: "/ticketPortal",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 227
+      lineNumber: 229
     },
     __self: this
   }, __jsx(_Button__WEBPACK_IMPORTED_MODULE_6__["Button"], {
@@ -431,14 +440,14 @@ function FixedBox() {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 228
+      lineNumber: 230
     },
     __self: this
   }, "Book Now")), __jsx("div", {
     className: "logo_box",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 230
+      lineNumber: 232
     },
     __self: this
   }, __jsx(_Icons__WEBPACK_IMPORTED_MODULE_7__["SmlLogo"], {
@@ -446,7 +455,7 @@ function FixedBox() {
     height: "10rem",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 231
+      lineNumber: 233
     },
     __self: this
   })));
@@ -479,7 +488,7 @@ function Box(props) {
   return __jsx(StyledBox, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 304
+      lineNumber: 306
     },
     __self: this
   }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_3__["Typography"], {
@@ -488,7 +497,7 @@ function Box(props) {
     className: "Box-title",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 305
+      lineNumber: 307
     },
     __self: this
   }, "Book your Early Bird Tickets for EuroBrake"), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_3__["Typography"], {
@@ -497,7 +506,7 @@ function Box(props) {
     className: "Box-text-it",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 306
+      lineNumber: 308
     },
     __self: this
   }, "Secure your tickets by 1 April 2020"), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_3__["Typography"], {
@@ -506,7 +515,7 @@ function Box(props) {
     className: "Box-date",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 307
+      lineNumber: 309
     },
     __self: this
   }, " Europe's braking technology conference & exhibition"), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_3__["Typography"], {
@@ -515,17 +524,27 @@ function Box(props) {
     className: "Box-text",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 308
+      lineNumber: 310
     },
     __self: this
-  }, "2-4 June 2020 CCIB, Barcelona, Spain"), __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
+  }, "2-4 June 2020,"), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_3__["Typography"], {
+    gutterBottom: true,
+    as: "p",
+    className: "Box-text",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 311
+    },
+    __self: this
+  }, "CCIB, Barcelona, Spain"), __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
     href: "/ticketPortal",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 309
+      lineNumber: 312
     },
     __self: this
   }, __jsx(_Button__WEBPACK_IMPORTED_MODULE_6__["Button"], {
+    onClick: props.handleClick,
     br: "500rem",
     padding: "1rem",
     fontSize: "1.5rem",
@@ -537,14 +556,14 @@ function Box(props) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 310
+      lineNumber: 313
     },
     __self: this
   }, "Book Now")), __jsx("div", {
     className: "logo_box",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 312
+      lineNumber: 315
     },
     __self: this
   }, __jsx(_Icons__WEBPACK_IMPORTED_MODULE_7__["SmlLogo"], {
@@ -552,7 +571,7 @@ function Box(props) {
     height: "10rem",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 313
+      lineNumber: 316
     },
     __self: this
   })));
@@ -669,26 +688,6 @@ function Footer() {
     },
     __self: this
   }))), __jsx("div", {
-    className: "ftr_newsletter-box",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 147
-    },
-    __self: this
-  }, __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_4__["default"], {
-    className: "ftr_newsletter-box_title",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 148
-    },
-    __self: this
-  }, "Sign up for our Newsletter"), __jsx(_components_forms_Newsletter__WEBPACK_IMPORTED_MODULE_8__["Newsletter"], {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 149
-    },
-    __self: this
-  })), __jsx("div", {
     className: "ftr_middle-links_links",
     __source: {
       fileName: _jsxFileName,
@@ -933,7 +932,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement;
 var HeaderBar = styled_components__WEBPACK_IMPORTED_MODULE_9__["default"].div.withConfig({
   displayName: "Header__HeaderBar",
   componentId: "zfe6h7-0"
-})(["color:white;position:fixed;background-color:", ";min-width:100%;height:10rem;display:flex;justify-content:flex-end;align-items:center;z-index:100;border-bottom:5px solid ", ";.logo{position:absolute;left:8rem;}.head{width:60rem;position:absolute;top:2.5rem;left:48rem;display:flex;flex-flow:column;justify-content:center;align-items:center;&-title{font-size:1.8rem;font-family:", ";color:", ";align-self:flex-start;max-width:90%;}&-text{font-size:1.8rem;font-family:", ";color:", ";align-self:flex-start;max-width:90%;}}"], function (props) {
+})(["color:white;position:fixed;background-color:", ";min-width:100%;height:10rem;display:flex;justify-content:flex-end;align-items:center;z-index:100;border-bottom:5px solid ", ";.logo{position:absolute;left:8rem;}.head{width:60rem;position:absolute;top:2.5rem;left:48rem;display:flex;flex-flow:column;justify-content:center;align-items:center;@media only screen  and (max-device-width:1200px)  and (-webkit-min-device-pixel-ratio:2){left:30rem;}&-title{font-size:1.8rem;font-family:", ";color:", ";align-self:flex-start;max-width:90%;}&-text{font-size:1.8rem;font-family:", ";color:", ";align-self:flex-start;max-width:90%;}}"], function (props) {
   return props.theme.primary;
 }, function (props) {
   return props.theme.secondary;
@@ -1009,55 +1008,55 @@ function (_Component) {
         ref: this.myRef,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 96
+          lineNumber: 101
         },
         __self: this
       }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_8___default.a, {
         href: "/",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 97
+          lineNumber: 102
         },
         __self: this
       }, __jsx("a", {
         className: "logo",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 97
+          lineNumber: 102
         },
         __self: this
       }, __jsx(HeaderLogo, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 98
+          lineNumber: 103
         },
         __self: this
       }))), __jsx("div", {
         className: "head",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 101
+          lineNumber: 106
         },
         __self: this
       }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_10__["Typography"], {
         className: "head-title",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 102
+          lineNumber: 107
         },
         __self: this
       }, "Europe's braking technology conference & exhibition"), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_10__["Typography"], {
         className: "head-text",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 103
+          lineNumber: 108
         },
         __self: this
       }, "2-4 June 2020, CCIB, Barcelona, Spain")), __jsx(_Nav__WEBPACK_IMPORTED_MODULE_11__["default"], {
         sticky: this.state.sticky,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 105
+          lineNumber: 110
         },
         __self: this
       }));
@@ -5849,6 +5848,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Button__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./Button */ "./components/Button.js");
 /* harmony import */ var _Dates__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./Dates */ "./components/Dates.js");
 /* harmony import */ var _Header__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./Header */ "./components/Header.js");
+/* harmony import */ var _Icons__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./Icons */ "./components/Icons.js");
 
 
 
@@ -5866,6 +5866,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement;
 
 
 
+
 var NavLogo = styled_components__WEBPACK_IMPORTED_MODULE_9__["default"].img.attrs(function (props) {
   return {
     src: "/images/logo.png",
@@ -5874,7 +5875,7 @@ var NavLogo = styled_components__WEBPACK_IMPORTED_MODULE_9__["default"].img.attr
 }).withConfig({
   displayName: "Nav__NavLogo",
   componentId: "r7d7s0-0"
-})(["max-width:40rem;cursor:pointer;"]);
+})(["max-width:40rem;@media only screen  and (max-device-width:1500px)  and (-webkit-min-device-pixel-ratio:2){max-width:20rem;}cursor:pointer;"]);
 
 var Nav =
 /*#__PURE__*/
@@ -5908,69 +5909,69 @@ function (_Component) {
       return __jsx(_styles_NavStyles__WEBPACK_IMPORTED_MODULE_11__["NavStyles"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 35
+          lineNumber: 42
         },
         __self: this
       }, __jsx(_styles_NavStyles__WEBPACK_IMPORTED_MODULE_11__["HiddenNavBG"], {
         isOpen: this.state.isOpen,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 36
+          lineNumber: 43
         },
         __self: this
       }), __jsx(_styles_NavStyles__WEBPACK_IMPORTED_MODULE_11__["HiddenContainer"], {
         isOpen: this.state.isOpen,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 37
+          lineNumber: 44
         },
         __self: this
       }, __jsx("div", {
         className: "nav_box-1",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 38
+          lineNumber: 45
         },
         __self: this
       }, __jsx("div", {
         className: "",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 39
+          lineNumber: 46
         },
         __self: this
       }, __jsx(NavLogo, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 40
+          lineNumber: 47
         },
         __self: this
       })), __jsx("div", {
         className: "nav-inner",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 42
+          lineNumber: 49
         },
         __self: this
       }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_10__["Typography"], {
         className: "nav-inner-title",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 43
+          lineNumber: 50
         },
         __self: this
       }, "Europe's braking technology conference & exhibition"), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_10__["Typography"], {
         className: "nav-inner-text",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 44
+          lineNumber: 51
         },
         __self: this
       }, "2-4 June 2020, CCIB, Barcelona, Spain"))), __jsx("div", {
         className: "nav_container-1",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 47
+          lineNumber: 54
         },
         __self: this
       }, __jsx("div", {
@@ -5978,200 +5979,85 @@ function (_Component) {
         style: {},
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 48
+          lineNumber: 55
         },
         __self: this
       }, __jsx(_Dates__WEBPACK_IMPORTED_MODULE_13__["Box"], {
         MW: "35rem",
+        handleClick: this.handleClick,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 49
+          lineNumber: 56
         },
         __self: this
       })), __jsx("div", {
         className: "nav_box-middle",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 51
+          lineNumber: 58
         },
         __self: this
       }, __jsx("div", {
         className: "nav_box-middle-1",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 52
+          lineNumber: 59
+        },
+        __self: this
+      }, __jsx("div", {
+        className: "nav-title-box",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 60
         },
         __self: this
       }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_10__["Typography"], {
         className: "nav-title",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 53
+          lineNumber: 61
         },
         __self: this
-      }, "For Delegates     ", __jsx("span", {
+      }, "For Delegates"), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_10__["Typography"], {
+        className: "nav-links",
         style: {
           color: '#F9B721'
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 53
-        },
-        __self: this
-      }, " & Visitors")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_8___default.a, {
-        href: "/",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 54
-        },
-        __self: this
-      }, __jsx("a", {
-        onClick: this.handleClick,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 54
-        },
-        __self: this
-      }, "Home")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_8___default.a, {
-        href: "/about",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 55
-        },
-        __self: this
-      }, __jsx("a", {
-        onClick: this.handleClick,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 55
-        },
-        __self: this
-      }, "About")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_8___default.a, {
-        href: "/exhibitorsRegistration",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 56
-        },
-        __self: this
-      }, __jsx("a", {
-        onClick: this.handleClick,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 56
-        },
-        __self: this
-      }, "Registration")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_8___default.a, {
-        href: "/technicalProgram",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 57
-        },
-        __self: this
-      }, __jsx("a", {
-        onClick: this.handleClick,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 57
-        },
-        __self: this
-      }, "Technical Program")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_8___default.a, {
-        href: "/technicalProgram",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 58
-        },
-        __self: this
-      }, __jsx("a", {
-        onClick: this.handleClick,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 58
-        },
-        __self: this
-      }, "Technical Program")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_8___default.a, {
-        href: "/welcome",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 59
-        },
-        __self: this
-      }, __jsx("a", {
-        onClick: this.handleClick,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 59
-        },
-        __self: this
-      }, "Welcome to Barcelona")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_8___default.a, {
-        href: "/f/[id]/[formType]",
-        as: "/f/FISITA/contact",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 60
-        },
-        __self: this
-      }, __jsx("a", {
-        onClick: this.handleClick,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 60
-        },
-        __self: this
-      }, "Contact Us")), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_10__["Typography"], {
-        className: "nav-title",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 61
-        },
-        __self: this
-      }, "For Students       ", __jsx("span", {
-        style: {
-          color: '#F9B721'
-        },
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 61
-        },
-        __self: this
-      }, " & Educators")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_8___default.a, {
-        href: "/esop",
-        __source: {
-          fileName: _jsxFileName,
           lineNumber: 62
         },
         __self: this
-      }, __jsx("a", {
-        onClick: this.handleClick,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 62
-        },
-        __self: this
-      }, "ESOP - Student Opportunities Programme"))), __jsx("div", {
-        className: "nav_box-middle-2",
+      }, "& Visitors")), __jsx("div", {
+        className: "nav-links-box",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 65
         },
         __self: this
+      }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_8___default.a, {
+        href: "/",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 66
+        },
+        __self: this
+      }, __jsx("a", {
+        onClick: this.handleClick,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 66
+        },
+        __self: this
       }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_10__["Typography"], {
-        className: "nav-title",
+        className: "nav-links",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 66
         },
         __self: this
-      }, "For Exhibitors     ", __jsx("span", {
-        style: {
-          color: '#F9B721'
-        },
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 66
-        },
-        __self: this
-      }, " & Sponsors")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_8___default.a, {
-        href: "/exhibitAndSponsor",
+      }, "Home"))), __jsx(next_link__WEBPACK_IMPORTED_MODULE_8___default.a, {
+        href: "/about",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 67
@@ -6184,8 +6070,15 @@ function (_Component) {
           lineNumber: 67
         },
         __self: this
-      }, "Exhibit And Sponsor")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_8___default.a, {
-        href: "/exhibitors",
+      }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_10__["Typography"], {
+        className: "nav-links",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 67
+        },
+        __self: this
+      }, "About"))), __jsx(next_link__WEBPACK_IMPORTED_MODULE_8___default.a, {
+        href: "/exhibitorsRegistration",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 68
@@ -6198,56 +6091,310 @@ function (_Component) {
           lineNumber: 68
         },
         __self: this
-      }, "Exhibitor Directory"))), __jsx("div", {
-        className: "nav_box-middle-3",
+      }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_10__["Typography"], {
+        className: "nav-links",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 68
+        },
+        __self: this
+      }, "Registration"))), __jsx(next_link__WEBPACK_IMPORTED_MODULE_8___default.a, {
+        href: "/technicalProgram",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 69
+        },
+        __self: this
+      }, __jsx("a", {
+        onClick: this.handleClick,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 69
+        },
+        __self: this
+      }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_10__["Typography"], {
+        className: "nav-links",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 69
+        },
+        __self: this
+      }, "Technical Program"))), __jsx(next_link__WEBPACK_IMPORTED_MODULE_8___default.a, {
+        href: "/welcome",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 70
+        },
+        __self: this
+      }, __jsx("a", {
+        onClick: this.handleClick,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 70
+        },
+        __self: this
+      }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_10__["Typography"], {
+        className: "nav-links",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 70
+        },
+        __self: this
+      }, "Welcome to Barcelona"))), __jsx(next_link__WEBPACK_IMPORTED_MODULE_8___default.a, {
+        href: "/f/[id]/[formType]",
+        as: "/f/FISITA/contact",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 71
+        },
+        __self: this
+      }, __jsx("a", {
+        onClick: this.handleClick,
         __source: {
           fileName: _jsxFileName,
           lineNumber: 71
         },
         __self: this
       }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_10__["Typography"], {
+        className: "nav-links",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 71
+        },
+        __self: this
+      }, "Contact Us")))), __jsx("div", {
+        className: "nav-title-box",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 74
+        },
+        __self: this
+      }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_10__["Typography"], {
         className: "nav-title",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 72
+          lineNumber: 75
         },
         __self: this
-      }, "For Authors         ", __jsx("span", {
+      }, "For Students"), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_10__["Typography"], {
+        className: "nav-links",
         style: {
           color: '#F9B721'
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 72
+          lineNumber: 76
         },
         __self: this
-      }, " & Speakers")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_8___default.a, {
-        href: "/authorsArea",
+      }, "& Educators")), __jsx("div", {
+        className: "nav-links-box",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 73
+          lineNumber: 79
+        },
+        __self: this
+      }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_8___default.a, {
+        href: "/esop",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 80
         },
         __self: this
       }, __jsx("a", {
         onClick: this.handleClick,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 73
+          lineNumber: 80
         },
         __self: this
-      }, "Authors Area")))), __jsx("div", {
+      }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_10__["Typography"], {
+        className: "nav-links",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 80
+        },
+        __self: this
+      }, "ESOP - Student Opportunities Programme"))))), __jsx("div", {
+        className: "nav_box-middle-2",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 84
+        },
+        __self: this
+      }, __jsx("div", {
+        className: "nav-title-box",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 86
+        },
+        __self: this
+      }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_10__["Typography"], {
+        className: "nav-title",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 87
+        },
+        __self: this
+      }, "For Exhibitors"), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_10__["Typography"], {
+        className: "nav-links",
+        style: {
+          color: '#F9B721'
+        },
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 88
+        },
+        __self: this
+      }, "& Sponsors")), __jsx("div", {
+        className: "nav-links-box",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 91
+        },
+        __self: this
+      }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_8___default.a, {
+        href: "/exhibitAndSponsor",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 92
+        },
+        __self: this
+      }, __jsx("a", {
+        onClick: this.handleClick,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 92
+        },
+        __self: this
+      }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_10__["Typography"], {
+        className: "nav-links",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 92
+        },
+        __self: this
+      }, "Exhibit And Sponsor"))), __jsx(next_link__WEBPACK_IMPORTED_MODULE_8___default.a, {
+        href: "/exhibitors",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 93
+        },
+        __self: this
+      }, __jsx("a", {
+        onClick: this.handleClick,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 93
+        },
+        __self: this
+      }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_10__["Typography"], {
+        className: "nav-links",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 93
+        },
+        __self: this
+      }, "Exhibitor Directory"))))), __jsx("div", {
+        className: "nav_box-middle-3",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 97
+        },
+        __self: this
+      }, __jsx("div", {
+        className: "nav-title-box",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 98
+        },
+        __self: this
+      }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_10__["Typography"], {
+        className: "nav-title",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 99
+        },
+        __self: this
+      }, "For Authors"), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_10__["Typography"], {
+        className: "nav-links",
+        style: {
+          color: '#F9B721'
+        },
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 100
+        },
+        __self: this
+      }, "& Speakers")), __jsx("div", {
+        className: "nav-links-box",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 103
+        },
+        __self: this
+      }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_8___default.a, {
+        href: "/authorsArea",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 104
+        },
+        __self: this
+      }, __jsx("a", {
+        onClick: this.handleClick,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 104
+        },
+        __self: this
+      }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_10__["Typography"], {
+        className: "nav-links",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 104
+        },
+        __self: this
+      }, "Authors Area")))))), __jsx("div", {
         className: "nav_box-left",
         style: {},
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 79
+          lineNumber: 110
         },
         __self: this
       }, __jsx(_Dates__WEBPACK_IMPORTED_MODULE_13__["Dates"], {
         MW: "35rem",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 80
+          lineNumber: 111
+        },
+        __self: this
+      }))), __jsx("div", {
+        className: "nav_box-bottom",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 114
+        },
+        __self: this
+      }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_10__["Typography"], {
+        className: "nav_box-bottom-text",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 115
+        },
+        __self: this
+      }, "Organised by"), __jsx("a", {
+        href: "https://www.fisita.com/",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 116
+        },
+        __self: this
+      }, __jsx(_Icons__WEBPACK_IMPORTED_MODULE_15__["FLogoWhite"], {
+        width: "16rem",
+        height: "5rem",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 116
         },
         __self: this
       })))), __jsx(_styles_NavStyles__WEBPACK_IMPORTED_MODULE_11__["Burger"], {
@@ -6255,7 +6402,7 @@ function (_Component) {
         onClick: this.handleClick,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 84
+          lineNumber: 120
         },
         __self: this
       }, __jsx(_styles_NavStyles__WEBPACK_IMPORTED_MODULE_11__["TopBun"], {
@@ -6263,7 +6410,7 @@ function (_Component) {
         sticky: this.props.sticky,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 85
+          lineNumber: 121
         },
         __self: this
       })));
@@ -6326,7 +6473,7 @@ var _theme,
 var __jsx = react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement;
 
 function _templateObject() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_5__["default"])(["\n    @font-face {\n    font-family: 'MyriadPro-Regular';\n    src: url('/fonts/MyriadPro-Regular.otf');\n    font-weight: normal;\n    font-display: auto;\n    font-style: normal;\n    };\n    @font-face {\n    font-family: 'MyriadPro-Bold';\n    src: url('/fonts/MyriadPro-Bold.otf');\n    font-weight: bold;\n    font-display: auto;\n    font-style: normal;\n    };\n    @font-face {\n    font-family: 'MyriadPro-BoldIt';\n    src: url('/fonts/MyriadPro-BoldIt.otf');\n    font-weight: bold;\n    font-display: auto;\n    font-style: normal;\n    };\n    @font-face {\n    font-family: 'MyriadPro-Semibold';\n    src: url('/fonts/MyriadPro-Semibold.otf');\n    font-weight: 600;\n    font-display: auto;\n    font-style: normal;\n    };\n    @font-face {\n    font-family: 'MyriadPro-Light';\n    src: url('/fonts/MyriadPro-Light.otf');\n    font-weight: 300;\n    font-display: auto;\n    font-style: normal;\n    };\n    @font-face {\n    font-family: 'MyriadPro-LightIt';\n    src: url('/fonts/MyriadPro-LightIt.otf');\n    font-weight: lighter;\n    font-display: auto;\n    font-style: normal;\n    };\n    @font-face {\n    font-family: 'MyriadPro-It';\n    src: url('/fonts/MyriadPro-It.otf');\n    font-display: auto;\n    font-style: normal;\n    };\n    @font-face {\n    font-family: 'MyriadPro-Black';\n    src: url('/fonts/MyriadPro-Black.otf');\n    font-weight: 300;\n    font-display: auto;\n    font-style: normal;\n    };\n    *,\n    *::before,\n    *::after{\n        margin: 0;\n        padding: 0;\n        box-sizing: inherit;\n    };\n    html{\n        height: 100%;\n        box-sizing:  border-box;\n        font-size: 62.5%; \n        \n    };\n    body{\n        /* To set the footer at the bottom we have to leave space for it in the parent container */\n        position: relative;\n        min-height: 100%;\n        padding-bottom: 40rem;\n         /* ! FOOTER PADDING , HAS BEEN KNOW TO PUSH PAGE UP\n        font-family: ", ";\n        color: black;\n        line-height: 1.6;\n        /* 1.2 */\n    }\n    \n    a{\n        text-decoration: none;\n        color: black;\n    }\n    ;\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_5__["default"])(["\n    @font-face {\n    font-family: 'MyriadPro-Regular';\n    src: url('/fonts/MyriadPro-Regular.otf');\n    font-weight: normal;\n    font-display: auto;\n    font-style: normal;\n    };\n    @font-face {\n    font-family: 'MyriadPro-Bold';\n    src: url('/fonts/MyriadPro-Bold.otf');\n    font-weight: bold;\n    font-display: auto;\n    font-style: normal;\n    };\n    @font-face {\n    font-family: 'MyriadPro-BoldIt';\n    src: url('/fonts/MyriadPro-BoldIt.otf');\n    font-weight: bold;\n    font-display: auto;\n    font-style: normal;\n    };\n    @font-face {\n    font-family: 'MyriadPro-Semibold';\n    src: url('/fonts/MyriadPro-Semibold.otf');\n    font-weight: 600;\n    font-display: auto;\n    font-style: normal;\n    };\n    @font-face {\n    font-family: 'MyriadPro-Light';\n    src: url('/fonts/MyriadPro-Light.otf');\n    font-weight: 300;\n    font-display: auto;\n    font-style: normal;\n    };\n    @font-face {\n    font-family: 'MyriadPro-LightIt';\n    src: url('/fonts/MyriadPro-LightIt.otf');\n    font-weight: lighter;\n    font-display: auto;\n    font-style: normal;\n    };\n    @font-face {\n    font-family: 'MyriadPro-It';\n    src: url('/fonts/MyriadPro-It.otf');\n    font-display: auto;\n    font-style: normal;\n    };\n    @font-face {\n    font-family: 'MyriadPro-Black';\n    src: url('/fonts/MyriadPro-Black.otf');\n    font-weight: 300;\n    font-display: auto;\n    font-style: normal;\n    };\n    @font-face {\n    font-family: 'MyriadPro-BlackIt';\n    src: url('/fonts/MyriadPro-BlackIt.otf');\n    font-weight: 300;\n    font-display: auto;\n    font-style: normal;\n    };\n    *,\n    *::before,\n    *::after{\n        margin: 0;\n        padding: 0;\n        box-sizing: inherit;\n    };\n    html{\n        height: 100%;\n        box-sizing:  border-box;\n        font-size: 62.5%; \n        \n    };\n    body{\n        /* To set the footer at the bottom we have to leave space for it in the parent container */\n        position: relative;\n        min-height: 100%;\n        padding-bottom: 40rem;\n         /* ! FOOTER PADDING , HAS BEEN KNOW TO PUSH PAGE UP\n        font-family: ", ";\n        color: black;\n        line-height: 1.6;\n        /* 1.2 */\n    }\n    \n    a{\n        text-decoration: none;\n        color: black;\n    }\n    ;\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -6354,6 +6501,7 @@ var theme = (_theme = {
   MPLightIt: 'MyriadPro-LightIt',
   MPIt: 'MyriadPro-It',
   MPBlack: 'MyriadPro-Black',
+  MPBlackIt: 'MyriadPro-BlackIt',
   heroHeightSml: '30vh'
 }, Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_6__["default"])(_theme, "heroHeightSml", '60vh'), Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_6__["default"])(_theme, "heroHeightBig", '100vh'), Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_6__["default"])(_theme, "laptopWidth", '65%'), Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_6__["default"])(_theme, "mobileWidth", '80%'), Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_6__["default"])(_theme, "tabletWidth", '90%'), Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_6__["default"])(_theme, "minWidth", '50%'), Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_6__["default"])(_theme, "bs", '0 1.2rem 2.4rem rgba(0, 0, 0, .09)'), _theme);
 var StyledPage = styled_components__WEBPACK_IMPORTED_MODULE_11__["default"].div.withConfig({
@@ -6382,37 +6530,37 @@ function (_Component) {
         theme: theme,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 135
+          lineNumber: 143
         },
         __self: this
       }, __jsx(GlobalStyle, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 136
+          lineNumber: 144
         },
         __self: this
       }), __jsx(StyledPage, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 137
+          lineNumber: 145
         },
         __self: this
       }, __jsx(_Meta__WEBPACK_IMPORTED_MODULE_10__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 138
+          lineNumber: 146
         },
         __self: this
       }), __jsx(_Header__WEBPACK_IMPORTED_MODULE_8__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 139
+          lineNumber: 147
         },
         __self: this
       }), this.props.children, __jsx(_Footer__WEBPACK_IMPORTED_MODULE_9__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 141
+          lineNumber: 149
         },
         __self: this
       })));
@@ -7974,7 +8122,7 @@ var HiddenNavBG = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.
 var HiddenContainer = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
   displayName: "NavStyles__HiddenContainer",
   componentId: "sc-1ltvdnj-5"
-})(["border:10px solid white;position:absolute;right:-20rem;top:-5rem;display:flex;align-items:flex-start;justify-content:flex-start;flex-flow:column;padding:2rem;transition:all .8s ease-in-out;opacity:", ";transform:", ";min-width:99vw;min-height:99vh;@media only screen  and (max-device-width:768px)  and (-webkit-min-device-pixel-ratio:2){min-height:27vh;}.nav{&-title{width:40%;font-size:2rem;font-family:", ";color:", ";}&-links{font-size:2rem;font-family:", ";color:", ";}&_container-1{width:100%;border:10px solid white;height:100%;display:flex;flex-flow:row;flex:1 1 auto;align-items:flex-start;@media only screen  and (max-device-width:768px)  and (-webkit-min-device-pixel-ratio:2){margin-top:0;}}&-inner{display:flex;flex-flow:column;&-title{font-size:3rem;font-family:", ";color:", ";}&-text{font-size:3rem;font-family:", ";color:", ";}}&_box-1{margin-left:5rem;padding:2rem;width:70%;max-height:20rem;flex:1 1 auto;border:10px solid white;display:flex;justify-content:space-between;align-items:flex-end;@media only screen  and (max-device-width:768px)  and (-webkit-min-device-pixel-ratio:2){padding:0;margin:0;}}&_box-middle{height:50rem;flex:1 1 auto;border:10px solid white;margin:2rem;display:flex;flex-flow:row;justify-content:space-between;&-1{display:flex;flex-flow:column;justify-content:space-between;width:30rem;height:50rem;background-color:goldenrod;}&-2{width:30rem;height:50rem;background-color:goldenrod;}&-3{width:30rem;height:50rem;background-color:goldenrod;}}&_box-right{border:10px solid white;height:50rem;max-width:30rem;flex:1 1 auto;margin:2rem;display:flex;flex-flow:column;align-items:center;justify-content:space-between;}&_box-left{border:10px solid white;height:50rem;max-width:30rem;flex:1 1 auto;margin:2rem;display:flex;flex-flow:column;align-items:center;justify-content:space-between;}}"], function (props) {
+})(["position:absolute;right:-20rem;top:-5rem;display:flex;align-items:flex-start;justify-content:flex-start;flex-flow:column;padding:2rem;transition:all .8s ease-in-out;opacity:", ";transform:", ";min-width:99vw;min-height:99vh;@media only screen  and (max-device-width:768px)  and (-webkit-min-device-pixel-ratio:2){min-height:27vh;}.nav{&-title{font-size:2rem;font-family:", ";color:", ";&-box{display:flex;flex-flow:column;align-items:flex-start;margin-bottom:3rem;}}&-links{font-size:2rem;font-family:", ";color:", ";&-box{display:flex;flex-flow:column;align-items:flex-start;margin-bottom:3rem;}}&_container-1{width:100%;height:100%;display:flex;flex-flow:row;flex:1 1 auto;justify-content:space-between;@media only screen  and (max-device-width:768px)  and (-webkit-min-device-pixel-ratio:2){margin-top:0;}}&-inner{display:flex;flex-flow:column;&-title{font-size:3rem;font-family:", ";color:", ";@media only screen  and (max-device-width:1500px)  and (-webkit-min-device-pixel-ratio:2){font-size:2rem;}}&-text{font-size:3rem;font-family:", ";color:", ";@media only screen  and (max-device-width:1500px)  and (-webkit-min-device-pixel-ratio:2){font-size:2rem;}}}&_box-1{margin-left:5rem;padding:2rem;width:70%;@media only screen  and (max-device-width:1700px)  and (-webkit-min-device-pixel-ratio:2){width:80%;}max-height:20rem;flex:1 1 auto;padding-bottom:4rem;display:flex;justify-content:space-between;align-items:flex-end;}&_box-middle{height:50rem;max-width:95rem;flex:1 1 auto;margin:2rem;padding:2rem;display:flex;flex-flow:row;justify-content:space-between;&-1{display:flex;flex-flow:column;width:26rem;height:50rem;}&-2{width:26rem;height:50rem;}&-3{width:15rem;height:50rem;}}&_box-right{height:50rem;max-width:26rem;flex:1 1 auto;margin:2rem;display:flex;flex-flow:column;align-items:center;justify-content:space-between;}&_box-left{height:50rem;max-width:26rem;flex:1 1 auto;margin:2rem;display:flex;flex-flow:column;align-items:center;justify-content:space-between;}&_box-bottom{margin-left:5rem;display:flex;flex-flow:row;align-items:flex-end;&-text{font-size:1.5rem;margin-right:2rem;}}}"], function (props) {
   return props.isOpen ? '1' : '0';
 }, function (props) {
   return props.isOpen ? null : 'translateX(-250rem)';
@@ -7983,7 +8131,7 @@ var HiddenContainer = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].
 }, function (props) {
   return props.theme.white;
 }, function (props) {
-  return props.theme.MPBlack;
+  return props.theme.MPBlackIt;
 }, function (props) {
   return props.theme.white;
 }, function (props) {
