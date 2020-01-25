@@ -75,11 +75,8 @@ export const AbstractSchema = yup.object().shape({
     author_country: yup.string().required('Required'),
     author_phone: yup.string().required('Required'),
     is_presenting_author: yup.string().required('Required'),
-    papertitle: yup.string()
-        .required('Required'),   
-    abstract: yup.string()
-    .required('Required')
-      .test(
+    papertitle: yup.string().required('Required'),   
+    abstract: yup.string().required('Required').test(
         'wordCount',
         'Max 750 words',
         value => value && 
@@ -134,7 +131,7 @@ export const AbstractSchema = yup.object().shape({
      'docx', 
      'image/jpeg', 
      "image/png",
-        'application/pdf', 
+    'application/pdf', 
      'application/msword', 
      'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
     ];
@@ -187,7 +184,7 @@ export const EsopSchema = yup.object().shape({
           value.match(/[\w\d\’\'-]+/gi)
           .length >= 150
       ),
-    student_status_filename_uploader: yup.string().required('Required')
+    student_status_filename_uploader: yup.mixed().required('Required')
     .test("fileFormat",
           "Unsupported Format",
           value => value && PROOF_SUPPORTED_FORMATS.includes(value.type))

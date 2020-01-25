@@ -368,7 +368,7 @@ export const AbstractForm = (props) => {
                          </div>
                          <div className="form-field">
                            <label
-                                 htmlFor="label"
+                                 htmlFor="abstract"
                                  className="form-label">
                                  Abstract:
                          </label>
@@ -387,7 +387,7 @@ export const AbstractForm = (props) => {
                          <div className="form-field">
                            <label
                                  htmlFor="keywords"
-                                 className="form-label">
+                                 className="form-label" style={{width: '33.33%'}}>
                                  "Please enter around 5 keywords that describe the main focus of your abstract:"
                          </label>
                              <Field
@@ -399,7 +399,7 @@ export const AbstractForm = (props) => {
                                  component="textarea"
                              />
                         {errors.keywords && <label style={{ position: 'absolute', bottom: '-3rem', right: '0', color: '#ff0000', fontSize: '1.5rem' }}>{errors.keywords}</label>}
-                        {values.keywords && <label style={{position: 'absolute', bottom: '0', right: '12rem', color: '#ff0000', fontSize: '1.5rem'}}>{'Words' + ' ' + values.keywords.match(/[\w\d\’\'-]+/gi).length}</label>}
+                        {errors.abstract && values.keywords && <label style={{position: 'absolute', bottom: '0', right: '12rem', color: '#ff0000', fontSize: '1.5rem'}}>{'Words' + ' ' + values.keywords.match(/[\w\d\’\'-]+/gi).length}</label>}
                          </div>
                          <div className="form-field-radio">
                             <label
