@@ -196,7 +196,7 @@ class AuthorsAreaDash extends Component {
        await  this.setState(loading => ({loading: !loading}));
         const FT = 'withdraw'
         const url = `https://prelude.eurobrake.net/authors/withdraw/${papercode}`;
-        const getCSRF = await GetForm({url})
+        const getCSRF = await GetForm(url)
         const csrf = await getCSRF.__csrf_token
         values.__csrf_token = csrf
         

@@ -22,10 +22,10 @@ export const ResetForm = (props) => {
 
     const url =  `https://prelude.eurobrake.net/authors/reset/${props.paperId}`;
     console.log({url})
-            {/* validationSchema={ResetSchema} */}
     return (
         <Formik
             initialValues={emptyInitial}
+            validationSchema={ResetSchema}
             enableReinitialize
         >
             {({ values, handleChange, validateForm, errors, setFieldTouched, handleSubmit, submitForm }) => {
