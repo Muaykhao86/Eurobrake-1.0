@@ -16,7 +16,6 @@ export const ContactSchema = yup.object().shape({
         value => value && 
           value.match(/[\w\d\’\'-]+/gi)
           .length <= 750
-          // split(' ').length <= 100 
       ),
 })
 
@@ -78,15 +77,16 @@ export const AbstractSchema = yup.object().shape({
     is_presenting_author: yup.string().required('Required'),
     papertitle: yup.string()
         .required('Required'),   
-    abstract: yup.string().required('Required')
+    abstract: yup.string()
+    .required('Required')
       .test(
         'wordCount',
         'Max 750 words',
         value => value && 
           value.match(/[\w\d\’\'-]+/gi)
           .length <= 750
-          // split(' ').length <= 100 
       ),
+    keywords: yup.string().required('Required'),
     consider_for_journal: yup.string().nullable(),
     secondary_authors: yup.array()
         .of(yup.object().shape({
@@ -108,13 +108,26 @@ export const AbstractSchema = yup.object().shape({
 });
 
  const CV_SUPPORTED_FORMATS = [
-     "pdf", "doc", "docx",
-     'application/pdf', 'application/msword', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'
+     'pdf', 
+     'doc', 
+     'docx',
+     'application/pdf', 
+     'application/msword', 
+     'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
     ];
 
  const PROOF_SUPPORTED_FORMATS = [
-     "jpg", "jpeg", "png", "pdf", "doc", "docx",
-     'application/pdf', 'application/msword', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'
+     'jpg', 
+     'jpeg', 
+     'png', 
+     'pdf', 
+     'doc', 
+     'docx', 
+     'image/jpeg', 
+     "image/png",
+     'application/pdf', 
+     'application/msword', 
+     'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
     ];
 
   const FILE_SIZE = 5033164800 ;
@@ -157,7 +170,6 @@ export const EsopSchema = yup.object().shape({
         value => value && 
           value.match(/[\w\d\’\'-]+/gi)
           .length <= 250
-          // split(' ').length <= 100 
       )
       .test(
         'wordCount',
@@ -165,7 +177,6 @@ export const EsopSchema = yup.object().shape({
         value => value && 
           value.match(/[\w\d\’\'-]+/gi)
           .length >= 150
-          // split(' ').length <= 100 
       ),
     student_status_filename_uploader: yup.string().required('Required')
     .test("fileFormat",

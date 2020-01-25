@@ -11,7 +11,8 @@ import * as yup from 'yup';
   const FILE_SIZE = 5033164800 ;
 
   const PDF_SUPPORTED_FORMATS = [
-    'pdf', 'application/pdf'
+    'pdf', 
+    'application/pdf',
     ];
 
 export const PaperSchema = yup.object().shape({

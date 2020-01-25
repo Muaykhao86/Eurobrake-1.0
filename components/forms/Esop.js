@@ -582,7 +582,7 @@ export const Esop = (props) => {
                             <div className="form-field_file-box">
 
                             <label
-                                htmlFor="label"
+                                htmlFor="student_status_filename_uploader"
                                 className="form-label">
                                 Upload proof of your status as student:
                         </label>

@@ -380,12 +380,27 @@ export const AbstractForm = (props) => {
                                  name="abstract"
                                  component="textarea"
                              />
-                        {errors.abstract && <label style={{ position: 'absolute', bottom: '-3rem', right: '0', color: '#ff0000', fontSize: '1.5rem' }}>{errors.abstract}</label>}
-                        {values.abstract && <label style={{position: 'absolute', bottom: '0', right: '12rem', color: '#ff0000', fontSize: '1.5rem'}}>{'Words' + ' ' + values.abstract.match(/[\w\d\’\'-]+/gi).length}</label>}
+                           {errors.abstract && <label style={{position: 'absolute', bottom: '-1rem', right: '1rem', color: '#ff0000', fontSize: '1.5rem'}}>{errors.abstract}</label>}
+                            {errors.abstract && values.abstract && <label style={{position: 'absolute', bottom: '-3rem', right: '1rem', color: '#ff0000', fontSize: '1.5rem'}}>{'Words' + ' ' + values.abstract.match(/[\w\d\’\'-]+/gi).length}</label>}
+                            
+                        </div>
+                         <div className="form-field">
+                           <label
+                                 htmlFor="keywords"
+                                 className="form-label">
+                                 "Please enter around 5 keywords that describe the main focus of your abstract:"
+                         </label>
+                             <Field
+                                 className="form-input"
+                                 onClick={handleChange}
+                                 value={values.keywords}
+                                 style={{ color: '#134381' , minHeight: '15rem'}}
+                                 name="keywords"
+                                 component="textarea"
+                             />
+                        {errors.keywords && <label style={{ position: 'absolute', bottom: '-3rem', right: '0', color: '#ff0000', fontSize: '1.5rem' }}>{errors.keywords}</label>}
+                        {values.keywords && <label style={{position: 'absolute', bottom: '0', right: '12rem', color: '#ff0000', fontSize: '1.5rem'}}>{'Words' + ' ' + values.keywords.match(/[\w\d\’\'-]+/gi).length}</label>}
                          </div>
-                        
-                        {console.log({values})}
-                        {console.log({errors})}
                          <div className="form-field-radio">
                             <label
                                 htmlFor="label"
@@ -725,8 +740,8 @@ const emptyInitial = {
     // theme: '',
     // subtheme: [],
     abstract: '',
-    // keywords: '',
-    previouspapers: '',
+    keywords: '',
+    // previouspapers: '',
     consider_for_journal: '',
     secondary_authors: [{
         title: '',
