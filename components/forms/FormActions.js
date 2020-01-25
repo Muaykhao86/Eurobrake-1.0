@@ -132,20 +132,18 @@ export async function SendForm({ csrf, values, url, FT }) {
                 }
             });
             const data = await response.json();
-
             if (data.status === 'success') {
                 console.log('getForm', data);
                 return data
             } else {
                 let error = new Error(data.error)
-                error.response = response
-                throw error
+                error.response = response   
             }
         } catch (error) {
             console.error(
                 'Failed to send form, please try again', error
             )
-                return data
+            return error
         }
     }
     if(url === 'https://prelude.eurobrake.net/authors/login' ){
@@ -246,6 +244,7 @@ export async function SendForm({ csrf, values, url, FT }) {
                 method: 'POST', 
                 credentials: 'include',
                 headers: {
+                    Authorization: 'Bearer ' + logintoken,
                     'Content-Type': 'application/json'
                 },
             });

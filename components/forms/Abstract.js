@@ -77,9 +77,7 @@ export const AbstractForm = (props) => {
               }
 
 
-                // ? NEED TO REDIRECT AFTER FORM SUBMISSION
-                // ? NEED TO DO VALIDATION
-                // ? sECONDARY AUTHORS => IF THERE ARE NONE WE NEED THE OPTION TO ADD IN A NEW ONE
+                
                 return (
                     <StyledForm>
                         <Typography className="form-title">Primary Author</Typography>
@@ -382,8 +380,8 @@ export const AbstractForm = (props) => {
                                  name="abstract"
                                  component="textarea"
                              />
-                        {errors.abstract && <label style={{ position: 'absolute', bottom: '2rem', right: '1rem', color: '#ff0000', fontSize: '1.5rem' }}>{errors.abstract}</label>}
-                        {errors.abstract && values.abstract && <label style={{position: 'absolute', bottom: '0', right: '1rem', color: '#ff0000', fontSize: '1.5rem'}}>{'Words' + ' ' + values.abstract.match(/[\w\d\’\'-]+/gi).length}</label>}
+                        {errors.abstract && <label style={{ position: 'absolute', bottom: '-3rem', right: '0', color: '#ff0000', fontSize: '1.5rem' }}>{errors.abstract}</label>}
+                        {values.abstract && <label style={{position: 'absolute', bottom: '0', right: '12rem', color: '#ff0000', fontSize: '1.5rem'}}>{'Words' + ' ' + values.abstract.match(/[\w\d\’\'-]+/gi).length}</label>}
                          </div>
                         
                         {console.log({values})}
