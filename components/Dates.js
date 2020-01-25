@@ -227,7 +227,7 @@ export function FixedBox() {
             <Typography gutterBottom as="p" className="Box-text" >2-4 June 2020,</Typography>
             <Typography gutterBottom as="p" className="Box-text" >CCIB, Barcelona, Spain</Typography>
             <Link href="/ticketPortal">
-                <Button br="500rem" padding="1rem" fontSize="1.5rem" style={{marginTop: '1rem'}}>Book Now</Button>
+                <Button br="500rem" padding="1rem" fontSize="1.5rem" style={{marginTop: '1rem', color: '#FFF'}}>Book Now</Button>
             </Link>           
             <div className="logo_box">
                 <SmlLogo width="10rem" height="10rem"/>
