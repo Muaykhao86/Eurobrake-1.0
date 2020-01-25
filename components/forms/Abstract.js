@@ -21,7 +21,7 @@ export const AbstractForm = (props) => {
     // if edit = true send back a preset form if not send a blank
     // * above- dont think i need this now, can just check if there aere presets and if not just use epty schema
     const { presets, csrf, apiUrl, paperId} = props;
-    const url = `https://prelude.eurobrake.net/authors/submit/${paperId}`;
+    const url = `https://prelude.eurobrake.net/authors/edit/${paperId}`;
     console.log({ presets, apiUrl})
     // ? If they choose to edit a abstarct paper we pass the paper code and il get its presets to fill in
     return (

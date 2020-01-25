@@ -588,7 +588,7 @@ export const Esop = (props) => {
                         </label>
                             <Field
                                 className="form-input_file"
-                                value={values.cv_filename_uploader}
+                                value={values.student_status_filename_uploader}
                                 style={{ color: '#134381' }}
                                 name="student_status_filename_uploader"
                                 component={SimpleFileUpload}
