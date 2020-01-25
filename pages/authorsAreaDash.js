@@ -289,6 +289,10 @@ class AuthorsAreaDash extends Component {
                                         <StyledActionArea>
                                             <Typography gutterBottom className="action-paper">{papercode}</Typography>
                                             <div className="">
+                                            {paper.withdrawn ? 
+                                            <Typography className="action-paper" style={{color: "#ff0000" }}>WITHDRAWN</Typography>            
+                                            :
+                                            <>
                                             <Link
                                                 href="/f/[id]/[formType]"
                                                 as={`/f/${papercode}/abstract`} >
@@ -307,15 +311,16 @@ class AuthorsAreaDash extends Component {
                                             <Button
                                                 onClick={() => this.handleWithdrawn({papercode})}
                                                 bcolor="#134381"
-                                                background={paper.withdrawn ? "#ff0000" : "#134381"}
+                                                background="#134381"
                                                 br="100rem"
                                                 padding="0.5rem 2rem"
                                                 style={{ margin: ".5rem 0" }}
                                                 fontSize="1.7rem"
                                             >
-                                                {paper.withdrawn ? null : <CancelIcon style={{ fontSize: '3rem', marginRight: '1rem' }} />}
-                                                {paper.withdrawn ? 'WITHDRAWN' :'WITHDRAW'}
+                                               withdraw
                                                 </Button>
+                                            </>
+                                            }
                                             </div>
                                         </StyledActionArea>
                                         <StyledInfoArea>
