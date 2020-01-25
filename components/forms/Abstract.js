@@ -281,7 +281,7 @@ export const AbstractForm = (props) => {
                                 component={Select}
                             >
                                 {countries.map((option, i) =>
-                                    <option key={i} style={{ fontSize: '1.5rem', cursor: 'pointer' }} value={option.value}>{option.label}</option>)}
+                                    <MenuItem key={i} style={{ fontSize: '1.5rem', cursor: 'pointer' }} value={option.value}>{option.label}</MenuItem>)}
                             </Field>
                         </div>
                         <div className="form-field">
@@ -467,7 +467,7 @@ export const AbstractForm = (props) => {
                                                         component={Select}
                                                         >
                                 {titles.map((option, i) =>
-                                    <option key={i} style={{ fontSize: '1.5rem', cursor: 'pointer' }} value={option.value}>{option.label}</option>)}
+                                    <MenuItem key={i} style={{ fontSize: '1.5rem', cursor: 'pointer' }} value={option.value}>{option.label}</MenuItem>)}
                             </Field>
                                                 </div>
                                                 <div className="form-field">
@@ -545,7 +545,7 @@ export const AbstractForm = (props) => {
                                                         component={Select}
                                                     >
                                 {countries.map((option, i) =>
-                                    <option key={i} style={{ fontSize: '1.5rem', cursor: 'pointer' }} value={option.value}>{option.label}</option>)}
+                                    <MenuItem key={i} style={{ fontSize: '1.5rem', cursor: 'pointer' }} value={option.value}>{option.label}</MenuItem>)}
                                                     </Field>
                                                 </div>
                                                 <div className="form-field-radio">

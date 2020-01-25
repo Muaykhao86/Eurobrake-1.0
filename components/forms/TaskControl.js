@@ -1,4 +1,18 @@
 import * as yup from 'yup';
+  
+  const PPT_SUPPORTED_FORMATS = [
+          '.ppt', 
+          '.pptx',
+          'application/vnd.ms-powerpoint', 
+          'application/vnd.openxmlformats-officedocument.presentationml.presentation',
+
+    ];
+
+  const FILE_SIZE = 5033164800 ;
+
+  const PDF_SUPPORTED_FORMATS = [
+     'application/pdf'
+    ];
 
 export const PaperSchema = yup.object().shape({
     accept: 
@@ -23,10 +37,6 @@ export const PaperSchema = yup.object().shape({
 })
  
 
-  const PDF_SUPPORTED_FORMATS = [
-     'application/pdf'
-    ];
-
 export const PPTSchema = yup.object().shape({
     accept: 
      yup.bool()
@@ -47,13 +57,6 @@ export const PPTSchema = yup.object().shape({
           value => value && PPT_SUPPORTED_FORMATS.includes(value.type)),
     author_notes: yup.string()
 })
-  
-  const PPT_SUPPORTED_FORMATS = [
-            '	application/vnd.ms-powerpoint', 'application/vnd.openxmlformats-officedocument.presentationml.presentation'
-
-    ];
-
-  const FILE_SIZE = 5033164800 ;
 
 
 export const PermissionSchema = yup.object().shape({

@@ -1,6 +1,7 @@
 import React, { Component, useState, useEffect } from 'react'
 import { Formik, Form, Field, FieldArray } from 'formik';
 import Link from 'next/link';
+import MenuItem from '@material-ui/core/MenuItem';
 import Typography from '@material-ui/core/Typography';
 import { TextField, Select, RadioGroup, CheckboxWithLabel, Checkbox, SimpleFileUpload } from 'formik-material-ui';
 import { Button } from '../Button';
@@ -69,7 +70,7 @@ export const Esop = (props) => {
                                 component={Select}
                             >
                                 {titles.map((option, i) =>
-                                    <option key={i} style={{ fontSize: '1.5rem', cursor: 'pointer' }} value={option.value}>{option.label}</option>)}
+                                    <MenuItem key={i} style={{ fontSize: '1.5rem', cursor: 'pointer' }} value={option.value}>{option.label}</MenuItem>)}
                             </Field>
                         </div>
                         <div className="form-field">
@@ -222,7 +223,7 @@ export const Esop = (props) => {
                                 component={Select}
                             >
                                 {countries.map((option, i) =>
-                                    <option key={i} style={{ fontSize: '1.5rem', cursor: 'pointer' }} value={option.value}>{option.label}</option>)}
+                                    <MenuItem key={i} style={{ fontSize: '1.5rem', cursor: 'pointer' }} value={option.value}>{option.label}</MenuItem>)}
                             </Field>
                         </div>
                         <div className="form-field">
@@ -240,7 +241,7 @@ export const Esop = (props) => {
                                 component={Select}
                             >
                                 {members.map((option, i) =>
-                                    <option key={i} style={{ fontSize: '1.5rem', cursor: 'pointer' }} value={option.value}>{option.label}</option>)}
+                                    <MenuItem key={i} style={{ fontSize: '1.5rem', cursor: 'pointer' }} value={option.value}>{option.label}</MenuItem>)}
                             </Field>
                         </div>
                         <div className="form-field">
@@ -522,7 +523,7 @@ export const Esop = (props) => {
                                 component={Select}
                             >
                                 {countries.map((option, i) =>
-                                    <option key={i} style={{ fontSize: '1.5rem', cursor: 'pointer' }} value={option.value}>{option.label}</option>)}
+                                    <MenuItem key={i} style={{ fontSize: '1.5rem', cursor: 'pointer' }} value={option.value}>{option.label}</MenuItem>)}
                             </Field>
                         </div>
                         <Typography className="form-title" style={{marginTop: '4rem'}}>Your entry</Typography>
@@ -612,7 +613,7 @@ export const Esop = (props) => {
                                 component={Select}
                             >
                                 {Q1.map((option, i) =>
-                                    <option key={i} style={{ fontSize: '1.5rem', cursor: 'pointer' }} value={option.value}>{option.label}</option>)}
+                                    <MenuItem key={i} style={{ fontSize: '1.5rem', cursor: 'pointer' }} value={option.value}>{option.label}</MenuItem>)}
                             </Field>
                             {errors.question_1_answer && <label style={{ position: 'absolute', bottom: '-1rem', right: '1rem', color: '#ff0000', fontSize: '1.5rem' }}>{errors.question_1_answer}</label>}
 
@@ -633,7 +634,7 @@ export const Esop = (props) => {
                                 component={Select}
                             >
                                 {Q2.map((option, i) =>
-                                    <option key={i} style={{ fontSize: '1.5rem', cursor: 'pointer' }} value={option.value}>{option.label}</option>)}
+                                    <MenuItem key={i} style={{ fontSize: '1.5rem', cursor: 'pointer' }} value={option.value}>{option.label}</MenuItem>)}
                             </Field>
                             {errors.question_2_answer && <label style={{ position: 'absolute', bottom: '-1rem', right: '1rem', color: '#ff0000', fontSize: '1.5rem' }}>{errors.question_2_answer}</label>}
                         </div>
@@ -653,7 +654,7 @@ export const Esop = (props) => {
                                 component={Select}
                             >
                                 {Q3.map((option, i) =>
-                                    <option key={i} style={{ fontSize: '1.5rem', cursor: 'pointer' }} value={option.value}>{option.label}</option>)}
+                                    <MenuItem key={i} style={{ fontSize: '1.5rem', cursor: 'pointer' }} value={option.value}>{option.label}</MenuItem>)}
                             </Field>
                             {errors.question_3_answer && <label style={{ position: 'absolute', bottom: '-1rem', right: '1rem', color: '#ff0000', fontSize: '1.5rem' }}>{errors.question_3_answer}</label>}
 
@@ -798,7 +799,7 @@ export const Esop = (props) => {
                                 component={Select}
                             >
                                 {Marketing.map((option, i) =>
-                                    <option key={i} style={{ fontSize: '1.5rem', cursor: 'pointer' }} value={option.value}>{option.label}</option>)}
+                                    <MenuItem key={i} style={{ fontSize: '1.5rem', cursor: 'pointer' }} value={option.value}>{option.label}</MenuItem>)}
                             </Field>
                             {errors.student_level_current && <label style={{ position: 'absolute', bottom: '-1rem', right: '1rem', color: '#ff0000', fontSize: '1.5rem' }}>{errors.student_level_current}</label>}
 

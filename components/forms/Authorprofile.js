@@ -1,6 +1,8 @@
 import React, { Component, useState, useEffect } from 'react'
 import { Formik, Form, Field } from 'formik';
 import { TextField, Select} from 'formik-material-ui';
+import MenuItem from '@material-ui/core/MenuItem';
+
 import CircularProgress from '@material-ui/core/CircularProgress';
 import { Button } from '../Button';
 import {titles, countries} from './FormSelects';
@@ -73,7 +75,7 @@ export const Authorprofile = (props) => {
                                 component={Select}
                             >
                                 {titles.map((option, i) =>
-                                    <option key={i} style={{ fontSize: '1.5rem', cursor: 'pointer' }} value={option.value}>{option.label}</option>)}
+                                    <MenuItem key={i} style={{ fontSize: '1.5rem', cursor: 'pointer' }} value={option.value}>{option.label}</MenuItem>)}
                             </Field>
                         </div>
                         <div className="form-field">
@@ -256,7 +258,7 @@ export const Authorprofile = (props) => {
                                 component={Select}
                             >
                                 {countries.map((option, i) =>
-                                    <option key={i} style={{ fontSize: '1.5rem', cursor: 'pointer' }} value={option.value}>{option.label}</option>)}
+                                    <MenuItem key={i} style={{ fontSize: '1.5rem', cursor: 'pointer' }} value={option.value}>{option.label}</MenuItem>)}
                             </Field>
                         </div>
                         <div className="form-field">

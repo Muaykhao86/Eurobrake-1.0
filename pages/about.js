@@ -119,15 +119,15 @@ const StyledProfile = styled.div`
 }
 
 
-
-
+ 
 `;
 
+            // src="https://live.staticflickr.com/65535/48015860778_489a8eec71_b.jpg"
 export default () => (
     <>
         <HeroSection
+        src="https://live.staticflickr.com/65535/48016158113_214a7dde8c_b.jpg"
             max="57%"
-            src="https://live.staticflickr.com/65535/48015860778_489a8eec71_b.jpg"
         >
             About EuroBrake
     </HeroSection>
@@ -187,7 +187,7 @@ export default () => (
                     <Grid item xs={3} >
                         <StyledProfile className="profile">
                             <div className="profile-mediabox">
-                                <img  src="/images/AbendrothHarald.png" alt="profilePicture" className="profile-media" />
+                                <img  src="/images/People/AbendrothHarald.png" alt="profilePicture" className="profile-media" />
                             </div>
                             <div className="profile_description">
                                 <Typography className="profile profile_description-title">
@@ -202,7 +202,7 @@ export default () => (
                     <Grid item xs={3}>
                         <StyledProfile className="profile">
                             <div className="profile-mediabox">
-                                <img  src="/images/BartonDavid.png" alt="profilePicture" className="profile-media" />
+                                <img  src="/images/People/BartonDavid.png" alt="profilePicture" className="profile-media" />
                             </div>
                             <div className="profile_description">
                                 <Typography className="profile profile_description-title">
@@ -217,7 +217,7 @@ export default () => (
                     <Grid item xs={3}>
                         <StyledProfile className="profile">
                             <div className="profile-mediabox">
-                                <img  src="/images/DesplanquesYannick.png" alt="profilePicture" className="profile-media" />
+                                <img  src="/images/People/DesplanquesYannick.png" alt="profilePicture" className="profile-media" />
                             </div>
                             <div className="profile_description">
                                 <Typography className="profile profile_description-title">
@@ -232,7 +232,7 @@ export default () => (
                     <Grid item xs={3}>
                         <StyledProfile className="profile">
                             <div className="profile-mediabox">
-                                <img  src="/images/JK.png" alt="profilePicture" className="profile-media" />
+                                <img  src="/images/People/JK.png" alt="profilePicture" className="profile-media" />
                             </div>
                             <div className="profile_description">
                                 <Typography className="profile profile_description-title">
@@ -247,7 +247,7 @@ export default () => (
                     <Grid item xs={3}>
                         <StyledProfile className="profile">
                             <div className="profile-mediabox">
-                                <img  src="/images/LL.png" alt="profilePicture" className="profile-media" />
+                                <img  src="/images/People/LL.png" alt="profilePicture" className="profile-media" />
                             </div>
                             <div className="profile_description">
                                 <Typography className="profile profile_description-title">
@@ -262,7 +262,7 @@ export default () => (
                     <Grid item xs={3}>
                         <StyledProfile className="profile">
                             <div className="profile-mediabox">
-                                <img  src="/images/MunchhoffJan.png" alt="profilePicture" className="profile-media" />
+                                <img  src="/images/People/MunchhoffJan.png" alt="profilePicture" className="profile-media" />
                             </div>
                             <div className="profile_description">
                                 <Typography className="profile profile_description-title">
@@ -277,7 +277,7 @@ export default () => (
                     <Grid item xs={3}>
                         <StyledProfile className="profile">
                             <div className="profile-mediabox">
-                                <img  src="/images/OstermeyerGeorg.png" alt="profilePicture" className="profile-media" />
+                                <img  src="/images/People/OstermeyerGeorg.png" alt="profilePicture" className="profile-media" />
                             </div>
                             <div className="profile_description">
                                 <Typography className="profile profile_description-title">
@@ -292,7 +292,7 @@ export default () => (
                     <Grid item xs={3}>
                         <StyledProfile className="profile">
                             <div className="profile-mediabox">
-                                <img  src="/images/VollrathLudwig.png" alt="profilePicture" className="profile-media" />
+                                <img  src="/images/People/VollrathLudwig.png" alt="profilePicture" className="profile-media" />
                             </div>
                             <div className="profile_description">
                                 <Typography className="profile profile_description-title">
@@ -312,7 +312,7 @@ export default () => (
                     <Grid item xs={3} >
                         <StyledProfile className="profile">
                             <div className="profile-mediabox">
-                                <img  src="/images/BijweJayashree.png" alt="profilePicture" className="profile-media" />
+                                <img  src="/images/People/BijweJayashree.png" alt="profilePicture" className="profile-media" />
                             </div>
                             <div className="profile_description">
                                 <Typography className="profile profile_description-title">
@@ -327,7 +327,7 @@ export default () => (
                     <Grid item xs={3}>
                         <StyledProfile className="profile">
                             <div className="profile-mediabox">
-                                <img  src="/images/StefanDorsch.png" alt="profilePicture" className="profile-media" />
+                                <img  src="/images/People/StefanDorsch.png" alt="profilePicture" className="profile-media" />
                             </div>
                             <div className="profile_description">
                                 <Typography className="profile profile_description-title">
@@ -342,7 +342,7 @@ export default () => (
                     <Grid item xs={3}>
                         <StyledProfile className="profile">
                             <div className="profile-mediabox">
-                                <img  src="/images/DufrenoyPhilippe.png" alt="profilePicture" className="profile-media" />
+                                <img  src="/images/People/DufrenoyPhilippe.png" alt="profilePicture" className="profile-media" />
                             </div>
                             <div className="profile_description">
                                 <Typography className="profile profile_description-title">
@@ -357,7 +357,7 @@ export default () => (
                     <Grid item xs={3}>
                         <StyledProfile className="profile">
                             <div className="profile-mediabox">
-                                <img  src="/images/FieldhouseJohn.png" alt="profilePicture" className="profile-media" />
+                                <img  src="/images/People/FieldhouseJohn.png" alt="profilePicture" className="profile-media" />
                             </div>
                             <div className="profile_description">
                                 <Typography className="profile profile_description-title">
@@ -372,7 +372,7 @@ export default () => (
                     <Grid item xs={3}>
                         <StyledProfile className="profile">
                             <div className="profile-mediabox">
-                                <img  src="/images/FilipPeter.png" alt="profilePicture" className="profile-media" />
+                                <img  src="/images/People/FilipPeter.png" alt="profilePicture" className="profile-media" />
                             </div>
                             <div className="profile_description">
                                 <Typography className="profile profile_description-title">
@@ -387,7 +387,7 @@ export default () => (
                     <Grid item xs={3}>
                         <StyledProfile className="profile">
                             <div className="profile-mediabox">
-                                <img  src="/images/GraeberJohannes.png" alt="profilePicture" className="profile-media" />
+                                <img  src="/images/People/GraeberJohannes.png" alt="profilePicture" className="profile-media" />
                             </div>
                             <div className="profile_description">
                                 <Typography className="profile profile_description-title">
@@ -402,7 +402,7 @@ export default () => (
                     <Grid item xs={3}>
                         <StyledProfile className="profile">
                             <div className="profile-mediabox">
-                                <img  src="/images/TheodorosGrigoratos.png" alt="profilePicture" className="profile-media" />
+                                <img  src="/images/People/TheodorosGrigoratos.png" alt="profilePicture" className="profile-media" />
                             </div>
                             <div className="profile_description">
                                 <Typography className="profile profile_description-title">
@@ -417,7 +417,7 @@ export default () => (
                     <Grid item xs={3}>
                         <StyledProfile className="profile">
                             <div className="profile-mediabox">
-                                <img  src="/images/KudoTakashi.png" alt="profilePicture" className="profile-media" />
+                                <img  src="/images/People/KudoTakashi.png" alt="profilePicture" className="profile-media" />
                             </div>
                             <div className="profile_description">
                                 <Typography className="profile profile_description-title">
@@ -432,7 +432,7 @@ export default () => (
                     <Grid item xs={3} >
                         <StyledProfile className="profile">
                             <div className="profile-mediabox">
-                                <img  src="/images/LauxmannRalph.png" alt="profilePicture" className="profile-media" />
+                                <img  src="/images/People/LauxmannRalph.png" alt="profilePicture" className="profile-media" />
                             </div>
                             <div className="profile_description">
                                 <Typography className="profile profile_description-title">
@@ -447,7 +447,7 @@ export default () => (
                     <Grid item xs={3}>
                         <StyledProfile className="profile">
                             <div className="profile-mediabox">
-                                <img  src="/images/LiebemannEdwin.png" alt="profilePicture" className="profile-media" />
+                                <img  src="/images/People/LiebemannEdwin.png" alt="profilePicture" className="profile-media" />
                             </div>
                             <div className="profile_description">
                                 <Typography className="profile profile_description-title">
@@ -462,7 +462,7 @@ export default () => (
                     <Grid item xs={3}>
                         <StyledProfile className="profile">
                             <div className="profile-mediabox">
-                                <img  src="/images/MichaelLingg.png" alt="profilePicture" className="profile-media" style={{position: 'relative', top: '5rem'}}/>
+                                <img  src="/images/People/MichaelLingg.png" alt="profilePicture" className="profile-media" style={{position: 'relative', top: '5rem'}}/>
                             </div>
                             <div className="profile_description">
                                 <Typography className="profile profile_description-title">
@@ -477,7 +477,7 @@ export default () => (
                     <Grid item xs={3}>
                         <StyledProfile className="profile">
                             <div className="profile-mediabox">
-                                <img  src="/images/LinkRoy.png" alt="profilePicture" className="profile-media" />
+                                <img  src="/images/People/LinkRoy.png" alt="profilePicture" className="profile-media" />
                             </div>
                             <div className="profile_description">
                                 <Typography className="profile profile_description-title">
@@ -492,7 +492,7 @@ export default () => (
                     <Grid item xs={3}>
                         <StyledProfile className="profile">
                             <div className="profile-mediabox">
-                                <img  src="/images/MartinottoLuca.png" alt="profilePicture" className="profile-media" />
+                                <img  src="/images/People/MartinottoLuca.png" alt="profilePicture" className="profile-media" />
                             </div>
                             <div className="profile_description">
                                 <Typography className="profile profile_description-title">
@@ -507,7 +507,7 @@ export default () => (
                     <Grid item xs={3}>
                         <StyledProfile className="profile">
                             <div className="profile-mediabox">
-                                <img  src="/images/NishiwakiMasaaki.png" alt="profilePicture" className="profile-media" />
+                                <img  src="/images/People/NishiwakiMasaaki.png" alt="profilePicture" className="profile-media" />
                             </div>
                             <div className="profile_description">
                                 <Typography className="profile profile_description-title">
@@ -522,7 +522,7 @@ export default () => (
                     <Grid item xs={3}>
                         <StyledProfile className="profile">
                             <div className="profile-mediabox">
-                                <img  src="/images/MeyerManfred.png" alt="profilePicture" className="profile-media" style={{position: 'relative', top: '3rem'}}/>
+                                <img  src="/images/People/MeyerManfred.png" alt="profilePicture" className="profile-media" style={{position: 'relative', top: '3rem'}}/>
                             </div>
                             <div className="profile_description">
                                 <Typography className="profile profile_description-title">
@@ -537,7 +537,7 @@ export default () => (
                     <Grid item xs={3}>
                         <StyledProfile className="profile">
                             <div className="profile-mediabox">
-                                <img  src="/images/JiliangMo.png" alt="profilePicture" className="profile-media" />
+                                <img  src="/images/People/JiliangMo.png" alt="profilePicture" className="profile-media" />
                             </div>
                             <div className="profile_description">
                                 <Typography className="profile profile_description-title">
@@ -552,7 +552,7 @@ export default () => (
                     <Grid item xs={3} >
                         <StyledProfile className="profile">
                             <div className="profile-mediabox">
-                                <img  src="/images/MODY.png" alt="profilePicture" className="profile-media" />
+                                <img  src="/images/People/MODY.png" alt="profilePicture" className="profile-media" />
                             </div>
                             <div className="profile_description">
                                 <Typography className="profile profile_description-title">
@@ -567,7 +567,7 @@ export default () => (
                     <Grid item xs={3}>
                         <StyledProfile className="profile">
                             <div className="profile-mediabox">
-                                <img  src="/images/TonyNicol.png" alt="profilePicture" className="profile-media" />
+                                <img  src="/images/People/TonyNicol.png" alt="profilePicture" className="profile-media" />
                             </div>
                             <div className="profile_description">
                                 <Typography className="profile profile_description-title">
@@ -582,7 +582,7 @@ export default () => (
                     <Grid item xs={3}>
                         <StyledProfile className="profile">
                             <div className="profile-mediabox">
-                                <img  src="/images/Rainer.png" alt="profilePicture" className="profile-media" />
+                                <img  src="/images/People/Rainer.png" alt="profilePicture" className="profile-media" />
                             </div>
                             <div className="profile_description">
                                 <Typography className="profile profile_description-title">
@@ -597,7 +597,7 @@ export default () => (
                     <Grid item xs={3}>
                         <StyledProfile className="profile">
                             <div className="profile-mediabox">
-                                <img  src="/images/PoissonFranck.png" alt="profilePicture" className="profile-media" />
+                                <img  src="/images/People/PoissonFranck.png" alt="profilePicture" className="profile-media" />
                             </div>
                             <div className="profile_description">
                                 <Typography className="profile profile_description-title">
@@ -612,7 +612,7 @@ export default () => (
                     <Grid item xs={3}>
                         <StyledProfile className="profile">
                             <div className="profile-mediabox">
-                                <img  src="/images/RheeSeongK.png" alt="profilePicture" className="profile-media" />
+                                <img  src="/images/People/RheeSeongK.png" alt="profilePicture" className="profile-media" />
                             </div>
                             <div className="profile_description">
                                 <Typography className="profile profile_description-title">
@@ -627,7 +627,7 @@ export default () => (
                     <Grid item xs={3}>
                         <StyledProfile className="profile">
                             <div className="profile-mediabox">
-                                <img  src="/images/ShiomiYukihiro.png" alt="profilePicture" className="profile-media" />
+                                <img  src="/images/People/ShiomiYukihiro.png" alt="profilePicture" className="profile-media" />
                             </div>
                             <div className="profile_description">
                                 <Typography className="profile profile_description-title">
@@ -642,7 +642,7 @@ export default () => (
                     <Grid item xs={3}>
                         <StyledProfile className="profile">
                             <div className="profile-mediabox">
-                                <img  src="/images/FabioSquadrani.png" alt="profilePicture" className="profile-media" />
+                                <img  src="/images/People/FabioSquadrani.png" alt="profilePicture" className="profile-media" />
                             </div>
                             <div className="profile_description">
                                 <Typography className="profile profile_description-title">
@@ -657,7 +657,7 @@ export default () => (
                     <Grid item xs={3}>
                         <StyledProfile className="profile">
                             <div className="profile-mediabox">
-                                <img  src="/images/Tione.png" alt="profilePicture" className="profile-media" />
+                                <img  src="/images/People/Tione.png" alt="profilePicture" className="profile-media" />
                             </div>
                             <div className="profile_description">
                                 <Typography className="profile profile_description-title">

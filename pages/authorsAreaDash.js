@@ -217,10 +217,7 @@ class AuthorsAreaDash extends Component {
         console.log({ papers, data })
         return (
             <>
-                <HeroSection banner={FilledBanner}
-                    max="55%"
-            src="https//live.staticflickr.com/65535/48016184742_83f719960f_b.jpg"
-                    >
+                <HeroSection banner={FilledBanner} max="55%" src="https://live.staticflickr.com/65535/48016203938_fe5254376c_b.jpg">
 
                     Author's Area Dashboard
             </HeroSection>
@@ -378,7 +375,7 @@ AuthorsAreaDash.getInitialProps = async ctx => {
     const apiUrl = 'https://prelude.eurobrake.net/authors/dashboard ';
     
     const redirectOnError = async () => {
-    const count = 0;
+    let count = 0;
     await  count ++
     if(count < 3) {
      await process.browser ? Router.push('/authors') : ctx.res.writeHead(301, { Location: '/authors' })

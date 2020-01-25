@@ -55,7 +55,7 @@ const StyledHotels = styled.div`
             flex: 1 1 auto;
 
         &-imageBox{
-            height: 24.3rem;
+            height: 32.3rem;
             max-width: 30rem;
             overflow: hidden; 
             flex: 1;
@@ -93,7 +93,7 @@ export default function HotelBox() {
 
                 <div className="Accomodation_hotel">
                     <div className="Accomodation_hotel-imageBox">
-                        <img src="/images/hotelSB.png" alt="Hotel SB Diagonal Zero" width='100%' height='100%' />
+                        <img src="/images/sb.png" alt="Hotel SB Diagonal Zero" width='100%' height='100%' />
                     </div>
                     <div className="Accomodation_hotel-primaryBox">
                         <Typography className="Accomodation_text-primary-title" >Hotel SB Diagonal Zero </Typography>
@@ -175,7 +175,7 @@ export default function HotelBox() {
 
                 <div className="Accomodation_hotel">
                     <div className="Accomodation_hotel-imageBox">
-                        <img src="/images/conMar.png" alt="Hotel Barcelona Condal Mar"  width='100%' height='100%'/>
+                        <img src="/images/mar.png" alt="Hotel Barcelona Condal Mar"  width='100%' height='100%'/>
                     </div>
                     <div className="Accomodation_hotel-primaryBox">
                         <Typography className="Accomodation_text-primary-title" >Hotel Barcelona Condal Mar</Typography>
