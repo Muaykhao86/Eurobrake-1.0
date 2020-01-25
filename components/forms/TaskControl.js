@@ -1,8 +1,8 @@
 import * as yup from 'yup';
   
   const PPT_SUPPORTED_FORMATS = [
-          '.ppt', 
-          '.pptx',
+          'ppt', 
+          'pptx',
           'application/vnd.ms-powerpoint', 
           'application/vnd.openxmlformats-officedocument.presentationml.presentation',
 
@@ -11,7 +11,7 @@ import * as yup from 'yup';
   const FILE_SIZE = 5033164800 ;
 
   const PDF_SUPPORTED_FORMATS = [
-     'application/pdf'
+    'pdf', 'application/pdf'
     ];
 
 export const PaperSchema = yup.object().shape({

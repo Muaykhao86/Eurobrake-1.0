@@ -108,10 +108,12 @@ export const AbstractSchema = yup.object().shape({
 });
 
  const CV_SUPPORTED_FORMATS = [
+     "pdf", "doc", "docx",
      'application/pdf', 'application/msword', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'
     ];
 
  const PROOF_SUPPORTED_FORMATS = [
+     "jpg", "jpeg", "png", "pdf", "doc", "docx",
      'application/pdf', 'application/msword', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'
     ];
 

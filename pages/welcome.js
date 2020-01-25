@@ -53,11 +53,10 @@ const StyledPage = styled.div`
 
 
     .EBIconBox{
-        /* background-color: goldenrod; */
         align-self: flex-end;        
         width: 10rem;
         height: 10rem;
-
+        margin: 1.5rem;
     }
 
     }
@@ -249,4 +248,5 @@ const FilledBanner = () => (
         </StyledContainer>
     </StyledBanner>
 )
+
 

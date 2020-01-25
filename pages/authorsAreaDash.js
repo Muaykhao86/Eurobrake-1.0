@@ -315,8 +315,8 @@ class AuthorsAreaDash extends Component {
                                                 br="100rem"
                                                 padding="0.5rem 2rem"
                                                 style={{ margin: ".5rem 0" }}
-                                                fontSize="1.7rem"
-                                            >
+                                                fontSize="1.7rem">
+                                                 <CancelIcon style={{ fontSize: '3rem', marginRight: '1rem' }} />
                                                withdraw
                                                 </Button>
                                             </>
