@@ -127,6 +127,7 @@ export default () => (
     <>
         <HeroSection
             max="57%"
+            src="https://live.staticflickr.com/65535/48015860778_489a8eec71_b.jpg"
         >
             About EuroBrake
     </HeroSection>

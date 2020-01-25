@@ -154,12 +154,12 @@ export default () => {
      const [full, setFull] = useState(false)
     const svgWidth = full ? '100vw' : '1000';
 const svgHeight = full ? '100vh' : '';
-    
+
     return (
     <>
         <HeroSection
             max="55%"
-            src="/images/BarClip.png"
+            src="https://live.staticflickr.com/65535/48016099856_3d2f30aedc_b.jpg"
         >
             Exhibition and Sponsorship
         </HeroSection>

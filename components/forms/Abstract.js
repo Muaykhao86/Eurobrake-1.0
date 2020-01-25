@@ -4,7 +4,7 @@ import { TextField, RadioGroup, Select, Checkbox, } from 'formik-material-ui';
 import { AddCircle, RemoveCircle, ArrowUpwardRounded, ArrowDownwardRounded, } from '@material-ui/icons';
 import cookie from 'js-cookie';
 import CircularProgress from '@material-ui/core/CircularProgress';
-
+import MenuItem from '@material-ui/core/MenuItem';
 import  Typography  from '@material-ui/core/Typography';
 import { Button } from '../Button';
 import {titles, countries} from './FormSelects';
@@ -98,7 +98,7 @@ export const AbstractForm = (props) => {
                                 component={Select}
                             >
                                 {titles.map((option, i) =>
-                                    <option key={i} style={{ fontSize: '1.5rem', cursor: 'pointer' }} value={option.value}>{option.label}</option>)}
+                                    <MenuItem key={i} style={{ fontSize: '1.5rem', cursor: 'pointer' }} value={option.value}>{option.label}</MenuItem>)}
                             </Field>
                         </div>
                         <div className="form-field">
@@ -392,7 +392,7 @@ export const AbstractForm = (props) => {
                             <label
                                 htmlFor="label"
                                 className="form-label">
-                                Is this the presenting author?
+                               Do you wish your paper to be considered for inclusion in a list of the best papers given at EuroBrake to be published in an academic journal?
                         </label>
                             <Field
                                 className="form-field-radio"
@@ -438,6 +438,7 @@ export const AbstractForm = (props) => {
                                     No
                                 </label>
                             </Field>
+                            {errors.consider_for_journal && <label style={{ position: 'absolute', bottom: '-1rem', right: '1rem', color: '#ff0000', fontSize: '1.5rem' }}>{errors.consider_for_journal}</label>}
                         </div>
 
                         <Typography className="form-title">Secondary Author(s)</Typography>

@@ -12,6 +12,12 @@ const StyledPage = styled.div`
     flex-direction: column;
     align-self: center;
     width: ${props => props.theme.minWidth};
+      @media only screen 
+        and (max-device-width: 768px) 
+        and (-webkit-min-device-pixel-ratio: 2) { 
+             
+    width: ${props => props.theme.mobileWidth};
+        }
     background-color: ${props => props.theme.white};
      margin-top: 3rem;
 

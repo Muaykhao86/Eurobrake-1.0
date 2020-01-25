@@ -54,7 +54,9 @@ const Content = styled.div`
 
 export default () => (
     <>
-     <HeroSection >
+     <HeroSection 
+    src="https://live.staticflickr.com/65535/48015864661_8301c18ef8_b.jpg"
+     >
                 Book Now
     </HeroSection>
 <StyledPage>

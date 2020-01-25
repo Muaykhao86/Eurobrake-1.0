@@ -218,7 +218,10 @@ class AuthorsAreaDash extends Component {
         return (
             <>
                 <HeroSection banner={FilledBanner}
-                    max="55%">
+                    max="55%"
+            src="https//live.staticflickr.com/65535/48016184742_83f719960f_b.jpg"
+                    >
+
                     Author's Area Dashboard
             </HeroSection>
                 <StyledPage>

@@ -89,11 +89,12 @@ const FilledBanner = () => (
         </StyledContainer>
     </StyledBanner>
 )
-
+ 
 
 export default () => (
     <>
-        <HeroSection banner={FilledBanner} max="55%">
+        <HeroSection banner={FilledBanner} max="55%" src="https://live.staticflickr.com/65535/48016205181_9141b91094_b.jpg"
+        >
             EuroBrake 2020 Registration
             </HeroSection>
         <StyledPage >

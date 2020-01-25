@@ -9,7 +9,9 @@ import {FixedDates, FixedBox} from '../components/Dates';
 
 export default () => (
     <>
-     <HeroSection  max="55%">
+     <HeroSection  max="55%"
+ src="https://live.staticflickr.com/65535/48015833213_3a48d1441c_b.jpg"
+     >
                 Technical Program
     </HeroSection>
 <StyledPage>

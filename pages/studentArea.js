@@ -34,6 +34,16 @@ import {AbstractForm} from '../components/forms/Abstract';
    
 export default () => {
 
+  const GetabDef = async (url) => {
+            const formData = await  GetForm(`https://prelude.eurobrake.net/test/authors/edit/EB2020-MDS-003?definition=1`);
+            const res = await formData;
+           return  console.log({res});
+    }
+  const GetDef = async (url) => {
+            const formData = await  GetForm(`https://prelude.eurobrake.net/test/authors/task/pitchvideo/EB2020-MDS-003?definition=1`);
+            const res = await formData;
+           return  console.log({res});
+    }
   const GetesopDef = async () => {
             const formData = await  GetForm(`https://prelude.eurobrake.net/esop?definition=1`);
             const res = await formData;
@@ -69,6 +79,10 @@ return (
         <button onClick={() => GetcontactDef()}>contact</button>
         <button onClick={() => GetsignupDef()}>signup</button>
         <button onClick={() => GetwithDef()}>withdrwn</button>
+         {/* <button onClick={() => GetposterDef()}>poster</button> */}
+{/* // ? NEED TO TESXT WIOTH A VALID PAPER */}
+        <button onClick={() => GetDef()}>pitchvideo</button>
+        <button onClick={() => GetabDef()}>abstract</button>
         {/* <button onClick={() => GetpassDef()}>password</button>
         <button onClick={() => GetresetDef()}>passreset</button> */}
         {/* <AbstractForm/> */}

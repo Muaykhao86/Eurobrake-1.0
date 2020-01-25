@@ -270,6 +270,11 @@ export const HiddenContainer = styled.div`
         flex-flow: column;
         align-items: center;
         justify-content: space-between;
+          @media only screen 
+        and (max-device-width: 768px) 
+        and (-webkit-min-device-pixel-ratio: 2) { 
+        display: none;          
+        }
     }
     
     &_box-left{
@@ -284,6 +289,11 @@ export const HiddenContainer = styled.div`
         flex-flow: column;
         align-items: center;
         justify-content: space-between;
+         @media only screen 
+        and (max-device-width: 768px) 
+        and (-webkit-min-device-pixel-ratio: 2) { 
+        display: none;          
+        }
     }
 
     &_box-bottom{

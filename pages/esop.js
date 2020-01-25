@@ -143,12 +143,11 @@ const StyledQuote = styled.div`
 `;
 
 
-
 export default () => (
     <>
         <HeroSection 
         max="55%"
-        src="/images/BarClip.png"
+        src="https://live.staticflickr.com/65535/48015980517_8b8abbc7ef_b.jpg" 
              >
             Student Opportunities Programme
 
