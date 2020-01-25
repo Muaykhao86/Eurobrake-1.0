@@ -20,10 +20,10 @@ export const LoginForm = () => {
 
     const url = Toggle ? 'https://prelude.eurobrake.net/authors/reset' : 'https://prelude.eurobrake.net/authors/login';
     console.log({url})
+            {/* validationSchema={LoginSchema} */}
     return (
         <Formik
             initialValues={emptyInitial}
-            validationSchema={LoginSchema}
             enableReinitialize
         >
             {({ values, handleChange, validateForm }) => {

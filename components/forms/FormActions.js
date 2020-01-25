@@ -143,7 +143,7 @@ export async function SendForm({ csrf, values, url, FT }) {
             console.error(
                 'Failed to send form, please try again', error
             )
-            return error
+            return data
         }
     }
     if(url === 'https://prelude.eurobrake.net/authors/login' ){
