@@ -108,6 +108,9 @@ export const AbstractSchema = yup.object().shape({
 });
 
  const CV_SUPPORTED_FORMATS = [
+     '.pdf', 
+     '.doc', 
+     '.docx',
      'pdf', 
      'doc', 
      'docx',
@@ -117,6 +120,12 @@ export const AbstractSchema = yup.object().shape({
     ];
 
  const PROOF_SUPPORTED_FORMATS = [
+     '.jpg', 
+     '.jpeg', 
+     '.png', 
+     '.pdf', 
+     '.doc', 
+     '.docx', 
      'jpg', 
      'jpeg', 
      'png', 
@@ -125,7 +134,7 @@ export const AbstractSchema = yup.object().shape({
      'docx', 
      'image/jpeg', 
      "image/png",
-     'application/pdf', 
+        'application/pdf', 
      'application/msword', 
      'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
     ];
