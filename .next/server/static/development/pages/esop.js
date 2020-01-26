@@ -88,394 +88,10 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 4);
 /******/ })
 /************************************************************************/
 /******/ ({
-
-/***/ "./components/AboutSection.js":
-/*!************************************!*\
-  !*** ./components/AboutSection.js ***!
-  \************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return AboutSection; });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var react_reveal_Bounce__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-reveal/Bounce */ "react-reveal/Bounce");
-/* harmony import */ var react_reveal_Bounce__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_reveal_Bounce__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _styles_HomeStyles__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./styles/HomeStyles */ "./components/styles/HomeStyles.js");
-/* harmony import */ var _Card__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Card */ "./components/Card.js");
-/* harmony import */ var _Button__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Button */ "./components/Button.js");
-/* harmony import */ var react_reveal_withReveal__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-reveal/withReveal */ "react-reveal/withReveal");
-/* harmony import */ var react_reveal_withReveal__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react_reveal_withReveal__WEBPACK_IMPORTED_MODULE_6__);
-var _jsxFileName = "/mnt/c/Users/D.Hardiman/desktop/eurobrake/components/AboutSection.js";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
-
-
-
-
-
-
-
-
-const AboutCard = () => __jsx(_Card__WEBPACK_IMPORTED_MODULE_4__["Card"], {
-  right: true,
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 10
-  },
-  __self: undefined
-}, __jsx("h1", {
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 11
-  },
-  __self: undefined
-}, "Early bird tickets are on sale now"), __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-  href: "/ticketPortal",
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 12
-  },
-  __self: undefined
-}, __jsx(_Button__WEBPACK_IMPORTED_MODULE_5__["Button"], {
-  br: "500rem",
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 13
-  },
-  __self: undefined
-}, "Book Now")));
-
-const BounceAboutCard = react_reveal_withReveal__WEBPACK_IMPORTED_MODULE_6___default()(AboutCard, __jsx(react_reveal_Bounce__WEBPACK_IMPORTED_MODULE_2___default.a, {
-  left: true,
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 18
-  },
-  __self: undefined
-}));
-function AboutSection() {
-  return __jsx(_styles_HomeStyles__WEBPACK_IMPORTED_MODULE_3__["StyledSection"], {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 23
-    },
-    __self: this
-  }, __jsx("h1", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 24
-    },
-    __self: this
-  }, "Europe's braking technology conference and exhibition"), __jsx("p", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 25
-    },
-    __self: this
-  }, "Welcome to EuroBrake, a major international forum for brake experts working in the fields of passenger cars, commercial vehicles, rail, aerospace, industry and academia. "), __jsx("p", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 26
-    },
-    __self: this
-  }, " We invite you to join us at EuroBrake 2020, which will take place in Barcelona, Spain, one of the world\u2019s leading connected, cultural and historical destinations."), __jsx("div", {
-    className: "innerContainer",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 27
-    },
-    __self: this
-  }, __jsx("div", {
-    className: "mediaBox",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 28
-    },
-    __self: this
-  }, __jsx("img", {
-    src: "https://live.staticflickr.com/65535/48016110023_8fae3c1150_b.jpg",
-    alt: "EuroBrake Greating",
-    style: {
-      width: '100%',
-      height: '100%'
-    },
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 29
-    },
-    __self: this
-  })), __jsx(BounceAboutCard, {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 31
-    },
-    __self: this
-  })));
-}
-{
-  /* src="/images/pic1.png" */
-}
-
-/***/ }),
-
-/***/ "./components/AttendeesSection.js":
-/*!****************************************!*\
-  !*** ./components/AttendeesSection.js ***!
-  \****************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return AttendeesSection; });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var react_reveal_Bounce__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-reveal/Bounce */ "react-reveal/Bounce");
-/* harmony import */ var react_reveal_Bounce__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_reveal_Bounce__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _styles_HomeStyles__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./styles/HomeStyles */ "./components/styles/HomeStyles.js");
-/* harmony import */ var _Card__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Card */ "./components/Card.js");
-/* harmony import */ var _Button__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Button */ "./components/Button.js");
-/* harmony import */ var react_reveal_withReveal__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-reveal/withReveal */ "react-reveal/withReveal");
-/* harmony import */ var react_reveal_withReveal__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react_reveal_withReveal__WEBPACK_IMPORTED_MODULE_6__);
-var _jsxFileName = "/mnt/c/Users/D.Hardiman/desktop/eurobrake/components/AttendeesSection.js";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
-
-
-
-
-
-
-
-
-const AttendeesCard = () => __jsx(_Card__WEBPACK_IMPORTED_MODULE_4__["Card"], {
-  right: true,
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 10
-  },
-  __self: undefined
-}, __jsx("h1", {
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 11
-  },
-  __self: undefined
-}, "Who attends Eurobrake"), __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-  href: "/about",
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 12
-  },
-  __self: undefined
-}, __jsx(_Button__WEBPACK_IMPORTED_MODULE_5__["Button"], {
-  br: "500rem",
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 13
-  },
-  __self: undefined
-}, "Attendees")));
-
-const BounceAttendeesCard = react_reveal_withReveal__WEBPACK_IMPORTED_MODULE_6___default()(AttendeesCard, __jsx(react_reveal_Bounce__WEBPACK_IMPORTED_MODULE_2___default.a, {
-  left: true,
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 18
-  },
-  __self: undefined
-}));
-function AttendeesSection() {
-  return __jsx(_styles_HomeStyles__WEBPACK_IMPORTED_MODULE_3__["StyledSection"], {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 21
-    },
-    __self: this
-  }, __jsx("h1", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 22
-    },
-    __self: this
-  }, "Attendees"), __jsx("p", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 23
-    },
-    __self: this
-  }, "Featuring more than 120 technical presentations and 100+ international exhibitors, EuroBrake attracts a global audience of engineers, scientists, academics and executives from the industries of passenger car, commercial vehicle, rail, aerospace and the wider industrial sectors."), __jsx("div", {
-    className: "innerContainer",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 25
-    },
-    __self: this
-  }, __jsx("div", {
-    className: "mediaBox",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 26
-    },
-    __self: this
-  }, __jsx("img", {
-    src: "https://live.staticflickr.com/65535/48016203938_fe5254376c_b.jpg",
-    alt: "EuroBrake Greating",
-    style: {
-      width: '100%',
-      height: '100%'
-    },
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 27
-    },
-    __self: this
-  })), __jsx(BounceAttendeesCard, {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 29
-    },
-    __self: this
-  })));
-} // src="/images/pic1.png"
-
-/***/ }),
-
-/***/ "./components/AuthorSection.js":
-/*!*************************************!*\
-  !*** ./components/AuthorSection.js ***!
-  \*************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return AuthorSection; });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var react_reveal_Bounce__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-reveal/Bounce */ "react-reveal/Bounce");
-/* harmony import */ var react_reveal_Bounce__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_reveal_Bounce__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _styles_HomeStyles__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./styles/HomeStyles */ "./components/styles/HomeStyles.js");
-/* harmony import */ var _Card__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Card */ "./components/Card.js");
-/* harmony import */ var _Button__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Button */ "./components/Button.js");
-/* harmony import */ var react_reveal_withReveal__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-reveal/withReveal */ "react-reveal/withReveal");
-/* harmony import */ var react_reveal_withReveal__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react_reveal_withReveal__WEBPACK_IMPORTED_MODULE_6__);
-var _jsxFileName = "/mnt/c/Users/D.Hardiman/desktop/eurobrake/components/AuthorSection.js";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
-
-
-
-
-
-
-
-
-const AuthorCard = () => __jsx(_Card__WEBPACK_IMPORTED_MODULE_4__["Card"], {
-  left: true,
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 10
-  },
-  __self: undefined
-}, __jsx("h1", {
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 11
-  },
-  __self: undefined
-}, "Access the Authors Area"), __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-  href: "/authorsArea",
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 12
-  },
-  __self: undefined
-}, __jsx(_Button__WEBPACK_IMPORTED_MODULE_5__["Button"], {
-  br: "500rem",
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 13
-  },
-  __self: undefined
-}, "Authors Area")));
-
-const BounceAuthorCard = react_reveal_withReveal__WEBPACK_IMPORTED_MODULE_6___default()(AuthorCard, __jsx(react_reveal_Bounce__WEBPACK_IMPORTED_MODULE_2___default.a, {
-  left: true,
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 18
-  },
-  __self: undefined
-}));
-function AuthorSection() {
-  return __jsx(_styles_HomeStyles__WEBPACK_IMPORTED_MODULE_3__["StyledSection"], {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 23
-    },
-    __self: this
-  }, __jsx("h1", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 24
-    },
-    __self: this
-  }, "Authors Area"), __jsx("p", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 25
-    },
-    __self: this
-  }, "Presenting a paper at EuroBrake gives you the opportunity to share your latest technical ideas and achievements with influential specialists from around the world and to discuss your work with colleagues throughout the industrial and academic communities."), __jsx("div", {
-    className: "innerContainer",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 27
-    },
-    __self: this
-  }, __jsx("div", {
-    className: "mediaBox",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 28
-    },
-    __self: this
-  }, __jsx("img", {
-    src: "https://live.staticflickr.com/65535/48015947061_7e41d70927_b.jpg",
-    alt: "EuroBrake Greating",
-    style: {
-      width: '100%',
-      height: '100%'
-    },
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 29
-    },
-    __self: this
-  })), __jsx(BounceAuthorCard, {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 31
-    },
-    __self: this
-  })));
-}
-{
-  /* src="/images/pic1.png" */
-}
-
-/***/ }),
 
 /***/ "./components/Button.js":
 /*!******************************!*\
@@ -507,26 +123,6 @@ const Button = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.a.withCo
 //     </Link>
 // ));
 //TODO ADJUST BOX SHADOWS FOR DIFFERENT BUTTONS
-
-/***/ }),
-
-/***/ "./components/Card.js":
-/*!****************************!*\
-  !*** ./components/Card.js ***!
-  \****************************/
-/*! exports provided: Card */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Card", function() { return Card; });
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! styled-components */ "styled-components");
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_0__);
-
-const Card = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({
-  displayName: "Card",
-  componentId: "sc-1fywwyw-0"
-})(["position:absolute;bottom:-12rem;left:", ";right:", ";max-width:", ";min-height:", ";background-color:", ";padding:4rem;padding-bottom:3.5rem;align-self:", ";display:flex;flex-flow:column;justify-content:space-between;h1{font-size:4rem;font-family:", ";color:", ";align-self:flex-start;max-width:90%;}"], props => props.right && 'null' || props.left && '-5rem' || props.center && 'null', props => props.right && '-5rem' || props.left && 'null' || props.center && 'null', props => props.MW || '33rem', props => props.MW || '33rem', props => props.theme.primary, props => props.right && 'flex-end' || props.left && 'flex-start' || props.center && 'center', props => props.theme.MPBlack, props => props.theme.white);
 
 /***/ }),
 
@@ -1181,439 +777,6 @@ function Box(props) {
     __self: this
   })));
 }
-
-/***/ }),
-
-/***/ "./components/Footer.js":
-/*!******************************!*\
-  !*** ./components/Footer.js ***!
-  \******************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! styled-components */ "styled-components");
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _GoogleMaps__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./GoogleMaps */ "./components/GoogleMaps.js");
-/* harmony import */ var _material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @material-ui/core/Typography */ "@material-ui/core/Typography");
-/* harmony import */ var _material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _Button__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Button */ "./components/Button.js");
-/* harmony import */ var _SponsorCarousel__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./SponsorCarousel */ "./components/SponsorCarousel.js");
-/* harmony import */ var _Icons__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./Icons */ "./components/Icons.js");
-/* harmony import */ var _components_forms_Newsletter__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../components/forms/Newsletter */ "./components/forms/Newsletter.js");
-var _jsxFileName = "/mnt/c/Users/D.Hardiman/desktop/eurobrake/components/Footer.js";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
-
-
-
-
-
-
-
-
-
-const FooterBar = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div.withConfig({
-  displayName: "Footer__FooterBar",
-  componentId: "sc-1wn18ws-0"
-})(["color:", ";background:", ";min-width:100%;min-height:20rem;display:flex;justify-content:space-between;align-items:center;position:absolute;bottom:0;padding:2rem;border-top:5px solid ", ";.ftr_top-box{display:flex;flex-flow:row wrap;margin-bottom:1rem;}.heading-copy{color:", ";font-family:", ";font-size:2rem;}.ftr_middle-links{min-height:24rem;margin:0 1rem;padding:.2rem;flex:1 1 auto;display:flex;flex-flow:column;justify-content:space-between;align-items:flex-start;&_links{display:flex;justify-content:space-between;min-width:50rem;}}.ftr_container-right{border:1px solid #FFF;display:flex;flex-flow:column;align-items:center;}.ftr_container-map{height:25rem;position:relative;}.ftr_newsletter-box{max-height:6.5rem;display:flex;flex:1 1 auto;flex-flow:column;justify-content:space-between;margin-bottom:1rem;&_title{text-transform:uppercase;font-size:2rem;font-family:", ";}}.ftr_container-icons{display:flex;width:auto;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;position:relative;}.social{color:", ";;margin-right:1.5rem;font-size:2rem;}a{color:", ";text-transform:uppercase;font-family:", ";font-size:2rem;}h1{padding:1rem;text-align:center;}input{width:55%;margin:1rem;}label{font-family:", ";font-size:2rem;text-transform:uppercase;}"], props => props.theme.white, props => props.theme.primary, props => props.theme.secondary, props => props.theme.white, props => props.theme.MPLight, props => props.theme.MPBold, props => props.theme.white, props => props.theme.white, props => props.theme.MPBold, props => props.theme.MPBold);
-const StyledFooter = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div.withConfig({
-  displayName: "Footer__StyledFooter",
-  componentId: "sc-1wn18ws-1"
-})(["display:flex;flex-flow:column;align-content:flex-end;"]);
-
-function Footer() {
-  return __jsx(StyledFooter, {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 137
-    },
-    __self: this
-  }, __jsx(_SponsorCarousel__WEBPACK_IMPORTED_MODULE_6__["default"], {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 138
-    },
-    __self: this
-  }), __jsx(FooterBar, {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 139
-    },
-    __self: this
-  }, __jsx("div", {
-    className: "ftr_middle-links",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 140
-    },
-    __self: this
-  }, __jsx("div", {
-    className: "ftr_top-box",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 141
-    },
-    __self: this
-  }, __jsx("a", {
-    href: "https://www.fisita.com/",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 144
-    },
-    __self: this
-  }, __jsx(_Icons__WEBPACK_IMPORTED_MODULE_7__["FLogoWhite"], {
-    width: "16rem",
-    height: "5rem",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 144
-    },
-    __self: this
-  }))), __jsx("div", {
-    className: "ftr_middle-links_links",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 151
-    },
-    __self: this
-  }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-    href: "/disclaimer",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 152
-    },
-    __self: this
-  }, __jsx("a", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 152
-    },
-    __self: this
-  }, "Disclaimer")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-    href: "/f/[id]/[formType]",
-    as: `/f/FISITA/contact`,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 153
-    },
-    __self: this
-  }, __jsx("a", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 155
-    },
-    __self: this
-  }, "Contact Us")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-    href: "/privacyPolicy",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 156
-    },
-    __self: this
-  }, __jsx("a", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 156
-    },
-    __self: this
-  }, "Privacy Policy"))), __jsx("div", {
-    className: "",
-    style: {
-      display: 'flex',
-      justifyContent: 'center',
-      alignItems: 'baseline',
-      height: '3rem'
-    },
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 158
-    },
-    __self: this
-  }, __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_4___default.a, {
-    className: "heading-copy",
-    style: {
-      marginRight: '8rem',
-      merginTop: '2rem'
-    },
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 159
-    },
-    __self: this
-  }, "Copyright \xA9 2020 FISITA"))), __jsx("div", {
-    className: "ftr_container-right",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 162
-    },
-    __self: this
-  }, __jsx("div", {
-    className: "ftr_container-map",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 164
-    },
-    __self: this
-  }, __jsx(_GoogleMaps__WEBPACK_IMPORTED_MODULE_3__["default"], {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 165
-    },
-    __self: this
-  })))));
-}
-
-/* harmony default export */ __webpack_exports__["default"] = (Footer);
-
-/***/ }),
-
-/***/ "./components/GoogleMaps.js":
-/*!**********************************!*\
-  !*** ./components/GoogleMaps.js ***!
-  \**********************************/
-/*! exports provided: MapContainer, default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MapContainer", function() { return MapContainer; });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var google_maps_react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! google-maps-react */ "google-maps-react");
-/* harmony import */ var google_maps_react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(google_maps_react__WEBPACK_IMPORTED_MODULE_1__);
-var _jsxFileName = "/mnt/c/Users/D.Hardiman/desktop/eurobrake/components/GoogleMaps.js";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
-
-
-const mapStyles = {
-  bottom: '2rem',
-  right: '-4rem',
-  width: '40rem',
-  height: '25rem'
-}; // Dont know if the above dov will work, will have to test it when i get the api key => tbh dont evenm know if I need to set fixed with
-
-class MapContainer extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
-  constructor(props) {
-    super(props);
-    this.myRef = react__WEBPACK_IMPORTED_MODULE_0___default.a.createRef();
-  }
-
-  render() {
-    if (!this.props.google) {
-      return __jsx("div", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 26
-        },
-        __self: this
-      }, "Loading...");
-    }
-
-    return __jsx("div", {
-      style: mapStyles,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 30
-      },
-      __self: this
-    }, __jsx(google_maps_react__WEBPACK_IMPORTED_MODULE_1__["Map"], {
-      ref: this.myRef,
-      google: this.props.google,
-      zoom: 14,
-      initialCenter: {
-        lat: 41.409588,
-        lng: 2.219364
-      } //Center of map is EB
-      ,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 31
-      },
-      __self: this
-    }, __jsx(google_maps_react__WEBPACK_IMPORTED_MODULE_1__["Marker"], {
-      position: {
-        lat: 41.409588,
-        lng: 2.219364
-      },
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 37
-      },
-      __self: this
-    })));
-  }
-
-}
-/* harmony default export */ __webpack_exports__["default"] = (Object(google_maps_react__WEBPACK_IMPORTED_MODULE_1__["GoogleApiWrapper"])({
-  apiKey: 'AIzaSyDQGa5zZTL0G45-WQ8pn5tbMssAGJHD2xY'
-})(MapContainer)); //Need to get credit card and get API key
-
-/***/ }),
-
-/***/ "./components/Header.js":
-/*!******************************!*\
-  !*** ./components/Header.js ***!
-  \******************************/
-/*! exports provided: HeaderLogo, default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HeaderLogo", function() { return HeaderLogo; });
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/defineProperty */ "./node_modules/@babel/runtime-corejs2/helpers/esm/defineProperty.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! styled-components */ "styled-components");
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _material_ui_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @material-ui/core */ "@material-ui/core");
-/* harmony import */ var _material_ui_core__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _Nav__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Nav */ "./components/Nav.js");
-
-var _jsxFileName = "/mnt/c/Users/D.Hardiman/desktop/eurobrake/components/Header.js";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
-
-
-
-
-
-const HeaderBar = styled_components__WEBPACK_IMPORTED_MODULE_3___default.a.div.withConfig({
-  displayName: "Header__HeaderBar",
-  componentId: "zfe6h7-0"
-})(["color:white;position:fixed;background-color:", ";min-width:100%;height:10rem;display:flex;justify-content:flex-end;align-items:center;z-index:100;border-bottom:5px solid ", ";.logo{position:absolute;left:8rem;}.head{width:60rem;position:absolute;top:2.5rem;left:48rem;display:flex;flex-flow:column;justify-content:center;align-items:center;@media only screen  and (max-device-width:1200px)  and (-webkit-min-device-pixel-ratio:2){left:30rem;}&-title{font-size:1.8rem;font-family:", ";color:", ";align-self:flex-start;max-width:90%;}&-text{font-size:1.8rem;font-family:", ";color:", ";align-self:flex-start;max-width:90%;}}"], props => props.theme.primary, props => props.theme.secondary, props => props.theme.MPSemibold, props => props.theme.secondary, props => props.theme.MPLight, props => props.theme.white);
-const HeaderLogo = styled_components__WEBPACK_IMPORTED_MODULE_3___default.a.img.attrs(props => ({
-  src: "/images/logo.png",
-  alt: "Logo"
-})).withConfig({
-  displayName: "Header__HeaderLogo",
-  componentId: "zfe6h7-1"
-})(["max-width:16.8rem;cursor:pointer;"]);
-
-class Header extends react__WEBPACK_IMPORTED_MODULE_1__["Component"] {
-  constructor(props) {
-    super(props);
-
-    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(this, "headerScroll", () => {
-      if (global.window.scrollY === 0) {
-        this.setState(prev => ({
-          sticky: false
-        }));
-      } else {
-        this.setState(prev => ({
-          sticky: true
-        }));
-      }
-    });
-
-    this.myRef = react__WEBPACK_IMPORTED_MODULE_1___default.a.createRef();
-    this.state = {
-      sticky: false
-    };
-  }
-
-  componentDidMount() {
-    window.addEventListener('scroll', this.headerScroll);
-  }
-
-  componentWillUnmount() {
-    window.addEventListener('scroll', this.headerScroll);
-  }
-
-  render() {
-    return __jsx(HeaderBar, {
-      sticky: this.state.sticky,
-      ref: this.myRef,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 101
-      },
-      __self: this
-    }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
-      href: "/",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 102
-      },
-      __self: this
-    }, __jsx("a", {
-      className: "logo",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 102
-      },
-      __self: this
-    }, __jsx(HeaderLogo, {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 103
-      },
-      __self: this
-    }))), __jsx("div", {
-      className: "head",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 106
-      },
-      __self: this
-    }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_4__["Typography"], {
-      className: "head-title",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 107
-      },
-      __self: this
-    }, "Europe's braking technology conference & exhibition"), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_4__["Typography"], {
-      className: "head-text",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 108
-      },
-      __self: this
-    }, "2-4 June 2020, CCIB, Barcelona, Spain")), __jsx(_Nav__WEBPACK_IMPORTED_MODULE_5__["default"], {
-      sticky: this.state.sticky,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 110
-      },
-      __self: this
-    }));
-  }
-
-}
-
-;
-/* harmony default export */ __webpack_exports__["default"] = (Header); // const HeaderButton = styled.button`
-//     font-size: 1.5rem;
-//     font-family: ${props => props.theme.MPBold};
-//     margin-left: 2rem;
-//     text-transform: uppercase;
-//     align-self: flex-end;
-//     min-width: 16rem;
-//     min-height: 100%;
-//     background-color: ${props => props.sticky ?
-//     props.theme.secondary : 'transparent'};
-//     border: none;
-//     color:${props => props.theme.white};
-//      /* ${props => props.sticky ? 
-//     props.theme.primary : props.theme.white}; */
-//     cursor: pointer;
-//     outline: none;
-//     &:hover{
-//         background-color: ${props => props.sticky ?
-//         props.theme.primary : props.theme.secondary};
-//         color: ${props => props.sticky ?
-//         props.theme.secondary : props.theme.primary};
-//         border: 2px solid ${props => props.sticky ?
-//         props.theme.secondary : 'transparent'};
-//         box-shadow: (0, 0, 0, 0.5);
-//     }
-//     `;
 
 /***/ }),
 
@@ -6361,1458 +5524,6 @@ class EBFloorPlan extends react__WEBPACK_IMPORTED_MODULE_2__["Component"] {
 
 /***/ }),
 
-/***/ "./components/LocationSection.js":
-/*!***************************************!*\
-  !*** ./components/LocationSection.js ***!
-  \***************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return LocationSection; });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var react_reveal_Bounce__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-reveal/Bounce */ "react-reveal/Bounce");
-/* harmony import */ var react_reveal_Bounce__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_reveal_Bounce__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _styles_HomeStyles__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./styles/HomeStyles */ "./components/styles/HomeStyles.js");
-/* harmony import */ var _Card__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Card */ "./components/Card.js");
-/* harmony import */ var _Button__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Button */ "./components/Button.js");
-/* harmony import */ var react_reveal_withReveal__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-reveal/withReveal */ "react-reveal/withReveal");
-/* harmony import */ var react_reveal_withReveal__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react_reveal_withReveal__WEBPACK_IMPORTED_MODULE_6__);
-var _jsxFileName = "/mnt/c/Users/D.Hardiman/desktop/eurobrake/components/LocationSection.js";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
-
-
-
-
-
-
-
-
-const LocationCard = () => __jsx(_Card__WEBPACK_IMPORTED_MODULE_4__["Card"], {
-  left: true,
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 10
-  },
-  __self: undefined
-}, __jsx("h1", {
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 11
-  },
-  __self: undefined
-}, "Find out more about Barcelona"), __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-  href: "/welcome",
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 12
-  },
-  __self: undefined
-}, __jsx(_Button__WEBPACK_IMPORTED_MODULE_5__["Button"], {
-  br: "500rem",
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 13
-  },
-  __self: undefined
-}, "Discover")));
-
-const BounceLocationCard = react_reveal_withReveal__WEBPACK_IMPORTED_MODULE_6___default()(LocationCard, __jsx(react_reveal_Bounce__WEBPACK_IMPORTED_MODULE_2___default.a, {
-  left: true,
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 18
-  },
-  __self: undefined
-}));
-function LocationSection() {
-  return __jsx(_styles_HomeStyles__WEBPACK_IMPORTED_MODULE_3__["StyledSection"], {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 23
-    },
-    __self: this
-  }, __jsx("h1", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 24
-    },
-    __self: this
-  }, "Discover Barcelona"), __jsx("p", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 25
-    },
-    __self: this
-  }, "Offering an enviable climate and world-leading hub for business, Barcelona has direct links with many of the world\u2019s Capital cities, via air, road, rail and sea, making EuroBrake 2020 extremely accessible."), __jsx("div", {
-    className: "innerContainer",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 27
-    },
-    __self: this
-  }, __jsx("div", {
-    className: "mediaBox",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 28
-    },
-    __self: this
-  }, __jsx("img", {
-    src: "/images/pic2.png",
-    alt: "Barcelona",
-    style: {
-      width: '100%',
-      height: '100%'
-    },
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 29
-    },
-    __self: this
-  })), __jsx(BounceLocationCard, {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 31
-    },
-    __self: this
-  })));
-}
-
-/***/ }),
-
-/***/ "./components/Meta.js":
-/*!****************************!*\
-  !*** ./components/Meta.js ***!
-  \****************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/head */ "next/head");
-/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_head__WEBPACK_IMPORTED_MODULE_1__);
-var _jsxFileName = "/mnt/c/Users/D.Hardiman/desktop/eurobrake/components/Meta.js";
-
-var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
-
-
-const Meta = () => __jsx(next_head__WEBPACK_IMPORTED_MODULE_1___default.a, {
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 6
-  },
-  __self: undefined
-}, __jsx("meta", {
-  name: "viewport",
-  contents: "width=device-width, initial-scale=1",
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 7
-  },
-  __self: undefined
-}), __jsx("meta", {
-  charSet: "utf-8",
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 8
-  },
-  __self: undefined
-}), __jsx("link", {
-  rel: "shortcut icon",
-  href: "/static/favicon.png",
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 9
-  },
-  __self: undefined
-}), __jsx("title", {
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 10
-  },
-  __self: undefined
-}, "EuroBrake2020"));
-
-/* harmony default export */ __webpack_exports__["default"] = (Meta);
-
-/***/ }),
-
-/***/ "./components/Nav.js":
-/*!***************************!*\
-  !*** ./components/Nav.js ***!
-  \***************************/
-/*! exports provided: NavLogo, default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NavLogo", function() { return NavLogo; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Nav; });
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/defineProperty */ "./node_modules/@babel/runtime-corejs2/helpers/esm/defineProperty.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! styled-components */ "styled-components");
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _material_ui_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @material-ui/core */ "@material-ui/core");
-/* harmony import */ var _material_ui_core__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _styles_NavStyles__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./styles/NavStyles */ "./components/styles/NavStyles.js");
-/* harmony import */ var _Button__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./Button */ "./components/Button.js");
-/* harmony import */ var _Dates__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./Dates */ "./components/Dates.js");
-/* harmony import */ var _Header__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./Header */ "./components/Header.js");
-/* harmony import */ var _Icons__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./Icons */ "./components/Icons.js");
-
-var _jsxFileName = "/mnt/c/Users/D.Hardiman/desktop/eurobrake/components/Nav.js";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
-
-
-
-
-
-
-
-
-
-const NavLogo = styled_components__WEBPACK_IMPORTED_MODULE_3___default.a.img.attrs(props => ({
-  src: "/images/logo.png",
-  alt: "Logo"
-})).withConfig({
-  displayName: "Nav__NavLogo",
-  componentId: "r7d7s0-0"
-})(["max-width:40rem;@media only screen  and (max-device-width:1500px)  and (-webkit-min-device-pixel-ratio:2){max-width:20rem;}cursor:pointer;"]);
-class Nav extends react__WEBPACK_IMPORTED_MODULE_1__["Component"] {
-  constructor(props) {
-    super(props);
-
-    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(this, "handleClick", () => {
-      this.setState(prev => ({
-        isOpen: !prev.isOpen
-      }));
-    });
-
-    this.state = {
-      isOpen: false
-    };
-  }
-
-  render() {
-    return __jsx(_styles_NavStyles__WEBPACK_IMPORTED_MODULE_5__["NavStyles"], {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 42
-      },
-      __self: this
-    }, __jsx(_styles_NavStyles__WEBPACK_IMPORTED_MODULE_5__["HiddenNavBG"], {
-      isOpen: this.state.isOpen,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 43
-      },
-      __self: this
-    }), __jsx(_styles_NavStyles__WEBPACK_IMPORTED_MODULE_5__["HiddenContainer"], {
-      isOpen: this.state.isOpen,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 44
-      },
-      __self: this
-    }, __jsx("div", {
-      className: "nav_box-1",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 45
-      },
-      __self: this
-    }, __jsx("div", {
-      className: "",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 46
-      },
-      __self: this
-    }, __jsx(NavLogo, {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 47
-      },
-      __self: this
-    })), __jsx("div", {
-      className: "nav-inner",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 49
-      },
-      __self: this
-    }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_4__["Typography"], {
-      className: "nav-inner-title",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 50
-      },
-      __self: this
-    }, "Europe's braking technology conference & exhibition"), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_4__["Typography"], {
-      className: "nav-inner-text",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 51
-      },
-      __self: this
-    }, "2-4 June 2020, CCIB, Barcelona, Spain"))), __jsx("div", {
-      className: "nav_container-1",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 54
-      },
-      __self: this
-    }, __jsx("div", {
-      className: "nav_box-right",
-      style: {},
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 55
-      },
-      __self: this
-    }, __jsx(_Dates__WEBPACK_IMPORTED_MODULE_7__["Box"], {
-      MW: "35rem",
-      handleClick: this.handleClick,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 56
-      },
-      __self: this
-    })), __jsx("div", {
-      className: "nav_box-middle",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 58
-      },
-      __self: this
-    }, __jsx("div", {
-      className: "nav_box-middle-1",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 59
-      },
-      __self: this
-    }, __jsx("div", {
-      className: "nav-title-box",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 60
-      },
-      __self: this
-    }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_4__["Typography"], {
-      className: "nav-title",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 61
-      },
-      __self: this
-    }, "For Delegates"), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_4__["Typography"], {
-      className: "nav-links",
-      style: {
-        color: '#F9B721'
-      },
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 62
-      },
-      __self: this
-    }, "& Visitors")), __jsx("div", {
-      className: "nav-links-box",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 65
-      },
-      __self: this
-    }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
-      href: "/",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 66
-      },
-      __self: this
-    }, __jsx("a", {
-      onClick: this.handleClick,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 66
-      },
-      __self: this
-    }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_4__["Typography"], {
-      className: "nav-links",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 66
-      },
-      __self: this
-    }, "Home"))), __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
-      href: "/about",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 67
-      },
-      __self: this
-    }, __jsx("a", {
-      onClick: this.handleClick,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 67
-      },
-      __self: this
-    }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_4__["Typography"], {
-      className: "nav-links",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 67
-      },
-      __self: this
-    }, "About"))), __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
-      href: "/exhibitorsRegistration",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 68
-      },
-      __self: this
-    }, __jsx("a", {
-      onClick: this.handleClick,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 68
-      },
-      __self: this
-    }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_4__["Typography"], {
-      className: "nav-links",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 68
-      },
-      __self: this
-    }, "Registration"))), __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
-      href: "/technicalProgram",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 69
-      },
-      __self: this
-    }, __jsx("a", {
-      onClick: this.handleClick,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 69
-      },
-      __self: this
-    }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_4__["Typography"], {
-      className: "nav-links",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 69
-      },
-      __self: this
-    }, "Technical Program"))), __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
-      href: "/welcome",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 70
-      },
-      __self: this
-    }, __jsx("a", {
-      onClick: this.handleClick,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 70
-      },
-      __self: this
-    }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_4__["Typography"], {
-      className: "nav-links",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 70
-      },
-      __self: this
-    }, "Welcome to Barcelona"))), __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
-      href: "/f/[id]/[formType]",
-      as: `/f/FISITA/contact`,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 71
-      },
-      __self: this
-    }, __jsx("a", {
-      onClick: this.handleClick,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 71
-      },
-      __self: this
-    }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_4__["Typography"], {
-      className: "nav-links",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 71
-      },
-      __self: this
-    }, "Contact Us")))), __jsx("div", {
-      className: "nav-title-box",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 74
-      },
-      __self: this
-    }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_4__["Typography"], {
-      className: "nav-title",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 75
-      },
-      __self: this
-    }, "For Students"), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_4__["Typography"], {
-      className: "nav-links",
-      style: {
-        color: '#F9B721'
-      },
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 76
-      },
-      __self: this
-    }, "& Educators")), __jsx("div", {
-      className: "nav-links-box",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 79
-      },
-      __self: this
-    }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
-      href: "/esop",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 80
-      },
-      __self: this
-    }, __jsx("a", {
-      onClick: this.handleClick,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 80
-      },
-      __self: this
-    }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_4__["Typography"], {
-      className: "nav-links",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 80
-      },
-      __self: this
-    }, "ESOP - Student Opportunities Programme"))))), __jsx("div", {
-      className: "nav_box-middle-2",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 84
-      },
-      __self: this
-    }, __jsx("div", {
-      className: "nav-title-box",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 86
-      },
-      __self: this
-    }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_4__["Typography"], {
-      className: "nav-title",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 87
-      },
-      __self: this
-    }, "For Exhibitors"), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_4__["Typography"], {
-      className: "nav-links",
-      style: {
-        color: '#F9B721'
-      },
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 88
-      },
-      __self: this
-    }, "& Sponsors")), __jsx("div", {
-      className: "nav-links-box",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 91
-      },
-      __self: this
-    }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
-      href: "/exhibitAndSponsor",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 92
-      },
-      __self: this
-    }, __jsx("a", {
-      onClick: this.handleClick,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 92
-      },
-      __self: this
-    }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_4__["Typography"], {
-      className: "nav-links",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 92
-      },
-      __self: this
-    }, "Exhibit And Sponsor"))), __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
-      href: "/exhibitors",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 93
-      },
-      __self: this
-    }, __jsx("a", {
-      onClick: this.handleClick,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 93
-      },
-      __self: this
-    }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_4__["Typography"], {
-      className: "nav-links",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 93
-      },
-      __self: this
-    }, "Exhibitor Directory"))))), __jsx("div", {
-      className: "nav_box-middle-3",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 97
-      },
-      __self: this
-    }, __jsx("div", {
-      className: "nav-title-box",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 98
-      },
-      __self: this
-    }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_4__["Typography"], {
-      className: "nav-title",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 99
-      },
-      __self: this
-    }, "For Authors"), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_4__["Typography"], {
-      className: "nav-links",
-      style: {
-        color: '#F9B721'
-      },
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 100
-      },
-      __self: this
-    }, "& Speakers")), __jsx("div", {
-      className: "nav-links-box",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 103
-      },
-      __self: this
-    }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
-      href: "/authorsArea",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 104
-      },
-      __self: this
-    }, __jsx("a", {
-      onClick: this.handleClick,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 104
-      },
-      __self: this
-    }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_4__["Typography"], {
-      className: "nav-links",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 104
-      },
-      __self: this
-    }, "Authors Area"))), __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
-      href: "/authorsAreaInstructions",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 105
-      },
-      __self: this
-    }, __jsx("a", {
-      onClick: this.handleClick,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 105
-      },
-      __self: this
-    }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_4__["Typography"], {
-      className: "nav-links",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 105
-      },
-      __self: this
-    }, "Templates")))))), __jsx("div", {
-      className: "nav_box-left",
-      style: {},
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 111
-      },
-      __self: this
-    }, __jsx(_Dates__WEBPACK_IMPORTED_MODULE_7__["Dates"], {
-      MW: "35rem",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 112
-      },
-      __self: this
-    }))), __jsx("div", {
-      className: "nav_box-bottom",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 115
-      },
-      __self: this
-    }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_4__["Typography"], {
-      className: "nav_box-bottom-text",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 116
-      },
-      __self: this
-    }, "Organised by"), __jsx("a", {
-      href: "https://www.fisita.com/",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 117
-      },
-      __self: this
-    }, __jsx(_Icons__WEBPACK_IMPORTED_MODULE_9__["FLogoWhite"], {
-      width: "16rem",
-      height: "5rem",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 117
-      },
-      __self: this
-    })))), __jsx(_styles_NavStyles__WEBPACK_IMPORTED_MODULE_5__["Burger"], {
-      isOpen: this.state.isOpen,
-      onClick: this.handleClick,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 121
-      },
-      __self: this
-    }, __jsx(_styles_NavStyles__WEBPACK_IMPORTED_MODULE_5__["TopBun"], {
-      isOpen: this.state.isOpen,
-      sticky: this.props.sticky,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 122
-      },
-      __self: this
-    })));
-  }
-
-} // <Link href="/"><a onClick={this.handleClick} >Home</a></Link>
-//                             <Link href="/about"><a onClick={this.handleClick} >About</a></Link>
-//                             <Link href="/authorsArea"><a onClick={this.handleClick}>Authors Area</a></Link>
-//                             {/* <Link href="/exhibitorsArea"><a onClick={this.handleClick}>Exhibitors Area</a></Link> */}
-//                             <Link href="/f/[id]/[formType]" as={`/f/FISITA/contact`} ><a onClick={this.handleClick} >Contact Us</a></Link>
-//                             <Link href="/esop"><a onClick={this.handleClick}>Student Opportunities Programme</a></Link>
-//                             <Link href="/exhibitAndSponsor"><a onClick={this.handleClick}>Exhibition And Sponsorship</a></Link>
-//                             <Link href="/welcome"><a onClick={this.handleClick}>Welcome to Barcelona</a></Link>
-//                             <Link href="/exhibitors"><a onClick={this.handleClick}>Exhibitors List</a></Link>
-//                             <Link href="/exhibitorsRegistration"><a onClick={this.handleClick}>Delegate Registration</a></Link>
-//                             <Link href="/technicalProgram"><a onClick={this.handleClick}>Technical Program</a></Link>
-//                             <Link href="/studentArea" ><a onClick={this.handleClick}>Testing</a></Link>
-
-/***/ }),
-
-/***/ "./components/Page.js":
-/*!****************************!*\
-  !*** ./components/Page.js ***!
-  \****************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Page; });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _Header__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Header */ "./components/Header.js");
-/* harmony import */ var _Footer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Footer */ "./components/Footer.js");
-/* harmony import */ var _Meta__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Meta */ "./components/Meta.js");
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! styled-components */ "styled-components");
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_4__);
-var _jsxFileName = "/mnt/c/Users/D.Hardiman/desktop/eurobrake/components/Page.js";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
-
-
-
-
-
-const theme = {
-  black: '#000',
-  white: '#FFF',
-  primary: '#134381',
-  primary2: '#D2E6FF',
-  secondary: '#F9B721',
-  MPRegular: 'MyriadPro-Regular',
-  MPBold: 'MyriadPro-Bold',
-  MPBoldIt: 'MyriadPro-BoldIt',
-  MPSemibold: 'MyriadPro-Semibold',
-  MPLight: 'MyriadPro-Light',
-  MPLightIt: 'MyriadPro-LightIt',
-  MPIt: 'MyriadPro-It',
-  MPBlack: 'MyriadPro-Black',
-  MPBlackIt: 'MyriadPro-BlackIt',
-  heroHeightSmlLand: '60vw',
-  heroHeightSml: '60vh',
-  heroHeightBigLand: '100vw',
-  heroHeightBig: '100vh',
-  laptopWidth: '65%',
-  mobileWidth: '80%',
-  tabletWidth: '90%',
-  minWidth: '50%',
-  bs: '0 1.2rem 2.4rem rgba(0, 0, 0, .09)'
-};
-const StyledPage = styled_components__WEBPACK_IMPORTED_MODULE_4___default.a.div.withConfig({
-  displayName: "Page__StyledPage",
-  componentId: "sc-1cyutnt-0"
-})(["display:flex;flex-flow:column;justify-content:space-between;background:white;"]);
-const GlobalStyle = styled_components__WEBPACK_IMPORTED_MODULE_4__["createGlobalStyle"]`
-    @font-face {
-    font-family: 'MyriadPro-Regular';
-    src: url('/fonts/MyriadPro-Regular.otf');
-    font-weight: normal;
-    font-display: auto;
-    font-style: normal;
-    };
-    @font-face {
-    font-family: 'MyriadPro-Bold';
-    src: url('/fonts/MyriadPro-Bold.otf');
-    font-weight: bold;
-    font-display: auto;
-    font-style: normal;
-    };
-    @font-face {
-    font-family: 'MyriadPro-BoldIt';
-    src: url('/fonts/MyriadPro-BoldIt.otf');
-    font-weight: bold;
-    font-display: auto;
-    font-style: normal;
-    };
-    @font-face {
-    font-family: 'MyriadPro-Semibold';
-    src: url('/fonts/MyriadPro-Semibold.otf');
-    font-weight: 600;
-    font-display: auto;
-    font-style: normal;
-    };
-    @font-face {
-    font-family: 'MyriadPro-Light';
-    src: url('/fonts/MyriadPro-Light.otf');
-    font-weight: 300;
-    font-display: auto;
-    font-style: normal;
-    };
-    @font-face {
-    font-family: 'MyriadPro-LightIt';
-    src: url('/fonts/MyriadPro-LightIt.otf');
-    font-weight: lighter;
-    font-display: auto;
-    font-style: normal;
-    };
-    @font-face {
-    font-family: 'MyriadPro-It';
-    src: url('/fonts/MyriadPro-It.otf');
-    font-display: auto;
-    font-style: normal;
-    };
-    @font-face {
-    font-family: 'MyriadPro-Black';
-    src: url('/fonts/MyriadPro-Black.otf');
-    font-weight: 300;
-    font-display: auto;
-    font-style: normal;
-    };
-    @font-face {
-    font-family: 'MyriadPro-BlackIt';
-    src: url('/fonts/MyriadPro-BlackIt.otf');
-    font-weight: 300;
-    font-display: auto;
-    font-style: normal;
-    };
-    *,
-    *::before,
-    *::after{
-        margin: 0;
-        padding: 0;
-        box-sizing: inherit;
-    };
-    html{
-        height: 100%;
-        box-sizing:  border-box;
-        font-size: 62.5%; 
-        
-    };
-    body{
-        /* To set the footer at the bottom we have to leave space for it in the parent container */
-        position: relative;
-        min-height: 100%;
-        padding-bottom: 40rem;
-         /* ! FOOTER PADDING , HAS BEEN KNOW TO PUSH PAGE UP
-        font-family: ${props => props.theme.MPRegular};
-        color: black;
-        line-height: 1.6;
-        /* 1.2 */
-    }
-    
-    a{
-        text-decoration: none;
-        color: black;
-    }
-    ;
-`;
-class Page extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
-  render() {
-    return __jsx(styled_components__WEBPACK_IMPORTED_MODULE_4__["ThemeProvider"], {
-      theme: theme,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 144
-      },
-      __self: this
-    }, __jsx(GlobalStyle, {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 145
-      },
-      __self: this
-    }), __jsx(StyledPage, {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 146
-      },
-      __self: this
-    }, __jsx(_Meta__WEBPACK_IMPORTED_MODULE_3__["default"], {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 147
-      },
-      __self: this
-    }), __jsx(_Header__WEBPACK_IMPORTED_MODULE_1__["default"], {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 148
-      },
-      __self: this
-    }), this.props.children, __jsx(_Footer__WEBPACK_IMPORTED_MODULE_2__["default"], {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 150
-      },
-      __self: this
-    })));
-  }
-
-}
-
-/***/ }),
-
-/***/ "./components/SponsorCarousel.js":
-/*!***************************************!*\
-  !*** ./components/SponsorCarousel.js ***!
-  \***************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return SponsorCarousel; });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "styled-components");
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var react_reveal_makeCarousel__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-reveal/makeCarousel */ "react-reveal/makeCarousel");
-/* harmony import */ var react_reveal_makeCarousel__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_reveal_makeCarousel__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var react_reveal_Slide__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-reveal/Slide */ "react-reveal/Slide");
-/* harmony import */ var react_reveal_Slide__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_reveal_Slide__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @material-ui/core/Typography */ "@material-ui/core/Typography");
-/* harmony import */ var _material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_4__);
-var _jsxFileName = "/mnt/c/Users/D.Hardiman/desktop/eurobrake/components/SponsorCarousel.js";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
-
-
-
-
-
-const SponsorContainer = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div.withConfig({
-  displayName: "SponsorCarousel__SponsorContainer",
-  componentId: "p6ud71-0"
-})(["margin-top:5rem;align-self:center;display:flex;flex-flow:column;align-items:center;width:", ";@media only screen  and (max-device-width:768px)  and (-webkit-min-device-pixel-ratio:2){width:", ";}.sponsor-top{&_title{color:", ";font-family:", ";font-size:2rem;}}"], props => props.theme.minWidth, props => props.theme.mobileWidth, props => props.theme.primary, props => props.theme.MPLightIt);
-const SponsorBox = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div.withConfig({
-  displayName: "SponsorCarousel__SponsorBox",
-  componentId: "p6ud71-1"
-})(["height:10rem;display:flex;flex-flow:wrap;border:1px solid white;display:flex;justify-content:flex-start;align-items:center;.sponsor{margin:1rem;cursor:pointer;}"]);
-
-const CarouselUI = ({
-  children
-}) => __jsx(Container, {
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 57
-  },
-  __self: undefined
-}, children);
-
-const Carousel = react_reveal_makeCarousel__WEBPACK_IMPORTED_MODULE_2___default()(CarouselUI);
-function SponsorCarousel() {
-  return __jsx(SponsorContainer, {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 62
-    },
-    __self: this
-  }, __jsx("div", {
-    className: "sponsor-top",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 63
-    },
-    __self: this
-  }, __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_4___default.a, {
-    gutterBottom: true,
-    className: "sponsor-top_title",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 64
-    },
-    __self: this
-  }, "Confirmed EuroBrake 2020 Sponsors")), __jsx(SponsorBox, {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 66
-    },
-    __self: this
-  }, __jsx("div", {
-    className: "sponsor",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 68
-    },
-    __self: this
-  }, __jsx("a", {
-    href: "http://www.applusidiada.com/en/",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 68
-    },
-    __self: this
-  }, __jsx("img", {
-    src: "https://www.eurobrake.net/res/display/default/chrome/logos/applus-idiada2.png",
-    alt: "",
-    style: {
-      maxHeight: '5rem',
-      width: '10rem'
-    },
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 68
-    },
-    __self: this
-  }))), __jsx("div", {
-    className: "sponsor",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 69
-    },
-    __self: this
-  }, __jsx("a", {
-    href: "http://www.itt.com/",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 69
-    },
-    __self: this
-  }, __jsx("img", {
-    src: "https://www.eurobrake.net/res/display/default/chrome/logos/itt.png",
-    alt: "",
-    style: {
-      maxHeight: '5rem',
-      width: '8rem'
-    },
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 69
-    },
-    __self: this
-  }))), __jsx("div", {
-    className: "sponsor",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 70
-    },
-    __self: this
-  }, __jsx("a", {
-    href: "http://www.horiba.com/",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 70
-    },
-    __self: this
-  }, __jsx("img", {
-    src: "https://www.eurobrake.net/res/display/default/chrome/logos/horiba2.png",
-    alt: "",
-    style: {
-      maxHeight: '5rem',
-      width: '10rem'
-    },
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 70
-    },
-    __self: this
-  }))), __jsx("div", {
-    className: "sponsor",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 71
-    },
-    __self: this
-  }, __jsx("a", {
-    href: "http://www.nofmetalcoatings.com/",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 71
-    },
-    __self: this
-  }, __jsx("img", {
-    src: "https://www.eurobrake.net/res/display/default/chrome/logos/nof2.png",
-    alt: "",
-    style: {
-      maxheight: '5rem',
-      width: '10rem'
-    },
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 71
-    },
-    __self: this
-  }))), __jsx("div", {
-    className: "sponsor",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 72
-    },
-    __self: this
-  }, __jsx("a", {
-    href: "http://www.itaprochim.it/",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 72
-    },
-    __self: this
-  }, __jsx("img", {
-    src: "https://www.eurobrake.net/res/display/default/chrome/logos/itaprochim3.png",
-    alt: "",
-    style: {
-      maxHeight: '5rem',
-      width: '10rem'
-    },
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 72
-    },
-    __self: this
-  }))), __jsx("div", {
-    className: "sponsor",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 73
-    },
-    __self: this
-  }, __jsx("a", {
-    href: "http://www.linkeng.com/",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 73
-    },
-    __self: this
-  }, __jsx("img", {
-    src: "https://www.eurobrake.net/res/display/default/chrome/logos/link3.png",
-    alt: "",
-    style: {
-      maxHeight: '5rem',
-      width: '7rem'
-    },
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 73
-    },
-    __self: this
-  }))), __jsx("div", {
-    className: "sponsor",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 74
-    },
-    __self: this
-  }, __jsx("a", {
-    href: "http://www.fagorederlan.es/",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 74
-    },
-    __self: this
-  }, __jsx("img", {
-    src: "https://www.eurobrake.net/res/display/default/chrome/logos/fagorederlangroup.png",
-    alt: "",
-    style: {
-      maxHeight: '5rem',
-      width: '10rem'
-    },
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 74
-    },
-    __self: this
-  }))), __jsx("div", {
-    className: "sponsor",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 75
-    },
-    __self: this
-  }, __jsx("a", {
-    href: "http://www.lapinus.com/",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 75
-    },
-    __self: this
-  }, __jsx("img", {
-    src: "https://www.eurobrake.net/res/display/default/chrome/logos/lapinus2.png",
-    alt: "",
-    style: {
-      maxHeight: '5rem',
-      width: '10rem'
-    },
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 75
-    },
-    __self: this
-  }))), __jsx("div", {
-    className: "sponsor",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 76
-    },
-    __self: this
-  }, __jsx("a", {
-    href: "http://www.sadeca.com/",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 76
-    },
-    __self: this
-  }, __jsx("img", {
-    src: "https://www.eurobrake.net/res/display/default/chrome/logos/sadeca2.png",
-    alt: "",
-    style: {
-      maxHeight: '5rem',
-      width: '10rem'
-    },
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 76
-    },
-    __self: this
-  }))), __jsx("div", {
-    className: "sponsor",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 77
-    },
-    __self: this
-  }, __jsx("a", {
-    href: "http://www.alroko.de/",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 77
-    },
-    __self: this
-  }, __jsx("img", {
-    src: "https://www.eurobrake.net/res/display/default/chrome/logos/alroko.png",
-    alt: "",
-    style: {
-      maxHeight: '5rem',
-      width: '10rem'
-    },
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 77
-    },
-    __self: this
-  })))));
-}
-
-/***/ }),
-
-/***/ "./components/StudentSection.js":
-/*!**************************************!*\
-  !*** ./components/StudentSection.js ***!
-  \**************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return StudentSection; });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var react_reveal_Bounce__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-reveal/Bounce */ "react-reveal/Bounce");
-/* harmony import */ var react_reveal_Bounce__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_reveal_Bounce__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _styles_HomeStyles__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./styles/HomeStyles */ "./components/styles/HomeStyles.js");
-/* harmony import */ var _Card__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Card */ "./components/Card.js");
-/* harmony import */ var _Button__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Button */ "./components/Button.js");
-/* harmony import */ var react_reveal_withReveal__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-reveal/withReveal */ "react-reveal/withReveal");
-/* harmony import */ var react_reveal_withReveal__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react_reveal_withReveal__WEBPACK_IMPORTED_MODULE_6__);
-var _jsxFileName = "/mnt/c/Users/D.Hardiman/desktop/eurobrake/components/StudentSection.js";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
-
-
-
-
-
-
-
-
-const StudentCard = () => __jsx(_Card__WEBPACK_IMPORTED_MODULE_4__["Card"], {
-  right: true,
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 11
-  },
-  __self: undefined
-}, __jsx("h1", {
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 12
-  },
-  __self: undefined
-}, "Learn more about ESOP"), __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-  href: "/esop",
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 13
-  },
-  __self: undefined
-}, __jsx(_Button__WEBPACK_IMPORTED_MODULE_5__["Button"], {
-  br: "500rem",
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 14
-  },
-  __self: undefined
-}, "ESOP")));
-
-const BounceStudentCard = react_reveal_withReveal__WEBPACK_IMPORTED_MODULE_6___default()(StudentCard, __jsx(react_reveal_Bounce__WEBPACK_IMPORTED_MODULE_2___default.a, {
-  left: true,
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 19
-  },
-  __self: undefined
-}));
-function StudentSection() {
-  return __jsx(_styles_HomeStyles__WEBPACK_IMPORTED_MODULE_3__["StyledSection"], {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 25
-    },
-    __self: this
-  }, __jsx("h1", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 26
-    },
-    __self: this
-  }, "Student Opportunities Programme"), __jsx("p", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 27
-    },
-    __self: this
-  }, "The EuroBrake Student Opportunities Programme (ESOP) offers 50 students from around the world the chance to attend EuroBrake 2020."), __jsx("p", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 28
-    },
-    __self: this
-  }, "Selected students will be offered the opportunity to attend EuroBrake via a sponsorship package which offers a strong networking opportunities, a CV check/one to one career advice with HR representatives from the sponsor companies, access to the designated Student Lounge and much more."), __jsx("div", {
-    className: "innerContainer",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 30
-    },
-    __self: this
-  }, __jsx("div", {
-    className: "mediaBox",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 31
-    },
-    __self: this
-  }, __jsx("img", {
-    src: "https://live.staticflickr.com/65535/48016169592_4d79e976bd_b.jpg",
-    alt: "EuroBrake Greating",
-    style: {
-      width: '100%',
-      height: '100%'
-    },
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 32
-    },
-    __self: this
-  })), __jsx(BounceStudentCard, {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 34
-    },
-    __self: this
-  })));
-} // src="/images/pic2.png"
-
-/***/ }),
-
 /***/ "./components/StyledCarousel.js":
 /*!**************************************!*\
   !*** ./components/StyledCarousel.js ***!
@@ -7959,30 +5670,38 @@ function StyledCarousel() {
 
 /***/ }),
 
-/***/ "./components/exhibitors/ExhibitionSection.js":
-/*!****************************************************!*\
-  !*** ./components/exhibitors/ExhibitionSection.js ***!
-  \****************************************************/
-/*! exports provided: default */
+/***/ "./components/forms/Esop.js":
+/*!**********************************!*\
+  !*** ./components/forms/Esop.js ***!
+  \**********************************/
+/*! exports provided: Esop */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return ExhibitionSection; });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _styles_HomeStyles__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../styles/HomeStyles */ "./components/styles/HomeStyles.js");
-/* harmony import */ var _Card__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../Card */ "./components/Card.js");
-/* harmony import */ var _Button__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../Button */ "./components/Button.js");
-/* harmony import */ var react_reveal_Bounce__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-reveal/Bounce */ "react-reveal/Bounce");
-/* harmony import */ var react_reveal_Bounce__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react_reveal_Bounce__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var react_reveal_withReveal__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-reveal/withReveal */ "react-reveal/withReveal");
-/* harmony import */ var react_reveal_withReveal__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react_reveal_withReveal__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _utils_mixins__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../utils/mixins */ "./utils/mixins.js");
-var _jsxFileName = "/mnt/c/Users/D.Hardiman/desktop/eurobrake/components/exhibitors/ExhibitionSection.js";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Esop", function() { return Esop; });
+/* harmony import */ var _babel_runtime_corejs2_core_js_object_keys__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/core-js/object/keys */ "./node_modules/@babel/runtime-corejs2/core-js/object/keys.js");
+/* harmony import */ var _babel_runtime_corejs2_core_js_object_keys__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_core_js_object_keys__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var formik__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! formik */ "formik");
+/* harmony import */ var formik__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(formik__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _material_ui_core_MenuItem__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @material-ui/core/MenuItem */ "@material-ui/core/MenuItem");
+/* harmony import */ var _material_ui_core_MenuItem__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_MenuItem__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @material-ui/core/Typography */ "@material-ui/core/Typography");
+/* harmony import */ var _material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var formik_material_ui__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! formik-material-ui */ "formik-material-ui");
+/* harmony import */ var formik_material_ui__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(formik_material_ui__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _Button__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../Button */ "./components/Button.js");
+/* harmony import */ var _FormSelects__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./FormSelects */ "./components/forms/FormSelects.js");
+/* harmony import */ var _FormControl__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./FormControl */ "./components/forms/FormControl.js");
+/* harmony import */ var _Formstyles__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./Formstyles */ "./components/forms/Formstyles.js");
+/* harmony import */ var _FormActions__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./FormActions */ "./components/forms/FormActions.js");
+
+var _jsxFileName = "/mnt/c/Users/D.Hardiman/desktop/eurobrake/components/forms/Esop.js";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 
 
 
@@ -7992,104 +5711,2364 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 
-const ExhibitCard = () => __jsx(_Card__WEBPACK_IMPORTED_MODULE_3__["Card"], {
-  left: true,
-  style: {
-    opacity: '1'
-  },
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 11
-  },
-  __self: undefined
-}, __jsx("h1", {
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 12
-  },
-  __self: undefined
-}, "Partner your brand with EuroBrake"), __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-  href: "/exhibitAndSponsor",
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 13
-  },
-  __self: undefined
-}, __jsx(_Button__WEBPACK_IMPORTED_MODULE_4__["Button"], {
-  br: "500rem",
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 14
-  },
-  __self: undefined
-}, "EXHIBIT/SPONSOR")));
 
-const BounceExhibitCard = react_reveal_withReveal__WEBPACK_IMPORTED_MODULE_6___default()(ExhibitCard, __jsx(react_reveal_Bounce__WEBPACK_IMPORTED_MODULE_5___default.a, {
-  left: true,
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 19
-  },
-  __self: undefined
-}));
-function ExhibitionSection() {
-  return __jsx(_styles_HomeStyles__WEBPACK_IMPORTED_MODULE_2__["StyledSection"], {
+
+const Esop = props => {
+  const {
+    0: Toggle,
+    1: setToggle
+  } = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])(false);
+  const {
+    0: Status,
+    1: setStatus
+  } = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])(null);
+  const {
+    presets,
+    csrf,
+    apiUrl
+  } = props;
+  const url = `https://prelude.eurobrake.net/esop`;
+  return __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Formik"], {
+    initialValues: emptyInitial || presets,
+    validationSchema: _FormControl__WEBPACK_IMPORTED_MODULE_9__["EsopSchema"],
+    enableReinitialize: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 23
+      lineNumber: 22
     },
-    __self: this
-  }, __jsx("h1", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 24
-    },
-    __self: this
-  }, "Exhibition and Sponsorship"), __jsx("p", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 25
-    },
-    __self: this
-  }, "EuroBrake\u2019s accompanying technical exhibition offers an ideal opportunity to present your company\u2019s products, services and technical capabilities to key decision-makers, from industry players to new entrants in specialist engineering."), __jsx("div", {
-    className: "innerContainer",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 27
-    },
-    __self: this
-  }, __jsx("div", {
-    className: "mediaBox",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 28
-    },
-    __self: this
-  }, __jsx("img", {
-    src: "https://live.staticflickr.com/65535/48015806353_84e40e5464_b.jpg",
-    alt: "EuroBrake Greating",
-    style: {
-      width: '100%',
-      height: '100%'
-    },
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 29
-    },
-    __self: this
-  })), __jsx(BounceExhibitCard, {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 31
-    },
-    __self: this
-  })));
-} // src="/images/pic2.png"src="https://live.staticflickr.com/65535/48016056853_9893d1088d_b.jpg"
-// {winWidth() ? 
-// :
-// <>
-// </>
-// }
+    __self: undefined
+  }, ({
+    values,
+    handleChange,
+    setFieldTouched,
+    isValidating,
+    validateForm,
+    handleSubmit,
+    errors,
+    isSubmitting
+  }) => {
+    const allTouched = async () => {
+      await _babel_runtime_corejs2_core_js_object_keys__WEBPACK_IMPORTED_MODULE_0___default()(values).forEach(key => {
+        setFieldTouched(key, true);
+      });
+      await validateForm().then(errors => _babel_runtime_corejs2_core_js_object_keys__WEBPACK_IMPORTED_MODULE_0___default()(errors).length === 0 && onSubmit());
+    };
+
+    const onSubmit = async () => {
+      await setLoading(true);
+      values.__csrf_token = csrf;
+      await console.log('submitting');
+      let res = await Object(_FormActions__WEBPACK_IMPORTED_MODULE_11__["SendFile"])({
+        values,
+        url,
+        csrf
+      });
+      let data = await res;
+      let dataStatus = (await data) && data.status;
+      setStatus(dataStatus);
+      console.log({
+        data
+      });
+
+      let result = async () => {
+        await setLoading(false);
+        await setToggle(true);
+      };
+
+      return result();
+    };
+
+    return __jsx(_Formstyles__WEBPACK_IMPORTED_MODULE_10__["StyledForm"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 56
+      },
+      __self: undefined
+    }, __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_5___default.a, {
+      className: "form-title",
+      style: {
+        marginTop: '4rem'
+      },
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 57
+      },
+      __self: undefined
+    }, "About you"), __jsx("div", {
+      className: "form-field",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 58
+      },
+      __self: undefined
+    }, __jsx("label", {
+      htmlFor: "label",
+      className: "form-label",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 59
+      },
+      __self: undefined
+    }, "Title"), __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Field"], {
+      className: "form-input",
+      onClick: handleChange,
+      value: values.student_title,
+      style: {
+        color: '#134381'
+      },
+      name: "student_title",
+      component: formik_material_ui__WEBPACK_IMPORTED_MODULE_6__["Select"],
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 64
+      },
+      __self: undefined
+    }, _FormSelects__WEBPACK_IMPORTED_MODULE_8__["titles"].map((option, i) => __jsx(_material_ui_core_MenuItem__WEBPACK_IMPORTED_MODULE_4___default.a, {
+      key: i,
+      style: {
+        fontSize: '1.5rem',
+        cursor: 'pointer'
+      },
+      value: option.value,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 73
+      },
+      __self: undefined
+    }, option.label)))), __jsx("div", {
+      className: "form-field",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 76
+      },
+      __self: undefined
+    }, __jsx("label", {
+      htmlFor: "label",
+      className: "form-label",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 77
+      },
+      __self: undefined
+    }, "First Name:"), __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Field"], {
+      className: "form-input",
+      onClick: handleChange,
+      value: values.student_firstname,
+      style: {
+        color: '#134381'
+      },
+      name: "student_firstname",
+      component: formik_material_ui__WEBPACK_IMPORTED_MODULE_6__["TextField"],
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 82
+      },
+      __self: undefined
+    })), __jsx("div", {
+      className: "form-field",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 91
+      },
+      __self: undefined
+    }, __jsx("label", {
+      htmlFor: "label",
+      className: "form-label",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 92
+      },
+      __self: undefined
+    }, "Last Name:"), __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Field"], {
+      className: "form-input",
+      onClick: handleChange,
+      value: values.student_lastname,
+      style: {
+        color: '#134381'
+      },
+      name: "student_lastname",
+      component: formik_material_ui__WEBPACK_IMPORTED_MODULE_6__["TextField"],
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 97
+      },
+      __self: undefined
+    })), __jsx("div", {
+      className: "form-field",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 106
+      },
+      __self: undefined
+    }, __jsx("label", {
+      htmlFor: "label",
+      className: "form-label",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 107
+      },
+      __self: undefined
+    }, "Email:"), __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Field"], {
+      className: "form-input",
+      onClick: handleChange,
+      value: values.student_email,
+      style: {
+        color: '#134381'
+      },
+      name: "student_email",
+      component: formik_material_ui__WEBPACK_IMPORTED_MODULE_6__["TextField"],
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 112
+      },
+      __self: undefined
+    })), __jsx("div", {
+      className: "form-field",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 121
+      },
+      __self: undefined
+    }, __jsx("label", {
+      htmlFor: "label",
+      className: "form-label",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 122
+      },
+      __self: undefined
+    }, "Address:"), __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Field"], {
+      className: "form-input",
+      onClick: handleChange,
+      value: values.student_address1,
+      style: {
+        color: '#134381'
+      },
+      name: "student_address1",
+      component: formik_material_ui__WEBPACK_IMPORTED_MODULE_6__["TextField"],
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 127
+      },
+      __self: undefined
+    })), __jsx("div", {
+      className: "form-field",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 136
+      },
+      __self: undefined
+    }, __jsx("label", {
+      htmlFor: "label",
+      className: "form-label",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 137
+      },
+      __self: undefined
+    }), __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Field"], {
+      className: "form-input",
+      onClick: handleChange,
+      value: values.student_address2,
+      style: {
+        color: '#134381'
+      },
+      name: "student_address2",
+      component: formik_material_ui__WEBPACK_IMPORTED_MODULE_6__["TextField"],
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 142
+      },
+      __self: undefined
+    })), __jsx("div", {
+      className: "form-field",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 151
+      },
+      __self: undefined
+    }, __jsx("label", {
+      htmlFor: "label",
+      className: "form-label",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 152
+      },
+      __self: undefined
+    }), __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Field"], {
+      className: "form-input",
+      onClick: handleChange,
+      value: values.student_address3,
+      style: {
+        color: '#134381'
+      },
+      name: "student_address3",
+      component: formik_material_ui__WEBPACK_IMPORTED_MODULE_6__["TextField"],
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 157
+      },
+      __self: undefined
+    })), __jsx("div", {
+      className: "form-field",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 166
+      },
+      __self: undefined
+    }, __jsx("label", {
+      htmlFor: "label",
+      className: "form-label",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 167
+      },
+      __self: undefined
+    }, "City:"), __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Field"], {
+      className: "form-input",
+      onClick: handleChange,
+      value: values.student_city,
+      style: {
+        color: '#134381'
+      },
+      name: "student_city",
+      component: formik_material_ui__WEBPACK_IMPORTED_MODULE_6__["TextField"],
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 172
+      },
+      __self: undefined
+    })), __jsx("div", {
+      className: "form-field",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 181
+      },
+      __self: undefined
+    }, __jsx("label", {
+      htmlFor: "label",
+      className: "form-label",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 182
+      },
+      __self: undefined
+    }, "State/ County/ Province:"), __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Field"], {
+      className: "form-input",
+      onClick: handleChange,
+      value: values.student_scp,
+      style: {
+        color: '#134381'
+      },
+      name: "student_scp",
+      component: formik_material_ui__WEBPACK_IMPORTED_MODULE_6__["TextField"],
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 187
+      },
+      __self: undefined
+    })), __jsx("div", {
+      className: "form-field",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 196
+      },
+      __self: undefined
+    }, __jsx("label", {
+      htmlFor: "label",
+      className: "form-label",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 197
+      },
+      __self: undefined
+    }, "Postal/ Zip code:"), __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Field"], {
+      className: "form-input",
+      onClick: handleChange,
+      value: values.student_postal,
+      style: {
+        color: '#134381'
+      },
+      name: "student_postal",
+      component: formik_material_ui__WEBPACK_IMPORTED_MODULE_6__["TextField"],
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 202
+      },
+      __self: undefined
+    })), __jsx("div", {
+      className: "form-field",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 211
+      },
+      __self: undefined
+    }, __jsx("label", {
+      htmlFor: "label",
+      className: "form-label",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 212
+      },
+      __self: undefined
+    }, "Country"), __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Field"], {
+      className: "form-input",
+      onClick: handleChange,
+      value: values.student_country,
+      style: {
+        color: '#134381'
+      },
+      name: "student_country",
+      component: formik_material_ui__WEBPACK_IMPORTED_MODULE_6__["Select"],
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 217
+      },
+      __self: undefined
+    }, _FormSelects__WEBPACK_IMPORTED_MODULE_8__["countries"].map((option, i) => __jsx(_material_ui_core_MenuItem__WEBPACK_IMPORTED_MODULE_4___default.a, {
+      key: i,
+      style: {
+        fontSize: '1.5rem',
+        cursor: 'pointer'
+      },
+      value: option.value,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 226
+      },
+      __self: undefined
+    }, option.label)))), __jsx("div", {
+      className: "form-field",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 229
+      },
+      __self: undefined
+    }, __jsx("label", {
+      htmlFor: "label",
+      className: "form-label",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 230
+      },
+      __self: undefined
+    }, "Your FISITA member society"), __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Field"], {
+      className: "form-input",
+      onClick: handleChange,
+      value: values.student_country,
+      style: {
+        color: '#134381'
+      },
+      name: "student_membersociety",
+      component: formik_material_ui__WEBPACK_IMPORTED_MODULE_6__["Select"],
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 235
+      },
+      __self: undefined
+    }, _FormSelects__WEBPACK_IMPORTED_MODULE_8__["members"].map((option, i) => __jsx(_material_ui_core_MenuItem__WEBPACK_IMPORTED_MODULE_4___default.a, {
+      key: i,
+      style: {
+        fontSize: '1.5rem',
+        cursor: 'pointer'
+      },
+      value: option.value,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 244
+      },
+      __self: undefined
+    }, option.label)))), __jsx("div", {
+      className: "form-field",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 247
+      },
+      __self: undefined
+    }, __jsx("label", {
+      htmlFor: "label",
+      className: "form-label",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 248
+      },
+      __self: undefined
+    }, "Place of birth"), __jsx("div", {
+      className: "form-input",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 253
+      },
+      __self: undefined
+    }, __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Field"], {
+      placeholder: "City",
+      className: "form-input",
+      onClick: handleChange,
+      value: values.student_jobtitle,
+      style: {
+        color: '#134381',
+        marginBottom: '2rem',
+        width: '100%'
+      },
+      name: "birth_city",
+      component: formik_material_ui__WEBPACK_IMPORTED_MODULE_6__["TextField"],
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 254
+      },
+      __self: undefined
+    }), __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Field"], {
+      placeholder: "Country",
+      className: "form-input",
+      onClick: handleChange,
+      value: values.student_jobtitle,
+      style: {
+        color: '#134381',
+        width: '100%'
+      },
+      name: "birth_country",
+      component: formik_material_ui__WEBPACK_IMPORTED_MODULE_6__["TextField"],
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 263
+      },
+      __self: undefined
+    }))), __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_5___default.a, {
+      className: "form-title",
+      style: {
+        marginTop: '4rem'
+      },
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 274
+      },
+      __self: undefined
+    }, "Your University or HE Institution"), __jsx("div", {
+      className: "form-field-radio",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 275
+      },
+      __self: undefined
+    }, __jsx("label", {
+      htmlFor: "label",
+      className: "form-label-radio",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 276
+      },
+      __self: undefined
+    }, "What level of education have you achieved?"), __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Field"], {
+      className: "form-radio",
+      value: values.student_level_current,
+      style: {
+        color: '#134381'
+      },
+      name: "student_level_current",
+      component: formik_material_ui__WEBPACK_IMPORTED_MODULE_6__["RadioGroup"],
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 281
+      },
+      __self: undefined
+    }, __jsx("label", {
+      style: {
+        margin: '1rem'
+      },
+      htmlFor: "label",
+      className: "form-label",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 288
+      },
+      __self: undefined
+    }, __jsx("input", {
+      onChange: handleChange,
+      style: {
+        margin: '1rem'
+      },
+      type: "radio",
+      name: "student_level_current",
+      value: "none",
+      id: "student_level_current_none",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 292
+      },
+      __self: undefined
+    }), "None"), __jsx("label", {
+      style: {
+        margin: '1rem'
+      },
+      htmlFor: "label",
+      className: "form-label",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 302
+      },
+      __self: undefined
+    }, __jsx("input", {
+      style: {
+        margin: '1rem'
+      },
+      onChange: handleChange,
+      type: "radio",
+      name: "student_level_current",
+      value: "Bachelor",
+      id: "student_level_current_Bachelor",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 306
+      },
+      __self: undefined
+    }), "Bachelor or equivalent"), __jsx("label", {
+      style: {
+        margin: '1rem'
+      },
+      htmlFor: "label",
+      className: "form-label",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 316
+      },
+      __self: undefined
+    }, __jsx("input", {
+      style: {
+        margin: '1rem'
+      },
+      onChange: handleChange,
+      type: "radio",
+      name: "student_level_current",
+      value: "Master",
+      id: "student_level_current_Master",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 320
+      },
+      __self: undefined
+    }), "Master or equivalent")), errors.student_level_current && __jsx("label", {
+      style: {
+        position: 'absolute',
+        bottom: '-1rem',
+        right: '1rem',
+        color: '#ff0000',
+        fontSize: '1.5rem'
+      },
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 331
+      },
+      __self: undefined
+    }, errors.student_level_current)), __jsx("div", {
+      className: "form-field-radio",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 333
+      },
+      __self: undefined
+    }, __jsx("label", {
+      htmlFor: "label",
+      className: "form-label-radio",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 334
+      },
+      __self: undefined
+    }, "What degree are you currently studying towards?"), __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Field"], {
+      className: "form-radio",
+      value: values.student_level_seeking,
+      style: {
+        color: '#134381'
+      },
+      name: "student_level_seeking",
+      component: formik_material_ui__WEBPACK_IMPORTED_MODULE_6__["RadioGroup"],
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 339
+      },
+      __self: undefined
+    }, __jsx("label", {
+      style: {
+        margin: '1rem'
+      },
+      htmlFor: "label",
+      className: "form-label",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 346
+      },
+      __self: undefined
+    }, __jsx("input", {
+      style: {
+        margin: '1rem'
+      },
+      onChange: handleChange,
+      type: "radio",
+      name: "student_level_seeking",
+      value: "Bachelor",
+      id: "student_level_seeking_Bachelor",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 350
+      },
+      __self: undefined
+    }), "Bachelor or equivalent"), __jsx("label", {
+      style: {
+        margin: '1rem'
+      },
+      htmlFor: "label",
+      className: "form-label",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 360
+      },
+      __self: undefined
+    }, __jsx("input", {
+      style: {
+        margin: '1rem'
+      },
+      onChange: handleChange,
+      type: "radio",
+      name: "student_level_seeking",
+      value: "Master",
+      id: "student_level_seeking_Master",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 364
+      },
+      __self: undefined
+    }), "Master or equivalent"), __jsx("label", {
+      style: {
+        margin: '1rem'
+      },
+      htmlFor: "label",
+      className: "form-label",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 374
+      },
+      __self: undefined
+    }, __jsx("input", {
+      onChange: handleChange,
+      style: {
+        margin: '1rem'
+      },
+      type: "radio",
+      name: "student_level_seeking",
+      value: "PhD",
+      id: "student_level_seeking_PhD",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 378
+      },
+      __self: undefined
+    }), "PhD. or equivalent")), errors.student_level_seeking && __jsx("label", {
+      style: {
+        position: 'absolute',
+        bottom: '-1rem',
+        right: '1rem',
+        color: '#ff0000',
+        fontSize: '1.5rem'
+      },
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 389
+      },
+      __self: undefined
+    }, errors.student_level_seeking)), __jsx("div", {
+      className: "form-field",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 391
+      },
+      __self: undefined
+    }, __jsx("label", {
+      htmlFor: "label",
+      className: "form-label",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 392
+      },
+      __self: undefined
+    }, "Course being studied:"), __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Field"], {
+      className: "form-input",
+      onClick: handleChange,
+      value: values.university_course,
+      style: {
+        color: '#134381'
+      },
+      name: "university_course",
+      component: formik_material_ui__WEBPACK_IMPORTED_MODULE_6__["TextField"],
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 397
+      },
+      __self: undefined
+    })), __jsx("div", {
+      className: "form-field",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 406
+      },
+      __self: undefined
+    }, __jsx("label", {
+      htmlFor: "label",
+      className: "form-label",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 407
+      },
+      __self: undefined
+    }, "University / Institution"), __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Field"], {
+      className: "form-input",
+      onClick: handleChange,
+      value: values.university_name,
+      style: {
+        color: '#134381'
+      },
+      name: "university_name",
+      component: formik_material_ui__WEBPACK_IMPORTED_MODULE_6__["TextField"],
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 412
+      },
+      __self: undefined
+    })), __jsx("div", {
+      className: "form-field",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 421
+      },
+      __self: undefined
+    }, __jsx("label", {
+      htmlFor: "label",
+      className: "form-label",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 422
+      },
+      __self: undefined
+    }, "Address:"), __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Field"], {
+      className: "form-input",
+      onClick: handleChange,
+      value: values.university_address1,
+      style: {
+        color: '#134381'
+      },
+      name: "university_address1",
+      component: formik_material_ui__WEBPACK_IMPORTED_MODULE_6__["TextField"],
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 427
+      },
+      __self: undefined
+    })), __jsx("div", {
+      className: "form-field",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 436
+      },
+      __self: undefined
+    }, __jsx("label", {
+      htmlFor: "label",
+      className: "form-label",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 437
+      },
+      __self: undefined
+    }), __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Field"], {
+      className: "form-input",
+      onClick: handleChange,
+      value: values.university_address2,
+      style: {
+        color: '#134381'
+      },
+      name: "university_address2",
+      component: formik_material_ui__WEBPACK_IMPORTED_MODULE_6__["TextField"],
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 442
+      },
+      __self: undefined
+    })), __jsx("div", {
+      className: "form-field",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 451
+      },
+      __self: undefined
+    }, __jsx("label", {
+      htmlFor: "label",
+      className: "form-label",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 452
+      },
+      __self: undefined
+    }), __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Field"], {
+      className: "form-input",
+      onClick: handleChange,
+      value: values.university_address3,
+      style: {
+        color: '#134381'
+      },
+      name: "university_address3",
+      component: formik_material_ui__WEBPACK_IMPORTED_MODULE_6__["TextField"],
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 457
+      },
+      __self: undefined
+    })), __jsx("div", {
+      className: "form-field",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 466
+      },
+      __self: undefined
+    }, __jsx("label", {
+      htmlFor: "label",
+      className: "form-label",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 467
+      },
+      __self: undefined
+    }, "City:"), __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Field"], {
+      className: "form-input",
+      onClick: handleChange,
+      value: values.university_city,
+      style: {
+        color: '#134381'
+      },
+      name: "university_city",
+      component: formik_material_ui__WEBPACK_IMPORTED_MODULE_6__["TextField"],
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 472
+      },
+      __self: undefined
+    })), __jsx("div", {
+      className: "form-field",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 481
+      },
+      __self: undefined
+    }, __jsx("label", {
+      htmlFor: "label",
+      className: "form-label",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 482
+      },
+      __self: undefined
+    }, "State/ County/ Province:"), __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Field"], {
+      className: "form-input",
+      onClick: handleChange,
+      value: values.university_scp,
+      style: {
+        color: '#134381'
+      },
+      name: "university_scp",
+      component: formik_material_ui__WEBPACK_IMPORTED_MODULE_6__["TextField"],
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 487
+      },
+      __self: undefined
+    })), __jsx("div", {
+      className: "form-field",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 496
+      },
+      __self: undefined
+    }, __jsx("label", {
+      htmlFor: "label",
+      className: "form-label",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 497
+      },
+      __self: undefined
+    }, "Postal/ Zip code:"), __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Field"], {
+      className: "form-input",
+      onClick: handleChange,
+      value: values.university_postal,
+      style: {
+        color: '#134381'
+      },
+      name: "university_postal",
+      component: formik_material_ui__WEBPACK_IMPORTED_MODULE_6__["TextField"],
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 502
+      },
+      __self: undefined
+    })), __jsx("div", {
+      className: "form-field",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 511
+      },
+      __self: undefined
+    }, __jsx("label", {
+      htmlFor: "label",
+      className: "form-label",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 512
+      },
+      __self: undefined
+    }, "Country"), __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Field"], {
+      className: "form-input",
+      onClick: handleChange,
+      value: values.university_country,
+      style: {
+        color: '#134381'
+      },
+      name: "university_country",
+      component: formik_material_ui__WEBPACK_IMPORTED_MODULE_6__["Select"],
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 517
+      },
+      __self: undefined
+    }, _FormSelects__WEBPACK_IMPORTED_MODULE_8__["countries"].map((option, i) => __jsx(_material_ui_core_MenuItem__WEBPACK_IMPORTED_MODULE_4___default.a, {
+      key: i,
+      style: {
+        fontSize: '1.5rem',
+        cursor: 'pointer'
+      },
+      value: option.value,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 526
+      },
+      __self: undefined
+    }, option.label)))), __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_5___default.a, {
+      className: "form-title",
+      style: {
+        marginTop: '4rem'
+      },
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 529
+      },
+      __self: undefined
+    }, "Your entry"), __jsx("div", {
+      className: "form-field_file",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 530
+      },
+      __self: undefined
+    }, __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_5___default.a, {
+      className: "form-label",
+      style: {
+        minWidth: '100%',
+        fontSize: '2rem'
+      },
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 532
+      },
+      __self: undefined
+    }, "Upload a PDF or Microsoft Word document of your CV/resum\xE9 here. Documents must not exceed 2 A4 pages and must be submitted in English."), __jsx("div", {
+      className: "form-field_file-box",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 533
+      },
+      __self: undefined
+    }, __jsx("label", {
+      htmlFor: "label",
+      className: "form-label",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 535
+      },
+      __self: undefined
+    }, "Upload your CV/resum\xE9:"), __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Field"], {
+      className: "form-input_file",
+      value: values.cv_filename_uploader,
+      style: {
+        color: '#134381'
+      },
+      name: "cv_filename_uploader",
+      component: formik_material_ui__WEBPACK_IMPORTED_MODULE_6__["SimpleFileUpload"],
+      fullWidth: true,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 540
+      },
+      __self: undefined
+    }), errors.cv_filename_uploader && __jsx("label", {
+      style: {
+        position: 'absolute',
+        bottom: '-2rem',
+        right: '1rem',
+        color: '#ff0000',
+        fontSize: '1.5rem'
+      },
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 548
+      },
+      __self: undefined
+    }, errors.cv_filename_uploader))), __jsx("div", {
+      className: "form-notes",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 551
+      },
+      __self: undefined
+    }, __jsx("label", {
+      htmlFor: "label",
+      className: "form-label",
+      style: {
+        fontSize: '2rem',
+        marginBottom: '4rem'
+      },
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 552
+      },
+      __self: undefined
+    }, "Tell us why you would like a sponsored student place at EuroBrake 2020"), __jsx("label", {
+      htmlFor: "label",
+      className: "form-label",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 559
+      },
+      __self: undefined
+    }, "Your personal statement (150\u2013250 words):"), __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Field"], {
+      className: "form-notes-input",
+      onClick: handleChange,
+      value: values.personal_statement,
+      style: {
+        color: '#134381'
+      },
+      name: "personal_statement",
+      component: "textarea",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 565
+      },
+      __self: undefined
+    }), errors.personal_statement && __jsx("label", {
+      style: {
+        position: 'absolute',
+        bottom: '2rem',
+        right: '1rem',
+        color: '#ff0000',
+        fontSize: '1.5rem'
+      },
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 573
+      },
+      __self: undefined
+    }, errors.personal_statement), errors.personal_statement && values.personal_statement && __jsx("label", {
+      style: {
+        position: 'absolute',
+        bottom: '0',
+        right: '1rem',
+        color: '#ff0000',
+        fontSize: '1.5rem'
+      },
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 574
+      },
+      __self: undefined
+    }, 'Words' + ' ' + values.personal_statement.match(/[\w\d\’\'-]+/gi).length)), __jsx("div", {
+      className: "form-field_file",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 577
+      },
+      __self: undefined
+    }, __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_5___default.a, {
+      className: "form-label",
+      style: {
+        fontSize: '2rem'
+      },
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 579
+      },
+      __self: undefined
+    }, "Upload a photo, PDF or Microsoft Word document of a letter or ID card indicating your status as student."), __jsx("div", {
+      className: "form-field_file-box",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 582
+      },
+      __self: undefined
+    }, __jsx("label", {
+      htmlFor: "student_status_filename_uploader",
+      className: "form-label",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 584
+      },
+      __self: undefined
+    }, "Upload proof of your status as student:"), __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Field"], {
+      className: "form-input_file",
+      value: values.student_status_filename_uploader,
+      style: {
+        color: '#134381'
+      },
+      name: "student_status_filename_uploader",
+      component: formik_material_ui__WEBPACK_IMPORTED_MODULE_6__["SimpleFileUpload"],
+      fullWidth: true,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 589
+      },
+      __self: undefined
+    }), errors.student_status_filename_uploader && __jsx("label", {
+      style: {
+        position: 'absolute',
+        bottom: '-2rem',
+        right: '1rem',
+        color: '#ff0000',
+        fontSize: '1.5rem'
+      },
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 597
+      },
+      __self: undefined
+    }, errors.student_status_filename_uploader))), __jsx("div", {
+      className: "form-field_question",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 601
+      },
+      __self: undefined
+    }, __jsx("label", {
+      htmlFor: "label",
+      className: "form-label_question",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 602
+      },
+      __self: undefined
+    }, "Question 1: In what range does the brake pressure apply during emergency braking?"), __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Field"], {
+      className: "form-input_question",
+      onClick: handleChange,
+      value: values.question_1_answer,
+      style: {
+        color: '#134381'
+      },
+      name: "question_1_answer",
+      component: formik_material_ui__WEBPACK_IMPORTED_MODULE_6__["Select"],
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 607
+      },
+      __self: undefined
+    }, _FormSelects__WEBPACK_IMPORTED_MODULE_8__["Q1"].map((option, i) => __jsx(_material_ui_core_MenuItem__WEBPACK_IMPORTED_MODULE_4___default.a, {
+      key: i,
+      style: {
+        fontSize: '1.5rem',
+        cursor: 'pointer'
+      },
+      value: option.value,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 616
+      },
+      __self: undefined
+    }, option.label))), errors.question_1_answer && __jsx("label", {
+      style: {
+        position: 'absolute',
+        bottom: '-1rem',
+        right: '1rem',
+        color: '#ff0000',
+        fontSize: '1.5rem'
+      },
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 618
+      },
+      __self: undefined
+    }, errors.question_1_answer)), __jsx("div", {
+      className: "form-field_question",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 622
+      },
+      __self: undefined
+    }, __jsx("label", {
+      htmlFor: "label",
+      className: "form-label_question",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 623
+      },
+      __self: undefined
+    }, "Question 2: Sort the frequency of use of different brake systems in modern High Speed Trains"), __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Field"], {
+      className: "form-input_question",
+      onClick: handleChange,
+      value: values.question_2_answer,
+      style: {
+        color: '#134381'
+      },
+      name: "question_2_answer",
+      component: formik_material_ui__WEBPACK_IMPORTED_MODULE_6__["Select"],
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 628
+      },
+      __self: undefined
+    }, _FormSelects__WEBPACK_IMPORTED_MODULE_8__["Q2"].map((option, i) => __jsx(_material_ui_core_MenuItem__WEBPACK_IMPORTED_MODULE_4___default.a, {
+      key: i,
+      style: {
+        fontSize: '1.5rem',
+        cursor: 'pointer'
+      },
+      value: option.value,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 637
+      },
+      __self: undefined
+    }, option.label))), errors.question_2_answer && __jsx("label", {
+      style: {
+        position: 'absolute',
+        bottom: '-1rem',
+        right: '1rem',
+        color: '#ff0000',
+        fontSize: '1.5rem'
+      },
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 639
+      },
+      __self: undefined
+    }, errors.question_2_answer)), __jsx("div", {
+      className: "form-field_question",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 642
+      },
+      __self: undefined
+    }, __jsx("label", {
+      htmlFor: "label",
+      className: "form-label_question",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 643
+      },
+      __self: undefined
+    }, "Question 3: Health relevance of brake wear particles becomes an important issue in brake industry. Find a correct answer:"), __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Field"], {
+      className: "form-input_question",
+      onClick: handleChange,
+      value: values.question_3_answer,
+      style: {
+        color: '#134381'
+      },
+      name: "question_3_answer",
+      component: formik_material_ui__WEBPACK_IMPORTED_MODULE_6__["Select"],
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 648
+      },
+      __self: undefined
+    }, _FormSelects__WEBPACK_IMPORTED_MODULE_8__["Q3"].map((option, i) => __jsx(_material_ui_core_MenuItem__WEBPACK_IMPORTED_MODULE_4___default.a, {
+      key: i,
+      style: {
+        fontSize: '1.5rem',
+        cursor: 'pointer'
+      },
+      value: option.value,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 657
+      },
+      __self: undefined
+    }, option.label))), errors.question_3_answer && __jsx("label", {
+      style: {
+        position: 'absolute',
+        bottom: '-1rem',
+        right: '1rem',
+        color: '#ff0000',
+        fontSize: '1.5rem'
+      },
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 659
+      },
+      __self: undefined
+    }, errors.question_3_answer)), __jsx("div", {
+      className: "form-field_question-check",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 662
+      },
+      __self: undefined
+    }, __jsx("label", {
+      htmlFor: "question_4_answer",
+      className: "form-label",
+      style: {
+        marginBottom: '4rem'
+      },
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 663
+      },
+      __self: undefined
+    }, "Question 4: Can you list three of the Conference Topics at EuroBrake 2020?"), __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["FieldArray"], {
+      name: "question_4_answer",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 670
+      },
+      __self: undefined
+    }, ({
+      swap,
+      push,
+      remove,
+      setSubmitting
+    }) => _FormSelects__WEBPACK_IMPORTED_MODULE_8__["Q4"].map(question => __jsx("div", {
+      key: question.id,
+      className: "form-checkboxField",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 675
+      },
+      __self: undefined
+    }, __jsx("label", {
+      htmlFor: question.name,
+      className: "form-checkboxField-label",
+      style: {
+        color: '#134381',
+        width: '80%'
+      },
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 678
+      },
+      __self: undefined
+    }, question.id), __jsx("input", {
+      checked: values.question_4_answer && values.question_4_answer.includes(question.value),
+      onChange: e => {
+        e.target.checked ? push(question.value) : values.question_4_answer && remove(values.question_4_answer.value);
+      },
+      className: "form-checkboxField-box",
+      style: {
+        color: '#134381'
+      },
+      value: question.value,
+      name: question.name,
+      type: "checkbox",
+      id: question.id,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 686
+      },
+      __self: undefined
+    })))), errors.question_4_answer && __jsx("label", {
+      style: {
+        position: 'absolute',
+        bottom: '-1rem',
+        right: '0',
+        color: '#ff0000',
+        fontSize: '1.5rem'
+      },
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 701
+      },
+      __self: undefined
+    }, errors.question_4_answer)), __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_5___default.a, {
+      className: "form-title",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 703
+      },
+      __self: undefined
+    }, " Additional Information"), __jsx("div", {
+      className: "form-field_question",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 704
+      },
+      __self: undefined
+    }, __jsx("label", {
+      htmlFor: "youtube_url",
+      className: "form-label_question",
+      style: {
+        fontSize: '2rem'
+      },
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 705
+      },
+      __self: undefined
+    }, "If you have a short video outlining your motivation for applying for ESOP or your interest in the braking industry you can include a YouTube link here:"), __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Field"], {
+      placeholder: "This is optional and won\u2019t affect the judging process.",
+      className: "form-input",
+      onClick: handleChange,
+      value: values.university_address3,
+      style: {
+        color: '#134381',
+        margin: '4rem 0',
+        Width: '66.6%'
+      },
+      name: "youtube_url",
+      component: formik_material_ui__WEBPACK_IMPORTED_MODULE_6__["TextField"],
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 711
+      },
+      __self: undefined
+    })), __jsx("div", {
+      className: "form-field_question-check",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 722
+      },
+      __self: undefined
+    }, __jsx("label", {
+      htmlFor: "roundtable",
+      className: "form-label",
+      style: {
+        marginBottom: '1rem',
+        fontSize: '2rem'
+      },
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 723
+      },
+      __self: undefined
+    }, "\u2018Round Table\u2019 sessions will take place as part of the ESOP 2020 programme \u2013 providing a unique opportunity for all students to meet with and learn from industry and academia experts."), __jsx("label", {
+      htmlFor: "roundtable",
+      className: "form-label",
+      style: {
+        marginBottom: '3rem',
+        fontSize: '2rem'
+      },
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 730
+      },
+      __self: undefined
+    }, "Please leave details below if there are any topics you would like to see discussed in a Round Table session:"), __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["FieldArray"], {
+      name: "roundtable",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 737
+      },
+      __self: undefined
+    }, ({
+      swap,
+      push,
+      remove,
+      setSubmitting
+    }) => _FormSelects__WEBPACK_IMPORTED_MODULE_8__["Sessions"].map(session => __jsx("div", {
+      key: session.id,
+      className: "form-checkboxField",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 742
+      },
+      __self: undefined
+    }, __jsx("label", {
+      htmlFor: session.name,
+      className: "form-checkboxField-label",
+      style: {
+        color: '#134381',
+        width: '80%'
+      },
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 745
+      },
+      __self: undefined
+    }, session.id), __jsx("input", {
+      checked: values.roundtable && values.roundtable.includes(session.value),
+      onChange: e => {
+        e.target.checked ? push(session.value) : values.roundtable && remove(values.roundtable.value);
+      },
+      className: "form-checkboxField-box",
+      style: {
+        color: '#134381'
+      },
+      value: session.value,
+      name: session.name,
+      type: "checkbox",
+      id: session.id,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 753
+      },
+      __self: undefined
+    }), errors.roundtable && __jsx("label", {
+      style: {
+        position: 'absolute',
+        bottom: '-1rem',
+        right: '1rem',
+        color: '#ff0000',
+        fontSize: '1.5rem'
+      },
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 766
+      },
+      __self: undefined
+    }, errors.roundtable))))), __jsx("div", {
+      className: "form-field",
+      style: {
+        justifyContent: 'flex-end'
+      },
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 771
+      },
+      __self: undefined
+    }, values.roundtable.includes('3CA6AA5A-F3DA-11E8-B5C4-A947D1EF668C') && __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Field"], {
+      placeholder: "Please specify",
+      className: "form-input",
+      onClick: handleChange,
+      value: values.roundtable_other,
+      style: {
+        color: '#134381',
+        margin: '1rem 0'
+      },
+      name: "roundtable_other",
+      component: formik_material_ui__WEBPACK_IMPORTED_MODULE_6__["TextField"],
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 773
+      },
+      __self: undefined
+    })), __jsx("div", {
+      className: "form-field_question",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 785
+      },
+      __self: undefined
+    }, __jsx("label", {
+      htmlFor: "marketing",
+      className: "form-label_question",
+      style: {
+        marginTop: '4rem'
+      },
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 786
+      },
+      __self: undefined
+    }, "Where did you hear about the EuroBrake Student Opportunities Programme?"), __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Field"], {
+      className: "form-input_question",
+      onClick: handleChange,
+      value: values.marketing,
+      style: {
+        color: '#134381'
+      },
+      name: "marketing",
+      component: formik_material_ui__WEBPACK_IMPORTED_MODULE_6__["Select"],
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 793
+      },
+      __self: undefined
+    }, _FormSelects__WEBPACK_IMPORTED_MODULE_8__["Marketing"].map((option, i) => __jsx(_material_ui_core_MenuItem__WEBPACK_IMPORTED_MODULE_4___default.a, {
+      key: i,
+      style: {
+        fontSize: '1.5rem',
+        cursor: 'pointer'
+      },
+      value: option.value,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 802
+      },
+      __self: undefined
+    }, option.label))), errors.student_level_current && __jsx("label", {
+      style: {
+        position: 'absolute',
+        bottom: '-1rem',
+        right: '1rem',
+        color: '#ff0000',
+        fontSize: '1.5rem'
+      },
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 804
+      },
+      __self: undefined
+    }, errors.student_level_current)), __jsx("div", {
+      className: "form-field",
+      style: {
+        justifyContent: 'flex-end'
+      },
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 807
+      },
+      __self: undefined
+    }, values.marketing === 'E682897E-BACE-11E5-BFDD-7F6E5EAB70CB' && __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Field"], {
+      placeholder: "Please specify",
+      className: "form-input",
+      onClick: handleChange,
+      value: values.marketing_other,
+      style: {
+        color: '#134381',
+        margin: '1rem 0'
+      },
+      name: "marketing_other",
+      component: formik_material_ui__WEBPACK_IMPORTED_MODULE_6__["TextField"],
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 809
+      },
+      __self: undefined
+    })), __jsx("div", {
+      className: "form-field-radio",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 819
+      },
+      __self: undefined
+    }, __jsx("label", {
+      htmlFor: "label",
+      className: "form-label-radio",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 820
+      },
+      __self: undefined
+    }, "Have you participated in any other FISITA student initiatives?"), __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Field"], {
+      className: "form-radio",
+      value: values.student_level_current,
+      style: {
+        color: '#134381'
+      },
+      name: "previous_participant",
+      component: formik_material_ui__WEBPACK_IMPORTED_MODULE_6__["RadioGroup"],
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 825
+      },
+      __self: undefined
+    }, __jsx("label", {
+      style: {
+        margin: '1rem'
+      },
+      htmlFor: "previous_participant_opt_yes",
+      className: "form-label-radio",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 832
+      },
+      __self: undefined
+    }, __jsx("input", {
+      onChange: handleChange,
+      style: {
+        margin: '1rem'
+      },
+      type: "radio",
+      name: "previous_participant",
+      value: "yes",
+      id: "previous_participant_opt_yes",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 836
+      },
+      __self: undefined
+    }), "Yes"), __jsx("label", {
+      style: {
+        margin: '1rem'
+      },
+      htmlFor: "previous_participant_opt_no",
+      className: "form-label-radio",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 846
+      },
+      __self: undefined
+    }, __jsx("input", {
+      style: {
+        margin: '1rem'
+      },
+      onChange: handleChange,
+      type: "radio",
+      name: "previous_participant",
+      value: "no",
+      id: "previous_participant_opt_no",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 850
+      },
+      __self: undefined
+    }), "No")), errors.student_level_current && __jsx("label", {
+      style: {
+        position: 'absolute',
+        bottom: '-1rem',
+        right: '1rem',
+        color: '#ff0000',
+        fontSize: '1.5rem'
+      },
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 862
+      },
+      __self: undefined
+    }, errors.student_level_current)), values.previous_participant === 'yes' && __jsx(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_5___default.a, {
+      className: "form-label",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 867
+      },
+      __self: undefined
+    }, "Which of the following have you participated in?"), __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["FieldArray"], {
+      name: "initiatives",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 868
+      },
+      __self: undefined
+    }, ({
+      swap,
+      push,
+      remove,
+      setSubmitting
+    }) => _FormSelects__WEBPACK_IMPORTED_MODULE_8__["Initiatives"].map(init => __jsx("div", {
+      key: init.label,
+      className: "form-checkboxField",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 873
+      },
+      __self: undefined
+    }, __jsx("label", {
+      htmlFor: init.label,
+      className: "form-checkboxField-label",
+      style: {
+        color: '#134381',
+        width: '80%'
+      },
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 876
+      },
+      __self: undefined
+    }, init.label), __jsx("input", {
+      checked: values.initiatives && values.initiatives.includes(init.value),
+      onChange: e => {
+        e.target.checked ? push(init.value) : values.init && remove(values.init.value);
+      },
+      className: "form-checkboxField-box",
+      style: {
+        color: '#134381'
+      },
+      value: init.value,
+      name: init.label,
+      type: "checkbox",
+      id: init.label,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 884
+      },
+      __self: undefined
+    }), errors.initiatives && __jsx("label", {
+      style: {
+        position: 'absolute',
+        bottom: '-1rem',
+        right: '1rem',
+        color: '#ff0000',
+        fontSize: '1.5rem'
+      },
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 896
+      },
+      __self: undefined
+    }, errors.initiatives))))), __jsx("div", {
+      className: "form-field",
+      style: {
+        justifyContent: 'flex-end'
+      },
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 901
+      },
+      __self: undefined
+    }, values.initiatives.includes('9EC8166C-E24B-11E6-A67E-861D5EAB70CB') && __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Field"], {
+      placeholder: "Please specify",
+      className: "form-input",
+      onClick: handleChange,
+      value: values.initiatives_other,
+      style: {
+        color: '#134381',
+        margin: '1rem 0'
+      },
+      name: "initiatives_other",
+      component: formik_material_ui__WEBPACK_IMPORTED_MODULE_6__["TextField"],
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 903
+      },
+      __self: undefined
+    })), __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_5___default.a, {
+      gutterBottom: true,
+      className: "form-title",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 915
+      },
+      __self: undefined
+    }, "Additional Information"), __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_5___default.a, {
+      gutterBottom: true,
+      className: "form-label",
+      style: {
+        fontSize: '2rem'
+      },
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 916
+      },
+      __self: undefined
+    }, "Please note that by submitting a registration form for ESOP, you indicate your consent to us passing the personal information you have disclosed to us, including your CV, to the ESOP Sponsor Companies, so that they can contact you with details of career and/or work placement opportunities within their organisations, or to arrange a meeting with you at EuroBrake if you are selected to attend."), __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_5___default.a, {
+      gutterBottom: true,
+      className: "form-label",
+      style: {
+        fontSize: '2rem'
+      },
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 917
+      },
+      __self: undefined
+    }, "Here at FISITA we take your privacy seriously and will only use your personal information to set up and administer your account and/or membership and to provide the products and services you have requested from us."), __jsx("div", {
+      className: "form-checkboxField",
+      style: {
+        margin: '4rem 0'
+      },
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 918
+      },
+      __self: undefined
+    }, __jsx("label", {
+      htmlFor: "consent_sponsors",
+      className: "form-checkboxField-label",
+      style: {
+        color: '#134381',
+        width: '80%'
+      },
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 921
+      },
+      __self: undefined
+    }, "If you do not consent to us passing on your details, please tick here"), __jsx("input", {
+      className: "form-checkboxField-box",
+      style: {
+        color: '#134381'
+      },
+      value: values.consent_sponsors,
+      name: "consent_sponsors",
+      type: "checkbox",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 929
+      },
+      __self: undefined
+    }), errors.consent_sponsors && __jsx("label", {
+      style: {
+        position: 'absolute',
+        bottom: '-1rem',
+        right: '1rem',
+        color: '#ff0000',
+        fontSize: '1.5rem'
+      },
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 936
+      },
+      __self: undefined
+    }, errors.consent_sponsors)), __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_5___default.a, {
+      gutterBottom: true,
+      className: "form-label",
+      style: {
+        marginBottom: '3rem',
+        fontSize: '2rem'
+      },
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 938
+      },
+      __self: undefined
+    }, "However, from time to time we would like to contact you by email with details of the following:"), __jsx("div", {
+      className: "form-checkboxField",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 939
+      },
+      __self: undefined
+    }, __jsx("label", {
+      htmlFor: "consent_fiec",
+      className: "form-checkboxField-label",
+      style: {
+        color: '#134381',
+        width: '80%'
+      },
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 941
+      },
+      __self: undefined
+    }, "Membership of FISITA International Engineering Community (FIEC)"), __jsx("input", {
+      className: "form-checkboxField-box",
+      style: {
+        color: '#134381'
+      },
+      value: values.consent_fiec,
+      name: "consent_fiec",
+      type: "checkbox",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 949
+      },
+      __self: undefined
+    }), errors.consent_fiec && __jsx("label", {
+      style: {
+        position: 'absolute',
+        bottom: '-1rem',
+        right: '1rem',
+        color: '#ff0000',
+        fontSize: '1.5rem'
+      },
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 956
+      },
+      __self: undefined
+    }, errors.consent_fiec)), __jsx("div", {
+      className: "form-checkboxField",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 958
+      },
+      __self: undefined
+    }, __jsx("label", {
+      htmlFor: "consent_wep",
+      className: "task-checkboxField-label",
+      style: {
+        color: '#134381',
+        width: '80%'
+      },
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 960
+      },
+      __self: undefined
+    }, "Career & work placement opportunities via FISITA Work Experience Programme"), __jsx("input", {
+      className: "form-checkboxField-box",
+      style: {
+        color: '#134381'
+      },
+      value: values.consent_wep,
+      name: "consent_wep",
+      type: "checkbox",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 968
+      },
+      __self: undefined
+    }), errors.consent_wep && __jsx("label", {
+      style: {
+        position: 'absolute',
+        bottom: '-1rem',
+        right: '1rem',
+        color: '#ff0000',
+        fontSize: '1.5rem'
+      },
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 975
+      },
+      __self: undefined
+    }, errors.consent_wep)), " ", __jsx("div", {
+      className: "form-checkboxField",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 976
+      },
+      __self: undefined
+    }, __jsx("label", {
+      htmlFor: "consent_events",
+      className: "form-checkboxField-label",
+      style: {
+        color: '#134381',
+        width: '80%'
+      },
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 978
+      },
+      __self: undefined
+    }, "Opportunities for students at upcoming FISITA events"), __jsx("input", {
+      className: "form-checkboxField-box",
+      style: {
+        color: '#134381'
+      },
+      value: values.consent_events,
+      name: "consent_events",
+      type: "checkbox",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 986
+      },
+      __self: undefined
+    }), errors.consent_events && __jsx("label", {
+      style: {
+        position: 'absolute',
+        bottom: '-1rem',
+        right: '1rem',
+        color: '#ff0000',
+        fontSize: '1.5rem'
+      },
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 993
+      },
+      __self: undefined
+    }, errors.consent_events)), __jsx("div", {
+      className: "form-checkboxField",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 995
+      },
+      __self: undefined
+    }, __jsx("label", {
+      htmlFor: "consent_bursary",
+      className: "form-checkboxField-label",
+      style: {
+        color: '#134381',
+        width: '80%'
+      },
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 997
+      },
+      __self: undefined
+    }, "Opportunities for funding via FISITA Travel Bursary Scheme"), __jsx("input", {
+      className: "form-checkboxField-box",
+      style: {
+        color: '#134381'
+      },
+      value: values.consent_bursary,
+      name: "consent_bursary",
+      type: "checkbox",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 1004
+      },
+      __self: undefined
+    }), errors.consent_bursary && __jsx("label", {
+      style: {
+        position: 'absolute',
+        bottom: '-1rem',
+        right: '1rem',
+        color: '#ff0000',
+        fontSize: '1.5rem'
+      },
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 1011
+      },
+      __self: undefined
+    }, errors.consent_bursary)), __jsx("div", {
+      className: "form-checkboxField",
+      style: {
+        marginBottom: '4rem'
+      },
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 1013
+      },
+      __self: undefined
+    }, __jsx("label", {
+      htmlFor: "consent_yfia",
+      className: "form-checkboxField-label",
+      style: {
+        color: '#134381',
+        width: '80%'
+      },
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 1016
+      },
+      __self: undefined
+    }, "Subscription to \u201CYour Future in Automotive\u201D newsletter"), __jsx("input", {
+      className: "form-checkboxField-box",
+      style: {
+        color: '#134381'
+      },
+      value: values.consent_yfia,
+      name: "consent_yfia",
+      type: "checkbox",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 1024
+      },
+      __self: undefined
+    }), errors.consent_yfia && __jsx("label", {
+      style: {
+        position: 'absolute',
+        bottom: '-1rem',
+        right: '1rem',
+        color: '#ff0000',
+        fontSize: '1.5rem'
+      },
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 1031
+      },
+      __self: undefined
+    }, errors.consent_yfia)), __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_5___default.a, {
+      gutterBottom: true,
+      className: "form-label",
+      style: {
+        fontSize: '2rem'
+      },
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 1034
+      },
+      __self: undefined
+    }, "Please tick the box(es) above for each purpose you consent to us contacting you about."), __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_5___default.a, {
+      gutterBottom: true,
+      className: "form-label",
+      style: {
+        fontSize: '2rem'
+      },
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 1037
+      },
+      __self: undefined
+    }, "For more detailed information, please see our ", __jsx(next_link__WEBPACK_IMPORTED_MODULE_3___default.a, {
+      href: "/privacyPolicy",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 1039
+      },
+      __self: undefined
+    }, __jsx("a", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 1039
+      },
+      __self: undefined
+    }, "privacy policy."))), __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_5___default.a, {
+      gutterBottom: true,
+      className: "form-label",
+      style: {
+        fontSize: '2rem'
+      },
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 1040
+      },
+      __self: undefined
+    }, "For further details contact Hayley Millar, Education Manager at ", __jsx("a", {
+      href: "mailto:h.millar@fisita.com",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 1042
+      },
+      __self: undefined
+    }, "h.millar@fisita.com.")), __jsx(_Button__WEBPACK_IMPORTED_MODULE_7__["Button"], {
+      onClick: () => allTouched(),
+      bcolor: "#134381",
+      background: "#134381",
+      br: "100rem",
+      style: {
+        margin: "4rem 0",
+        color: '#FFF'
+      },
+      fontSize: "2rem",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 1045
+      },
+      __self: undefined
+    }, "Submit"), Toggle && __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_5___default.a, {
+      className: "form-title",
+      style: {
+        alignSelf: 'center',
+        textTransform: 'uppercase'
+      },
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 1052
+      },
+      __self: undefined
+    }, Status));
+  });
+};
+const emptyInitial = {
+  student_title: '',
+  student_firstname: '',
+  student_lastname: '',
+  student_email: '',
+  student_company: '',
+  student_address1: '',
+  student_address2: '',
+  student_address3: '',
+  student_city: '',
+  student_scp: '',
+  student_postal: '',
+  student_country: '',
+  student_membersociety: '',
+  birth_city: '',
+  birth_country: '',
+  student_level_current: '',
+  student_level_seeking: '',
+  university_course: '',
+  university_name: '',
+  university_address1: '',
+  university_address2: '',
+  university_address3: '',
+  university_city: '',
+  university_scp: '',
+  university_postal: '',
+  university_country: '',
+  cv_filename_uploader: '',
+  personal_statement: '',
+  student_status_filename_uploader: '',
+  question_1_answer: '',
+  question_2_answer: '',
+  question_3_answer: '',
+  question_4_answer: [],
+  youtube_url: '',
+  roundtable: [],
+  roundtable_other: '',
+  marketing: '',
+  marketing_other: '',
+  previous_participant: '',
+  initiatives: [],
+  initiatives_other: '',
+  consent_sponsors: '',
+  consent_fiec: '',
+  consent_wep: '',
+  consent_bursary: '',
+  consent_events: '',
+  consent_yfia: '',
+  __csrf_token: ''
+};
 
 /***/ }),
 
@@ -8575,6 +8554,837 @@ const EsopSchema = yup__WEBPACK_IMPORTED_MODULE_0__["object"]().shape({
 
 /***/ }),
 
+/***/ "./components/forms/FormSelects.js":
+/*!*****************************************!*\
+  !*** ./components/forms/FormSelects.js ***!
+  \*****************************************/
+/*! exports provided: Initiatives, members, Q1, Q2, Q3, Q4, Sessions, Marketing, titles, countries, themes, subThemes, subTheme1, subTheme2, subTheme3, subTheme4, subTheme5, subTheme6, submissionType, ifFull */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Initiatives", function() { return Initiatives; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "members", function() { return members; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Q1", function() { return Q1; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Q2", function() { return Q2; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Q3", function() { return Q3; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Q4", function() { return Q4; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Sessions", function() { return Sessions; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Marketing", function() { return Marketing; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "titles", function() { return titles; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "countries", function() { return countries; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "themes", function() { return themes; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "subThemes", function() { return subThemes; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "subTheme1", function() { return subTheme1; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "subTheme2", function() { return subTheme2; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "subTheme3", function() { return subTheme3; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "subTheme4", function() { return subTheme4; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "subTheme5", function() { return subTheme5; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "subTheme6", function() { return subTheme6; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "submissionType", function() { return submissionType; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ifFull", function() { return ifFull; });
+const Initiatives = [{
+  value: "34879B0E-EDA4-11E8-8900-211FD1687A99",
+  label: "ESOP 2018"
+}, {
+  value: "8BF4E2A0-F536-11E7-A610-F078B456E719",
+  label: "ESOP 2017"
+}, {
+  value: "7C594902-E24B-11E6-A7C8-781D5EAB70CB",
+  label: "EuroBrake Student Innovation Competition 2016"
+}, {
+  value: "8A774260-BEBA-11E5-98B0-46765EAB70CB",
+  label: "Daimler Student Innovation Competition 2015"
+}, {
+  value: "8A7B6A16-BEBA-11E5-AB5E-47765EAB70CB",
+  label: "Islands of Excellence at FISITA 2016"
+}, {
+  value: "8A7FBB48-BEBA-11E5-99C1-48765EAB70CB",
+  label: "Travelling Fellowship at FISITA 2016"
+}, {
+  value: "8A83F190-BEBA-11E5-94F1-49765EAB70CB",
+  label: "Student Congress at FISITA 2016"
+}, {
+  value: "34879ECE-EDA4-11E8-8900-211FD1687A99",
+  label: "Islands of Excellence at FISITA 2018"
+}, {
+  value: "3487A0C2-EDA4-11E8-8900-211FD1687A99",
+  label: "Travelling Fellowship at FISITA 2018"
+}, {
+  value: "3487A284-EDA4-11E8-8900-211FD1687A99",
+  label: "Student Congress at FISITA 2018"
+}, {
+  value: "8A8C5D3A-BEBA-11E5-AD15-4B765EAB70CB",
+  label: "FISITA Travel Bursary recipient"
+}, {
+  value: "87A141F2-E24B-11E6-A84A-811D5EAB70CB",
+  label: "FISITA Work Experience Programme placement"
+}, {
+  value: "9EC8166C-E24B-11E6-A67E-861D5EAB70CB",
+  label: "Other (please specify)"
+}];
+const members = [{
+  value: "",
+  label: "—"
+}, {
+  value: "951E78EA-C357-11E5-B990-AE7F885BA637",
+  label: "AAA - Academic Automotive Association"
+}, {
+  value: "95A070B6-C357-11E5-B990-AE7F885BA637",
+  label: "AAE - Association of Automotive Engineers"
+}, {
+  value: "947A6746-C357-11E5-B990-AE7F885BA637",
+  label: "AEA - Associaçáo Brasileira de Engenharia Automotiva"
+}, {
+  value: "909C62C8-C357-11E5-B990-AE7F885BA637",
+  label: "AITA - Asociación de Ingenieros y Técnicos del Automotor"
+}, {
+  value: "92F6A40C-C357-11E5-B990-AE7F885BA637",
+  label: "AMETS-AG - Association of Mechanical Engineers and Technicians Automotive Group, Slovenia"
+}, {
+  value: "35A1E348-A51E-11E7-BEDA-21616B329969",
+  label: "ANFIA ATA - ANFIA ATA - Italian Association of the Automotive Industry"
+}, {
+  value: "90C4F012-C357-11E5-B990-AE7F885BA637",
+  label: "CAS - Ceská Automobilova Spolecnost"
+}, {
+  value: "90160034-C357-11E5-B990-AE7F885BA637",
+  label: "GTE - Gepipari Tudomanyos Egyesulet"
+}, {
+  value: "9542E5F4-C357-11E5-B990-AE7F885BA637",
+  label: "HDMV - Hrvatsko Drustvo za Motore i Vozila"
+}, {
+  value: "913F553C-C357-11E5-B990-AE7F885BA637",
+  label: "IAE Sri Lanka - The Institute of Automotive Engineers - Sri Lanka"
+}, {
+  value: "94F9BA82-C357-11E5-B990-AE7F885BA637",
+  label: "IATO (SAE) Indonesia - Ikatan Ahli Teknik Otomotif"
+}, {
+  value: "93EC019A-C357-11E5-B990-AE7F885BA637",
+  label: "IMechE - Institution of Mechanical Engineers - Automobile Division"
+}, {
+  value: "95C9FB5C-C357-11E5-B990-AE7F885BA637",
+  label: "ISAE - Iran Society of Automotive Engineering"
+}, {
+  value: "92A5A0C0-C357-11E5-B990-AE7F885BA637",
+  label: "ISME-AS - Israel Society of Mechanical Engineers - Automotive Section"
+}, {
+  value: "9393CB74-C357-11E5-B990-AE7F885BA637",
+  label: "JSAE - Society of Automotive Engineers of Japan, Inc."
+}, {
+  value: "90746E08-C357-11E5-B990-AE7F885BA637",
+  label: "JUMV - Jugoslovensko Drustvo za Motore i Vozila"
+}, {
+  value: "920E1DCC-C357-11E5-B990-AE7F885BA637",
+  label: "KIVI - KIVI - AD"
+}, {
+  value: "9349A7BA-C357-11E5-B990-AE7F885BA637",
+  label: "KSAE - The Korean Society of Automotive Engineers"
+}, {
+  value: "94AA6392-C357-11E5-B990-AE7F885BA637",
+  label: "LAIA - Latvia Association of Automobile Engineers"
+}, {
+  value: "95F35D08-C357-11E5-B990-AE7F885BA637",
+  label: "LAIS - Lietuvos Automobiliu Ininieriu Sajunga"
+}, {
+  value: "925C84F8-C357-11E5-B990-AE7F885BA637",
+  label: "ÖIAV - Österreichischer Ingenieur-und Architektenverein"
+}, {
+  value: "931CC9FC-C357-11E5-B990-AE7F885BA637",
+  label: "ÖVK - Österreichischer Verein für Kraftfahrzeugtechnik"
+}, {
+  value: "94D4781C-C357-11E5-B990-AE7F885BA637",
+  label: "SAE International - SAE International"
+}, {
+  value: "8FBCB77C-C357-11E5-B990-AE7F885BA637",
+  label: "SAE Switzerland - Society of Automotive Engineers Switzerland"
+}, {
+  value: "918FB586-C357-11E5-B990-AE7F885BA637",
+  label: "SAE-A - Society of Automotive Engineers - Australasia"
+}, {
+  value: "904D3072-C357-11E5-B990-AE7F885BA637",
+  label: "SAE-C - Society of Automotive Engineers of China"
+}, {
+  value: "9452141C-C357-11E5-B990-AE7F885BA637",
+  label: "SAEINDIA - SAEINDIA"
+}, {
+  value: "95723606-C357-11E5-B990-AE7F885BA637",
+  label: "SAITS - Spolok Automobilovych Inzinierov a Technikov Slovenska"
+}, {
+  value: "927FB5D6-C357-11E5-B990-AE7F885BA637",
+  label: "SATL - Suomen Autoteknillinen Liitto r.y."
+}, {
+  value: "91B83038-C357-11E5-B990-AE7F885BA637",
+  label: "SIA - Société des Ingénieurs de L'Automobile"
+}, {
+  value: "91E9D3E0-C357-11E5-B990-AE7F885BA637",
+  label: "SIAR - Societatea Inginerilor de Automobile din Romania"
+}, {
+  value: "92C812CC-C357-11E5-B990-AE7F885BA637",
+  label: "SIMP - Stowarzyszenie Inzynierow I Technikow Mechaników Polskich"
+}, {
+  value: "93BD131C-C357-11E5-B990-AE7F885BA637",
+  label: "STA - Sociedad de Técnicos de Automoción"
+}, {
+  value: "9237F1B0-C357-11E5-B990-AE7F885BA637",
+  label: "SVEA - Swedish Vehicular Engineering Association"
+}, {
+  value: "91640300-C357-11E5-B990-AE7F885BA637",
+  label: "TSAE - Society of Automotive Engineers of Thailand"
+}, {
+  value: "936D901C-C357-11E5-B990-AE7F885BA637",
+  label: "UBIA - Union Belge des Ingenieurs de L'Automobile"
+}, {
+  value: "90ED6290-C357-11E5-B990-AE7F885BA637",
+  label: "VDI e.V. - Verein Deutscher Ingenieure e.V."
+}, {
+  value: "9117C5F8-C357-11E5-B990-AE7F885BA637",
+  label: "VSAE - Vietnamese Society of Automotive Engineers"
+}];
+const Q1 = [{
+  value: "",
+  label: "—"
+}, {
+  value: "A165CDBC-20D0-11EA-826D-F61235FD9979",
+  label: "1 bar"
+}, {
+  value: "A16AAD6E-20D0-11EA-A384-B33F5C328649",
+  label: "10 bar"
+}, {
+  value: "A16F63D6-20D0-11EA-8562-FD37E816F125",
+  label: "100 bar"
+}, {
+  value: "A172A816-20D0-11EA-80FE-D8458B75FA68",
+  label: "1000 bar"
+}];
+const Q2 = [{
+  value: "",
+  label: "—"
+}, {
+  value: "A176A588-20D0-11EA-B1C4-8343322A4354",
+  label: "1 Friction Brake → 2 Generator Brake → 3 Eddy Current Brake"
+}, {
+  value: "A17B2ACC-20D0-11EA-A903-CE3765AA6FE0",
+  label: "1 Generator Brake → 2 Friction Brake → 3 Eddy Current Brake"
+}, {
+  value: "A180ECE6-20D0-11EA-BA13-97766A999418",
+  label: "1 Generator Brake → 2 Eddy Current Brake → 3 Friction Brake"
+}, {
+  value: "A1860366-20D0-11EA-BE22-EA8B4F279291",
+  label: "1 Eddy Current Brake → 2 Generator Brake → 3 Friction Brake"
+}];
+const Q3 = [{
+  value: "",
+  label: "—"
+}, {
+  value: "A18AAF42-20D0-11EA-AA93-E948962C4B22",
+  label: "due to presence of binders in the friction material, brake wear particles can not be smaller than 0.1mm"
+}, {
+  value: "A190544C-20D0-11EA-ADCD-A3842C77181C",
+  label: "most of recent studies have shown that brake wear particles can not be inhaled"
+}, {
+  value: "A1939814-20D0-11EA-A356-B5B2593A37F3",
+  label: "a great ratio of brake wear particles are of size smaller than 10µm and can be airborne"
+}, {
+  value: "A198076E-20D0-11EA-838B-F8CC47638AE5",
+  label: "a great ratio of brake wear particles are of size smaller than 10µm and can be airborne"
+}];
+const Q4 = [{
+  id: "Intelligent Braking and Braking Control",
+  name: "question_4_answer",
+  value: "A19B58F6-20D0-11EA-9309-935393B87AAD"
+}, {
+  id: "Environmentally-friendly Braking Systems",
+  name: "question_4_answer",
+  value: "A19E91B0-20D0-11EA-AB5D-AB5B61C559F4"
+}, {
+  id: "Fundamentals of Brakes",
+  name: "question_4_answer",
+  value: "A1A24D32-20D0-11EA-B1F0-A6A4B80BF983"
+}, {
+  id: "Manufacturing and Markets",
+  name: "question_4_answer",
+  value: "A1A7FEA8-20D0-11EA-AA7C-B2647AB84FAD"
+}, {
+  id: "Materials and Design",
+  name: "question_4_answer",
+  value: "C05F2F38-20D0-11EA-804F-FDD4E3525F0E"
+}, {
+  id: "Simulation, Testing, Innovative Development Processes",
+  name: "question_4_answer",
+  value: "C06226AC-20D0-11EA-B13B-CBC741D97AFF"
+}];
+const Sessions = [{
+  id: "Entering the industry: demands, skills, requirements",
+  name: "roundtable",
+  value: "F7059506-F3D9-11E8-A30E-9AD9C8D4F5B4"
+}, {
+  id: "Industry vs. Academia: perspectives and opportunities",
+  name: "roundtable",
+  value: "159C9B5E-F3DA-11E8-AE3E-B6BAC8C8E3D3"
+}, {
+  id: "“What do you think/want in terms of transportation of the future?”",
+  name: "roundtable",
+  value: "1F8B71DA-F3DA-11E8-B265-F39A91630592"
+}, {
+  id: "Rail Brake Industry: challenges and approaches",
+  name: "roundtable",
+  value: "2AF19DBA-F3DA-11E8-B364-F69E03A1B279"
+}, {
+  id: "Other (please specify)",
+  name: "roundtable",
+  value: "3CA6AA5A-F3DA-11E8-B5C4-A947D1EF668C"
+}];
+const Marketing = [{
+  value: "",
+  label: "—"
+}, {
+  value: "E65CB08C-BACE-11E5-A83B-776E5EAB70CB",
+  label: "Student/friend"
+}, {
+  value: "E6580A28-BACE-11E5-9185-766E5EAB70CB",
+  label: "Your Future In Automotive newsletter"
+}, {
+  value: "E660DAA4-BACE-11E5-87E7-786E5EAB70CB",
+  label: "Professor/lecturer at university"
+}, {
+  value: "E6658DCE-BACE-11E5-B56F-796E5EAB70CB",
+  label: "The Engineer"
+}, {
+  value: "E66A6D26-BACE-11E5-BF16-7A6E5EAB70CB",
+  label: "National engineering society (e.g. SAE, VDI, IMechE)"
+}, {
+  value: "E6744A44-BACE-11E5-BF92-7C6E5EAB70CB",
+  label: "FISITA website"
+}, {
+  value: "E678E1E4-BACE-11E5-BD4E-7D6E5EAB70CB",
+  label: "Facebook"
+}, {
+  value: "E67D8618-BACE-11E5-8005-7E6E5EAB70CB",
+  label: "Twitter"
+}, {
+  value: "FCD1C142-F620-11E7-A0BD-F5BDAD3900A6",
+  label: "LinkedIn"
+}, {
+  value: "E682897E-BACE-11E5-BFDD-7F6E5EAB70CB",
+  label: "Other (please specify)"
+}];
+const titles = [{
+  value: "",
+  label: "—"
+}, {
+  value: "Mr.",
+  label: "Mr."
+}, {
+  value: "Ms.",
+  label: "Ms."
+}, {
+  value: "Mrs.",
+  label: "Mrs."
+}, {
+  value: "Dr.",
+  label: "Dr."
+}, {
+  value: "Dr.-Ing.",
+  label: "Dr.-Ing."
+}, {
+  value: "Dr. Eng.",
+  label: "Dr. Eng."
+}, {
+  value: "Prof.",
+  label: "Prof."
+}, {
+  value: "Prof. Dr.",
+  label: "Prof. Dr."
+}, {
+  value: "Prof. Dr.-Ing.",
+  label: "Prof. Dr.-Ing."
+}, {
+  value: "Ing.",
+  label: "Ing."
+}, {
+  value: "Dipl.-Ing.",
+  label: "Dipl.-Ing."
+}, {
+  value: "Ir.",
+  label: "Ir."
+}];
+const countries = [{
+  value: "",
+  label: "—"
+}, {
+  value: "DZ",
+  label: "Algeria"
+}, {
+  value: "AR",
+  label: "Argentina"
+}, {
+  value: "AU",
+  label: "Australia"
+}, {
+  value: "AT",
+  label: "Austria"
+}, {
+  value: "BD",
+  label: "Bangladesh"
+}, {
+  value: "BY",
+  label: "Belarus"
+}, {
+  value: "BE",
+  label: "Belgium"
+}, {
+  value: "BA",
+  label: "Bosnia and Herzegovina"
+}, {
+  value: "BR",
+  label: "Brazil"
+}, {
+  value: "BG",
+  label: "Bulgaria"
+}, {
+  value: "CA",
+  label: "Canada"
+}, {
+  value: "CL",
+  label: "Chile"
+}, {
+  value: "CN",
+  label: "China"
+}, {
+  value: "HK",
+  label: "China - Hong Kong"
+}, {
+  value: "CO",
+  label: "Colombia"
+}, {
+  value: "HR",
+  label: "Croatia"
+}, {
+  value: "CZ",
+  label: "Czech Republic"
+}, {
+  value: "DK",
+  label: "Denmark"
+}, {
+  value: "EC",
+  label: "Ecuador"
+}, {
+  value: "EG",
+  label: "Egypt"
+}, {
+  value: "EE",
+  label: "Estonia"
+}, {
+  value: "FI",
+  label: "Finland"
+}, {
+  value: "MK",
+  label: "Fmr. Yugoslav Republic of Macedonia"
+}, {
+  value: "FR",
+  label: "France"
+}, {
+  value: "GE",
+  label: "Georgia"
+}, {
+  value: "DE",
+  label: "Germany"
+}, {
+  value: "GR",
+  label: "Greece"
+}, {
+  value: "HU",
+  label: "Hungary"
+}, {
+  value: "IS",
+  label: "Iceland"
+}, {
+  value: "IN",
+  label: "India"
+}, {
+  value: "ID",
+  label: "Indonesia"
+}, {
+  value: "IR",
+  label: "Iran (Islamic Republic of)"
+}, {
+  value: "IQ",
+  label: "Iraq"
+}, {
+  value: "IE",
+  label: "Ireland"
+}, {
+  value: "IL",
+  label: "Israel"
+}, {
+  value: "IT",
+  label: "Italy"
+}, {
+  value: "JP",
+  label: "Japan"
+}, {
+  value: "KG",
+  label: "Kyrgyzstan"
+}, {
+  value: "LV",
+  label: "Latvia"
+}, {
+  value: "LT",
+  label: "Lithuania"
+}, {
+  value: "LU",
+  label: "Luxembourg"
+}, {
+  value: "MY",
+  label: "Malaysia"
+}, {
+  value: "MT",
+  label: "Malta"
+}, {
+  value: "MX",
+  label: "Mexico"
+}, {
+  value: "MN",
+  label: "Mongolia"
+}, {
+  value: "MA",
+  label: "Morocco"
+}, {
+  value: "NP",
+  label: "Nepal"
+}, {
+  value: "NL",
+  label: "Netherlands"
+}, {
+  value: "NZ",
+  label: "New Zealand"
+}, {
+  value: "NG",
+  label: "Nigeria"
+}, {
+  value: "NO",
+  label: "Norway"
+}, {
+  value: "PK",
+  label: "Pakistan"
+}, {
+  value: "PE",
+  label: "Peru"
+}, {
+  value: "PH",
+  label: "Philippines"
+}, {
+  value: "PL",
+  label: "Poland"
+}, {
+  value: "PT",
+  label: "Portugal"
+}, {
+  value: "KR",
+  label: "Republic of Korea"
+}, {
+  value: "PA",
+  label: "Republic of Panama"
+}, {
+  value: "RO",
+  label: "Romania"
+}, {
+  value: "RU",
+  label: "Russian Federation"
+}, {
+  value: "SA",
+  label: "Saudi Arabia"
+}, {
+  value: "RS",
+  label: "Serbia"
+}, {
+  value: "SG",
+  label: "Singapore"
+}, {
+  value: "SK",
+  label: "Slovakia"
+}, {
+  value: "SI",
+  label: "Slovenia"
+}, {
+  value: "ZA",
+  label: "South Africa"
+}, {
+  value: "ES",
+  label: "Spain"
+}, {
+  value: "LK",
+  label: "Sri Lanka"
+}, {
+  value: "SE",
+  label: "Sweden"
+}, {
+  value: "CH",
+  label: "Switzerland"
+}, {
+  value: "TW",
+  label: "Taiwan"
+}, {
+  value: "TH",
+  label: "Thailand"
+}, {
+  value: "TN",
+  label: "Tunisia"
+}, {
+  value: "TR",
+  label: "Turkey"
+}, {
+  value: "TM",
+  label: "Turkmenistan"
+}, {
+  value: "UA",
+  label: "Ukraine"
+}, {
+  value: "AE",
+  label: "United Arab Emirates"
+}, {
+  value: "GB",
+  label: "United Kingdom"
+}, {
+  value: "US",
+  label: "United States"
+}, {
+  value: "UZ",
+  label: "Uzbekistan"
+}, {
+  value: "VE",
+  label: "Venezuela"
+}, {
+  value: "VN",
+  label: "Viet Nam"
+}];
+const themes = [{
+  value: "BC50E220-9412-11E8-85AF-D97B4D95EBB1",
+  label: "Intelligent Braking and Braking Control"
+}, {
+  value: "48C9561C-7865-11E7-AA75-C89000D85D50",
+  label: "Environmentally-friendly Braking Systems"
+}, {
+  value: "5D49D9C2-7865-11E7-9112-887F12D54550",
+  label: "Fundamentals of Brakes"
+}, {
+  value: "7C15061A-7865-11E7-8178-84D2A73AF9BC",
+  label: "Manufacturing and Markets"
+}, {
+  value: "925B5F3C-7865-11E7-8659-8C8422753A7C",
+  label: "Materials and Design"
+}, {
+  value: "B6F53F20-7865-11E7-A9B1-FC3D434D4D51",
+  label: "Simulation, Testing, Innovative Development Processes"
+}];
+const subThemes = [{
+  value: "06CE3888-9414-11E8-AE34-9BA1BE5E3471",
+  label: "Brake Systems for Highly Automated Road and Rail Vehicles"
+}, {
+  value: "0DD80384-9414-11E8-A380-9320CF01B393",
+  label: "Braking for Electric and Hybrid Vehicles"
+}, {
+  value: "1BFDEE9C-9414-11E8-A7E0-A07B6C067014",
+  label: "Innovative Parking Brake Systems"
+}, {
+  value: "1C01065E-9414-11E8-A93F-A546BD18FAA0",
+  label: "Innovative Brake Actuators and System Controls (Software and Function Development)"
+}, {
+  value: "1C04A9BC-9414-11E8-B1D2-8516A557BE68",
+  label: "Safety relevant braking functions"
+}, {
+  value: "1C082150-9414-11E8-AF92-B5E7B5B9337D",
+  label: "Railway Traffic Management Systems"
+}, {
+  value: "2604091C-9414-11E8-A078-CC3BFBB45A3C",
+  label: "Sustainability in Brake Systems"
+}, {
+  value: "26093DE2-9414-11E8-B272-A7C4EBADAE4A",
+  label: "Brake Energy Management and Recuperation"
+}, {
+  value: "260E56E2-9414-11E8-B9F8-E613015D1408",
+  label: "Brake Noise and Drag Reduction"
+}, {
+  value: "26126F98-9414-11E8-BBB3-D3A884B3E943",
+  label: "Lightweight Brake Components"
+}, {
+  value: "26176674-9414-11E8-8A0E-C108E25B228C",
+  label: "Brake Emission findings and available countermeasures"
+}, {
+  value: "2FE079A2-9414-11E8-AA53-C7435EE03528",
+  label: "Friction Interface Dynamics"
+}, {
+  value: "2FE4D18C-9414-11E8-B418-87A1883F2046",
+  label: "Friction Induced Vibration"
+}, {
+  value: "2FE958F6-9414-11E8-A0E5-9911B184DEC0",
+  label: "Thermal Effects"
+}, {
+  value: "2FECE066-9414-11E8-A9FA-A830F1ADACA6",
+  label: "Wear and Emissions"
+}, {
+  value: "36935E7C-9414-11E8-830E-8F6C9F83D892",
+  label: "Manufacturing, Quality Control and Warranty Claims"
+}, {
+  value: "369B7C92-9414-11E8-8D9F-E0E2215D2248",
+  label: "Global Standardisation"
+}, {
+  value: "36A067CA-9414-11E8-8D58-F172FE98C949",
+  label: "Aftermarket, Global Sourcing"
+}, {
+  value: "36A436C0-9414-11E8-AAB2-F98B8437A38B",
+  label: "Governmental Regulation and Homologation of Brake Systems"
+}, {
+  value: "3DAE1288-9414-11E8-85DC-B1A03E97F386",
+  label: "Innovative Friction Materials and Components"
+}, {
+  value: "3DB1BDC0-9414-11E8-81E9-D82DD1471F92",
+  label: "Disc, Drum, Wheel Materials, Coatings and Design"
+}, {
+  value: "E65121F6-B77B-11E9-A3BF-935F1E4F73DC",
+  label: "Virtual Development Methods of Braking Hardware and Software "
+}, {
+  value: "E6542694-B77B-11E9-BAAD-C06218C5F3E9",
+  label: "Friction Material and Friction Couple Characterisation"
+}, {
+  value: "E6572D62-B77B-11E9-AEEC-DEEBD990D172",
+  label: "Simulation and Testing of Noise Vibration Harshness"
+}, {
+  value: "E65A4448-B77B-11E9-925C-E3659DA380C2",
+  label: "Simulating and Testing of Particulate Emissions"
+}, {
+  value: "E65D5C1E-B77B-11E9-B6C9-A62E81FFC1F7",
+  label: "Brake System and Component Performance"
+}, {
+  value: "E6607750-B77B-11E9-A508-CA68AAFEDEBE",
+  label: "Scale Testing for Research Development and Quality Control"
+}, {
+  value: "E66375B8-B77B-11E9-B730-BE1C3C7011F1",
+  label: "Virtual Validation and Certification of Brake Systems"
+}, {
+  value: "E6668E42-B77B-11E9-8175-950FC9BD5E64",
+  label: "State-of-the-Art Engineering Processes for Safety Relevant Functions and Systems"
+}, {
+  value: "E6699C68-B77B-11E9-BE37-D0A72E493802",
+  label: "Development (Process/Products) of Cooperating Software and Hardware Solutions in Brakes"
+}];
+const subTheme1 = [{
+  value: "06CE3888-9414-11E8-AE34-9BA1BE5E3471",
+  label: "Brake Systems for Highly Automated Road and Rail Vehicles"
+}, {
+  value: "0DD80384-9414-11E8-A380-9320CF01B393",
+  label: "Braking for Electric and Hybrid Vehicles"
+}, {
+  value: "1BFDEE9C-9414-11E8-A7E0-A07B6C067014",
+  label: "Innovative Parking Brake Systems"
+}, {
+  value: "1C01065E-9414-11E8-A93F-A546BD18FAA0",
+  label: "Innovative Brake Actuators and System Controls (Software and Function Development)"
+}, {
+  value: "1C04A9BC-9414-11E8-B1D2-8516A557BE68",
+  label: "Safety relevant braking functions"
+}, {
+  value: "1C082150-9414-11E8-AF92-B5E7B5B9337D",
+  label: "Railway Traffic Management Systems"
+}];
+const subTheme2 = [{
+  value: "2604091C-9414-11E8-A078-CC3BFBB45A3C",
+  label: "Sustainability in Brake Systems"
+}, {
+  value: "26093DE2-9414-11E8-B272-A7C4EBADAE4A",
+  label: "Brake Energy Management and Recuperation"
+}, {
+  value: "260E56E2-9414-11E8-B9F8-E613015D1408",
+  label: "Brake Noise and Drag Reduction"
+}, {
+  value: "26126F98-9414-11E8-BBB3-D3A884B3E943",
+  label: "Lightweight Brake Components"
+}, {
+  value: "26176674-9414-11E8-8A0E-C108E25B228C",
+  label: "Brake Emission findings and available countermeasures"
+}];
+const subTheme3 = [{
+  value: "2FE079A2-9414-11E8-AA53-C7435EE03528",
+  label: "Friction Interface Dynamics"
+}, {
+  value: "2FE4D18C-9414-11E8-B418-87A1883F2046",
+  label: "Friction Induced Vibration"
+}, {
+  value: "2FE958F6-9414-11E8-A0E5-9911B184DEC0",
+  label: "Thermal Effects"
+}, {
+  value: "2FECE066-9414-11E8-A9FA-A830F1ADACA6",
+  label: "Wear and Emissions"
+}];
+const subTheme4 = [{
+  value: "36935E7C-9414-11E8-830E-8F6C9F83D892",
+  label: "Manufacturing, Quality Control and Warranty Claims"
+}, {
+  value: "369B7C92-9414-11E8-8D9F-E0E2215D2248",
+  label: "Global Standardisation"
+}, {
+  value: "36A067CA-9414-11E8-8D58-F172FE98C949",
+  label: "Aftermarket, Global Sourcing"
+}, {
+  value: "36A436C0-9414-11E8-AAB2-F98B8437A38B",
+  label: "Governmental Regulation and Homologation of Brake Systems"
+}];
+const subTheme5 = [{
+  value: "3DAE1288-9414-11E8-85DC-B1A03E97F386",
+  label: "Innovative Friction Materials and Components"
+}, {
+  value: "3DB1BDC0-9414-11E8-81E9-D82DD1471F92",
+  label: "Disc, Drum, Wheel Materials, Coatings and Design"
+}];
+const subTheme6 = [{
+  value: "E65121F6-B77B-11E9-A3BF-935F1E4F73DC",
+  label: "Virtual Development Methods of Braking Hardware and Software "
+}, {
+  value: "E6542694-B77B-11E9-BAAD-C06218C5F3E9",
+  label: "Friction Material and Friction Couple Characterisation"
+}, {
+  value: "E6572D62-B77B-11E9-AEEC-DEEBD990D172",
+  label: "Simulation and Testing of Noise Vibration Harshness"
+}, {
+  value: "E65A4448-B77B-11E9-925C-E3659DA380C2",
+  label: "Simulating and Testing of Particulate Emissions"
+}, {
+  value: "E65D5C1E-B77B-11E9-B6C9-A62E81FFC1F7",
+  label: "Brake System and Component Performance"
+}, {
+  value: "E6607750-B77B-11E9-A508-CA68AAFEDEBE",
+  label: "Scale Testing for Research Development and Quality Control"
+}, {
+  value: "E66375B8-B77B-11E9-B730-BE1C3C7011F1",
+  label: "Virtual Validation and Certification of Brake Systems"
+}, {
+  value: "E6668E42-B77B-11E9-8175-950FC9BD5E64",
+  label: "State-of-the-Art Engineering Processes for Safety Relevant Functions and Systems"
+}, {
+  value: "E6699C68-B77B-11E9-BE37-D0A72E493802",
+  label: "Development (Process/Products) of Cooperating Software and Hardware Solutions in Brakes"
+}];
+const submissionType = [{
+  value: "full",
+  label: "I will make a full technical paper submission"
+}, {
+  value: "oral",
+  label: "I will make an oral-only submission"
+}, {
+  value: "poster",
+  label: "I will make a poster-only submission"
+}];
+const ifFull = [{
+  value: "programme",
+  label: "My full paper submission will be accompanied by an oral presentation"
+}, {
+  value: "poster",
+  label: "My full paper submission will be accompanied by a poster presentation"
+}];
+
+/***/ }),
+
 /***/ "./components/forms/Formstyles.js":
 /*!****************************************!*\
   !*** ./components/forms/Formstyles.js ***!
@@ -8595,308 +9405,6 @@ const StyledForm = styled_components__WEBPACK_IMPORTED_MODULE_0___default()(form
   displayName: "Formstyles__StyledForm",
   componentId: "sc-1mvqi50-0"
 })(["display:flex;flex-flow:column;justify-content:space-between;align-items:center;min-width:100%;.MuiInput-underline:before{color:", ";}.MuiInput-underline:after{color:", ";}.MuiFormHelperText-root{font-size:1.5rem;}.MuiInputBase-root{font-family:", ";font-size:2rem;color:", ";}.form{display:flex;&-secondary{display:flex;flex-flow:column;justify-content:space-between;align-items:center;min-width:100%;}&-radio{align-self:flex-start;}&-field{position:relative;margin:1rem 0;width:100%;display:flex;font-family:", ";justify-content:space-between;align-items:flex-end;&-news{.MuiInputBase-input{padding:0;margin:0;}.MuiInput-underline:before{border-bottom:1px solid rgba(255,255,255,1);}}&_action{position:absolute;display:flex;align-self:flex-end;justify-content:flex-end;right:0rem;width:40rem;top:-10rem;}&_question{position:relative;width:100%;margin:1rem 0;display:flex;&-check{position:relative;width:100%;margin:1rem 0;display:flex;flex-flow:column;}}&_file{width:100%;display:flex;flex-flow:column;&-box{position:relative;width:100%;margin:4rem 0;display:flex;justify-content:space-between;.MuiInput-underline:before{border-bottom:none;}}}&-radio{position:relative;width:100%;display:flex;margin:1rem 0;}&-copy{width:100%;display:flex;flex-flow:column;}}&-notes{font-family:", ";position:relative;display:flex;flex-flow:column;justify-content:space-between;align-items:center;min-width:100%;&-label{min-width:100%;font-family:", ";font-size:2rem;color:", ";}&-input{margin-top:2rem;margin-bottom:4rem;min-width:100%;min-height:15rem;font-family:", ";font-size:2rem;color:", ";}}&-checkboxField{position:relative;min-width:100%;font-family:", ";font-size:2rem;color:", ";display:flex;align-items:center;justify-content:space-between;margin:1rem 0;.MuiIconButton-colorSecondary:hover{background-color:transparent;}.MuiSvgIcon-root{font-size:4rem;}&-box{align-self:flex-end;}}&-label{align-self:flex-start;min-width:33.3%;font-family:", ";font-size:2rem;color:", ";&-radio{max-width:33.33%;align-self:flex-start;font-family:", ";font-size:2rem;color:", ";}&_question{max-width:33.33%;align-self:flex-start;font-family:", ";font-size:2rem;color:", ";}&-news{}}&-input{align-self:flex-end;width:66.6%;font-family:", ";font-size:2rem;color:", ";&_question{width:66.66%;align-self:flex-end;margin:4rem 0;}&-news{margin:0 2rem;}&_file{width:100%;font-family:", ";font-size:2rem;color:", ";.MuiInput-underline:before{border-bottom:none;}}}&-link{cursor:pointer;font-family:", ";font-size:1.7rem;color:", ";}&-link_bold{cursor:pointer;font-family:", ";color:", ";}&-title{color:", ";font-family:", ";font-size:3rem;align-self:flex-start;margin:2rem 0;}}"], props => props.theme.primary, props => props.theme.primary, props => props.theme.MPBoldIt, props => props.theme.primary, props => props.theme.MPLight, props => props.theme.MPLight, props => props.theme.MPLight, props => props.theme.primary, props => props.theme.MPBoldIt, props => props.theme.primary, props => props.theme.MPLight, props => props.theme.primary, props => props.theme.MPLight, props => props.theme.primary, props => props.theme.MPLight, props => props.theme.primary, props => props.theme.MPLight, props => props.theme.primary, props => props.theme.MPBoldIt, props => props.theme.primary, props => props.theme.MPBoldIt, props => props.theme.primary, props => props.theme.MPBoldIt, props => props.theme.primary, props => props.theme.MPBold, props => props.theme.primary, props => props.theme.primary, props => props.theme.MPSemibold);
-
-/***/ }),
-
-/***/ "./components/forms/Newsletter.js":
-/*!****************************************!*\
-  !*** ./components/forms/Newsletter.js ***!
-  \****************************************/
-/*! exports provided: Newsletter */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Newsletter", function() { return Newsletter; });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var formik__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! formik */ "formik");
-/* harmony import */ var formik__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(formik__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var formik_material_ui__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! formik-material-ui */ "formik-material-ui");
-/* harmony import */ var formik_material_ui__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(formik_material_ui__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _material_ui_core_CircularProgress__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @material-ui/core/CircularProgress */ "@material-ui/core/CircularProgress");
-/* harmony import */ var _material_ui_core_CircularProgress__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_CircularProgress__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _Formstyles__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Formstyles */ "./components/forms/Formstyles.js");
-/* harmony import */ var _Button__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../Button */ "./components/Button.js");
-/* harmony import */ var _FormActions__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./FormActions */ "./components/forms/FormActions.js");
-/* harmony import */ var _FormControl__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./FormControl */ "./components/forms/FormControl.js");
-var _jsxFileName = "/mnt/c/Users/D.Hardiman/desktop/eurobrake/components/forms/Newsletter.js";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
-
-
-
-
-
-
-
-
-const Newsletter = () => {
-  const {
-    0: Loading,
-    1: setLoading
-  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false);
-  const {
-    0: Toggle,
-    1: setToggle
-  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false);
-  const {
-    0: Status,
-    1: setStatus
-  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(null);
-  const FT = "newsletter";
-  const url = 'https://prelude.eurobrake.net/signup';
-  return __jsx(formik__WEBPACK_IMPORTED_MODULE_1__["Formik"], {
-    initialValues: emptyInitial,
-    enableReinitialize: true,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 20
-    },
-    __self: undefined
-  }, ({
-    values,
-    handleChange,
-    validateForm
-  }) => {
-    const onSubmit = async () => {
-      await setLoading(true);
-      values.__csrf_token = csrf;
-      await console.log('submitting');
-      let res = await Object(_FormActions__WEBPACK_IMPORTED_MODULE_6__["SendForm"])({
-        values,
-        url,
-        csrf
-      });
-      let data = await res;
-      let dataStatus = (await data) && data.status;
-      setStatus(dataStatus);
-      console.log({
-        data
-      });
-
-      let result = async () => {
-        await setLoading(false);
-        await setToggle(true);
-      };
-
-      return result();
-    };
-
-    return __jsx(_Formstyles__WEBPACK_IMPORTED_MODULE_4__["StyledForm"], {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 46
-      },
-      __self: undefined
-    }, __jsx("div", {
-      className: "form",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 47
-      },
-      __self: undefined
-    }, __jsx("div", {
-      className: "form-field-news",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 49
-      },
-      __self: undefined
-    }, __jsx("label", {
-      htmlFor: "name",
-      className: "form-label-news",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 50
-      },
-      __self: undefined
-    }, "Name:"), __jsx(formik__WEBPACK_IMPORTED_MODULE_1__["Field"], {
-      type: "text",
-      className: "form-input-news",
-      onClick: handleChange,
-      value: values.name,
-      style: {},
-      name: "name",
-      component: formik_material_ui__WEBPACK_IMPORTED_MODULE_2__["TextField"],
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 55
-      },
-      __self: undefined
-    })), __jsx("div", {
-      className: "form-field-news",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 65
-      },
-      __self: undefined
-    }, __jsx("label", {
-      htmlFor: "email",
-      className: "form-label-news",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 66
-      },
-      __self: undefined
-    }, "Email:"), __jsx(formik__WEBPACK_IMPORTED_MODULE_1__["Field"], {
-      type: "email",
-      className: "form-input-news",
-      onClick: handleChange,
-      value: values.name,
-      style: {},
-      name: "email",
-      component: formik_material_ui__WEBPACK_IMPORTED_MODULE_2__["TextField"],
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 71
-      },
-      __self: undefined
-    })), Loading ? __jsx(_material_ui_core_CircularProgress__WEBPACK_IMPORTED_MODULE_3___default.a, {
-      size: 24,
-      className: "loading",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 81
-      },
-      __self: undefined
-    }) : __jsx(_Button__WEBPACK_IMPORTED_MODULE_5__["Button"], {
-      onClick: onSubmit,
-      padding: ".5rem ",
-      style: {
-        fontSize: "1rem",
-        height: '2rem',
-        alignSelf: 'center'
-      },
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 82
-      },
-      __self: undefined
-    }, Status ? Status : 'submit')));
-  });
-}; // ? For now im by passin the email link just to check what i have with a reset token
-
-const emptyInitial = {
-  name: '',
-  email: ''
-};
-
-/***/ }),
-
-/***/ "./components/styles/BaseAnimation.js":
-/*!********************************************!*\
-  !*** ./components/styles/BaseAnimation.js ***!
-  \********************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! styled-components */ "styled-components");
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_0__);
-
-const BaseAnimation = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({
-  displayName: "BaseAnimation",
-  componentId: "sc-17nylf8-0"
-})(["animation-duration:", ";animation-timing-function:", ";animation-delay:", ";animation-iteration-count:", ";animation-direction:", ";animation-fill-mode:", ";animation-play-state:", ";display:", ";"], props => props.duration, props => props.timingFunction, props => props.delay, props => props.iterationCount, props => props.direction, props => props.fillMode, props => props.playState, props => props.display);
-BaseAnimation.defaultProps = {
-  duration: '1s',
-  timingFunction: 'ease',
-  delay: '0s',
-  iterationnCount: '1',
-  direction: 'normal',
-  fillMode: 'both',
-  playState: 'running',
-  diplay: 'block'
-};
-/* harmony default export */ __webpack_exports__["default"] = (BaseAnimation);
-
-/***/ }),
-
-/***/ "./components/styles/HomeStyles.js":
-/*!*****************************************!*\
-  !*** ./components/styles/HomeStyles.js ***!
-  \*****************************************/
-/*! exports provided: StyledContainer, StyledSection */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "StyledContainer", function() { return StyledContainer; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "StyledSection", function() { return StyledSection; });
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! styled-components */ "styled-components");
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _Page__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../Page */ "./components/Page.js");
-
-
-const StyledContainer = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({
-  displayName: "HomeStyles__StyledContainer",
-  componentId: "sc-1nylq97-0"
-})(["display:flex;flex-flow:column;align-items:center;"]);
-const StyledSection = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({
-  displayName: "HomeStyles__StyledSection",
-  componentId: "sc-1nylq97-1"
-})(["display:flex;flex-flow:column;justify-content:flex-start;margin:0 10rem;margin-top:5rem;margin-bottom:15rem;width:", ";@media only screen  and (max-device-width:1300px)  and (-webkit-min-device-pixel-ratio:2){width:", ";}@media only screen  and (max-device-width:768px)  and (-webkit-min-device-pixel-ratio:2){width:", ";}h1{font-family:", ";font-size:4.4rem;color:", ";line-height:1.1;margin-bottom:3rem;}p{font-family:", ";font-size:2rem;color:", ";margin-bottom:1rem;}.innerContainer{position:relative;display:flex;flex-flow:column;margin-top:2rem;}.mediaBox{min-width:66.4rem;max-height:33rem;overflow:hidden;display:flex;justify-content:center;align-items:center;}"], props => props.theme.minWidth, props => props.theme.laptopWidth, props => props.theme.mobileWidth, props => props.theme.MPSemibold, props => props.theme.primary, props => props.theme.MPLight, props => props.theme.primary);
-
-/***/ }),
-
-/***/ "./components/styles/NavStyles.js":
-/*!****************************************!*\
-  !*** ./components/styles/NavStyles.js ***!
-  \****************************************/
-/*! exports provided: NavStyles, Rotate, Burger, TopBun, HiddenNavBG, HiddenContainer */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NavStyles", function() { return NavStyles; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Rotate", function() { return Rotate; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Burger", function() { return Burger; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TopBun", function() { return TopBun; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HiddenNavBG", function() { return HiddenNavBG; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HiddenContainer", function() { return HiddenContainer; });
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! styled-components */ "styled-components");
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _BaseAnimation__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./BaseAnimation */ "./components/styles/BaseAnimation.js");
-
-
-const NavStyles = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({
-  displayName: "NavStyles",
-  componentId: "sc-1ltvdnj-0"
-})(["display:flex;position:absolute;transform:translateX(-20rem);z-index:200;"]);
-const Rotate360 = Object(styled_components__WEBPACK_IMPORTED_MODULE_0__["keyframes"])(["100%{transform:rotate(360deg);}"]);
-const Rotate = styled_components__WEBPACK_IMPORTED_MODULE_0___default()(_BaseAnimation__WEBPACK_IMPORTED_MODULE_1__["default"]).withConfig({
-  displayName: "NavStyles__Rotate",
-  componentId: "sc-1ltvdnj-1"
-})(["animation-name:", ";transform-origin:center center;"], Rotate360);
-const Burger = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({
-  displayName: "NavStyles__Burger",
-  componentId: "sc-1ltvdnj-2"
-})(["position:absolute;top:-4rem;left:5rem;margin:0 1rem;width:6rem;height:8rem;cursor:pointer;display:flex;align-items:center;z-index:300;transition:all .6s linear;"]);
-const trans = {
-  up: 'translateY(1.2rem)',
-  stay: 'translateY(0)',
-  down: 'translateY(-1.2rem)',
-  spin0: 'rotate(0)',
-  spin90: 'rotate(90deg)',
-  spin315: 'rotate(315deg)',
-  scale100: 'scale(107)',
-  scale0: 'scale(0)',
-  in: 'transform .6s cubic-bezier(0.22, 0.61, 0.36, 1) .3s',
-  out: 'transform .6s cubic-bezier(.55,.055,.675,.19); .3 '
-};
-const TopBun = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({
-  displayName: "NavStyles__TopBun",
-  componentId: "sc-1ltvdnj-3"
-})(["position:relative;width:100%;height:.3rem;transition:", ";background-color:", ";transform:", ";&:before{width:100%;height:100%;position:absolute;transition:top .2s ease-out,transform .22s cubic-bezier(.215,.61,.355,1) .12s;top:", ";content:'';transform:", ";border-bottom:3px solid ", ";}&:after{border-bottom:3px solid ", ";width:100%;height:100%;position:absolute;content:'';transition:top .2s ease-out;top:", ";}"], props => props.isOpen ? trans.in : trans.out, props => props.theme.secondary, props => props.isOpen ? trans.spin315 : trans.spin0, props => props.isOpen ? 0 : '-1.6rem', props => props.isOpen ? trans.spin90 : trans.spin0, props => props.theme.secondary, props => props.theme.secondary, props => props.isOpen ? 0 : '1.6rem');
-const HiddenNavBG = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({
-  displayName: "NavStyles__HiddenNavBG",
-  componentId: "sc-1ltvdnj-4"
-})(["background-color:", ";position:absolute;top:-3rem;left:8rem;width:5rem;height:5rem;border-radius:50%;transition:transform .8s ease-in-out;transform:", ";"], props => props.theme.primary, props => props.isOpen ? trans.scale100 : trans.scale0);
-const HiddenContainer = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({
-  displayName: "NavStyles__HiddenContainer",
-  componentId: "sc-1ltvdnj-5"
-})(["position:absolute;right:-20rem;top:-5rem;display:flex;align-items:flex-start;justify-content:flex-start;flex-flow:column;padding:2rem;transition:all .8s ease-in-out;opacity:", ";transform:", ";min-width:99vw;min-height:99vh;@media only screen  and (max-device-width:768px)  and (-webkit-min-device-pixel-ratio:2){min-height:27vh;}.nav{&-title{font-size:2rem;font-family:", ";color:", ";&-box{display:flex;flex-flow:column;align-items:flex-start;margin-bottom:3rem;}}&-links{font-size:2rem;font-family:", ";color:", ";&-box{display:flex;flex-flow:column;align-items:flex-start;margin-bottom:3rem;}}&_container-1{width:100%;height:100%;display:flex;flex-flow:row;flex:1 1 auto;justify-content:space-between;@media only screen  and (max-device-width:768px)  and (-webkit-min-device-pixel-ratio:2){margin-top:0;}}&-inner{display:flex;flex-flow:column;&-title{font-size:3rem;font-family:", ";color:", ";@media only screen  and (max-device-width:1500px)  and (-webkit-min-device-pixel-ratio:2){font-size:2rem;}}&-text{font-size:3rem;font-family:", ";color:", ";@media only screen  and (max-device-width:1500px)  and (-webkit-min-device-pixel-ratio:2){font-size:2rem;}}}&_box-1{margin-left:5rem;padding:2rem;width:70%;@media only screen  and (max-device-width:1700px)  and (-webkit-min-device-pixel-ratio:2){width:80%;}max-height:20rem;flex:1 1 auto;padding-bottom:4rem;display:flex;justify-content:space-between;align-items:flex-end;}&_box-middle{height:50rem;max-width:95rem;flex:1 1 auto;margin:2rem;padding:2rem;display:flex;flex-flow:row;justify-content:space-between;&-1{display:flex;flex-flow:column;width:26rem;height:50rem;}&-2{width:26rem;height:50rem;}&-3{width:15rem;height:50rem;}}&_box-right{height:50rem;max-width:26rem;flex:1 1 auto;margin:2rem;display:flex;flex-flow:column;align-items:center;justify-content:space-between;@media only screen  and (max-device-width:768px)  and (-webkit-min-device-pixel-ratio:2){display:none;}}&_box-left{height:50rem;max-width:26rem;flex:1 1 auto;margin:2rem;display:flex;flex-flow:column;align-items:center;justify-content:space-between;@media only screen  and (max-device-width:768px)  and (-webkit-min-device-pixel-ratio:2){display:none;}}&_box-bottom{margin-left:5rem;display:flex;flex-flow:row;align-items:flex-end;&-text{font-size:1.5rem;margin-right:2rem;}}}"], props => props.isOpen ? '1' : '0', props => props.isOpen ? null : 'translateX(-250rem)', props => props.theme.MPLightIt, props => props.theme.white, props => props.theme.MPBlackIt, props => props.theme.white, props => props.theme.MPSemibold, props => props.theme.secondary, props => props.theme.MPLight, props => props.theme.white);
 
 /***/ }),
 
@@ -14042,10 +14550,10 @@ module.exports = __webpack_require__(/*! ./dist/client/link */ "./node_modules/n
 
 /***/ }),
 
-/***/ "./pages/index.js":
-/*!************************!*\
-  !*** ./pages/index.js ***!
-  \************************/
+/***/ "./pages/esop.js":
+/*!***********************!*\
+  !*** ./pages/esop.js ***!
+  \***********************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -14053,17 +14561,22 @@ module.exports = __webpack_require__(/*! ./dist/client/link */ "./node_modules/n
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _components_CountDownBanner__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/CountDownBanner */ "./components/CountDownBanner.js");
-/* harmony import */ var _components_styles_HomeStyles__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/styles/HomeStyles */ "./components/styles/HomeStyles.js");
-/* harmony import */ var _components_AboutSection__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/AboutSection */ "./components/AboutSection.js");
-/* harmony import */ var _components_LocationSection__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/LocationSection */ "./components/LocationSection.js");
-/* harmony import */ var _components_AttendeesSection__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/AttendeesSection */ "./components/AttendeesSection.js");
-/* harmony import */ var _components_exhibitors_ExhibitionSection__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/exhibitors/ExhibitionSection */ "./components/exhibitors/ExhibitionSection.js");
-/* harmony import */ var _components_StudentSection__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../components/StudentSection */ "./components/StudentSection.js");
-/* harmony import */ var _components_AuthorSection__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../components/AuthorSection */ "./components/AuthorSection.js");
-/* harmony import */ var _components_HeroSection__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../components/HeroSection */ "./components/HeroSection.js");
-/* harmony import */ var _components_Dates__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../components/Dates */ "./components/Dates.js");
-var _jsxFileName = "/mnt/c/Users/D.Hardiman/desktop/eurobrake/pages/index.js";
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "styled-components");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var react_player__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-player */ "react-player");
+/* harmony import */ var react_player__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_player__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @material-ui/core/Typography */ "@material-ui/core/Typography");
+/* harmony import */ var _material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _components_HeroSection__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/HeroSection */ "./components/HeroSection.js");
+/* harmony import */ var _material_ui_icons_Stop__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @material-ui/icons/Stop */ "@material-ui/icons/Stop");
+/* harmony import */ var _material_ui_icons_Stop__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_material_ui_icons_Stop__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _components_Button__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../components/Button */ "./components/Button.js");
+/* harmony import */ var _components_Icons__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../components/Icons */ "./components/Icons.js");
+/* harmony import */ var _components_Dates__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../components/Dates */ "./components/Dates.js");
+/* harmony import */ var _components_forms_Esop__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../components/forms/Esop */ "./components/forms/Esop.js");
+var _jsxFileName = "/mnt/c/Users/D.Hardiman/desktop/eurobrake/pages/esop.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
@@ -14076,75 +14589,275 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 
-/* harmony default export */ __webpack_exports__["default"] = (() => __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx(_components_HeroSection__WEBPACK_IMPORTED_MODULE_9__["default"], {
-  scolor: "#F9B721",
-  cara: true,
-  sfs: "8rem",
-  tsfs: "6rem",
-  tst: "60%",
-  mst: "60%",
-  src: "/images/main.jpg",
-  secondary: "Secure your tickets by 1 April 2020",
+const StyledPage = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div.withConfig({
+  displayName: "esop__StyledPage",
+  componentId: "qilnx7-0"
+})(["display:flex;flex-direction:column;align-self:center;width:", ";background-color:", ";@media only screen  and (max-device-width:768px)  and (-webkit-min-device-pixel-ratio:2){width:", ";}.Esop{color:", ";font-family:", ";font-size:2rem;&_icon{position:absolute;left:-29px;top:9px;&-text{line-height:3.5rem;position:relative;margin-left:3rem;}}&-title{color:", ";font-family:", ";font-size:4.4rem;margin-top:3rem;}&_list{list-style-type:none;list-style-position:inside;margin-bottom:1rem;}&_list-title{margin-bottom:1rem;font-family:", ";font-size:2rem;}&_sub-title{color:", ";font-size:3.5rem;font-family:", ";padding-bottom:.5rem;}&-bold{font-family:", ";}&-italic{font-family:", "}&-boldIt{font-family:", "}}.button_box{display:flex;justify-content:flex-start;}.infoBox{display:flex;flex-flow:column;justify-content:center;min-height:24rem;background-color:", ";width:100vw;position:relative;left:50%;right:50%;margin-left:-50.5vw;margin-right:-50.5vw;&-text{padding:2rem;align-self:center;width:50%;@media only screen  and (max-device-width:768px)  and (-webkit-min-device-pixel-ratio:2){width:80%;};}}.video-box{position:relative;padding-top:56.25%}.react-player{position:absolute;top:0;left:0;}.margin-top5{margin-top:5rem;}.margin-bottom1.5{margin-bottom:1.5rem;}"], props => props.max || props.theme.minWidth, props => props.theme.white, props => props.theme.mobileWidth, props => props.theme.primary, props => props.theme.MPLight, props => props.theme.primary, props => props.theme.MPSemibold, props => props.theme.MPLight, props => props.theme.primary, props => props.theme.MPLightIt, props => props.theme.MPBold, props => props.theme.MPLightIt, props => props.theme.MPBoldIt, props => props.theme.primary2);
+const StyledQuote = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div.withConfig({
+  displayName: "esop__StyledQuote",
+  componentId: "qilnx7-1"
+})(["margin-top:5rem;"]);
+/* harmony default export */ __webpack_exports__["default"] = (() => __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx(_components_HeroSection__WEBPACK_IMPORTED_MODULE_5__["default"], {
+  max: "55%",
+  src: "https://live.staticflickr.com/65535/48015980517_8b8abbc7ef_b.jpg",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 16
+    lineNumber: 148
   },
   __self: undefined
-}, "Book your Early Bird tickets for EuroBrake 2020"), __jsx(_components_styles_HomeStyles__WEBPACK_IMPORTED_MODULE_2__["StyledContainer"], {
+}, "Student Opportunities Programme"), __jsx(StyledPage, {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 29
+    lineNumber: 155
   },
   __self: undefined
-}, __jsx(_components_Dates__WEBPACK_IMPORTED_MODULE_10__["FixedDates"], {
+}, __jsx(_components_Dates__WEBPACK_IMPORTED_MODULE_9__["FixedDates"], {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 30
+    lineNumber: 156
   },
   __self: undefined
-}), __jsx(_components_Dates__WEBPACK_IMPORTED_MODULE_10__["FixedBox"], {
+}), __jsx(_components_Dates__WEBPACK_IMPORTED_MODULE_9__["FixedBox"], {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 31
+    lineNumber: 157
   },
   __self: undefined
-}), __jsx(_components_AboutSection__WEBPACK_IMPORTED_MODULE_3__["default"], {
+}), __jsx("div", {
+  className: "Esop",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 32
+    lineNumber: 158
   },
   __self: undefined
-}), __jsx(_components_LocationSection__WEBPACK_IMPORTED_MODULE_4__["default"], {
+}, __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_4___default.a, {
+  gutterBottom: true,
+  className: "Esop-title ",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 33
+    lineNumber: 159
   },
   __self: undefined
-}), __jsx(_components_AttendeesSection__WEBPACK_IMPORTED_MODULE_5__["default"], {
+}, "Student Opportunities Programme"), __jsx("div", {
+  className: "video-box margin-bottom1.5 margin-top5",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 34
+    lineNumber: 160
   },
   __self: undefined
-}), __jsx(_components_exhibitors_ExhibitionSection__WEBPACK_IMPORTED_MODULE_6__["default"], {
+}, __jsx(react_player__WEBPACK_IMPORTED_MODULE_2___default.a, {
+  className: "react-player",
+  url: "https://www.youtube.com/embed/N-Nq9BH9-W4",
+  playing: true,
+  width: "100%",
+  height: "100%",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 35
+    lineNumber: 161
   },
   __self: undefined
-}), __jsx(_components_StudentSection__WEBPACK_IMPORTED_MODULE_7__["default"], {
+})), __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_4___default.a, {
+  gutterBottom: true,
+  className: "Esop Esop-bold margin-top5",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 36
+    lineNumber: 164
   },
   __self: undefined
-}), __jsx(_components_AuthorSection__WEBPACK_IMPORTED_MODULE_8__["default"], {
+}, "About the programme"), __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_4___default.a, {
+  gutterBottom: true,
+  className: "Esop ",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 37
+    lineNumber: 165
   },
   __self: undefined
-}))));
+}, "The EuroBrake Student Opportunities Programme (ESOP) offers students from around the world the chance to attend EuroBrake 2020."), __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_4___default.a, {
+  gutterBottom: true,
+  className: "Esop ",
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 166
+  },
+  __self: undefined
+}, "Selected students will be offered the opportunity to attend EuroBrake via a sponsorship package which offers a strong networking opportunities, a CV check/one to one career advice with HR representatives from the sponsor companies, access to the designated Student Lounge and much more. "), __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_4___default.a, {
+  gutterBottom: true,
+  className: "Esop ",
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 167
+  },
+  __self: undefined
+}, "The 2020 application round is now open. "), __jsx("div", {
+  className: "button_box",
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 168
+  },
+  __self: undefined
+}, __jsx(next_link__WEBPACK_IMPORTED_MODULE_3___default.a, {
+  href: "/tempEsop",
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 169
+  },
+  __self: undefined
+}, __jsx(_components_Button__WEBPACK_IMPORTED_MODULE_7__["Button"], {
+  background: "#134381",
+  br: "100rem",
+  bcolor: "#134381",
+  style: {
+    margin: '3.5rem 0'
+  },
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 170
+  },
+  __self: undefined
+}, "Apply here"))), __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_4___default.a, {
+  gutterBottom: true,
+  className: "Esop-title",
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 178
+  },
+  __self: undefined
+}, "Become a sponsor"), __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_4___default.a, {
+  gutterBottom: true,
+  className: "Esop ",
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 179
+  },
+  __self: undefined
+}, "Do you want to engage with and advise engineering and technology students who could become the mobility talent of tomorrow?"), __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_4___default.a, {
+  gutterBottom: true,
+  className: "Esop ",
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 180
+  },
+  __self: undefined
+}, "Could you help to guide and support students who have a passion for mobility to join our international community?"), __jsx(StyledQuote, {
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 181
+  },
+  __self: undefined
+}, __jsx(_components_Icons__WEBPACK_IMPORTED_MODULE_8__["Quote2"], {
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 182
+  },
+  __self: undefined
+})), __jsx("div", {
+  className: "margin-top5",
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 184
+  },
+  __self: undefined
+}, __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_4___default.a, {
+  gutterBottom: true,
+  className: "Esop ",
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 185
+  },
+  __self: undefined
+}, "The future embraces the challenges and opportunities of technology changes and trends so too do we at EuroBrake especially when it comes to inspiring the next generation of automotive engineers and technologists."), __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_4___default.a, {
+  gutterBottom: true,
+  className: "Esop ",
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 186
+  },
+  __self: undefined
+}, "As an ESOP 2020 sponsor you will have the opportunity to engage with students at EuroBrake; will offer you and your company an opportunity to meet students looking to develop and expand their knowledge of the world of braking."), __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_4___default.a, {
+  gutterBottom: true,
+  className: "Esop Esop-bold",
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 187
+  },
+  __self: undefined
+}, "Sponsorship opportunities start at just EUR 1,500."), __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_4___default.a, {
+  gutterBottom: true,
+  className: "Esop  Esop-bold",
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 188
+  },
+  __self: undefined
+}, "For more information please contact FISITA: "), __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_4___default.a, {
+  gutterBottom: true,
+  className: "Esop  Esop-bold Esop_icon-text",
+  style: {},
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 189
+  },
+  __self: undefined
+}, __jsx(_components_Icons__WEBPACK_IMPORTED_MODULE_8__["PhoneIcon"], {
+  width: "20",
+  height: "20",
+  className: "Esop_icon",
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 189
+  },
+  __self: undefined
+}), " +44 (0) 1279883470 "), __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_4___default.a, {
+  gutterBottom: true,
+  className: "Esop Esop-bold Esop_icon-text",
+  style: {},
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 190
+  },
+  __self: undefined
+}, __jsx(_components_Icons__WEBPACK_IMPORTED_MODULE_8__["MailIcon"], {
+  width: "20",
+  height: "20",
+  className: "Esop_icon",
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 190
+  },
+  __self: undefined
+}), " sales@fisita.com")), __jsx("div", {
+  className: "button_box",
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 192
+  },
+  __self: undefined
+}, __jsx(_components_Button__WEBPACK_IMPORTED_MODULE_7__["Button"], {
+  href: "https://www.eurobrake.net/exhibition/brochure.pdf",
+  background: "#134381",
+  br: "100rem",
+  bcolor: "#134381",
+  style: {
+    margin: '3.5rem 0'
+  },
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 193
+  },
+  __self: undefined
+}, "DOWNLOAD THE SPONSORSHIP BROUCHURE HERE"))))));
+{
+  /* <Link href="/Esopors">
+     <Al>
+         List of Esopors
+     </Al>
+  </Link>
+  <Link href="/EsoporsRegistration">
+     <Al>
+         Register
+     </Al>
+  </Link> */
+}
 
 /***/ }),
 
@@ -14265,30 +14978,14 @@ const withAuthSync = WrappedComponent => {
 
 /***/ }),
 
-/***/ "./utils/mixins.js":
-/*!*************************!*\
-  !*** ./utils/mixins.js ***!
-  \*************************/
-/*! exports provided: winWidth */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "winWidth", function() { return winWidth; });
-const winWidth = () => {
-  if (false) {}
-};
-
-/***/ }),
-
-/***/ 3:
-/*!******************************!*\
-  !*** multi ./pages/index.js ***!
-  \******************************/
+/***/ 4:
+/*!*****************************!*\
+  !*** multi ./pages/esop.js ***!
+  \*****************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /mnt/c/Users/D.Hardiman/desktop/eurobrake/pages/index.js */"./pages/index.js");
+module.exports = __webpack_require__(/*! /mnt/c/Users/D.Hardiman/desktop/eurobrake/pages/esop.js */"./pages/esop.js");
 
 
 /***/ }),
@@ -14304,14 +15001,14 @@ module.exports = require("@material-ui/core");
 
 /***/ }),
 
-/***/ "@material-ui/core/CircularProgress":
-/*!*****************************************************!*\
-  !*** external "@material-ui/core/CircularProgress" ***!
-  \*****************************************************/
+/***/ "@material-ui/core/MenuItem":
+/*!*********************************************!*\
+  !*** external "@material-ui/core/MenuItem" ***!
+  \*********************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = require("@material-ui/core/CircularProgress");
+module.exports = require("@material-ui/core/MenuItem");
 
 /***/ }),
 
@@ -14337,6 +15034,17 @@ module.exports = require("@material-ui/icons/ArrowBackOutlined");
 
 /***/ }),
 
+/***/ "@material-ui/icons/Stop":
+/*!******************************************!*\
+  !*** external "@material-ui/icons/Stop" ***!
+  \******************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("@material-ui/icons/Stop");
+
+/***/ }),
+
 /***/ "formik":
 /*!*************************!*\
   !*** external "formik" ***!
@@ -14356,17 +15064,6 @@ module.exports = require("formik");
 /***/ (function(module, exports) {
 
 module.exports = require("formik-material-ui");
-
-/***/ }),
-
-/***/ "google-maps-react":
-/*!************************************!*\
-  !*** external "google-maps-react" ***!
-  \************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = require("google-maps-react");
 
 /***/ }),
 
@@ -14400,17 +15097,6 @@ module.exports = require("js-cookie");
 /***/ (function(module, exports) {
 
 module.exports = require("next-cookies");
-
-/***/ }),
-
-/***/ "next/head":
-/*!****************************!*\
-  !*** external "next/head" ***!
-  \****************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = require("next/head");
 
 /***/ }),
 
@@ -14466,6 +15152,17 @@ module.exports = require("react");
 /***/ (function(module, exports) {
 
 module.exports = require("react-is");
+
+/***/ }),
+
+/***/ "react-player":
+/*!*******************************!*\
+  !*** external "react-player" ***!
+  \*******************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("react-player");
 
 /***/ }),
 
@@ -14547,4 +15244,4 @@ module.exports = require("yup");
 /***/ })
 
 /******/ });
-//# sourceMappingURL=index.js.map
+//# sourceMappingURL=esop.js.map

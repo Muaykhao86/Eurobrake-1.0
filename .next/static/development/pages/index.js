@@ -1801,11 +1801,11 @@ var StyledText = Object(styled_components__WEBPACK_IMPORTED_MODULE_1__["default"
 }, function (props) {
   return props.tt ? props.tt : '20%';
 }, function (props) {
-  return props.tfs || props.tsfs || '9rem';
+  return props.tfs || props.sfs || '9rem';
 }, function (props) {
   return props.tt ? props.tt : '20%';
 }, function (props) {
-  return props.mfs || props.msfs || '10rem';
+  return props.mfs || props.tfs || '10rem';
 }, function (props) {
   return props.mmax || '80%';
 }, function (props) {
@@ -95805,9 +95805,8 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
     cara: true,
     sfs: "8rem",
     tsfs: "6rem",
-    msfs: "9rem",
     tst: "60%",
-    mst: "50%",
+    mst: "60%",
     src: "/images/main.jpg",
     secondary: "Secure your tickets by 1 April 2020",
     __source: {
@@ -95818,55 +95817,55 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
   }, "Book your Early Bird tickets for EuroBrake 2020"), __jsx(_components_styles_HomeStyles__WEBPACK_IMPORTED_MODULE_2__["StyledContainer"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 30
+      lineNumber: 29
     },
     __self: this
   }, __jsx(_components_Dates__WEBPACK_IMPORTED_MODULE_10__["FixedDates"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 31
+      lineNumber: 30
     },
     __self: this
   }), __jsx(_components_Dates__WEBPACK_IMPORTED_MODULE_10__["FixedBox"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 32
+      lineNumber: 31
     },
     __self: this
   }), __jsx(_components_AboutSection__WEBPACK_IMPORTED_MODULE_3__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 33
+      lineNumber: 32
     },
     __self: this
   }), __jsx(_components_LocationSection__WEBPACK_IMPORTED_MODULE_4__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 34
+      lineNumber: 33
     },
     __self: this
   }), __jsx(_components_AttendeesSection__WEBPACK_IMPORTED_MODULE_5__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 35
+      lineNumber: 34
     },
     __self: this
   }), __jsx(_components_exhibitors_ExhibitionSection__WEBPACK_IMPORTED_MODULE_6__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 36
+      lineNumber: 35
     },
     __self: this
   }), __jsx(_components_StudentSection__WEBPACK_IMPORTED_MODULE_7__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 37
+      lineNumber: 36
     },
     __self: this
   }), __jsx(_components_AuthorSection__WEBPACK_IMPORTED_MODULE_8__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 38
+      lineNumber: 37
     },
     __self: this
   })));

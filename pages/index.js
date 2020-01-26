@@ -19,9 +19,8 @@ export default () => (
          cara
          sfs="8rem"
          tsfs="6rem"
-         msfs="9rem"
          tst="60%"
-         mst="50%"
+         mst="60%"
          src="/images/main.jpg" 
          secondary="Secure your tickets by 1 April 2020"
          >
