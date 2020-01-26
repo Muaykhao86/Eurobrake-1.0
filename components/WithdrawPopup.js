@@ -8,6 +8,7 @@ import CircularProgress from '@material-ui/core/CircularProgress';
 import { Button } from './Button';
 import CancelIcon from '@material-ui/icons/Cancel';
 import Dialog from '@material-ui/core/Dialog';
+import {SendForm} from  './forms/FormActions';
 
 const StyledDialog = styled(Dialog)`
 .MuiDialog-paperWidthSm {
@@ -102,8 +103,8 @@ export default function WithdrawPopup(props) {
     const { values, url } = props;
 
 
-     csrf = values.__csrf_
-     
+    csrf = values.__csrf_token
+
     console.log('popup', { values, url, csrf })
     
     
@@ -151,7 +152,7 @@ export default function WithdrawPopup(props) {
                                     background="#134381"
                                     br="100rem"
                                     padding="0.5rem 2rem"
-                                    style={{ margin: ".5rem 0" }}
+                                    style={{ margin: ".5rem 0", color: '#FFF' }}
                                     fontSize="1.7rem">
                                     <CancelIcon style={{ fontSize: '3rem', marginRight: '1rem', color: '#FFF' }} /> No
                                                 </Button>
@@ -161,7 +162,7 @@ export default function WithdrawPopup(props) {
                                     background="#134381"
                                     br="100rem"
                                     padding="0.5rem 2rem"
-                                    style={{ margin: ".5rem 0" }}
+                                    style={{ margin: ".5rem 0", color: '#FFF' }}
                                     fontSize="1.7rem">
                                     <CheckCircleIcon style={{ fontSize: '3rem', marginRight: '1rem', color: '#FFF' }} />
                                     Yes
