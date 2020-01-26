@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import Link from 'next/link';
 import { Typography } from '@material-ui/core';
 import withReveal from 'react-reveal/withReveal';
+import ArrowBackOutlinedIcon from '@material-ui/icons/ArrowBackOutlined';
 import Bounce from 'react-reveal/Bounce';
 import { Button } from './Button';
 import {SmlLogo} from './Icons';
@@ -171,6 +172,14 @@ const StyledFixedBox = styled.div`
     justify-content: space-between;
     flex: 1 1 auto;
 
+    
+    .hide-box{
+        position: absolute;
+        z-index: -100;
+        bottom: 0rem;
+        right: 0;
+    }
+
     .Box{
         
         &-title{
@@ -215,6 +224,7 @@ const StyledFixedBox = styled.div`
         flex: 1 1 auto;
       
     }
+
 `;
 
 export function FixedBox() {
@@ -232,7 +242,9 @@ export function FixedBox() {
             <div className="logo_box">
                 <SmlLogo width="10rem" height="10rem"/>
             </div>
-            
+            {/* <div className="hide-box">
+               <ArrowBackOutlinedIcon style={{background: '#134381', color: '#FFF', width: '5rem', height: '5rem'}}/>
+            </div> */}
         </StyledFixedBox>  
     )
 }
