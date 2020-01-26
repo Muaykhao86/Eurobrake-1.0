@@ -114,7 +114,8 @@ function AboutSection() {
     alt: "EuroBrake Greating",
     style: {
       width: '100%',
-      height: '100%'
+      height: '100%',
+      objectfit: 'cover'
     },
     __source: {
       fileName: _jsxFileName,
@@ -243,7 +244,8 @@ function AttendeesSection() {
     alt: "EuroBrake Greating",
     style: {
       width: '100%',
-      height: '100%'
+      height: '100%',
+      objectfit: 'cover'
     },
     __source: {
       fileName: _jsxFileName,
@@ -369,7 +371,8 @@ function AuthorSection() {
     alt: "EuroBrake Greating",
     style: {
       width: '100%',
-      height: '100%'
+      height: '100%',
+      objectfit: 'cover'
     },
     __source: {
       fileName: _jsxFileName,
@@ -1780,7 +1783,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 var StyledHero = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div.withConfig({
   displayName: "HeroSection__StyledHero",
   componentId: "sc-1rt21yv-0"
-})(["position:relative;padding-top:10rem;z-index:10;min-width:100%;min-height:", ";display:flex;flex-flow:column;@media only screen  and (max-device-width:768px)  and (-webkit-min-device-pixel-ratio:2)  and (orientation:portrait){min-height:", ";}img{flex:2 1 80%;object-fit:cover;}.banner{display:flex;}"], function (props) {
+})(["position:relative;padding-top:10rem;z-index:10;min-width:100%;min-height:", ";display:flex;flex-flow:column;@media only screen  and (max-device-width:768px)  and (-webkit-min-device-pixel-ratio:2)  and (orientation:portrait){min-height:", ";}.hero-img{max-height:80%;flex:2 1 80%;object-fit:cover;}.banner{display:flex;}"], function (props) {
   return props.h || props.theme.heroHeightBig;
 }, function (props) {
   return props.h || props.theme.heroHeightSml;
@@ -1835,21 +1838,22 @@ function HeroSection(props) {
   return __jsx(StyledHero, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 81
+      lineNumber: 82
     },
     __self: this
   }, cara ? __jsx(_StyledCarousel__WEBPACK_IMPORTED_MODULE_4__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 85
+      lineNumber: 86
     },
     __self: this
   }) : __jsx("img", {
+    className: "hero-img",
     srcSet: props.src ? props.src : "/images/pic11.png",
     alt: "EuroBrake Greating",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 86
+      lineNumber: 87
     },
     __self: this
   }), __jsx(StyledText, {
@@ -1863,7 +1867,7 @@ function HeroSection(props) {
     mfs: mfs,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 88
+      lineNumber: 89
     },
     __self: this
   }, props.children), __jsx(StyledText, {
@@ -1880,26 +1884,26 @@ function HeroSection(props) {
     secondary: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 91
+      lineNumber: 92
     },
     __self: this
   }, props.secondary), __jsx("div", {
     className: "banner",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 94
+      lineNumber: 95
     },
     __self: this
   }, props.banner ? __jsx(props.banner, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 95
+      lineNumber: 96
     },
     __self: this
   }) : __jsx(_CountDownBanner__WEBPACK_IMPORTED_MODULE_3__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 95
+      lineNumber: 96
     },
     __self: this
   })));
@@ -6677,7 +6681,8 @@ function LocationSection() {
     alt: "Barcelona",
     style: {
       width: '100%',
-      height: '100%'
+      height: '100%',
+      objectfit: 'cover'
     },
     __source: {
       fileName: _jsxFileName,
@@ -7995,7 +8000,8 @@ function StudentSection() {
     alt: "EuroBrake Greating",
     style: {
       width: '100%',
-      height: '100%'
+      height: '100%',
+      objectfit: 'cover'
     },
     __source: {
       fileName: _jsxFileName,
@@ -8049,7 +8055,7 @@ var Container = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div.wi
 var StyledSlide = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].img.withConfig({
   displayName: "StyledCarousel__StyledSlide",
   componentId: "zmlu3k-2"
-})(["width:100%;height:100%;@media only screen  and (max-device-width:768px)  and (-webkit-min-device-pixel-ratio:2) and (orientation:portrait){height:", ";}"], function (props) {
+})(["object-fit:cover;width:100%;height:100%;@media only screen  and (max-device-width:768px)  and (-webkit-min-device-pixel-ratio:2) and (orientation:portrait){height:", ";}"], function (props) {
   return props.h || props.theme.heroHeightSml;
 });
 
@@ -8058,7 +8064,7 @@ var CarouselUI = function CarouselUI(_ref) {
   return __jsx(Container, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 63
+      lineNumber: 64
     },
     __self: this
   }, children);
@@ -8069,7 +8075,7 @@ function StyledCarousel() {
   return __jsx(Overlay, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 68
+      lineNumber: 69
     },
     __self: this
   }, __jsx(Carousel, {
@@ -8079,7 +8085,7 @@ function StyledCarousel() {
     ,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 70
+      lineNumber: 71
     },
     __self: this
   }, __jsx(react_reveal_Slide__WEBPACK_IMPORTED_MODULE_3___default.a, {
@@ -8090,7 +8096,7 @@ function StyledCarousel() {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 71
+      lineNumber: 72
     },
     __self: this
   }, __jsx(StyledSlide, {
@@ -8098,7 +8104,7 @@ function StyledCarousel() {
     alt: "EuroBrake Greating",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 72
+      lineNumber: 73
     },
     __self: this
   })), __jsx(react_reveal_Slide__WEBPACK_IMPORTED_MODULE_3___default.a, {
@@ -8109,7 +8115,7 @@ function StyledCarousel() {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 74
+      lineNumber: 75
     },
     __self: this
   }, __jsx(StyledSlide, {
@@ -8117,7 +8123,7 @@ function StyledCarousel() {
     alt: "EuroBrake greeting",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 75
+      lineNumber: 76
     },
     __self: this
   })), __jsx(react_reveal_Slide__WEBPACK_IMPORTED_MODULE_3___default.a, {
@@ -8128,7 +8134,7 @@ function StyledCarousel() {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 77
+      lineNumber: 78
     },
     __self: this
   }, __jsx(StyledSlide, {
@@ -8136,7 +8142,7 @@ function StyledCarousel() {
     alt: "EuroBrake greeting",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 78
+      lineNumber: 79
     },
     __self: this
   })), __jsx(react_reveal_Slide__WEBPACK_IMPORTED_MODULE_3___default.a, {
@@ -8147,7 +8153,7 @@ function StyledCarousel() {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 80
+      lineNumber: 81
     },
     __self: this
   }, __jsx(StyledSlide, {
@@ -8155,7 +8161,7 @@ function StyledCarousel() {
     alt: "EuroBrake greeting",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 81
+      lineNumber: 82
     },
     __self: this
   }))));
@@ -8276,7 +8282,8 @@ function ExhibitionSection() {
     alt: "EuroBrake Greating",
     style: {
       width: '100%',
-      height: '100%'
+      height: '100%',
+      objectfit: 'cover'
     },
     __source: {
       fileName: _jsxFileName,
@@ -95804,9 +95811,9 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
     scolor: "#F9B721",
     cara: true,
     sfs: "8rem",
-    tsfs: "6rem",
+    tsfs: "5rem",
     tst: "60%",
-    mst: "60%",
+    mst: "65%",
     src: "/images/main.jpg",
     secondary: "Secure your tickets by 1 April 2020",
     __source: {

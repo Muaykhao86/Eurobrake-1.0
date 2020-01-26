@@ -23,7 +23,7 @@ const StyledHero = styled.div`
 
 
     
-    img{
+    .hero-img{
         max-height: 80%;
         flex: 2 1 80%;
         object-fit: cover;
@@ -84,7 +84,7 @@ export default function HeroSection(props) {
 
             {cara ?
                 <StyledCarousel /> :
-                <img srcSet={props.src ? props.src : "/images/pic11.png"} alt="EuroBrake Greating" />
+                <img className="hero-img" srcSet={props.src ? props.src : "/images/pic11.png"} alt="EuroBrake Greating" />
             }
             <StyledText t={t} mt={mt} tt={tt} max={max} mmax={mmax} fs={fs} tfs={tfs} mfs={mfs}  >
                 {props.children}
