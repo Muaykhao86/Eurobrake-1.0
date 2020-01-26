@@ -24,10 +24,12 @@ export default function AttendeesSection() {
                 EuroBrake attracts a global audience of engineers, scientists, academics and executives from the industries of passenger car, commercial vehicle, rail, aerospace and the wider industrial sectors.</p>
             <div className="innerContainer">
                 <div className="mediaBox">
-                    <img src="/images/pic1.png" alt="EuroBrake Greating" style={{ width: '100%', height: '100%' }} />
+                    <img  src="https://live.staticflickr.com/65535/48016203938_fe5254376c_b.jpg"  alt="EuroBrake Greating" style={{ width: '100%', height: '100%' }} />
                 </div>
                <BounceAttendeesCard/>
             </div>
         </StyledSection>
     )
 }
+// src="/images/pic1.png" 
+ 

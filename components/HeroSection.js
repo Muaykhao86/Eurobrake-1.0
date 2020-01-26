@@ -44,13 +44,15 @@ const StyledText = styled(Typography)`
         font-size: ${props => props.fs ||  props.sfs || '12rem'};
          @media only screen 
         and (max-device-width: 1200px) 
-        and (-webkit-min-device-pixel-ratio: 2) {
+        and (-webkit-min-device-pixel-ratio: 2)
+        and (orientation: landscape){
         font-size: ${props => props.tfs || props.tsfs || '9rem'};
     top: ${props => props.tt ? props.tt : '20%'};
     }
          @media only screen 
         and (max-device-width: 768px) 
-        and (-webkit-min-device-pixel-ratio: 2) {
+        and (-webkit-min-device-pixel-ratio: 2)
+         and (orientation: landscape) {
         font-size: ${props => props.mfs || props.msfs || '10rem'};
          width: ${props =>  props.mmax|| '80%'};
     top: ${props => props.mt ? props.mt : '20%'};

@@ -1,6 +1,8 @@
 import React, { Component, useState } from 'react'
 import { Formik, Form, Field, } from 'formik';
 import { TextField} from 'formik-material-ui';
+import CircularProgress from '@material-ui/core/CircularProgress';
+
 import { StyledForm } from './Formstyles';
 import { Button } from '../Button';
 import { SendForm } from './FormActions';
@@ -14,32 +16,45 @@ import Link from 'next/link';
 //             }
 
 export const LoginForm = () => {
+    const [Loading, setLoading] = useState(false);
     const [Reset, setReset] = useState(false);
     const [Toggle, setToggle] = useState(false);
     const [Status, setStatus] = useState(null);
+    const emptyReset={
+        username: '',
+    };
 
-    const url = Toggle ? 'https://prelude.eurobrake.net/authors/reset' : 'https://prelude.eurobrake.net/authors/login';
+    const emptyInitial = {
+        username: '',
+        password: '',
+    };
+
+    const url = Reset ? 'https://prelude.eurobrake.net/authors/reset' : 'https://prelude.eurobrake.net/authors/login';
     console.log({url})
     return (
         <Formik
-            validationSchema={LoginSchema} 
-            initialValues={emptyInitial}
+            initialValues={Reset ? emptyReset : emptyInitial}
             enableReinitialize
         >
             {({ values, handleChange, validateForm }) => {
 
                 const onSubmit = async () => {
+                 await setLoading(true);
                    const res = await SendForm({url, values});
                    const data = await res && res.status;  
                    console.log({status})
                   data && setStatus(data) && setToggle(Toggle => !Toggle)
-                    return              
+                    let result = async () => {
+                  await  setLoading(false)
+                  await setToggle(true)
+                   }    
+                  
+                return result()  
               }
 
                 return (
                     <StyledForm>
                         {Reset && <Typography className="form-title">Please enter your email to reset your password</Typography>}
-                        {Toggle && <Typography className="form-title">{Status}</Typography>}
 
                         <div className="form-field">
                             <label
@@ -75,6 +90,7 @@ export const LoginForm = () => {
                             />
                         </div>
                         }
+                          {Loading ?  <CircularProgress size={24} className="loading"/> : 
                         <Button 
                             onClick={() => validateForm().then(errors => Object.keys(errors).length === 0 && onSubmit())}
                             bcolor="#134381"
@@ -85,14 +101,17 @@ export const LoginForm = () => {
                             fontSize="1.7rem">
                             {Reset ? 'Reset' : 'Login'}
                         </Button>
+                      }
+
+                    {Toggle && <Typography className="form-title" style={{alignSelf: 'center', textTransform: 'uppercase'}}>{Status}</Typography>}
                         
-                        <Link
+                        {/* <Link
                             href="/f/[id]/[formType]"
-                            as={`/f/XC8Z3FWxDuQtk68qVs3uwF/reset`} >
+                            as={`/f/XC8Z3FWxDuQtk68qVs3uwF/reset`} > */}
                         <a onClick={() => setReset(Reset => !Reset)}>
                            <Typography className="form-link"> Forgotten your password?</Typography> 
                         </a>
-                        </Link>
+                        {/* </Link> */}
                     </StyledForm>
                 )
             }}
@@ -102,10 +121,7 @@ export const LoginForm = () => {
 // ? For now im by passin the email link just to check what i have with a reset token
 
 
-const emptyInitial = {
-    username: '',
-    password: '',
-};
+
 
 
 

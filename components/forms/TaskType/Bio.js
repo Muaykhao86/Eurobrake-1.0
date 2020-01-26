@@ -103,7 +103,7 @@ export const Bio = (props) => {
                            style={{ alignSelf: 'center', color: '#FFF'}}>
                             submit
                         </Button>}
-                    {Toggle && <Typography className="form-title" style={{alignSelf: 'center', textTransform: 'uppercase'}}>{Status}</Typography>}
+                    {Toggle && <Typography className="task-title" style={{alignSelf: 'center', textTransform: 'uppercase'}}>{Status}</Typography>}
 
                     </StyledTask>
                 )

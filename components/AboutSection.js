@@ -26,10 +26,11 @@ export default function AboutSection() {
             <p> We invite you to join us at EuroBrake 2020, which will take place in Barcelona, Spain, one of the world’s leading connected, cultural and historical destinations.</p>
             <div className="innerContainer">
                 <div className="mediaBox">
-                    <img src="/images/pic1.png" alt="EuroBrake Greating" style={{ width: '100%', height: '100%' }} />
+                    <img src="https://live.staticflickr.com/65535/48016110023_8fae3c1150_b.jpg"  alt="EuroBrake Greating" style={{ width: '100%', height: '100%' }} />
                 </div>
                <BounceAboutCard/>
             </div>
         </StyledSection>
     )
 }
+                    {/* src="/images/pic1.png" */}

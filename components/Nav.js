@@ -102,6 +102,7 @@ export default class Nav extends Component {
 
                                 <div className="nav-links-box">
                                     <Link href="/authorsArea"><a onClick={this.handleClick}><Typography className="nav-links">Authors Area</Typography></a></Link>
+                                    <Link href="/authorsAreaInstructions"><a onClick={this.handleClick}><Typography className="nav-links">Templates</Typography></a></Link>
                                 </div>
                             </div>
 

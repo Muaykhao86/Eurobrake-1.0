@@ -22,6 +22,7 @@ import { Button } from '../components/Button';
 import { StyledBanner, StyledContainer } from '../components/styles/PageStyles';
 import { GetForm, SendForm } from '../components/forms/FormActions';
 import { FixedDates, FixedBox } from '../components/Dates';
+import WithdrawPopup from '../components/WithdrawPopup';
 
 
 const StyledPage = styled.div`
@@ -172,7 +173,9 @@ class AuthorsAreaDash extends Component {
             paper: '',
             loading: 'false',
             status: undefined,
-            profile: 'profile',//will get rid of when i have profile props
+            values: {
+                __csrf_token: ''
+            },
         }
     }
 
@@ -190,38 +193,35 @@ class AuthorsAreaDash extends Component {
     }
 
     handleWithdrawn = async ({papercode}) => {
-        const values = {
-            __csrf_token: ''
-        }
        await  this.setState(loading => ({loading: !loading}));
         const FT = 'withdraw'
         const url = `https://prelude.eurobrake.net/authors/withdraw/${papercode}`;
         const getCSRF = await GetForm(url)
         const csrf = await getCSRF.__csrf_token
-        values.__csrf_token = csrf
+        await this.setState({values: {__csrf_token: csrf}})
         
         
-        
-        console.log('withdrawing', url, csrf)
-        // let get = await GetForm({url});
-        // let data = await get;
-        // let csrf = await data && data.__csrf_token ;
-        let res = await SendForm({url, values, csrf})
-        let resData = await res
-        console.log('withdrawn', {resData})
-        await resData && this.setState((loading, data)=>({status: data, loading: !loading}))
+        return csrf
+        // console.log('withdrawing', url, csrf)
+        // // let get = await GetForm({url});
+        // // let data = await get;
+        // // let csrf = await data && data.__csrf_token ;
+        // let res = await SendForm({url, values, csrf})
+        // let resData = await res
+        // console.log('withdrawn', {resData})
+        // await resData && this.setState((loading, data)=>({status: data, loading: !loading}))
 
     }
 
  
 
     render() {
+      
         // const papers = '';
         const monthNames = ["January", "Febuary", "March", "April", "June", "July", "August", "September", "October", "November", "December"]
-        const { editForm, formType } = this.state;
+        const { editForm, formType, values } = this.state;
         const { firstname } = this.props.authorData.author;
         const { papers } = this.props.authorData;
-        const { profile } = this.state.profile;
         const data = this.props.authorData;
         console.log({ papers, data })
         return (
@@ -307,7 +307,7 @@ class AuthorsAreaDash extends Component {
                                                     EDIT PAPER
                                                 </Button>
                                             </Link>
-
+                                            <WithdrawPopup values={values} url={`https://prelude.eurobrake.net/authors/withdraw/${papercode}`}>
                                             <Button
                                                 onClick={() => this.handleWithdrawn({papercode})}
                                                 bcolor="#134381"
@@ -319,6 +319,7 @@ class AuthorsAreaDash extends Component {
                                                  <CancelIcon style={{ fontSize: '3rem', marginRight: '1rem' }} />
                                                withdraw
                                                 </Button>
+                                            </WithdrawPopup>
                                             </>
                                             }
                                             </div>

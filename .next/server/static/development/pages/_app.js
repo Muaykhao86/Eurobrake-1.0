@@ -456,7 +456,8 @@ function FixedBox() {
     padding: "1rem",
     fontSize: "1.5rem",
     style: {
-      marginTop: '1rem'
+      marginTop: '1rem',
+      color: '#FFF'
     },
     __source: {
       fileName: _jsxFileName,
@@ -6193,40 +6194,61 @@ class Nav extends react__WEBPACK_IMPORTED_MODULE_1__["Component"] {
         lineNumber: 104
       },
       __self: this
-    }, "Authors Area")))))), __jsx("div", {
+    }, "Authors Area"))), __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
+      href: "/authorsAreaInstructions",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 105
+      },
+      __self: this
+    }, __jsx("a", {
+      onClick: this.handleClick,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 105
+      },
+      __self: this
+    }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_4__["Typography"], {
+      className: "nav-links",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 105
+      },
+      __self: this
+    }, "Templates")))))), __jsx("div", {
       className: "nav_box-left",
       style: {},
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 110
+        lineNumber: 111
       },
       __self: this
     }, __jsx(_Dates__WEBPACK_IMPORTED_MODULE_7__["Dates"], {
       MW: "35rem",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 111
+        lineNumber: 112
       },
       __self: this
     }))), __jsx("div", {
       className: "nav_box-bottom",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 114
+        lineNumber: 115
       },
       __self: this
     }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_4__["Typography"], {
       className: "nav_box-bottom-text",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 115
+        lineNumber: 116
       },
       __self: this
     }, "Organised by"), __jsx("a", {
       href: "https://www.fisita.com/",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 116
+        lineNumber: 117
       },
       __self: this
     }, __jsx(_Icons__WEBPACK_IMPORTED_MODULE_9__["FLogoWhite"], {
@@ -6234,7 +6256,7 @@ class Nav extends react__WEBPACK_IMPORTED_MODULE_1__["Component"] {
       height: "5rem",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 116
+        lineNumber: 117
       },
       __self: this
     })))), __jsx(_styles_NavStyles__WEBPACK_IMPORTED_MODULE_5__["Burger"], {
@@ -6242,7 +6264,7 @@ class Nav extends react__WEBPACK_IMPORTED_MODULE_1__["Component"] {
       onClick: this.handleClick,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 120
+        lineNumber: 121
       },
       __self: this
     }, __jsx(_styles_NavStyles__WEBPACK_IMPORTED_MODULE_5__["TopBun"], {
@@ -6250,7 +6272,7 @@ class Nav extends react__WEBPACK_IMPORTED_MODULE_1__["Component"] {
       sticky: this.props.sticky,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 121
+        lineNumber: 122
       },
       __self: this
     })));
@@ -6867,7 +6889,7 @@ async function GetFormSSR({
     }
   } catch (error) {
     console.error('Failed to get form, please try again', error);
-    return data;
+    return error;
   }
 
   return;
@@ -6902,7 +6924,7 @@ async function GetForm(url) {
     }
   } catch (error) {
     console.error('Failed to get form, please try again', error);
-    return data;
+    return error;
   }
 
   return;
@@ -6957,7 +6979,7 @@ async function SendFile({
       this.setState({
         error: error.message
       });
-      return data;
+      return error;
     }
   }
 
@@ -7008,7 +7030,7 @@ async function SendForm({
       }
     } catch (error) {
       console.error('Failed to send form, please try again', error);
-      return data;
+      return error;
     }
   }
 
@@ -7044,7 +7066,7 @@ async function SendForm({
       }
     } catch (error) {
       console.error('Failed to login, please try again', error);
-      return data;
+      return error;
     }
   }
 
@@ -7075,7 +7097,7 @@ async function SendForm({
       }
     } catch (error) {
       console.error('Failed to reset, please try again', error);
-      return data;
+      return error;
     }
   }
 
@@ -7106,7 +7128,7 @@ async function SendForm({
       }
     } catch (error) {
       console.error('Failed to send form, please try again', error);
-      return data;
+      return error;
     }
   }
 
@@ -7120,6 +7142,7 @@ async function SendForm({
         method: 'POST',
         credentials: 'include',
         headers: {
+          Authorization: 'Bearer ' + logintoken,
           'Content-Type': 'application/json'
         }
       });
@@ -7135,7 +7158,7 @@ async function SendForm({
       }
     } catch (error) {
       console.error('Failed to withdraw, please try again', error);
-      return data;
+      return error;
     }
   }
 
@@ -7170,8 +7193,7 @@ const ContactSchema = yup__WEBPACK_IMPORTED_MODULE_0__["object"]().shape({
   company: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().required('Required'),
   address: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().nullable(),
   email: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().required('Required').email(),
-  enquiry: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().required('Required').test('wordCount', 'Max 750 words', value => value && value.match(/[\w\d\’\'-]+/gi).length <= 750 // split(' ').length <= 100 
-  )
+  enquiry: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().required('Required').test('wordCount', 'Max 750 words', value => value && value.match(/[\w\d\’\'-]+/gi).length <= 750)
 });
 const AuthorSchema = yup__WEBPACK_IMPORTED_MODULE_0__["object"]().shape({
   title: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().nullable(),
@@ -7217,8 +7239,8 @@ const AbstractSchema = yup__WEBPACK_IMPORTED_MODULE_0__["object"]().shape({
   author_phone: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().required('Required'),
   is_presenting_author: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().required('Required'),
   papertitle: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().required('Required'),
-  abstract: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().required('Required').test('wordCount', 'Max 750 words', value => value && value.match(/[\w\d\’\'-]+/gi).length <= 750 // split(' ').length <= 100 
-  ),
+  abstract: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().required('Required').test('wordCount', 'Max 750 words', value => value && value.match(/[\w\d\’\'-]+/gi).length <= 750),
+  keywords: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().required('Required'),
   consider_for_journal: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().nullable(),
   secondary_authors: yup__WEBPACK_IMPORTED_MODULE_0__["array"]().of(yup__WEBPACK_IMPORTED_MODULE_0__["object"]().shape({
     title: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().nullable(),
@@ -7230,8 +7252,8 @@ const AbstractSchema = yup__WEBPACK_IMPORTED_MODULE_0__["object"]().shape({
     is_presenting_author: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().required('Required')
   }))
 });
-const CV_SUPPORTED_FORMATS = ['application/pdf', 'application/msword', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'];
-const PROOF_SUPPORTED_FORMATS = ['application/pdf', 'application/msword', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'];
+const CV_SUPPORTED_FORMATS = ['.pdf', '.doc', '.docx', 'pdf', 'doc', 'docx', 'application/pdf', 'application/msword', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'];
+const PROOF_SUPPORTED_FORMATS = ['.jpg', '.jpeg', '.png', '.pdf', '.doc', '.docx', 'jpg', 'jpeg', 'png', 'pdf', 'doc', 'docx', 'image/jpeg', "image/png", 'application/pdf', 'application/msword', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'];
 const FILE_SIZE = 5033164800;
 const EsopSchema = yup__WEBPACK_IMPORTED_MODULE_0__["object"]().shape({
   student_title: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().nullable(),
@@ -7260,10 +7282,8 @@ const EsopSchema = yup__WEBPACK_IMPORTED_MODULE_0__["object"]().shape({
   university_postal: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().nullable(),
   university_country: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().required('Required'),
   cv_filename_uploader: yup__WEBPACK_IMPORTED_MODULE_0__["mixed"]().required('Required').test("fileFormat", "Unsupported Format", value => value && CV_SUPPORTED_FORMATS.includes(value.type)),
-  personal_statement: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().required('Required').test('wordCount', 'Max 250 words', value => value && value.match(/[\w\d\’\'-]+/gi).length <= 250 // split(' ').length <= 100 
-  ).test('wordCount', 'Min 150 words', value => value && value.match(/[\w\d\’\'-]+/gi).length >= 150 // split(' ').length <= 100 
-  ),
-  student_status_filename_uploader: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().required('Required').test("fileFormat", "Unsupported Format", value => value && PROOF_SUPPORTED_FORMATS.includes(value.type)).test("fileSize", "File too large", value => value && value.size <= FILE_SIZE),
+  personal_statement: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().required('Required').test('wordCount', 'Max 250 words', value => value && value.match(/[\w\d\’\'-]+/gi).length <= 250).test('wordCount', 'Min 150 words', value => value && value.match(/[\w\d\’\'-]+/gi).length >= 150),
+  student_status_filename_uploader: yup__WEBPACK_IMPORTED_MODULE_0__["mixed"]().required('Required').test("fileFormat", "Unsupported Format", value => value && PROOF_SUPPORTED_FORMATS.includes(value.type)).test("fileSize", "File too large", value => value && value.size <= FILE_SIZE),
   question_1_answer: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().required('Required'),
   question_2_answer: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().required('Required'),
   question_3_answer: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().required('Required'),

@@ -436,7 +436,8 @@ function FixedBox() {
     padding: "1rem",
     fontSize: "1.5rem",
     style: {
-      marginTop: '1rem'
+      marginTop: '1rem',
+      color: '#FFF'
     },
     __source: {
       fileName: _jsxFileName,
@@ -6353,40 +6354,61 @@ function (_Component) {
           lineNumber: 104
         },
         __self: this
-      }, "Authors Area")))))), __jsx("div", {
+      }, "Authors Area"))), __jsx(next_link__WEBPACK_IMPORTED_MODULE_8___default.a, {
+        href: "/authorsAreaInstructions",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 105
+        },
+        __self: this
+      }, __jsx("a", {
+        onClick: this.handleClick,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 105
+        },
+        __self: this
+      }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_10__["Typography"], {
+        className: "nav-links",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 105
+        },
+        __self: this
+      }, "Templates")))))), __jsx("div", {
         className: "nav_box-left",
         style: {},
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 110
+          lineNumber: 111
         },
         __self: this
       }, __jsx(_Dates__WEBPACK_IMPORTED_MODULE_13__["Dates"], {
         MW: "35rem",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 111
+          lineNumber: 112
         },
         __self: this
       }))), __jsx("div", {
         className: "nav_box-bottom",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 114
+          lineNumber: 115
         },
         __self: this
       }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_10__["Typography"], {
         className: "nav_box-bottom-text",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 115
+          lineNumber: 116
         },
         __self: this
       }, "Organised by"), __jsx("a", {
         href: "https://www.fisita.com/",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 116
+          lineNumber: 117
         },
         __self: this
       }, __jsx(_Icons__WEBPACK_IMPORTED_MODULE_15__["FLogoWhite"], {
@@ -6394,7 +6416,7 @@ function (_Component) {
         height: "5rem",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 116
+          lineNumber: 117
         },
         __self: this
       })))), __jsx(_styles_NavStyles__WEBPACK_IMPORTED_MODULE_11__["Burger"], {
@@ -6402,7 +6424,7 @@ function (_Component) {
         onClick: this.handleClick,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 120
+          lineNumber: 121
         },
         __self: this
       }, __jsx(_styles_NavStyles__WEBPACK_IMPORTED_MODULE_11__["TopBun"], {
@@ -6410,7 +6432,7 @@ function (_Component) {
         sticky: this.props.sticky,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 121
+          lineNumber: 122
         },
         __self: this
       })));
@@ -6964,7 +6986,7 @@ function _GetFormSSR() {
   _GetFormSSR = Object(_babel_runtime_corejs2_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__["default"])(
   /*#__PURE__*/
   _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_2___default.a.mark(function _callee(_ref) {
-    var url, context, _cookies, logintoken, apiUrl, response, _data, error;
+    var url, context, _cookies, logintoken, apiUrl, response, data, error;
 
     return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_2___default.a.wrap(function _callee$(_context) {
       while (1) {
@@ -6993,19 +7015,19 @@ function _GetFormSSR() {
             return response.json();
 
           case 10:
-            _data = _context.sent;
+            data = _context.sent;
 
-            if (!(_data.status === 'success')) {
+            if (!(data.status === 'success')) {
               _context.next = 17;
               break;
             }
 
-            console.log('getForm', _data);
-            console.log('tkn', _data.__csrf_token);
-            return _context.abrupt("return", _data);
+            console.log('getForm', data);
+            console.log('tkn', data.__csrf_token);
+            return _context.abrupt("return", data);
 
           case 17:
-            error = new Error(_data.error);
+            error = new Error(data.error);
             error.response = response;
             throw error;
 
@@ -7017,7 +7039,7 @@ function _GetFormSSR() {
             _context.prev = 22;
             _context.t0 = _context["catch"](3);
             console.error('Failed to get form, please try again', _context.t0);
-            return _context.abrupt("return", data);
+            return _context.abrupt("return", _context.t0);
 
           case 26:
             return _context.abrupt("return");
@@ -7040,7 +7062,7 @@ function _GetForm() {
   _GetForm = Object(_babel_runtime_corejs2_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__["default"])(
   /*#__PURE__*/
   _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_2___default.a.mark(function _callee2(url) {
-    var _cookie$get, logintoken, apiUrl, response, _data2, error;
+    var _cookie$get, logintoken, apiUrl, response, data, error;
 
     return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_2___default.a.wrap(function _callee2$(_context2) {
       while (1) {
@@ -7067,19 +7089,19 @@ function _GetForm() {
             return response.json();
 
           case 9:
-            _data2 = _context2.sent;
+            data = _context2.sent;
 
-            if (!(_data2.status === 'success')) {
+            if (!(data.status === 'success')) {
               _context2.next = 16;
               break;
             }
 
-            console.log('getForm', _data2);
-            console.log('tkn', _data2.__csrf_token);
-            return _context2.abrupt("return", _data2);
+            console.log('getForm', data);
+            console.log('tkn', data.__csrf_token);
+            return _context2.abrupt("return", data);
 
           case 16:
-            error = new Error(_data2.error);
+            error = new Error(data.error);
             error.response = response;
             throw error;
 
@@ -7091,7 +7113,7 @@ function _GetForm() {
             _context2.prev = 21;
             _context2.t0 = _context2["catch"](2);
             console.error('Failed to get form, please try again', _context2.t0);
-            return _context2.abrupt("return", data);
+            return _context2.abrupt("return", _context2.t0);
 
           case 25:
             return _context2.abrupt("return");
@@ -7114,7 +7136,7 @@ function _SendFile() {
   _SendFile = Object(_babel_runtime_corejs2_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__["default"])(
   /*#__PURE__*/
   _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_2___default.a.mark(function _callee3(_ref2) {
-    var values, url, csrf, _cookie$get2, logintoken, formData, apiUrl, response, _data3, error;
+    var values, url, csrf, _cookie$get2, logintoken, formData, apiUrl, response, data, error;
 
     return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_2___default.a.wrap(function _callee3$(_context3) {
       while (1) {
@@ -7158,23 +7180,23 @@ function _SendFile() {
             return response.json();
 
           case 15:
-            _data3 = _context3.sent;
+            data = _context3.sent;
             _context3.next = 18;
             return console.log({
-              data: _data3
+              data: data
             });
 
           case 18:
-            if (!(_data3.status === 'success')) {
+            if (!(data.status === 'success')) {
               _context3.next = 23;
               break;
             }
 
-            console.log('getForm', _data3);
-            return _context3.abrupt("return", _data3);
+            console.log('getForm', data);
+            return _context3.abrupt("return", data);
 
           case 23:
-            error = new Error(_data3.error);
+            error = new Error(data.error);
             error.response = response;
             throw error;
 
@@ -7189,7 +7211,7 @@ function _SendFile() {
             this.setState({
               error: _context3.t0.message
             });
-            return _context3.abrupt("return", data);
+            return _context3.abrupt("return", _context3.t0);
 
           case 33:
             return _context3.abrupt("return");
@@ -7212,7 +7234,7 @@ function _SendForm() {
   _SendForm = Object(_babel_runtime_corejs2_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__["default"])(
   /*#__PURE__*/
   _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_2___default.a.mark(function _callee4(_ref3) {
-    var csrf, values, url, FT, form, _cookie$get3, logintoken, apiUrl, response, _data4, error, _response, _data5, _logintoken, _error, _response2, _data6, _error2, _response3, _data7, _error3, _response4, _data8, _error4;
+    var csrf, values, url, FT, form, _cookie$get3, logintoken, apiUrl, response, data, error, _response, _data, _logintoken, _error, _response2, _data2, _error2, _response3, _data3, _error3, _response4, _data4, _error4;
 
     return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_2___default.a.wrap(function _callee4$(_context4) {
       while (1) {
@@ -7254,18 +7276,18 @@ function _SendForm() {
             return response.json();
 
           case 14:
-            _data4 = _context4.sent;
+            data = _context4.sent;
 
-            if (!(_data4.status === 'success')) {
+            if (!(data.status === 'success')) {
               _context4.next = 20;
               break;
             }
 
-            console.log('getForm', _data4);
-            return _context4.abrupt("return", _data4);
+            console.log('getForm', data);
+            return _context4.abrupt("return", data);
 
           case 20:
-            error = new Error(_data4.error);
+            error = new Error(data.error);
             error.response = response;
             throw error;
 
@@ -7277,7 +7299,7 @@ function _SendForm() {
             _context4.prev = 25;
             _context4.t0 = _context4["catch"](7);
             console.error('Failed to send form, please try again', _context4.t0);
-            return _context4.abrupt("return", data);
+            return _context4.abrupt("return", _context4.t0);
 
           case 29:
             if (!(url === 'https://prelude.eurobrake.net/authors/login')) {
@@ -7306,24 +7328,24 @@ function _SendForm() {
             return _response.json();
 
           case 37:
-            _data5 = _context4.sent;
+            _data = _context4.sent;
 
-            if (!(_data5.status === 'success')) {
+            if (!(_data.status === 'success')) {
               _context4.next = 45;
               break;
             }
 
-            _logintoken = _data5.logintoken;
+            _logintoken = _data.logintoken;
             _context4.next = 42;
             return Object(_utils_auth__WEBPACK_IMPORTED_MODULE_7__["login"])({
               logintoken: _logintoken
             });
 
           case 42:
-            return _context4.abrupt("return", _data5);
+            return _context4.abrupt("return", _data);
 
           case 45:
-            _error = new Error(_data5.error);
+            _error = new Error(_data.error);
             _error.response = _response;
             throw _error;
 
@@ -7335,7 +7357,7 @@ function _SendForm() {
             _context4.prev = 50;
             _context4.t1 = _context4["catch"](31);
             console.error('Failed to login, please try again', _context4.t1);
-            return _context4.abrupt("return", data);
+            return _context4.abrupt("return", _context4.t1);
 
           case 54:
             if (!(FT === 'reset')) {
@@ -7364,18 +7386,18 @@ function _SendForm() {
             return _response2.json();
 
           case 62:
-            _data6 = _context4.sent;
+            _data2 = _context4.sent;
 
-            if (!(_data6.status === 'success')) {
+            if (!(_data2.status === 'success')) {
               _context4.next = 68;
               break;
             }
 
-            console.log('getForm', _data6);
-            return _context4.abrupt("return", _data6);
+            console.log('getForm', _data2);
+            return _context4.abrupt("return", _data2);
 
           case 68:
-            _error2 = new Error(_data6.error);
+            _error2 = new Error(_data2.error);
             _error2.response = _response2;
             throw _error2;
 
@@ -7387,7 +7409,7 @@ function _SendForm() {
             _context4.prev = 73;
             _context4.t2 = _context4["catch"](56);
             console.error('Failed to reset, please try again', _context4.t2);
-            return _context4.abrupt("return", data);
+            return _context4.abrupt("return", _context4.t2);
 
           case 77:
             if (!(FT === 'newsletter' || FT === 'contact')) {
@@ -7416,18 +7438,18 @@ function _SendForm() {
             return _response3.json();
 
           case 85:
-            _data7 = _context4.sent;
+            _data3 = _context4.sent;
 
-            if (!(_data7.status === 'success')) {
+            if (!(_data3.status === 'success')) {
               _context4.next = 91;
               break;
             }
 
-            console.log('getForm', _data7);
-            return _context4.abrupt("return", _data7);
+            console.log('getForm', _data3);
+            return _context4.abrupt("return", _data3);
 
           case 91:
-            _error3 = new Error(_data7.error);
+            _error3 = new Error(_data3.error);
             _error3.response = _response3;
             throw _error3;
 
@@ -7439,7 +7461,7 @@ function _SendForm() {
             _context4.prev = 96;
             _context4.t3 = _context4["catch"](79);
             console.error('Failed to send form, please try again', _context4.t3);
-            return _context4.abrupt("return", data);
+            return _context4.abrupt("return", _context4.t3);
 
           case 100:
             if (!(FT === 'withdraw')) {
@@ -7456,6 +7478,7 @@ function _SendForm() {
               method: 'POST',
               credentials: 'include',
               headers: {
+                Authorization: 'Bearer ' + logintoken,
                 'Content-Type': 'application/json'
               }
             });
@@ -7466,18 +7489,18 @@ function _SendForm() {
             return _response4.json();
 
           case 108:
-            _data8 = _context4.sent;
+            _data4 = _context4.sent;
 
-            if (!(_data8.status === 'success')) {
+            if (!(_data4.status === 'success')) {
               _context4.next = 114;
               break;
             }
 
-            console.log('getForm', _data8);
-            return _context4.abrupt("return", _data8);
+            console.log('getForm', _data4);
+            return _context4.abrupt("return", _data4);
 
           case 114:
-            _error4 = new Error(_data8.error);
+            _error4 = new Error(_data4.error);
             _error4.response = _response4;
             throw _error4;
 
@@ -7489,7 +7512,7 @@ function _SendForm() {
             _context4.prev = 119;
             _context4.t4 = _context4["catch"](102);
             console.error('Failed to withdraw, please try again', _context4.t4);
-            return _context4.abrupt("return", data);
+            return _context4.abrupt("return", _context4.t4);
 
           case 123:
             return _context4.abrupt("return");
@@ -7534,8 +7557,7 @@ var ContactSchema = yup__WEBPACK_IMPORTED_MODULE_0__["object"]().shape({
   email: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().required('Required').email(),
   enquiry: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().required('Required').test('wordCount', 'Max 750 words', function (value) {
     return value && value.match(/[\w\d\’\'-]+/gi).length <= 750;
-  } // split(' ').length <= 100 
-  )
+  })
 });
 var AuthorSchema = yup__WEBPACK_IMPORTED_MODULE_0__["object"]().shape({
   title: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().nullable(),
@@ -7583,8 +7605,8 @@ var AbstractSchema = yup__WEBPACK_IMPORTED_MODULE_0__["object"]().shape({
   papertitle: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().required('Required'),
   "abstract": yup__WEBPACK_IMPORTED_MODULE_0__["string"]().required('Required').test('wordCount', 'Max 750 words', function (value) {
     return value && value.match(/[\w\d\’\'-]+/gi).length <= 750;
-  } // split(' ').length <= 100 
-  ),
+  }),
+  keywords: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().required('Required'),
   consider_for_journal: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().nullable(),
   secondary_authors: yup__WEBPACK_IMPORTED_MODULE_0__["array"]().of(yup__WEBPACK_IMPORTED_MODULE_0__["object"]().shape({
     title: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().nullable(),
@@ -7596,8 +7618,8 @@ var AbstractSchema = yup__WEBPACK_IMPORTED_MODULE_0__["object"]().shape({
     is_presenting_author: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().required('Required')
   }))
 });
-var CV_SUPPORTED_FORMATS = ['application/pdf', 'application/msword', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'];
-var PROOF_SUPPORTED_FORMATS = ['application/pdf', 'application/msword', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'];
+var CV_SUPPORTED_FORMATS = ['.pdf', '.doc', '.docx', 'pdf', 'doc', 'docx', 'application/pdf', 'application/msword', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'];
+var PROOF_SUPPORTED_FORMATS = ['.jpg', '.jpeg', '.png', '.pdf', '.doc', '.docx', 'jpg', 'jpeg', 'png', 'pdf', 'doc', 'docx', 'image/jpeg', "image/png", 'application/pdf', 'application/msword', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'];
 var FILE_SIZE = 5033164800;
 var EsopSchema = yup__WEBPACK_IMPORTED_MODULE_0__["object"]().shape({
   student_title: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().nullable(),
@@ -7630,12 +7652,10 @@ var EsopSchema = yup__WEBPACK_IMPORTED_MODULE_0__["object"]().shape({
   }),
   personal_statement: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().required('Required').test('wordCount', 'Max 250 words', function (value) {
     return value && value.match(/[\w\d\’\'-]+/gi).length <= 250;
-  } // split(' ').length <= 100 
-  ).test('wordCount', 'Min 150 words', function (value) {
+  }).test('wordCount', 'Min 150 words', function (value) {
     return value && value.match(/[\w\d\’\'-]+/gi).length >= 150;
-  } // split(' ').length <= 100 
-  ),
-  student_status_filename_uploader: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().required('Required').test("fileFormat", "Unsupported Format", function (value) {
+  }),
+  student_status_filename_uploader: yup__WEBPACK_IMPORTED_MODULE_0__["mixed"]().required('Required').test("fileFormat", "Unsupported Format", function (value) {
     return value && PROOF_SUPPORTED_FORMATS.includes(value.type);
   }).test("fileSize", "File too large", function (value) {
     return value && value.size <= FILE_SIZE;
