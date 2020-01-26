@@ -82,6 +82,15 @@ export const StyledForm = styled(Form)`
                 width: 100%;
                 margin: 1rem 0;
                 display: flex;
+              
+            .MuiPopover-paper {
+            max-width: 100%;
+            }
+
+                .MuiMenu-paper {
+                    max-height: fit-content;
+                    -webkit-overflow-scrolling: touch;
+                }
 
                 &-check{
                     position: relative;

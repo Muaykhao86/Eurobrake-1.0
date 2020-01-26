@@ -142,12 +142,24 @@ export const HiddenContainer = styled.div`
             align-items: flex-start;
             margin-bottom: 3rem;
         }
+
+          @media only screen 
+  and (max-device-width: 768px) 
+  and (-webkit-min-device-pixel-ratio: 2) { 
+        font-size: 4rem;
+}
     }
    
     &-links{
         font-size: 2rem;
         font-family: ${props => props.theme.MPBlackIt};
         color: ${props => props.theme.white};
+
+          @media only screen 
+  and (max-device-width: 768px) 
+  and (-webkit-min-device-pixel-ratio: 2) { 
+        font-size: 4rem;
+}
 
         &-box{
             display: flex;
@@ -306,6 +318,15 @@ export const HiddenContainer = styled.div`
             font-size: 1.5rem;
             margin-right: 2rem;
         }
+
+          @media only screen 
+  and (max-device-width: 768px) 
+  and (-webkit-min-device-pixel-ratio: 2) { 
+      align-self: flex-end;
+
+}
+
+
 
     }
 }

@@ -654,7 +654,7 @@ export const Esop = (props) => {
                                 component={Select}
                             >
                                 {Q3.map((option, i) =>
-                                    <MenuItem key={i} style={{ fontSize: '1.5rem', cursor: 'pointer' }} value={option.value}>{option.label}</MenuItem>)}
+                                    <MenuItem key={i} style={{ fontSize: '1.5rem', cursor: 'pointer',display: 'flex', flexFlow: 'column , wrap'}} value={option.value}>{option.label}</MenuItem>)}
                             </Field>
                             {errors.question_3_answer && <label style={{ position: 'absolute', bottom: '-1rem', right: '1rem', color: '#ff0000', fontSize: '1.5rem' }}>{errors.question_3_answer}</label>}
 
