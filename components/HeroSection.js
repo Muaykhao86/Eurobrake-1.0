@@ -24,6 +24,7 @@ const StyledHero = styled.div`
 
     
     img{
+        max-height: 80%;
         flex: 2 1 80%;
         object-fit: cover;
     }

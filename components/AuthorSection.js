@@ -26,7 +26,7 @@ export default function AuthorSection() {
                 achievements with influential specialists from around the world and to discuss your work with colleagues throughout the industrial and academic communities.</p>
             <div className="innerContainer">
                 <div className="mediaBox">
-                    <img  src="https://live.staticflickr.com/65535/48015947061_7e41d70927_b.jpg" alt="EuroBrake Greating" style={{ width: '100%', height: '100%' }} />
+                    <img  src="https://live.staticflickr.com/65535/48015947061_7e41d70927_b.jpg" alt="EuroBrake Greating" style={{ width: '100%', height: '100%', objectfit: 'cover' }} />
                 </div>
                 <BounceAuthorCard/>
             </div>
