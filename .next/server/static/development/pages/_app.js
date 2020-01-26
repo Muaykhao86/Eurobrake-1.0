@@ -6332,8 +6332,9 @@ const theme = {
   MPIt: 'MyriadPro-It',
   MPBlack: 'MyriadPro-Black',
   MPBlackIt: 'MyriadPro-BlackIt',
-  heroHeightSml: '30vh',
+  heroHeightSmlLand: '60vw',
   heroHeightSml: '60vh',
+  heroHeightBigLand: '100vw',
   heroHeightBig: '100vh',
   laptopWidth: '65%',
   mobileWidth: '80%',
@@ -6445,37 +6446,37 @@ class Page extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       theme: theme,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 143
+        lineNumber: 144
       },
       __self: this
     }, __jsx(GlobalStyle, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 144
+        lineNumber: 145
       },
       __self: this
     }), __jsx(StyledPage, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 145
+        lineNumber: 146
       },
       __self: this
     }, __jsx(_Meta__WEBPACK_IMPORTED_MODULE_3__["default"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 146
+        lineNumber: 147
       },
       __self: this
     }), __jsx(_Header__WEBPACK_IMPORTED_MODULE_1__["default"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 147
+        lineNumber: 148
       },
       __self: this
     }), this.props.children, __jsx(_Footer__WEBPACK_IMPORTED_MODULE_2__["default"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 149
+        lineNumber: 150
       },
       __self: this
     })));

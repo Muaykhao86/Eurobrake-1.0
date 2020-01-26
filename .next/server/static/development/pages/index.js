@@ -1642,11 +1642,11 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 const StyledHero = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div.withConfig({
   displayName: "HeroSection__StyledHero",
   componentId: "sc-1rt21yv-0"
-})(["position:relative;padding-top:10rem;z-index:10;min-width:100%;min-height:", ";display:flex;flex-flow:column;@media only screen  and (max-device-width:768px)  and (-webkit-min-device-pixel-ratio:2){min-height:", ";}img{flex:2 1 80%;object-fit:cover;}.banner{display:flex;}"], props => props.h || props.theme.heroHeightBig, props => props.h || props.theme.heroHeightSml);
+})(["position:relative;padding-top:10rem;z-index:10;min-width:100%;min-height:", ";display:flex;flex-flow:column;@media only screen  and (max-device-width:768px)  and (-webkit-min-device-pixel-ratio:2)  and (orientation:portrait){min-height:", ";}img{flex:2 1 80%;object-fit:cover;}.banner{display:flex;}"], props => props.h || props.theme.heroHeightBig, props => props.h || props.theme.heroHeightSml);
 const StyledText = styled_components__WEBPACK_IMPORTED_MODULE_1___default()(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_2___default.a).withConfig({
   displayName: "HeroSection__StyledText",
   componentId: "sc-1rt21yv-1"
-})(["position:absolute;z-index:10;top:", ";align-self:center;width:", ";color:", ";text-align:center;text-shadow:0px 4px 7px rgba(0,0,0,0.74);&&.MuiTypography-body1{font-size:", ";@media only screen  and (max-device-width:1200px)  and (-webkit-min-device-pixel-ratio:2) and (orientation:landscape){font-size:", ";top:", ";}@media only screen  and (max-device-width:768px)  and (-webkit-min-device-pixel-ratio:2) and (orientation:landscape){font-size:", ";width:", ";top:", ";}font-family:", ";line-height:1;}"], props => props.secondary ? '60%' : '20%', props => props.max || '80%', props => props.color || props.theme.white, props => props.fs || props.sfs || '12rem', props => props.tfs || props.tsfs || '9rem', props => props.tt ? props.tt : '20%', props => props.mfs || props.msfs || '10rem', props => props.mmax || '80%', props => props.mt ? props.mt : '20%', props => props.sfont ? props.theme.MPLight : props.theme.MPBlack);
+})(["position:absolute;z-index:10;top:", ";align-self:center;width:", ";color:", ";text-align:center;text-shadow:0px 4px 7px rgba(0,0,0,0.74);&&.MuiTypography-body1{font-size:", ";@media only screen  and (max-device-width:1200px)  and (-webkit-min-device-pixel-ratio:2){font-size:", ";top:", ";}@media only screen  and (max-device-width:768px)  and (-webkit-min-device-pixel-ratio:2){font-size:", ";width:", ";top:", ";}font-family:", ";line-height:1;}"], props => props.secondary ? '60%' : '20%', props => props.max || '80%', props => props.color || props.theme.white, props => props.fs || props.sfs || '12rem', props => props.tfs || props.tsfs || '9rem', props => props.tt ? props.tt : '20%', props => props.mfs || props.msfs || '10rem', props => props.mmax || '80%', props => props.mt ? props.mt : '20%', props => props.sfont ? props.theme.MPLight : props.theme.MPBlack);
 function HeroSection(props) {
   const {
     t,
@@ -1671,13 +1671,13 @@ function HeroSection(props) {
   return __jsx(StyledHero, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 68
+      lineNumber: 81
     },
     __self: this
   }, cara ? __jsx(_StyledCarousel__WEBPACK_IMPORTED_MODULE_4__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 72
+      lineNumber: 85
     },
     __self: this
   }) : __jsx("img", {
@@ -1685,7 +1685,7 @@ function HeroSection(props) {
     alt: "EuroBrake Greating",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 73
+      lineNumber: 86
     },
     __self: this
   }), __jsx(StyledText, {
@@ -1699,7 +1699,7 @@ function HeroSection(props) {
     mfs: mfs,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 75
+      lineNumber: 88
     },
     __self: this
   }, props.children), __jsx(StyledText, {
@@ -1716,26 +1716,26 @@ function HeroSection(props) {
     secondary: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 78
+      lineNumber: 91
     },
     __self: this
   }, props.secondary), __jsx("div", {
     className: "banner",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 81
+      lineNumber: 94
     },
     __self: this
   }, props.banner ? __jsx(props.banner, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 82
+      lineNumber: 95
     },
     __self: this
   }) : __jsx(_CountDownBanner__WEBPACK_IMPORTED_MODULE_3__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 82
+      lineNumber: 95
     },
     __self: this
   })));
@@ -7186,8 +7186,9 @@ const theme = {
   MPIt: 'MyriadPro-It',
   MPBlack: 'MyriadPro-Black',
   MPBlackIt: 'MyriadPro-BlackIt',
-  heroHeightSml: '30vh',
+  heroHeightSmlLand: '60vw',
   heroHeightSml: '60vh',
+  heroHeightBigLand: '100vw',
   heroHeightBig: '100vh',
   laptopWidth: '65%',
   mobileWidth: '80%',
@@ -7299,37 +7300,37 @@ class Page extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       theme: theme,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 143
+        lineNumber: 144
       },
       __self: this
     }, __jsx(GlobalStyle, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 144
+        lineNumber: 145
       },
       __self: this
     }), __jsx(StyledPage, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 145
+        lineNumber: 146
       },
       __self: this
     }, __jsx(_Meta__WEBPACK_IMPORTED_MODULE_3__["default"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 146
+        lineNumber: 147
       },
       __self: this
     }), __jsx(_Header__WEBPACK_IMPORTED_MODULE_1__["default"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 147
+        lineNumber: 148
       },
       __self: this
     }), this.props.children, __jsx(_Footer__WEBPACK_IMPORTED_MODULE_2__["default"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 149
+        lineNumber: 150
       },
       __self: this
     })));
@@ -7840,18 +7841,18 @@ const Overlay = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div.wit
 const Container = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div.withConfig({
   displayName: "StyledCarousel__Container",
   componentId: "zmlu3k-1"
-})(["width:100%;height:80vh;.react-reveal{height:100%;}@media only screen  and (max-device-width:1200px)  and (-webkit-min-device-pixel-ratio:2){height:", ";}@media only screen  and (max-device-width:768px)  and (-webkit-min-device-pixel-ratio:2){height:", ";}display:flex;position:relative;background-color:black;"], props => props.h || props.theme.heroHeightMed, props => props.h || props.theme.heroHeightSml);
+})(["width:100%;height:80vh;.react-reveal{height:100%;}@media only screen  and (max-device-width:768px)  and (-webkit-min-device-pixel-ratio:2) and (orientation:portrait){height:", ";}display:flex;position:relative;background-color:black;"], props => props.h || props.theme.heroHeightSml);
 const StyledSlide = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.img.withConfig({
   displayName: "StyledCarousel__StyledSlide",
   componentId: "zmlu3k-2"
-})(["width:100%;height:100%;@media only screen  and (max-device-width:1200px)  and (-webkit-min-device-pixel-ratio:2){height:", ";}@media only screen  and (max-device-width:768px)  and (-webkit-min-device-pixel-ratio:2){height:", ";}"], props => props.h || props.theme.heroHeightMed, props => props.h || props.theme.heroHeightSml);
+})(["width:100%;height:100%;@media only screen  and (max-device-width:768px)  and (-webkit-min-device-pixel-ratio:2) and (orientation:portrait){height:", ";}"], props => props.h || props.theme.heroHeightSml);
 
 const CarouselUI = ({
   children
 }) => __jsx(Container, {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 58
+    lineNumber: 63
   },
   __self: undefined
 }, children);
@@ -7861,7 +7862,7 @@ function StyledCarousel() {
   return __jsx(Overlay, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 63
+      lineNumber: 68
     },
     __self: this
   }, __jsx(Carousel, {
@@ -7871,7 +7872,7 @@ function StyledCarousel() {
     ,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 65
+      lineNumber: 70
     },
     __self: this
   }, __jsx(react_reveal_Slide__WEBPACK_IMPORTED_MODULE_3___default.a, {
@@ -7882,7 +7883,7 @@ function StyledCarousel() {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 66
+      lineNumber: 71
     },
     __self: this
   }, __jsx(StyledSlide, {
@@ -7890,7 +7891,7 @@ function StyledCarousel() {
     alt: "EuroBrake Greating",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 67
+      lineNumber: 72
     },
     __self: this
   })), __jsx(react_reveal_Slide__WEBPACK_IMPORTED_MODULE_3___default.a, {
@@ -7901,7 +7902,7 @@ function StyledCarousel() {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 69
+      lineNumber: 74
     },
     __self: this
   }, __jsx(StyledSlide, {
@@ -7909,7 +7910,7 @@ function StyledCarousel() {
     alt: "EuroBrake greeting",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 70
+      lineNumber: 75
     },
     __self: this
   })), __jsx(react_reveal_Slide__WEBPACK_IMPORTED_MODULE_3___default.a, {
@@ -7920,7 +7921,7 @@ function StyledCarousel() {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 72
+      lineNumber: 77
     },
     __self: this
   }, __jsx(StyledSlide, {
@@ -7928,7 +7929,7 @@ function StyledCarousel() {
     alt: "EuroBrake greeting",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 73
+      lineNumber: 78
     },
     __self: this
   })), __jsx(react_reveal_Slide__WEBPACK_IMPORTED_MODULE_3___default.a, {
@@ -7939,7 +7940,7 @@ function StyledCarousel() {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 75
+      lineNumber: 80
     },
     __self: this
   }, __jsx(StyledSlide, {
@@ -7947,7 +7948,7 @@ function StyledCarousel() {
     alt: "EuroBrake greeting",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 76
+      lineNumber: 81
     },
     __self: this
   }))));

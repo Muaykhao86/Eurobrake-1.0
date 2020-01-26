@@ -102,7 +102,7 @@ export default function WithdrawPopup(props) {
     console.log('popup', { values, url, csrf })
     
     
-    onWithdraw = async (values) => {
+    const onWithdraw = async (values) => {
         await setLoading(true);
         await console.log('submitting')
 
@@ -151,7 +151,7 @@ export default function WithdrawPopup(props) {
                                     <CancelIcon style={{ fontSize: '3rem', marginRight: '1rem' }} /> No
                                                 </Button>
                                 <Button
-                                    onClick={() => this.onWithdraw()}
+                                    onClick={onWithdraw}
                                     bcolor="#134381"
                                     background="#134381"
                                     br="100rem"
