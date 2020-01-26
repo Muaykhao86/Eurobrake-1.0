@@ -109,7 +109,7 @@ export const LoginForm = () => {
                             href="/f/[id]/[formType]"
                             as={`/f/XC8Z3FWxDuQtk68qVs3uwF/reset`} > */}
                         <a onClick={() => setReset(Reset => !Reset)}>
-                           <Typography className="form-link"> Forgotten your password?</Typography> 
+                           <Typography className="form-link">{Reset ?  'Forgotten your password?' : 'login' }</Typography> 
                         </a>
                         {/* </Link> */}
                     </StyledForm>
