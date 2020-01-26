@@ -88,10 +88,397 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 0);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
 /******/ ({
+
+/***/ "./components/AboutSection.js":
+/*!************************************!*\
+  !*** ./components/AboutSection.js ***!
+  \************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return AboutSection; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var react_reveal_Bounce__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-reveal/Bounce */ "react-reveal/Bounce");
+/* harmony import */ var react_reveal_Bounce__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_reveal_Bounce__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _styles_HomeStyles__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./styles/HomeStyles */ "./components/styles/HomeStyles.js");
+/* harmony import */ var _Card__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Card */ "./components/Card.js");
+/* harmony import */ var _Button__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Button */ "./components/Button.js");
+/* harmony import */ var react_reveal_withReveal__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-reveal/withReveal */ "react-reveal/withReveal");
+/* harmony import */ var react_reveal_withReveal__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react_reveal_withReveal__WEBPACK_IMPORTED_MODULE_6__);
+var _jsxFileName = "/mnt/c/Users/D.Hardiman/desktop/eurobrake/components/AboutSection.js";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
+
+
+
+
+
+
+const AboutCard = () => __jsx(_Card__WEBPACK_IMPORTED_MODULE_4__["Card"], {
+  right: true,
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 10
+  },
+  __self: undefined
+}, __jsx("h1", {
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 11
+  },
+  __self: undefined
+}, "Early bird tickets are on sale now"), __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+  href: "/ticketPortal",
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 12
+  },
+  __self: undefined
+}, __jsx(_Button__WEBPACK_IMPORTED_MODULE_5__["Button"], {
+  br: "500rem",
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 13
+  },
+  __self: undefined
+}, "Book Now")));
+
+const BounceAboutCard = react_reveal_withReveal__WEBPACK_IMPORTED_MODULE_6___default()(AboutCard, __jsx(react_reveal_Bounce__WEBPACK_IMPORTED_MODULE_2___default.a, {
+  left: true,
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 18
+  },
+  __self: undefined
+}));
+function AboutSection() {
+  return __jsx(_styles_HomeStyles__WEBPACK_IMPORTED_MODULE_3__["StyledSection"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 23
+    },
+    __self: this
+  }, __jsx("h1", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 24
+    },
+    __self: this
+  }, "Europe's braking technology conference and exhibition"), __jsx("p", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 25
+    },
+    __self: this
+  }, "Welcome to EuroBrake, a major international forum for brake experts working in the fields of passenger cars, commercial vehicles, rail, aerospace, industry and academia. "), __jsx("p", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 26
+    },
+    __self: this
+  }, " We invite you to join us at EuroBrake 2020, which will take place in Barcelona, Spain, one of the world\u2019s leading connected, cultural and historical destinations."), __jsx("div", {
+    className: "innerContainer",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 27
+    },
+    __self: this
+  }, __jsx("div", {
+    className: "mediaBox",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 28
+    },
+    __self: this
+  }, __jsx("img", {
+    src: "https://live.staticflickr.com/65535/48016110023_8fae3c1150_b.jpg",
+    alt: "EuroBrake Greating",
+    style: {
+      width: '100%',
+      height: '100%',
+      objectfit: 'cover'
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 29
+    },
+    __self: this
+  })), __jsx(BounceAboutCard, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 31
+    },
+    __self: this
+  })));
+}
+{
+  /* src="/images/pic1.png" */
+}
+
+/***/ }),
+
+/***/ "./components/AttendeesSection.js":
+/*!****************************************!*\
+  !*** ./components/AttendeesSection.js ***!
+  \****************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return AttendeesSection; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var react_reveal_Bounce__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-reveal/Bounce */ "react-reveal/Bounce");
+/* harmony import */ var react_reveal_Bounce__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_reveal_Bounce__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _styles_HomeStyles__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./styles/HomeStyles */ "./components/styles/HomeStyles.js");
+/* harmony import */ var _Card__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Card */ "./components/Card.js");
+/* harmony import */ var _Button__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Button */ "./components/Button.js");
+/* harmony import */ var react_reveal_withReveal__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-reveal/withReveal */ "react-reveal/withReveal");
+/* harmony import */ var react_reveal_withReveal__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react_reveal_withReveal__WEBPACK_IMPORTED_MODULE_6__);
+var _jsxFileName = "/mnt/c/Users/D.Hardiman/desktop/eurobrake/components/AttendeesSection.js";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
+
+
+
+
+
+
+const AttendeesCard = () => __jsx(_Card__WEBPACK_IMPORTED_MODULE_4__["Card"], {
+  right: true,
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 10
+  },
+  __self: undefined
+}, __jsx("h1", {
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 11
+  },
+  __self: undefined
+}, "Who attends Eurobrake"), __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+  href: "/about",
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 12
+  },
+  __self: undefined
+}, __jsx(_Button__WEBPACK_IMPORTED_MODULE_5__["Button"], {
+  br: "500rem",
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 13
+  },
+  __self: undefined
+}, "Attendees")));
+
+const BounceAttendeesCard = react_reveal_withReveal__WEBPACK_IMPORTED_MODULE_6___default()(AttendeesCard, __jsx(react_reveal_Bounce__WEBPACK_IMPORTED_MODULE_2___default.a, {
+  left: true,
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 18
+  },
+  __self: undefined
+}));
+function AttendeesSection() {
+  return __jsx(_styles_HomeStyles__WEBPACK_IMPORTED_MODULE_3__["StyledSection"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 21
+    },
+    __self: this
+  }, __jsx("h1", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 22
+    },
+    __self: this
+  }, "Attendees"), __jsx("p", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 23
+    },
+    __self: this
+  }, "Featuring more than 120 technical presentations and 100+ international exhibitors, EuroBrake attracts a global audience of engineers, scientists, academics and executives from the industries of passenger car, commercial vehicle, rail, aerospace and the wider industrial sectors."), __jsx("div", {
+    className: "innerContainer",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 25
+    },
+    __self: this
+  }, __jsx("div", {
+    className: "mediaBox",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 26
+    },
+    __self: this
+  }, __jsx("img", {
+    src: "https://live.staticflickr.com/65535/48016203938_fe5254376c_b.jpg",
+    alt: "EuroBrake Greating",
+    style: {
+      width: '100%',
+      height: '100%',
+      objectfit: 'cover'
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 27
+    },
+    __self: this
+  })), __jsx(BounceAttendeesCard, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 29
+    },
+    __self: this
+  })));
+} // src="/images/pic1.png"
+
+/***/ }),
+
+/***/ "./components/AuthorSection.js":
+/*!*************************************!*\
+  !*** ./components/AuthorSection.js ***!
+  \*************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return AuthorSection; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var react_reveal_Bounce__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-reveal/Bounce */ "react-reveal/Bounce");
+/* harmony import */ var react_reveal_Bounce__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_reveal_Bounce__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _styles_HomeStyles__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./styles/HomeStyles */ "./components/styles/HomeStyles.js");
+/* harmony import */ var _Card__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Card */ "./components/Card.js");
+/* harmony import */ var _Button__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Button */ "./components/Button.js");
+/* harmony import */ var react_reveal_withReveal__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-reveal/withReveal */ "react-reveal/withReveal");
+/* harmony import */ var react_reveal_withReveal__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react_reveal_withReveal__WEBPACK_IMPORTED_MODULE_6__);
+var _jsxFileName = "/mnt/c/Users/D.Hardiman/desktop/eurobrake/components/AuthorSection.js";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
+
+
+
+
+
+
+const AuthorCard = () => __jsx(_Card__WEBPACK_IMPORTED_MODULE_4__["Card"], {
+  left: true,
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 10
+  },
+  __self: undefined
+}, __jsx("h1", {
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 11
+  },
+  __self: undefined
+}, "Access the Authors Area"), __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+  href: "/authorsArea",
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 12
+  },
+  __self: undefined
+}, __jsx(_Button__WEBPACK_IMPORTED_MODULE_5__["Button"], {
+  br: "500rem",
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 13
+  },
+  __self: undefined
+}, "Authors Area")));
+
+const BounceAuthorCard = react_reveal_withReveal__WEBPACK_IMPORTED_MODULE_6___default()(AuthorCard, __jsx(react_reveal_Bounce__WEBPACK_IMPORTED_MODULE_2___default.a, {
+  left: true,
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 18
+  },
+  __self: undefined
+}));
+function AuthorSection() {
+  return __jsx(_styles_HomeStyles__WEBPACK_IMPORTED_MODULE_3__["StyledSection"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 23
+    },
+    __self: this
+  }, __jsx("h1", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 24
+    },
+    __self: this
+  }, "Authors Area"), __jsx("p", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 25
+    },
+    __self: this
+  }, "Presenting a paper at EuroBrake gives you the opportunity to share your latest technical ideas and achievements with influential specialists from around the world and to discuss your work with colleagues throughout the industrial and academic communities."), __jsx("div", {
+    className: "innerContainer",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 27
+    },
+    __self: this
+  }, __jsx("div", {
+    className: "mediaBox",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 28
+    },
+    __self: this
+  }, __jsx("img", {
+    src: "https://live.staticflickr.com/65535/48015947061_7e41d70927_b.jpg",
+    alt: "EuroBrake Greating",
+    style: {
+      width: '100%',
+      height: '100%',
+      objectfit: 'cover'
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 29
+    },
+    __self: this
+  })), __jsx(BounceAuthorCard, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 31
+    },
+    __self: this
+  })));
+}
+{
+  /* src="/images/pic1.png" */
+}
+
+/***/ }),
 
 /***/ "./components/Button.js":
 /*!******************************!*\
@@ -123,6 +510,223 @@ const Button = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.a.withCo
 //     </Link>
 // ));
 //TODO ADJUST BOX SHADOWS FOR DIFFERENT BUTTONS
+
+/***/ }),
+
+/***/ "./components/Card.js":
+/*!****************************!*\
+  !*** ./components/Card.js ***!
+  \****************************/
+/*! exports provided: Card */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Card", function() { return Card; });
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! styled-components */ "styled-components");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_0__);
+
+const Card = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({
+  displayName: "Card",
+  componentId: "sc-1fywwyw-0"
+})(["position:absolute;bottom:-12rem;left:", ";right:", ";max-width:", ";min-height:", ";background-color:", ";padding:4rem;padding-bottom:3.5rem;align-self:", ";display:flex;flex-flow:column;justify-content:space-between;h1{font-size:4rem;font-family:", ";color:", ";align-self:flex-start;max-width:90%;}"], props => props.right && 'null' || props.left && '-5rem' || props.center && 'null', props => props.right && '-5rem' || props.left && 'null' || props.center && 'null', props => props.MW || '33rem', props => props.MW || '33rem', props => props.theme.primary, props => props.right && 'flex-end' || props.left && 'flex-start' || props.center && 'center', props => props.theme.MPBlack, props => props.theme.white);
+
+/***/ }),
+
+/***/ "./components/CountDownBanner.js":
+/*!***************************************!*\
+  !*** ./components/CountDownBanner.js ***!
+  \***************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! styled-components */ "styled-components");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @material-ui/core/Typography */ "@material-ui/core/Typography");
+/* harmony import */ var _material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _components_Button__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/Button */ "./components/Button.js");
+var _jsxFileName = "/mnt/c/Users/D.Hardiman/desktop/eurobrake/components/CountDownBanner.js";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
+
+
+
+const CDBanner = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div.withConfig({
+  displayName: "CountDownBanner__CDBanner",
+  componentId: "y7fpkn-0"
+})(["position:relative;align-self:flex-end;z-index:10;background-color:#134381;margin-top:0;min-width:100%;min-height:20vh;border-top:5px solid ", ";@media only screen  and (max-device-width:768px)  and (-webkit-min-device-pixel-ratio:2){min-height:18vh;}display:flex;justify-content:center;align-items:center;color:white;"], props => props.theme.secondary);
+const CDContainer = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div.withConfig({
+  displayName: "CountDownBanner__CDContainer",
+  componentId: "y7fpkn-1"
+})(["display:flex;align-items:center;margin-right:2rem;"]);
+const CDItem = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div.withConfig({
+  displayName: "CountDownBanner__CDItem",
+  componentId: "y7fpkn-2"
+})(["position:relative;top:-1.5rem;display:flex;flex-flow:column;align-content:flex-start;align-items:flex-start;.timer{position:relative;font-size:7rem;font-family:", ";margin:0 1rem;}span{position:absolute;top:8.8rem;font-size:1.7rem;font-family:", ";padding-left:2rem;}span:not(.noPad){padding-left:5rem;}"], props => props.theme.MPBlack, props => props.theme.MPLight);
+
+class CountDownBanner extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
+  constructor(props) {
+    super(props);
+    this.state = {
+      days: '',
+      hours: '',
+      minutes: '',
+      seconds: ''
+    };
+  }
+
+  componentDidMount() {
+    this.interval = setInterval(() => {
+      const countDownDate = new Date("Jun 2, 2020 08:00:00").getTime();
+      const now = new Date().getTime();
+      const distance = countDownDate - now;
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor(distance / (1000 * 60 * 60) % 24);
+      const minutes = Math.floor(distance / (1000 * 60) % 60);
+      const seconds = Math.floor(distance / 1000 % 60);
+      this.setState({
+        days,
+        hours,
+        minutes,
+        seconds
+      });
+    }, 1000);
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.interval);
+  }
+
+  render() {
+    const {
+      days,
+      hours,
+      minutes,
+      seconds
+    } = this.state;
+    return __jsx(CDBanner, {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 100
+      },
+      __self: this
+    }, __jsx(CDContainer, {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 101
+      },
+      __self: this
+    }, __jsx(CDItem, {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 102
+      },
+      __self: this
+    }, __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_3___default.a, {
+      className: "timer",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 103
+      },
+      __self: this
+    }, days || '0'), __jsx("span", {
+      className: "noPad",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 104
+      },
+      __self: this
+    }, "Days")), __jsx(CDItem, {
+      className: "countdown-item",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 106
+      },
+      __self: this
+    }, __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_3___default.a, {
+      className: "timer",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 107
+      },
+      __self: this
+    }, hours > 9 ? ': ' + hours : `: 0` + hours), __jsx("span", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 108
+      },
+      __self: this
+    }, "Hours")), __jsx(CDItem, {
+      className: "countdown-item",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 110
+      },
+      __self: this
+    }, __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_3___default.a, {
+      className: "timer",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 111
+      },
+      __self: this
+    }, minutes > 9 ? ': ' + minutes : `: 0` + minutes), __jsx("span", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 112
+      },
+      __self: this
+    }, "Minutes")), __jsx(CDItem, {
+      className: "countdown-item",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 114
+      },
+      __self: this
+    }, __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_3___default.a, {
+      className: "timer",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 115
+      },
+      __self: this
+    }, seconds > 9 ? ': ' + seconds : `: 0` + seconds), __jsx("span", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 116
+      },
+      __self: this
+    }, "Seconds")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+      href: "/ticketPortal",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 118
+      },
+      __self: this
+    }, __jsx(_components_Button__WEBPACK_IMPORTED_MODULE_4__["Button"], {
+      style: {
+        marginLeft: '5rem',
+        minHeight: '8rem'
+      },
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 119
+      },
+      __self: this
+    }, "Book Now"))));
+  }
+
+}
+
+;
+/* harmony default export */ __webpack_exports__["default"] = (CountDownBanner);
 
 /***/ }),
 
@@ -1013,6 +1617,136 @@ class Header extends react__WEBPACK_IMPORTED_MODULE_1__["Component"] {
 //         box-shadow: (0, 0, 0, 0.5);
 //     }
 //     `;
+
+/***/ }),
+
+/***/ "./components/HeroSection.js":
+/*!***********************************!*\
+  !*** ./components/HeroSection.js ***!
+  \***********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return HeroSection; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "styled-components");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @material-ui/core/Typography */ "@material-ui/core/Typography");
+/* harmony import */ var _material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _CountDownBanner__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./CountDownBanner */ "./components/CountDownBanner.js");
+/* harmony import */ var _StyledCarousel__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./StyledCarousel */ "./components/StyledCarousel.js");
+var _jsxFileName = "/mnt/c/Users/D.Hardiman/desktop/eurobrake/components/HeroSection.js";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
+
+
+
+const StyledHero = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div.withConfig({
+  displayName: "HeroSection__StyledHero",
+  componentId: "sc-1rt21yv-0"
+})(["position:relative;padding-top:10rem;z-index:10;min-width:100%;min-height:", ";display:flex;flex-flow:column;@media only screen  and (max-device-width:768px)  and (-webkit-min-device-pixel-ratio:2)  and (orientation:portrait){min-height:", ";}.hero-img{max-height:80%;flex:2 1 80%;object-fit:cover;}.banner{display:flex;}"], props => props.h || props.theme.heroHeightBig, props => props.h || props.theme.heroHeightSml);
+const StyledText = styled_components__WEBPACK_IMPORTED_MODULE_1___default()(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_2___default.a).withConfig({
+  displayName: "HeroSection__StyledText",
+  componentId: "sc-1rt21yv-1"
+})(["position:absolute;z-index:10;top:", ";align-self:center;width:", ";color:", ";text-align:center;text-shadow:0px 4px 7px rgba(0,0,0,0.74);&&.MuiTypography-body1{font-size:", ";@media only screen  and (max-device-width:1200px)  and (-webkit-min-device-pixel-ratio:2){font-size:", ";top:", ";}@media only screen  and (max-device-width:1024px)  and (-webkit-min-device-pixel-ratio:2) and (orientation:landscape){font-size:", ";top:", ";}@media only screen  and (max-device-width:768px)  and (-webkit-min-device-pixel-ratio:2){font-size:", ";width:", ";top:", ";}font-family:", ";line-height:1;}"], props => props.secondary ? '60%' : '20%', props => props.max || '80%', props => props.color || props.theme.white, props => props.fs || props.sfs || '12rem', props => props.tfs || props.tsfs || '9rem', props => props.tt ? props.tt : '20%', props => props.tfs || props.sfs || '9rem', props => props.tt ? props.tt : '20%', props => props.mfs || props.tfs || '10rem', props => props.mmax || '80%', props => props.mt ? props.mt : '20%', props => props.sfont ? props.theme.MPLight : props.theme.MPBlack);
+function HeroSection(props) {
+  const {
+    t,
+    tt,
+    mt,
+    st,
+    mst,
+    tst,
+    max,
+    mmax,
+    smax,
+    msmax,
+    fs,
+    tfs,
+    mfs,
+    sfs,
+    tsfs,
+    msfs,
+    cara,
+    scolor
+  } = props;
+  return __jsx(StyledHero, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 82
+    },
+    __self: this
+  }, cara ? __jsx(_StyledCarousel__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 86
+    },
+    __self: this
+  }) : __jsx("img", {
+    className: "hero-img",
+    srcSet: props.src ? props.src : "/images/pic11.png",
+    alt: "EuroBrake Greating",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 87
+    },
+    __self: this
+  }), __jsx(StyledText, {
+    t: t,
+    mt: mt,
+    tt: tt,
+    max: max,
+    mmax: mmax,
+    fs: fs,
+    tfs: tfs,
+    mfs: mfs,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 89
+    },
+    __self: this
+  }, props.children), __jsx(StyledText, {
+    t: st,
+    mt: mst,
+    tt: tst,
+    max: smax,
+    mmax: msmax,
+    fs: sfs,
+    tfs: tsfs,
+    msfs: msfs,
+    color: scolor,
+    sfont: true,
+    secondary: true,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 92
+    },
+    __self: this
+  }, props.secondary), __jsx("div", {
+    className: "banner",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 95
+    },
+    __self: this
+  }, props.banner ? __jsx(props.banner, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 96
+    },
+    __self: this
+  }) : __jsx(_CountDownBanner__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 96
+    },
+    __self: this
+  })));
+}
 
 /***/ }),
 
@@ -5631,6 +6365,131 @@ class EBFloorPlan extends react__WEBPACK_IMPORTED_MODULE_2__["Component"] {
 
 /***/ }),
 
+/***/ "./components/LocationSection.js":
+/*!***************************************!*\
+  !*** ./components/LocationSection.js ***!
+  \***************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return LocationSection; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var react_reveal_Bounce__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-reveal/Bounce */ "react-reveal/Bounce");
+/* harmony import */ var react_reveal_Bounce__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_reveal_Bounce__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _styles_HomeStyles__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./styles/HomeStyles */ "./components/styles/HomeStyles.js");
+/* harmony import */ var _Card__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Card */ "./components/Card.js");
+/* harmony import */ var _Button__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Button */ "./components/Button.js");
+/* harmony import */ var react_reveal_withReveal__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-reveal/withReveal */ "react-reveal/withReveal");
+/* harmony import */ var react_reveal_withReveal__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react_reveal_withReveal__WEBPACK_IMPORTED_MODULE_6__);
+var _jsxFileName = "/mnt/c/Users/D.Hardiman/desktop/eurobrake/components/LocationSection.js";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
+
+
+
+
+
+
+const LocationCard = () => __jsx(_Card__WEBPACK_IMPORTED_MODULE_4__["Card"], {
+  left: true,
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 10
+  },
+  __self: undefined
+}, __jsx("h1", {
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 11
+  },
+  __self: undefined
+}, "Find out more about Barcelona"), __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+  href: "/welcome",
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 12
+  },
+  __self: undefined
+}, __jsx(_Button__WEBPACK_IMPORTED_MODULE_5__["Button"], {
+  br: "500rem",
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 13
+  },
+  __self: undefined
+}, "Discover")));
+
+const BounceLocationCard = react_reveal_withReveal__WEBPACK_IMPORTED_MODULE_6___default()(LocationCard, __jsx(react_reveal_Bounce__WEBPACK_IMPORTED_MODULE_2___default.a, {
+  left: true,
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 18
+  },
+  __self: undefined
+}));
+function LocationSection() {
+  return __jsx(_styles_HomeStyles__WEBPACK_IMPORTED_MODULE_3__["StyledSection"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 23
+    },
+    __self: this
+  }, __jsx("h1", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 24
+    },
+    __self: this
+  }, "Discover Barcelona"), __jsx("p", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 25
+    },
+    __self: this
+  }, "Offering an enviable climate and world-leading hub for business, Barcelona has direct links with many of the world\u2019s Capital cities, via air, road, rail and sea, making EuroBrake 2020 extremely accessible."), __jsx("div", {
+    className: "innerContainer",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 27
+    },
+    __self: this
+  }, __jsx("div", {
+    className: "mediaBox",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 28
+    },
+    __self: this
+  }, __jsx("img", {
+    src: "/images/pic2.png",
+    alt: "Barcelona",
+    style: {
+      width: '100%',
+      height: '100%',
+      objectfit: 'cover'
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 29
+    },
+    __self: this
+  })), __jsx(BounceLocationCard, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 31
+    },
+    __self: this
+  })));
+}
+
+/***/ }),
+
 /***/ "./components/Meta.js":
 /*!****************************!*\
   !*** ./components/Meta.js ***!
@@ -6829,6 +7688,418 @@ function SponsorCarousel() {
 
 /***/ }),
 
+/***/ "./components/StudentSection.js":
+/*!**************************************!*\
+  !*** ./components/StudentSection.js ***!
+  \**************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return StudentSection; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var react_reveal_Bounce__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-reveal/Bounce */ "react-reveal/Bounce");
+/* harmony import */ var react_reveal_Bounce__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_reveal_Bounce__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _styles_HomeStyles__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./styles/HomeStyles */ "./components/styles/HomeStyles.js");
+/* harmony import */ var _Card__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Card */ "./components/Card.js");
+/* harmony import */ var _Button__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Button */ "./components/Button.js");
+/* harmony import */ var react_reveal_withReveal__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-reveal/withReveal */ "react-reveal/withReveal");
+/* harmony import */ var react_reveal_withReveal__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react_reveal_withReveal__WEBPACK_IMPORTED_MODULE_6__);
+var _jsxFileName = "/mnt/c/Users/D.Hardiman/desktop/eurobrake/components/StudentSection.js";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
+
+
+
+
+
+
+const StudentCard = () => __jsx(_Card__WEBPACK_IMPORTED_MODULE_4__["Card"], {
+  right: true,
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 11
+  },
+  __self: undefined
+}, __jsx("h1", {
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 12
+  },
+  __self: undefined
+}, "Learn more about ESOP"), __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+  href: "/esop",
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 13
+  },
+  __self: undefined
+}, __jsx(_Button__WEBPACK_IMPORTED_MODULE_5__["Button"], {
+  br: "500rem",
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 14
+  },
+  __self: undefined
+}, "ESOP")));
+
+const BounceStudentCard = react_reveal_withReveal__WEBPACK_IMPORTED_MODULE_6___default()(StudentCard, __jsx(react_reveal_Bounce__WEBPACK_IMPORTED_MODULE_2___default.a, {
+  left: true,
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 19
+  },
+  __self: undefined
+}));
+function StudentSection() {
+  return __jsx(_styles_HomeStyles__WEBPACK_IMPORTED_MODULE_3__["StyledSection"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 25
+    },
+    __self: this
+  }, __jsx("h1", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 26
+    },
+    __self: this
+  }, "Student Opportunities Programme"), __jsx("p", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 27
+    },
+    __self: this
+  }, "The EuroBrake Student Opportunities Programme (ESOP) offers 50 students from around the world the chance to attend EuroBrake 2020."), __jsx("p", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 28
+    },
+    __self: this
+  }, "Selected students will be offered the opportunity to attend EuroBrake via a sponsorship package which offers a strong networking opportunities, a CV check/one to one career advice with HR representatives from the sponsor companies, access to the designated Student Lounge and much more."), __jsx("div", {
+    className: "innerContainer",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 30
+    },
+    __self: this
+  }, __jsx("div", {
+    className: "mediaBox",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 31
+    },
+    __self: this
+  }, __jsx("img", {
+    src: "https://live.staticflickr.com/65535/48016169592_4d79e976bd_b.jpg",
+    alt: "EuroBrake Greating",
+    style: {
+      width: '100%',
+      height: '100%',
+      objectfit: 'cover'
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 32
+    },
+    __self: this
+  })), __jsx(BounceStudentCard, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 34
+    },
+    __self: this
+  })));
+} // src="/images/pic2.png"
+
+/***/ }),
+
+/***/ "./components/StyledCarousel.js":
+/*!**************************************!*\
+  !*** ./components/StyledCarousel.js ***!
+  \**************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return StyledCarousel; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "styled-components");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var react_reveal_makeCarousel__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-reveal/makeCarousel */ "react-reveal/makeCarousel");
+/* harmony import */ var react_reveal_makeCarousel__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_reveal_makeCarousel__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var react_reveal_Slide__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-reveal/Slide */ "react-reveal/Slide");
+/* harmony import */ var react_reveal_Slide__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_reveal_Slide__WEBPACK_IMPORTED_MODULE_3__);
+var _jsxFileName = "/mnt/c/Users/D.Hardiman/desktop/eurobrake/components/StyledCarousel.js";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
+
+
+const Overlay = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div.withConfig({
+  displayName: "StyledCarousel__Overlay",
+  componentId: "zmlu3k-0"
+})(["overflow:hidden;"]);
+const Container = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div.withConfig({
+  displayName: "StyledCarousel__Container",
+  componentId: "zmlu3k-1"
+})(["width:100%;height:80vh;.react-reveal{height:100%;}@media only screen  and (max-device-width:768px)  and (-webkit-min-device-pixel-ratio:2) and (orientation:portrait){height:", ";}display:flex;position:relative;background-color:black;"], props => props.h || props.theme.heroHeightSml);
+const StyledSlide = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.img.withConfig({
+  displayName: "StyledCarousel__StyledSlide",
+  componentId: "zmlu3k-2"
+})(["object-fit:cover;width:100%;height:100%;@media only screen  and (max-device-width:768px)  and (-webkit-min-device-pixel-ratio:2) and (orientation:portrait){height:", ";}"], props => props.h || props.theme.heroHeightSml);
+
+const CarouselUI = ({
+  children
+}) => __jsx(Container, {
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 64
+  },
+  __self: undefined
+}, children);
+
+const Carousel = react_reveal_makeCarousel__WEBPACK_IMPORTED_MODULE_2___default()(CarouselUI);
+function StyledCarousel() {
+  return __jsx(Overlay, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 69
+    },
+    __self: this
+  }, __jsx(Carousel, {
+    count: 10,
+    defaultWait: 3000
+    /*wait for 1000 milliseconds*/
+    ,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 71
+    },
+    __self: this
+  }, __jsx(react_reveal_Slide__WEBPACK_IMPORTED_MODULE_3___default.a, {
+    ssr: true,
+    left: true,
+    style: {
+      height: '100%'
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 72
+    },
+    __self: this
+  }, __jsx(StyledSlide, {
+    srcSet: "/images/main.jpg",
+    alt: "EuroBrake Greating",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 73
+    },
+    __self: this
+  })), __jsx(react_reveal_Slide__WEBPACK_IMPORTED_MODULE_3___default.a, {
+    ssr: true,
+    left: true,
+    style: {
+      height: '100%'
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 75
+    },
+    __self: this
+  }, __jsx(StyledSlide, {
+    src: "https://live.staticflickr.com/65535/48016136483_351aca498d_k.jpg",
+    alt: "EuroBrake greeting",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 76
+    },
+    __self: this
+  })), __jsx(react_reveal_Slide__WEBPACK_IMPORTED_MODULE_3___default.a, {
+    ssr: true,
+    left: true,
+    style: {
+      height: '100%'
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 78
+    },
+    __self: this
+  }, __jsx(StyledSlide, {
+    src: "https://live.staticflickr.com/65535/48016271432_55407a4514_b.jpg",
+    alt: "EuroBrake greeting",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 79
+    },
+    __self: this
+  })), __jsx(react_reveal_Slide__WEBPACK_IMPORTED_MODULE_3___default.a, {
+    ssr: true,
+    left: true,
+    style: {
+      height: '100%'
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 81
+    },
+    __self: this
+  }, __jsx(StyledSlide, {
+    src: "https://live.staticflickr.com/65535/48016162516_6cb09426e3_b.jpg",
+    alt: "EuroBrake greeting",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 82
+    },
+    __self: this
+  }))));
+}
+
+/***/ }),
+
+/***/ "./components/exhibitors/ExhibitionSection.js":
+/*!****************************************************!*\
+  !*** ./components/exhibitors/ExhibitionSection.js ***!
+  \****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return ExhibitionSection; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _styles_HomeStyles__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../styles/HomeStyles */ "./components/styles/HomeStyles.js");
+/* harmony import */ var _Card__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../Card */ "./components/Card.js");
+/* harmony import */ var _Button__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../Button */ "./components/Button.js");
+/* harmony import */ var react_reveal_Bounce__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-reveal/Bounce */ "react-reveal/Bounce");
+/* harmony import */ var react_reveal_Bounce__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react_reveal_Bounce__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var react_reveal_withReveal__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-reveal/withReveal */ "react-reveal/withReveal");
+/* harmony import */ var react_reveal_withReveal__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react_reveal_withReveal__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _utils_mixins__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../utils/mixins */ "./utils/mixins.js");
+var _jsxFileName = "/mnt/c/Users/D.Hardiman/desktop/eurobrake/components/exhibitors/ExhibitionSection.js";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
+
+
+
+
+
+
+
+const ExhibitCard = () => __jsx(_Card__WEBPACK_IMPORTED_MODULE_3__["Card"], {
+  left: true,
+  style: {
+    opacity: '1'
+  },
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 11
+  },
+  __self: undefined
+}, __jsx("h1", {
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 12
+  },
+  __self: undefined
+}, "Partner your brand with EuroBrake"), __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+  href: "/exhibitAndSponsor",
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 13
+  },
+  __self: undefined
+}, __jsx(_Button__WEBPACK_IMPORTED_MODULE_4__["Button"], {
+  br: "500rem",
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 14
+  },
+  __self: undefined
+}, "EXHIBIT/SPONSOR")));
+
+const BounceExhibitCard = react_reveal_withReveal__WEBPACK_IMPORTED_MODULE_6___default()(ExhibitCard, __jsx(react_reveal_Bounce__WEBPACK_IMPORTED_MODULE_5___default.a, {
+  left: true,
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 19
+  },
+  __self: undefined
+}));
+function ExhibitionSection() {
+  return __jsx(_styles_HomeStyles__WEBPACK_IMPORTED_MODULE_2__["StyledSection"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 23
+    },
+    __self: this
+  }, __jsx("h1", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 24
+    },
+    __self: this
+  }, "Exhibition and Sponsorship"), __jsx("p", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 25
+    },
+    __self: this
+  }, "EuroBrake\u2019s accompanying technical exhibition offers an ideal opportunity to present your company\u2019s products, services and technical capabilities to key decision-makers, from industry players to new entrants in specialist engineering."), __jsx("div", {
+    className: "innerContainer",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 27
+    },
+    __self: this
+  }, __jsx("div", {
+    className: "mediaBox",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 28
+    },
+    __self: this
+  }, __jsx("img", {
+    src: "https://live.staticflickr.com/65535/48015806353_84e40e5464_b.jpg",
+    alt: "EuroBrake Greating",
+    style: {
+      width: '100%',
+      height: '100%',
+      objectfit: 'cover'
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 29
+    },
+    __self: this
+  })), __jsx(BounceExhibitCard, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 31
+    },
+    __self: this
+  })));
+} // src="/images/pic2.png"src="https://live.staticflickr.com/65535/48016056853_9893d1088d_b.jpg"
+// {winWidth() ? 
+// :
+// <>
+// </>
+// }
+
+/***/ }),
+
 /***/ "./components/forms/FormActions.js":
 /*!*****************************************!*\
   !*** ./components/forms/FormActions.js ***!
@@ -7549,6 +8820,33 @@ BaseAnimation.defaultProps = {
 
 /***/ }),
 
+/***/ "./components/styles/HomeStyles.js":
+/*!*****************************************!*\
+  !*** ./components/styles/HomeStyles.js ***!
+  \*****************************************/
+/*! exports provided: StyledContainer, StyledSection */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "StyledContainer", function() { return StyledContainer; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "StyledSection", function() { return StyledSection; });
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! styled-components */ "styled-components");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _Page__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../Page */ "./components/Page.js");
+
+
+const StyledContainer = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({
+  displayName: "HomeStyles__StyledContainer",
+  componentId: "sc-1nylq97-0"
+})(["display:flex;flex-flow:column;align-items:center;"]);
+const StyledSection = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({
+  displayName: "HomeStyles__StyledSection",
+  componentId: "sc-1nylq97-1"
+})(["display:flex;flex-flow:column;justify-content:flex-start;margin:0 10rem;margin-top:5rem;margin-bottom:15rem;width:", ";@media only screen  and (max-device-width:1300px)  and (-webkit-min-device-pixel-ratio:2){width:", ";}@media only screen  and (max-device-width:768px)  and (-webkit-min-device-pixel-ratio:2){width:", ";}h1{font-family:", ";font-size:4.4rem;color:", ";line-height:1.1;margin-bottom:3rem;}p{font-family:", ";font-size:2rem;color:", ";margin-bottom:1rem;}.innerContainer{position:relative;display:flex;flex-flow:column;margin-top:2rem;}.mediaBox{min-width:66.4rem;max-height:33rem;overflow:hidden;display:flex;justify-content:center;align-items:center;}"], props => props.theme.minWidth, props => props.theme.laptopWidth, props => props.theme.mobileWidth, props => props.theme.MPSemibold, props => props.theme.primary, props => props.theme.MPLight, props => props.theme.primary);
+
+/***/ }),
+
 /***/ "./components/styles/NavStyles.js":
 /*!****************************************!*\
   !*** ./components/styles/NavStyles.js ***!
@@ -7716,55 +9014,6 @@ module.exports = __webpack_require__(/*! core-js/library/fn/object/keys */ "./no
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__(/*! core-js/library/fn/promise */ "./node_modules/@babel/runtime-corejs2/node_modules/core-js/library/fn/promise.js");
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime-corejs2/helpers/asyncToGenerator.js":
-/*!*************************************************************************!*\
-  !*** ./node_modules/@babel/runtime-corejs2/helpers/asyncToGenerator.js ***!
-  \*************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var _Promise = __webpack_require__(/*! ../core-js/promise */ "./node_modules/@babel/runtime-corejs2/core-js/promise.js");
-
-function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {
-  try {
-    var info = gen[key](arg);
-    var value = info.value;
-  } catch (error) {
-    reject(error);
-    return;
-  }
-
-  if (info.done) {
-    resolve(value);
-  } else {
-    _Promise.resolve(value).then(_next, _throw);
-  }
-}
-
-function _asyncToGenerator(fn) {
-  return function () {
-    var self = this,
-        args = arguments;
-    return new _Promise(function (resolve, reject) {
-      var gen = fn.apply(self, args);
-
-      function _next(value) {
-        asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value);
-      }
-
-      function _throw(err) {
-        asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err);
-      }
-
-      _next(undefined);
-    });
-  };
-}
-
-module.exports = _asyncToGenerator;
 
 /***/ }),
 
@@ -11277,18 +12526,6 @@ for (var i = 0; i < DOMIterables.length; i++) {
 
 /***/ }),
 
-/***/ "./node_modules/next/app.js":
-/*!**********************************!*\
-  !*** ./node_modules/next/app.js ***!
-  \**********************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__(/*! ./dist/pages/_app */ "./node_modules/next/dist/pages/_app.js")
-
-
-/***/ }),
-
 /***/ "./node_modules/next/dist/client/link.js":
 /*!***********************************************!*\
   !*** ./node_modules/next/dist/client/link.js ***!
@@ -12800,164 +14037,6 @@ exports.SUPPORTS_PERFORMANCE_USER_TIMING = exports.SUPPORTS_PERFORMANCE && typeo
 
 /***/ }),
 
-/***/ "./node_modules/next/dist/pages/_app.js":
-/*!**********************************************!*\
-  !*** ./node_modules/next/dist/pages/_app.js ***!
-  \**********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime-corejs2/helpers/interopRequireDefault */ "./node_modules/@babel/runtime-corejs2/helpers/interopRequireDefault.js");
-
-exports.__esModule = true;
-exports.Container = Container;
-exports.createUrl = createUrl;
-exports.default = void 0;
-
-var _extends2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime-corejs2/helpers/extends */ "./node_modules/@babel/runtime-corejs2/helpers/extends.js"));
-
-var _asyncToGenerator2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime-corejs2/helpers/asyncToGenerator */ "./node_modules/@babel/runtime-corejs2/helpers/asyncToGenerator.js"));
-
-var _react = _interopRequireDefault(__webpack_require__(/*! react */ "react"));
-
-var _propTypes = _interopRequireDefault(__webpack_require__(/*! prop-types */ "prop-types"));
-
-var _utils = __webpack_require__(/*! ../next-server/lib/utils */ "./node_modules/next/dist/next-server/lib/utils.js");
-
-exports.AppInitialProps = _utils.AppInitialProps;
-
-var _router = __webpack_require__(/*! ../client/router */ "./node_modules/next/dist/client/router.js");
-/**
-* `App` component is used for initialize of pages. It allows for overwriting and full control of the `page` initialization.
-* This allows for keeping state between navigation, custom error handling, injecting additional data.
-*/
-
-
-function appGetInitialProps(_x) {
-  return _appGetInitialProps.apply(this, arguments);
-}
-
-function _appGetInitialProps() {
-  _appGetInitialProps = (0, _asyncToGenerator2.default)(function* (_ref) {
-    let {
-      Component,
-      ctx
-    } = _ref;
-    const pageProps = yield (0, _utils.loadGetInitialProps)(Component, ctx);
-    return {
-      pageProps
-    };
-  });
-  return _appGetInitialProps.apply(this, arguments);
-}
-
-class App extends _react.default.Component {
-  getChildContext() {
-    return {
-      router: (0, _router.makePublicRouterInstance)(this.props.router)
-    };
-  } // Kept here for backwards compatibility.
-  // When someone ended App they could call `super.componentDidCatch`.
-  // @deprecated This method is no longer needed. Errors are caught at the top level
-
-
-  componentDidCatch(error, _errorInfo) {
-    throw error;
-  }
-
-  render() {
-    const {
-      router,
-      Component,
-      pageProps
-    } = this.props;
-    const url = createUrl(router);
-    return _react.default.createElement(Component, (0, _extends2.default)({}, pageProps, {
-      url: url
-    }));
-  }
-
-}
-
-exports.default = App;
-App.childContextTypes = {
-  router: _propTypes.default.object
-};
-App.origGetInitialProps = appGetInitialProps;
-App.getInitialProps = appGetInitialProps;
-let warnContainer;
-let warnUrl;
-
-if (true) {
-  warnContainer = (0, _utils.execOnce)(() => {
-    console.warn("Warning: the `Container` in `_app` has been deprecated and should be removed. https://err.sh/zeit/next.js/app-container-deprecated");
-  });
-  warnUrl = (0, _utils.execOnce)(() => {
-    console.error("Warning: the 'url' property is deprecated. https://err.sh/zeit/next.js/url-deprecated");
-  });
-} // @deprecated noop for now until removal
-
-
-function Container(p) {
-  if (true) warnContainer();
-  return p.children;
-}
-
-function createUrl(router) {
-  // This is to make sure we don't references the router object at call time
-  const {
-    pathname,
-    asPath,
-    query
-  } = router;
-  return {
-    get query() {
-      if (true) warnUrl();
-      return query;
-    },
-
-    get pathname() {
-      if (true) warnUrl();
-      return pathname;
-    },
-
-    get asPath() {
-      if (true) warnUrl();
-      return asPath;
-    },
-
-    back: () => {
-      if (true) warnUrl();
-      router.back();
-    },
-    push: (url, as) => {
-      if (true) warnUrl();
-      return router.push(url, as);
-    },
-    pushTo: (href, as) => {
-      if (true) warnUrl();
-      const pushRoute = as ? href : '';
-      const pushUrl = as || href;
-      return router.push(pushRoute, pushUrl);
-    },
-    replace: (url, as) => {
-      if (true) warnUrl();
-      return router.replace(url, as);
-    },
-    replaceTo: (href, as) => {
-      if (true) warnUrl();
-      const replaceRoute = as ? href : '';
-      const replaceUrl = as || href;
-      return router.replace(replaceRoute, replaceUrl);
-    }
-  };
-}
-
-/***/ }),
-
 /***/ "./node_modules/next/link.js":
 /*!***********************************!*\
   !*** ./node_modules/next/link.js ***!
@@ -12970,56 +14049,109 @@ module.exports = __webpack_require__(/*! ./dist/client/link */ "./node_modules/n
 
 /***/ }),
 
-/***/ "./pages/_app.js":
-/*!***********************!*\
-  !*** ./pages/_app.js ***!
-  \***********************/
+/***/ "./pages/index.js":
+/*!************************!*\
+  !*** ./pages/index.js ***!
+  \************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return MyApp; });
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/extends */ "./node_modules/@babel/runtime-corejs2/helpers/esm/extends.js");
-/* harmony import */ var next_app__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/app */ "./node_modules/next/app.js");
-/* harmony import */ var next_app__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_app__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _components_Page__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/Page */ "./components/Page.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _components_CountDownBanner__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/CountDownBanner */ "./components/CountDownBanner.js");
+/* harmony import */ var _components_styles_HomeStyles__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/styles/HomeStyles */ "./components/styles/HomeStyles.js");
+/* harmony import */ var _components_AboutSection__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/AboutSection */ "./components/AboutSection.js");
+/* harmony import */ var _components_LocationSection__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/LocationSection */ "./components/LocationSection.js");
+/* harmony import */ var _components_AttendeesSection__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/AttendeesSection */ "./components/AttendeesSection.js");
+/* harmony import */ var _components_exhibitors_ExhibitionSection__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/exhibitors/ExhibitionSection */ "./components/exhibitors/ExhibitionSection.js");
+/* harmony import */ var _components_StudentSection__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../components/StudentSection */ "./components/StudentSection.js");
+/* harmony import */ var _components_AuthorSection__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../components/AuthorSection */ "./components/AuthorSection.js");
+/* harmony import */ var _components_HeroSection__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../components/HeroSection */ "./components/HeroSection.js");
+/* harmony import */ var _components_Dates__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../components/Dates */ "./components/Dates.js");
+var _jsxFileName = "/mnt/c/Users/D.Hardiman/desktop/eurobrake/pages/index.js";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
-var _jsxFileName = "/mnt/c/Users/D.Hardiman/desktop/eurobrake/pages/_app.js";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement;
 
 
 
-class MyApp extends next_app__WEBPACK_IMPORTED_MODULE_1___default.a {
-  // need to remove the server-side injected CSS on the client side because of avoiding duplicated injection of CSS. as per material ui docs
-  componentDidMount() {
-    const jssStyles = document.querySelector('#jss-server-side');
-    if (jssStyles && jssStyles.parentNode) jssStyles.parentNode.removeChild(jssStyles);
-  }
 
-  render() {
-    const {
-      Component,
-      pageProps
-    } = this.props;
-    return __jsx(_components_Page__WEBPACK_IMPORTED_MODULE_3__["default"], {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 17
-      },
-      __self: this
-    }, __jsx(Component, Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, pageProps, {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 18
-      },
-      __self: this
-    })));
-  }
 
-}
+
+
+
+
+
+/* harmony default export */ __webpack_exports__["default"] = (() => __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx(_components_HeroSection__WEBPACK_IMPORTED_MODULE_9__["default"], {
+  scolor: "#F9B721",
+  cara: true,
+  sfs: "8rem",
+  tsfs: "5rem",
+  tst: "60%",
+  mst: "65%",
+  src: "/images/main.jpg",
+  secondary: "Secure your tickets by 1 April 2020",
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 16
+  },
+  __self: undefined
+}, "Book your Early Bird tickets for EuroBrake 2020"), __jsx(_components_styles_HomeStyles__WEBPACK_IMPORTED_MODULE_2__["StyledContainer"], {
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 29
+  },
+  __self: undefined
+}, __jsx(_components_Dates__WEBPACK_IMPORTED_MODULE_10__["FixedDates"], {
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 30
+  },
+  __self: undefined
+}), __jsx(_components_Dates__WEBPACK_IMPORTED_MODULE_10__["FixedBox"], {
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 31
+  },
+  __self: undefined
+}), __jsx(_components_AboutSection__WEBPACK_IMPORTED_MODULE_3__["default"], {
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 32
+  },
+  __self: undefined
+}), __jsx(_components_LocationSection__WEBPACK_IMPORTED_MODULE_4__["default"], {
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 33
+  },
+  __self: undefined
+}), __jsx(_components_AttendeesSection__WEBPACK_IMPORTED_MODULE_5__["default"], {
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 34
+  },
+  __self: undefined
+}), __jsx(_components_exhibitors_ExhibitionSection__WEBPACK_IMPORTED_MODULE_6__["default"], {
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 35
+  },
+  __self: undefined
+}), __jsx(_components_StudentSection__WEBPACK_IMPORTED_MODULE_7__["default"], {
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 36
+  },
+  __self: undefined
+}), __jsx(_components_AuthorSection__WEBPACK_IMPORTED_MODULE_8__["default"], {
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 37
+  },
+  __self: undefined
+}))));
 
 /***/ }),
 
@@ -13140,14 +14272,30 @@ const withAuthSync = WrappedComponent => {
 
 /***/ }),
 
-/***/ 0:
-/*!****************************************!*\
-  !*** multi private-next-pages/_app.js ***!
-  \****************************************/
+/***/ "./utils/mixins.js":
+/*!*************************!*\
+  !*** ./utils/mixins.js ***!
+  \*************************/
+/*! exports provided: winWidth */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "winWidth", function() { return winWidth; });
+const winWidth = () => {
+  if (false) {}
+};
+
+/***/ }),
+
+/***/ 3:
+/*!******************************!*\
+  !*** multi ./pages/index.js ***!
+  \******************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! private-next-pages/_app.js */"./pages/_app.js");
+module.exports = __webpack_require__(/*! /mnt/c/Users/D.Hardiman/desktop/eurobrake/pages/index.js */"./pages/index.js");
 
 
 /***/ }),
@@ -13406,4 +14554,4 @@ module.exports = require("yup");
 /***/ })
 
 /******/ });
-//# sourceMappingURL=_app.js.map
+//# sourceMappingURL=index.js.map

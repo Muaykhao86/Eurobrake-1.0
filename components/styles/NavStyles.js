@@ -126,7 +126,10 @@ export const HiddenContainer = styled.div`
          @media only screen 
         and (max-device-width: 768px) 
         and (-webkit-min-device-pixel-ratio: 2) { 
-    min-height: 27vh;                 
+    min-height: 100rem;           
+    overflow: auto;
+     -webkit-overflow-scrolling: touch;
+
    
 }   
 
@@ -158,7 +161,7 @@ export const HiddenContainer = styled.div`
           @media only screen 
   and (max-device-width: 768px) 
   and (-webkit-min-device-pixel-ratio: 2) { 
-        font-size: 4rem;
+        font-size: 3rem;
 }
 
         &-box{
