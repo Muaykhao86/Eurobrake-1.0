@@ -54,14 +54,14 @@ const StyledText = styled(Typography)`
     top: ${props => props.tt ? props.tt : '20%'};
     }
 
-/*     
+    
     @media only screen 
         and (max-device-width: 1024px) 
         and (-webkit-min-device-pixel-ratio: 2)
         and (orientation : landscape) {
         font-size: ${props => props.tfs || props.tsfs || '9rem'};
         top: ${props => props.tt ? props.tt : '20%'};
-    } */
+    }
          @media only screen 
         and (max-device-width: 768px) 
         and (-webkit-min-device-pixel-ratio: 2)

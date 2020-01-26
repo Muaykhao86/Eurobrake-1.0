@@ -1788,7 +1788,7 @@ var StyledHero = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div.w
 var StyledText = Object(styled_components__WEBPACK_IMPORTED_MODULE_1__["default"])(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_2__["default"]).withConfig({
   displayName: "HeroSection__StyledText",
   componentId: "sc-1rt21yv-1"
-})(["position:absolute;z-index:10;top:", ";align-self:center;width:", ";color:", ";text-align:center;text-shadow:0px 4px 7px rgba(0,0,0,0.74);&&.MuiTypography-body1{font-size:", ";@media only screen  and (max-device-width:1200px)  and (-webkit-min-device-pixel-ratio:2){font-size:", ";top:", ";}@media only screen  and (max-device-width:768px)  and (-webkit-min-device-pixel-ratio:2){font-size:", ";width:", ";top:", ";}font-family:", ";line-height:1;}"], function (props) {
+})(["position:absolute;z-index:10;top:", ";align-self:center;width:", ";color:", ";text-align:center;text-shadow:0px 4px 7px rgba(0,0,0,0.74);&&.MuiTypography-body1{font-size:", ";@media only screen  and (max-device-width:1200px)  and (-webkit-min-device-pixel-ratio:2){font-size:", ";top:", ";}@media only screen  and (max-device-width:1024px)  and (-webkit-min-device-pixel-ratio:2) and (orientation:landscape){font-size:", ";top:", ";}@media only screen  and (max-device-width:768px)  and (-webkit-min-device-pixel-ratio:2){font-size:", ";width:", ";top:", ";}font-family:", ";line-height:1;}"], function (props) {
   return props.secondary ? '60%' : '20%';
 }, function (props) {
   return props.max || '80%';
@@ -1796,6 +1796,10 @@ var StyledText = Object(styled_components__WEBPACK_IMPORTED_MODULE_1__["default"
   return props.color || props.theme.white;
 }, function (props) {
   return props.fs || props.sfs || '12rem';
+}, function (props) {
+  return props.tfs || props.tsfs || '9rem';
+}, function (props) {
+  return props.tt ? props.tt : '20%';
 }, function (props) {
   return props.tfs || props.tsfs || '9rem';
 }, function (props) {
@@ -8955,9 +8959,9 @@ var AbstractSchema = yup__WEBPACK_IMPORTED_MODULE_0__["object"]().shape({
   author_phone: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().required('Required'),
   is_presenting_author: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().required('Required'),
   papertitle: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().required('Required'),
-  "abstract": yup__WEBPACK_IMPORTED_MODULE_0__["string"]().required('Required').test('wordCount', 'Max 750 words', function (value) {
+  "abstract": yup__WEBPACK_IMPORTED_MODULE_0__["string"]().test('wordCount', 'Max 750 words', function (value) {
     return value && value.match(/[\w\d\’\'-]+/gi).length <= 750;
-  }),
+  }).required('Required'),
   keywords: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().required('Required'),
   consider_for_journal: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().nullable(),
   secondary_authors: yup__WEBPACK_IMPORTED_MODULE_0__["array"]().of(yup__WEBPACK_IMPORTED_MODULE_0__["object"]().shape({
@@ -95802,7 +95806,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
     sfs: "8rem",
     tsfs: "6rem",
     msfs: "9rem",
-    tst: "55%",
+    tst: "60%",
     mst: "50%",
     src: "/images/main.jpg",
     secondary: "Secure your tickets by 1 April 2020",
@@ -95814,55 +95818,55 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
   }, "Book your Early Bird tickets for EuroBrake 2020"), __jsx(_components_styles_HomeStyles__WEBPACK_IMPORTED_MODULE_2__["StyledContainer"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 29
+      lineNumber: 30
     },
     __self: this
   }, __jsx(_components_Dates__WEBPACK_IMPORTED_MODULE_10__["FixedDates"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 30
+      lineNumber: 31
     },
     __self: this
   }), __jsx(_components_Dates__WEBPACK_IMPORTED_MODULE_10__["FixedBox"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 31
+      lineNumber: 32
     },
     __self: this
   }), __jsx(_components_AboutSection__WEBPACK_IMPORTED_MODULE_3__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 32
+      lineNumber: 33
     },
     __self: this
   }), __jsx(_components_LocationSection__WEBPACK_IMPORTED_MODULE_4__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 33
+      lineNumber: 34
     },
     __self: this
   }), __jsx(_components_AttendeesSection__WEBPACK_IMPORTED_MODULE_5__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 34
+      lineNumber: 35
     },
     __self: this
   }), __jsx(_components_exhibitors_ExhibitionSection__WEBPACK_IMPORTED_MODULE_6__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 35
+      lineNumber: 36
     },
     __self: this
   }), __jsx(_components_StudentSection__WEBPACK_IMPORTED_MODULE_7__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 36
+      lineNumber: 37
     },
     __self: this
   }), __jsx(_components_AuthorSection__WEBPACK_IMPORTED_MODULE_8__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 37
+      lineNumber: 38
     },
     __self: this
   })));

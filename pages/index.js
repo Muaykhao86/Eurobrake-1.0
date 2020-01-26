@@ -15,11 +15,12 @@ export default () => (
     <>       
         <HeroSection 
         scolor="#F9B721"
+        
          cara
          sfs="8rem"
          tsfs="6rem"
          msfs="9rem"
-         tst="55%"
+         tst="60%"
          mst="50%"
          src="/images/main.jpg" 
          secondary="Secure your tickets by 1 April 2020"

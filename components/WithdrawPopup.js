@@ -98,10 +98,12 @@ export default function WithdrawPopup(props) {
     const [Loading, setLoading] = useState(false);
     const [Status, setStatus] = useState(null);
     const [Toggle, setToggle] = useState(false);
-
-
+    let csrf = '';
     const { values, url } = props;
-    const csrf = values[__csrf_];
+
+
+     csrf = values.__csrf_
+     
     console.log('popup', { values, url, csrf })
     
     

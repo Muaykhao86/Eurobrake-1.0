@@ -7243,7 +7243,7 @@ const AbstractSchema = yup__WEBPACK_IMPORTED_MODULE_0__["object"]().shape({
   author_phone: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().required('Required'),
   is_presenting_author: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().required('Required'),
   papertitle: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().required('Required'),
-  abstract: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().required('Required').test('wordCount', 'Max 750 words', value => value && value.match(/[\w\d\’\'-]+/gi).length <= 750),
+  abstract: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().test('wordCount', 'Max 750 words', value => value && value.match(/[\w\d\’\'-]+/gi).length <= 750).required('Required'),
   keywords: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().required('Required'),
   consider_for_journal: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().nullable(),
   secondary_authors: yup__WEBPACK_IMPORTED_MODULE_0__["array"]().of(yup__WEBPACK_IMPORTED_MODULE_0__["object"]().shape({
