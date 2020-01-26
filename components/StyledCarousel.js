@@ -14,7 +14,8 @@ overflow: hidden;
 
 const Container = styled.div`
 width: 100%;
-height: 80vh;
+height: 80vh; 
+/* Myabe do a calc here to see if vh > vw */
 
 .react-reveal{
     height: 100%;
@@ -24,11 +25,13 @@ height: 80vh;
         and (-webkit-min-device-pixel-ratio: 2) {
     height: ${props => props.h || props.theme.heroHeightMed};
     }  
+    */
  @media only screen 
         and (max-device-width: 768px) 
-        and (-webkit-min-device-pixel-ratio: 2) {
+        and (-webkit-min-device-pixel-ratio: 2)
+         and (orientation: portrait) {
     height: ${props => props.h || props.theme.heroHeightSml };
-    }   */
+    }   
 display: flex;
 position: relative;
 
@@ -45,11 +48,13 @@ height: 100% ;
         and (-webkit-min-device-pixel-ratio: 2) {
     height: ${props => props.h || props.theme.heroHeightMed };
     } 
+    */
        @media only screen 
         and (max-device-width: 768px) 
-        and (-webkit-min-device-pixel-ratio: 2) {
+        and (-webkit-min-device-pixel-ratio: 2)
+        and (orientation: portrait) {
     height: ${props => props.h || props.theme.heroHeightSml };
-    }  */
+    }  
      
 `;
 

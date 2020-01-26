@@ -15,7 +15,8 @@ const StyledHero = styled.div`
 
       @media only screen 
         and (max-device-width: 768px) 
-        and (-webkit-min-device-pixel-ratio: 2) {
+        and (-webkit-min-device-pixel-ratio: 2) 
+        and (orientation: portrait) {
     min-height: ${props => props.h || props.theme.heroHeightSml};
     }
     
