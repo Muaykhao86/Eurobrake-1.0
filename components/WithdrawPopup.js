@@ -35,6 +35,8 @@ const StyledPopup = styled.div`
 }
 
 .button-box{
+    align-self: center;
+    width: 60%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -77,6 +79,7 @@ const StyledPopup = styled.div`
         color: ${props => props.theme.primary};
         font-family: ${props => props.theme.MPSemibold};
         font-size: 3rem;
+        margin-right: 2rem;
         margin-top: 1rem;
         margin-bottom: 1rem;
     }
@@ -98,7 +101,7 @@ export default function WithdrawPopup(props) {
 
 
     const { values, url } = props;
-    const csrf = values.__csrf_;
+    const csrf = values[__csrf_];
     console.log('popup', { values, url, csrf })
     
     
@@ -148,7 +151,7 @@ export default function WithdrawPopup(props) {
                                     padding="0.5rem 2rem"
                                     style={{ margin: ".5rem 0" }}
                                     fontSize="1.7rem">
-                                    <CancelIcon style={{ fontSize: '3rem', marginRight: '1rem' }} /> No
+                                    <CancelIcon style={{ fontSize: '3rem', marginRight: '1rem', color: '#FFF' }} /> No
                                                 </Button>
                                 <Button
                                     onClick={onWithdraw}
@@ -158,7 +161,7 @@ export default function WithdrawPopup(props) {
                                     padding="0.5rem 2rem"
                                     style={{ margin: ".5rem 0" }}
                                     fontSize="1.7rem">
-                                    <CheckCircleIcon style={{ fontSize: '3rem', marginRight: '1rem' }} />
+                                    <CheckCircleIcon style={{ fontSize: '3rem', marginRight: '1rem', color: '#FFF' }} />
                                     Yes
                                                 </Button>
 

@@ -76,13 +76,13 @@ export const AbstractSchema = yup.object().shape({
     author_phone: yup.string().required('Required'),
     is_presenting_author: yup.string().required('Required'),
     papertitle: yup.string().required('Required'),   
-    abstract: yup.string().required('Required').test(
+    abstract: yup.string().test(
         'wordCount',
         'Max 750 words',
         value => value && 
           value.match(/[\w\d\’\'-]+/gi)
           .length <= 750
-      ),
+      ).required('Required'),
     keywords: yup.string().required('Required'),
     consider_for_journal: yup.string().nullable(),
     secondary_authors: yup.array()
