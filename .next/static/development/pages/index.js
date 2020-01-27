@@ -46,7 +46,7 @@ var AboutCard = function AboutCard() {
     },
     __self: this
   }, "Early bird tickets are on sale now"), __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-    href: "/ticketPortal",
+    href: "/exhibitorsRegistration",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 12
@@ -59,7 +59,7 @@ var AboutCard = function AboutCard() {
       lineNumber: 13
     },
     __self: this
-  }, "Book Now")));
+  }, "Pricing/Registration")));
 };
 
 var BounceAboutCard = react_reveal_withReveal__WEBPACK_IMPORTED_MODULE_6___default()(AboutCard, __jsx(react_reveal_Bounce__WEBPACK_IMPORTED_MODULE_2___default.a, {
@@ -684,7 +684,7 @@ function (_Component) {
         },
         __self: this
       }, "Seconds")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_6___default.a, {
-        href: "/ticketPortal",
+        href: "/exhibitorsRegistration",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 118
@@ -700,7 +700,7 @@ function (_Component) {
           lineNumber: 119
         },
         __self: this
-      }, "Book Now"))));
+      }, "Pricing/Registration"))));
     }
   }]);
 
@@ -789,22 +789,6 @@ function Dates(props) {
     },
     __self: this
   }, "Important Dates"), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_3__["Typography"], {
-    as: "h1",
-    className: "Dates-date",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 60
-    },
-    __self: this
-  }, "26 January 2020"), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_3__["Typography"], {
-    as: "p",
-    className: "Dates-text",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 61
-    },
-    __self: this
-  }, "Deadline for submission of review ready papers"), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_3__["Typography"], {
     as: "h1",
     className: "Dates-date",
     __source: {
@@ -916,24 +900,6 @@ function FixedDates() {
     },
     __self: this
   }, "Important Dates"), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_3__["Typography"], {
-    gutterBottom: true,
-    as: "h1",
-    className: "Dates-date",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 135
-    },
-    __self: this
-  }, "26 January 2020"), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_3__["Typography"], {
-    gutterBottom: true,
-    as: "p",
-    className: "Dates-text",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 136
-    },
-    __self: this
-  }, "Deadline for submission of review ready papers"), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_3__["Typography"], {
     gutterBottom: true,
     as: "h1",
     className: "Dates-date",
@@ -1084,7 +1050,7 @@ function FixedBox() {
     },
     __self: this
   }, "CCIB, Barcelona, Spain"), __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
-    href: "/ticketPortal",
+    href: "/exhibitorsRegistration",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 239
@@ -1103,7 +1069,7 @@ function FixedBox() {
       lineNumber: 240
     },
     __self: this
-  }, "Book Now")), __jsx("div", {
+  }, "Pricing/Registration")), __jsx("div", {
     className: "logo_box",
     __source: {
       fileName: _jsxFileName,
@@ -1116,6 +1082,25 @@ function FixedBox() {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 243
+    },
+    __self: this
+  })), __jsx("div", {
+    className: "hide-box",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 245
+    },
+    __self: this
+  }, __jsx(_material_ui_icons_ArrowBackOutlined__WEBPACK_IMPORTED_MODULE_5___default.a, {
+    style: {
+      background: '#134381',
+      color: '#FFF',
+      width: '5rem',
+      height: '5rem'
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 246
     },
     __self: this
   })));
@@ -1197,7 +1182,7 @@ function Box(props) {
     },
     __self: this
   }, "CCIB, Barcelona, Spain"), __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
-    href: "/ticketPortal",
+    href: "/exhibitorsRegistration",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 324
@@ -1219,7 +1204,7 @@ function Box(props) {
       lineNumber: 325
     },
     __self: this
-  }, "Book Now")), __jsx("div", {
+  }, "Pricing/Registration")), __jsx("div", {
     className: "logo_box",
     __source: {
       fileName: _jsxFileName,
@@ -1848,7 +1833,7 @@ var StyledHero = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div.w
 var StyledText = Object(styled_components__WEBPACK_IMPORTED_MODULE_1__["default"])(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_2__["default"]).withConfig({
   displayName: "HeroSection__StyledText",
   componentId: "sc-1rt21yv-1"
-})(["position:absolute;z-index:10;top:", ";align-self:center;width:", ";color:", ";text-align:center;text-shadow:0px 4px 7px rgba(0,0,0,0.74);&&.MuiTypography-body1{font-size:", ";@media only screen  and (min-device-width:1800px)  and (-webkit-min-device-pixel-ratio:2){font-size:", ";top:", ";}@media only screen  and (max-device-width:1200px)  and (-webkit-min-device-pixel-ratio:2){font-size:", ";top:", ";}@media only screen  and (max-device-width:1024px)  and (-webkit-min-device-pixel-ratio:2) and (orientation:landscape){font-size:", ";top:", ";}@media only screen  and (max-device-width:768px)  and (-webkit-min-device-pixel-ratio:2){font-size:", ";width:", ";top:", ";}font-family:", ";line-height:1;}"], function (props) {
+})(["position:absolute;z-index:10;top:", ";align-self:center;width:", ";color:", ";text-align:center;text-shadow:0px 4px 7px rgba(0,0,0,0.74);&&.MuiTypography-body1{font-size:", ";@media   only screen and (   min--moz-device-pixel-ratio:2)      and (min-width:1300px),only screen and (     -o-min-device-pixel-ratio:2/1)    and (min-width:1300px),only screen and (        min-device-pixel-ratio:2)      and (min-width:1300px),only screen and (                min-resolution:192dpi) and (min-width:1300px),only screen and (                min-resolution:2dppx)  and (min-width:1300px){font-size:", ";top:", ";}@media only screen  and (min-device-width:1800px)  and (-webkit-min-device-pixel-ratio:2){font-size:", ";top:", ";}@media only screen  and (max-device-width:1200px)  and (-webkit-min-device-pixel-ratio:2){font-size:", ";top:", ";}@media only screen  and (max-device-width:1024px)  and (-webkit-min-device-pixel-ratio:2) and (orientation:landscape){font-size:", ";top:", ";}@media only screen  and (max-device-width:768px)  and (-webkit-min-device-pixel-ratio:2){font-size:", ";width:", ";top:", ";}font-family:", ";line-height:1;}"], function (props) {
   return props.secondary ? '60%' : '20%';
 }, function (props) {
   return props.max || '80%';
@@ -1857,11 +1842,15 @@ var StyledText = Object(styled_components__WEBPACK_IMPORTED_MODULE_1__["default"
 }, function (props) {
   return props.fs || props.sfs || '12rem';
 }, function (props) {
-  return props.bfs || props.bsfs || '9rem';
+  return props.tfs || '9rem';
 }, function (props) {
   return props.tt ? props.tt : '20%';
 }, function (props) {
-  return props.tfs || props.tsfs || '9rem';
+  return props.bfs || '9rem';
+}, function (props) {
+  return props.tt ? props.tt : '20%';
+}, function (props) {
+  return props.tfs || '9rem';
 }, function (props) {
   return props.tt ? props.tt : '20%';
 }, function (props) {
@@ -1901,13 +1890,13 @@ function HeroSection(props) {
   return __jsx(StyledHero, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 89
+      lineNumber: 99
     },
     __self: this
   }, cara ? __jsx(_StyledCarousel__WEBPACK_IMPORTED_MODULE_4__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 93
+      lineNumber: 103
     },
     __self: this
   }) : __jsx("img", {
@@ -1916,7 +1905,7 @@ function HeroSection(props) {
     alt: "EuroBrake Greating",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 94
+      lineNumber: 104
     },
     __self: this
   }), __jsx(StyledText, {
@@ -1931,7 +1920,7 @@ function HeroSection(props) {
     bfs: bfs,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 96
+      lineNumber: 106
     },
     __self: this
   }, props.children), __jsx(StyledText, {
@@ -1949,26 +1938,26 @@ function HeroSection(props) {
     secondary: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 99
+      lineNumber: 109
     },
     __self: this
   }, props.secondary), __jsx("div", {
     className: "banner",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 102
+      lineNumber: 112
     },
     __self: this
   }, props.banner ? __jsx(props.banner, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 103
+      lineNumber: 113
     },
     __self: this
   }) : __jsx(_CountDownBanner__WEBPACK_IMPORTED_MODULE_3__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 103
+      lineNumber: 113
     },
     __self: this
   })));
@@ -7129,7 +7118,7 @@ function (_Component) {
           lineNumber: 83
         },
         __self: this
-      }, "Registration"))), __jsx(next_link__WEBPACK_IMPORTED_MODULE_8___default.a, {
+      }, "Pricing & Registration"))), __jsx(next_link__WEBPACK_IMPORTED_MODULE_8___default.a, {
         href: "/technicalProgram",
         __source: {
           fileName: _jsxFileName,
@@ -7150,7 +7139,7 @@ function (_Component) {
           lineNumber: 84
         },
         __self: this
-      }, "Technical Program"))), __jsx(next_link__WEBPACK_IMPORTED_MODULE_8___default.a, {
+      }, "Technical Programme "))), __jsx(next_link__WEBPACK_IMPORTED_MODULE_8___default.a, {
         href: "/welcome",
         __source: {
           fileName: _jsxFileName,
@@ -7245,7 +7234,7 @@ function (_Component) {
           lineNumber: 95
         },
         __self: this
-      }, "ESOP - Student Opportunities Programme"))))), __jsx("div", {
+      }, "Apply for ESOP - Student Opportunities Programme"))))), __jsx("div", {
         className: "nav_box-middle-2",
         __source: {
           fileName: _jsxFileName,
@@ -7304,7 +7293,7 @@ function (_Component) {
           lineNumber: 107
         },
         __self: this
-      }, "Exhibit And Sponsor"))), __jsx(next_link__WEBPACK_IMPORTED_MODULE_8___default.a, {
+      }, "Exhibit & Sponsor"))), __jsx(next_link__WEBPACK_IMPORTED_MODULE_8___default.a, {
         href: "/exhibitors",
         __source: {
           fileName: _jsxFileName,
@@ -7405,7 +7394,7 @@ function (_Component) {
           lineNumber: 120
         },
         __self: this
-      }, "Templates")))))), __jsx("div", {
+      }, "Instructions & Templates")))))), __jsx("div", {
         className: "nav_box-left",
         style: {},
         __source: {
@@ -48053,7 +48042,7 @@ var defaultTheme = Object(_createMuiTheme__WEBPACK_IMPORTED_MODULE_0__["default"
 /*!************************************************************!*\
   !*** ./node_modules/@material-ui/core/esm/styles/index.js ***!
   \************************************************************/
-/*! exports provided: hexToRgb, rgbToHex, hslToRgb, decomposeColor, recomposeColor, getContrastRatio, getLuminance, emphasize, fade, darken, lighten, createMuiTheme, createStyles, makeStyles, responsiveFontSizes, styled, easing, duration, formatMs, isString, isNumber, useTheme, withStyles, withTheme, createGenerateClassName, jssPreset, ServerStyleSheets, StylesProvider, MuiThemeProvider, ThemeProvider */
+/*! exports provided: createMuiTheme, createStyles, makeStyles, responsiveFontSizes, styled, useTheme, withStyles, withTheme, createGenerateClassName, jssPreset, ServerStyleSheets, StylesProvider, MuiThemeProvider, ThemeProvider, hexToRgb, rgbToHex, hslToRgb, decomposeColor, recomposeColor, getContrastRatio, getLuminance, emphasize, fade, darken, lighten, easing, duration, formatMs, isString, isNumber */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -51766,7 +51755,7 @@ var flexbox = Object(_compose__WEBPACK_IMPORTED_MODULE_1__["default"])(flexBasis
 /*!*******************************************************!*\
   !*** ./node_modules/@material-ui/system/esm/index.js ***!
   \*******************************************************/
-/*! exports provided: borders, border, borderTop, borderRight, borderBottom, borderLeft, borderColor, borderRadius, breakpoints, compose, css, display, flexbox, flexBasis, flexDirection, flexWrap, justifyContent, alignItems, alignContent, order, flex, flexGrow, flexShrink, alignSelf, justifyItems, justifySelf, palette, color, bgcolor, positions, position, zIndex, top, right, bottom, left, shadows, sizing, width, maxWidth, minWidth, height, maxHeight, minHeight, sizeWidth, sizeHeight, spacing, style, typography, fontFamily, fontSize, fontStyle, fontWeight, letterSpacing, lineHeight, textAlign */
+/*! exports provided: borders, breakpoints, compose, css, display, flexbox, palette, positions, shadows, sizing, spacing, style, typography, border, borderTop, borderRight, borderBottom, borderLeft, borderColor, borderRadius, flexBasis, flexDirection, flexWrap, justifyContent, alignItems, alignContent, order, flex, flexGrow, flexShrink, alignSelf, justifyItems, justifySelf, color, bgcolor, position, zIndex, top, right, bottom, left, width, maxWidth, minWidth, height, maxHeight, minHeight, sizeWidth, sizeHeight, fontFamily, fontSize, fontStyle, fontWeight, letterSpacing, lineHeight, textAlign */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -95906,12 +95895,12 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 
+ // ?   bfs big font size
+// sfs sencondary font size
 
 /* harmony default export */ __webpack_exports__["default"] = (function () {
   return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx(_components_HeroSection__WEBPACK_IMPORTED_MODULE_9__["default"], {
     scolor: "#F9B721",
-    bfs: "6rem",
-    bsfs: "4rem",
     cara: true,
     sfs: "8rem",
     tsfs: "5rem",
@@ -95921,61 +95910,61 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
     secondary: "Secure your tickets by 1 April 2020",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 16
+      lineNumber: 21
     },
     __self: this
-  }, "Book your Early Bird tickets for EuroBrake 2020"), __jsx(_components_styles_HomeStyles__WEBPACK_IMPORTED_MODULE_2__["StyledContainer"], {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 30
-    },
-    __self: this
-  }, __jsx(_components_Dates__WEBPACK_IMPORTED_MODULE_10__["FixedDates"], {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 31
-    },
-    __self: this
-  }), __jsx(_components_Dates__WEBPACK_IMPORTED_MODULE_10__["FixedBox"], {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 32
-    },
-    __self: this
-  }), __jsx(_components_AboutSection__WEBPACK_IMPORTED_MODULE_3__["default"], {
+  }, "Book your Early Bird tickets for EuroBrake"), __jsx(_components_styles_HomeStyles__WEBPACK_IMPORTED_MODULE_2__["StyledContainer"], {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 33
     },
     __self: this
-  }), __jsx(_components_LocationSection__WEBPACK_IMPORTED_MODULE_4__["default"], {
+  }, __jsx(_components_Dates__WEBPACK_IMPORTED_MODULE_10__["FixedDates"], {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 34
     },
     __self: this
-  }), __jsx(_components_AttendeesSection__WEBPACK_IMPORTED_MODULE_5__["default"], {
+  }), __jsx(_components_Dates__WEBPACK_IMPORTED_MODULE_10__["FixedBox"], {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 35
     },
     __self: this
-  }), __jsx(_components_exhibitors_ExhibitionSection__WEBPACK_IMPORTED_MODULE_6__["default"], {
+  }), __jsx(_components_AboutSection__WEBPACK_IMPORTED_MODULE_3__["default"], {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 36
     },
     __self: this
-  }), __jsx(_components_StudentSection__WEBPACK_IMPORTED_MODULE_7__["default"], {
+  }), __jsx(_components_AttendeesSection__WEBPACK_IMPORTED_MODULE_5__["default"], {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 37
     },
     __self: this
-  }), __jsx(_components_AuthorSection__WEBPACK_IMPORTED_MODULE_8__["default"], {
+  }), __jsx(_components_exhibitors_ExhibitionSection__WEBPACK_IMPORTED_MODULE_6__["default"], {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 38
+    },
+    __self: this
+  }), __jsx(_components_StudentSection__WEBPACK_IMPORTED_MODULE_7__["default"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 39
+    },
+    __self: this
+  }), __jsx(_components_AuthorSection__WEBPACK_IMPORTED_MODULE_8__["default"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 40
+    },
+    __self: this
+  }), __jsx(_components_LocationSection__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 41
     },
     __self: this
   })));
@@ -96201,7 +96190,7 @@ var mobWidth = function mobWidth() {
 
 /***/ }),
 
-/***/ 2:
+/***/ 0:
 /*!*****************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2F&absolutePagePath=%2Fmnt%2Fc%2FUsers%2FD.Hardiman%2Fdesktop%2Feurobrake%2Fpages%2Findex.js ***!
   \*****************************************************************************************************************************************/
@@ -96224,5 +96213,5 @@ module.exports = dll_ea92a4d9664833a26066;
 
 /***/ })
 
-},[[2,"static/runtime/webpack.js"]]]);
+},[[0,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=index.js.map

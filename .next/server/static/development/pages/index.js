@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 5);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -138,7 +138,7 @@ const AboutCard = () => __jsx(_Card__WEBPACK_IMPORTED_MODULE_4__["Card"], {
   },
   __self: undefined
 }, "Early bird tickets are on sale now"), __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-  href: "/ticketPortal",
+  href: "/exhibitorsRegistration",
   __source: {
     fileName: _jsxFileName,
     lineNumber: 12
@@ -151,7 +151,7 @@ const AboutCard = () => __jsx(_Card__WEBPACK_IMPORTED_MODULE_4__["Card"], {
     lineNumber: 13
   },
   __self: undefined
-}, "Book Now")));
+}, "Pricing/Registration")));
 
 const BounceAboutCard = react_reveal_withReveal__WEBPACK_IMPORTED_MODULE_6___default()(AboutCard, __jsx(react_reveal_Bounce__WEBPACK_IMPORTED_MODULE_2___default.a, {
   left: true,
@@ -704,7 +704,7 @@ class CountDownBanner extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       },
       __self: this
     }, "Seconds")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-      href: "/ticketPortal",
+      href: "/exhibitorsRegistration",
       __source: {
         fileName: _jsxFileName,
         lineNumber: 118
@@ -720,7 +720,7 @@ class CountDownBanner extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
         lineNumber: 119
       },
       __self: this
-    }, "Book Now"))));
+    }, "Pricing/Registration"))));
   }
 
 }
@@ -793,22 +793,6 @@ function Dates(props) {
     },
     __self: this
   }, "Important Dates"), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_3__["Typography"], {
-    as: "h1",
-    className: "Dates-date",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 60
-    },
-    __self: this
-  }, "26 January 2020"), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_3__["Typography"], {
-    as: "p",
-    className: "Dates-text",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 61
-    },
-    __self: this
-  }, "Deadline for submission of review ready papers"), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_3__["Typography"], {
     as: "h1",
     className: "Dates-date",
     __source: {
@@ -904,24 +888,6 @@ function FixedDates() {
     },
     __self: this
   }, "Important Dates"), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_3__["Typography"], {
-    gutterBottom: true,
-    as: "h1",
-    className: "Dates-date",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 135
-    },
-    __self: this
-  }, "26 January 2020"), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_3__["Typography"], {
-    gutterBottom: true,
-    as: "p",
-    className: "Dates-text",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 136
-    },
-    __self: this
-  }, "Deadline for submission of review ready papers"), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_3__["Typography"], {
     gutterBottom: true,
     as: "h1",
     className: "Dates-date",
@@ -1052,7 +1018,7 @@ function FixedBox() {
     },
     __self: this
   }, "CCIB, Barcelona, Spain"), __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
-    href: "/ticketPortal",
+    href: "/exhibitorsRegistration",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 239
@@ -1071,7 +1037,7 @@ function FixedBox() {
       lineNumber: 240
     },
     __self: this
-  }, "Book Now")), __jsx("div", {
+  }, "Pricing/Registration")), __jsx("div", {
     className: "logo_box",
     __source: {
       fileName: _jsxFileName,
@@ -1084,6 +1050,25 @@ function FixedBox() {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 243
+    },
+    __self: this
+  })), __jsx("div", {
+    className: "hide-box",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 245
+    },
+    __self: this
+  }, __jsx(_material_ui_icons_ArrowBackOutlined__WEBPACK_IMPORTED_MODULE_5___default.a, {
+    style: {
+      background: '#134381',
+      color: '#FFF',
+      width: '5rem',
+      height: '5rem'
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 246
     },
     __self: this
   })));
@@ -1145,7 +1130,7 @@ function Box(props) {
     },
     __self: this
   }, "CCIB, Barcelona, Spain"), __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
-    href: "/ticketPortal",
+    href: "/exhibitorsRegistration",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 324
@@ -1167,7 +1152,7 @@ function Box(props) {
       lineNumber: 325
     },
     __self: this
-  }, "Book Now")), __jsx("div", {
+  }, "Pricing/Registration")), __jsx("div", {
     className: "logo_box",
     __source: {
       fileName: _jsxFileName,
@@ -1709,7 +1694,7 @@ const StyledHero = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div.
 const StyledText = styled_components__WEBPACK_IMPORTED_MODULE_1___default()(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_2___default.a).withConfig({
   displayName: "HeroSection__StyledText",
   componentId: "sc-1rt21yv-1"
-})(["position:absolute;z-index:10;top:", ";align-self:center;width:", ";color:", ";text-align:center;text-shadow:0px 4px 7px rgba(0,0,0,0.74);&&.MuiTypography-body1{font-size:", ";@media only screen  and (min-device-width:1800px)  and (-webkit-min-device-pixel-ratio:2){font-size:", ";top:", ";}@media only screen  and (max-device-width:1200px)  and (-webkit-min-device-pixel-ratio:2){font-size:", ";top:", ";}@media only screen  and (max-device-width:1024px)  and (-webkit-min-device-pixel-ratio:2) and (orientation:landscape){font-size:", ";top:", ";}@media only screen  and (max-device-width:768px)  and (-webkit-min-device-pixel-ratio:2){font-size:", ";width:", ";top:", ";}font-family:", ";line-height:1;}"], props => props.secondary ? '60%' : '20%', props => props.max || '80%', props => props.color || props.theme.white, props => props.fs || props.sfs || '12rem', props => props.bfs || props.bsfs || '9rem', props => props.tt ? props.tt : '20%', props => props.tfs || props.tsfs || '9rem', props => props.tt ? props.tt : '20%', props => props.tfs || '9rem', props => props.tt ? props.tt : '20%', props => props.mfs || props.tfs || '10rem', props => props.mmax || '80%', props => props.mt ? props.mt : '20%', props => props.sfont ? props.theme.MPLight : props.theme.MPBlack);
+})(["position:absolute;z-index:10;top:", ";align-self:center;width:", ";color:", ";text-align:center;text-shadow:0px 4px 7px rgba(0,0,0,0.74);&&.MuiTypography-body1{font-size:", ";@media   only screen and (   min--moz-device-pixel-ratio:2)      and (min-width:1300px),only screen and (     -o-min-device-pixel-ratio:2/1)    and (min-width:1300px),only screen and (        min-device-pixel-ratio:2)      and (min-width:1300px),only screen and (                min-resolution:192dpi) and (min-width:1300px),only screen and (                min-resolution:2dppx)  and (min-width:1300px){font-size:", ";top:", ";}@media only screen  and (min-device-width:1800px)  and (-webkit-min-device-pixel-ratio:2){font-size:", ";top:", ";}@media only screen  and (max-device-width:1200px)  and (-webkit-min-device-pixel-ratio:2){font-size:", ";top:", ";}@media only screen  and (max-device-width:1024px)  and (-webkit-min-device-pixel-ratio:2) and (orientation:landscape){font-size:", ";top:", ";}@media only screen  and (max-device-width:768px)  and (-webkit-min-device-pixel-ratio:2){font-size:", ";width:", ";top:", ";}font-family:", ";line-height:1;}"], props => props.secondary ? '60%' : '20%', props => props.max || '80%', props => props.color || props.theme.white, props => props.fs || props.sfs || '12rem', props => props.tfs || '9rem', props => props.tt ? props.tt : '20%', props => props.bfs || '9rem', props => props.tt ? props.tt : '20%', props => props.tfs || '9rem', props => props.tt ? props.tt : '20%', props => props.tfs || '9rem', props => props.tt ? props.tt : '20%', props => props.mfs || props.tfs || '10rem', props => props.mmax || '80%', props => props.mt ? props.mt : '20%', props => props.sfont ? props.theme.MPLight : props.theme.MPBlack);
 function HeroSection(props) {
   const {
     t,
@@ -1736,13 +1721,13 @@ function HeroSection(props) {
   return __jsx(StyledHero, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 89
+      lineNumber: 99
     },
     __self: this
   }, cara ? __jsx(_StyledCarousel__WEBPACK_IMPORTED_MODULE_4__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 93
+      lineNumber: 103
     },
     __self: this
   }) : __jsx("img", {
@@ -1751,7 +1736,7 @@ function HeroSection(props) {
     alt: "EuroBrake Greating",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 94
+      lineNumber: 104
     },
     __self: this
   }), __jsx(StyledText, {
@@ -1766,7 +1751,7 @@ function HeroSection(props) {
     bfs: bfs,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 96
+      lineNumber: 106
     },
     __self: this
   }, props.children), __jsx(StyledText, {
@@ -1784,26 +1769,26 @@ function HeroSection(props) {
     secondary: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 99
+      lineNumber: 109
     },
     __self: this
   }, props.secondary), __jsx("div", {
     className: "banner",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 102
+      lineNumber: 112
     },
     __self: this
   }, props.banner ? __jsx(props.banner, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 103
+      lineNumber: 113
     },
     __self: this
   }) : __jsx(_CountDownBanner__WEBPACK_IMPORTED_MODULE_3__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 103
+      lineNumber: 113
     },
     __self: this
   })));
@@ -6886,7 +6871,7 @@ class Nav extends react__WEBPACK_IMPORTED_MODULE_1__["Component"] {
         lineNumber: 83
       },
       __self: this
-    }, "Registration"))), __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
+    }, "Pricing & Registration"))), __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
       href: "/technicalProgram",
       __source: {
         fileName: _jsxFileName,
@@ -6907,7 +6892,7 @@ class Nav extends react__WEBPACK_IMPORTED_MODULE_1__["Component"] {
         lineNumber: 84
       },
       __self: this
-    }, "Technical Program"))), __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
+    }, "Technical Programme "))), __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
       href: "/welcome",
       __source: {
         fileName: _jsxFileName,
@@ -7002,7 +6987,7 @@ class Nav extends react__WEBPACK_IMPORTED_MODULE_1__["Component"] {
         lineNumber: 95
       },
       __self: this
-    }, "ESOP - Student Opportunities Programme"))))), __jsx("div", {
+    }, "Apply for ESOP - Student Opportunities Programme"))))), __jsx("div", {
       className: "nav_box-middle-2",
       __source: {
         fileName: _jsxFileName,
@@ -7061,7 +7046,7 @@ class Nav extends react__WEBPACK_IMPORTED_MODULE_1__["Component"] {
         lineNumber: 107
       },
       __self: this
-    }, "Exhibit And Sponsor"))), __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
+    }, "Exhibit & Sponsor"))), __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
       href: "/exhibitors",
       __source: {
         fileName: _jsxFileName,
@@ -7162,7 +7147,7 @@ class Nav extends react__WEBPACK_IMPORTED_MODULE_1__["Component"] {
         lineNumber: 120
       },
       __self: this
-    }, "Templates")))))), __jsx("div", {
+    }, "Instructions & Templates")))))), __jsx("div", {
       className: "nav_box-left",
       style: {},
       __source: {
@@ -14170,11 +14155,11 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 
+ // ?   bfs big font size
+// sfs sencondary font size
 
 /* harmony default export */ __webpack_exports__["default"] = (() => __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx(_components_HeroSection__WEBPACK_IMPORTED_MODULE_9__["default"], {
   scolor: "#F9B721",
-  bfs: "6rem",
-  bsfs: "4rem",
   cara: true,
   sfs: "8rem",
   tsfs: "5rem",
@@ -14184,61 +14169,61 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
   secondary: "Secure your tickets by 1 April 2020",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 16
+    lineNumber: 21
   },
   __self: undefined
-}, "Book your Early Bird tickets for EuroBrake 2020"), __jsx(_components_styles_HomeStyles__WEBPACK_IMPORTED_MODULE_2__["StyledContainer"], {
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 30
-  },
-  __self: undefined
-}, __jsx(_components_Dates__WEBPACK_IMPORTED_MODULE_10__["FixedDates"], {
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 31
-  },
-  __self: undefined
-}), __jsx(_components_Dates__WEBPACK_IMPORTED_MODULE_10__["FixedBox"], {
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 32
-  },
-  __self: undefined
-}), __jsx(_components_AboutSection__WEBPACK_IMPORTED_MODULE_3__["default"], {
+}, "Book your Early Bird tickets for EuroBrake"), __jsx(_components_styles_HomeStyles__WEBPACK_IMPORTED_MODULE_2__["StyledContainer"], {
   __source: {
     fileName: _jsxFileName,
     lineNumber: 33
   },
   __self: undefined
-}), __jsx(_components_LocationSection__WEBPACK_IMPORTED_MODULE_4__["default"], {
+}, __jsx(_components_Dates__WEBPACK_IMPORTED_MODULE_10__["FixedDates"], {
   __source: {
     fileName: _jsxFileName,
     lineNumber: 34
   },
   __self: undefined
-}), __jsx(_components_AttendeesSection__WEBPACK_IMPORTED_MODULE_5__["default"], {
+}), __jsx(_components_Dates__WEBPACK_IMPORTED_MODULE_10__["FixedBox"], {
   __source: {
     fileName: _jsxFileName,
     lineNumber: 35
   },
   __self: undefined
-}), __jsx(_components_exhibitors_ExhibitionSection__WEBPACK_IMPORTED_MODULE_6__["default"], {
+}), __jsx(_components_AboutSection__WEBPACK_IMPORTED_MODULE_3__["default"], {
   __source: {
     fileName: _jsxFileName,
     lineNumber: 36
   },
   __self: undefined
-}), __jsx(_components_StudentSection__WEBPACK_IMPORTED_MODULE_7__["default"], {
+}), __jsx(_components_AttendeesSection__WEBPACK_IMPORTED_MODULE_5__["default"], {
   __source: {
     fileName: _jsxFileName,
     lineNumber: 37
   },
   __self: undefined
-}), __jsx(_components_AuthorSection__WEBPACK_IMPORTED_MODULE_8__["default"], {
+}), __jsx(_components_exhibitors_ExhibitionSection__WEBPACK_IMPORTED_MODULE_6__["default"], {
   __source: {
     fileName: _jsxFileName,
     lineNumber: 38
+  },
+  __self: undefined
+}), __jsx(_components_StudentSection__WEBPACK_IMPORTED_MODULE_7__["default"], {
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 39
+  },
+  __self: undefined
+}), __jsx(_components_AuthorSection__WEBPACK_IMPORTED_MODULE_8__["default"], {
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 40
+  },
+  __self: undefined
+}), __jsx(_components_LocationSection__WEBPACK_IMPORTED_MODULE_4__["default"], {
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 41
   },
   __self: undefined
 }))));
@@ -14386,7 +14371,7 @@ const mobWidth = () => {
 
 /***/ }),
 
-/***/ 5:
+/***/ 3:
 /*!******************************!*\
   !*** multi ./pages/index.js ***!
   \******************************/

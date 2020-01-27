@@ -242,9 +242,9 @@ export function FixedBox() {
             <div className="logo_box">
                 <SmlLogo width="10rem" height="10rem"/>
             </div>
-            {/* <div className="hide-box">
+            <div className="hide-box">
                <ArrowBackOutlinedIcon style={{background: '#134381', color: '#FFF', width: '5rem', height: '5rem'}}/>
-            </div> */}
+            </div>
         </StyledFixedBox>  
     )
 }

@@ -137,22 +137,6 @@ function Dates(props) {
     className: "Dates-date",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 60
-    },
-    __self: this
-  }, "26 January 2020"), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_3__["Typography"], {
-    as: "p",
-    className: "Dates-text",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 61
-    },
-    __self: this
-  }, "Deadline for submission of review ready papers"), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_3__["Typography"], {
-    as: "h1",
-    className: "Dates-date",
-    __source: {
-      fileName: _jsxFileName,
       lineNumber: 62
     },
     __self: this
@@ -260,24 +244,6 @@ function FixedDates() {
     },
     __self: this
   }, "Important Dates"), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_3__["Typography"], {
-    gutterBottom: true,
-    as: "h1",
-    className: "Dates-date",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 135
-    },
-    __self: this
-  }, "26 January 2020"), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_3__["Typography"], {
-    gutterBottom: true,
-    as: "p",
-    className: "Dates-text",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 136
-    },
-    __self: this
-  }, "Deadline for submission of review ready papers"), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_3__["Typography"], {
     gutterBottom: true,
     as: "h1",
     className: "Dates-date",
@@ -428,7 +394,7 @@ function FixedBox() {
     },
     __self: this
   }, "CCIB, Barcelona, Spain"), __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
-    href: "/ticketPortal",
+    href: "/exhibitorsRegistration",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 239
@@ -447,7 +413,7 @@ function FixedBox() {
       lineNumber: 240
     },
     __self: this
-  }, "Book Now")), __jsx("div", {
+  }, "Pricing/Registration")), __jsx("div", {
     className: "logo_box",
     __source: {
       fileName: _jsxFileName,
@@ -460,6 +426,25 @@ function FixedBox() {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 243
+    },
+    __self: this
+  })), __jsx("div", {
+    className: "hide-box",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 245
+    },
+    __self: this
+  }, __jsx(_material_ui_icons_ArrowBackOutlined__WEBPACK_IMPORTED_MODULE_5___default.a, {
+    style: {
+      background: '#134381',
+      color: '#FFF',
+      width: '5rem',
+      height: '5rem'
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 246
     },
     __self: this
   })));
@@ -541,7 +526,7 @@ function Box(props) {
     },
     __self: this
   }, "CCIB, Barcelona, Spain"), __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
-    href: "/ticketPortal",
+    href: "/exhibitorsRegistration",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 324
@@ -563,7 +548,7 @@ function Box(props) {
       lineNumber: 325
     },
     __self: this
-  }, "Book Now")), __jsx("div", {
+  }, "Pricing/Registration")), __jsx("div", {
     className: "logo_box",
     __source: {
       fileName: _jsxFileName,
@@ -6184,7 +6169,7 @@ function (_Component) {
           lineNumber: 83
         },
         __self: this
-      }, "Registration"))), __jsx(next_link__WEBPACK_IMPORTED_MODULE_8___default.a, {
+      }, "Pricing & Registration"))), __jsx(next_link__WEBPACK_IMPORTED_MODULE_8___default.a, {
         href: "/technicalProgram",
         __source: {
           fileName: _jsxFileName,
@@ -6205,7 +6190,7 @@ function (_Component) {
           lineNumber: 84
         },
         __self: this
-      }, "Technical Program"))), __jsx(next_link__WEBPACK_IMPORTED_MODULE_8___default.a, {
+      }, "Technical Programme "))), __jsx(next_link__WEBPACK_IMPORTED_MODULE_8___default.a, {
         href: "/welcome",
         __source: {
           fileName: _jsxFileName,
@@ -6300,7 +6285,7 @@ function (_Component) {
           lineNumber: 95
         },
         __self: this
-      }, "ESOP - Student Opportunities Programme"))))), __jsx("div", {
+      }, "Apply for ESOP - Student Opportunities Programme"))))), __jsx("div", {
         className: "nav_box-middle-2",
         __source: {
           fileName: _jsxFileName,
@@ -6359,7 +6344,7 @@ function (_Component) {
           lineNumber: 107
         },
         __self: this
-      }, "Exhibit And Sponsor"))), __jsx(next_link__WEBPACK_IMPORTED_MODULE_8___default.a, {
+      }, "Exhibit & Sponsor"))), __jsx(next_link__WEBPACK_IMPORTED_MODULE_8___default.a, {
         href: "/exhibitors",
         __source: {
           fileName: _jsxFileName,
@@ -6460,7 +6445,7 @@ function (_Component) {
           lineNumber: 120
         },
         __self: this
-      }, "Templates")))))), __jsx("div", {
+      }, "Instructions & Templates")))))), __jsx("div", {
         className: "nav_box-left",
         style: {},
         __source: {
@@ -46648,7 +46633,7 @@ var defaultTheme = Object(_createMuiTheme__WEBPACK_IMPORTED_MODULE_0__["default"
 /*!************************************************************!*\
   !*** ./node_modules/@material-ui/core/esm/styles/index.js ***!
   \************************************************************/
-/*! exports provided: hexToRgb, rgbToHex, hslToRgb, decomposeColor, recomposeColor, getContrastRatio, getLuminance, emphasize, fade, darken, lighten, createMuiTheme, createStyles, makeStyles, responsiveFontSizes, styled, easing, duration, formatMs, isString, isNumber, useTheme, withStyles, withTheme, createGenerateClassName, jssPreset, ServerStyleSheets, StylesProvider, MuiThemeProvider, ThemeProvider */
+/*! exports provided: createMuiTheme, createStyles, makeStyles, responsiveFontSizes, styled, useTheme, withStyles, withTheme, createGenerateClassName, jssPreset, ServerStyleSheets, StylesProvider, MuiThemeProvider, ThemeProvider, hexToRgb, rgbToHex, hslToRgb, decomposeColor, recomposeColor, getContrastRatio, getLuminance, emphasize, fade, darken, lighten, easing, duration, formatMs, isString, isNumber */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
