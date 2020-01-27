@@ -26,7 +26,7 @@ export default function LocationSection() {
                 Barcelona has direct links with many of the world’s Capital cities, via air, road, rail and sea, making EuroBrake 2020 extremely accessible.</p>
             <div className="innerContainer">
                 <div className="mediaBox">
-                    <img src="/images/pic2.png" alt="Barcelona" style={{ width: '100%', height: '100%' , objectfit: 'cover'}} />
+                    <img src="/images/pic2.png" alt="Barcelona" style={{ width: '100%', height: '100%' , objectFit: 'cover'}} />
                 </div>
                 <BounceLocationCard/>
             </div>

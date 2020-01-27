@@ -29,7 +29,7 @@ export default function StudentSection() {
                 a CV check/one to one career advice with HR representatives from the sponsor companies, access to the designated Student Lounge and much more.</p>
             <div className="innerContainer">
                 <div className="mediaBox">
-                    <img src="https://live.staticflickr.com/65535/48016169592_4d79e976bd_b.jpg" alt="EuroBrake Greating" style={{ width: '100%', height: '100%', objectfit: 'cover' }} />
+                    <img src="https://live.staticflickr.com/65535/48016169592_4d79e976bd_b.jpg" alt="EuroBrake Greating" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                 </div>
                 <BounceStudentCard/>
             </div>
