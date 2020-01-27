@@ -241,10 +241,11 @@ export async function SendForm({ csrf, values, url, FT }) {
          }
         }
     if(FT === 'withdraw' ){
-        console.log({url});
+        console.log({url, csrf});
         try {
             const response = await fetch(url, {
                 method: 'POST', 
+                body: JSON.stringify(csrf),
                 credentials: 'include',
                 headers: {
                     Authorization: 'Bearer ' + logintoken,
