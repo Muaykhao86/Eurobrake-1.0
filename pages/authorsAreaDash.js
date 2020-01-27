@@ -210,7 +210,7 @@ class AuthorsAreaDash extends Component {
     render() {
       
         // const papers = '';
-        const monthNames = ["January", "Febuary", "March", "April", "May" "June", "July", "August", "September", "October", "November", "December"]
+        const monthNames = ["January", "Febuary", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
         const { editForm, formType, values } = this.state;
         const { firstname } = this.props.authorData.author;
         const { papers } = this.props.authorData;
