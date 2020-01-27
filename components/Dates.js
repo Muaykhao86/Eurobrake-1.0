@@ -1,4 +1,7 @@
-import React from 'react'
+import React, {Component, useState} from 'react'
+import { AddCircle, RemoveCircle } from '@material-ui/icons';
+import RemoveIcon from '@material-ui/icons/Remove';
+import AddIcon from '@material-ui/icons/Add';
 import styled from 'styled-components';
 import Link from 'next/link';
 import { Typography } from '@material-ui/core';
@@ -75,7 +78,7 @@ const StyledFixedDates = styled.div`
     position: fixed;
     z-index: 1;
     top: 14vh;
-    right: 0;
+    right: ${props => props.RightHide ? '-20rem' : '0'};
     width: 25rem;
     max-height: 50rem; 
     min-height: 47rem;
@@ -97,6 +100,16 @@ const StyledFixedDates = styled.div`
     justify-content: space-between;
     flex: 1 1 auto;
 
+      
+    .hide-box-dates{
+        border: 2px solid #FFF;
+        position: absolute;
+        z-index: -100;
+        bottom: -2rem;
+        left: -3rem;
+    }
+
+
     .Dates{
         
         &-title{
@@ -105,6 +118,19 @@ const StyledFixedDates = styled.div`
         color: ${props => props.theme.white};
         align-self: flex-start;
         max-width: 90%;
+
+            &_hide{
+                 font-size: 2.5rem;
+            font-family: ${props => props.theme.MPBlack};
+            color: ${props => props.theme.white};
+            align-self: flex-start;
+            max-width: 100%;
+                  position: absolute;
+                  left: -7.9rem;
+                  top: 44%; 
+                  transform: rotate(90deg);
+
+            }
         }
         &-date{
             font-size: 1.5rem;
@@ -128,9 +154,17 @@ const StyledFixedDates = styled.div`
 export const BounceFixedDates = withReveal(FixedDates, <Bounce left/>);
 
 export function FixedDates() {
+
+const [RightHide, setRightHide] = useState(false);
+
     return (
         
-        <StyledFixedDates>
+        <StyledFixedDates  RightHide={RightHide}>
+            <div style={{ minHeight: '45rem'}}>
+  { RightHide ? 
+            <Typography gutterBottom as="h1" className="Dates-title_hide" >Important Dates</Typography>
+            :
+            <>
             <Typography gutterBottom as="h1" className="Dates-title" >Important Dates</Typography>
             {/* <Typography gutterBottom as="h1"  className="Dates-date">26 January 2020</Typography>
             <Typography gutterBottom as="p"  className="Dates-text">Deadline for submission of review ready papers</Typography> */}
@@ -142,6 +176,12 @@ export function FixedDates() {
             <Typography gutterBottom as="p"  className="Dates-text">Deadline for speakers to register</Typography>
             <Typography gutterBottom as="h1"  className="Dates-date">24 May 2020</Typography>
             <Typography gutterBottom as="p" className="Dates-text" >Deadline to upload PPTs for on-site presentation</Typography>
+            </>
+            }
+            </div>
+                 <div className="hide-box-dates">
+                <a onClick={() => setRightHide(!RightHide)}> {RightHide === true? <AddIcon style={{background: '#134381', color: '#FFF', width: '5rem', height: '5rem'}}/> : <RemoveIcon style={{background: '#134381', color: '#FFF', width: '5rem', height: '5rem'}}/>} </a>
+            </div>
         </StyledFixedDates>  
     )
 }
@@ -150,7 +190,7 @@ const StyledFixedBox = styled.div`
     position: fixed;
     z-index: 1;
     top: 14vh;
-    left: 0;
+    left: ${props => props.Hide ? '-20rem' : '0'};
     width: 25rem;
     max-height: 50rem; 
     min-height: 47rem;
@@ -174,10 +214,12 @@ const StyledFixedBox = styled.div`
 
     
     .hide-box{
+        border: 2px solid #FFF;
+
         position: absolute;
         z-index: -100;
-        bottom: 0rem;
-        right: 0;
+        bottom: -2rem;
+        right: -3rem;
     }
 
     .Box{
@@ -189,6 +231,20 @@ const StyledFixedBox = styled.div`
         color: ${props => props.theme.white};
         align-self: flex-end;
         max-width: 95%;
+            &_hide{
+                    font-size: 2.5rem;
+            font-family: ${props => props.theme.MPBlack};
+            color: ${props => props.theme.white};
+            align-self: flex-start;
+            width: 45rem;
+                  position: absolute;
+                  right: -21rem;
+                  top: 48%; 
+                  transform: rotate(90deg);
+
+
+            }
+
         }
         &-date{
             text-align: end;
@@ -224,13 +280,19 @@ const StyledFixedBox = styled.div`
         flex: 1 1 auto;
       
     }
-
+/* (Hide) => setHide(!Hide) */
 `;
 
 export function FixedBox() {
+const [Hide, setHide] = useState(false);
+console.log(Hide)
     return (
         
-        <StyledFixedBox>
+        <StyledFixedBox Hide={Hide}>
+            { Hide ? 
+            <Typography gutterBottom as="h1" className="Box-title_hide" >Book your Early Bird Tickets today</Typography>
+            :
+            <>
             <Typography gutterBottom as="h1" className="Box-title" >Book your Early Bird Tickets for EuroBrake</Typography>
             <Typography gutterBottom as="p"  className="Box-text-it">Secure your tickets by 1 April 2020</Typography>
             <Typography gutterBottom as="h1"  className="Box-date"> Europe's braking technology conference & exhibition</Typography>
@@ -242,8 +304,9 @@ export function FixedBox() {
             <div className="logo_box">
                 <SmlLogo width="10rem" height="10rem"/>
             </div>
+            </>}
             <div className="hide-box">
-               <ArrowBackOutlinedIcon style={{background: '#134381', color: '#FFF', width: '5rem', height: '5rem'}}/>
+                <a onClick={() => setHide(!Hide)}> {Hide === true? <AddIcon style={{background: '#134381', color: '#FFF', width: '5rem', height: '5rem'}}/> : <RemoveIcon style={{background: '#134381', color: '#FFF', width: '5rem', height: '5rem'}}/>} </a>
             </div>
         </StyledFixedBox>  
     )
