@@ -9,8 +9,8 @@ import withReveal from 'react-reveal/withReveal';
 const AboutCard = () => (
     <Card right>
                     <h1>Early bird tickets are on sale now</h1>
-                    <Link href="/ticketPortal">
-                    <Button br="500rem">Book Now</Button>
+                    <Link href="/exhibitorsRegistration">
+                    <Button br="500rem">Pricing/Registration</Button>
                     </Link>
                 </Card>
 );

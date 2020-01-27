@@ -57,8 +57,8 @@ export function Dates(props) {
         
         <StyledDates MW={props.MW} MH={props.MH}>
             <Typography  as="h1" className="Dates-title" >Important Dates</Typography>
-            <Typography  as="h1"  className="Dates-date">26 January 2020</Typography>
-            <Typography  as="p"  className="Dates-text">Deadline for submission of review ready papers</Typography>
+            {/* <Typography  as="h1"  className="Dates-date">26 January 2020</Typography>
+            <Typography  as="p"  className="Dates-text">Deadline for submission of review ready papers</Typography> */}
             <Typography  as="h1"  className="Dates-date">12 April 2020 </Typography>
             <Typography  as="p" className="Dates-text" >Final deadline for modifications to technical papers</Typography>
             <Typography  as="h1"  className="Dates-date">01 May 2020</Typography>
@@ -132,8 +132,8 @@ export function FixedDates() {
         
         <StyledFixedDates>
             <Typography gutterBottom as="h1" className="Dates-title" >Important Dates</Typography>
-            <Typography gutterBottom as="h1"  className="Dates-date">26 January 2020</Typography>
-            <Typography gutterBottom as="p"  className="Dates-text">Deadline for submission of review ready papers</Typography>
+            {/* <Typography gutterBottom as="h1"  className="Dates-date">26 January 2020</Typography>
+            <Typography gutterBottom as="p"  className="Dates-text">Deadline for submission of review ready papers</Typography> */}
             <Typography gutterBottom as="h1"  className="Dates-date">12 April 2020 </Typography>
             <Typography gutterBottom as="p" className="Dates-text" >Final deadline for modifications to technical papers</Typography>
             <Typography gutterBottom as="h1"  className="Dates-date">01 May 2020</Typography>
@@ -236,8 +236,8 @@ export function FixedBox() {
             <Typography gutterBottom as="h1"  className="Box-date"> Europe's braking technology conference & exhibition</Typography>
             <Typography gutterBottom as="p" className="Box-text" >2-4 June 2020,</Typography>
             <Typography gutterBottom as="p" className="Box-text" >CCIB, Barcelona, Spain</Typography>
-            <Link href="/ticketPortal">
-                <Button br="500rem" padding="1rem" fontSize="1.5rem" style={{marginTop: '1rem', color: '#FFF'}}>Book Now</Button>
+            <Link href="/exhibitorsRegistration">
+                <Button br="500rem" padding="1rem" fontSize="1.5rem" style={{marginTop: '1rem', color: '#FFF'}}>Pricing/Registration</Button>
             </Link>           
             <div className="logo_box">
                 <SmlLogo width="10rem" height="10rem"/>
@@ -321,8 +321,8 @@ export function Box(props) {
             <Typography gutterBottom as="h1"  className="Box-date"> Europe's braking technology conference & exhibition</Typography>
             <Typography gutterBottom as="p" className="Box-text" >2-4 June 2020,</Typography>
             <Typography gutterBottom as="p" className="Box-text" >CCIB, Barcelona, Spain</Typography>
-            <Link href="/ticketPortal">
-                <Button onClick={props.handleClick} br="500rem" padding="1rem" fontSize="1.5rem" style={{ color: '#FFF', fontSize: '1.5rem', margin: '0',marginTop: '1rem',}}>Book Now</Button>
+            <Link href="/exhibitorsRegistration">
+                <Button onClick={props.handleClick} br="500rem" padding="1rem" fontSize="1.5rem" style={{ color: '#FFF', fontSize: '1.5rem', margin: '0',marginTop: '1rem',}}>Pricing/Registration</Button>
             </Link>           
             <div className="logo_box">
                 <SmlLogo width="10rem" height="10rem"/>

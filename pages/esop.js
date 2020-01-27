@@ -149,7 +149,7 @@ export default () => (
         max="55%"
         src="https://live.staticflickr.com/65535/48015980517_8b8abbc7ef_b.jpg" 
              >
-            Student Opportunities Programme
+            Apply for the EuroBrake Student Opportunities Programme
 
         </HeroSection>
         <StyledPage>

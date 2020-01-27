@@ -54,21 +54,21 @@ only screen and (        min-device-pixel-ratio: 2)      and (min-width: 1300px)
 only screen and (                min-resolution: 192dpi) and (min-width: 1300px),
 only screen and (                min-resolution: 2dppx)  and (min-width: 1300px){
         
-        font-size: ${props => props.bfs || props.bsfs || '9rem'};
+        font-size: ${props => props.tfs || '9rem'};
     top: ${props => props.tt ? props.tt : '20%'};
     }
          @media only screen 
         and (min-device-width: 1800px) 
         and (-webkit-min-device-pixel-ratio: 2)
         {
-        font-size: ${props => props.bfs || props.bsfs || '9rem'};
+        font-size: ${props => props.bfs || '9rem'};
     top: ${props => props.tt ? props.tt : '20%'};
     }
          @media only screen 
         and (max-device-width: 1200px) 
         and (-webkit-min-device-pixel-ratio: 2)
         {
-        font-size: ${props => props.tfs || props.tsfs || '9rem'};
+        font-size: ${props => props.tfs  || '9rem'};
     top: ${props => props.tt ? props.tt : '20%'};
     }
 

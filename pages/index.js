@@ -11,12 +11,15 @@ import HeroSection from '../components/HeroSection';
 import {FixedDates, FixedBox} from '../components/Dates';
 
 
+// ?   bfs big font size
+// sfs sencondary font size
+
+
+
 export default () => (
-    <>       
+    <>
         <HeroSection 
         scolor="#F9B721"
-        bfs="6rem"
-        bsfs="4rem"
          cara
          sfs="8rem"
          tsfs="5rem"
@@ -25,17 +28,17 @@ export default () => (
          src="/images/main.jpg" 
          secondary="Secure your tickets by 1 April 2020"
          >
-            Book your Early Bird tickets for EuroBrake 2020  
+            Book your Early Bird tickets for EuroBrake 
         </HeroSection> 
         <StyledContainer>
             <FixedDates/>
             <FixedBox/>
             <AboutSection />
-            <LocationSection />
             <AttendeesSection />
             <ExhibitionSection />
             <StudentSection />
             <AuthorSection />
+            <LocationSection />
         </StyledContainer>
     </>
 

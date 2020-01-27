@@ -80,8 +80,8 @@ updateWindowDimensions = () => {
                                 <div className="nav-links-box">
                                     <Link href="/"><a onClick={this.handleClick} ><Typography className="nav-links">Home</Typography></a></Link>
                                     <Link href="/about"><a onClick={this.handleClick} ><Typography className="nav-links">About</Typography></a></Link>
-                                    <Link href="/exhibitorsRegistration"><a onClick={this.handleClick}><Typography className="nav-links">Registration</Typography></a></Link>
-                                    <Link href="/technicalProgram"><a onClick={this.handleClick}><Typography className="nav-links">Technical Program</Typography></a></Link>
+                                    <Link href="/exhibitorsRegistration"><a onClick={this.handleClick}><Typography className="nav-links">Pricing & Registration</Typography></a></Link>
+                                    <Link href="/technicalProgram"><a onClick={this.handleClick}><Typography className="nav-links">Technical Programme </Typography></a></Link>
                                     <Link href="/welcome"><a onClick={this.handleClick}><Typography className="nav-links">Welcome to Barcelona</Typography></a></Link>
                                     <Link href="/f/[id]/[formType]" as={`/f/FISITA/contact`} ><a onClick={this.handleClick} ><Typography className="nav-links">Contact Us</Typography></a></Link>
                                 </div>
@@ -92,7 +92,7 @@ updateWindowDimensions = () => {
                                 </div>
 
                                 <div className="nav-links-box">
-                                    <Link href="/esop"><a onClick={this.handleClick}><Typography className="nav-links">ESOP - Student Opportunities Programme</Typography></a></Link>
+                                    <Link href="/esop"><a onClick={this.handleClick}><Typography className="nav-links">Apply for ESOP - Student Opportunities Programme</Typography></a></Link>
                                 </div>
 
                             </div>
@@ -104,7 +104,7 @@ updateWindowDimensions = () => {
                                 </div>
 
                                 <div className="nav-links-box">
-                                    <Link href="/exhibitAndSponsor"><a onClick={this.handleClick}><Typography className="nav-links">Exhibit And Sponsor</Typography></a></Link>
+                                    <Link href="/exhibitAndSponsor"><a onClick={this.handleClick}><Typography className="nav-links">Exhibit & Sponsor</Typography></a></Link>
                                     <Link href="/exhibitors"><a onClick={this.handleClick}><Typography className="nav-links">Exhibitor Directory</Typography></a></Link>
                                 </div>
 
@@ -117,7 +117,7 @@ updateWindowDimensions = () => {
 
                                 <div className="nav-links-box">
                                     <Link href="/authorsArea"><a onClick={this.handleClick}><Typography className="nav-links">Authors Area</Typography></a></Link>
-                                    <Link href="/authorsAreaInstructions"><a onClick={this.handleClick}><Typography className="nav-links">Templates</Typography></a></Link>
+                                    <Link href="/authorsAreaInstructions"><a onClick={this.handleClick}><Typography className="nav-links">Instructions & Templates</Typography></a></Link>
                                 </div>
                             </div>
                             
