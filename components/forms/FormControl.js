@@ -63,12 +63,12 @@ export const AbstractSchema = yup.object().shape({
     author_firstname: yup.string().test(
                 'Titlecase',
                 'name must be in title case!',
-               value =>  value[0] != value[0].toLowercase() 
+               value =>  value[0] != value[0].toLowerCase()
             ).required('Required'),
     author_lastname: yup.string().test(
                 'Titlecase',
                 'name must be in title case!',
-               value =>  value[0] != value[0].toLowercase() 
+               value =>  value[0] != value[0].toLowerCase()
             ).required('Required'),
     author_email: yup.string().required('Required')
         .email(),
@@ -99,13 +99,13 @@ export const AbstractSchema = yup.object().shape({
             firstname: yup.string().test(
                 'Titlecase',
                 'name must be in title case!',
-               value =>  value[0] != value[0].toLowercase() 
+               value =>  value[0] != value[0].toLowerCase() 
             )
                 .required('Required'),
             lastname: yup.string().test(
                 'Titlecase',
                 'name must be in title case!',
-               value =>  value[0] != value[0].toLowercase() 
+               value =>  value[0] != value[0].toLowerCase() 
             )
                 .required('Required'),
             email: yup.string()

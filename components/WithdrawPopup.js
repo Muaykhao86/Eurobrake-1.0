@@ -108,7 +108,7 @@ export default function WithdrawPopup(props) {
     console.log('popup', { values, url, csrf })
     
     
-    const onWithdraw = async (values) => {
+    const onWithdraw = async () => {
         await setLoading(true);
         await console.log('submitting')
         const FT = 'withdraw'
