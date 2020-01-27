@@ -13,9 +13,8 @@ export const ContactSchema = yup.object().shape({
      .test(
         'wordCount',
         'Max 750 words',
-        value => value && 
-          value.match(/[\w\d\’\'-]+/gi)
-          .length <= 750
+        value => value && value != ' ' &&
+          value.match(/[\w\d\’\'-]+/gi).length <= 750
       ),
 })
 
@@ -88,8 +87,7 @@ export const AbstractSchema = yup.object().shape({
         'wordCount',
         'Max 750 words',
         value => value && 
-          value.match(/[\w\d\’\'-]+/gi)
-          .length <= 750
+          value.match(/[\w\d\’\'-]+/gi).length <= 750
       ).required('Required'),
     keywords: yup.string().required('Required'),
     consider_for_journal: yup.string().nullable(),
@@ -99,13 +97,13 @@ export const AbstractSchema = yup.object().shape({
             firstname: yup.string().test(
                 'Titlecase',
                 'name must be in title case!',
-               value =>  value[0] != value[0].toLowerCase() 
+               value =>  value[0] != value[0].toLowercase 
             )
                 .required('Required'),
             lastname: yup.string().test(
                 'Titlecase',
                 'name must be in title case!',
-               value =>  value[0] != value[0].toLowerCase() 
+               value =>  value[0] != value[0].toLowercase 
             )
                 .required('Required'),
             email: yup.string()
@@ -189,14 +187,14 @@ export const EsopSchema = yup.object().shape({
       .test(
         'wordCount',
         'Max 250 words',
-        value => value && 
+        value => value && value != ' ' &&
           value.match(/[\w\d\’\'-]+/gi)
           .length <= 250
       )
       .test(
         'wordCount',
         'Min 150 words',
-        value => value && 
+        value => value && value != ' ' &&
           value.match(/[\w\d\’\'-]+/gi)
           .length >= 150
       ),

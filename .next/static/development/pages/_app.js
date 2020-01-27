@@ -7647,7 +7647,7 @@ var ContactSchema = yup__WEBPACK_IMPORTED_MODULE_0__["object"]().shape({
   address: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().nullable(),
   email: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().required('Required').email(),
   enquiry: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().required('Required').test('wordCount', 'Max 750 words', function (value) {
-    return value && value.match(/[\w\d\’\'-]+/gi).length <= 750;
+    return value && value != ' ' && value.match(/[\w\d\’\'-]+/gi).length <= 750;
   })
 });
 var AuthorSchema = yup__WEBPACK_IMPORTED_MODULE_0__["object"]().shape({
@@ -7680,10 +7680,10 @@ var LoginSchema = yup__WEBPACK_IMPORTED_MODULE_0__["object"]().shape({
 var AbstractSchema = yup__WEBPACK_IMPORTED_MODULE_0__["object"]().shape({
   author_title: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().nullable(),
   author_firstname: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().test('Titlecase', 'name must be in title case!', function (value) {
-    return value[0] != value[0].toLowercase();
+    return value[0] != value[0].toLowerCase();
   }).required('Required'),
   author_lastname: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().test('Titlecase', 'name must be in title case!', function (value) {
-    return value[0] != value[0].toLowercase();
+    return value[0] != value[0].toLowerCase();
   }).required('Required'),
   author_email: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().required('Required').email(),
   author_jobtitle: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().required('Required'),
@@ -7706,10 +7706,10 @@ var AbstractSchema = yup__WEBPACK_IMPORTED_MODULE_0__["object"]().shape({
   secondary_authors: yup__WEBPACK_IMPORTED_MODULE_0__["array"]().of(yup__WEBPACK_IMPORTED_MODULE_0__["object"]().shape({
     title: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().nullable(),
     firstname: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().test('Titlecase', 'name must be in title case!', function (value) {
-      return value[0] != value[0].toLowercase();
+      return value[0] != value[0].toLowercase;
     }).required('Required'),
     lastname: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().test('Titlecase', 'name must be in title case!', function (value) {
-      return value[0] != value[0].toLowercase();
+      return value[0] != value[0].toLowercase;
     }).required('Required'),
     email: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().email().required('Required'),
     company: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().required('Required'),
@@ -7750,9 +7750,9 @@ var EsopSchema = yup__WEBPACK_IMPORTED_MODULE_0__["object"]().shape({
     return value && CV_SUPPORTED_FORMATS.includes(value.type);
   }),
   personal_statement: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().required('Required').test('wordCount', 'Max 250 words', function (value) {
-    return value && value.match(/[\w\d\’\'-]+/gi).length <= 250;
+    return value && value != ' ' && value.match(/[\w\d\’\'-]+/gi).length <= 250;
   }).test('wordCount', 'Min 150 words', function (value) {
-    return value && value.match(/[\w\d\’\'-]+/gi).length >= 150;
+    return value && value != ' ' && value.match(/[\w\d\’\'-]+/gi).length >= 150;
   }),
   student_status_filename_uploader: yup__WEBPACK_IMPORTED_MODULE_0__["mixed"]().required('Required').test("fileFormat", "Unsupported Format", function (value) {
     return value && PROOF_SUPPORTED_FORMATS.includes(value.type);
@@ -50361,7 +50361,7 @@ var flexbox = Object(_compose__WEBPACK_IMPORTED_MODULE_1__["default"])(flexBasis
 /*!*******************************************************!*\
   !*** ./node_modules/@material-ui/system/esm/index.js ***!
   \*******************************************************/
-/*! exports provided: borders, border, borderTop, borderRight, borderBottom, borderLeft, borderColor, borderRadius, breakpoints, compose, css, display, flexbox, flexBasis, flexDirection, flexWrap, justifyContent, alignItems, alignContent, order, flex, flexGrow, flexShrink, alignSelf, justifyItems, justifySelf, palette, color, bgcolor, positions, position, zIndex, top, right, bottom, left, shadows, sizing, width, maxWidth, minWidth, height, maxHeight, minHeight, sizeWidth, sizeHeight, spacing, style, typography, fontFamily, fontSize, fontStyle, fontWeight, letterSpacing, lineHeight, textAlign */
+/*! exports provided: borders, breakpoints, compose, css, display, flexbox, palette, positions, shadows, sizing, spacing, style, typography, border, borderTop, borderRight, borderBottom, borderLeft, borderColor, borderRadius, flexBasis, flexDirection, flexWrap, justifyContent, alignItems, alignContent, order, flex, flexGrow, flexShrink, alignSelf, justifyItems, justifySelf, color, bgcolor, position, zIndex, top, right, bottom, left, width, maxWidth, minWidth, height, maxHeight, minHeight, sizeWidth, sizeHeight, fontFamily, fontSize, fontStyle, fontWeight, letterSpacing, lineHeight, textAlign */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";

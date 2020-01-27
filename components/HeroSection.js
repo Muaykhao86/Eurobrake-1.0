@@ -48,6 +48,13 @@ const StyledText = styled(Typography)`
 &&.MuiTypography-body1 {
         font-size: ${props => props.fs || props.sfs || '12rem'};
          @media only screen 
+        and (min-device-width: 1800px) 
+        and (-webkit-min-device-pixel-ratio: 2)
+        {
+        font-size: ${props => props.bfs || props.bsfs || '9rem'};
+    top: ${props => props.tt ? props.tt : '20%'};
+    }
+         @media only screen 
         and (max-device-width: 1200px) 
         and (-webkit-min-device-pixel-ratio: 2)
         {
@@ -60,7 +67,7 @@ const StyledText = styled(Typography)`
         and (max-device-width: 1024px) 
         and (-webkit-min-device-pixel-ratio: 2)
         and (orientation : landscape) {
-        font-size: ${props => props.tfs || props.sfs || '9rem'};
+        font-size: ${props => props.tfs  || '9rem'};
         top: ${props => props.tt ? props.tt : '20%'};
     }
          @media only screen 
@@ -77,7 +84,7 @@ const StyledText = styled(Typography)`
 }
 `;
 export default function HeroSection(props) {
-    const { t, tt, mt, st, mst, tst, max, mmax, smax, msmax, fs, tfs, mfs, sfs, tsfs, msfs, cara, scolor } = props;
+    const { t, tt, mt, st, mst, tst, max, mmax, smax, msmax, fs, tfs, mfs, sfs, tsfs, msfs, cara, scolor, bsfs, bfs } = props;
     return (
         <StyledHero>
             {/* <div className="styledoverlay"> */}
@@ -86,10 +93,10 @@ export default function HeroSection(props) {
                 <StyledCarousel /> :
                 <img className="hero-img" srcSet={props.src ? props.src : "/images/pic11.png"} alt="EuroBrake Greating" />
             }
-            <StyledText t={t} mt={mt} tt={tt} max={max} mmax={mmax} fs={fs} tfs={tfs} mfs={mfs}  >
+            <StyledText t={t} mt={mt} tt={tt} max={max} mmax={mmax} fs={fs} tfs={tfs} mfs={mfs}  bfs={bfs}>
                 {props.children}
             </StyledText>
-            <StyledText t={st} mt={mst} tt={tst} max={smax} mmax={msmax} fs={sfs} tfs={tsfs} msfs={msfs} color={scolor} sfont secondary>
+            <StyledText t={st} mt={mst} tt={tst} max={smax} mmax={msmax} fs={sfs} tfs={tsfs} msfs={msfs} color={scolor} bfs={bsfs} sfont secondary>
                 {props.secondary}
             </StyledText>
             <div className="banner">

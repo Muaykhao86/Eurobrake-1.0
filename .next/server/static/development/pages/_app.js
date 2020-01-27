@@ -7281,7 +7281,7 @@ const ContactSchema = yup__WEBPACK_IMPORTED_MODULE_0__["object"]().shape({
   company: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().required('Required'),
   address: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().nullable(),
   email: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().required('Required').email(),
-  enquiry: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().required('Required').test('wordCount', 'Max 750 words', value => value && value.match(/[\w\d\’\'-]+/gi).length <= 750)
+  enquiry: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().required('Required').test('wordCount', 'Max 750 words', value => value && value != ' ' && value.match(/[\w\d\’\'-]+/gi).length <= 750)
 });
 const AuthorSchema = yup__WEBPACK_IMPORTED_MODULE_0__["object"]().shape({
   title: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().nullable(),
@@ -7312,8 +7312,8 @@ const LoginSchema = yup__WEBPACK_IMPORTED_MODULE_0__["object"]().shape({
 });
 const AbstractSchema = yup__WEBPACK_IMPORTED_MODULE_0__["object"]().shape({
   author_title: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().nullable(),
-  author_firstname: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().test('Titlecase', 'name must be in title case!', value => value[0] != value[0].toLowercase()).required('Required'),
-  author_lastname: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().test('Titlecase', 'name must be in title case!', value => value[0] != value[0].toLowercase()).required('Required'),
+  author_firstname: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().test('Titlecase', 'name must be in title case!', value => value[0] != value[0].toLowerCase()).required('Required'),
+  author_lastname: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().test('Titlecase', 'name must be in title case!', value => value[0] != value[0].toLowerCase()).required('Required'),
   author_email: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().required('Required').email(),
   author_jobtitle: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().required('Required'),
   author_company: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().required('Required'),
@@ -7332,8 +7332,8 @@ const AbstractSchema = yup__WEBPACK_IMPORTED_MODULE_0__["object"]().shape({
   consider_for_journal: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().nullable(),
   secondary_authors: yup__WEBPACK_IMPORTED_MODULE_0__["array"]().of(yup__WEBPACK_IMPORTED_MODULE_0__["object"]().shape({
     title: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().nullable(),
-    firstname: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().test('Titlecase', 'name must be in title case!', value => value[0] != value[0].toLowercase()).required('Required'),
-    lastname: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().test('Titlecase', 'name must be in title case!', value => value[0] != value[0].toLowercase()).required('Required'),
+    firstname: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().test('Titlecase', 'name must be in title case!', value => value[0] != value[0].toLowercase).required('Required'),
+    lastname: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().test('Titlecase', 'name must be in title case!', value => value[0] != value[0].toLowercase).required('Required'),
     email: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().email().required('Required'),
     company: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().required('Required'),
     country: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().required('Required'),
@@ -7370,7 +7370,7 @@ const EsopSchema = yup__WEBPACK_IMPORTED_MODULE_0__["object"]().shape({
   university_postal: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().nullable(),
   university_country: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().required('Required'),
   cv_filename_uploader: yup__WEBPACK_IMPORTED_MODULE_0__["mixed"]().required('Required').test("fileFormat", "Unsupported Format", value => value && CV_SUPPORTED_FORMATS.includes(value.type)),
-  personal_statement: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().required('Required').test('wordCount', 'Max 250 words', value => value && value.match(/[\w\d\’\'-]+/gi).length <= 250).test('wordCount', 'Min 150 words', value => value && value.match(/[\w\d\’\'-]+/gi).length >= 150),
+  personal_statement: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().required('Required').test('wordCount', 'Max 250 words', value => value && value != ' ' && value.match(/[\w\d\’\'-]+/gi).length <= 250).test('wordCount', 'Min 150 words', value => value && value != ' ' && value.match(/[\w\d\’\'-]+/gi).length >= 150),
   student_status_filename_uploader: yup__WEBPACK_IMPORTED_MODULE_0__["mixed"]().required('Required').test("fileFormat", "Unsupported Format", value => value && PROOF_SUPPORTED_FORMATS.includes(value.type)).test("fileSize", "File too large", value => value && value.size <= FILE_SIZE),
   question_1_answer: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().required('Required'),
   question_2_answer: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().required('Required'),

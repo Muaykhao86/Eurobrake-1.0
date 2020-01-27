@@ -381,7 +381,7 @@ export const AbstractForm = (props) => {
                                  component="textarea"
                              />
                            {errors.abstract && <label style={{position: 'absolute', bottom: '-1rem', right: '0', color: '#ff0000', fontSize: '1.5rem'}}>{errors.abstract}</label>}
-                            {errors.abstract && values.abstract && <label style={{position: 'absolute', bottom: '-3rem', right: '0', color: '#ff0000', fontSize: '1.5rem'}}>{'Words' + ' ' + values.abstract.match(/[\w\d\’\'-]+/gi).length}</label>}
+                            {errors.abstract && values.abstract && values.abstract.match(/[\w\d\’\'-]+/gi) && <label style={{position: 'absolute', bottom: '-3rem', right: '0', color: '#ff0000', fontSize: '1.5rem'}}>{'Words' + ' ' + values.abstract.match(/[\w\d\’\'-]+/gi).length}</label>}
                             
                         </div>
                          <div className="form-field">
@@ -399,7 +399,7 @@ export const AbstractForm = (props) => {
                                  component="textarea"
                              />
                         {errors.keywords && <label style={{ position: 'absolute', bottom: '-3rem', right: '0', color: '#ff0000', fontSize: '1.5rem' }}>{errors.keywords}</label>}
-                        {errors.keywords && values.keywords && <label style={{position: 'absolute', bottom: '0', right: '12rem', color: '#ff0000', fontSize: '1.5rem'}}>{'Words' + ' ' + values.keywords.match(/[\w\d\’\'-]+/gi).length}</label>}
+                        {errors.keywords && values.keywords && values.keywords.match(/[\w\d\’\'-]+/gi) && <label style={{position: 'absolute', bottom: '0', right: '12rem', color: '#ff0000', fontSize: '1.5rem'}}>{'Words' + ' ' + values.keywords.match(/[\w\d\’\'-]+/gi).length}</label>}
                          </div>
                          <div className="form-field-radio">
                             <label

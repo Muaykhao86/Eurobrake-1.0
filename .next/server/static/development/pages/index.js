@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 5);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -206,7 +206,7 @@ function AboutSection() {
     style: {
       width: '100%',
       height: '100%',
-      objectfit: 'cover'
+      objectFit: 'cover'
     },
     __source: {
       fileName: _jsxFileName,
@@ -334,7 +334,7 @@ function AttendeesSection() {
     style: {
       width: '100%',
       height: '100%',
-      objectfit: 'cover'
+      objectFit: 'cover'
     },
     __source: {
       fileName: _jsxFileName,
@@ -459,7 +459,7 @@ function AuthorSection() {
     style: {
       width: '100%',
       height: '100%',
-      objectfit: 'cover'
+      objectFit: 'cover'
     },
     __source: {
       fileName: _jsxFileName,
@@ -1709,7 +1709,7 @@ const StyledHero = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div.
 const StyledText = styled_components__WEBPACK_IMPORTED_MODULE_1___default()(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_2___default.a).withConfig({
   displayName: "HeroSection__StyledText",
   componentId: "sc-1rt21yv-1"
-})(["position:absolute;z-index:10;top:", ";align-self:center;width:", ";color:", ";text-align:center;text-shadow:0px 4px 7px rgba(0,0,0,0.74);&&.MuiTypography-body1{font-size:", ";@media only screen  and (max-device-width:1200px)  and (-webkit-min-device-pixel-ratio:2){font-size:", ";top:", ";}@media only screen  and (max-device-width:1024px)  and (-webkit-min-device-pixel-ratio:2) and (orientation:landscape){font-size:", ";top:", ";}@media only screen  and (max-device-width:768px)  and (-webkit-min-device-pixel-ratio:2){font-size:", ";width:", ";top:", ";}font-family:", ";line-height:1;}"], props => props.secondary ? '60%' : '20%', props => props.max || '80%', props => props.color || props.theme.white, props => props.fs || props.sfs || '12rem', props => props.tfs || props.tsfs || '9rem', props => props.tt ? props.tt : '20%', props => props.tfs || props.sfs || '9rem', props => props.tt ? props.tt : '20%', props => props.mfs || props.tfs || '10rem', props => props.mmax || '80%', props => props.mt ? props.mt : '20%', props => props.sfont ? props.theme.MPLight : props.theme.MPBlack);
+})(["position:absolute;z-index:10;top:", ";align-self:center;width:", ";color:", ";text-align:center;text-shadow:0px 4px 7px rgba(0,0,0,0.74);&&.MuiTypography-body1{font-size:", ";@media only screen  and (min-device-width:1800px)  and (-webkit-min-device-pixel-ratio:2){font-size:", ";top:", ";}@media only screen  and (max-device-width:1200px)  and (-webkit-min-device-pixel-ratio:2){font-size:", ";top:", ";}@media only screen  and (max-device-width:1024px)  and (-webkit-min-device-pixel-ratio:2) and (orientation:landscape){font-size:", ";top:", ";}@media only screen  and (max-device-width:768px)  and (-webkit-min-device-pixel-ratio:2){font-size:", ";width:", ";top:", ";}font-family:", ";line-height:1;}"], props => props.secondary ? '60%' : '20%', props => props.max || '80%', props => props.color || props.theme.white, props => props.fs || props.sfs || '12rem', props => props.bfs || props.bsfs || '9rem', props => props.tt ? props.tt : '20%', props => props.tfs || props.tsfs || '9rem', props => props.tt ? props.tt : '20%', props => props.tfs || '9rem', props => props.tt ? props.tt : '20%', props => props.mfs || props.tfs || '10rem', props => props.mmax || '80%', props => props.mt ? props.mt : '20%', props => props.sfont ? props.theme.MPLight : props.theme.MPBlack);
 function HeroSection(props) {
   const {
     t,
@@ -1729,18 +1729,20 @@ function HeroSection(props) {
     tsfs,
     msfs,
     cara,
-    scolor
+    scolor,
+    bsfs,
+    bfs
   } = props;
   return __jsx(StyledHero, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 82
+      lineNumber: 89
     },
     __self: this
   }, cara ? __jsx(_StyledCarousel__WEBPACK_IMPORTED_MODULE_4__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 86
+      lineNumber: 93
     },
     __self: this
   }) : __jsx("img", {
@@ -1749,7 +1751,7 @@ function HeroSection(props) {
     alt: "EuroBrake Greating",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 87
+      lineNumber: 94
     },
     __self: this
   }), __jsx(StyledText, {
@@ -1761,9 +1763,10 @@ function HeroSection(props) {
     fs: fs,
     tfs: tfs,
     mfs: mfs,
+    bfs: bfs,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 89
+      lineNumber: 96
     },
     __self: this
   }, props.children), __jsx(StyledText, {
@@ -1776,30 +1779,31 @@ function HeroSection(props) {
     tfs: tsfs,
     msfs: msfs,
     color: scolor,
+    bfs: bsfs,
     sfont: true,
     secondary: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 92
+      lineNumber: 99
     },
     __self: this
   }, props.secondary), __jsx("div", {
     className: "banner",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 95
+      lineNumber: 102
     },
     __self: this
   }, props.banner ? __jsx(props.banner, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 96
+      lineNumber: 103
     },
     __self: this
   }) : __jsx(_CountDownBanner__WEBPACK_IMPORTED_MODULE_3__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 96
+      lineNumber: 103
     },
     __self: this
   })));
@@ -6529,7 +6533,7 @@ function LocationSection() {
     style: {
       width: '100%',
       height: '100%',
-      objectfit: 'cover'
+      objectFit: 'cover'
     },
     __source: {
       fileName: _jsxFileName,
@@ -7882,7 +7886,7 @@ function StudentSection() {
     style: {
       width: '100%',
       height: '100%',
-      objectfit: 'cover'
+      objectFit: 'cover'
     },
     __source: {
       fileName: _jsxFileName,
@@ -8158,7 +8162,7 @@ function ExhibitionSection() {
     style: {
       width: '100%',
       height: '100%',
-      objectfit: 'cover'
+      objectFit: 'cover'
     },
     __source: {
       fileName: _jsxFileName,
@@ -8552,7 +8556,7 @@ const ContactSchema = yup__WEBPACK_IMPORTED_MODULE_0__["object"]().shape({
   company: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().required('Required'),
   address: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().nullable(),
   email: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().required('Required').email(),
-  enquiry: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().required('Required').test('wordCount', 'Max 750 words', value => value && value.match(/[\w\d\’\'-]+/gi).length <= 750)
+  enquiry: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().required('Required').test('wordCount', 'Max 750 words', value => value && value != ' ' && value.match(/[\w\d\’\'-]+/gi).length <= 750)
 });
 const AuthorSchema = yup__WEBPACK_IMPORTED_MODULE_0__["object"]().shape({
   title: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().nullable(),
@@ -8583,8 +8587,8 @@ const LoginSchema = yup__WEBPACK_IMPORTED_MODULE_0__["object"]().shape({
 });
 const AbstractSchema = yup__WEBPACK_IMPORTED_MODULE_0__["object"]().shape({
   author_title: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().nullable(),
-  author_firstname: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().test('Titlecase', 'name must be in title case!', value => value[0] != value[0].toLowercase()).required('Required'),
-  author_lastname: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().test('Titlecase', 'name must be in title case!', value => value[0] != value[0].toLowercase()).required('Required'),
+  author_firstname: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().test('Titlecase', 'name must be in title case!', value => value[0] != value[0].toLowerCase()).required('Required'),
+  author_lastname: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().test('Titlecase', 'name must be in title case!', value => value[0] != value[0].toLowerCase()).required('Required'),
   author_email: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().required('Required').email(),
   author_jobtitle: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().required('Required'),
   author_company: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().required('Required'),
@@ -8603,8 +8607,8 @@ const AbstractSchema = yup__WEBPACK_IMPORTED_MODULE_0__["object"]().shape({
   consider_for_journal: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().nullable(),
   secondary_authors: yup__WEBPACK_IMPORTED_MODULE_0__["array"]().of(yup__WEBPACK_IMPORTED_MODULE_0__["object"]().shape({
     title: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().nullable(),
-    firstname: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().test('Titlecase', 'name must be in title case!', value => value[0] != value[0].toLowercase()).required('Required'),
-    lastname: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().test('Titlecase', 'name must be in title case!', value => value[0] != value[0].toLowercase()).required('Required'),
+    firstname: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().test('Titlecase', 'name must be in title case!', value => value[0] != value[0].toLowercase).required('Required'),
+    lastname: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().test('Titlecase', 'name must be in title case!', value => value[0] != value[0].toLowercase).required('Required'),
     email: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().email().required('Required'),
     company: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().required('Required'),
     country: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().required('Required'),
@@ -8641,7 +8645,7 @@ const EsopSchema = yup__WEBPACK_IMPORTED_MODULE_0__["object"]().shape({
   university_postal: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().nullable(),
   university_country: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().required('Required'),
   cv_filename_uploader: yup__WEBPACK_IMPORTED_MODULE_0__["mixed"]().required('Required').test("fileFormat", "Unsupported Format", value => value && CV_SUPPORTED_FORMATS.includes(value.type)),
-  personal_statement: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().required('Required').test('wordCount', 'Max 250 words', value => value && value.match(/[\w\d\’\'-]+/gi).length <= 250).test('wordCount', 'Min 150 words', value => value && value.match(/[\w\d\’\'-]+/gi).length >= 150),
+  personal_statement: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().required('Required').test('wordCount', 'Max 250 words', value => value && value != ' ' && value.match(/[\w\d\’\'-]+/gi).length <= 250).test('wordCount', 'Min 150 words', value => value && value != ' ' && value.match(/[\w\d\’\'-]+/gi).length >= 150),
   student_status_filename_uploader: yup__WEBPACK_IMPORTED_MODULE_0__["mixed"]().required('Required').test("fileFormat", "Unsupported Format", value => value && PROOF_SUPPORTED_FORMATS.includes(value.type)).test("fileSize", "File too large", value => value && value.size <= FILE_SIZE),
   question_1_answer: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().required('Required'),
   question_2_answer: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().required('Required'),
@@ -14169,6 +14173,8 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 /* harmony default export */ __webpack_exports__["default"] = (() => __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx(_components_HeroSection__WEBPACK_IMPORTED_MODULE_9__["default"], {
   scolor: "#F9B721",
+  bfs: "6rem",
+  bsfs: "4rem",
   cara: true,
   sfs: "8rem",
   tsfs: "5rem",
@@ -14184,55 +14190,55 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 }, "Book your Early Bird tickets for EuroBrake 2020"), __jsx(_components_styles_HomeStyles__WEBPACK_IMPORTED_MODULE_2__["StyledContainer"], {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 29
+    lineNumber: 30
   },
   __self: undefined
 }, __jsx(_components_Dates__WEBPACK_IMPORTED_MODULE_10__["FixedDates"], {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 30
+    lineNumber: 31
   },
   __self: undefined
 }), __jsx(_components_Dates__WEBPACK_IMPORTED_MODULE_10__["FixedBox"], {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 31
+    lineNumber: 32
   },
   __self: undefined
 }), __jsx(_components_AboutSection__WEBPACK_IMPORTED_MODULE_3__["default"], {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 32
+    lineNumber: 33
   },
   __self: undefined
 }), __jsx(_components_LocationSection__WEBPACK_IMPORTED_MODULE_4__["default"], {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 33
+    lineNumber: 34
   },
   __self: undefined
 }), __jsx(_components_AttendeesSection__WEBPACK_IMPORTED_MODULE_5__["default"], {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 34
+    lineNumber: 35
   },
   __self: undefined
 }), __jsx(_components_exhibitors_ExhibitionSection__WEBPACK_IMPORTED_MODULE_6__["default"], {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 35
+    lineNumber: 36
   },
   __self: undefined
 }), __jsx(_components_StudentSection__WEBPACK_IMPORTED_MODULE_7__["default"], {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 36
+    lineNumber: 37
   },
   __self: undefined
 }), __jsx(_components_AuthorSection__WEBPACK_IMPORTED_MODULE_8__["default"], {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 37
+    lineNumber: 38
   },
   __self: undefined
 }))));
@@ -14380,7 +14386,7 @@ const mobWidth = () => {
 
 /***/ }),
 
-/***/ 3:
+/***/ 5:
 /*!******************************!*\
   !*** multi ./pages/index.js ***!
   \******************************/

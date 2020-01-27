@@ -325,8 +325,8 @@ class AuthorsAreaDash extends Component {
                                                             <TableBody style={{width: '100%'}}>
                                                                 {paper.tasks && paper.tasks.map(task => {
 
-                                                                           let dueDate = new Date(task.due);
-                                                                           let doneDate = new Date(task.done);
+                                                                           let dueDate = new Date('2020-01-26T00:00:00');
+                                                                           let doneDate = new Date('2020-01-17T19:03:17');
                                                                             let taskDate = dueDate.getDate();
                                                                             let dateDone = doneDate.getDate();
                                                                             let taskMonth = dueDate.getMonth();
@@ -337,10 +337,10 @@ class AuthorsAreaDash extends Component {
                                                                             let niceDone = this.pad(dateDone);
                                                                             {/* let prettierDate = this.prettyDate(niceDate); */}
                                                                             {/* let prettierDone = this.prettyDate(niceDone); */}
-                                                                            let niceMonth = monthNames[taskMonth];
-                                                                            let niceMonthDone = monthNames[monthDone];
+                                                                            let niceMonth = monthNames[taskMonth - 1];
+                                                                            let niceMonthDone = monthNames[monthDone - 1];
 
-                                                                            // todo PASS TITLE TO TASK OR ABSTRACT PAGE
+                                                                            // todo CHECK THE RIGHT DATES!
                                                                 return (
                                                                     <TableRow key={task.task}>
                                                                         <StyledCell component="th" scope="row" className="" style={{width: '10%'}}>{task.done !== null ?

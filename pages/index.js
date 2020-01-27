@@ -15,7 +15,8 @@ export default () => (
     <>       
         <HeroSection 
         scolor="#F9B721"
-        
+        bfs="6rem"
+        bsfs="4rem"
          cara
          sfs="8rem"
          tsfs="5rem"

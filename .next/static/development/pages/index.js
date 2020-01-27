@@ -115,7 +115,7 @@ function AboutSection() {
     style: {
       width: '100%',
       height: '100%',
-      objectfit: 'cover'
+      objectFit: 'cover'
     },
     __source: {
       fileName: _jsxFileName,
@@ -245,7 +245,7 @@ function AttendeesSection() {
     style: {
       width: '100%',
       height: '100%',
-      objectfit: 'cover'
+      objectFit: 'cover'
     },
     __source: {
       fileName: _jsxFileName,
@@ -372,7 +372,7 @@ function AuthorSection() {
     style: {
       width: '100%',
       height: '100%',
-      objectfit: 'cover'
+      objectFit: 'cover'
     },
     __source: {
       fileName: _jsxFileName,
@@ -1848,7 +1848,7 @@ var StyledHero = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div.w
 var StyledText = Object(styled_components__WEBPACK_IMPORTED_MODULE_1__["default"])(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_2__["default"]).withConfig({
   displayName: "HeroSection__StyledText",
   componentId: "sc-1rt21yv-1"
-})(["position:absolute;z-index:10;top:", ";align-self:center;width:", ";color:", ";text-align:center;text-shadow:0px 4px 7px rgba(0,0,0,0.74);&&.MuiTypography-body1{font-size:", ";@media only screen  and (max-device-width:1200px)  and (-webkit-min-device-pixel-ratio:2){font-size:", ";top:", ";}@media only screen  and (max-device-width:1024px)  and (-webkit-min-device-pixel-ratio:2) and (orientation:landscape){font-size:", ";top:", ";}@media only screen  and (max-device-width:768px)  and (-webkit-min-device-pixel-ratio:2){font-size:", ";width:", ";top:", ";}font-family:", ";line-height:1;}"], function (props) {
+})(["position:absolute;z-index:10;top:", ";align-self:center;width:", ";color:", ";text-align:center;text-shadow:0px 4px 7px rgba(0,0,0,0.74);&&.MuiTypography-body1{font-size:", ";@media only screen  and (min-device-width:1800px)  and (-webkit-min-device-pixel-ratio:2){font-size:", ";top:", ";}@media only screen  and (max-device-width:1200px)  and (-webkit-min-device-pixel-ratio:2){font-size:", ";top:", ";}@media only screen  and (max-device-width:1024px)  and (-webkit-min-device-pixel-ratio:2) and (orientation:landscape){font-size:", ";top:", ";}@media only screen  and (max-device-width:768px)  and (-webkit-min-device-pixel-ratio:2){font-size:", ";width:", ";top:", ";}font-family:", ";line-height:1;}"], function (props) {
   return props.secondary ? '60%' : '20%';
 }, function (props) {
   return props.max || '80%';
@@ -1857,11 +1857,15 @@ var StyledText = Object(styled_components__WEBPACK_IMPORTED_MODULE_1__["default"
 }, function (props) {
   return props.fs || props.sfs || '12rem';
 }, function (props) {
+  return props.bfs || props.bsfs || '9rem';
+}, function (props) {
+  return props.tt ? props.tt : '20%';
+}, function (props) {
   return props.tfs || props.tsfs || '9rem';
 }, function (props) {
   return props.tt ? props.tt : '20%';
 }, function (props) {
-  return props.tfs || props.sfs || '9rem';
+  return props.tfs || '9rem';
 }, function (props) {
   return props.tt ? props.tt : '20%';
 }, function (props) {
@@ -1891,17 +1895,19 @@ function HeroSection(props) {
       tsfs = props.tsfs,
       msfs = props.msfs,
       cara = props.cara,
-      scolor = props.scolor;
+      scolor = props.scolor,
+      bsfs = props.bsfs,
+      bfs = props.bfs;
   return __jsx(StyledHero, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 82
+      lineNumber: 89
     },
     __self: this
   }, cara ? __jsx(_StyledCarousel__WEBPACK_IMPORTED_MODULE_4__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 86
+      lineNumber: 93
     },
     __self: this
   }) : __jsx("img", {
@@ -1910,7 +1916,7 @@ function HeroSection(props) {
     alt: "EuroBrake Greating",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 87
+      lineNumber: 94
     },
     __self: this
   }), __jsx(StyledText, {
@@ -1922,9 +1928,10 @@ function HeroSection(props) {
     fs: fs,
     tfs: tfs,
     mfs: mfs,
+    bfs: bfs,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 89
+      lineNumber: 96
     },
     __self: this
   }, props.children), __jsx(StyledText, {
@@ -1937,30 +1944,31 @@ function HeroSection(props) {
     tfs: tsfs,
     msfs: msfs,
     color: scolor,
+    bfs: bsfs,
     sfont: true,
     secondary: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 92
+      lineNumber: 99
     },
     __self: this
   }, props.secondary), __jsx("div", {
     className: "banner",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 95
+      lineNumber: 102
     },
     __self: this
   }, props.banner ? __jsx(props.banner, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 96
+      lineNumber: 103
     },
     __self: this
   }) : __jsx(_CountDownBanner__WEBPACK_IMPORTED_MODULE_3__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 96
+      lineNumber: 103
     },
     __self: this
   })));
@@ -6739,7 +6747,7 @@ function LocationSection() {
     style: {
       width: '100%',
       height: '100%',
-      objectfit: 'cover'
+      objectFit: 'cover'
     },
     __source: {
       fileName: _jsxFileName,
@@ -8083,7 +8091,7 @@ function StudentSection() {
     style: {
       width: '100%',
       height: '100%',
-      objectfit: 'cover'
+      objectFit: 'cover'
     },
     __source: {
       fileName: _jsxFileName,
@@ -8365,7 +8373,7 @@ function ExhibitionSection() {
     style: {
       width: '100%',
       height: '100%',
-      objectfit: 'cover'
+      objectFit: 'cover'
     },
     __source: {
       fileName: _jsxFileName,
@@ -9004,7 +9012,7 @@ var ContactSchema = yup__WEBPACK_IMPORTED_MODULE_0__["object"]().shape({
   address: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().nullable(),
   email: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().required('Required').email(),
   enquiry: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().required('Required').test('wordCount', 'Max 750 words', function (value) {
-    return value && value.match(/[\w\d\’\'-]+/gi).length <= 750;
+    return value && value != ' ' && value.match(/[\w\d\’\'-]+/gi).length <= 750;
   })
 });
 var AuthorSchema = yup__WEBPACK_IMPORTED_MODULE_0__["object"]().shape({
@@ -9037,10 +9045,10 @@ var LoginSchema = yup__WEBPACK_IMPORTED_MODULE_0__["object"]().shape({
 var AbstractSchema = yup__WEBPACK_IMPORTED_MODULE_0__["object"]().shape({
   author_title: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().nullable(),
   author_firstname: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().test('Titlecase', 'name must be in title case!', function (value) {
-    return value[0] != value[0].toLowercase();
+    return value[0] != value[0].toLowerCase();
   }).required('Required'),
   author_lastname: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().test('Titlecase', 'name must be in title case!', function (value) {
-    return value[0] != value[0].toLowercase();
+    return value[0] != value[0].toLowerCase();
   }).required('Required'),
   author_email: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().required('Required').email(),
   author_jobtitle: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().required('Required'),
@@ -9063,10 +9071,10 @@ var AbstractSchema = yup__WEBPACK_IMPORTED_MODULE_0__["object"]().shape({
   secondary_authors: yup__WEBPACK_IMPORTED_MODULE_0__["array"]().of(yup__WEBPACK_IMPORTED_MODULE_0__["object"]().shape({
     title: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().nullable(),
     firstname: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().test('Titlecase', 'name must be in title case!', function (value) {
-      return value[0] != value[0].toLowercase();
+      return value[0] != value[0].toLowercase;
     }).required('Required'),
     lastname: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().test('Titlecase', 'name must be in title case!', function (value) {
-      return value[0] != value[0].toLowercase();
+      return value[0] != value[0].toLowercase;
     }).required('Required'),
     email: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().email().required('Required'),
     company: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().required('Required'),
@@ -9107,9 +9115,9 @@ var EsopSchema = yup__WEBPACK_IMPORTED_MODULE_0__["object"]().shape({
     return value && CV_SUPPORTED_FORMATS.includes(value.type);
   }),
   personal_statement: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().required('Required').test('wordCount', 'Max 250 words', function (value) {
-    return value && value.match(/[\w\d\’\'-]+/gi).length <= 250;
+    return value && value != ' ' && value.match(/[\w\d\’\'-]+/gi).length <= 250;
   }).test('wordCount', 'Min 150 words', function (value) {
-    return value && value.match(/[\w\d\’\'-]+/gi).length >= 150;
+    return value && value != ' ' && value.match(/[\w\d\’\'-]+/gi).length >= 150;
   }),
   student_status_filename_uploader: yup__WEBPACK_IMPORTED_MODULE_0__["mixed"]().required('Required').test("fileFormat", "Unsupported Format", function (value) {
     return value && PROOF_SUPPORTED_FORMATS.includes(value.type);
@@ -95902,6 +95910,8 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 /* harmony default export */ __webpack_exports__["default"] = (function () {
   return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx(_components_HeroSection__WEBPACK_IMPORTED_MODULE_9__["default"], {
     scolor: "#F9B721",
+    bfs: "6rem",
+    bsfs: "4rem",
     cara: true,
     sfs: "8rem",
     tsfs: "5rem",
@@ -95917,55 +95927,55 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
   }, "Book your Early Bird tickets for EuroBrake 2020"), __jsx(_components_styles_HomeStyles__WEBPACK_IMPORTED_MODULE_2__["StyledContainer"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 29
+      lineNumber: 30
     },
     __self: this
   }, __jsx(_components_Dates__WEBPACK_IMPORTED_MODULE_10__["FixedDates"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 30
+      lineNumber: 31
     },
     __self: this
   }), __jsx(_components_Dates__WEBPACK_IMPORTED_MODULE_10__["FixedBox"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 31
+      lineNumber: 32
     },
     __self: this
   }), __jsx(_components_AboutSection__WEBPACK_IMPORTED_MODULE_3__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 32
+      lineNumber: 33
     },
     __self: this
   }), __jsx(_components_LocationSection__WEBPACK_IMPORTED_MODULE_4__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 33
+      lineNumber: 34
     },
     __self: this
   }), __jsx(_components_AttendeesSection__WEBPACK_IMPORTED_MODULE_5__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 34
+      lineNumber: 35
     },
     __self: this
   }), __jsx(_components_exhibitors_ExhibitionSection__WEBPACK_IMPORTED_MODULE_6__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 35
+      lineNumber: 36
     },
     __self: this
   }), __jsx(_components_StudentSection__WEBPACK_IMPORTED_MODULE_7__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 36
+      lineNumber: 37
     },
     __self: this
   }), __jsx(_components_AuthorSection__WEBPACK_IMPORTED_MODULE_8__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 37
+      lineNumber: 38
     },
     __self: this
   })));
@@ -96191,7 +96201,7 @@ var mobWidth = function mobWidth() {
 
 /***/ }),
 
-/***/ 0:
+/***/ 2:
 /*!*****************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2F&absolutePagePath=%2Fmnt%2Fc%2FUsers%2FD.Hardiman%2Fdesktop%2Feurobrake%2Fpages%2Findex.js ***!
   \*****************************************************************************************************************************************/
@@ -96214,5 +96224,5 @@ module.exports = dll_ea92a4d9664833a26066;
 
 /***/ })
 
-},[[0,"static/runtime/webpack.js"]]]);
+},[[2,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=index.js.map
