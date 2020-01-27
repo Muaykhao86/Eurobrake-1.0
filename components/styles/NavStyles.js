@@ -126,8 +126,8 @@ export const HiddenContainer = styled.div`
          @media only screen 
         and (max-device-width: 768px) 
         and (-webkit-min-device-pixel-ratio: 2) { 
-    min-height: 100rem;           
-    overflow: auto;
+        min-height: 100%;
+    overflow: visible;
      -webkit-overflow-scrolling: touch;
 
    
