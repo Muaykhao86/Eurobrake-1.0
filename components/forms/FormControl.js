@@ -1,5 +1,10 @@
 import * as yup from 'yup';
 
+const countWords = (str) => {
+  let matches = str.match(/[\w\d\’\'-]+/gi);
+  return matches ? matches.length : 0;
+}
+
 export const ContactSchema = yup.object().shape({
     name: yup.string().nullable(),
     firstname: yup.string().required('Required'),
@@ -13,8 +18,8 @@ export const ContactSchema = yup.object().shape({
      .test(
         'wordCount',
         'Max 750 words',
-        value => value && value != ' ' &&
-          value.match(/[\w\d\’\'-]+/gi).length <= 750
+        value => 
+          countWords(value) <= 750
       ),
 })
 
@@ -86,8 +91,8 @@ export const AbstractSchema = yup.object().shape({
     abstract: yup.string().test(
         'wordCount',
         'Max 750 words',
-        value => value && 
-          value.match(/[\w\d\’\'-]+/gi).length <= 750
+        value => 
+          countWords(value) <= 750
       ).required('Required'),
     keywords: yup.string().required('Required'),
     consider_for_journal: yup.string().nullable(),
@@ -187,16 +192,14 @@ export const EsopSchema = yup.object().shape({
       .test(
         'wordCount',
         'Max 250 words',
-        value => value && value != ' ' &&
-          value.match(/[\w\d\’\'-]+/gi)
-          .length <= 250
+        value => 
+          countWords(value) <= 250
       )
       .test(
         'wordCount',
         'Min 150 words',
-        value => value && value != ' ' &&
-          value.match(/[\w\d\’\'-]+/gi)
-          .length >= 150
+        value => 
+         countWords(value) >= 150
       ),
     student_status_filename_uploader: yup.mixed().required('Required')
     .test("fileFormat",

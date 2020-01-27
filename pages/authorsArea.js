@@ -107,8 +107,20 @@ class AuthorsArea extends Component {
     render() {
         return (
             <>
-                <HeroSection banner={FilledBanner}  max="55%" src="https://live.staticflickr.com/65535/48016058701_2c3d9943e4_b.jpg">
-                    AuthorsArea
+                <HeroSection 
+                banner={FilledBanner}  
+                 tt="35%"
+
+                max="55%" 
+                src="https://live.staticflickr.com/65535/48016058701_2c3d9943e4_b.jpg"
+                scolor="#F9B721"
+                sfs="8rem"
+                tsfs="5rem"
+                tst="60%"
+                mst="65%"
+                secondary="Sign in to mange your submission"
+                >
+                    Authors Area
             </HeroSection>
                 <StyledPage>
             <FixedDates/>

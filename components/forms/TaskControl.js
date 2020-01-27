@@ -18,6 +18,12 @@ import * as yup from 'yup';
     'application/pdf',
     ];
 
+    
+export const countWords = (str) => {
+  let matches = str.match(/[\w\d\’\'-]+/gi);
+  return matches ? matches.length : 0;
+}
+
 export const PaperSchema = yup.object().shape({
     accept: 
      yup.bool()
@@ -106,28 +112,18 @@ export const PosterSchema = yup.object().shape({
       .required('Required')
 })
 
-export const countWords = () => {
-  var matches = value.match(/[\w\d\’\'-]+/gi);
-  return matches ? matches.length : 0;
-}
 
 export const BioSchema = yup.object().shape({
     biography: yup.string().required('Required')
       .test(
         'wordCount',
         'Max 100 words',
-        value => value && 
-          value.match(/[\w\d\’\'-]+/gi)
-          .length <= 100
-          // split(' ').length <= 100 
+        value => countWords(value) <= 100
       )
       .test(
         'wordCount',
         'Min 20 words',
-        value => value && 
-          value.match(/[\w\d\’\'-]+/gi)
-          .length >= 20
-          // split(' ').length <= 100 
+        value => countWords(value) >= 20
       )
       
 })

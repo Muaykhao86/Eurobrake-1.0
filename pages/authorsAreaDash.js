@@ -46,8 +46,8 @@ const StyledPage = styled.div`
         color: ${props => props.theme.primary};
         font-family: ${props => props.theme.MPSemibold};
         font-size: 4.4rem;
-        
     }
+
     &_sub-title{
         color: ${props => props.theme.primary};
         font-size: 3.5rem;
@@ -123,7 +123,15 @@ const StyledInfoArea = styled.div`
         cursor: pointer;
     color: ${props => props.theme.black};
     font-size: 1.5rem;
+    font-family: ${props => props.theme.MPRegular};
 
+    &-text{
+
+        font-size: 1.5rem;
+        align-self: flex-start;
+        color: black;
+        font-family: ${props => props.theme.MPRegular};
+    }
    
 
     &-date{
@@ -131,6 +139,8 @@ const StyledInfoArea = styled.div`
         font-size: 1.5rem;
         align-self: flex-end;
         color: red;
+        font-family: ${props => props.theme.MPRegular};
+
     }
     }
 `;
@@ -323,6 +333,24 @@ class AuthorsAreaDash extends Component {
                                             </div>
                                                         <Table className="" aria-label="simple table">
                                                             <TableBody style={{width: '100%'}}>
+                                                                 <TableRow key={task.task}>
+                                                                       
+                                                                        <StyledCell align="left" className="" style={{width: '25%'}}>
+                                                                                <Typography gutterBottom className="paper-text"  style={{fontSize: '1rem'}} >Status</Typography>
+                                                                        </StyledCell>
+                                                                       
+                                                                        <StyledCell align="left" className="" style={{width: '50%'}}>
+                                                                                <Typography gutterBottom className="paper-text"  style={{fontSize: '1rem'}} >Task</Typography>
+                                                                        </StyledCell>
+                                                                        <StyledCell align="left" className="" style={{width: '25%'}}>
+                                                                                <Typography gutterBottom className="paper-text"  style={{fontSize: '1rem'}} >Done</Typography>
+                                                                        </StyledCell>
+                                                                        <StyledCell align="left" className="" style={{width: '25%'}}>
+                                                                                <Typography gutterBottom className="paper-text" style={{fontSize: '1rem'}}  >Due</Typography>
+                                                                        </StyledCell>
+                                                                    </TableRow>
+                                                               
+                                                               
                                                                 {paper.tasks && paper.tasks.map(task => {
 
                                                                            let dueDate = new Date('2020-01-26T00:00:00');
@@ -349,7 +377,7 @@ class AuthorsAreaDash extends Component {
                                                                             <Link
                                                                                 href="/t/[id]/[taskType]"
                                                                                 as={`/t/${paper.papercode}/${task.type}`} >
-                                                                                <Typography gutterBottom className="paper_task" style={{width: '75%'}} >{task.task}</Typography>
+                                                                                <Typography gutterBottom className="paper-text" style={{width: '75%'}} >{task.task}</Typography>
                                                                             </Link></StyledCell>
                                                                         <StyledCell align="left" className="paper_task-date" style={{width: '26%'}}>{task.done == null ? 'Due' : niceDone + " " + niceMonthDone + " " + yearDone }</StyledCell>
                                                                         <StyledCell align="left" className="paper_task-date" style={{width: '26%'}}>{niceDate + " " + niceMonth + " " + taskYear}</StyledCell>

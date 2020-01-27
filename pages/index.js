@@ -19,8 +19,8 @@ import {FixedDates, FixedBox} from '../components/Dates';
 export default () => (
     <>
         <HeroSection 
-        scolor="#F9B721"
          cara
+        scolor="#F9B721"
          sfs="8rem"
          tsfs="5rem"
          tst="60%"

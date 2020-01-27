@@ -93,9 +93,18 @@ const FilledBanner = () => (
 
 export default () => (
     <>
-        <HeroSection banner={FilledBanner} max="55%" src="https://live.staticflickr.com/65535/48016205181_9141b91094_b.jpg"
+        <HeroSection 
+        banner={FilledBanner}
+         max="55%" 
+         src="https://live.staticflickr.com/65535/48016205181_9141b91094_b.jpg"
+         scolor="#F9B721"
+         sfs="8rem"
+         tsfs="5rem"
+         tst="60%"
+         mst="65%"
+         secondary="Book your early bird tickets today"
         >
-            EuroBrake 2020 Registration
+            Pricing & Registration
             </HeroSection>
         <StyledPage >
             <FixedDates/>
@@ -103,7 +112,7 @@ export default () => (
 
             <div className="Registration">
 
-                <Typography gutterBottom className="Registration-title">Delegate Registration</Typography>
+                <Typography gutterBottom className="Registration-title">Ticket Pricing & Registration</Typography>
                 <Typography gutterBottom className="Registration_list-title">Full Delegate registration includes:</Typography>
                 <ul className="Registration_list">
                     <li><Typography className="Registration"> Admission to all Plenary and Technical Sessions</Typography></li>

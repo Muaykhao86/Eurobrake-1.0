@@ -299,7 +299,7 @@ console.log(Hide)
             <Typography gutterBottom as="p" className="Box-text" >2-4 June 2020,</Typography>
             <Typography gutterBottom as="p" className="Box-text" >CCIB, Barcelona, Spain</Typography>
             <Link href="/exhibitorsRegistration">
-                <Button br="500rem" padding="1rem" fontSize="1.5rem" style={{marginTop: '1rem', color: '#FFF'}}>Pricing/Registration</Button>
+                <Button br="500rem" padding="1rem " fontSize="1rem" style={{marginTop: '1rem', color: '#FFF'}}>Pricing/Registration</Button>
             </Link>           
             <div className="logo_box">
                 <SmlLogo width="10rem" height="10rem"/>

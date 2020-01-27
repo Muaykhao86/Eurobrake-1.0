@@ -146,7 +146,7 @@ const StyledQuote = styled.div`
 export default () => (
     <>
         <HeroSection 
-        max="55%"
+        max="70%"
         src="https://live.staticflickr.com/65535/48015980517_8b8abbc7ef_b.jpg" 
              >
             Apply for the EuroBrake Student Opportunities Programme

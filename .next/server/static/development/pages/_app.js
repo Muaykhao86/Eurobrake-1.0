@@ -507,8 +507,8 @@ function FixedBox() {
     __self: this
   }, __jsx(_Button__WEBPACK_IMPORTED_MODULE_10__["Button"], {
     br: "500rem",
-    padding: "1rem",
-    fontSize: "1.5rem",
+    padding: "1rem ",
+    fontSize: "1rem",
     style: {
       marginTop: '1rem',
       color: '#FFF'
@@ -6587,6 +6587,16 @@ const GlobalStyle = styled_components__WEBPACK_IMPORTED_MODULE_4__["createGlobal
         height: 100%;
         box-sizing:  border-box;
         font-size: 62.5%; 
+
+          @media   only screen and (   min--moz-device-pixel-ratio: 2)      and (min-width: 1300px),
+only screen and (     -o-min-device-pixel-ratio: 2/1)    and (min-width: 1300px),
+only screen and (        min-device-pixel-ratio: 2)      and (min-width: 1300px),
+only screen and (                min-resolution: 192dpi) and (min-width: 1300px),
+only screen and (                min-resolution: 2dppx)  and (min-width: 1300px){
+font-size: 58.5%;
+
+}
+     
         
     };
     body{
@@ -6613,37 +6623,37 @@ class Page extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       theme: theme,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 144
+        lineNumber: 154
       },
       __self: this
     }, __jsx(GlobalStyle, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 145
+        lineNumber: 155
       },
       __self: this
     }), __jsx(StyledPage, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 146
+        lineNumber: 156
       },
       __self: this
     }, __jsx(_Meta__WEBPACK_IMPORTED_MODULE_3__["default"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 147
+        lineNumber: 157
       },
       __self: this
     }), __jsx(_Header__WEBPACK_IMPORTED_MODULE_1__["default"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 148
+        lineNumber: 158
       },
       __self: this
     }), this.props.children, __jsx(_Footer__WEBPACK_IMPORTED_MODULE_2__["default"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 150
+        lineNumber: 160
       },
       __self: this
     })));
@@ -7356,6 +7366,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var yup__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! yup */ "yup");
 /* harmony import */ var yup__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(yup__WEBPACK_IMPORTED_MODULE_0__);
 
+
+const countWords = str => {
+  let matches = str.match(/[\w\d\’\'-]+/gi);
+  return matches ? matches.length : 0;
+};
+
 const ContactSchema = yup__WEBPACK_IMPORTED_MODULE_0__["object"]().shape({
   name: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().nullable(),
   firstname: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().required('Required'),
@@ -7364,7 +7380,7 @@ const ContactSchema = yup__WEBPACK_IMPORTED_MODULE_0__["object"]().shape({
   company: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().required('Required'),
   address: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().nullable(),
   email: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().required('Required').email(),
-  enquiry: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().required('Required').test('wordCount', 'Max 750 words', value => value && value != ' ' && value.match(/[\w\d\’\'-]+/gi).length <= 750)
+  enquiry: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().required('Required').test('wordCount', 'Max 750 words', value => countWords(value) <= 750)
 });
 const AuthorSchema = yup__WEBPACK_IMPORTED_MODULE_0__["object"]().shape({
   title: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().nullable(),
@@ -7410,7 +7426,7 @@ const AbstractSchema = yup__WEBPACK_IMPORTED_MODULE_0__["object"]().shape({
   author_phone: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().required('Required'),
   is_presenting_author: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().required('Required'),
   papertitle: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().required('Required'),
-  abstract: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().test('wordCount', 'Max 750 words', value => value && value.match(/[\w\d\’\'-]+/gi).length <= 750).required('Required'),
+  abstract: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().test('wordCount', 'Max 750 words', value => countWords(value) <= 750).required('Required'),
   keywords: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().required('Required'),
   consider_for_journal: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().nullable(),
   secondary_authors: yup__WEBPACK_IMPORTED_MODULE_0__["array"]().of(yup__WEBPACK_IMPORTED_MODULE_0__["object"]().shape({
@@ -7453,7 +7469,7 @@ const EsopSchema = yup__WEBPACK_IMPORTED_MODULE_0__["object"]().shape({
   university_postal: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().nullable(),
   university_country: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().required('Required'),
   cv_filename_uploader: yup__WEBPACK_IMPORTED_MODULE_0__["mixed"]().required('Required').test("fileFormat", "Unsupported Format", value => value && CV_SUPPORTED_FORMATS.includes(value.type)),
-  personal_statement: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().required('Required').test('wordCount', 'Max 250 words', value => value && value != ' ' && value.match(/[\w\d\’\'-]+/gi).length <= 250).test('wordCount', 'Min 150 words', value => value && value != ' ' && value.match(/[\w\d\’\'-]+/gi).length >= 150),
+  personal_statement: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().required('Required').test('wordCount', 'Max 250 words', value => countWords(value) <= 250).test('wordCount', 'Min 150 words', value => countWords(value) >= 150),
   student_status_filename_uploader: yup__WEBPACK_IMPORTED_MODULE_0__["mixed"]().required('Required').test("fileFormat", "Unsupported Format", value => value && PROOF_SUPPORTED_FORMATS.includes(value.type)).test("fileSize", "File too large", value => value && value.size <= FILE_SIZE),
   question_1_answer: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().required('Required'),
   question_2_answer: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().required('Required'),
@@ -7772,7 +7788,7 @@ const HiddenNavBG = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div
 const HiddenContainer = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({
   displayName: "NavStyles__HiddenContainer",
   componentId: "sc-1ltvdnj-5"
-})(["position:absolute;right:-20rem;top:-5rem;display:flex;align-items:flex-start;justify-content:flex-start;flex-flow:column;padding:2rem;transition:all .8s ease-in-out;opacity:", ";transform:", ";min-width:99vw;min-height:99vh;@media   only screen and (   min--moz-device-pixel-ratio:2)      and (min-width:1300px),only screen and (     -o-min-device-pixel-ratio:2/1)    and (min-width:1300px),only screen and (        min-device-pixel-ratio:2)      and (min-width:1300px),only screen and (                min-resolution:192dpi) and (min-width:1300px),only screen and (                min-resolution:2dppx)  and (min-width:1300px){position:absolute;right:-20rem;top:-5rem;display:flex;align-items:flex-start;justify-content:flex-start;flex-flow:column;padding:2rem;transition:all .8s ease-in-out;opacity:", ";transform:", ";min-width:99vw;min-height:99vh;}@media only screen  and (max-device-width:768px)  and (-webkit-min-device-pixel-ratio:2){min-height:80vh;overflow:auto;-webkit-overflow-scrolling:touch;}.nav{&-title{font-size:2rem;font-family:", ";color:", ";&-box{display:flex;flex-flow:column;align-items:flex-start;margin-bottom:3rem;}}&-links{font-size:2rem;font-family:", ";color:", ";&-box{display:flex;flex-flow:column;align-items:flex-start;margin-bottom:3rem;}}&_container-1{width:100%;height:100%;display:flex;flex-flow:row;flex:1 1 auto;justify-content:space-between;}&-inner{display:flex;flex-flow:column;&-title{font-size:3rem;font-family:", ";color:", ";@media only screen  and (max-device-width:1500px)  and (-webkit-min-device-pixel-ratio:2){font-size:2rem;}}&-text{font-size:3rem;font-family:", ";color:", ";@media only screen  and (max-device-width:1500px)  and (-webkit-min-device-pixel-ratio:2){font-size:2rem;}}}&_box-1{margin-left:5rem;padding:2rem;width:70%;@media only screen  and (max-device-width:768px)  and (-webkit-min-device-pixel-ratio:2){}@media only screen  and (max-device-width:1700px)  and (-webkit-min-device-pixel-ratio:2){width:80%;}max-height:20rem;flex:1 1 auto;padding-bottom:4rem;display:flex;justify-content:space-between;align-items:flex-end;}&_box-middle{min-height:50rem;max-width:95rem;flex:1 1 auto;margin:2rem;padding:2rem;display:flex;flex-flow:row;justify-content:space-between;&-1{display:flex;flex-flow:column;width:26rem;min-height:50rem;}&-2{width:26rem;min-height:50rem;}&-3{width:15rem;min-height:50rem;}@media only screen  and (max-device-width:768px)  and (-webkit-min-device-pixel-ratio:2){}}&_box-right{height:50rem;max-width:26rem;flex:1 1 auto;margin:2rem;display:flex;flex-flow:column;align-items:center;justify-content:space-between;@media only screen  and (max-device-width:768px)  and (-webkit-min-device-pixel-ratio:2){display:none}}&_box-left{height:50rem;max-width:26rem;flex:1 1 auto;margin:2rem;display:flex;flex-flow:column;align-items:center;justify-content:space-between;@media only screen  and (max-device-width:768px)  and (-webkit-min-device-pixel-ratio:2){display:none;}}&_box-bottom{margin-left:5rem;display:flex;flex-flow:row;align-items:flex-end;&-text{font-size:1.5rem;margin-right:2rem;}@media only screen  and (max-device-width:768px)  and (-webkit-min-device-pixel-ratio:2){align-self:flex-end;}}}"], props => props.isOpen ? '1' : '0', props => props.isOpen ? null : 'translateX(-250rem)', props => props.isOpen ? '1' : '0', props => props.isOpen ? null : 'translateX(-250rem)', props => props.theme.MPLightIt, props => props.theme.white, props => props.theme.MPBlackIt, props => props.theme.white, props => props.theme.MPSemibold, props => props.theme.secondary, props => props.theme.MPLight, props => props.theme.white);
+})(["position:absolute;right:-20rem;top:-5rem;display:flex;align-items:flex-start;justify-content:flex-start;flex-flow:column;padding:2rem;transition:all .8s ease-in-out;opacity:", ";transform:", ";min-width:99vw;min-height:99vh;@media only screen  and (max-device-width:768px)  and (-webkit-min-device-pixel-ratio:2){min-height:80vh;overflow:auto;-webkit-overflow-scrolling:touch;}.nav{&-title{font-size:2rem;font-family:", ";color:", ";&-box{display:flex;flex-flow:column;align-items:flex-start;margin-bottom:3rem;}}&-links{font-size:2rem;font-family:", ";color:", ";&-box{display:flex;flex-flow:column;align-items:flex-start;margin-bottom:3rem;}}&_container-1{width:100%;height:100%;display:flex;flex-flow:row;flex:1 1 auto;justify-content:space-between;}&-inner{display:flex;flex-flow:column;&-title{font-size:3rem;font-family:", ";color:", ";@media only screen  and (max-device-width:1500px)  and (-webkit-min-device-pixel-ratio:2){font-size:2rem;}}&-text{font-size:3rem;font-family:", ";color:", ";@media only screen  and (max-device-width:1500px)  and (-webkit-min-device-pixel-ratio:2){font-size:2rem;}}}&_box-1{margin-left:5rem;padding:2rem;width:70%;@media only screen  and (max-device-width:768px)  and (-webkit-min-device-pixel-ratio:2){}@media only screen  and (max-device-width:1700px)  and (-webkit-min-device-pixel-ratio:2){width:80%;}max-height:20rem;flex:1 1 auto;padding-bottom:4rem;display:flex;justify-content:space-between;align-items:flex-end;}&_box-middle{min-height:50rem;max-width:95rem;flex:1 1 auto;margin:2rem;padding:2rem;display:flex;flex-flow:row;justify-content:space-between;&-1{display:flex;flex-flow:column;width:26rem;min-height:50rem;}&-2{width:26rem;min-height:50rem;}&-3{width:15rem;min-height:50rem;}@media only screen  and (max-device-width:768px)  and (-webkit-min-device-pixel-ratio:2){}}&_box-right{height:50rem;max-width:26rem;flex:1 1 auto;margin:2rem;display:flex;flex-flow:column;align-items:center;justify-content:space-between;@media only screen  and (max-device-width:768px)  and (-webkit-min-device-pixel-ratio:2){display:none}}&_box-left{height:50rem;max-width:26rem;flex:1 1 auto;margin:2rem;display:flex;flex-flow:column;align-items:center;justify-content:space-between;@media only screen  and (max-device-width:768px)  and (-webkit-min-device-pixel-ratio:2){display:none;}}&_box-bottom{margin-left:5rem;display:flex;flex-flow:row;align-items:flex-end;&-text{font-size:1.5rem;margin-right:2rem;}@media only screen  and (max-device-width:768px)  and (-webkit-min-device-pixel-ratio:2){align-self:flex-end;}}}"], props => props.isOpen ? '1' : '0', props => props.isOpen ? null : 'translateX(-250rem)', props => props.theme.MPLightIt, props => props.theme.white, props => props.theme.MPBlackIt, props => props.theme.white, props => props.theme.MPSemibold, props => props.theme.secondary, props => props.theme.MPLight, props => props.theme.white);
 
 /***/ }),
 
