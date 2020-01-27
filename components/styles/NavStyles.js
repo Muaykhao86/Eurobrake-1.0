@@ -107,7 +107,6 @@ export const HiddenNavBG = styled.div`
 
 
 export const HiddenContainer = styled.div`
-        /* border: 10px solid white; */
     position: absolute;
     right: -20rem;
     top: -5rem;
@@ -126,8 +125,8 @@ export const HiddenContainer = styled.div`
          @media only screen 
         and (max-device-width: 768px) 
         and (-webkit-min-device-pixel-ratio: 2) { 
-        min-height: 100%;
-    overflow: visible;
+        min-height: 80vh;
+    overflow: auto;
      -webkit-overflow-scrolling: touch;
 
    
@@ -180,11 +179,13 @@ export const HiddenContainer = styled.div`
         flex-flow: row;
         flex: 1 1 auto;
         justify-content: space-between;
-         @media only screen 
+         /* @media only screen 
         and (max-device-width: 768px) 
         and (-webkit-min-device-pixel-ratio: 2) { 
-        margin-top: 0;             
-        }
+        flex-flow: column;
+        margin-top: 0;       
+        order: 2;      
+        } */
     }
   
     
@@ -220,6 +221,16 @@ export const HiddenContainer = styled.div`
         margin-left: 5rem;
         padding: 2rem;
         width: 70%;
+
+         @media only screen 
+  and (max-device-width: 768px) 
+  and (-webkit-min-device-pixel-ratio: 2) { 
+      /* display: flex;
+      flex-flow: column; */
+
+}
+
+
          @media only screen 
         and (max-device-width: 1700px) 
         and (-webkit-min-device-pixel-ratio: 2) {
@@ -271,6 +282,13 @@ export const HiddenContainer = styled.div`
 
         }
 
+         @media only screen 
+  and (max-device-width: 768px) 
+  and (-webkit-min-device-pixel-ratio: 2) { 
+
+}
+
+
 
     }
     &_box-right{
@@ -288,7 +306,10 @@ export const HiddenContainer = styled.div`
           @media only screen 
         and (max-device-width: 768px) 
         and (-webkit-min-device-pixel-ratio: 2) { 
-        display: none;          
+        /* max-width: 100%;
+        align-self: center;
+        order: 1; */
+        display: none
         }
     }
     

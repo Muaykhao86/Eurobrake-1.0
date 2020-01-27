@@ -4,9 +4,10 @@ import styled from 'styled-components';
 import { Typography } from '@material-ui/core';
 import { NavStyles, Burger, TopBun, HiddenNavBG, HiddenContainer } from './styles/NavStyles';
 import { Button } from './Button';
-import { Dates, Box } from './Dates';
+import { Dates, Box, MoBox } from './Dates';
 import { HeaderLogo } from './Header';
 import { FLogoWhite } from './Icons';
+import {mobWidth} from '../utils/mixins';
 
 
 
@@ -28,16 +29,30 @@ export default class Nav extends Component {
         super(props)
 
         this.state = {
-            isOpen: false
-            ,
+            isOpen: false ,width: 0, height: 0
         }
     }
+
+
+componentDidMount() {
+  this.updateWindowDimensions();
+  window.addEventListener('resize', this.updateWindowDimensions);
+}
+
+componentWillUnmount() {
+  window.removeEventListener('resize', this.updateWindowDimensions);
+}
+
+updateWindowDimensions = () => {
+  this.setState({ width: window.innerWidth, height: window.innerHeight });
+}
 
     handleClick = () => {
         this.setState(prev => ({ isOpen: !prev.isOpen }));
     }
 
     render() {
+        const {width, height } = this.state;
         return (
             <NavStyles>
                 <HiddenNavBG isOpen={this.state.isOpen} />
@@ -53,7 +68,7 @@ export default class Nav extends Component {
                     </div>
                     <div className="nav_container-1">
                         <div className="nav_box-right" style={{}}>
-                            <Box MW="35rem" handleClick={this.handleClick}/>
+                          <Box MW="35rem" handleClick={this.handleClick}/> 
                         </div>
                         <div className="nav_box-middle">
                             <div className="nav_box-middle-1">
@@ -105,9 +120,8 @@ export default class Nav extends Component {
                                     <Link href="/authorsAreaInstructions"><a onClick={this.handleClick}><Typography className="nav-links">Templates</Typography></a></Link>
                                 </div>
                             </div>
-
+                            
                         </div>
-
                         <div className="nav_box-left" style={{}}>
                             <Dates MW="35rem"  />
                         </div>

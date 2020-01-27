@@ -579,7 +579,64 @@ function Box(props) {
     },
     __self: this
   })));
-}
+} // const StyledMoBox = styled.div`
+//      max-width:100%;
+//    max-height: 100%;
+//    background-color: ${props => props.theme.primary};
+//     padding: 2rem;
+//     display: flex;
+//     flex: 1 1 auto;
+//     flex-flow: column;
+//     justify-content: space-between;
+//     font-size: 2rem;
+//     .Box-mob{
+//         &-title{
+//         font-size: 3rem;
+//         font-family: ${props => props.theme.MPBlack};
+//         color: ${props => props.theme.white};
+//         align-self: center;
+//         }
+//         &-date{
+//         font-size: 1.8rem;
+//         font-family: ${props => props.theme.MPSemibold};
+//         color: ${props => props.theme.secondary};
+//         align-self: center;
+//         }
+//         &-text{
+//             font-size: 1.8rem;
+//         font-family: ${props => props.theme.MPLight};
+//         color: ${props => props.theme.white};
+//         align-self: center;
+//         }
+//         &-text-it{
+//             font-size: 2.5rem;
+//         font-family: ${props => props.theme.MPLightIt};
+//         color: ${props => props.theme.white};
+//         align-self: center;
+//         }
+//     }
+//     .logo_box-mob{
+//         height: 10rem;
+//         display: flex;
+//         align-items: center;
+//         justify-content: center;
+//         flex: 1 1 auto;
+//     }
+// `;
+// export function MoBox(props) {
+//     return (
+//         <StyledMoBox>
+//             <Typography gutterBottom as="h1" className="Box-title" >Book your Early Bird Tickets for EuroBrake</Typography>
+//             <Typography gutterBottom as="p"  className="Box-text-it">Secure your tickets by 1 April 2020</Typography>
+//             <Link href="/ticketPortal">
+//                 <Button onClick={props.handleClick} br="500rem" padding="2rem 11rem" fontSize="2.5rem" style={{ color: '#FFF', fontSize: '2.5rem', margin: '0', marginTop: '2rem', alignSelf: 'center' }}>Book Now</Button>
+//             </Link>           
+//             <div className="logo_box-mob">
+//                 <SmlLogo width="20rem" height="20rem"/>
+//             </div>
+//         </StyledMoBox>  
+//     )
+// }
 
 /***/ }),
 
@@ -5853,6 +5910,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Dates__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./Dates */ "./components/Dates.js");
 /* harmony import */ var _Header__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./Header */ "./components/Header.js");
 /* harmony import */ var _Icons__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./Icons */ "./components/Icons.js");
+/* harmony import */ var _utils_mixins__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ../utils/mixins */ "./utils/mixins.js");
 
 
 
@@ -5862,6 +5920,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var _jsxFileName = "/mnt/c/Users/D.Hardiman/desktop/eurobrake/components/Nav.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement;
+
 
 
 
@@ -5893,6 +5952,13 @@ function (_Component) {
 
     _this = Object(_babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__["default"])(this, Object(_babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__["default"])(Nav).call(this, props));
 
+    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_6__["default"])(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__["default"])(_this), "updateWindowDimensions", function () {
+      _this.setState({
+        width: window.innerWidth,
+        height: window.innerHeight
+      });
+    });
+
     Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_6__["default"])(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__["default"])(_this), "handleClick", function () {
       _this.setState(function (prev) {
         return {
@@ -5902,80 +5968,96 @@ function (_Component) {
     });
 
     _this.state = {
-      isOpen: false
+      isOpen: false,
+      width: 0,
+      height: 0
     };
     return _this;
   }
 
   Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__["default"])(Nav, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      this.updateWindowDimensions();
+      window.addEventListener('resize', this.updateWindowDimensions);
+    }
+  }, {
+    key: "componentWillUnmount",
+    value: function componentWillUnmount() {
+      window.removeEventListener('resize', this.updateWindowDimensions);
+    }
+  }, {
     key: "render",
     value: function render() {
+      var _this$state = this.state,
+          width = _this$state.width,
+          height = _this$state.height;
       return __jsx(_styles_NavStyles__WEBPACK_IMPORTED_MODULE_11__["NavStyles"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 42
+          lineNumber: 57
         },
         __self: this
       }, __jsx(_styles_NavStyles__WEBPACK_IMPORTED_MODULE_11__["HiddenNavBG"], {
         isOpen: this.state.isOpen,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 43
+          lineNumber: 58
         },
         __self: this
       }), __jsx(_styles_NavStyles__WEBPACK_IMPORTED_MODULE_11__["HiddenContainer"], {
         isOpen: this.state.isOpen,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 44
+          lineNumber: 59
         },
         __self: this
       }, __jsx("div", {
         className: "nav_box-1",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 45
+          lineNumber: 60
         },
         __self: this
       }, __jsx("div", {
         className: "",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 46
+          lineNumber: 61
         },
         __self: this
       }, __jsx(NavLogo, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 47
+          lineNumber: 62
         },
         __self: this
       })), __jsx("div", {
         className: "nav-inner",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 49
+          lineNumber: 64
         },
         __self: this
       }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_10__["Typography"], {
         className: "nav-inner-title",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 50
+          lineNumber: 65
         },
         __self: this
       }, "Europe's braking technology conference & exhibition"), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_10__["Typography"], {
         className: "nav-inner-text",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 51
+          lineNumber: 66
         },
         __self: this
       }, "2-4 June 2020, CCIB, Barcelona, Spain"))), __jsx("div", {
         className: "nav_container-1",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 54
+          lineNumber: 69
         },
         __self: this
       }, __jsx("div", {
@@ -5983,7 +6065,7 @@ function (_Component) {
         style: {},
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 55
+          lineNumber: 70
         },
         __self: this
       }, __jsx(_Dates__WEBPACK_IMPORTED_MODULE_13__["Box"], {
@@ -5991,35 +6073,35 @@ function (_Component) {
         handleClick: this.handleClick,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 56
+          lineNumber: 71
         },
         __self: this
       })), __jsx("div", {
         className: "nav_box-middle",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 58
+          lineNumber: 73
         },
         __self: this
       }, __jsx("div", {
         className: "nav_box-middle-1",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 59
+          lineNumber: 74
         },
         __self: this
       }, __jsx("div", {
         className: "nav-title-box",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 60
+          lineNumber: 75
         },
         __self: this
       }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_10__["Typography"], {
         className: "nav-title",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 61
+          lineNumber: 76
         },
         __self: this
       }, "For Delegates"), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_10__["Typography"], {
@@ -6029,119 +6111,119 @@ function (_Component) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 62
+          lineNumber: 77
         },
         __self: this
       }, "& Visitors")), __jsx("div", {
         className: "nav-links-box",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 65
+          lineNumber: 80
         },
         __self: this
       }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_8___default.a, {
         href: "/",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 66
+          lineNumber: 81
         },
         __self: this
       }, __jsx("a", {
         onClick: this.handleClick,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 66
+          lineNumber: 81
         },
         __self: this
       }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_10__["Typography"], {
         className: "nav-links",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 66
+          lineNumber: 81
         },
         __self: this
       }, "Home"))), __jsx(next_link__WEBPACK_IMPORTED_MODULE_8___default.a, {
         href: "/about",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 67
+          lineNumber: 82
         },
         __self: this
       }, __jsx("a", {
         onClick: this.handleClick,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 67
+          lineNumber: 82
         },
         __self: this
       }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_10__["Typography"], {
         className: "nav-links",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 67
+          lineNumber: 82
         },
         __self: this
       }, "About"))), __jsx(next_link__WEBPACK_IMPORTED_MODULE_8___default.a, {
         href: "/exhibitorsRegistration",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 68
+          lineNumber: 83
         },
         __self: this
       }, __jsx("a", {
         onClick: this.handleClick,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 68
+          lineNumber: 83
         },
         __self: this
       }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_10__["Typography"], {
         className: "nav-links",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 68
+          lineNumber: 83
         },
         __self: this
       }, "Registration"))), __jsx(next_link__WEBPACK_IMPORTED_MODULE_8___default.a, {
         href: "/technicalProgram",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 69
+          lineNumber: 84
         },
         __self: this
       }, __jsx("a", {
         onClick: this.handleClick,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 69
+          lineNumber: 84
         },
         __self: this
       }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_10__["Typography"], {
         className: "nav-links",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 69
+          lineNumber: 84
         },
         __self: this
       }, "Technical Program"))), __jsx(next_link__WEBPACK_IMPORTED_MODULE_8___default.a, {
         href: "/welcome",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 70
+          lineNumber: 85
         },
         __self: this
       }, __jsx("a", {
         onClick: this.handleClick,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 70
+          lineNumber: 85
         },
         __self: this
       }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_10__["Typography"], {
         className: "nav-links",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 70
+          lineNumber: 85
         },
         __self: this
       }, "Welcome to Barcelona"))), __jsx(next_link__WEBPACK_IMPORTED_MODULE_8___default.a, {
@@ -6149,35 +6231,35 @@ function (_Component) {
         as: "/f/FISITA/contact",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 71
+          lineNumber: 86
         },
         __self: this
       }, __jsx("a", {
         onClick: this.handleClick,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 71
+          lineNumber: 86
         },
         __self: this
       }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_10__["Typography"], {
         className: "nav-links",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 71
+          lineNumber: 86
         },
         __self: this
       }, "Contact Us")))), __jsx("div", {
         className: "nav-title-box",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 74
+          lineNumber: 89
         },
         __self: this
       }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_10__["Typography"], {
         className: "nav-title",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 75
+          lineNumber: 90
         },
         __self: this
       }, "For Students"), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_10__["Typography"], {
@@ -6187,56 +6269,56 @@ function (_Component) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 76
+          lineNumber: 91
         },
         __self: this
       }, "& Educators")), __jsx("div", {
         className: "nav-links-box",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 79
+          lineNumber: 94
         },
         __self: this
       }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_8___default.a, {
         href: "/esop",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 80
+          lineNumber: 95
         },
         __self: this
       }, __jsx("a", {
         onClick: this.handleClick,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 80
+          lineNumber: 95
         },
         __self: this
       }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_10__["Typography"], {
         className: "nav-links",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 80
+          lineNumber: 95
         },
         __self: this
       }, "ESOP - Student Opportunities Programme"))))), __jsx("div", {
         className: "nav_box-middle-2",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 84
+          lineNumber: 99
         },
         __self: this
       }, __jsx("div", {
         className: "nav-title-box",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 86
+          lineNumber: 101
         },
         __self: this
       }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_10__["Typography"], {
         className: "nav-title",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 87
+          lineNumber: 102
         },
         __self: this
       }, "For Exhibitors"), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_10__["Typography"], {
@@ -6246,77 +6328,77 @@ function (_Component) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 88
+          lineNumber: 103
         },
         __self: this
       }, "& Sponsors")), __jsx("div", {
         className: "nav-links-box",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 91
+          lineNumber: 106
         },
         __self: this
       }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_8___default.a, {
         href: "/exhibitAndSponsor",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 92
+          lineNumber: 107
         },
         __self: this
       }, __jsx("a", {
         onClick: this.handleClick,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 92
+          lineNumber: 107
         },
         __self: this
       }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_10__["Typography"], {
         className: "nav-links",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 92
+          lineNumber: 107
         },
         __self: this
       }, "Exhibit And Sponsor"))), __jsx(next_link__WEBPACK_IMPORTED_MODULE_8___default.a, {
         href: "/exhibitors",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 93
+          lineNumber: 108
         },
         __self: this
       }, __jsx("a", {
         onClick: this.handleClick,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 93
+          lineNumber: 108
         },
         __self: this
       }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_10__["Typography"], {
         className: "nav-links",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 93
+          lineNumber: 108
         },
         __self: this
       }, "Exhibitor Directory"))))), __jsx("div", {
         className: "nav_box-middle-3",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 97
+          lineNumber: 112
         },
         __self: this
       }, __jsx("div", {
         className: "nav-title-box",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 98
+          lineNumber: 113
         },
         __self: this
       }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_10__["Typography"], {
         className: "nav-title",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 99
+          lineNumber: 114
         },
         __self: this
       }, "For Authors"), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_10__["Typography"], {
@@ -6326,56 +6408,56 @@ function (_Component) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 100
+          lineNumber: 115
         },
         __self: this
       }, "& Speakers")), __jsx("div", {
         className: "nav-links-box",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 103
+          lineNumber: 118
         },
         __self: this
       }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_8___default.a, {
         href: "/authorsArea",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 104
+          lineNumber: 119
         },
         __self: this
       }, __jsx("a", {
         onClick: this.handleClick,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 104
+          lineNumber: 119
         },
         __self: this
       }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_10__["Typography"], {
         className: "nav-links",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 104
+          lineNumber: 119
         },
         __self: this
       }, "Authors Area"))), __jsx(next_link__WEBPACK_IMPORTED_MODULE_8___default.a, {
         href: "/authorsAreaInstructions",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 105
+          lineNumber: 120
         },
         __self: this
       }, __jsx("a", {
         onClick: this.handleClick,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 105
+          lineNumber: 120
         },
         __self: this
       }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_10__["Typography"], {
         className: "nav-links",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 105
+          lineNumber: 120
         },
         __self: this
       }, "Templates")))))), __jsx("div", {
@@ -6383,35 +6465,35 @@ function (_Component) {
         style: {},
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 111
+          lineNumber: 125
         },
         __self: this
       }, __jsx(_Dates__WEBPACK_IMPORTED_MODULE_13__["Dates"], {
         MW: "35rem",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 112
+          lineNumber: 126
         },
         __self: this
       }))), __jsx("div", {
         className: "nav_box-bottom",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 115
+          lineNumber: 129
         },
         __self: this
       }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_10__["Typography"], {
         className: "nav_box-bottom-text",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 116
+          lineNumber: 130
         },
         __self: this
       }, "Organised by"), __jsx("a", {
         href: "https://www.fisita.com/",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 117
+          lineNumber: 131
         },
         __self: this
       }, __jsx(_Icons__WEBPACK_IMPORTED_MODULE_15__["FLogoWhite"], {
@@ -6419,7 +6501,7 @@ function (_Component) {
         height: "5rem",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 117
+          lineNumber: 131
         },
         __self: this
       })))), __jsx(_styles_NavStyles__WEBPACK_IMPORTED_MODULE_11__["Burger"], {
@@ -6427,7 +6509,7 @@ function (_Component) {
         onClick: this.handleClick,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 121
+          lineNumber: 135
         },
         __self: this
       }, __jsx(_styles_NavStyles__WEBPACK_IMPORTED_MODULE_11__["TopBun"], {
@@ -6435,7 +6517,7 @@ function (_Component) {
         sticky: this.props.sticky,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 122
+          lineNumber: 136
         },
         __self: this
       })));
@@ -7249,6 +7331,7 @@ function _SendForm() {
             csrf = _ref3.csrf, values = _ref3.values, url = _ref3.url, FT = _ref3.FT;
             values && values.accept && values.accept === true ? values.accept = 'yes' : null;
             values && values.copyright && values.copyright === true ? values.copyright = 'yes' : null;
+            console.log('sendform', values);
             form = _babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_0___default()(values);
             _cookie$get3 = js_cookie__WEBPACK_IMPORTED_MODULE_4___default.a.get(), logintoken = _cookie$get3.logintoken;
             console.log({
@@ -7259,13 +7342,13 @@ function _SendForm() {
             });
 
             if (!(logintoken && csrf && form)) {
-              _context4.next = 29;
+              _context4.next = 30;
               break;
             }
 
-            _context4.prev = 7;
+            _context4.prev = 8;
             apiUrl = url;
-            _context4.next = 11;
+            _context4.next = 12;
             return isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_6___default()(apiUrl, {
               method: 'POST',
               body: form,
@@ -7276,40 +7359,40 @@ function _SendForm() {
               }
             });
 
-          case 11:
+          case 12:
             response = _context4.sent;
-            _context4.next = 14;
+            _context4.next = 15;
             return response.json();
 
-          case 14:
+          case 15:
             data = _context4.sent;
 
             if (!(data.status === 'success')) {
-              _context4.next = 20;
+              _context4.next = 21;
               break;
             }
 
             console.log('getForm', data);
             return _context4.abrupt("return", data);
 
-          case 20:
+          case 21:
             error = new Error(data.error);
             error.response = response;
             throw error;
 
-          case 23:
-            _context4.next = 29;
+          case 24:
+            _context4.next = 30;
             break;
 
-          case 25:
-            _context4.prev = 25;
-            _context4.t0 = _context4["catch"](7);
+          case 26:
+            _context4.prev = 26;
+            _context4.t0 = _context4["catch"](8);
             console.error('Failed to send form, please try again', _context4.t0);
             return _context4.abrupt("return", _context4.t0);
 
-          case 29:
+          case 30:
             if (!(url === 'https://prelude.eurobrake.net/authors/login')) {
-              _context4.next = 54;
+              _context4.next = 55;
               break;
             }
 
@@ -7317,8 +7400,8 @@ function _SendForm() {
               url: url,
               form: form
             });
-            _context4.prev = 31;
-            _context4.next = 34;
+            _context4.prev = 32;
+            _context4.next = 35;
             return isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_6___default()(url, {
               method: 'POST',
               credentials: 'include',
@@ -7328,46 +7411,46 @@ function _SendForm() {
               }
             });
 
-          case 34:
+          case 35:
             _response = _context4.sent;
-            _context4.next = 37;
+            _context4.next = 38;
             return _response.json();
 
-          case 37:
+          case 38:
             _data = _context4.sent;
 
             if (!(_data.status === 'success')) {
-              _context4.next = 45;
+              _context4.next = 46;
               break;
             }
 
             _logintoken = _data.logintoken;
-            _context4.next = 42;
+            _context4.next = 43;
             return Object(_utils_auth__WEBPACK_IMPORTED_MODULE_7__["login"])({
               logintoken: _logintoken
             });
 
-          case 42:
+          case 43:
             return _context4.abrupt("return", _data);
 
-          case 45:
+          case 46:
             _error = new Error(_data.error);
             _error.response = _response;
             throw _error;
 
-          case 48:
-            _context4.next = 54;
+          case 49:
+            _context4.next = 55;
             break;
 
-          case 50:
-            _context4.prev = 50;
-            _context4.t1 = _context4["catch"](31);
+          case 51:
+            _context4.prev = 51;
+            _context4.t1 = _context4["catch"](32);
             console.error('Failed to login, please try again', _context4.t1);
             return _context4.abrupt("return", _context4.t1);
 
-          case 54:
+          case 55:
             if (!(FT === 'reset')) {
-              _context4.next = 77;
+              _context4.next = 78;
               break;
             }
 
@@ -7375,8 +7458,8 @@ function _SendForm() {
               url: url,
               form: form
             });
-            _context4.prev = 56;
-            _context4.next = 59;
+            _context4.prev = 57;
+            _context4.next = 60;
             return isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_6___default()(url, {
               method: 'POST',
               credentials: 'include',
@@ -7386,40 +7469,40 @@ function _SendForm() {
               }
             });
 
-          case 59:
+          case 60:
             _response2 = _context4.sent;
-            _context4.next = 62;
+            _context4.next = 63;
             return _response2.json();
 
-          case 62:
+          case 63:
             _data2 = _context4.sent;
 
             if (!(_data2.status === 'success')) {
-              _context4.next = 68;
+              _context4.next = 69;
               break;
             }
 
             console.log('getForm', _data2);
             return _context4.abrupt("return", _data2);
 
-          case 68:
+          case 69:
             _error2 = new Error(_data2.error);
             _error2.response = _response2;
             throw _error2;
 
-          case 71:
-            _context4.next = 77;
+          case 72:
+            _context4.next = 78;
             break;
 
-          case 73:
-            _context4.prev = 73;
-            _context4.t2 = _context4["catch"](56);
+          case 74:
+            _context4.prev = 74;
+            _context4.t2 = _context4["catch"](57);
             console.error('Failed to reset, please try again', _context4.t2);
             return _context4.abrupt("return", _context4.t2);
 
-          case 77:
+          case 78:
             if (!(FT === 'newsletter' || FT === 'contact')) {
-              _context4.next = 100;
+              _context4.next = 101;
               break;
             }
 
@@ -7427,8 +7510,8 @@ function _SendForm() {
               url: url,
               form: form
             });
-            _context4.prev = 79;
-            _context4.next = 82;
+            _context4.prev = 80;
+            _context4.next = 83;
             return isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_6___default()(url, {
               method: 'POST',
               credentials: 'include',
@@ -7438,50 +7521,52 @@ function _SendForm() {
               }
             });
 
-          case 82:
+          case 83:
             _response3 = _context4.sent;
-            _context4.next = 85;
+            _context4.next = 86;
             return _response3.json();
 
-          case 85:
+          case 86:
             _data3 = _context4.sent;
 
             if (!(_data3.status === 'success')) {
-              _context4.next = 91;
+              _context4.next = 92;
               break;
             }
 
             console.log('getForm', _data3);
             return _context4.abrupt("return", _data3);
 
-          case 91:
+          case 92:
             _error3 = new Error(_data3.error);
             _error3.response = _response3;
             throw _error3;
 
-          case 94:
-            _context4.next = 100;
+          case 95:
+            _context4.next = 101;
             break;
 
-          case 96:
-            _context4.prev = 96;
-            _context4.t3 = _context4["catch"](79);
+          case 97:
+            _context4.prev = 97;
+            _context4.t3 = _context4["catch"](80);
             console.error('Failed to send form, please try again', _context4.t3);
             return _context4.abrupt("return", _context4.t3);
 
-          case 100:
+          case 101:
             if (!(FT === 'withdraw')) {
-              _context4.next = 123;
+              _context4.next = 124;
               break;
             }
 
             console.log({
-              url: url
+              url: url,
+              csrf: csrf
             });
-            _context4.prev = 102;
-            _context4.next = 105;
+            _context4.prev = 103;
+            _context4.next = 106;
             return isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_6___default()(url, {
               method: 'POST',
+              body: _babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_0___default()(csrf),
               credentials: 'include',
               headers: {
                 Authorization: 'Bearer ' + logintoken,
@@ -7489,46 +7574,46 @@ function _SendForm() {
               }
             });
 
-          case 105:
+          case 106:
             _response4 = _context4.sent;
-            _context4.next = 108;
+            _context4.next = 109;
             return _response4.json();
 
-          case 108:
+          case 109:
             _data4 = _context4.sent;
 
             if (!(_data4.status === 'success')) {
-              _context4.next = 114;
+              _context4.next = 115;
               break;
             }
 
             console.log('getForm', _data4);
             return _context4.abrupt("return", _data4);
 
-          case 114:
+          case 115:
             _error4 = new Error(_data4.error);
             _error4.response = _response4;
             throw _error4;
 
-          case 117:
-            _context4.next = 123;
+          case 118:
+            _context4.next = 124;
             break;
 
-          case 119:
-            _context4.prev = 119;
-            _context4.t4 = _context4["catch"](102);
+          case 120:
+            _context4.prev = 120;
+            _context4.t4 = _context4["catch"](103);
             console.error('Failed to withdraw, please try again', _context4.t4);
             return _context4.abrupt("return", _context4.t4);
 
-          case 123:
+          case 124:
             return _context4.abrupt("return");
 
-          case 124:
+          case 125:
           case "end":
             return _context4.stop();
         }
       }
-    }, _callee4, null, [[7, 25], [31, 50], [56, 73], [79, 96], [102, 119]]);
+    }, _callee4, null, [[8, 26], [32, 51], [57, 74], [80, 97], [103, 120]]);
   }));
   return _SendForm.apply(this, arguments);
 }
@@ -7594,8 +7679,12 @@ var LoginSchema = yup__WEBPACK_IMPORTED_MODULE_0__["object"]().shape({
 });
 var AbstractSchema = yup__WEBPACK_IMPORTED_MODULE_0__["object"]().shape({
   author_title: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().nullable(),
-  author_firstname: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().required('Required'),
-  author_lastname: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().required('Required'),
+  author_firstname: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().test('Titlecase', 'name must be in title case!', function (value) {
+    return value[0] != value[0].toLowercase();
+  }).required('Required'),
+  author_lastname: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().test('Titlecase', 'name must be in title case!', function (value) {
+    return value[0] != value[0].toLowercase();
+  }).required('Required'),
   author_email: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().required('Required').email(),
   author_jobtitle: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().required('Required'),
   author_company: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().required('Required'),
@@ -7616,8 +7705,12 @@ var AbstractSchema = yup__WEBPACK_IMPORTED_MODULE_0__["object"]().shape({
   consider_for_journal: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().nullable(),
   secondary_authors: yup__WEBPACK_IMPORTED_MODULE_0__["array"]().of(yup__WEBPACK_IMPORTED_MODULE_0__["object"]().shape({
     title: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().nullable(),
-    firstname: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().required('Required'),
-    lastname: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().required('Required'),
+    firstname: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().test('Titlecase', 'name must be in title case!', function (value) {
+      return value[0] != value[0].toLowercase();
+    }).required('Required'),
+    lastname: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().test('Titlecase', 'name must be in title case!', function (value) {
+      return value[0] != value[0].toLowercase();
+    }).required('Required'),
     email: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().email().required('Required'),
     company: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().required('Required'),
     country: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().required('Required'),
@@ -8148,7 +8241,7 @@ var HiddenNavBG = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.
 var HiddenContainer = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
   displayName: "NavStyles__HiddenContainer",
   componentId: "sc-1ltvdnj-5"
-})(["position:absolute;right:-20rem;top:-5rem;display:flex;align-items:flex-start;justify-content:flex-start;flex-flow:column;padding:2rem;transition:all .8s ease-in-out;opacity:", ";transform:", ";min-width:99vw;min-height:99vh;@media only screen  and (max-device-width:768px)  and (-webkit-min-device-pixel-ratio:2){min-height:100%;overflow:visible;-webkit-overflow-scrolling:touch;}.nav{&-title{font-size:2rem;font-family:", ";color:", ";&-box{display:flex;flex-flow:column;align-items:flex-start;margin-bottom:3rem;}}&-links{font-size:2rem;font-family:", ";color:", ";&-box{display:flex;flex-flow:column;align-items:flex-start;margin-bottom:3rem;}}&_container-1{width:100%;height:100%;display:flex;flex-flow:row;flex:1 1 auto;justify-content:space-between;@media only screen  and (max-device-width:768px)  and (-webkit-min-device-pixel-ratio:2){margin-top:0;}}&-inner{display:flex;flex-flow:column;&-title{font-size:3rem;font-family:", ";color:", ";@media only screen  and (max-device-width:1500px)  and (-webkit-min-device-pixel-ratio:2){font-size:2rem;}}&-text{font-size:3rem;font-family:", ";color:", ";@media only screen  and (max-device-width:1500px)  and (-webkit-min-device-pixel-ratio:2){font-size:2rem;}}}&_box-1{margin-left:5rem;padding:2rem;width:70%;@media only screen  and (max-device-width:1700px)  and (-webkit-min-device-pixel-ratio:2){width:80%;}max-height:20rem;flex:1 1 auto;padding-bottom:4rem;display:flex;justify-content:space-between;align-items:flex-end;}&_box-middle{min-height:50rem;max-width:95rem;flex:1 1 auto;margin:2rem;padding:2rem;display:flex;flex-flow:row;justify-content:space-between;&-1{display:flex;flex-flow:column;width:26rem;min-height:50rem;}&-2{width:26rem;min-height:50rem;}&-3{width:15rem;min-height:50rem;}}&_box-right{height:50rem;max-width:26rem;flex:1 1 auto;margin:2rem;display:flex;flex-flow:column;align-items:center;justify-content:space-between;@media only screen  and (max-device-width:768px)  and (-webkit-min-device-pixel-ratio:2){display:none;}}&_box-left{height:50rem;max-width:26rem;flex:1 1 auto;margin:2rem;display:flex;flex-flow:column;align-items:center;justify-content:space-between;@media only screen  and (max-device-width:768px)  and (-webkit-min-device-pixel-ratio:2){display:none;}}&_box-bottom{margin-left:5rem;display:flex;flex-flow:row;align-items:flex-end;&-text{font-size:1.5rem;margin-right:2rem;}@media only screen  and (max-device-width:768px)  and (-webkit-min-device-pixel-ratio:2){align-self:flex-end;}}}"], function (props) {
+})(["position:absolute;right:-20rem;top:-5rem;display:flex;align-items:flex-start;justify-content:flex-start;flex-flow:column;padding:2rem;transition:all .8s ease-in-out;opacity:", ";transform:", ";min-width:99vw;min-height:99vh;@media only screen  and (max-device-width:768px)  and (-webkit-min-device-pixel-ratio:2){min-height:80vh;overflow:auto;-webkit-overflow-scrolling:touch;}.nav{&-title{font-size:2rem;font-family:", ";color:", ";&-box{display:flex;flex-flow:column;align-items:flex-start;margin-bottom:3rem;}}&-links{font-size:2rem;font-family:", ";color:", ";&-box{display:flex;flex-flow:column;align-items:flex-start;margin-bottom:3rem;}}&_container-1{width:100%;height:100%;display:flex;flex-flow:row;flex:1 1 auto;justify-content:space-between;}&-inner{display:flex;flex-flow:column;&-title{font-size:3rem;font-family:", ";color:", ";@media only screen  and (max-device-width:1500px)  and (-webkit-min-device-pixel-ratio:2){font-size:2rem;}}&-text{font-size:3rem;font-family:", ";color:", ";@media only screen  and (max-device-width:1500px)  and (-webkit-min-device-pixel-ratio:2){font-size:2rem;}}}&_box-1{margin-left:5rem;padding:2rem;width:70%;@media only screen  and (max-device-width:768px)  and (-webkit-min-device-pixel-ratio:2){}@media only screen  and (max-device-width:1700px)  and (-webkit-min-device-pixel-ratio:2){width:80%;}max-height:20rem;flex:1 1 auto;padding-bottom:4rem;display:flex;justify-content:space-between;align-items:flex-end;}&_box-middle{min-height:50rem;max-width:95rem;flex:1 1 auto;margin:2rem;padding:2rem;display:flex;flex-flow:row;justify-content:space-between;&-1{display:flex;flex-flow:column;width:26rem;min-height:50rem;}&-2{width:26rem;min-height:50rem;}&-3{width:15rem;min-height:50rem;}@media only screen  and (max-device-width:768px)  and (-webkit-min-device-pixel-ratio:2){}}&_box-right{height:50rem;max-width:26rem;flex:1 1 auto;margin:2rem;display:flex;flex-flow:column;align-items:center;justify-content:space-between;@media only screen  and (max-device-width:768px)  and (-webkit-min-device-pixel-ratio:2){display:none}}&_box-left{height:50rem;max-width:26rem;flex:1 1 auto;margin:2rem;display:flex;flex-flow:column;align-items:center;justify-content:space-between;@media only screen  and (max-device-width:768px)  and (-webkit-min-device-pixel-ratio:2){display:none;}}&_box-bottom{margin-left:5rem;display:flex;flex-flow:row;align-items:flex-end;&-text{font-size:1.5rem;margin-right:2rem;}@media only screen  and (max-device-width:768px)  and (-webkit-min-device-pixel-ratio:2){align-self:flex-end;}}}"], function (props) {
   return props.isOpen ? '1' : '0';
 }, function (props) {
   return props.isOpen ? null : 'translateX(-250rem)';
@@ -94849,6 +94942,36 @@ var withAuthSync = function withAuthSync(WrappedComponent) {
   }();
 
   return Wrapper;
+};
+
+/***/ }),
+
+/***/ "./utils/mixins.js":
+/*!*************************!*\
+  !*** ./utils/mixins.js ***!
+  \*************************/
+/*! exports provided: winWidth, tabWidth, mobWidth */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "winWidth", function() { return winWidth; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "tabWidth", function() { return tabWidth; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "mobWidth", function() { return mobWidth; });
+var winWidth = function winWidth() {
+  if (true) {
+    return window.innerWidth < 1200;
+  }
+};
+var tabWidth = function tabWidth() {
+  if (true) {
+    return window.innerWidth < 1080;
+  }
+};
+var mobWidth = function mobWidth() {
+  if (true) {
+    return window.innerWidth;
+  }
 };
 
 /***/ }),

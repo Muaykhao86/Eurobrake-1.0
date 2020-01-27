@@ -332,4 +332,73 @@ export function Box(props) {
     )
 }
 
+// const StyledMoBox = styled.div`
+//      max-width:100%;
+//    max-height: 100%;
+//    background-color: ${props => props.theme.primary};
+//     padding: 2rem;
+    
+//     display: flex;
+//     flex: 1 1 auto;
+//     flex-flow: column;
+//     justify-content: space-between;
+
+//     font-size: 2rem;
+   
+     
+
+//     .Box-mob{
+        
+//         &-title{
+//         font-size: 3rem;
+//         font-family: ${props => props.theme.MPBlack};
+//         color: ${props => props.theme.white};
+//         align-self: center;
+//         }
+//         &-date{
+//         font-size: 1.8rem;
+//         font-family: ${props => props.theme.MPSemibold};
+//         color: ${props => props.theme.secondary};
+//         align-self: center;
+//         }
+//         &-text{
+//             font-size: 1.8rem;
+//         font-family: ${props => props.theme.MPLight};
+//         color: ${props => props.theme.white};
+//         align-self: center;
+//         }
+//         &-text-it{
+//             font-size: 2.5rem;
+//         font-family: ${props => props.theme.MPLightIt};
+//         color: ${props => props.theme.white};
+//         align-self: center;
+//         }
+//     }
+
+//     .logo_box-mob{
+//         height: 10rem;
+//         display: flex;
+//         align-items: center;
+//         justify-content: center;
+//         flex: 1 1 auto;
+//     }
+// `;
+
+// export function MoBox(props) {
+//     return (
+        
+//         <StyledMoBox>
+//             <Typography gutterBottom as="h1" className="Box-title" >Book your Early Bird Tickets for EuroBrake</Typography>
+//             <Typography gutterBottom as="p"  className="Box-text-it">Secure your tickets by 1 April 2020</Typography>
+//             <Link href="/ticketPortal">
+//                 <Button onClick={props.handleClick} br="500rem" padding="2rem 11rem" fontSize="2.5rem" style={{ color: '#FFF', fontSize: '2.5rem', margin: '0', marginTop: '2rem', alignSelf: 'center' }}>Book Now</Button>
+//             </Link>           
+//             <div className="logo_box-mob">
+//                 <SmlLogo width="20rem" height="20rem"/>
+//             </div>
+            
+//         </StyledMoBox>  
+//     )
+// }
+
 
