@@ -47,9 +47,13 @@ const StyledText = styled(Typography)`
     
 &&.MuiTypography-body1 {
         font-size: ${props => props.fs || props.sfs || '12rem'};
-         @media only screen 
-        and (min-device-width: 1800px) 
-        {
+        
+     @media   only screen and (   min--moz-device-pixel-ratio: 2)      and (min-width: 1300px),
+only screen and (     -o-min-device-pixel-ratio: 2/1)    and (min-width: 1300px),
+only screen and (        min-device-pixel-ratio: 2)      and (min-width: 1300px),
+only screen and (                min-resolution: 192dpi) and (min-width: 1300px),
+only screen and (                min-resolution: 2dppx)  and (min-width: 1300px){
+        
         font-size: ${props => props.bfs || props.bsfs || '9rem'};
     top: ${props => props.tt ? props.tt : '20%'};
     }
