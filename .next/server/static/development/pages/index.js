@@ -1223,7 +1223,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 const FooterBar = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div.withConfig({
   displayName: "Footer__FooterBar",
   componentId: "sc-1wn18ws-0"
-})(["color:", ";background:", ";min-width:100%;min-height:20rem;display:flex;justify-content:space-between;align-items:center;position:absolute;bottom:0;padding:2rem;border-top:5px solid ", ";.ftr_top-box{display:flex;flex-flow:row wrap;margin-bottom:1rem;}.heading-copy{color:", ";font-family:", ";font-size:2rem;}.ftr_middle-links{min-height:24rem;margin:0 1rem;padding:.2rem;flex:1 1 auto;display:flex;flex-flow:column;justify-content:space-between;align-items:flex-start;&_links{display:flex;justify-content:space-between;min-width:50rem;}}.ftr_container-right{border:1px solid #FFF;display:flex;flex-flow:column;align-items:center;}.ftr_container-map{height:25rem;position:relative;}.ftr_newsletter-box{max-height:6.5rem;display:flex;flex:1 1 auto;flex-flow:column;justify-content:space-between;margin-bottom:1rem;&_title{text-transform:uppercase;font-size:2rem;font-family:", ";}}.ftr_container-icons{display:flex;width:auto;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;position:relative;}.social{color:", ";;margin-right:1.5rem;font-size:2rem;}a{color:", ";text-transform:uppercase;font-family:", ";font-size:2rem;}h1{padding:1rem;text-align:center;}input{width:55%;margin:1rem;}label{font-family:", ";font-size:2rem;text-transform:uppercase;}"], props => props.theme.white, props => props.theme.primary, props => props.theme.secondary, props => props.theme.white, props => props.theme.MPLight, props => props.theme.MPBold, props => props.theme.white, props => props.theme.white, props => props.theme.MPBold, props => props.theme.MPBold);
+})(["color:", ";background:", ";min-width:100%;min-height:20rem;display:flex;justify-content:space-between;align-items:center;position:absolute;z-index:10;bottom:0;padding:2rem;border-top:5px solid ", ";.ftr_top-box{display:flex;flex-flow:row wrap;margin-bottom:1rem;}.heading-copy{color:", ";font-family:", ";font-size:2rem;}.ftr_middle-links{min-height:24rem;margin:0 1rem;padding:.2rem;flex:1 1 auto;display:flex;flex-flow:column;justify-content:space-between;align-items:flex-start;&_links{display:flex;justify-content:space-between;min-width:50rem;}}.ftr_container-right{border:1px solid #FFF;display:flex;flex-flow:column;align-items:center;}.ftr_container-map{height:25rem;position:relative;}.ftr_newsletter-box{max-height:6.5rem;display:flex;flex:1 1 auto;flex-flow:column;justify-content:space-between;margin-bottom:1rem;&_title{text-transform:uppercase;font-size:2rem;font-family:", ";}}.ftr_container-icons{display:flex;width:auto;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;position:relative;}.social{color:", ";;margin-right:1.5rem;font-size:2rem;}a{color:", ";text-transform:uppercase;font-family:", ";font-size:2rem;}h1{padding:1rem;text-align:center;}input{width:55%;margin:1rem;}label{font-family:", ";font-size:2rem;text-transform:uppercase;}"], props => props.theme.white, props => props.theme.primary, props => props.theme.secondary, props => props.theme.white, props => props.theme.MPLight, props => props.theme.MPBold, props => props.theme.white, props => props.theme.white, props => props.theme.MPBold, props => props.theme.MPBold);
 const StyledFooter = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div.withConfig({
   displayName: "Footer__StyledFooter",
   componentId: "sc-1wn18ws-1"
@@ -1233,40 +1233,40 @@ function Footer() {
   return __jsx(StyledFooter, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 137
+      lineNumber: 138
     },
     __self: this
   }, __jsx(_SponsorCarousel__WEBPACK_IMPORTED_MODULE_6__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 138
-    },
-    __self: this
-  }), __jsx(FooterBar, {
-    __source: {
-      fileName: _jsxFileName,
       lineNumber: 139
     },
     __self: this
-  }, __jsx("div", {
-    className: "ftr_middle-links",
+  }), __jsx(FooterBar, {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 140
     },
     __self: this
   }, __jsx("div", {
-    className: "ftr_top-box",
+    className: "ftr_middle-links",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 141
+    },
+    __self: this
+  }, __jsx("div", {
+    className: "ftr_top-box",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 142
     },
     __self: this
   }, __jsx("a", {
     href: "https://www.fisita.com/",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 144
+      lineNumber: 145
     },
     __self: this
   }, __jsx(_Icons__WEBPACK_IMPORTED_MODULE_7__["FLogoWhite"], {
@@ -1274,32 +1274,18 @@ function Footer() {
     height: "5rem",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 144
+      lineNumber: 145
     },
     __self: this
   }))), __jsx("div", {
     className: "ftr_middle-links_links",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 151
+      lineNumber: 152
     },
     __self: this
   }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
     href: "/disclaimer",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 152
-    },
-    __self: this
-  }, __jsx("a", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 152
-    },
-    __self: this
-  }, "Disclaimer")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-    href: "/f/[id]/[formType]",
-    as: `/f/FISITA/contact`,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 153
@@ -1308,20 +1294,34 @@ function Footer() {
   }, __jsx("a", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 155
+      lineNumber: 153
     },
     __self: this
-  }, "Contact Us")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-    href: "/privacyPolicy",
+  }, "Disclaimer")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+    href: "/f/[id]/[formType]",
+    as: `/f/FISITA/contact`,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 156
+      lineNumber: 154
     },
     __self: this
   }, __jsx("a", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 156
+    },
+    __self: this
+  }, "Contact Us")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+    href: "/privacyPolicy",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 157
+    },
+    __self: this
+  }, __jsx("a", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 157
     },
     __self: this
   }, "Privacy Policy"))), __jsx("div", {
@@ -1334,7 +1334,7 @@ function Footer() {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 158
+      lineNumber: 159
     },
     __self: this
   }, __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_4___default.a, {
@@ -1345,27 +1345,27 @@ function Footer() {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 159
+      lineNumber: 160
     },
     __self: this
   }, "Copyright \xA9 2020 FISITA"))), __jsx("div", {
     className: "ftr_container-right",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 162
+      lineNumber: 163
     },
     __self: this
   }, __jsx("div", {
     className: "ftr_container-map",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 164
+      lineNumber: 165
     },
     __self: this
   }, __jsx(_GoogleMaps__WEBPACK_IMPORTED_MODULE_3__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 165
+      lineNumber: 166
     },
     __self: this
   })))));
@@ -8903,7 +8903,7 @@ const HiddenNavBG = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div
 const HiddenContainer = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({
   displayName: "NavStyles__HiddenContainer",
   componentId: "sc-1ltvdnj-5"
-})(["position:absolute;right:-20rem;top:-5rem;display:flex;align-items:flex-start;justify-content:flex-start;flex-flow:column;padding:2rem;transition:all .8s ease-in-out;opacity:", ";transform:", ";min-width:99vw;min-height:99vh;@media only screen  and (max-device-width:768px)  and (-webkit-min-device-pixel-ratio:2){min-height:100rem;overflow:auto;-webkit-overflow-scrolling:touch;}.nav{&-title{font-size:2rem;font-family:", ";color:", ";&-box{display:flex;flex-flow:column;align-items:flex-start;margin-bottom:3rem;}@media only screen  and (max-device-width:768px)  and (-webkit-min-device-pixel-ratio:2){font-size:4rem;}}&-links{font-size:2rem;font-family:", ";color:", ";@media only screen  and (max-device-width:768px)  and (-webkit-min-device-pixel-ratio:2){font-size:3rem;}&-box{display:flex;flex-flow:column;align-items:flex-start;margin-bottom:3rem;}}&_container-1{width:100%;height:100%;display:flex;flex-flow:row;flex:1 1 auto;justify-content:space-between;@media only screen  and (max-device-width:768px)  and (-webkit-min-device-pixel-ratio:2){margin-top:0;}}&-inner{display:flex;flex-flow:column;&-title{font-size:3rem;font-family:", ";color:", ";@media only screen  and (max-device-width:1500px)  and (-webkit-min-device-pixel-ratio:2){font-size:2rem;}}&-text{font-size:3rem;font-family:", ";color:", ";@media only screen  and (max-device-width:1500px)  and (-webkit-min-device-pixel-ratio:2){font-size:2rem;}}}&_box-1{margin-left:5rem;padding:2rem;width:70%;@media only screen  and (max-device-width:1700px)  and (-webkit-min-device-pixel-ratio:2){width:80%;}max-height:20rem;flex:1 1 auto;padding-bottom:4rem;display:flex;justify-content:space-between;align-items:flex-end;}&_box-middle{height:50rem;max-width:95rem;flex:1 1 auto;margin:2rem;padding:2rem;display:flex;flex-flow:row;justify-content:space-between;&-1{display:flex;flex-flow:column;width:26rem;height:50rem;}&-2{width:26rem;height:50rem;}&-3{width:15rem;height:50rem;}}&_box-right{height:50rem;max-width:26rem;flex:1 1 auto;margin:2rem;display:flex;flex-flow:column;align-items:center;justify-content:space-between;@media only screen  and (max-device-width:768px)  and (-webkit-min-device-pixel-ratio:2){display:none;}}&_box-left{height:50rem;max-width:26rem;flex:1 1 auto;margin:2rem;display:flex;flex-flow:column;align-items:center;justify-content:space-between;@media only screen  and (max-device-width:768px)  and (-webkit-min-device-pixel-ratio:2){display:none;}}&_box-bottom{margin-left:5rem;display:flex;flex-flow:row;align-items:flex-end;&-text{font-size:1.5rem;margin-right:2rem;}@media only screen  and (max-device-width:768px)  and (-webkit-min-device-pixel-ratio:2){align-self:flex-end;}}}"], props => props.isOpen ? '1' : '0', props => props.isOpen ? null : 'translateX(-250rem)', props => props.theme.MPLightIt, props => props.theme.white, props => props.theme.MPBlackIt, props => props.theme.white, props => props.theme.MPSemibold, props => props.theme.secondary, props => props.theme.MPLight, props => props.theme.white);
+})(["position:absolute;right:-20rem;top:-5rem;display:flex;align-items:flex-start;justify-content:flex-start;flex-flow:column;padding:2rem;transition:all .8s ease-in-out;opacity:", ";transform:", ";min-width:99vw;min-height:99vh;@media only screen  and (max-device-width:768px)  and (-webkit-min-device-pixel-ratio:2){min-height:100%;overflow:visible;-webkit-overflow-scrolling:touch;}.nav{&-title{font-size:2rem;font-family:", ";color:", ";&-box{display:flex;flex-flow:column;align-items:flex-start;margin-bottom:3rem;}}&-links{font-size:2rem;font-family:", ";color:", ";&-box{display:flex;flex-flow:column;align-items:flex-start;margin-bottom:3rem;}}&_container-1{width:100%;height:100%;display:flex;flex-flow:row;flex:1 1 auto;justify-content:space-between;@media only screen  and (max-device-width:768px)  and (-webkit-min-device-pixel-ratio:2){margin-top:0;}}&-inner{display:flex;flex-flow:column;&-title{font-size:3rem;font-family:", ";color:", ";@media only screen  and (max-device-width:1500px)  and (-webkit-min-device-pixel-ratio:2){font-size:2rem;}}&-text{font-size:3rem;font-family:", ";color:", ";@media only screen  and (max-device-width:1500px)  and (-webkit-min-device-pixel-ratio:2){font-size:2rem;}}}&_box-1{margin-left:5rem;padding:2rem;width:70%;@media only screen  and (max-device-width:1700px)  and (-webkit-min-device-pixel-ratio:2){width:80%;}max-height:20rem;flex:1 1 auto;padding-bottom:4rem;display:flex;justify-content:space-between;align-items:flex-end;}&_box-middle{min-height:50rem;max-width:95rem;flex:1 1 auto;margin:2rem;padding:2rem;display:flex;flex-flow:row;justify-content:space-between;&-1{display:flex;flex-flow:column;width:26rem;min-height:50rem;}&-2{width:26rem;min-height:50rem;}&-3{width:15rem;min-height:50rem;}}&_box-right{height:50rem;max-width:26rem;flex:1 1 auto;margin:2rem;display:flex;flex-flow:column;align-items:center;justify-content:space-between;@media only screen  and (max-device-width:768px)  and (-webkit-min-device-pixel-ratio:2){display:none;}}&_box-left{height:50rem;max-width:26rem;flex:1 1 auto;margin:2rem;display:flex;flex-flow:column;align-items:center;justify-content:space-between;@media only screen  and (max-device-width:768px)  and (-webkit-min-device-pixel-ratio:2){display:none;}}&_box-bottom{margin-left:5rem;display:flex;flex-flow:row;align-items:flex-end;&-text{font-size:1.5rem;margin-right:2rem;}@media only screen  and (max-device-width:768px)  and (-webkit-min-device-pixel-ratio:2){align-self:flex-end;}}}"], props => props.isOpen ? '1' : '0', props => props.isOpen ? null : 'translateX(-250rem)', props => props.theme.MPLightIt, props => props.theme.white, props => props.theme.MPBlackIt, props => props.theme.white, props => props.theme.MPSemibold, props => props.theme.secondary, props => props.theme.MPLight, props => props.theme.white);
 
 /***/ }),
 

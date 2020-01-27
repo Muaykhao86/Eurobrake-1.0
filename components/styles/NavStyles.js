@@ -145,12 +145,12 @@ export const HiddenContainer = styled.div`
             align-items: flex-start;
             margin-bottom: 3rem;
         }
-
+/* 
           @media only screen 
   and (max-device-width: 768px) 
   and (-webkit-min-device-pixel-ratio: 2) { 
         font-size: 4rem;
-}
+} */
     }
    
     &-links{
@@ -158,11 +158,11 @@ export const HiddenContainer = styled.div`
         font-family: ${props => props.theme.MPBlackIt};
         color: ${props => props.theme.white};
 
-          @media only screen 
+          /* @media only screen 
   and (max-device-width: 768px) 
   and (-webkit-min-device-pixel-ratio: 2) { 
         font-size: 3rem;
-}
+} */
 
         &-box{
             display: flex;
@@ -237,7 +237,7 @@ export const HiddenContainer = styled.div`
        
     }
     &_box-middle{
-        height: 50rem;
+        min-height: 50rem;
         max-width: 95rem;
         flex: 1 1 auto;
         /* border: 10px solid white; */
@@ -253,7 +253,7 @@ export const HiddenContainer = styled.div`
             display: flex;
             flex-flow: column;
             width: 26rem;
-            height: 50rem;
+            min-height: 50rem;
             /* background-color: goldenrod; */
 
         }
@@ -261,12 +261,12 @@ export const HiddenContainer = styled.div`
         &-2{
             
             width: 26rem;
-            height: 50rem;
+            min-height: 50rem;
             /* background-color: goldenrod; */
         }
         &-3{
             width: 15rem;
-            height: 50rem;
+            min-height: 50rem;
             /* background-color: goldenrod; */
 
         }

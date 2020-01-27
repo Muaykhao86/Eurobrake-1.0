@@ -17,6 +17,7 @@ const FooterBar = styled.div`
     justify-content: space-between;
     align-items: center;
     position: absolute;
+    z-index: 10;
     bottom: 0;
     padding: 2rem;
     border-top: 5px solid ${props => props.theme.secondary};
