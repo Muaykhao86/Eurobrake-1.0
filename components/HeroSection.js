@@ -49,6 +49,12 @@ const StyledText = styled(Typography)`
         font-size: ${props => props.fs || props.sfs || '12rem'};
          @media only screen 
         and (min-device-width: 1800px) 
+        {
+        font-size: ${props => props.bfs || props.bsfs || '9rem'};
+    top: ${props => props.tt ? props.tt : '20%'};
+    }
+         @media only screen 
+        and (min-device-width: 1800px) 
         and (-webkit-min-device-pixel-ratio: 2)
         {
         font-size: ${props => props.bfs || props.bsfs || '9rem'};
