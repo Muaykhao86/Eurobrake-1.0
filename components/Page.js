@@ -116,6 +116,16 @@ const GlobalStyle = createGlobalStyle`
         height: 100%;
         box-sizing:  border-box;
         font-size: 62.5%; 
+
+          @media   only screen and (   min--moz-device-pixel-ratio: 2)      and (min-width: 1300px),
+only screen and (     -o-min-device-pixel-ratio: 2/1)    and (min-width: 1300px),
+only screen and (        min-device-pixel-ratio: 2)      and (min-width: 1300px),
+only screen and (                min-resolution: 192dpi) and (min-width: 1300px),
+only screen and (                min-resolution: 2dppx)  and (min-width: 1300px){
+font-size: 58.5%;
+
+}
+     
         
     };
     body{

@@ -210,7 +210,7 @@ class AuthorsAreaDash extends Component {
     render() {
       
         // const papers = '';
-        const monthNames = ["January", "Febuary", "March", "April", "June", "July", "August", "September", "October", "November", "December"]
+        const monthNames = ["January", "Febuary", "March", "April", "May" "June", "July", "August", "September", "October", "November", "December"]
         const { editForm, formType, values } = this.state;
         const { firstname } = this.props.authorData.author;
         const { papers } = this.props.authorData;
@@ -337,8 +337,8 @@ class AuthorsAreaDash extends Component {
                                                                             let niceDone = this.pad(dateDone);
                                                                             {/* let prettierDate = this.prettyDate(niceDate); */}
                                                                             {/* let prettierDone = this.prettyDate(niceDone); */}
-                                                                            let niceMonth = monthNames[taskMonth - 1];
-                                                                            let niceMonthDone = monthNames[monthDone - 1];
+                                                                            let niceMonth = monthNames[taskMonth];
+                                                                            let niceMonthDone = monthNames[monthDone];
 
                                                                             // todo CHECK THE RIGHT DATES!
                                                                 return (
