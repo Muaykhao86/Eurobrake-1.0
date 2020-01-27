@@ -122,6 +122,30 @@ export const HiddenContainer = styled.div`
         null : 'translateX(-250rem)'};
     min-width: 99vw;
     min-height: 99vh;
+
+         
+     @media   only screen and (   min--moz-device-pixel-ratio: 2)      and (min-width: 1300px),
+only screen and (     -o-min-device-pixel-ratio: 2/1)    and (min-width: 1300px),
+only screen and (        min-device-pixel-ratio: 2)      and (min-width: 1300px),
+only screen and (                min-resolution: 192dpi) and (min-width: 1300px),
+only screen and (                min-resolution: 2dppx)  and (min-width: 1300px){
+ position: absolute;
+    right: -20rem;
+    top: -5rem;
+    display:flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-flow: column;
+    padding: 2rem;
+    transition: all .8s ease-in-out;
+    opacity: ${props => props.isOpen ? 
+    '1' : '0'};
+    transform: ${props => props.isOpen ?
+        null : 'translateX(-250rem)'};
+    min-width: 99vw;
+    min-height: 99vh;
+
+    }
          @media only screen 
         and (max-device-width: 768px) 
         and (-webkit-min-device-pixel-ratio: 2) { 

@@ -55,7 +55,7 @@ only screen and (                min-resolution: 192dpi) and (min-width: 1300px)
 only screen and (                min-resolution: 2dppx)  and (min-width: 1300px){
         
         font-size: ${props => props.tfs || '9rem'};
-    top: ${props => props.tt ? props.tt : '20%'};
+    top: ${props => props.tt ? props.tt : '30%'};
     }
          @media only screen 
         and (min-device-width: 1800px) 

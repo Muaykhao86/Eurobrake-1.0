@@ -126,8 +126,15 @@ const StyledProfile = styled.div`
 export default () => (
     <>
         <HeroSection
+        scolor="#F9B721"
+
         src="https://live.staticflickr.com/65535/48016158113_214a7dde8c_b.jpg"
-            max="57%"
+        tt="35%"
+        sfs="8rem"
+         tsfs="5rem"
+         tst="60%"
+         mst="65%"
+         secondary="Meet the people behind the conference"
         >
             About EuroBrake
     </HeroSection>

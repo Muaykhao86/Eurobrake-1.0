@@ -34,18 +34,18 @@ export default class Nav extends Component {
     }
 
 
-componentDidMount() {
-  this.updateWindowDimensions();
-  window.addEventListener('resize', this.updateWindowDimensions);
-}
+// componentDidMount() {
+//   this.updateWindowDimensions();
+//   window.addEventListener('resize', this.updateWindowDimensions);
+// }
 
-componentWillUnmount() {
-  window.removeEventListener('resize', this.updateWindowDimensions);
-}
+// componentWillUnmount() {
+//   window.removeEventListener('resize', this.updateWindowDimensions);
+// }
 
-updateWindowDimensions = () => {
-  this.setState({ width: window.innerWidth, height: window.innerHeight });
-}
+// updateWindowDimensions = () => {
+//   this.setState({ width: window.innerWidth, height: window.innerHeight });
+// }
 
     handleClick = () => {
         this.setState(prev => ({ isOpen: !prev.isOpen }));

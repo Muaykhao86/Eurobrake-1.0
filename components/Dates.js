@@ -78,7 +78,7 @@ const StyledFixedDates = styled.div`
     position: fixed;
     z-index: 1;
     top: 14vh;
-    right: ${props => props.RightHide ? '-20rem' : '0'};
+    right: ${props => props.RightHide ? '-21rem' : '0'};
     width: 25rem;
     max-height: 50rem; 
     min-height: 47rem;
@@ -190,7 +190,7 @@ const StyledFixedBox = styled.div`
     position: fixed;
     z-index: 1;
     top: 14vh;
-    left: ${props => props.Hide ? '-20rem' : '0'};
+    left: ${props => props.Hide ? '-21rem' : '0'};
     width: 25rem;
     max-height: 50rem; 
     min-height: 47rem;
