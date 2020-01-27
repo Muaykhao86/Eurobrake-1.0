@@ -117,6 +117,7 @@ export async function SendFile({ values, url, csrf }) {
 export async function SendForm({ csrf, values, url, FT }) {
      values && values.accept && values.accept === true ? values.accept = 'yes' : null;
     values && values.copyright && values.copyright === true ? values.copyright = 'yes' : null;
+    console.log('sendform',values)
     const form = JSON.stringify(values);
     const { logintoken } = cookie.get();
         console.log({url, form, FT, csrf});
