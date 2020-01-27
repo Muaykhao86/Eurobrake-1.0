@@ -49,7 +49,7 @@ export const Permissions = (props) => {
                  await setLoading(true);
                 values.__csrf_token = csrf
                   await  console.log('submitting')
-                  let res =  await SendFile({values, url, csrf});
+                  let res =  await SendForm({values, url, csrf});
                   let data = await  res;
                   let dataStatus= await  data && data.status;
                   setStatus(dataStatus)

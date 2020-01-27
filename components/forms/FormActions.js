@@ -73,6 +73,7 @@ export async function SendFile({ values, url, csrf }) {
     values.accept && values.accept === true ? values.accept = 'yes' : null;
     values.copyright && values.copyright === true ? values.copyright = 'yes' : null;
     
+    
     Object.keys(values).forEach(key => {   
       formData.append(key, values[key])});
     

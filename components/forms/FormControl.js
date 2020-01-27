@@ -60,8 +60,16 @@ export const LoginSchema = yup.object().shape({
         
 export const AbstractSchema = yup.object().shape({
     author_title: yup.string().nullable(),
-    author_firstname: yup.string().required('Required'),
-    author_lastname: yup.string().required('Required'),
+    author_firstname: yup.string().test(
+                'Titlecase',
+                'name must be in title case!',
+               value =>  value[0] == value[0].toLowercase 
+            ).required('Required'),
+    author_lastname: yup.string().test(
+                'Titlecase',
+                'name must be in title case!',
+               value =>  value[0] == value[0].toLowercase 
+            ).required('Required'),
     author_email: yup.string().required('Required')
         .email(),
     author_jobtitle: yup.string().required('Required'),
@@ -88,9 +96,17 @@ export const AbstractSchema = yup.object().shape({
     secondary_authors: yup.array()
         .of(yup.object().shape({
             title: yup.string().nullable(),
-            firstname: yup.string()
+            firstname: yup.string().test(
+                'Titlecase',
+                'name must be in title case!',
+               value =>  value[0] != value[0].toLowercase 
+            )
                 .required('Required'),
-            lastname: yup.string()
+            lastname: yup.string().test(
+                'Titlecase',
+                'name must be in title case!',
+               value =>  value[0] != value[0].toLowercase 
+            )
                 .required('Required'),
             email: yup.string()
                 .email()
