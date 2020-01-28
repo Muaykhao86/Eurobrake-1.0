@@ -50,12 +50,12 @@ const Content = styled.div`
     border: none;
 
 `;
+    
+
+export default function Registration (props) {
 
     const {url} = props;// ? GETTIN FROM GET INITIAL PROPS
     const IF_URL = decodeURIComponent(url);
-    
-
-export default function Registration () {
 
 
 return(
