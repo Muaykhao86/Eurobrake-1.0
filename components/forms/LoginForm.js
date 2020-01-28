@@ -71,6 +71,7 @@ export const LoginForm = () => {
                             />
                         </div>
                         :
+                        <>
                         <div className="form-field">
                             <label
                                 htmlFor="username"
@@ -103,6 +104,7 @@ export const LoginForm = () => {
                                 component={TextField}
                             />
                         </div>
+                        </>
                         }
                           {Loading ?  <CircularProgress size={24} className="loading"/> : 
                         <Button 
