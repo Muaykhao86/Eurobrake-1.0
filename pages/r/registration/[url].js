@@ -51,6 +51,7 @@ const Content = styled.div`
 
 `;
     
+    let fired = false;
 
 export default function Registration (props) {
 
@@ -84,9 +85,8 @@ return(
 
         
 Registration.getInitialProps = async context => {
-    await let fired = false;
-   await  fired = true
-    if(fired){
+    if(!fired){
+   fired = true
    await  const { url } = context.query;
     await return url
     }
