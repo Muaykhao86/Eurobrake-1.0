@@ -55,8 +55,10 @@ const Content = styled.div`
     const IF_URL = decodeURIComponent(url);
     
 
-export default function Registration () => (
+export default function Registration () {
 
+
+return(
 
     <>
      <HeroSection 
@@ -76,7 +78,9 @@ export default function Registration () => (
 </StyledPage>    
 </>
 
-) 
+)
+}
+ 
 
         
 Registration.getInitialProps = async context => {
