@@ -10,9 +10,7 @@ import { Typography } from '@material-ui/core';
 import {ResetSchema} from './FormControl';
 
 
-// async (values, actions) => {
-//                 await SendForm({ values, url })
-//             }
+// *Reset form is fine from here
 
 export const ResetForm = (props) => {
     const [Toggle, setToggle] = useState(false);
