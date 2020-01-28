@@ -333,7 +333,7 @@ class AuthorsAreaDash extends Component {
                                             </div>
                                                         <Table className="" aria-label="simple table">
                                                             <TableBody style={{width: '100%'}}>
-                                                                 <TableRow key='titles'>
+                                                                 {/* <TableRow key='titles'>
                                                                        
                                                                         <StyledCell align="left" className="" style={{width: '25%'}}>
                                                                                 <Typography gutterBottom className="paper-text"  style={{fontSize: '1rem'}} >Status</Typography>
@@ -348,7 +348,7 @@ class AuthorsAreaDash extends Component {
                                                                         <StyledCell align="left" className="" style={{width: '25%'}}>
                                                                                 <Typography gutterBottom className="paper-text" style={{fontSize: '1rem'}}  >Due</Typography>
                                                                         </StyledCell>
-                                                                    </TableRow>
+                                                                    </TableRow> */}
                                                                
                                                                
                                                                 {paper.tasks && paper.tasks.map(task => {
@@ -377,7 +377,7 @@ class AuthorsAreaDash extends Component {
                                                                             <Link
                                                                                 href="/t/[id]/[taskType]"
                                                                                 as={`/t/${paper.papercode}/${task.type}`} >
-                                                                                <Typography gutterBottom className="paper-text" style={{width: '75%'}} >{task.task}</Typography>
+                                                                                <Typography gutterBottom className="paper_task-text" style={{width: '75%'}} >{task.task}</Typography>
                                                                             </Link></StyledCell>
                                                                         <StyledCell align="left" className="paper_task-date" style={{width: '26%'}}>{task.done == null ? 'Due' : niceDone + " " + niceMonthDone + " " + yearDone }</StyledCell>
                                                                         <StyledCell align="left" className="paper_task-date" style={{width: '26%'}}>{niceDate + " " + niceMonth + " " + taskYear}</StyledCell>
