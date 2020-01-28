@@ -83,8 +83,12 @@ return(
  
 
         
-Registration.getInitialProps =  ({query}) => {
-    const { url } = query;
-   console.log({query})
+Registration.getInitialProps = await context => {
+    let fired = false;
+    fired = true
+    if(fired){
+
+    const { url } = context.query;
             return url
+    }
 }
