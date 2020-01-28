@@ -8,7 +8,7 @@ import { TextField, SimpleFileUpload, CheckboxWithLabel, Checkbox} from 'formik-
 import { Button } from '../../Button';
 import { SendForm } from '../FormActions';
 import { StyledTask } from '../TaskStyles';
-import {BioSchema, countWords} from '../TaskControl';
+// import {BioSchema, countWords} from '../TaskControl';
 
 
 
@@ -88,7 +88,7 @@ export const Bio = (props) => {
                                  component="textarea"
                              />
                             {errors.biography && <label style={{position: 'absolute', bottom: '-1rem', right: '1rem', color: '#ff0000', fontSize: '1.5rem'}}>{errors.biography}</label>}
-                            {errors.biography && values.biography && <label style={{position: 'absolute', bottom: '-3rem', right: '1rem', color: '#ff0000', fontSize: '1.5rem'}}>{'Words' + ' ' + countWords(values.biography) }</label>}
+                            {/* {errors.biography && values.biography && <label style={{position: 'absolute', bottom: '-3rem', right: '1rem', color: '#ff0000', fontSize: '1.5rem'}}>{'Words' + ' ' + countWords(values.biography) }</label>} */}
                             
                          </div>
                        

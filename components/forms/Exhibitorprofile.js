@@ -306,7 +306,7 @@ export const Exhibitorprofile = ({editPaper = false}) => {
                                 br="100rem"
                                 style={{ margin: ".5rem 0" }}
                                 fontSize="1.7rem">Submit</Button>
-                        {console.log('main', values.is_presenting_exhibitor, 'second', values.secondary_exhibitors)}
+                        {/* {console.log('main', values.is_presenting_exhibitor, 'second', values.secondary_exhibitors)} */}
                     </StyledForm>
                 )
             }}

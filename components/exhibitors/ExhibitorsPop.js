@@ -162,11 +162,11 @@ const selectedSvg = `#prefix__booth-${booth}`;
     setOpen(false);
   };
 
-  const handleSvg = () => {
-    console.log({booth});
-    // const svg = document.querySelector("#MapBox");
+  // const handleSvg = () => {
+  //   // console.log({booth});
+  //   // const svg = document.querySelector("#MapBox");
 
-    }
+  //   }
   //Image handler Component
   const addDefaultSrc = (e) => {
     e.target.src = "/images/logo.png"
@@ -246,7 +246,7 @@ const selectedSvg = `#prefix__booth-${booth}`;
                   <Typography className="ModalBooth" id="server-modal-description">Booth #{booth}</Typography>
                 </Grid>
                 <Grid item xs={6}>
-                  <a onClick={() => console.log('HEY')}><Typography className="ModalMapTitle" id="server-modal-description" style={{ textAlign: 'end' }}>Click map for full screen</Typography></a>
+                  <a onClick={() => console.log()}><Typography className="ModalMapTitle" id="server-modal-description" style={{ textAlign: 'end' }}>Click map for full screen</Typography></a>
                 </Grid>
                 <Grid item xs={12}>
                   <StyledMapBox width={svgWidth} height={svgHeight} full={full}>

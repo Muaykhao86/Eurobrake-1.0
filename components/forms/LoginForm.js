@@ -11,9 +11,6 @@ import {LoginSchema} from './FormControl';
 import Link from 'next/link';
 
 
-// async (values, actions) => {
-//                 await SendForm({ values, url })
-//             }
 
 export const LoginForm = () => {
     const [Loading, setLoading] = useState(false);
@@ -30,7 +27,7 @@ export const LoginForm = () => {
     };
 
     const url = Reset ? 'https://prelude.eurobrake.net/authors/reset' : 'https://prelude.eurobrake.net/authors/login';
-    console.log({url})
+    // console.log({url})
     return (
         <Formik
             initialValues={Reset ? emptyReset : emptyInitial}
@@ -41,9 +38,9 @@ export const LoginForm = () => {
                 const onSubmit = async () => {
                  await setLoading(true);
                    const res = await SendForm({url, values});
-                   const data = await res && res.status;  
-                   console.log({status})
-                  data && setStatus(data) && setToggle(Toggle => !Toggle)
+                   const data = await res  ;
+                    const dataStatus = await data && data.Status;
+                  await setStatus(dataStatus)
                     let result = async () => {
                   await  setLoading(false)
                   await setToggle(true)
