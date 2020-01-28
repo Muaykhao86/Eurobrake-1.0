@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, Component } from 'react';
 import styled from 'styled-components';
 
+
 export const SmlLogo = (props) => (
     <svg cd width={props.width} height={props.height} viewBox="0 0 96.536 96.627" {...props}>
       <defs>

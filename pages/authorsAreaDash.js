@@ -413,7 +413,7 @@ AuthorsAreaDash.getInitialProps = async ctx => {
     let count = 0;
     await  count ++
     if(count < 3) {
-     await process.browser ? Router.push('/authors') : ctx.res.writeHead(301, { Location: '/authors' })
+     await process.browser ? Router.push('/authorsArea') : ctx.res.writeHead(301, { Location: '/authorsArea' })
     }else{
         await logout()
     }

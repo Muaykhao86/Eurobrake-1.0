@@ -32,11 +32,12 @@ export const LoginForm = () => {
             initialValues={Reset ? emptyReset : emptyInitial}
             enableReinitialize
         >
-            {({ values, handleChange, validateForm }) => {
+            {({ values, handleChange, validateForm, errors }) => {
 
                 const onSubmit = async () => {
                  await setLoading(true);
                    const res = await SendForm({url, values});
+                    console.log({errors, values})
                    const data = await res  ;
                     const dataStatus = await data && data.Status;
                   await setStatus(dataStatus)
