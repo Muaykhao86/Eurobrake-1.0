@@ -18,7 +18,7 @@ export const LoginForm = () => {
     const [Toggle, setToggle] = useState(false);
     const [Status, setStatus] = useState(null);
     const emptyReset={
-        username: '',
+        email: '',
     };
 
     const emptyInitial = {
@@ -53,14 +53,32 @@ export const LoginForm = () => {
                     <StyledForm>
                         {Reset && <Typography className="form-title">Please enter your email to reset your password</Typography>}
 
+                        {Reset ?  
                         <div className="form-field">
                             <label
-                                htmlFor="label"
+                                htmlFor="email"
                                 className="form-label">
                                 Email:
                         </label>
                             <Field
                                 type="email"
+                                className="form-input"
+                                onClick={handleChange}
+                                value={values.email}
+                                style={{ color: '#134381' }}
+                                name="email"
+                                component={TextField}
+                            />
+                        </div>
+                        :
+                        <div className="form-field">
+                            <label
+                                htmlFor="username"
+                                className="form-label">
+                                Email:
+                        </label>
+                            <Field
+                                type="username"
                                 className="form-input"
                                 onClick={handleChange}
                                 value={values.username}
@@ -69,10 +87,9 @@ export const LoginForm = () => {
                                 component={TextField}
                             />
                         </div>
-                        {!Reset &&
                         <div className="form-field">
                             <label
-                                htmlFor="label"
+                                htmlFor="password"
                                 className="form-label">
                                 Password:
                         </label>
