@@ -88,6 +88,7 @@ Registration.getInitialProps = context => {
    const { url } = context.query;
     if(!fired){
    fired = true
-    return url
+   console.log('gip', context)
+    return {url}
     }
 }
