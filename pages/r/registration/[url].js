@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components';
-import HeroSection from '../components/HeroSection';
-import {FixedDates, FixedBox} from '../components/Dates';
+import HeroSection from '../../../components/HeroSection';
+import {FixedDates, FixedBox} from '../../../components/Dates';
 
 
 
