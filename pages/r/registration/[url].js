@@ -84,10 +84,10 @@ return(
  
 
         
-Registration.getInitialProps = async context => {
+Registration.getInitialProps = context => {
+   const { url } = context.query;
     if(!fired){
    fired = true
-   await  const { url } = context.query;
-    await return url
+    return url
     }
 }
