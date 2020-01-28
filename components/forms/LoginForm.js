@@ -36,7 +36,7 @@ export const LoginForm = () => {
 
                 const onSubmit = async () => {
                  await setLoading(true);
-                 let FT = {Reset ? 'reset' : 'login'}
+                 let FT = Reset ? 'reset' : 'login';
                    const res = await SendForm({url, values, FT});
                    const data = await res  ;
                     const dataStatus = await data && data.Status;

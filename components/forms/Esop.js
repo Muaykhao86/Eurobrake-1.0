@@ -573,7 +573,6 @@ export const Esop = (props) => {
                                 component="textarea"
                             />
                             {errors.personal_statement && <label style={{position: 'absolute', bottom: '2rem', right: '1rem', color: '#ff0000', fontSize: '1.5rem'}}>{errors.personal_statement}</label>}
-                            {/* {errors.personal_statement && values.personal_statement &&  values.personal_statement.match(/[\w\d\’\'-]+/gi) && <label style={{position: 'absolute', bottom: '0', right: '1rem', color: '#ff0000', fontSize: '1.5rem'}}>{'Words' + ' ' + values.personal_statement.match(/[\w\d\’\'-]+/gi).length}</label>} */}
                         
                         </div>
                         <div className="form-field_file">
