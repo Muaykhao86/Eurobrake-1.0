@@ -83,7 +83,7 @@ return(
  
 
         
-Registration.getInitialProps =  {query}=> {
+Registration.getInitialProps =  ({query}) => {
     const { url } = query;
    console.log({query})
             return url
