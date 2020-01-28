@@ -85,6 +85,6 @@ return(
         
 Registration.getInitialProps = async context => {
     const { url } = context.query;
-   console.log?(context)
+  await console.log(context)
             return url
 }
