@@ -86,6 +86,7 @@ const StyledFixedDates = styled.div`
     padding: 1rem;
     padding-left: 1.5rem;
     border-left: 5px solid ${props => props.theme.secondary};
+        transition: all .3s ease-in;
     
 
     display: flex;
@@ -153,9 +154,9 @@ const StyledFixedDates = styled.div`
 // * IF I PUT IT IN I NEED TO HACVE IT TRIGGER AFTER THE HERO IMAGE
 export const BounceFixedDates = withReveal(FixedDates, <Bounce left/>);
 
-export function FixedDates() {
+export function FixedDates(props) {
 
-const [RightHide, setRightHide] = useState(false);
+const [RightHide, setRightHide] = useState(true);
 
     return (
         
@@ -176,6 +177,9 @@ const [RightHide, setRightHide] = useState(false);
             <Typography gutterBottom as="p"  className="Dates-text">Deadline for speakers to register</Typography>
             <Typography gutterBottom as="h1"  className="Dates-date">24 May 2020</Typography>
             <Typography gutterBottom as="p" className="Dates-text" >Deadline to upload PPTs for on-site presentation</Typography>
+             <Link href="/pricing">
+                <Button  br="500rem" padding="1rem" fontSize="1.5rem" style={{ color: '#FFF', fontSize: '1.5rem', margin: '0',marginTop: '1rem',}}>Pricing/Registration</Button>
+            </Link>
             </>
             }
             </div>
@@ -198,6 +202,7 @@ const StyledFixedBox = styled.div`
     padding: 1rem;
     padding-right: 1.5rem;
     border-right: 5px solid ${props => props.theme.secondary};
+        transition: all .3s ease-in;
     
 
     display: flex;
@@ -284,7 +289,7 @@ const StyledFixedBox = styled.div`
 `;
 
 export function FixedBox() {
-const [Hide, setHide] = useState(false);
+const [Hide, setHide] = useState(true);
 console.log(Hide)
     return (
         
@@ -298,8 +303,8 @@ console.log(Hide)
             <Typography gutterBottom as="h1"  className="Box-date"> Europe's braking technology conference & exhibition</Typography>
             <Typography gutterBottom as="p" className="Box-text" >2-4 June 2020,</Typography>
             <Typography gutterBottom as="p" className="Box-text" >CCIB, Barcelona, Spain</Typography>
-            <Link href="/exhibitorsRegistration">
-                <Button br="500rem" padding="1rem " fontSize="1rem" style={{marginTop: '1rem', color: '#FFF'}}>Pricing/Registration</Button>
+            <Link href="/pricing">
+                <Button br="500rem" padding="1rem " fontSize="1.5rem" style={{marginTop: '1rem', color: '#FFF', }}>Pricing/Registration</Button>
             </Link>           
             <div className="logo_box">
                 <SmlLogo width="10rem" height="10rem"/>
@@ -384,7 +389,7 @@ export function Box(props) {
             <Typography gutterBottom as="h1"  className="Box-date"> Europe's braking technology conference & exhibition</Typography>
             <Typography gutterBottom as="p" className="Box-text" >2-4 June 2020,</Typography>
             <Typography gutterBottom as="p" className="Box-text" >CCIB, Barcelona, Spain</Typography>
-            <Link href="/exhibitorsRegistration">
+            <Link href="/pricing">
                 <Button onClick={props.handleClick} br="500rem" padding="1rem" fontSize="1.5rem" style={{ color: '#FFF', fontSize: '1.5rem', margin: '0',marginTop: '1rem',}}>Pricing/Registration</Button>
             </Link>           
             <div className="logo_box">

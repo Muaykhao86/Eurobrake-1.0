@@ -7,9 +7,9 @@ import { Button } from './Button';
 import withReveal from 'react-reveal/withReveal';
 
 const AboutCard = () => (
-    <Card right>
+    <Card left>
                     <h1>Early bird tickets are on sale now</h1>
-                    <Link href="/exhibitorsRegistration">
+                    <Link href="/pricing">
                     <Button br="500rem">Pricing/Registration</Button>
                     </Link>
                 </Card>

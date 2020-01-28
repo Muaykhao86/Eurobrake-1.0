@@ -1,5 +1,7 @@
 import React from 'react'
 import styled from 'styled-components';
+import ReactPlayer from 'react-player'
+import {Button} from '../components/Button';
 import HeroSection from '../components/HeroSection';
 import Typography from '@material-ui/core/Typography';
 import ExpandMoreOutlinedIcon from '@material-ui/icons/ExpandMoreOutlined';
@@ -57,6 +59,27 @@ const StyledAbout = styled.div`
     &-bold{
         font-family: ${props => props.theme.MPBold};
     }
+    }
+
+.video-box{
+        /* display: flex; */
+      
+  position: relative;
+  padding-top: 56.25%  /*Player ratio: 100 / (1280 / 720) */
+}
+
+.react-player {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+   
+    .margin-top5{
+        margin-top: 5rem;
+
+    }
+    .margin-bottom1.5{
+        margin-bottom: 1.5rem;
     }
 `;
 
@@ -142,6 +165,9 @@ export default () => (
             <FixedDates/>
             <FixedBox/>
             <StyledAbout >
+                 <div className="video-box margin-bottom1.5 margin-top5">
+            <ReactPlayer className="react-player" url="https://www.youtube.com/embed/r58fUZeiO64" playing width="100%" height="100%" />
+            </div>
                 <Typography className="about-title">Welcome</Typography>
                 <Typography gutterBottom className="about">The world’s largest conference and exhibition dedicated to braking technology.</Typography>
                 <Typography gutterBottom className="about">EuroBrake was created in 2012 to address the profound changes in the demands made by the braking industry’s customers and end-users, and to provide a forum for companies, engineers and academics working in the area of brake technology to come together to share ideas. </Typography>
@@ -186,6 +212,15 @@ export default () => (
                         <li><Typography gutterBottom className="about">Sales and purchasing</Typography></li>
                     </ul>
                 </ListBox>
+         <div className="button_box">
+            <Button
+            target="_blank" href="https://www.flickr.com/photos/eurobrake/albums/72157708965910476" 
+            background="#134381"
+            br="100rem"
+            bcolor="#134381"
+            style={{margin: '3.5rem 0', width: '53%'}}
+            >View the Eurobrake 2019 image gallery</Button>
+            </div>
                 <Typography className="about-title">Organisation</Typography>
                 <Typography gutterBottom className="about">EuroBrake is organised by FISITA, the membership organisation that supports the automotive and mobility systems sector in its quest to advance technological development. </Typography>
                 <Typography gutterBottom className="about">Having delivered against this mission for every generation of engineers since 1948, we are uniquely placed to promote excellence in mobility engineering and the development of safe, sustainable and affordable mobility solutions.</Typography>

@@ -7,7 +7,7 @@ import { Button } from './Button';
 import withReveal from 'react-reveal/withReveal';
 
 const LocationCard = () => (
-    <Card left>
+    <Card right>
                     <h1>Find out more about Barcelona</h1>
                     <Link href="/welcome">
                     <Button br="500rem">Discover</Button>

@@ -27,7 +27,6 @@ export const LoginForm = () => {
     };
 
     const url = Reset ? 'https://prelude.eurobrake.net/authors/reset' : 'https://prelude.eurobrake.net/authors/login';
-    // console.log({url})
     return (
         <Formik
             initialValues={Reset ? emptyReset : emptyInitial}

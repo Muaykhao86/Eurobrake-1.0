@@ -25,8 +25,7 @@ const FooterBar = styled.div`
 
     .ftr_top-box{
         display: flex;
-        flex-flow: row wrap;
-        margin-bottom: 1rem;
+        flex-flow: column;
     }
 
     .heading-copy{
@@ -143,6 +142,13 @@ function Footer() {
 
                        
                     <a href="https://www.fisita.com/"><FLogoWhite width="16rem" height="5rem" /></a>
+                      
+            <Button
+            target="_blank" href="https://www.flickr.com/photos/eurobrake/albums/72157708965910476" 
+            background="#134381"
+            br="100rem"
+            style={{margin: '2rem 0', fontSize: '1.5rem'}}
+            >View the Eurobrake 2019 image gallery</Button>
                     </div>
 
                         {/* <div className="ftr_newsletter-box" >
@@ -157,7 +163,7 @@ function Footer() {
                         <Link href="/privacyPolicy"><a >Privacy Policy</a></Link>
                     </div>
                     <div className="" style={{ display: 'flex', justifyContent: 'center', alignItems: 'baseline', height: '3rem' }}>
-                        <Typography className="heading-copy" style={{ marginRight: '8rem' , merginTop: '2rem'}}>Copyright © 2020 FISITA</Typography>
+                        <Typography className="heading-copy" style={{ marginRight: '8rem' , }}>Copyright © 2020 FISITA</Typography>
                     </div>
                 </div>
                 <div className="ftr_container-right">

@@ -179,6 +179,7 @@ const svgHeight = full ? '100vh' : '';
                 <div className="button_box">
 
                     <Button
+                    target="_blank"
                     href="https://www.eurobrake.net/exhibition/brochure.pdf"
                         background="#134381"
                         br="100rem"
@@ -214,6 +215,7 @@ const svgHeight = full ? '100vh' : '';
                 <div className="button_box">
                     
                     <Button
+                     target="_blank"
                         href="https://www.fisita.com/documents/EuroBrake_Exhibition_Terms_Conditions_2020.pdf"
                         background="#134381"
                         br="100rem"
@@ -222,7 +224,7 @@ const svgHeight = full ? '100vh' : '';
                     >DOWNLOAD THE EXHBITOR TERMS & CONDITIONS</Button>
                 </div>
                 <Typography gutterBottom className="Exhibit-title">View the event floor plan</Typography>
-                <a href="https://www.fisita.com/documents/EB20_Floor_Plan.pdf"><Typography gutterBottom className="Exhibit">Click to view the floor plan</Typography></a>
+                <a  target="_blank" href="https://www.fisita.com/documents/EB20_Floor_Plan.pdf"><Typography gutterBottom className="Exhibit">Click to view the floor plan</Typography></a>
 
                 {/* <StyledFloorPlan height={svgHeight} width={svgWidth} full={full}>
                     <EBFloorPlan height={svgHeight} width={svgWidth} onClick={() => setFull(full => !full)}/>

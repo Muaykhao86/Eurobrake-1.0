@@ -12,11 +12,11 @@
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],
-    "/authorsArea": [
+    "/esop": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],
-    "/tempEsop": [
+    "/pricing": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ]

@@ -21,7 +21,23 @@ const StyledHero = styled.div`
     }
     
 
-
+    .white-reveal{
+position: absolute;
+bottom: -5rem;
+right: 0;
+        width: 28rem;
+        height: 5rem;
+        background: linear-gradient(180deg, #FFF,  rgba(255,0,0,0) 70.71%);
+    }
+    
+    .white-reveal_left{
+position: absolute;
+bottom: -5rem;
+left: 0;
+        width: 28rem;
+        height: 5rem;
+        background: linear-gradient(180deg, #FFF,  rgba(255,0,0,0) 70.71%);
+    }
     
     .hero-img{
         max-height: 80%;
@@ -112,6 +128,8 @@ export default function HeroSection(props) {
             <div className="banner">
                 {props.banner ? <props.banner /> : <CountDownBanner />}
             </div>
+            <div className="white-reveal"></div>
+            <div className="white-reveal_left"></div>
             {/* </div> */}
         </StyledHero>
     )

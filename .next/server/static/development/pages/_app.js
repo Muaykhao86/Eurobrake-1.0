@@ -266,26 +266,26 @@ function Dates(props) {
 const StyledFixedDates = styled_components__WEBPACK_IMPORTED_MODULE_4___default.a.div.withConfig({
   displayName: "Dates__StyledFixedDates",
   componentId: "sc-2eodxj-1"
-})(["position:fixed;z-index:1;top:14vh;right:", ";width:25rem;max-height:50rem;min-height:47rem;background-color:", ";padding:1rem;padding-left:1.5rem;border-left:5px solid ", ";display:flex;@media only screen  and (max-device-width:1000px)  and (-webkit-min-device-pixel-ratio:2){display:none;}flex-flow:column;justify-content:space-between;flex:1 1 auto;.hide-box-dates{border:2px solid #FFF;position:absolute;z-index:-100;bottom:-2rem;left:-3rem;}.Dates{&-title{font-size:2rem;font-family:", ";color:", ";align-self:flex-start;max-width:90%;&_hide{font-size:2.5rem;font-family:", ";color:", ";align-self:flex-start;max-width:100%;position:absolute;left:-7.9rem;top:44%;transform:rotate(90deg);}}&-date{font-size:1.5rem;font-family:", ";color:", ";align-self:flex-start;max-width:90%;}&-text{font-size:1.5rem;font-family:", ";color:", ";align-self:flex-start;max-width:90%;}}"], props => props.RightHide ? '-21rem' : '0', props => props.theme.primary, props => props.theme.secondary, props => props.theme.MPBlack, props => props.theme.white, props => props.theme.MPBlack, props => props.theme.white, props => props.theme.MPBold, props => props.theme.white, props => props.theme.MPLightIt, props => props.theme.white); // * IF I PUT IT IN I NEED TO HACVE IT TRIGGER AFTER THE HERO IMAGE
+})(["position:fixed;z-index:1;top:14vh;right:", ";width:25rem;max-height:50rem;min-height:47rem;background-color:", ";padding:1rem;padding-left:1.5rem;border-left:5px solid ", ";transition:all .3s ease-in;display:flex;@media only screen  and (max-device-width:1000px)  and (-webkit-min-device-pixel-ratio:2){display:none;}flex-flow:column;justify-content:space-between;flex:1 1 auto;.hide-box-dates{border:2px solid #FFF;position:absolute;z-index:-100;bottom:-2rem;left:-3rem;}.Dates{&-title{font-size:2rem;font-family:", ";color:", ";align-self:flex-start;max-width:90%;&_hide{font-size:2.5rem;font-family:", ";color:", ";align-self:flex-start;max-width:100%;position:absolute;left:-7.9rem;top:44%;transform:rotate(90deg);}}&-date{font-size:1.5rem;font-family:", ";color:", ";align-self:flex-start;max-width:90%;}&-text{font-size:1.5rem;font-family:", ";color:", ";align-self:flex-start;max-width:90%;}}"], props => props.RightHide ? '-21rem' : '0', props => props.theme.primary, props => props.theme.secondary, props => props.theme.MPBlack, props => props.theme.white, props => props.theme.MPBlack, props => props.theme.white, props => props.theme.MPBold, props => props.theme.white, props => props.theme.MPLightIt, props => props.theme.white); // * IF I PUT IT IN I NEED TO HACVE IT TRIGGER AFTER THE HERO IMAGE
 
 const BounceFixedDates = react_reveal_withReveal__WEBPACK_IMPORTED_MODULE_7___default()(FixedDates, __jsx(react_reveal_Bounce__WEBPACK_IMPORTED_MODULE_9___default.a, {
   left: true,
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 154
+    lineNumber: 155
   },
   __self: undefined
 }));
-function FixedDates() {
+function FixedDates(props) {
   const {
     0: RightHide,
     1: setRightHide
-  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false);
+  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(true);
   return __jsx(StyledFixedDates, {
     RightHide: RightHide,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 162
+      lineNumber: 163
     },
     __self: this
   }, __jsx("div", {
@@ -294,7 +294,7 @@ function FixedDates() {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 163
+      lineNumber: 164
     },
     __self: this
   }, RightHide ? __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_6__["Typography"], {
@@ -303,7 +303,7 @@ function FixedDates() {
     className: "Dates-title_hide",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 165
+      lineNumber: 166
     },
     __self: this
   }, "Important Dates") : __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_6__["Typography"], {
@@ -312,7 +312,7 @@ function FixedDates() {
     className: "Dates-title",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 168
+      lineNumber: 169
     },
     __self: this
   }, "Important Dates"), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_6__["Typography"], {
@@ -321,7 +321,7 @@ function FixedDates() {
     className: "Dates-date",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 171
+      lineNumber: 172
     },
     __self: this
   }, "12 April 2020 "), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_6__["Typography"], {
@@ -330,7 +330,7 @@ function FixedDates() {
     className: "Dates-text",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 172
+      lineNumber: 173
     },
     __self: this
   }, "Final deadline for modifications to technical papers"), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_6__["Typography"], {
@@ -339,7 +339,7 @@ function FixedDates() {
     className: "Dates-date",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 173
+      lineNumber: 174
     },
     __self: this
   }, "01 May 2020"), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_6__["Typography"], {
@@ -348,7 +348,7 @@ function FixedDates() {
     className: "Dates-text",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 174
+      lineNumber: 175
     },
     __self: this
   }, "Deadline for draft oral-only presentations, posters and presentations associated with a technical paper"), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_6__["Typography"], {
@@ -357,7 +357,7 @@ function FixedDates() {
     className: "Dates-date",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 175
+      lineNumber: 176
     },
     __self: this
   }, "01 May 2020"), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_6__["Typography"], {
@@ -366,7 +366,7 @@ function FixedDates() {
     className: "Dates-text",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 176
+      lineNumber: 177
     },
     __self: this
   }, "Deadline for speakers to register"), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_6__["Typography"], {
@@ -375,7 +375,7 @@ function FixedDates() {
     className: "Dates-date",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 177
+      lineNumber: 178
     },
     __self: this
   }, "24 May 2020"), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_6__["Typography"], {
@@ -384,21 +384,43 @@ function FixedDates() {
     className: "Dates-text",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 178
+      lineNumber: 179
     },
     __self: this
-  }, "Deadline to upload PPTs for on-site presentation"))), __jsx("div", {
+  }, "Deadline to upload PPTs for on-site presentation"), __jsx(next_link__WEBPACK_IMPORTED_MODULE_5___default.a, {
+    href: "/pricing",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 180
+    },
+    __self: this
+  }, __jsx(_Button__WEBPACK_IMPORTED_MODULE_10__["Button"], {
+    br: "500rem",
+    padding: "1rem",
+    fontSize: "1.5rem",
+    style: {
+      color: '#FFF',
+      fontSize: '1.5rem',
+      margin: '0',
+      marginTop: '1rem'
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 181
+    },
+    __self: this
+  }, "Pricing/Registration")))), __jsx("div", {
     className: "hide-box-dates",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 182
+      lineNumber: 186
     },
     __self: this
   }, __jsx("a", {
     onClick: () => setRightHide(!RightHide),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 183
+      lineNumber: 187
     },
     __self: this
   }, " ", RightHide === true ? __jsx(_material_ui_icons_Add__WEBPACK_IMPORTED_MODULE_3___default.a, {
@@ -410,7 +432,7 @@ function FixedDates() {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 183
+      lineNumber: 187
     },
     __self: this
   }) : __jsx(_material_ui_icons_Remove__WEBPACK_IMPORTED_MODULE_2___default.a, {
@@ -422,7 +444,7 @@ function FixedDates() {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 183
+      lineNumber: 187
     },
     __self: this
   }), " ")));
@@ -430,18 +452,18 @@ function FixedDates() {
 const StyledFixedBox = styled_components__WEBPACK_IMPORTED_MODULE_4___default.a.div.withConfig({
   displayName: "Dates__StyledFixedBox",
   componentId: "sc-2eodxj-2"
-})(["position:fixed;z-index:1;top:14vh;left:", ";width:25rem;max-height:50rem;min-height:47rem;background-color:", ";padding:1rem;padding-right:1.5rem;border-right:5px solid ", ";display:flex;@media only screen  and (max-device-width:1000px)  and (-webkit-min-device-pixel-ratio:2){display:none;}flex-flow:column;justify-content:space-between;flex:1 1 auto;.hide-box{border:2px solid #FFF;position:absolute;z-index:-100;bottom:-2rem;right:-3rem;}.Box{&-title{text-align:end;font-size:2rem;font-family:", ";color:", ";align-self:flex-end;max-width:95%;&_hide{font-size:2.5rem;font-family:", ";color:", ";align-self:flex-start;width:45rem;position:absolute;right:-21rem;top:48%;transform:rotate(90deg);}}&-date{text-align:end;font-size:1.8rem;font-family:", ";color:", ";align-self:flex-end;max-width:90%;}&-text{text-align:end;font-size:1.8rem;font-family:", ";color:", ";align-self:flex-end;max-width:90%;}&-text-it{text-align:end;font-size:1.5rem;font-family:", ";color:", ";align-self:flex-end;max-width:90%;}}.logo_box{height:10rem;display:flex;align-items:center;justify-content:center;flex:1 1 auto;}"], props => props.Hide ? '-21rem' : '0', props => props.theme.primary, props => props.theme.secondary, props => props.theme.MPBlack, props => props.theme.white, props => props.theme.MPBlack, props => props.theme.white, props => props.theme.MPSemibold, props => props.theme.secondary, props => props.theme.MPLight, props => props.theme.white, props => props.theme.MPLightIt, props => props.theme.white);
+})(["position:fixed;z-index:1;top:14vh;left:", ";width:25rem;max-height:50rem;min-height:47rem;background-color:", ";padding:1rem;padding-right:1.5rem;border-right:5px solid ", ";transition:all .3s ease-in;display:flex;@media only screen  and (max-device-width:1000px)  and (-webkit-min-device-pixel-ratio:2){display:none;}flex-flow:column;justify-content:space-between;flex:1 1 auto;.hide-box{border:2px solid #FFF;position:absolute;z-index:-100;bottom:-2rem;right:-3rem;}.Box{&-title{text-align:end;font-size:2rem;font-family:", ";color:", ";align-self:flex-end;max-width:95%;&_hide{font-size:2.5rem;font-family:", ";color:", ";align-self:flex-start;width:45rem;position:absolute;right:-21rem;top:48%;transform:rotate(90deg);}}&-date{text-align:end;font-size:1.8rem;font-family:", ";color:", ";align-self:flex-end;max-width:90%;}&-text{text-align:end;font-size:1.8rem;font-family:", ";color:", ";align-self:flex-end;max-width:90%;}&-text-it{text-align:end;font-size:1.5rem;font-family:", ";color:", ";align-self:flex-end;max-width:90%;}}.logo_box{height:10rem;display:flex;align-items:center;justify-content:center;flex:1 1 auto;}"], props => props.Hide ? '-21rem' : '0', props => props.theme.primary, props => props.theme.secondary, props => props.theme.MPBlack, props => props.theme.white, props => props.theme.MPBlack, props => props.theme.white, props => props.theme.MPSemibold, props => props.theme.secondary, props => props.theme.MPLight, props => props.theme.white, props => props.theme.MPLightIt, props => props.theme.white);
 function FixedBox() {
   const {
     0: Hide,
     1: setHide
-  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false);
+  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(true);
   console.log(Hide);
   return __jsx(StyledFixedBox, {
     Hide: Hide,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 291
+      lineNumber: 296
     },
     __self: this
   }, Hide ? __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_6__["Typography"], {
@@ -450,7 +472,7 @@ function FixedBox() {
     className: "Box-title_hide",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 293
+      lineNumber: 298
     },
     __self: this
   }, "Book your Early Bird Tickets today") : __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_6__["Typography"], {
@@ -459,7 +481,7 @@ function FixedBox() {
     className: "Box-title",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 296
+      lineNumber: 301
     },
     __self: this
   }, "Book your Early Bird Tickets for EuroBrake"), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_6__["Typography"], {
@@ -468,7 +490,7 @@ function FixedBox() {
     className: "Box-text-it",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 297
+      lineNumber: 302
     },
     __self: this
   }, "Secure your tickets by 1 April 2020"), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_6__["Typography"], {
@@ -477,7 +499,7 @@ function FixedBox() {
     className: "Box-date",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 298
+      lineNumber: 303
     },
     __self: this
   }, " Europe's braking technology conference & exhibition"), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_6__["Typography"], {
@@ -486,7 +508,7 @@ function FixedBox() {
     className: "Box-text",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 299
+      lineNumber: 304
     },
     __self: this
   }, "2-4 June 2020,"), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_6__["Typography"], {
@@ -495,34 +517,34 @@ function FixedBox() {
     className: "Box-text",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 300
+      lineNumber: 305
     },
     __self: this
   }, "CCIB, Barcelona, Spain"), __jsx(next_link__WEBPACK_IMPORTED_MODULE_5___default.a, {
-    href: "/exhibitorsRegistration",
+    href: "/pricing",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 301
+      lineNumber: 306
     },
     __self: this
   }, __jsx(_Button__WEBPACK_IMPORTED_MODULE_10__["Button"], {
     br: "500rem",
     padding: "1rem ",
-    fontSize: "1rem",
+    fontSize: "1.5rem",
     style: {
       marginTop: '1rem',
       color: '#FFF'
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 302
+      lineNumber: 307
     },
     __self: this
   }, "Pricing/Registration")), __jsx("div", {
     className: "logo_box",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 304
+      lineNumber: 309
     },
     __self: this
   }, __jsx(_Icons__WEBPACK_IMPORTED_MODULE_11__["SmlLogo"], {
@@ -530,21 +552,21 @@ function FixedBox() {
     height: "10rem",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 305
+      lineNumber: 310
     },
     __self: this
   }))), __jsx("div", {
     className: "hide-box",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 308
+      lineNumber: 313
     },
     __self: this
   }, __jsx("a", {
     onClick: () => setHide(!Hide),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 309
+      lineNumber: 314
     },
     __self: this
   }, " ", Hide === true ? __jsx(_material_ui_icons_Add__WEBPACK_IMPORTED_MODULE_3___default.a, {
@@ -556,7 +578,7 @@ function FixedBox() {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 309
+      lineNumber: 314
     },
     __self: this
   }) : __jsx(_material_ui_icons_Remove__WEBPACK_IMPORTED_MODULE_2___default.a, {
@@ -568,7 +590,7 @@ function FixedBox() {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 309
+      lineNumber: 314
     },
     __self: this
   }), " ")));
@@ -581,7 +603,7 @@ function Box(props) {
   return __jsx(StyledBox, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 381
+      lineNumber: 386
     },
     __self: this
   }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_6__["Typography"], {
@@ -590,7 +612,7 @@ function Box(props) {
     className: "Box-title",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 382
+      lineNumber: 387
     },
     __self: this
   }, "Book your Early Bird Tickets for EuroBrake"), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_6__["Typography"], {
@@ -599,7 +621,7 @@ function Box(props) {
     className: "Box-text-it",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 383
+      lineNumber: 388
     },
     __self: this
   }, "Secure your tickets by 1 April 2020"), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_6__["Typography"], {
@@ -608,7 +630,7 @@ function Box(props) {
     className: "Box-date",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 384
+      lineNumber: 389
     },
     __self: this
   }, " Europe's braking technology conference & exhibition"), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_6__["Typography"], {
@@ -617,7 +639,7 @@ function Box(props) {
     className: "Box-text",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 385
+      lineNumber: 390
     },
     __self: this
   }, "2-4 June 2020,"), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_6__["Typography"], {
@@ -626,14 +648,14 @@ function Box(props) {
     className: "Box-text",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 386
+      lineNumber: 391
     },
     __self: this
   }, "CCIB, Barcelona, Spain"), __jsx(next_link__WEBPACK_IMPORTED_MODULE_5___default.a, {
-    href: "/exhibitorsRegistration",
+    href: "/pricing",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 387
+      lineNumber: 392
     },
     __self: this
   }, __jsx(_Button__WEBPACK_IMPORTED_MODULE_10__["Button"], {
@@ -649,14 +671,14 @@ function Box(props) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 388
+      lineNumber: 393
     },
     __self: this
   }, "Pricing/Registration")), __jsx("div", {
     className: "logo_box",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 390
+      lineNumber: 395
     },
     __self: this
   }, __jsx(_Icons__WEBPACK_IMPORTED_MODULE_11__["SmlLogo"], {
@@ -664,7 +686,7 @@ function Box(props) {
     height: "10rem",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 391
+      lineNumber: 396
     },
     __self: this
   })));
@@ -765,7 +787,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 const FooterBar = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div.withConfig({
   displayName: "Footer__FooterBar",
   componentId: "sc-1wn18ws-0"
-})(["color:", ";background:", ";min-width:100%;min-height:20rem;display:flex;justify-content:space-between;align-items:center;position:absolute;z-index:10;bottom:0;padding:2rem;border-top:5px solid ", ";.ftr_top-box{display:flex;flex-flow:row wrap;margin-bottom:1rem;}.heading-copy{color:", ";font-family:", ";font-size:2rem;}.ftr_middle-links{min-height:24rem;margin:0 1rem;padding:.2rem;flex:1 1 auto;display:flex;flex-flow:column;justify-content:space-between;align-items:flex-start;&_links{display:flex;justify-content:space-between;min-width:50rem;}}.ftr_container-right{border:1px solid #FFF;display:flex;flex-flow:column;align-items:center;}.ftr_container-map{height:25rem;position:relative;}.ftr_newsletter-box{max-height:6.5rem;display:flex;flex:1 1 auto;flex-flow:column;justify-content:space-between;margin-bottom:1rem;&_title{text-transform:uppercase;font-size:2rem;font-family:", ";}}.ftr_container-icons{display:flex;width:auto;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;position:relative;}.social{color:", ";;margin-right:1.5rem;font-size:2rem;}a{color:", ";text-transform:uppercase;font-family:", ";font-size:2rem;}h1{padding:1rem;text-align:center;}input{width:55%;margin:1rem;}label{font-family:", ";font-size:2rem;text-transform:uppercase;}"], props => props.theme.white, props => props.theme.primary, props => props.theme.secondary, props => props.theme.white, props => props.theme.MPLight, props => props.theme.MPBold, props => props.theme.white, props => props.theme.white, props => props.theme.MPBold, props => props.theme.MPBold);
+})(["color:", ";background:", ";min-width:100%;min-height:20rem;display:flex;justify-content:space-between;align-items:center;position:absolute;z-index:10;bottom:0;padding:2rem;border-top:5px solid ", ";.ftr_top-box{display:flex;flex-flow:column;}.heading-copy{color:", ";font-family:", ";font-size:2rem;}.ftr_middle-links{min-height:24rem;margin:0 1rem;padding:.2rem;flex:1 1 auto;display:flex;flex-flow:column;justify-content:space-between;align-items:flex-start;&_links{display:flex;justify-content:space-between;min-width:50rem;}}.ftr_container-right{border:1px solid #FFF;display:flex;flex-flow:column;align-items:center;}.ftr_container-map{height:25rem;position:relative;}.ftr_newsletter-box{max-height:6.5rem;display:flex;flex:1 1 auto;flex-flow:column;justify-content:space-between;margin-bottom:1rem;&_title{text-transform:uppercase;font-size:2rem;font-family:", ";}}.ftr_container-icons{display:flex;width:auto;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;position:relative;}.social{color:", ";;margin-right:1.5rem;font-size:2rem;}a{color:", ";text-transform:uppercase;font-family:", ";font-size:2rem;}h1{padding:1rem;text-align:center;}input{width:55%;margin:1rem;}label{font-family:", ";font-size:2rem;text-transform:uppercase;}"], props => props.theme.white, props => props.theme.primary, props => props.theme.secondary, props => props.theme.white, props => props.theme.MPLight, props => props.theme.MPBold, props => props.theme.white, props => props.theme.white, props => props.theme.MPBold, props => props.theme.MPBold);
 const StyledFooter = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div.withConfig({
   displayName: "Footer__StyledFooter",
   componentId: "sc-1wn18ws-1"
@@ -775,40 +797,40 @@ function Footer() {
   return __jsx(StyledFooter, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 138
+      lineNumber: 137
     },
     __self: this
   }, __jsx(_SponsorCarousel__WEBPACK_IMPORTED_MODULE_6__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 139
+      lineNumber: 138
     },
     __self: this
   }), __jsx(FooterBar, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 140
+      lineNumber: 139
     },
     __self: this
   }, __jsx("div", {
     className: "ftr_middle-links",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 141
+      lineNumber: 140
     },
     __self: this
   }, __jsx("div", {
     className: "ftr_top-box",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 142
+      lineNumber: 141
     },
     __self: this
   }, __jsx("a", {
     href: "https://www.fisita.com/",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 145
+      lineNumber: 144
     },
     __self: this
   }, __jsx(_Icons__WEBPACK_IMPORTED_MODULE_7__["FLogoWhite"], {
@@ -816,27 +838,41 @@ function Footer() {
     height: "5rem",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 145
+      lineNumber: 144
     },
     __self: this
-  }))), __jsx("div", {
+  })), __jsx(_Button__WEBPACK_IMPORTED_MODULE_5__["Button"], {
+    target: "_blank",
+    href: "https://www.flickr.com/photos/eurobrake/albums/72157708965910476",
+    background: "#134381",
+    br: "100rem",
+    style: {
+      margin: '2rem 0',
+      fontSize: '1.5rem'
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 146
+    },
+    __self: this
+  }, "View the Eurobrake 2019 image gallery")), __jsx("div", {
     className: "ftr_middle-links_links",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 152
+      lineNumber: 158
     },
     __self: this
   }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
     href: "/disclaimer",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 153
+      lineNumber: 159
     },
     __self: this
   }, __jsx("a", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 153
+      lineNumber: 159
     },
     __self: this
   }, "Disclaimer")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
@@ -844,26 +880,26 @@ function Footer() {
     as: `/f/FISITA/contact`,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 154
+      lineNumber: 160
     },
     __self: this
   }, __jsx("a", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 156
+      lineNumber: 162
     },
     __self: this
   }, "Contact Us")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
     href: "/privacyPolicy",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 157
+      lineNumber: 163
     },
     __self: this
   }, __jsx("a", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 157
+      lineNumber: 163
     },
     __self: this
   }, "Privacy Policy"))), __jsx("div", {
@@ -876,38 +912,37 @@ function Footer() {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 159
+      lineNumber: 165
     },
     __self: this
   }, __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_4___default.a, {
     className: "heading-copy",
     style: {
-      marginRight: '8rem',
-      merginTop: '2rem'
+      marginRight: '8rem'
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 160
+      lineNumber: 166
     },
     __self: this
   }, "Copyright \xA9 2020 FISITA"))), __jsx("div", {
     className: "ftr_container-right",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 163
+      lineNumber: 169
     },
     __self: this
   }, __jsx("div", {
     className: "ftr_container-map",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 165
+      lineNumber: 171
     },
     __self: this
   }, __jsx(_GoogleMaps__WEBPACK_IMPORTED_MODULE_3__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 166
+      lineNumber: 172
     },
     __self: this
   })))));
@@ -6086,7 +6121,7 @@ class Nav extends react__WEBPACK_IMPORTED_MODULE_1__["Component"] {
       },
       __self: this
     }, "About"))), __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
-      href: "/exhibitorsRegistration",
+      href: "/pricing",
       __source: {
         fileName: _jsxFileName,
         lineNumber: 83
@@ -6281,28 +6316,7 @@ class Nav extends react__WEBPACK_IMPORTED_MODULE_1__["Component"] {
         lineNumber: 107
       },
       __self: this
-    }, "Exhibit & Sponsor"))), __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
-      href: "/exhibitors",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 108
-      },
-      __self: this
-    }, __jsx("a", {
-      onClick: this.handleClick,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 108
-      },
-      __self: this
-    }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_4__["Typography"], {
-      className: "nav-links",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 108
-      },
-      __self: this
-    }, "Exhibitor Directory"))))), __jsx("div", {
+    }, "Exhibit & Sponsor"))))), __jsx("div", {
       className: "nav_box-middle-3",
       __source: {
         fileName: _jsxFileName,

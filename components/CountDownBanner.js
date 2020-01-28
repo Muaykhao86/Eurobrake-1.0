@@ -115,7 +115,7 @@ class CountDownBanner extends Component {
                         <Typography className="timer">{seconds > 9 ? ': '+ seconds : `: 0` + seconds}</Typography>
                         <span>Seconds</span>
                     </CDItem>
-            <Link href="/exhibitorsRegistration">
+            <Link href="/pricing">
                     <Button style={{marginLeft: '5rem', minHeight: '8rem'}}>Pricing/Registration</Button>
             </Link>
                 </CDContainer>
