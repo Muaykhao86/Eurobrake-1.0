@@ -222,9 +222,15 @@ const svgHeight = full ? '100vh' : '';
                         bcolor="#134381"
                         style={{ margin: '3.5rem 0' }}
                     >DOWNLOAD THE EXHBITOR TERMS & CONDITIONS</Button>
+                    <Button
+                     target="_blank"
+                      href="https://www.fisita.com/documents/EB20_Floor_Plan.pdf"
+                        background="#134381"
+                        br="100rem"
+                        bcolor="#134381"
+                        style={{ margin: '3.5rem 0' }}
+                    >View the event floor plan</Button>
                 </div>
-                <Typography gutterBottom className="Exhibit-title">View the event floor plan</Typography>
-                <a  target="_blank" href="https://www.fisita.com/documents/EB20_Floor_Plan.pdf"><Typography gutterBottom className="Exhibit">Click to view the floor plan</Typography></a>
 
                 {/* <StyledFloorPlan height={svgHeight} width={svgWidth} full={full}>
                     <EBFloorPlan height={svgHeight} width={svgWidth} onClick={() => setFull(full => !full)}/>

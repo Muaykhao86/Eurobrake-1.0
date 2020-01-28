@@ -117,10 +117,10 @@ export async function SendFile({ values, url, csrf }) {
 export async function SendForm({ csrf, values, url, FT }) {
      values && values.accept && values.accept === true ? values.accept = 'yes' : null;
     values && values.copyright && values.copyright === true ? values.copyright = 'yes' : null;
-    console.log('sendform',values)
+    // console.log('sendform',values)
     const form = JSON.stringify(values);
     const { logintoken } = cookie.get();
-        console.log({url, form, FT, csrf});
+        // console.log({url, form, FT, csrf});
     if (logintoken && csrf && form) {
         try {
             const apiUrl = url;
@@ -135,7 +135,7 @@ export async function SendForm({ csrf, values, url, FT }) {
             });
             const data = await response.json();
             if (data.status === 'success') {
-                console.log('getForm', data);
+                // console.log('getForm', data);
                 return data
             } else {
                 let error = new Error(data.error)
@@ -150,7 +150,7 @@ export async function SendForm({ csrf, values, url, FT }) {
         }
     }
     if(url === 'https://prelude.eurobrake.net/authors/login' ){
-        console.log({url, form});
+        // console.log({url, form});
         try {
             const response = await fetch(url, {
                 method: 'POST', 
@@ -181,7 +181,7 @@ export async function SendForm({ csrf, values, url, FT }) {
          }
         }
     if(FT === 'reset' ){
-        console.log({url, form});
+        // console.log({url, form});
         try {
             const response = await fetch(url, {
                 method: 'POST', 
@@ -195,7 +195,7 @@ export async function SendForm({ csrf, values, url, FT }) {
             const data = await response.json()
 
             if (data.status === 'success') {
-            console.log('getForm', data);
+            // console.log('getForm', data);
             return data
 
             } else {
@@ -211,7 +211,7 @@ export async function SendForm({ csrf, values, url, FT }) {
          }
         }
     if(FT === 'newsletter' || FT === 'contact'){
-        console.log({url, form});
+        // console.log({url, form});
         try {
             const response = await fetch(url, {
                 method: 'POST', 
@@ -225,7 +225,7 @@ export async function SendForm({ csrf, values, url, FT }) {
             const data = await response.json()
 
             if (data.status === 'success') {
-            console.log('getForm', data);
+            // console.log('getForm', data);
             return data
 
             } else {
@@ -241,7 +241,7 @@ export async function SendForm({ csrf, values, url, FT }) {
          }
         }
     if(FT === 'withdraw' ){
-        console.log({url, csrf});
+        // console.log({url, csrf});
         try {
             const response = await fetch(url, {
                 method: 'POST', 
@@ -256,7 +256,7 @@ export async function SendForm({ csrf, values, url, FT }) {
             const data = await response.json()
 
             if (data.status === 'success') {
-            console.log('getForm', data);
+            // console.log('getForm', data);
             return data
 
             } else {

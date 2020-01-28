@@ -333,7 +333,7 @@ class AuthorsAreaDash extends Component {
                                             </div>
                                                         <Table className="" aria-label="simple table">
                                                             <TableBody style={{width: '100%'}}>
-                                                                 <TableRow key={task.task}>
+                                                                 <TableRow key='titles'>
                                                                        
                                                                         <StyledCell align="left" className="" style={{width: '25%'}}>
                                                                                 <Typography gutterBottom className="paper-text"  style={{fontSize: '1rem'}} >Status</Typography>
