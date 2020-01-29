@@ -150,7 +150,7 @@ export default () => (
     <>
         <HeroSection
         scolor="#F9B721"
-
+        t="35%"
         src="https://live.staticflickr.com/65535/48016158113_214a7dde8c_b.jpg"
         tt="35%"
         sfs="8rem"

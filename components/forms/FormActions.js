@@ -105,7 +105,6 @@ export async function SendFile({ values, url, csrf }) {
             console.error(
                 'Failed to get form, please try again', error
             )
-            this.setState({ error: error.message });
             return error
         }
     }
@@ -115,10 +114,6 @@ export async function SendFile({ values, url, csrf }) {
             const response = await fetch(apiUrl, {
                 method: 'POST',
                 body: formData,
-                credentials: 'include',
-                headers: {
-                    'Content-Type': 'application/json',
-                }
             });
             const data = await response.json();
             await console.log({ data })
@@ -133,9 +128,8 @@ export async function SendFile({ values, url, csrf }) {
             }
         } catch (error) {
             console.error(
-                'Failed to get form, please try again', error
+                'Failed to send form, please try again', error
             )
-            this.setState({ error: error.message });
             return error
         }
     }

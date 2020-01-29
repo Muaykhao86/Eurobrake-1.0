@@ -6163,7 +6163,7 @@ class Nav extends react__WEBPACK_IMPORTED_MODULE_1__["Component"] {
       },
       __self: this
     }, "Technical Programme "))), __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
-      href: "/welcome",
+      href: "/visit",
       __source: {
         fileName: _jsxFileName,
         lineNumber: 85
@@ -6183,7 +6183,7 @@ class Nav extends react__WEBPACK_IMPORTED_MODULE_1__["Component"] {
         lineNumber: 85
       },
       __self: this
-    }, "Welcome to Barcelona"))), __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
+    }, "Visiting Barcelona"))), __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
       href: "/f/[id]/[formType]",
       as: `/f/FISITA/contact`,
       __source: {
@@ -8002,9 +8002,6 @@ async function SendFile({
       }
     } catch (error) {
       console.error('Failed to get form, please try again', error);
-      this.setState({
-        error: error.message
-      });
       return error;
     }
   }
@@ -8014,11 +8011,7 @@ async function SendFile({
       const apiUrl = url;
       const response = await isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_4___default()(apiUrl, {
         method: 'POST',
-        body: formData,
-        credentials: 'include',
-        headers: {
-          'Content-Type': 'application/json'
-        }
+        body: formData
       });
       const data = await response.json();
       await console.log({
@@ -8034,10 +8027,7 @@ async function SendFile({
         throw error;
       }
     } catch (error) {
-      console.error('Failed to get form, please try again', error);
-      this.setState({
-        error: error.message
-      });
+      console.error('Failed to send form, please try again', error);
       return error;
     }
   }
@@ -8210,11 +8200,12 @@ async function SendForm({
 /*!*****************************************!*\
   !*** ./components/forms/FormControl.js ***!
   \*****************************************/
-/*! exports provided: ContactSchema, AuthorSchema, ResetSchema, LoginSchema, AbstractSchema, EsopSchema */
+/*! exports provided: countWords, ContactSchema, AuthorSchema, ResetSchema, LoginSchema, AbstractSchema, EsopSchema */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "countWords", function() { return countWords; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ContactSchema", function() { return ContactSchema; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AuthorSchema", function() { return AuthorSchema; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ResetSchema", function() { return ResetSchema; });
@@ -8223,13 +8214,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EsopSchema", function() { return EsopSchema; });
 /* harmony import */ var yup__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! yup */ "yup");
 /* harmony import */ var yup__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(yup__WEBPACK_IMPORTED_MODULE_0__);
-
+ // ? BELOW ATTEMPTED FIX AT CANT READ PROPERTY LENGTH OF UNDEFINED
 
 const countWords = str => {
   let matches = str.match(/[\w\d\’\'-]+/gi);
-  return matches ? matches.length : 0;
-};
 
+  if (matches != undefined) {
+    return matches ? matches.length : 0;
+  } else return 0;
+};
 const ContactSchema = yup__WEBPACK_IMPORTED_MODULE_0__["object"]().shape({
   name: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().nullable(),
   firstname: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().required('Required'),
@@ -8646,7 +8639,7 @@ const HiddenNavBG = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div
 const HiddenContainer = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({
   displayName: "NavStyles__HiddenContainer",
   componentId: "sc-1ltvdnj-5"
-})(["position:absolute;right:-20rem;top:-5rem;display:flex;align-items:flex-start;justify-content:flex-start;flex-flow:column;padding:2rem;transition:all .8s ease-in-out;opacity:", ";transform:", ";min-width:99vw;min-height:99vh;@media only screen  and (max-device-width:768px)  and (-webkit-min-device-pixel-ratio:2){min-height:80vh;overflow:auto;-webkit-overflow-scrolling:touch;}.nav{&-title{font-size:2rem;font-family:", ";color:", ";&-box{display:flex;flex-flow:column;align-items:flex-start;margin-bottom:3rem;}}&-links{font-size:2rem;font-family:", ";color:", ";&-box{display:flex;flex-flow:column;align-items:flex-start;margin-bottom:3rem;}}&_container-1{width:100%;height:100%;display:flex;flex-flow:row;flex:1 1 auto;justify-content:space-between;}&-inner{display:flex;flex-flow:column;&-title{font-size:3rem;font-family:", ";color:", ";@media only screen  and (max-device-width:1500px)  and (-webkit-min-device-pixel-ratio:2){font-size:2rem;}}&-text{font-size:3rem;font-family:", ";color:", ";@media only screen  and (max-device-width:1500px)  and (-webkit-min-device-pixel-ratio:2){font-size:2rem;}}}&_box-1{margin-left:5rem;padding:2rem;width:70%;@media only screen  and (max-device-width:768px)  and (-webkit-min-device-pixel-ratio:2){}@media only screen  and (max-device-width:1700px)  and (-webkit-min-device-pixel-ratio:2){width:80%;}max-height:20rem;flex:1 1 auto;padding-bottom:4rem;display:flex;justify-content:space-between;align-items:flex-end;}&_box-middle{min-height:50rem;max-width:95rem;flex:1 1 auto;margin:2rem;padding:2rem;display:flex;flex-flow:row;justify-content:space-between;&-1{display:flex;flex-flow:column;width:26rem;min-height:50rem;}&-2{width:26rem;min-height:50rem;}&-3{width:15rem;min-height:50rem;}@media only screen  and (max-device-width:768px)  and (-webkit-min-device-pixel-ratio:2){}}&_box-right{height:50rem;max-width:26rem;flex:1 1 auto;margin:2rem;display:flex;flex-flow:column;align-items:center;justify-content:space-between;@media only screen  and (max-device-width:768px)  and (-webkit-min-device-pixel-ratio:2){display:none}}&_box-left{height:50rem;max-width:26rem;flex:1 1 auto;margin:2rem;display:flex;flex-flow:column;align-items:center;justify-content:space-between;@media only screen  and (max-device-width:768px)  and (-webkit-min-device-pixel-ratio:2){display:none;}}&_box-bottom{margin-left:5rem;display:flex;flex-flow:row;align-items:flex-end;&-text{font-size:1.5rem;margin-right:2rem;}@media only screen  and (max-device-width:768px)  and (-webkit-min-device-pixel-ratio:2){align-self:flex-end;}}}"], props => props.isOpen ? '1' : '0', props => props.isOpen ? null : 'translateX(-250rem)', props => props.theme.MPLightIt, props => props.theme.white, props => props.theme.MPBlackIt, props => props.theme.white, props => props.theme.MPSemibold, props => props.theme.secondary, props => props.theme.MPLight, props => props.theme.white);
+})(["position:absolute;right:-20rem;top:-5rem;display:flex;align-items:flex-start;justify-content:flex-start;flex-flow:column;padding:2rem;transition:all .8s ease-in-out;opacity:", ";transform:", ";min-width:99vw;min-height:99vh;@media only screen  and (max-device-width:768px)  and (-webkit-min-device-pixel-ratio:2){min-height:80vh;overflow:auto;-webkit-overflow-scrolling:touch;}.nav{&-title{font-size:2rem;font-family:", ";color:", ";&-box{display:flex;flex-flow:column;align-items:flex-start;margin-bottom:3rem;}}&-links{font-size:2rem;font-family:", ";color:", ";&-box{display:flex;flex-flow:column;align-items:flex-start;margin-bottom:3rem;}}&_container-1{width:100%;height:100%;display:flex;flex-flow:row;flex:1 1 auto;justify-content:space-between;}&-inner{display:flex;flex-flow:column;&-title{font-size:3rem;font-family:", ";color:", ";@media only screen  and (max-device-width:1500px)  and (-webkit-min-device-pixel-ratio:2){font-size:2rem;}}&-text{font-size:3rem;font-family:", ";color:", ";@media only screen  and (max-device-width:1500px)  and (-webkit-min-device-pixel-ratio:2){font-size:2rem;}}}&_box-1{margin-left:5rem;padding:2rem;width:70%;@media only screen  and (max-device-width:768px)  and (-webkit-min-device-pixel-ratio:2){}@media only screen  and (max-device-width:1700px)  and (-webkit-min-device-pixel-ratio:2){width:80%;}max-height:20rem;flex:1 1 auto;padding-bottom:4rem;display:flex;justify-content:space-between;align-items:flex-end;}&_box-middle{min-height:50rem;max-width:95rem;flex:1 1 auto;margin:2rem;padding:2rem;display:flex;flex-flow:row;justify-content:space-between;&-1{display:flex;flex-flow:column;width:26rem;min-height:50rem;}&-2{width:26rem;min-height:50rem;}&-3{width:15rem;min-height:50rem;}@media only screen  and (max-device-width:768px)  and (-webkit-min-device-pixel-ratio:2){}}&_box-right{height:50rem;max-width:26rem;flex:1 1 auto;margin:2rem;display:flex;flex-flow:column;align-items:center;justify-content:space-between;@media only screen  and (max-device-width:768px)  and (-webkit-min-device-pixel-ratio:2){display:none}}&_box-left{height:50rem;max-width:26rem;flex:1 1 auto;margin:2rem;display:flex;flex-flow:column;align-items:center;justify-content:space-between;@media only screen  and (max-device-width:768px)  and (-webkit-min-device-pixel-ratio:2){display:none;}}&_box-bottom{margin-left:5rem;display:flex;flex-flow:row;align-items:flex-end;&-text{font-size:1.5rem;margin-right:2rem;font-family:", ";}@media only screen  and (max-device-width:768px)  and (-webkit-min-device-pixel-ratio:2){align-self:flex-end;}}}"], props => props.isOpen ? '1' : '0', props => props.isOpen ? null : 'translateX(-250rem)', props => props.theme.MPLightIt, props => props.theme.white, props => props.theme.MPBlackIt, props => props.theme.white, props => props.theme.MPSemibold, props => props.theme.secondary, props => props.theme.MPLight, props => props.theme.white, props => props.theme.MPRegular);
 
 /***/ }),
 
@@ -14020,16 +14013,22 @@ module.exports = __webpack_require__(/*! ./dist/client/link */ "./node_modules/n
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return MyApp; });
 /* harmony import */ var _babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/extends */ "./node_modules/@babel/runtime-corejs2/helpers/esm/extends.js");
 /* harmony import */ var next_app__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/app */ "./node_modules/next/app.js");
 /* harmony import */ var next_app__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_app__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _components_Page__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/Page */ "./components/Page.js");
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! next/router */ "next/router");
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var next_ga__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! next-ga */ "next-ga");
+/* harmony import */ var next_ga__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(next_ga__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _components_Page__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/Page */ "./components/Page.js");
 
 var _jsxFileName = "/mnt/c/Users/D.Hardiman/desktop/eurobrake/pages/_app.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement;
+
+
+
 
 
 
@@ -14045,22 +14044,24 @@ class MyApp extends next_app__WEBPACK_IMPORTED_MODULE_1___default.a {
       Component,
       pageProps
     } = this.props;
-    return __jsx(_components_Page__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    return __jsx(_components_Page__WEBPACK_IMPORTED_MODULE_5__["default"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 17
+        lineNumber: 19
       },
       __self: this
     }, __jsx(Component, Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, pageProps, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 18
+        lineNumber: 20
       },
       __self: this
     })));
   }
 
 }
+
+/* harmony default export */ __webpack_exports__["default"] = (next_ga__WEBPACK_IMPORTED_MODULE_4___default()("UA-208514-12", next_router__WEBPACK_IMPORTED_MODULE_3___default.a)(MyApp));
 
 /***/ }),
 
@@ -14357,6 +14358,17 @@ module.exports = require("js-cookie");
 /***/ (function(module, exports) {
 
 module.exports = require("next-cookies");
+
+/***/ }),
+
+/***/ "next-ga":
+/*!**************************!*\
+  !*** external "next-ga" ***!
+  \**************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("next-ga");
 
 /***/ }),
 

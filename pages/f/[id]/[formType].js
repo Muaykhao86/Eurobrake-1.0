@@ -25,6 +25,8 @@ const Form = props => {
     return (
         <>
         <HeroSection
+                t="35%"
+                tt="35%"
                 scolor="#F9B721"
                 sfs="8rem"
                 tsfs="5rem"

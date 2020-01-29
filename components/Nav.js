@@ -82,7 +82,7 @@ export default class Nav extends Component {
                                     <Link href="/about"><a onClick={this.handleClick} ><Typography className="nav-links">About</Typography></a></Link>
                                     <Link href="/pricing"><a onClick={this.handleClick}><Typography className="nav-links">Pricing & Registration</Typography></a></Link>
                                     <Link href="/programme"><a onClick={this.handleClick}><Typography className="nav-links">Technical Programme </Typography></a></Link>
-                                    <Link href="/welcome"><a onClick={this.handleClick}><Typography className="nav-links">Welcome to Barcelona</Typography></a></Link>
+                                    <Link href="/visit"><a onClick={this.handleClick}><Typography className="nav-links">Visiting Barcelona</Typography></a></Link>
                                     <Link href="/f/[id]/[formType]" as={`/f/FISITA/contact`} ><a onClick={this.handleClick} ><Typography className="nav-links">Contact Us</Typography></a></Link>
                                 </div>
 

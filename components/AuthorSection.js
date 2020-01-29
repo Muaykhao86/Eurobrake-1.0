@@ -9,7 +9,7 @@ import withReveal from 'react-reveal/withReveal';
 const AuthorCard = () => (
    <Card left>
                     <h1>Access the Authors Area</h1>
-                    <Link href="/authorsArea">
+                    <Link href="/authors">
                     <Button br="500rem">Authors Area</Button>
                     </Link>
                 </Card>

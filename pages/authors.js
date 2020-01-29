@@ -109,6 +109,7 @@ class AuthorsArea extends Component {
             <>
                 <HeroSection 
                 banner={FilledBanner}  
+                t="35%"
                  tt="35%"
 
                 max="55%" 
@@ -120,7 +121,7 @@ class AuthorsArea extends Component {
                 mst="65%"
                 secondary="Sign in to mange your submission"
                 >
-                    Author's
+                    Author's Area
             </HeroSection>
                 <StyledPage>
             <FixedDates/>

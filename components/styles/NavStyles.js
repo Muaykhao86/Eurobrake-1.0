@@ -387,6 +387,8 @@ font-size: 1.4rem
         &-text{
             font-size: 1.5rem;
             margin-right: 2rem;
+        font-family: ${props => props.theme.MPRegular};
+
         }
 
           @media only screen 

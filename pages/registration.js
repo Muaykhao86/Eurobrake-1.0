@@ -58,6 +58,7 @@ export default () => (
     <>
      <HeroSection 
      t="35%"
+     tt="35%"
     src="https://live.staticflickr.com/65535/48015864661_8301c18ef8_b.jpg"
      >
                 Book Now

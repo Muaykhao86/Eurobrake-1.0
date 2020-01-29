@@ -37,11 +37,10 @@ export const Esop = (props) => {
 
                 const onSubmit = async () => {
                  await setLoading(true);
-                values.__csrf_token = csrf
                   await  console.log('submitting')
-                  let res =  await SendFile({values, url, csrf});
+                  let res =  await SendFile({values, url});
                   let data = await  res;
-                  let dataStatus= await  data && data.status;
+                  let dataStatus= await  data && data.status ? data.status  : data.error
                   setStatus(dataStatus)
                   console.log({data})
                   let result = async () => {

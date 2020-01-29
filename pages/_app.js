@@ -1,10 +1,12 @@
 import App from 'next/app'
 import React from 'react'
+import Router from "next/router";
+import withGA from "next-ga";
 import Page  from '../components/Page';
 
 
 
-export default class MyApp extends App {
+class MyApp extends App {
   // need to remove the server-side injected CSS on the client side because of avoiding duplicated injection of CSS. as per material ui docs
   componentDidMount() {
     const jssStyles = document.querySelector('#jss-server-side')
@@ -20,3 +22,5 @@ export default class MyApp extends App {
     )
   }
 }
+
+export default withGA("UA-208514-12", Router)(MyApp);
