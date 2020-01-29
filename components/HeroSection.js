@@ -54,7 +54,7 @@ left: 0;
 const StyledText = styled(Typography)`
     position: absolute;
     z-index: 10;
-    top: ${props => props.t? props.t : props.secondary ? '60%' : '20%'};
+    top: ${props => props.t? props.t : props.secondary ? '60%' : '30%'};
     align-self: center;
     width: ${props => props.max || '80%'};
     color: ${props => props.color || props.theme.white};
@@ -78,14 +78,14 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 1300px)
         and (-webkit-min-device-pixel-ratio: 2)
         {
         font-size: ${props => props.bfs || '9rem'};
-    top: ${props => props.tt ? props.tt : '20%'};
+    top: ${props => props.tt ? props.tt : '30%'};
     }
          @media only screen 
         and (max-device-width: 1200px) 
         and (-webkit-min-device-pixel-ratio: 2)
         {
         font-size: ${props => props.tfs  || '9rem'};
-    top: ${props => props.tt ? props.tt : '20%'};
+    top: ${props => props.tt ? props.tt : '30%'};
     }
 
     
@@ -102,7 +102,7 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 1300px)
         {
         font-size: ${props => props.mfs || props.tfs || '10rem'};
          width: ${props => props.mmax || '80%'};
-    top: ${props => props.mt ? props.mt : '20%'};
+    top: ${props => props.mt ? props.mt : '30%'};
     }
 
         font-family:${props => props.sfont ? props.theme.MPLight : props.theme.MPBlack};

@@ -83,7 +83,8 @@ export default class Nav extends Component {
                                     <Link href="/pricing"><a onClick={this.handleClick}><Typography className="nav-links">Pricing & Registration</Typography></a></Link>
                                     <Link href="/programme"><a onClick={this.handleClick}><Typography className="nav-links">Technical Programme </Typography></a></Link>
                                     <Link href="/visit"><a onClick={this.handleClick}><Typography className="nav-links">Visiting Barcelona</Typography></a></Link>
-                                    <Link href="/f/[id]/[formType]" as={`/f/FISITA/contact`} ><a onClick={this.handleClick} ><Typography className="nav-links">Contact Us</Typography></a></Link>
+                                    {/* <Link href="/f/[id]/[formType]" as={`/f/FISITA/contact`} ><a onClick={this.handleClick} ><Typography className="nav-links">Contact Us</Typography></a></Link> */}
+                                    <Link href="/contact" ><a onClick={this.handleClick} ><Typography className="nav-links">Contact Us</Typography></a></Link>
                                 </div>
 
                                 <div className="nav-title-box">
@@ -117,7 +118,7 @@ export default class Nav extends Component {
 
                                 <div className="nav-links-box">
                                     <Link href="/authors"><a onClick={this.handleClick}><Typography className="nav-links">Authors Area</Typography></a></Link>
-                                    <Link href="/authorsAreaInstructions"><a onClick={this.handleClick}><Typography className="nav-links">Instructions & Templates</Typography></a></Link>
+                                    <Link href="/authors/instructions"><a onClick={this.handleClick}><Typography className="nav-links">Instructions & Templates</Typography></a></Link>
                                 </div>
                             </div>
                             

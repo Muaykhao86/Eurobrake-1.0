@@ -158,8 +158,7 @@ function Footer() {
                     <div className="ftr_middle-links_links">
                         <Link href="/disclaimer"><a >Disclaimer</a></Link>
                          <Link
-                            href="/f/[id]/[formType]"
-                            as={`/f/FISITA/contact`} ><a >Contact Us</a></Link>
+                            href="/contact" ><a >Contact Us</a></Link>
                         <Link href="/privacyPolicy"><a >Privacy Policy</a></Link>
                     </div>
                     <div className="" style={{ display: 'flex', justifyContent: 'center', alignItems: 'baseline', height: '3rem' }}>

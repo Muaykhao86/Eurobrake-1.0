@@ -139,7 +139,7 @@ const StyledPage = styled.div`
 
 export default () => (
     <>
-        <HeroSection src="/images/barcelona.png"  max="55%" banner={FilledBanner}>
+        <HeroSection src="/images/barcelona.png"  max="50%" t="35%" tt="35%" banner={FilledBanner}>
            Visiting Barcelona
         </HeroSection>
         <StyledPage className="Discover">

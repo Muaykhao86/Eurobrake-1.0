@@ -876,8 +876,7 @@ function Footer() {
     },
     __self: this
   }, "Disclaimer")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-    href: "/f/[id]/[formType]",
-    as: `/f/FISITA/contact`,
+    href: "/contact",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 160
@@ -886,20 +885,20 @@ function Footer() {
   }, __jsx("a", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 162
+      lineNumber: 161
     },
     __self: this
   }, "Contact Us")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
     href: "/privacyPolicy",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 163
+      lineNumber: 162
     },
     __self: this
   }, __jsx("a", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 163
+      lineNumber: 162
     },
     __self: this
   }, "Privacy Policy"))), __jsx("div", {
@@ -912,7 +911,7 @@ function Footer() {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 165
+      lineNumber: 164
     },
     __self: this
   }, __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_4___default.a, {
@@ -922,27 +921,27 @@ function Footer() {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 166
+      lineNumber: 165
     },
     __self: this
   }, "Copyright \xA9 2020 FISITA"))), __jsx("div", {
     className: "ftr_container-right",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 169
+      lineNumber: 168
     },
     __self: this
   }, __jsx("div", {
     className: "ftr_container-map",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 171
+      lineNumber: 170
     },
     __self: this
   }, __jsx(_GoogleMaps__WEBPACK_IMPORTED_MODULE_3__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 172
+      lineNumber: 171
     },
     __self: this
   })))));
@@ -6184,39 +6183,38 @@ class Nav extends react__WEBPACK_IMPORTED_MODULE_1__["Component"] {
       },
       __self: this
     }, "Visiting Barcelona"))), __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
-      href: "/f/[id]/[formType]",
-      as: `/f/FISITA/contact`,
+      href: "/contact",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 86
+        lineNumber: 87
       },
       __self: this
     }, __jsx("a", {
       onClick: this.handleClick,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 86
+        lineNumber: 87
       },
       __self: this
     }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_4__["Typography"], {
       className: "nav-links",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 86
+        lineNumber: 87
       },
       __self: this
     }, "Contact Us")))), __jsx("div", {
       className: "nav-title-box",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 89
+        lineNumber: 90
       },
       __self: this
     }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_4__["Typography"], {
       className: "nav-title",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 90
+        lineNumber: 91
       },
       __self: this
     }, "For Students"), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_4__["Typography"], {
@@ -6226,56 +6224,56 @@ class Nav extends react__WEBPACK_IMPORTED_MODULE_1__["Component"] {
       },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 91
+        lineNumber: 92
       },
       __self: this
     }, "& Educators")), __jsx("div", {
       className: "nav-links-box",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 94
+        lineNumber: 95
       },
       __self: this
     }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
       href: "/esop",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 95
+        lineNumber: 96
       },
       __self: this
     }, __jsx("a", {
       onClick: this.handleClick,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 95
+        lineNumber: 96
       },
       __self: this
     }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_4__["Typography"], {
       className: "nav-links",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 95
+        lineNumber: 96
       },
       __self: this
     }, "Apply for ESOP - Student Opportunities Programme"))))), __jsx("div", {
       className: "nav_box-middle-2",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 99
+        lineNumber: 100
       },
       __self: this
     }, __jsx("div", {
       className: "nav-title-box",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 101
+        lineNumber: 102
       },
       __self: this
     }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_4__["Typography"], {
       className: "nav-title",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 102
+        lineNumber: 103
       },
       __self: this
     }, "For Exhibitors"), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_4__["Typography"], {
@@ -6285,56 +6283,56 @@ class Nav extends react__WEBPACK_IMPORTED_MODULE_1__["Component"] {
       },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 103
+        lineNumber: 104
       },
       __self: this
     }, "& Sponsors")), __jsx("div", {
       className: "nav-links-box",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 106
+        lineNumber: 107
       },
       __self: this
     }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
       href: "/exhibitAndSponsor",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 107
+        lineNumber: 108
       },
       __self: this
     }, __jsx("a", {
       onClick: this.handleClick,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 107
+        lineNumber: 108
       },
       __self: this
     }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_4__["Typography"], {
       className: "nav-links",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 107
+        lineNumber: 108
       },
       __self: this
     }, "Exhibit & Sponsor"))))), __jsx("div", {
       className: "nav_box-middle-3",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 112
+        lineNumber: 113
       },
       __self: this
     }, __jsx("div", {
       className: "nav-title-box",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 113
+        lineNumber: 114
       },
       __self: this
     }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_4__["Typography"], {
       className: "nav-title",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 114
+        lineNumber: 115
       },
       __self: this
     }, "For Authors"), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_4__["Typography"], {
@@ -6344,56 +6342,56 @@ class Nav extends react__WEBPACK_IMPORTED_MODULE_1__["Component"] {
       },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 115
+        lineNumber: 116
       },
       __self: this
     }, "& Speakers")), __jsx("div", {
       className: "nav-links-box",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 118
+        lineNumber: 119
       },
       __self: this
     }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
       href: "/authors",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 119
+        lineNumber: 120
       },
       __self: this
     }, __jsx("a", {
       onClick: this.handleClick,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 119
+        lineNumber: 120
       },
       __self: this
     }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_4__["Typography"], {
       className: "nav-links",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 119
+        lineNumber: 120
       },
       __self: this
     }, "Authors Area"))), __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
-      href: "/authorsAreaInstructions",
+      href: "/authors/instructions",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 120
+        lineNumber: 121
       },
       __self: this
     }, __jsx("a", {
       onClick: this.handleClick,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 120
+        lineNumber: 121
       },
       __self: this
     }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_4__["Typography"], {
       className: "nav-links",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 120
+        lineNumber: 121
       },
       __self: this
     }, "Instructions & Templates")))))), __jsx("div", {
@@ -6401,35 +6399,35 @@ class Nav extends react__WEBPACK_IMPORTED_MODULE_1__["Component"] {
       style: {},
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 125
+        lineNumber: 126
       },
       __self: this
     }, __jsx(_Dates__WEBPACK_IMPORTED_MODULE_7__["Dates"], {
       MW: "35rem",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 126
+        lineNumber: 127
       },
       __self: this
     }))), __jsx("div", {
       className: "nav_box-bottom",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 129
+        lineNumber: 130
       },
       __self: this
     }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_4__["Typography"], {
       className: "nav_box-bottom-text",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 130
+        lineNumber: 131
       },
       __self: this
     }, "Organised by"), __jsx("a", {
       href: "https://www.fisita.com/",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 131
+        lineNumber: 132
       },
       __self: this
     }, __jsx(_Icons__WEBPACK_IMPORTED_MODULE_9__["FLogoWhite"], {
@@ -6437,7 +6435,7 @@ class Nav extends react__WEBPACK_IMPORTED_MODULE_1__["Component"] {
       height: "5rem",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 131
+        lineNumber: 132
       },
       __self: this
     })))), __jsx(_styles_NavStyles__WEBPACK_IMPORTED_MODULE_5__["Burger"], {
@@ -6445,7 +6443,7 @@ class Nav extends react__WEBPACK_IMPORTED_MODULE_1__["Component"] {
       onClick: this.handleClick,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 135
+        lineNumber: 136
       },
       __self: this
     }, __jsx(_styles_NavStyles__WEBPACK_IMPORTED_MODULE_5__["TopBun"], {
@@ -6453,7 +6451,7 @@ class Nav extends react__WEBPACK_IMPORTED_MODULE_1__["Component"] {
       sticky: this.props.sticky,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 136
+        lineNumber: 137
       },
       __self: this
     })));
@@ -7963,9 +7961,17 @@ async function SendFile({
   const {
     logintoken
   } = js_cookie__WEBPACK_IMPORTED_MODULE_2___default.a.get();
-  const formData = new FormData();
-  values.accept && values.accept === true ? values.accept = 'yes' : null;
-  values.copyright && values.copyright === true ? values.copyright = 'yes' : null;
+  const formData = new FormData(); // * Standard
+
+  (await values.accept) && values.accept === true ? values.accept = 'yes' : null;
+  (await values.copyright) && values.copyright === true ? values.copyright = 'yes' : null; // * Fiec
+
+  (await values.consent_sponsors) && values.consent_sponsors === true ? values.consent_sponsors = 'yes' : null;
+  (await values.consent_fiec) && values.consent_fiec === true ? values.consent_fiec = 'yes' : null;
+  (await values.consent_wep) && values.consent_wep === true ? values.consent_wep = 'yes' : null;
+  (await values.consent_bursary) && values.consent_bursary === true ? values.consent_bursary = 'yes' : null;
+  (await values.consent_events) && values.consent_events === true ? values.consent_events = 'yes' : null;
+  (await values.consent_yfia) && values.consent_yfia === true ? values.consent_yfia = 'yes' : null;
 
   _babel_runtime_corejs2_core_js_object_keys__WEBPACK_IMPORTED_MODULE_1___default()(values).forEach(key => {
     formData.append(key, values[key]);
@@ -8217,7 +8223,7 @@ __webpack_require__.r(__webpack_exports__);
  // ? BELOW ATTEMPTED FIX AT CANT READ PROPERTY LENGTH OF UNDEFINED
 
 const countWords = str => {
-  let matches = str.match(/[\w\d\’\'-]+/gi);
+  let matches = str != undefined && str.match(/[\w\d\’\'-]+/gi);
 
   if (matches != undefined) {
     return matches ? matches.length : 0;
@@ -8319,9 +8325,9 @@ const EsopSchema = yup__WEBPACK_IMPORTED_MODULE_0__["object"]().shape({
   university_scp: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().nullable(),
   university_postal: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().nullable(),
   university_country: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().required('Required'),
-  cv_filename_uploader: yup__WEBPACK_IMPORTED_MODULE_0__["mixed"]().required('Required').test("fileFormat", "Unsupported Format", value => value && CV_SUPPORTED_FORMATS.includes(value.type)),
+  cv_filename: yup__WEBPACK_IMPORTED_MODULE_0__["mixed"]().required('Required').test("fileFormat", "Unsupported Format", value => value && CV_SUPPORTED_FORMATS.includes(value.type)),
   personal_statement: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().required('Required').test('wordCount', 'Max 250 words', value => countWords(value) <= 250).test('wordCount', 'Min 150 words', value => countWords(value) >= 150),
-  student_status_filename_uploader: yup__WEBPACK_IMPORTED_MODULE_0__["mixed"]().required('Required').test("fileFormat", "Unsupported Format", value => value && PROOF_SUPPORTED_FORMATS.includes(value.type)).test("fileSize", "File too large", value => value && value.size <= FILE_SIZE),
+  student_status_filename: yup__WEBPACK_IMPORTED_MODULE_0__["mixed"]().required('Required').test("fileFormat", "Unsupported Format", value => value && PROOF_SUPPORTED_FORMATS.includes(value.type)).test("fileSize", "File too large", value => value && value.size <= FILE_SIZE),
   question_1_answer: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().required('Required'),
   question_2_answer: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().required('Required'),
   question_3_answer: yup__WEBPACK_IMPORTED_MODULE_0__["string"]().required('Required'),

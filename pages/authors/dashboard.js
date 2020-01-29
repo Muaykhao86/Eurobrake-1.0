@@ -158,12 +158,12 @@ const FilledBanner = () => (
 
     <StyledBanner>
         <StyledContainer >
-            <Typography className="banner-heading"  >Welcome to the Author's Area</Typography>
-            <Typography className="banner-sub" sfs="3rem">Submit your review ready papers by 26 January 2020</Typography>
-            <div className="banner_bottom">
+            <Typography className="banner-heading"  >Welcome to the Author's Dashboard</Typography>
+            <Typography className="banner-sub" sfs="3rem">Manage your submissions below</Typography>
+            {/* <div className="banner_bottom">
                 <ExpandMoreOutlinedIcon className="banner_bottom-icon" />
                 <Typography varient="h3" className="banner_bottom-details">Submit your review ready papers by 26 January 2020</Typography>
-            </div>
+            </div> */}
         </StyledContainer>
     </StyledBanner>
 )
@@ -241,7 +241,7 @@ class AuthorsAreaDash extends Component {
                         <Typography className="authors-title">{`Hi ${firstname}`}</Typography>
                         <Typography gutterBottom className="authors_sub-title">Welcome to the Author's Area</Typography>
                         <div className="authors_action-box">
-                            <Link href="/authorsAreaInstructions">
+                            <Link href="/authors/instructions">
                                 <Button
                                     bcolor="#134381"
                                     padding="0.5rem 2rem"

@@ -20,11 +20,11 @@ const FilledBanner = () => (
     <StyledBanner>
         <StyledContainer >
             <Typography className="banner-heading"  >Submit your review ready papers</Typography>
-            <Typography className="banner-sub" >Deadline for submissions is 26 January 2020</Typography>
-            <div className="banner_bottom">
+            <Typography className="banner-sub" >Login below to manage your submission</Typography>
+            {/* <div className="banner_bottom">
                 <ExpandMoreOutlinedIcon className="banner_bottom-icon" />
-                <Typography varient="h3" className="banner_bottom-details">Login below to manage your submission</Typography>
-            </div>
+                <Typography varient="h3" className="banner_bottom-details"></Typography>
+            </div> */}
         </StyledContainer>
     </StyledBanner>
 )
@@ -119,7 +119,7 @@ class AuthorsArea extends Component {
                 tsfs="5rem"
                 tst="60%"
                 mst="65%"
-                secondary="Sign in to mange your submission"
+                secondary="Sign in to manage your submission"
                 >
                     Author's Area
             </HeroSection>
@@ -130,7 +130,7 @@ class AuthorsArea extends Component {
                     <Typography gutterBottom className="authors">Presenting a paper at EuroBrake gives you the opportunity to share your latest technical ideas and achievements with influential specialists from around the world and to discuss your work with colleagues throughout the industrial and academic communities.</Typography>
                     <Typography gutterBottom className="authors">Once you have created your author account you can login at any time to amend your details and access important information. </Typography>
                     <Typography gutterBottom className="authors authors-it">Please note that all submitting authors will need to create a new author account for EuroBrake 2020 as account are not copied from year to year.</Typography>
-                    <Typography className="authors_sub-title">Submit your review ready papers by 26 January 2020.</Typography>
+                    {/* <Typography className="authors_sub-title">Submit your review ready papers by 26 January 2020.</Typography> */}
                     <LoginExpandTable/>
             </StyledPage>
             </>

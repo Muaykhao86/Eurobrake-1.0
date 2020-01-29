@@ -18,11 +18,10 @@ import * as yup from 'yup';
     'application/pdf',
     ];
 
-
 // ? BELOW ATTEMPTED FIX AT CANT READ PROPERTY LENGTH OF UNDEFINED
 
 export const countWords = (str) => {
-  let matches = str.match(/[\w\d\’\'-]+/gi);
+  let matches = str != undefined && str.match(/[\w\d\’\'-]+/gi);
   if(matches != undefined){
   return matches ? matches.length : 0;
   }else return 0

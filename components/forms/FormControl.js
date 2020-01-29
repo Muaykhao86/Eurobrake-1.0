@@ -2,7 +2,7 @@ import * as yup from 'yup';
 
 // ? BELOW ATTEMPTED FIX AT CANT READ PROPERTY LENGTH OF UNDEFINED
 export const countWords = (str) => {
-  let matches = str.match(/[\w\d\’\'-]+/gi);
+  let matches = str != undefined && str.match(/[\w\d\’\'-]+/gi);
   if(matches != undefined){
   return matches ? matches.length : 0;
   }else return 0
@@ -188,7 +188,7 @@ export const EsopSchema = yup.object().shape({
     university_scp: yup.string().nullable(),
     university_postal: yup.string().nullable(),
     university_country: yup.string().required('Required'),
-    cv_filename_uploader: yup.mixed().required('Required')
+    cv_filename: yup.mixed().required('Required')
     .test("fileFormat",
           "Unsupported Format",
           value => value && CV_SUPPORTED_FORMATS.includes(value.type)),
@@ -205,7 +205,7 @@ export const EsopSchema = yup.object().shape({
         value => 
          countWords(value) >= 150
       ),
-    student_status_filename_uploader: yup.mixed().required('Required')
+    student_status_filename: yup.mixed().required('Required')
     .test("fileFormat",
           "Unsupported Format",
           value => value && PROOF_SUPPORTED_FORMATS.includes(value.type))

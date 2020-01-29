@@ -2,6 +2,7 @@ import React, { Component, useState, useEffect } from 'react'
 import { Formik, Form, Field, FieldArray } from 'formik';
 import Link from 'next/link';
 import MenuItem from '@material-ui/core/MenuItem';
+import CircularProgress from '@material-ui/core/CircularProgress';
 import Typography from '@material-ui/core/Typography';
 import { TextField, Select, RadioGroup, CheckboxWithLabel, Checkbox, SimpleFileUpload } from 'formik-material-ui';
 import { Button } from '../Button';
@@ -16,6 +17,7 @@ export const Esop = (props) => {
  const [Toggle, setToggle] = useState(false);
     const [Loading, setLoading] = useState(false);
     const [Status, setStatus] = useState(null);
+    const [Errors, setErrors] = useState(null);
     const { presets, csrf, apiUrl} = props;
     const url = `https://prelude.eurobrake.net/esop`;
 
@@ -31,7 +33,7 @@ export const Esop = (props) => {
                     const allTouched = async () => {
                      await Object.keys(values).forEach(key => {   
                         setFieldTouched(key, true)});
-                        console.log({errors})
+                        console.log({errors, values})
                        await validateForm().then(errors => Object.keys(errors).length === 0 && onSubmit())
                 }
 
@@ -41,8 +43,10 @@ export const Esop = (props) => {
                   let res =  await SendFile({values, url});
                   let data = await  res;
                   let dataStatus= await  data && data.status ? data.status  : data.error
-                  setStatus(dataStatus)
+                  await setStatus(dataStatus)
+                  await data.error ? setErrors(data.error) : null
                   console.log({data})
+                  console.log({Status})
                   let result = async () => {
                   await  setLoading(false)
                   await setToggle(true)
@@ -540,13 +544,13 @@ export const Esop = (props) => {
                         </label>
                             <Field
                                 className="form-input_file"
-                                value={values.cv_filename_uploader}
+                                value={values.cv_filename}
                                 style={{ color: '#134381' }}
-                                name="cv_filename_uploader"
+                                name="cv_filename"
                                 component={SimpleFileUpload}
                                 fullWidth
                             />
-                            {errors.cv_filename_uploader && <label style={{ position: 'absolute', bottom: '-2rem', right: '1rem', color: '#ff0000', fontSize: '1.5rem' }}>{errors.cv_filename_uploader}</label>}
+                            {errors.cv_filename && <label style={{ position: 'absolute', bottom: '-2rem', right: '1rem', color: '#ff0000', fontSize: '1.5rem' }}>{errors.cv_filename}</label>}
                             </div>
                         </div>
                         <div className="form-notes">
@@ -588,13 +592,13 @@ export const Esop = (props) => {
                         </label>
                             <Field
                                 className="form-input_file"
-                                value={values.student_status_filename_uploader}
+                                value={values.student_status_filename}
                                 style={{ color: '#134381' }}
                                 name="student_status_filename_uploader"
                                 component={SimpleFileUpload}
                                 fullWidth
                             />
-                            {errors.student_status_filename_uploader && <label style={{ position: 'absolute', bottom: '-2rem', right: '1rem', color: '#ff0000', fontSize: '1.5rem' }}>{errors.student_status_filename_uploader}</label>}
+                            {errors.student_status_filename && <label style={{ position: 'absolute', bottom: '-2rem', right: '1rem', color: '#ff0000', fontSize: '1.5rem' }}>{errors.student_status_filename}</label>}
                         </div>
                         </div>
 
@@ -1041,14 +1045,14 @@ export const Esop = (props) => {
                         style={{fontSize: '2rem'}}
                         >For further details contact Hayley Millar, Education Manager at <a href="mailto:h.millar@fisita.com">h.millar@fisita.com.</a></Typography>
 
-
+  {Loading ?  <CircularProgress size={24} className="loading"/> : 
                         <Button 
                             onClick={() => allTouched()}
                             bcolor="#134381"
                             background="#134381"
                             br="100rem"
                             style={{ margin: "4rem 0", color: '#FFF' }}
-                            fontSize="2rem">Submit</Button>
+                            fontSize="2rem">Submit</Button>}
                     {Toggle && <Typography className="form-title" style={{alignSelf: 'center', textTransform: 'uppercase'}}>{Status}</Typography>}
 
                     </StyledForm>
@@ -1092,9 +1096,9 @@ const emptyInitial = {
     university_scp: '',
     university_postal: '',
     university_country: '',
-    cv_filename_uploader: '',
+    cv_filename: '',
     personal_statement: '',
-    student_status_filename_uploader: '',
+    student_status_filename: '',
     question_1_answer: '',
     question_2_answer: '',
     question_3_answer: '',

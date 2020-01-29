@@ -32,8 +32,8 @@ const Form = props => {
                 tsfs="5rem"
                 tst="60%"
                 mst="65%"
-                secondary={formType == 'contact' ? contact : ''} >
-            {formType == 'contact' ? 'Contact Us' : 'Eurobrake 2020'}
+                secondary='' >
+            Eurobrake 2020
             </HeroSection>
         <StyledPage>
             <FixedDates/>

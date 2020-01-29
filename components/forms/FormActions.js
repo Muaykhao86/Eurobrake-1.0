@@ -70,9 +70,17 @@ export async function GetForm(url) {
 export async function SendFile({ values, url, csrf }) {
     const { logintoken } = cookie.get();
     const formData = new FormData();
-    values.accept && values.accept === true ? values.accept = 'yes' : null;
-    values.copyright && values.copyright === true ? values.copyright = 'yes' : null;
     
+        // * Standard
+    await values.accept && values.accept === true ? values.accept = 'yes' : null;
+    await values.copyright && values.copyright === true ? values.copyright = 'yes' : null;
+        // * Fiec
+    await values.consent_sponsors && values.consent_sponsors === true ? values.consent_sponsors = 'yes' : null;
+    await values.consent_fiec && values.consent_fiec === true ? values.consent_fiec = 'yes' : null;
+    await values.consent_wep && values.consent_wep === true ? values.consent_wep = 'yes' : null;
+    await values.consent_bursary && values.consent_bursary === true ? values.consent_bursary = 'yes' : null;
+    await values.consent_events && values.consent_events === true ? values.consent_events = 'yes' : null;
+    await values.consent_yfia && values.consent_yfia === true ? values.consent_yfia = 'yes' : null;
     
     Object.keys(values).forEach(key => {   
       formData.append(key, values[key])});
