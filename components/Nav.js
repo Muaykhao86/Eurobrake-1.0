@@ -14,7 +14,7 @@ import {mobWidth} from '../utils/mixins';
 export const NavLogo = styled.img.attrs(props => ({
     src: "/images/logo.png",
     alt: "Logo"
-}))`max-width: 40rem;
+}))`max-width: 25rem;
  @media only screen 
         and (max-device-width: 1500px) 
         and (-webkit-min-device-pixel-ratio: 2) {
@@ -62,7 +62,7 @@ export default class Nav extends Component {
                             <NavLogo />
                         </div>
                         <div className="nav-inner">
-                            <Typography className="nav-inner-title">Europe's braking technology conference & exhibition</Typography>
+                            <Typography className="nav-inner-title" >Europe's braking technology conference & exhibition</Typography>
                             <Typography className="nav-inner-text">2-4 June 2020, CCIB, Barcelona, Spain</Typography>
                         </div>
                     </div>

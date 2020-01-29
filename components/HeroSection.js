@@ -94,7 +94,7 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 1300px)
         and (-webkit-min-device-pixel-ratio: 2)
         and (orientation : landscape) {
         font-size: ${props => props.tfs  || '9rem'};
-        top: ${props => props.tt ? props.tt : '20%'};
+        top: ${props => props.tt ? props.tst : '30%'};
     }
          @media only screen 
         and (max-device-width: 768px) 

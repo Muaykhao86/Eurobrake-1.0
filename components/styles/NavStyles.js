@@ -220,6 +220,7 @@ font-size: 1.3rem
         display: flex;
         flex-flow: column;
         &-title{
+        margin-left: 2rem;
         font-size: 3rem;
         font-family: ${props => props.theme.MPSemibold};
         color: ${props => props.theme.secondary};
@@ -238,6 +239,7 @@ font-size: 1.4rem
 } */
         }
         &-text{
+            margin-left: 2rem;
             font-size: 3rem;
         font-family: ${props => props.theme.MPLight};
         color: ${props => props.theme.white};
@@ -264,9 +266,9 @@ font-size: 1.4rem
     } 
     
     &_box-1{
-        margin-left: 5rem;
+        margin-left: 3rem;
         padding: 2rem;
-        width: 70%;
+        
 
          @media only screen 
   and (max-device-width: 768px) 
