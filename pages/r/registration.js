@@ -57,11 +57,7 @@ export default function Registration (props) {
 
     const {url} = props;// ? GETTIN FROM GET INITIAL PROPS
     const IF_URL = decodeURIComponent(url);
-    if(window != undefined){
-        const queryString = window.location.search;
-        console.log({queryString})
-        console.log({props})
-    }
+ 
 
 
 return(
