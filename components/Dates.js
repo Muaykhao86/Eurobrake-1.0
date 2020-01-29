@@ -177,8 +177,8 @@ const [RightHide, setRightHide] = useState(true);
             <Typography gutterBottom as="p"  className="Dates-text">Deadline for speakers to register</Typography>
             <Typography gutterBottom as="h1"  className="Dates-date">24 May 2020</Typography>
             <Typography gutterBottom as="p" className="Dates-text" >Deadline to upload PPTs for on-site presentation</Typography>
-             <Link href="/registration">
-                <Button  br="500rem" padding="1rem" fontSize="1.5rem" style={{ color: '#FFF', fontSize: '1.5rem', margin: '0',marginTop: '1rem',}}>Book now</Button>
+             <Link href="/authors">
+                <Button  br="500rem" padding="1rem" fontSize="1.5rem" style={{ color: '#FFF', fontSize: '1.5rem', margin: '0',marginTop: '1rem',}}>Authors Login</Button>
             </Link>
             </>
             }

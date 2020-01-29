@@ -109,6 +109,36 @@ export async function SendFile({ values, url, csrf }) {
             return error
         }
     }
+    if (url === 'https://prelude.eurobrake.net/esop') {
+        try {
+            const apiUrl = url;
+            const response = await fetch(apiUrl, {
+                method: 'POST',
+                body: formData,
+                credentials: 'include',
+                headers: {
+                    'Content-Type': 'application/json',
+                }
+            });
+            const data = await response.json();
+            await console.log({ data })
+            if (data.status === 'success') {
+                console.log('getForm', data);
+                return data
+
+            } else {
+                let error = new Error(data.error)
+                error.response = response
+                throw error
+            }
+        } catch (error) {
+            console.error(
+                'Failed to get form, please try again', error
+            )
+            this.setState({ error: error.message });
+            return error
+        }
+    }
 
     return
 }

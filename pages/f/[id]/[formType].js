@@ -38,7 +38,7 @@ const Form = props => {
                     <FixedBox />
             {formType == 'abstract' && formType == 'author' &&
 
-            <Link href="/authorsAreaDash">
+            <Link href="/authors/dashboard">
                           <Button
                         background="#134381"
                         br="100rem"
@@ -67,8 +67,8 @@ Form.getInitialProps = async context => {
     console.log('props', { id, logintoken, apiUrl, taskUrl, formType, taskType })
     const redirectOnError = () =>
         process.browser
-            ? Router.push('/authorsArea')
-            : context.res.writeHead(301, { Location: '/authorsArea' })
+            ? Router.push('/authors')
+            : context.res.writeHead(301, { Location: '/authors' })
 
     if(formType === 'reset') return { apiUrl, id, formType, taskType}// todo sort out real call
     if(formType === 'contact') {

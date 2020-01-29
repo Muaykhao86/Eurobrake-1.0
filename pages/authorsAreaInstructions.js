@@ -107,7 +107,7 @@ class AuthorsAreaInstructions extends Component {
                     <div className="authors_top-box">
                     
                     <Typography className="authors-title">Instructions & Templates</Typography>
-                    <Link href="/authorsAreaDash">
+                    <Link href="/authors/dashboard">
                           <Button
                         background="#134381"
                         br="100rem"

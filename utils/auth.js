@@ -13,7 +13,7 @@ import { GetForm } from '../components/forms/FormActions';
 export const login = ({ logintoken }) => {
 
   cookie.set('logintoken', logintoken, { expires: 1 })
-  Router.push('/authorsAreaDash')
+  Router.push('/authors/dashboard')
 }
 
 // CHECK TOKEN, IF WE HAVE ONE RETURN TOKEN, IF WE DONT REDIRECT TO LOGIN PAGE
@@ -26,11 +26,11 @@ export const auth = ctx => {
   if (!logintoken) {
     if (ctx.req) {
       // If `ctx.req` is available it means we are on the server.
-      ctx.res.writeHead(302, { Location: '/authorsArea' })
+      ctx.res.writeHead(302, { Location: '/authors' })
       ctx.res.end()
     } else {
       // This should only happen on client.
-      Router.push('/authorsArea')
+      Router.push('/authors')
     }
   }
 
@@ -49,7 +49,7 @@ export const logout = async (ctx) => {
   // To trigger the event listener we save some random data into the `logout` key
   await window.localStorage.setItem("logout", Date.now());
 
-  await Router.push("/authorsArea")
+  await Router.push("/authors")
 
 };
 
@@ -61,7 +61,7 @@ export const withAuthSync = WrappedComponent => {
     const syncLogout = event => {
       if (event.key === 'logout') {
         console.log('logged out from storage!')
-        Router.push('/authorsArea')
+        Router.push('/authors')
       }
     }
 

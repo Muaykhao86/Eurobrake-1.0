@@ -388,7 +388,7 @@ function FixedDates(props) {
     },
     __self: this
   }, "Deadline to upload PPTs for on-site presentation"), __jsx(next_link__WEBPACK_IMPORTED_MODULE_5___default.a, {
-    href: "/registration",
+    href: "/authors",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 180
@@ -409,7 +409,7 @@ function FixedDates(props) {
       lineNumber: 181
     },
     __self: this
-  }, "Book now")))), __jsx("div", {
+  }, "Authors Login")))), __jsx("div", {
     className: "hide-box-dates",
     __source: {
       fileName: _jsxFileName,
@@ -6142,7 +6142,7 @@ class Nav extends react__WEBPACK_IMPORTED_MODULE_1__["Component"] {
       },
       __self: this
     }, "Pricing & Registration"))), __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
-      href: "/technicalProgram",
+      href: "/programme",
       __source: {
         fileName: _jsxFileName,
         lineNumber: 84
@@ -6355,7 +6355,7 @@ class Nav extends react__WEBPACK_IMPORTED_MODULE_1__["Component"] {
       },
       __self: this
     }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
-      href: "/authorsArea",
+      href: "/authors",
       __source: {
         fileName: _jsxFileName,
         lineNumber: 119
@@ -7985,6 +7985,39 @@ async function SendFile({
         credentials: 'include',
         headers: {
           Authorization: 'Bearer ' + logintoken
+        }
+      });
+      const data = await response.json();
+      await console.log({
+        data
+      });
+
+      if (data.status === 'success') {
+        console.log('getForm', data);
+        return data;
+      } else {
+        let error = new Error(data.error);
+        error.response = response;
+        throw error;
+      }
+    } catch (error) {
+      console.error('Failed to get form, please try again', error);
+      this.setState({
+        error: error.message
+      });
+      return error;
+    }
+  }
+
+  if (url === 'https://prelude.eurobrake.net/esop') {
+    try {
+      const apiUrl = url;
+      const response = await isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_4___default()(apiUrl, {
+        method: 'POST',
+        body: formData,
+        credentials: 'include',
+        headers: {
+          'Content-Type': 'application/json'
         }
       });
       const data = await response.json();
@@ -14074,7 +14107,7 @@ const login = ({
   js_cookie__WEBPACK_IMPORTED_MODULE_6___default.a.set('logintoken', logintoken, {
     expires: 1
   });
-  next_router__WEBPACK_IMPORTED_MODULE_4___default.a.push('/authorsAreaDash');
+  next_router__WEBPACK_IMPORTED_MODULE_4___default.a.push('/authors/dashboard');
 }; // CHECK TOKEN, IF WE HAVE ONE RETURN TOKEN, IF WE DONT REDIRECT TO LOGIN PAGE
 
 const auth = ctx => {
@@ -14087,12 +14120,12 @@ const auth = ctx => {
     if (ctx.req) {
       // If `ctx.req` is available it means we are on the server.
       ctx.res.writeHead(302, {
-        Location: '/authorsArea'
+        Location: '/authors'
       });
       ctx.res.end();
     } else {
       // This should only happen on client.
-      next_router__WEBPACK_IMPORTED_MODULE_4___default.a.push('/authorsArea');
+      next_router__WEBPACK_IMPORTED_MODULE_4___default.a.push('/authors');
     }
   }
 
@@ -14106,7 +14139,7 @@ const logout = async ctx => {
   await js_cookie__WEBPACK_IMPORTED_MODULE_6___default.a.remove('logintoken'); // To trigger the event listener we save some random data into the `logout` key
 
   await window.localStorage.setItem("logout", _babel_runtime_corejs2_core_js_date_now__WEBPACK_IMPORTED_MODULE_2___default()());
-  await next_router__WEBPACK_IMPORTED_MODULE_4___default.a.push("/authorsArea");
+  await next_router__WEBPACK_IMPORTED_MODULE_4___default.a.push("/authors");
 }; // IF LOGGED IN/ HAS TOKEN RETURN THE COMPONENT 
 
 const withAuthSync = WrappedComponent => {
@@ -14114,7 +14147,7 @@ const withAuthSync = WrappedComponent => {
     const syncLogout = event => {
       if (event.key === 'logout') {
         console.log('logged out from storage!');
-        next_router__WEBPACK_IMPORTED_MODULE_4___default.a.push('/authorsArea');
+        next_router__WEBPACK_IMPORTED_MODULE_4___default.a.push('/authors');
       }
     };
 

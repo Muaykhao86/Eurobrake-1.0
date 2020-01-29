@@ -164,16 +164,17 @@ export default () => (
             <Typography gutterBottom className="Esop Esop-bold margin-top5">About the programme</Typography>
             <Typography gutterBottom className="Esop ">The EuroBrake Student Opportunities Programme (ESOP) offers students from around the world the chance to attend EuroBrake 2020.</Typography>
             <Typography gutterBottom className="Esop ">Selected students will be offered the opportunity to attend EuroBrake via a sponsorship package which offers a strong networking opportunities, a CV check/one to one career advice with HR representatives from the sponsor companies, access to the designated Student Lounge and much more. </Typography>
-            <Typography gutterBottom className="Esop ">The 2020 application round is now open. </Typography>
+            <Typography gutterBottom className="Esop-bold " style={{marginTop: 'rem', fontSize: '2rem'}}>ESOP 2020 applications are temporarily closed for maintenance. We apologise for any inconvenience. </Typography>
+            <Typography gutterBottom className="Esop-bold " style={{marginTop: 'rem', fontSize: '2rem'}}>The application deadline will be extended to 10 Feb 2020. Please check back here for updates.</Typography>
             <div className="button_box">
-            <Link href="/tempEsop">
-            <Button
+            {/* <Link href="/esop/apply"> */}
+            {/* <Button
             background="#134381"
             br="100rem"
             bcolor="#134381"
-            style={{margin: '3.5rem 0', }}
-            >Apply here</Button>
-            </Link>    
+            style={{margin: '3.5rem 0', backgroundColor: '#5454', border: '1px solid #787878' }}
+            >Apply here</Button> */}
+            {/* </Link>     */}
             </div>
             <Typography gutterBottom className="Esop-title">Become a sponsor</Typography>
             <Typography gutterBottom className="Esop ">Do you want to engage with and advise engineering and technology students who could become the mobility talent of tomorrow?</Typography>

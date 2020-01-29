@@ -24,7 +24,7 @@ const Form = props => {
             </HeroSection>
         <StyledPage>
             <FixedDates/>
-            <Link href="/authorsAreaDash">
+            <Link href="/authors/dashboard">
                           <Button
                         background="#134381"
                         br="100rem"
@@ -46,8 +46,8 @@ Form.getInitialProps = async context => {
     console.log('1st task folder GIP', { id, logintoken, apiUrl, taskType })
     const redirectOnError = () =>
         process.browser
-            ? Router.push('/authorsArea')
-            : context.res.writeHead(301, { Location: '/authorsArea' })
+            ? Router.push('/authors')
+            : context.res.writeHead(301, { Location: '/authors' })
     if (logintoken) {
         try {
             const response = await fetch(apiUrl, {

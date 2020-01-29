@@ -11,6 +11,14 @@
     "/_error": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
+    ],
+    "/esop": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
+    ],
+    "/esop/apply": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
     ]
   }
 }

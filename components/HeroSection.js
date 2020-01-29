@@ -54,7 +54,7 @@ left: 0;
 const StyledText = styled(Typography)`
     position: absolute;
     z-index: 10;
-    top: ${props => props.secondary ? '60%' : '20%'};
+    top: ${props => props.t? props.t : props.secondary ? '60%' : '20%'};
     align-self: center;
     width: ${props => props.max || '80%'};
     color: ${props => props.color || props.theme.white};
