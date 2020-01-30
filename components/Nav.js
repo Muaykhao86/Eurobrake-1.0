@@ -105,7 +105,7 @@ export default class Nav extends Component {
                                 </div>
 
                                 <div className="nav-links-box">
-                                    <Link href="/exhibitAndSponsor"><a onClick={this.handleClick}><Typography className="nav-links">Exhibit & Sponsor</Typography></a></Link>
+                                    <Link href="/exhibition"><a onClick={this.handleClick}><Typography className="nav-links">Exhibit & Sponsor</Typography></a></Link>
                                     {/* <Link href="/exhibitors"><a onClick={this.handleClick}><Typography className="nav-links">Exhibitor Directory</Typography></a></Link> */}
                                 </div>
 

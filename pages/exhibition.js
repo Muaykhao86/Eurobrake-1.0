@@ -180,7 +180,7 @@ const svgHeight = full ? '100vh' : '';
 
                     <Button
                     target="_blank"
-                    href="https://www.eurobrake.net/exhibition/brochure.pdf"
+                    href="https://www.fisita.com/documents/EuroBrake_2020_Exhibition_and_Sponsorship_Brochure.pdf"
                         background="#134381"
                         br="100rem"
                         bcolor="#134381"

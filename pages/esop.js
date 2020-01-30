@@ -192,12 +192,13 @@ export default () => (
             </div>
              <div className="button_box">
              <Button
-             href="https://www.eurobrake.net/exhibition/brochure.pdf"
+             target="_blank"
+             href="https://www.fisita.com/documents/EuroBrake_2020_Exhibition_and_Sponsorship_Brochure.pdf"
             background="#134381"
             br="100rem"
             bcolor="#134381"
             style={{margin: '3.5rem 0'}}
-            >DOWNLOAD THE SPONSORSHIP BROUCHURE HERE</Button>
+            >DOWNLOAD THE SPONSORSHIP BROCHURE HERE</Button>
             </div>
              </div>
         </StyledPage>

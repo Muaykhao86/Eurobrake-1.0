@@ -38,7 +38,7 @@ const Form = props => {
         <StyledPage>
             <FixedDates/>
                     <FixedBox />
-            {formType == 'abstract' && formType == 'author' &&
+            {formType == 'abstract' || formType == 'author' &&
 
             <Link href="/authors/dashboard">
                           <Button

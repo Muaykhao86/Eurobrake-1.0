@@ -126,7 +126,7 @@ const StyledInfoArea = styled.div`
     font-family: ${props => props.theme.MPRegular};
 
     &-text{
-
+            cursor: pointer;
         font-size: 1.5rem;
         align-self: flex-start;
         color: black;
@@ -411,8 +411,8 @@ AuthorsAreaDash.getInitialProps = async ctx => {
     
     const redirectOnError = async () => {
     let count = 0;
-    if(count < 3) {
     await  count ++
+    if(count > 3) {
      await process.browser ? Router.push('/authors') : ctx.res.writeHead(301, { Location: '/authors' })
     }else{
         await logout()

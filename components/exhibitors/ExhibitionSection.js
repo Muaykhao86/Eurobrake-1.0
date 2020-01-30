@@ -10,7 +10,7 @@ import {winWidth} from '../../utils/mixins';
 const ExhibitCard = () => (
     <Card left style={{opacity: '1'}}>
                     <h1>Partner your brand with EuroBrake</h1>
-                    <Link href="/exhibitAndSponsor">
+                    <Link href="/exhibition">
                     <Button br="500rem">EXHIBIT/SPONSOR</Button>
                     </Link>
                 </Card>

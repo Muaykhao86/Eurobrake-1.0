@@ -15,6 +15,7 @@ export const StyledTask = styled(Form)`
             font-family: ${props => props.theme.MPBold};
             color: ${props => props.theme.primary};
         }
+        
      .MuiInput-underline:before {
                     border-bottom: none;
                 }   
