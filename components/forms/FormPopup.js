@@ -105,7 +105,7 @@ export default async function FormPopup  (props) {
 
 
     
-    const onOpen = () => {
+    const onOpen = async () => {
 
     popen  && await setOpen(popen)
     await setLoading(true)
