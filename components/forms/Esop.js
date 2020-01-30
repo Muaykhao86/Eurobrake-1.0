@@ -18,6 +18,7 @@ export const Esop = (props) => {
     const [Loading, setLoading] = useState(false);
     const [Status, setStatus] = useState(null);
     const [Errors, setErrors] = useState(null);
+    const [Problems, setProblems] = useState(null);
     const { presets, csrf, apiUrl} = props;
     const url = `https://prelude.eurobrake.net/esop`;
 
@@ -46,9 +47,11 @@ export const Esop = (props) => {
                   let data = await  res;
                   let dataStatus= await  data && data.status 
                   let errMsg = await data && data.message
+                  let errProb = await data && data.problems
                   dataStatus && await setStatus(dataStatus)
                   !dataStatus && await setStatus('Error')
                   !dataStatus && await setErrors(errMsg)
+                  !dataStatus && await setProblems(errProb)
                   console.log({data})
                   console.log({Status})
                   let result = async () => {
@@ -1078,10 +1081,10 @@ export const Esop = (props) => {
                             style={{ margin: "4rem 0", color: '#FFF' }}
                             fontSize="2rem">Submit</Button>}
                     {Toggle && <Typography className="form-title" style={{alignSelf: 'center', textTransform: 'uppercase'}}>{Status}</Typography>}
-                    {Toggle && Status == 'Error' && <Typography className="form-title" style={{alignSelf: 'center', textTransform: 'uppercase'}}>{Errors}</Typography>}
                     {Toggle && Status != 'Error' && <Typography className="form-title" style={{alignSelf: 'center', textTransform: 'uppercase'}}>Thank you for your application</Typography>}
                     {Toggle && Status != 'Error' && <Typography className="form-title" style={{alignSelf: 'center', textTransform: 'uppercase'}}>Please wait to hear from us</Typography>}
-
+                    {Toggle && Status == 'Error' && <Typography className="form-title" style={{alignSelf: 'center', textTransform: 'uppercase'}}>{Errors}</Typography>}
+                    {Toggle && Status == 'Error' &&  Problems && Problems.map(prob => { <Typography className="form-title" style={{alignSelf: 'center', textTransform: 'uppercase'}}>{prob.error}</Typography>})}
                     </StyledForm>
                 )
             }}
