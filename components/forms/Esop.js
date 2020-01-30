@@ -45,12 +45,11 @@ export const Esop = (props) => {
                   let res =  await SendFile({values, url});
                   let data = await  res;
                   let dataStatus= await  data && data.status 
-                  let errMsg = await data.message
+                  let errMsg = await data && data.message
                   dataStatus && await setStatus(dataStatus)
                   !dataStatus && await setStatus('Error')
                   !dataStatus && await setErrors(errMsg)
                   console.log({data})
-                  console.log({err})
                   console.log({Status})
                   let result = async () => {
                   await  setLoading(false)
