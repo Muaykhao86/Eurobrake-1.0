@@ -931,6 +931,10 @@ export const Esop = (props) => {
                                 If you do not consent to us passing on your details, please tick here
                         </label>
                             <input
+                                onChange={e => {
+                                     e.target.checked ? values.consent_sponsors= 'no' :  values.consent_sponsors = '' 
+
+                                                }}
                                 className="form-checkboxField-box"
                                 style={{ color: '#134381', }}
                                 value={values.consent_sponsors}
@@ -952,7 +956,7 @@ export const Esop = (props) => {
                         </label>
                             <input
                               onChange={e => {
-                                                    e.target.checked ? push(consent_fiec.value) : values.consent_fiec && remove(values.consent_fiec.value)
+                                                    e.target.checked ? values.consent_fiec = 'yes' :  values.consent_fiec = '' 
                                                 }}
                                 className="form-checkboxField-box"
                                 style={{ color: '#134381', }}
@@ -974,7 +978,7 @@ export const Esop = (props) => {
                         </label>
                             <input
                              onChange={e => {
-                                                    e.target.checked ? push(consent_wep.value) : values.consent_wep && remove(values.consent_wep.value)
+                                                    e.target.checked ? values.consent_wep= 'yes' :  values.consent_wep = '' 
                                                 }}
                                 className="form-checkboxField-box"
                                 style={{ color: '#134381', }}
@@ -995,7 +999,7 @@ export const Esop = (props) => {
                         </label>
                             <input
                                onChange={e => {
-                                                    e.target.checked ? push(consent_events.value) : values.consent_events && remove(values.consent_events.value)
+                                                    e.target.checked ? values.consent_events= 'yes' :  values.consent_events = '' 
                                                 }}
                                 className="form-checkboxField-box"
                                 style={{ color: '#134381', }}
@@ -1016,7 +1020,8 @@ export const Esop = (props) => {
                         </label>
                             <input
                             onChange={e => {
-                                                    e.target.checked ? push(consent_bursary.value) : values.consent_bursary && remove(values.consent_bursary.value)
+                                                    e.target.checked ? values.consent_bursary= 'yes' :  values.consent_bursary = '' 
+
                                                 }}
                                 className="form-checkboxField-box"
                                 style={{ color: '#134381', }}
@@ -1039,7 +1044,7 @@ export const Esop = (props) => {
                         </label>
                             <input
                              onChange={e => {
-                                                    e.target.checked ? push(consent_yfia.value) : values.consent_yfia && remove(values.consent_yfia.value)
+                                                    e.target.checked ? values.consent_yfia= 'yes' :  values.consent_yfia = '' 
                                                 }}
                                 className="form-checkboxField-box"
                                 style={{ color: '#134381', }}

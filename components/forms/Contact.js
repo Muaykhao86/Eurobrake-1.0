@@ -9,7 +9,6 @@ import {ContactSchema} from './FormControl';
 import { Typography } from '@material-ui/core';
 
 
-
 export const ContactForm = (props) => {
     const { presets, csrf, apiUrl, paperId} = props;
 
