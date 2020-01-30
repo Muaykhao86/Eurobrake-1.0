@@ -1078,7 +1078,9 @@ export const Esop = (props) => {
                             style={{ margin: "4rem 0", color: '#FFF' }}
                             fontSize="2rem">Submit</Button>}
                     {Toggle && <Typography className="form-title" style={{alignSelf: 'center', textTransform: 'uppercase'}}>{Status}</Typography>}
-                    {Toggle && <Typography className="form-title" style={{alignSelf: 'center', textTransform: 'uppercase'}}>{Errors}</Typography>}
+                    {Toggle && Status == 'Error' && <Typography className="form-title" style={{alignSelf: 'center', textTransform: 'uppercase'}}>{Errors}</Typography>}
+                    {Toggle && Status != 'Error' && <Typography className="form-title" style={{alignSelf: 'center', textTransform: 'uppercase'}}>Thank you for your application</Typography>}
+                    {Toggle && Status != 'Error' && <Typography className="form-title" style={{alignSelf: 'center', textTransform: 'uppercase'}}>Please wait to hear from us</Typography>}
 
                     </StyledForm>
                 )
@@ -1100,7 +1102,7 @@ const emptyInitial = {
     student_firstname: '',
     student_lastname: '',
     student_email: '',
-    student_company: '',
+    // student_company: '',
     student_address1: '',
     student_address2: '',
     student_address3: '',
