@@ -951,6 +951,9 @@ export const Esop = (props) => {
                                 Membership of FISITA International Engineering Community (FIEC)
                         </label>
                             <input
+                              onChange={e => {
+                                                    e.target.checked ? push(consent_fiec.value) : values.consent_fiec && remove(values.consent_fiec.value)
+                                                }}
                                 className="form-checkboxField-box"
                                 style={{ color: '#134381', }}
                                 value={values.consent_fiec}
@@ -970,6 +973,9 @@ export const Esop = (props) => {
                                 Career & work placement opportunities via FISITA Work Experience Programme
                         </label>
                             <input
+                             onChange={e => {
+                                                    e.target.checked ? push(consent_wep.value) : values.consent_wep && remove(values.consent_wep.value)
+                                                }}
                                 className="form-checkboxField-box"
                                 style={{ color: '#134381', }}
                                 value={values.consent_wep}
@@ -988,6 +994,9 @@ export const Esop = (props) => {
                                 Opportunities for students at upcoming FISITA events
                         </label>
                             <input
+                               onChange={e => {
+                                                    e.target.checked ? push(consent_events.value) : values.consent_events && remove(values.consent_events.value)
+                                                }}
                                 className="form-checkboxField-box"
                                 style={{ color: '#134381', }}
                                 value={values.consent_events}
@@ -1006,6 +1015,9 @@ export const Esop = (props) => {
                                 Opportunities for funding via FISITA Travel Bursary Scheme
                         </label>
                             <input
+                            onChange={e => {
+                                                    e.target.checked ? push(consent_bursary.value) : values.consent_bursary && remove(values.consent_bursary.value)
+                                                }}
                                 className="form-checkboxField-box"
                                 style={{ color: '#134381', }}
                                 value={values.consent_bursary}
@@ -1026,6 +1038,9 @@ export const Esop = (props) => {
                                 Subscription to “Your Future in Automotive” newsletter
                         </label>
                             <input
+                             onChange={e => {
+                                                    e.target.checked ? push(consent_yfia.value) : values.consent_yfia && remove(values.consent_yfia.value)
+                                                }}
                                 className="form-checkboxField-box"
                                 style={{ color: '#134381', }}
                                 value={values.consent_yfia}
