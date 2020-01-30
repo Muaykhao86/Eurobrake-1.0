@@ -48,21 +48,32 @@ export const Esop = (props) => {
                   let dataStatus= await  data && data.status 
                   let errMsg = await data && data.error
                   let errProb = await data && data.problems
-                  console.log({dataStatus})
-                  console.log({errMsg})
-                  console.log({errProb})
-
+                
+                 
+                  let setSubmitStatus = async () => {
+                 
                   await setStatus(dataStatus)
                   await dataStatus == 'error' &&  setErrs(errMsg)
                   await dataStatus == 'error' && setProblems(errProb)
+                   
+                  return result()
+                 
+                   }    
+
+                  
+                  let result = async () => {
+
+                    console.log({dataStatus})
+                  console.log({errMsg})
+                  console.log({errProb})
                   console.log({data})
                   console.log({Status})
-                  let result = async () => {
+
                   await  setLoading(false)
                   await setToggle(true)
                    }    
                   
-                return result()
+                    return setSubmitStatus()
                  
               }
 
