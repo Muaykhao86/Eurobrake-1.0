@@ -45,7 +45,7 @@ export const Esop = (props) => {
                   await  console.log('submitting')
                   let res =  await SendFile({values, url});
                   let data = await  res;
-                  let dataStatus= await  data && data.status 
+                  let dataStatus = await  data && data.status 
                   let errMsg = await data && data.error
                   let errProb = await data && data.problems
                 
@@ -60,7 +60,7 @@ export const Esop = (props) => {
                  
                    }    
 
-                  
+
                   let result = async () => {
 
                     console.log({dataStatus})
@@ -1095,10 +1095,10 @@ export const Esop = (props) => {
                             style={{ margin: "4rem 0", color: '#FFF' }}
                             fontSize="2rem">Submit</Button>}
                     {Toggle && <Typography className="form-title" style={{alignSelf: 'center', textTransform: 'uppercase'}}>{Status}</Typography>}
-                    {Toggle && Status != 'error' && <Typography className="form-title" style={{alignSelf: 'center', textTransform: 'uppercase'}}>Thank you for your application</Typography>}
-                    {Toggle && Status != 'error' && <Typography className="form-title" style={{alignSelf: 'center', textTransform: 'uppercase'}}>Please wait to hear from us</Typography>}
-                    {Toggle && Status == 'error' && <Typography className="form-title" style={{alignSelf: 'center', textTransform: 'uppercase'}}>{Errs}</Typography>}
-                    {Toggle && Status == 'error' &&  Problems && Problems.map(prob => { <Typography className="form-title" style={{alignSelf: 'center', textTransform: 'uppercase'}}>{prob.error}</Typography>})}
+                    {Toggle && Status != "error" && <Typography className="form-title" style={{alignSelf: 'center', textTransform: 'uppercase'}}>Thank you for your application</Typography>}
+                    {Toggle && Status != "error" && <Typography className="form-title" style={{alignSelf: 'center', textTransform: 'uppercase'}}>Please wait to hear from us</Typography>}
+                    {Toggle && Status == "error" && <Typography className="form-title" style={{alignSelf: 'center', textTransform: 'uppercase'}}>{Errs}</Typography>}
+                    {Toggle && Status == "error" &&  Problems && Problems.map(prob =>  <Typography className="form-title" style={{alignSelf: 'center', textTransform: 'uppercase'}}>{prob.error}</Typography>)}
                     </StyledForm>
                 )
             }}
