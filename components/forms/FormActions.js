@@ -166,6 +166,7 @@ export async function SendForm({ csrf, values, url, FT }) {
                 }
             });
             const data = await response.json();
+            
             if (data.status === 'success') {
                 // console.log('getForm', data);
                 return data

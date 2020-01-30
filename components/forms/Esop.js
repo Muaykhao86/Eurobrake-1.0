@@ -13,7 +13,6 @@ import FormPopup from './FormPopup'
 import {SendFile} from './FormActions';
 
 
-
 export const Esop = (props) => {
  const [Toggle, setToggle] = useState(false);
     const [Loading, setLoading] = useState(false);
@@ -46,9 +45,10 @@ export const Esop = (props) => {
                   let res =  await SendFile({values, url});
                   let data = await  res;
                   let dataStatus= await  data && data.status 
-                  await setStatus(dataStatus)
-                  let err = await data && data.error 
-                  await setErrors(data.error) 
+                  let errMsg = await data.message
+                  dataStatus && await setStatus(dataStatus)
+                  !dataStatus && await setStatus('Error')
+                  !dataStatus && await setErrors(errMsg)
                   console.log({data})
                   console.log({err})
                   console.log({Status})
