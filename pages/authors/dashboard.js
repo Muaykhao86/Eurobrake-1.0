@@ -411,10 +411,12 @@ AuthorsAreaDash.getInitialProps = async ctx => {
     
     const redirectOnError = async () => {
     let count = 0;
-    await  count ++
-    if(count > 3) {
+    if(count < 3) {
+    console.log('redirect')
+    count ++
      await process.browser ? Router.push('/authors') : ctx.res.writeHead(301, { Location: '/authors' })
-    }else{
+    }else if(count >= 3){
+    console.log('logout')
         await logout()
     }
     }

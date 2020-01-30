@@ -43,7 +43,7 @@ export const auth = ctx => {
 export const logout = async (ctx) => {
   const url = 'https://prelude.eurobrake.net/authors/logout';
   // ? need to set up fetch req???
-  await GetForm(url)
+  // await GetForm(url)
   await cookie.remove('logintoken')
 
   // To trigger the event listener we save some random data into the `logout` key
