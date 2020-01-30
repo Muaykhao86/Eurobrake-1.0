@@ -586,7 +586,7 @@ export const Esop = (props) => {
                             <div className="form-field_file-box">
 
                             <label
-                                htmlFor="student_status_filename_uploader"
+                                htmlFor="student_status_filename"
                                 className="form-label">
                                 Upload proof of your status as student:
                         </label>
@@ -594,7 +594,7 @@ export const Esop = (props) => {
                                 className="form-input_file"
                                 value={values.student_status_filename}
                                 style={{ color: '#134381' }}
-                                name="student_status_filename_uploader"
+                                name="student_status_filename"
                                 component={SimpleFileUpload}
                                 fullWidth
                             />
