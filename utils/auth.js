@@ -51,6 +51,7 @@ export const logout = async (ctx) => {
   const res = await GetForm(url)
   const data = await res
   console.log('logout', {data})
+  await cookie.remove('logintoken')
   await cookie.remove('logintoken', {path: '/', domain: 'eurobrake.net'} )
 
   // To trigger the event listener we save some random data into the `logout` key

@@ -76,7 +76,7 @@ export default () => (
             <Typography gutterBottom className="Esop">The EuroBrake Student Opportunities Programme 2020 is now open for applications.</Typography>
             <Typography gutterBottom className="Esop">To apply for a sponsored student pass for this year's event submit your details via the form below.</Typography>
             <Typography gutterBottom className="Esop">Applications will be put before a panel of international industry and academic experts to be judged and a group of students will be selected to attend EuroBrake 2020 for free as part of the EuroBrake Student Opportunities Programme.</Typography>
-            <Typography className="Esop">The deadline for applications is<span className="Esop-bold"> Monday 3rd February.</span></Typography>
+            <Typography className="Esop">The deadline for applications has been extended to <span className="Esop-bold"> 10 February 2020.</span></Typography>
             <Typography className="Esop">If you have any questions please contact <span className="Esop-bold"><a href="mailto:h.millar@fisita.com">Hayley Millar</a></span>, Education Manager at FISITA.</Typography>
             <FixedDates />
             <FixedBox />

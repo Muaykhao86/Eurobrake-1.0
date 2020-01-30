@@ -9,6 +9,7 @@ import { Button } from '../Button';
 import { titles, countries, Q1, Q2, Q3, Q4, Marketing, Sessions, members, Initiatives } from './FormSelects';
 import { EsopSchema } from './FormControl';
 import { StyledForm } from './Formstyles';
+import FormPopup from './FormPopup'
 import {SendFile} from './FormActions';
 
 
@@ -22,6 +23,8 @@ export const Esop = (props) => {
     const url = `https://prelude.eurobrake.net/esop`;
 
     return (
+        <>
+        <FormPopup popen={Loading} pstatus={Status} perrors={Errors}/>
         <Formik
             initialValues={emptyInitial || presets}
             validationSchema={EsopSchema}
@@ -42,10 +45,12 @@ export const Esop = (props) => {
                   await  console.log('submitting')
                   let res =  await SendFile({values, url});
                   let data = await  res;
-                  let dataStatus= await  data && data.status ? data.status  : data.error
+                  let dataStatus= await  data && data.status 
                   await setStatus(dataStatus)
-                  await data.error ? setErrors(data.error) : null
+                  let err = await data && data.error 
+                  await setErrors(data.error) 
                   console.log({data})
+                  console.log({err})
                   console.log({Status})
                   let result = async () => {
                   await  setLoading(false)
@@ -1074,11 +1079,13 @@ export const Esop = (props) => {
                             style={{ margin: "4rem 0", color: '#FFF' }}
                             fontSize="2rem">Submit</Button>}
                     {Toggle && <Typography className="form-title" style={{alignSelf: 'center', textTransform: 'uppercase'}}>{Status}</Typography>}
+                    {Toggle && <Typography className="form-title" style={{alignSelf: 'center', textTransform: 'uppercase'}}>{Errors}</Typography>}
 
                     </StyledForm>
                 )
             }}
         </Formik>
+        </>
     )
 };
 

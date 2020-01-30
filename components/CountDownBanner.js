@@ -127,4 +127,3 @@ class CountDownBanner extends Component {
 
 export default CountDownBanner;
 
-
