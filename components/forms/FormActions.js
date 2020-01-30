@@ -123,9 +123,10 @@ export async function SendFile({ values, url, csrf }) {
                 method: 'POST',
                 body: formData,
             });
+            // * trial to display error message to user
             const data = await response.json();
             await console.log({ data })
-            if (data.status === 'success') {
+            if (data) {
                 console.log('getForm', data);
                 return data
 
