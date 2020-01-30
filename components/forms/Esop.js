@@ -24,7 +24,7 @@ export const Esop = (props) => {
 
     return (
         <>
-        <FormPopup popen={Loading} pstatus={Status} perrors={Errors}/>
+        {/* <FormPopup popen={Loading} pstatus={Status} perrors={Errors}/> */}
         <Formik
             initialValues={emptyInitial || presets}
             validationSchema={EsopSchema}
