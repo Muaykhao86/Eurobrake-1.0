@@ -80,7 +80,7 @@ export const Q1 = [
     { value: "A18AAF42-20D0-11EA-AA93-E948962C4B22", label: "due to presence of binders in the friction material, brake wear particles can not be smaller than 0.1mm" },
     { value: "A190544C-20D0-11EA-ADCD-A3842C77181C", label: "most of recent studies have shown that brake wear particles can not be inhaled" },
     { value: "A1939814-20D0-11EA-A356-B5B2593A37F3", label: "a great ratio of brake wear particles are of size smaller than 10µm and can be airborne" },
-    { value: "A198076E-20D0-11EA-838B-F8CC47638AE5", label: "a great ratio of brake wear particles are of size smaller than 10µm and can be airborne" },
+    { value: "A198076E-20D0-11EA-838B-F8CC47638AE5", label: "brake dust contains heavy metals and therefore it can not be airborne" },
  
 ];
 
