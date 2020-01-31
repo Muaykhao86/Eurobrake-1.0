@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 
 export const SmlLogo = (props) => (
-    <svg cd width={props.width} height={props.height} viewBox="0 0 96.536 96.627" {...props}>
+    <svg width={props.width} height={props.height} viewBox="0 0 96.536 96.627" {...props}>
       <defs>
         <style>{".prefix__bor{fill:#fff}"}</style>
       </defs>

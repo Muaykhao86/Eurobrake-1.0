@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 
 export const Itt = (props) => (
-    <svg cd width={props.width} height={props.height} viewBox="0 0 238.58 170.14" {...props}>
+    <svg  width={props.width} height={props.height} viewBox="0 0 238.58 170.14" {...props}>
          <defs>
         <style>
           {".itt_svg__cls-2{fill:#231f20}.itt_svg__cls-3{fill:#fbb034}"}
@@ -44,7 +44,7 @@ export const Itt = (props) => (
   );
 
 export const Link = (props) => (
-    <svg cd width={props.width} height={props.height} viewBox="0 0 705.39 272.94" {...props}>
+    <svg  width={props.width} height={props.height} viewBox="0 0 705.39 272.94" {...props}>
       <defs>
         <style>{".link_svg__cls-1{fill:#00386c}"}</style>
       </defs>
@@ -67,7 +67,7 @@ export const Link = (props) => (
     </svg>
   );
 export const Lapinus = (props) => (
-    <svg cd width={props.width} height={props.height} viewBox="0 0 614.27 153.06" {...props}>
+    <svg  width={props.width} height={props.height} viewBox="0 0 614.27 153.06" {...props}>
       <defs>
         <style>
           {".lapinus_svg__cls-2{fill:#fff}.lapinus_svg__cls-3{fill:#223667}"}
@@ -89,7 +89,7 @@ export const Lapinus = (props) => (
     </svg>
   );
 export const Alroko = (props) => (
-    <svg cd width={props.width} height={props.height} viewBox="0 0 652.18 279.26" {...props}>
+    <svg  width={props.width} height={props.height} viewBox="0 0 652.18 279.26" {...props}>
        <defs>
         <style>
           {
@@ -150,7 +150,7 @@ export const Alroko = (props) => (
     </svg>
   );
 export const Itaprochim = (props) => (
-    <svg cd width={props.width} height={props.height} viewBox="0 0 159.41 31.75" {...props}>
+    <svg  width={props.width} height={props.height} viewBox="0 0 159.41 31.75" {...props}>
       <defs>
         <style>
           {
@@ -178,7 +178,7 @@ export const Itaprochim = (props) => (
     </svg>
   );
 export const Sadeca = (props) => (
-    <svg cd width={props.width} height={props.height} viewBox="0 0 919.54 197.05" {...props}>
+    <svg  width={props.width} height={props.height} viewBox="0 0 919.54 197.05" {...props}>
        <defs>
         <style>{".sadeca_svg__cls-1{fill:#f3523f}"}</style>
       </defs>
@@ -201,7 +201,7 @@ export const Sadeca = (props) => (
     </svg>
   );
 export const Brembo = (props) => (
-    <svg cd width={props.width} height={props.height} viewBox="0 0 709.49 170.4" {...props}>
+    <svg  width={props.width} height={props.height} viewBox="0 0 709.49 170.4" {...props}>
       <defs>
         <style>{".brembo_svg__cls-1{fill:#ef3e42}"}</style>
       </defs>
@@ -220,7 +220,7 @@ export const Brembo = (props) => (
     </svg>
   );
 export const Fagor = (props) => (
-    <svg cd width={props.width} height={props.height} viewBox="0 0 260.96 21.89" {...props}>
+    <svg  width={props.width} height={props.height} viewBox="0 0 260.96 21.89" {...props}>
       <defs>
         <style>
           {".fagor_svg__cls-1{fill:#1d1d1b}.fagor_svg__cls-2{fill:#e52421}"}
@@ -245,7 +245,7 @@ export const Fagor = (props) => (
     </svg>
   );
 export const Horiba = (props) => (
-    <svg cd width={props.width} height={props.height} viewBox="0 0 102.5 27.47" {...props}>
+    <svg  width={props.width} height={props.height} viewBox="0 0 102.5 27.47" {...props}>
      <defs>
         <style>{".horiba_svg__cls-1{fill:#2484c6}"}</style>
       </defs>
@@ -260,7 +260,7 @@ export const Horiba = (props) => (
     </svg>
   );
 export const Applus = (props) => (
-    <svg cd width={props.width} height={props.height} viewBox="0 0 415.65 223.52" {...props}>
+    <svg  width={props.width} height={props.height} viewBox="0 0 415.65 223.52" {...props}>
       <defs>
         <style>
           {
@@ -295,7 +295,7 @@ export const Applus = (props) => (
     </svg>
   );
 export const Nof = (props) => (
-    <svg cd width={props.width} height={props.height} viewBox="0 0 641.18 105.57" {...props}>
+    <svg  width={props.width} height={props.height} viewBox="0 0 641.18 105.57" {...props}>
       <defs>
         <style>{".nof_svg__cls-1{fill:#231f20}"}</style>
       </defs>

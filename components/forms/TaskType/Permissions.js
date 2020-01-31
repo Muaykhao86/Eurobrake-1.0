@@ -21,7 +21,6 @@ export const Permissions = (props) => {
     }
 
     const {presets, csrf, apiUrl, paperId, type} = props;
-    console.log('tasks', presets, csrf, apiUrl, paperId, type);
     const url = `https://prelude.eurobrake.net/authors/tasks/permissions/${paperId}`;
     
     return (
@@ -34,7 +33,6 @@ export const Permissions = (props) => {
             enableReinitialize
         >
             {({ values, handleChange, setFieldTouched, isValidating, validateForm, handleSubmit, errors}) => {
-                console.log(values, 'Tasks')
   
                    const allTouched = async () => {
                        console.log('touched!')

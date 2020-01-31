@@ -17,7 +17,6 @@ export const ContactForm = (props) => {
     const [Status, setStatus] = useState(null);
     const FT = 'contact';
     const url = 'https://prelude.eurobrake.net/contact';
-    console.log({url})
     return (
         <Formik
             initialValues={emptyInitial}
@@ -206,7 +205,6 @@ export const ContactForm = (props) => {
         </Formik>
     )
 };
-// ? For now im by passin the email link just to check what i have with a reset token
 
 
 const emptyInitial = {

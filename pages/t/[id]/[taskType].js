@@ -43,7 +43,6 @@ Form.getInitialProps = async context => {
     const { id, taskType } = context.query;
     const { logintoken } = cookies(context) || {};
     const apiUrl = `https://prelude.eurobrake.net/authors/tasks/${taskType}/${id}` ;
-    console.log('1st task folder GIP', { id, logintoken, apiUrl, taskType })
     const redirectOnError = () =>
         process.browser
             ? Router.push('/authors')
@@ -59,7 +58,6 @@ Form.getInitialProps = async context => {
             })
             const data = await response.json()
             if (data.status === 'success') {
-                console.log('res.ok 2nd GIP', data)
                 return { data, apiUrl, id, taskType }
             }
             else {

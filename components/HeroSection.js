@@ -57,7 +57,7 @@ const StyledText = styled(Typography)`
     top: ${props => props.t? props.t : props.secondary ? '60%' : '30%'};
     align-self: center;
     width: ${props => props.max || '80%'};
-    color: ${props => props.color || props.theme.white};
+    color: ${props => props.scolor || props.theme.white};
     text-align: center;
     text-shadow: 0px 4px 7px rgba(0,0,0,0.74);
     
@@ -122,7 +122,7 @@ export default function HeroSection(props) {
             <StyledText t={t} mt={mt} tt={tt} max={max} mmax={mmax} fs={fs} tfs={tfs} mfs={mfs}  bfs={bfs}>
                 {props.children}
             </StyledText>
-            <StyledText t={st} mt={mst} tt={tst} max={smax} mmax={msmax} fs={sfs} tfs={tsfs} msfs={msfs} color={scolor} bfs={bsfs} sfont secondary>
+            <StyledText t={st} mt={mst} tt={tst} max={smax} mmax={msmax} fs={sfs} tfs={tsfs} msfs={msfs} scolor={scolor} bfs={bsfs} sfont="true" secondary="true">
                 {props.secondary}
             </StyledText>
             <div className="banner">

@@ -22,7 +22,6 @@ export const AbstractForm = (props) => {
     // * above- dont think i need this now, can just check if there aere presets and if not just use epty schema
     const { presets, csrf, apiUrl, paperId} = props;
     const url = `https://prelude.eurobrake.net/authors/edit/${paperId}`;
-    console.log({ presets, apiUrl})
     // ? If they choose to edit a abstarct paper we pass the paper code and il get its presets to fill in
     return (
         <Formik
@@ -36,10 +35,8 @@ export const AbstractForm = (props) => {
                 const allNo = ({name}) => {
                     if(process.browser){
                     const radios = document.querySelectorAll('input[name*="is_presenting_author"]');
-                    {/* console.log(name) */}
                     radios.forEach(input => {
-                        input.name !== name && setFieldValue(input.name, input.value) &&
-                        console.log('gonna change...', input.name, 'cos it aint the same as...', name, ) 
+                        input.name !== name && setFieldValue(input.name, input.value)
                     })}
                 }
                 const onPresenterChange = (event) => {

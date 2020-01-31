@@ -62,13 +62,6 @@ export const Esop = (props) => {
 
 
                   let result = async () => {
-
-                    console.log({dataStatus})
-                  console.log({errMsg})
-                  console.log({errProb})
-                  console.log({data})
-                  console.log({Status})
-
                   await  setLoading(false)
                   await setToggle(true)
                    }    
@@ -1096,8 +1089,8 @@ export const Esop = (props) => {
                             fontSize="2rem">Submit</Button>}
                     {Toggle && <Typography className="form-title" style={{alignSelf: 'center', textTransform: 'uppercase'}}>{Status}</Typography>}
                     {Toggle && Status != "error" && <Typography className="form-title" style={{alignSelf: 'center', textTransform: 'uppercase'}}>Thank you for your application</Typography>}
-                    {Toggle && Status != "error" && <Typography className="form-title" style={{alignSelf: 'center', textTransform: 'uppercase'}}>Please wait to hear from us</Typography>}
-                    {Toggle && Status == "error" && <Typography className="form-title" style={{alignSelf: 'center', textTransform: 'uppercase'}}>{Errs}</Typography>}
+                    {Toggle && Status != "error" && <Typography className="form-title" style={{alignSelf: 'center', textTransform: 'uppercase', color: 'red', fontSize: '2rem' }}>Please wait to hear from us</Typography>}
+                    {Toggle && Status == "error" && <Typography className="form-title" style={{alignSelf: 'center', textTransform: 'uppercase', color: 'red', fontSize: '2rem' }}>{Errs}</Typography>}
                     {Toggle && Status == "error" &&  Problems && Problems.map(prob =>  <Typography className="form-title" style={{alignSelf: 'center', textTransform: 'uppercase'}}>{prob.error}</Typography>)}
                     </StyledForm>
                 )

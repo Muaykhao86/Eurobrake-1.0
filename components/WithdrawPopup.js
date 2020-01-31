@@ -105,7 +105,6 @@ export default function WithdrawPopup(props) {
 
     csrf = values.__csrf_token
 
-    console.log('popup', { values, url, csrf })
     
     
     const onWithdraw = async () => {

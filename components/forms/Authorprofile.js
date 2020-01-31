@@ -18,7 +18,6 @@ export const Authorprofile = (props) => {
     const [Loading, setLoading] = useState(false);
 
     const { presets, csrf, apiUrl, paperId} = props;
-    console.log({ presets, apiUrl})
     const url = apiUrl;
   
     return (

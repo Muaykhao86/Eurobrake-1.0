@@ -19,7 +19,6 @@ const Form = props => {
     const {apiUrl, id, formType, taskType} = props;// ? GETTIN FROM GET INITIAL PROPS
     const FT = formType || '';
     const TT = taskType || '';
-    console.log('uniform',{apiUrl, id, FT, TT, __csrf_token, presets})
 
     let contact = 'Get in touch to find out more or ask a question' 
     return (
@@ -65,8 +64,6 @@ Form.getInitialProps = async context => {
    if(formType == 'reset') apiUrl = `https://prelude.eurobrake.net/authors/profile` 
    if(formType != 'reset' && formType != 'author' && formType != 'contact') apiUrl = `https://prelude.eurobrake.net/authors/edit/${id}`
    
-    console.log('1st GIP', { id, logintoken, apiUrl, taskUrl, formType, taskType })
-    console.log('props', { id, logintoken, apiUrl, taskUrl, formType, taskType })
     const redirectOnError = () =>
         process.browser
             ? Router.push('/authors')
@@ -81,7 +78,6 @@ Form.getInitialProps = async context => {
             })
             const data = await response.json()
             if (data.status === 'success') {
-                console.log('res.ok uniform GIP', data)
                 return { data, apiUrl, id, formType, taskType }
             }
             else {

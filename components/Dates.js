@@ -290,7 +290,6 @@ const StyledFixedBox = styled.div`
 
 export function FixedBox() {
 const [Hide, setHide] = useState(true);
-console.log(Hide)
     return (
         
         <StyledFixedBox Hide={Hide}>

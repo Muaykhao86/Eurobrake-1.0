@@ -19,8 +19,6 @@ export async function GetFormSSR({url, context}) {
         });
         const data = await response.json();
         if (data.status === 'success') {
-            console.log('getForm', data);
-            console.log('tkn', data.__csrf_token)
             return data;
         } else {
             let error = new Error(data.error)
@@ -50,8 +48,6 @@ export async function GetForm(url) {
         });
         const data = await response.json();
         if (data.status === 'success') {
-            console.log('getForm', data);
-            console.log('tkn', data.__csrf_token)
             return data;
         } else {
             let error = new Error(data.error)
@@ -70,7 +66,7 @@ export async function GetForm(url) {
 export async function SendFile({ values, url, csrf }) {
     const { logintoken } = cookie.get();
     const formData = new FormData();
-    
+    // ? Fail safe incase form inputs true/false
         // * Standard
     await values.accept && values.accept === true ? values.accept = 'yes' : null;
     await values.copyright && values.copyright === true ? values.copyright = 'yes' : null;
@@ -85,8 +81,6 @@ export async function SendFile({ values, url, csrf }) {
     Object.keys(values).forEach(key => {   
       formData.append(key, values[key])});
     
-  
-    console.log({ logintoken,  url})
     if (logintoken && csrf ) {
         try {
             const apiUrl = url;
@@ -99,9 +93,7 @@ export async function SendFile({ values, url, csrf }) {
                 }
             });
             const data = await response.json();
-            await console.log({ data })
             if (data.status === 'success') {
-                console.log('getForm', data);
                 return data
 
             } else {
@@ -117,6 +109,8 @@ export async function SendFile({ values, url, csrf }) {
         }
     }
     if (url === 'https://prelude.eurobrake.net/esop') {
+        // ! TRIAL FOR ERROR MESSAGE DISPLAY
+        //  * LOOKS GOOD
         try {
             const apiUrl = url;
             const response = await fetch(apiUrl, {
@@ -126,7 +120,6 @@ export async function SendFile({ values, url, csrf }) {
             // * trial to display error message to user
             const data = await response.json();
             if (data) {
-                console.log('getForm', data);
                 return data
 
             } else {
@@ -214,7 +207,6 @@ export async function SendForm({ csrf, values, url, FT }) {
          }
         }
     if(FT === 'reset' ){
-        // console.log({url, form});
         try {
             const response = await fetch(url, {
                 method: 'POST', 
@@ -228,7 +220,6 @@ export async function SendForm({ csrf, values, url, FT }) {
             const data = await response.json()
 
             if (data.status === 'success') {
-            // console.log('getForm', data);
             return data
 
             } else {
@@ -244,7 +235,6 @@ export async function SendForm({ csrf, values, url, FT }) {
          }
         }
     if(FT === 'newsletter' || FT === 'contact'){
-        // console.log({url, form});
         try {
             const response = await fetch(url, {
                 method: 'POST', 
@@ -258,7 +248,6 @@ export async function SendForm({ csrf, values, url, FT }) {
             const data = await response.json()
 
             if (data.status === 'success') {
-            // console.log('getForm', data);
             return data
 
             } else {
@@ -274,7 +263,6 @@ export async function SendForm({ csrf, values, url, FT }) {
          }
         }
     if(FT === 'withdraw' ){
-        // console.log({url, csrf});
         try {
             const response = await fetch(url, {
                 method: 'POST', 
@@ -289,7 +277,6 @@ export async function SendForm({ csrf, values, url, FT }) {
             const data = await response.json()
 
             if (data.status === 'success') {
-            // console.log('getForm', data);
             return data
 
             } else {

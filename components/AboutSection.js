@@ -33,4 +33,3 @@ export default function AboutSection() {
         </StyledSection>
     )
 }
-                    {/* src="/images/pic1.png" */}

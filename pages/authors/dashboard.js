@@ -421,7 +421,6 @@ AuthorsAreaDash.getInitialProps = async ctx => {
     }
     }
 
-    console.log('AAD', logintoken)
     if (logintoken) {
         try {
             const response = await fetch(apiUrl, {
@@ -433,10 +432,7 @@ AuthorsAreaDash.getInitialProps = async ctx => {
 
             })
             const data = await response.json()
-            console.log({ data })
-            // console.log('Authors response Data =>', data.status, data);
             if (data.status === 'success') {
-                console.log('res.ok', data)
                 return { authorData: data }
             }
             else {

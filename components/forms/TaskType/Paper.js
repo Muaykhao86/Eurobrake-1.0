@@ -25,7 +25,6 @@ const [Loading, setLoading] = useState(false);
 
     const {presets, csrf, apiUrl, paperId, type} = props;
     const url = `https://prelude.eurobrake.net/authors/tasks/paper/${paperId}`;
-    console.log('tasks', presets, csrf, apiUrl, paperId, type, url);
     
     return (
         // ! NEED PRESETS FOR TASKS

@@ -24,7 +24,6 @@ export const PPT = (props) => {
     }
 
     const {presets, csrf, apiUrl, paperId, type} = props;
-    console.log('tasks', presets, csrf, apiUrl, paperId, type);
     const url = `https://prelude.eurobrake.net/authors/tasks/ppt/${paperId}`;
     
     
@@ -63,7 +62,6 @@ export const PPT = (props) => {
                  
               }
 
-              console.log(errors)
                 return (
                     <StyledTask>
                         <Typography className="task-title">{paperId}</Typography>

@@ -26,7 +26,6 @@ export const PitchVideo = (props) => {
     }
 
     const {presets, csrf, apiUrl, paperId, type} = props;
-    console.log('tasks', presets, csrf, apiUrl, paperId, type);
     const url = `https://prelude.eurobrake.net/authors/tasks/pitchvideo/${paperId}`;
     
     return (

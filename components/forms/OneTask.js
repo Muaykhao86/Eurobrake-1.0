@@ -20,7 +20,6 @@ class OneTask extends Component {
     render() {
         const {type, presets, csrf, apiUrl, paperId,} = this.props;
 
-       console.log('1task', type, presets, csrf, apiUrl, paperId)
           
             {switch(type) {
                 case'paper' : 

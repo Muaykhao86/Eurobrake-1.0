@@ -77,8 +77,6 @@ const StyledPage = styled.div`
 class AuthorsArea extends Component {
         static async getInitialProps({ res }) {
         const { logintoken } = cookie.get() || {};
-        console.log(logintoken)
-        console.log(logintoken )
         if (logintoken && logintoken != undefined && logintoken.length > 1){
         if (res) {
           res.writeHead(302, {

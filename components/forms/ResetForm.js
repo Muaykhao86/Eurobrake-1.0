@@ -19,7 +19,6 @@ export const ResetForm = (props) => {
     const [Status, setStatus] = useState(null);
 
     const url =  `https://prelude.eurobrake.net/authors/reset/${props.paperId}`;
-    console.log({url})
     return (
         <Formik
             initialValues={emptyInitial}
@@ -37,7 +36,6 @@ export const ResetForm = (props) => {
 
 
                 const onSubmit = async () => {
-                console.log('click')
                     let FT = 'reset';
                   let res =  await SendForm({values, url, FT});
                   let data = await  res;
@@ -54,7 +52,6 @@ export const ResetForm = (props) => {
 
                 return (
                     <StyledForm>
-                    {console.log({errors})}
                     <Typography className="form-title">Please provide your new password</Typography>
 
                         <div className="form-field">

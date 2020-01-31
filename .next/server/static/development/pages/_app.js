@@ -458,12 +458,11 @@ function FixedBox() {
     0: Hide,
     1: setHide
   } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(true);
-  console.log(Hide);
   return __jsx(StyledFixedBox, {
     Hide: Hide,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 296
+      lineNumber: 295
     },
     __self: this
   }, Hide ? __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_6__["Typography"], {
@@ -472,7 +471,7 @@ function FixedBox() {
     className: "Box-title_hide",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 298
+      lineNumber: 297
     },
     __self: this
   }, "Book your Early Bird Tickets today") : __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_6__["Typography"], {
@@ -481,7 +480,7 @@ function FixedBox() {
     className: "Box-title",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 301
+      lineNumber: 300
     },
     __self: this
   }, "Book your Early Bird Tickets for EuroBrake"), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_6__["Typography"], {
@@ -490,7 +489,7 @@ function FixedBox() {
     className: "Box-text-it",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 302
+      lineNumber: 301
     },
     __self: this
   }, "Secure your tickets by 1 April 2020"), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_6__["Typography"], {
@@ -499,7 +498,7 @@ function FixedBox() {
     className: "Box-date",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 303
+      lineNumber: 302
     },
     __self: this
   }, " Europe's braking technology conference & exhibition"), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_6__["Typography"], {
@@ -508,7 +507,7 @@ function FixedBox() {
     className: "Box-text",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 304
+      lineNumber: 303
     },
     __self: this
   }, "2-4 June 2020,"), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_6__["Typography"], {
@@ -517,14 +516,14 @@ function FixedBox() {
     className: "Box-text",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 305
+      lineNumber: 304
     },
     __self: this
   }, "CCIB, Barcelona, Spain"), __jsx(next_link__WEBPACK_IMPORTED_MODULE_5___default.a, {
     href: "/pricing",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 306
+      lineNumber: 305
     },
     __self: this
   }, __jsx(_Button__WEBPACK_IMPORTED_MODULE_10__["Button"], {
@@ -537,14 +536,14 @@ function FixedBox() {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 307
+      lineNumber: 306
     },
     __self: this
   }, "Pricing/Registration")), __jsx("div", {
     className: "logo_box",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 309
+      lineNumber: 308
     },
     __self: this
   }, __jsx(_Icons__WEBPACK_IMPORTED_MODULE_11__["SmlLogo"], {
@@ -552,21 +551,21 @@ function FixedBox() {
     height: "10rem",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 310
+      lineNumber: 309
     },
     __self: this
   }))), __jsx("div", {
     className: "hide-box",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 313
+      lineNumber: 312
     },
     __self: this
   }, __jsx("a", {
     onClick: () => setHide(!Hide),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 314
+      lineNumber: 313
     },
     __self: this
   }, " ", Hide === true ? __jsx(_material_ui_icons_Add__WEBPACK_IMPORTED_MODULE_3___default.a, {
@@ -578,7 +577,7 @@ function FixedBox() {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 314
+      lineNumber: 313
     },
     __self: this
   }) : __jsx(_material_ui_icons_Remove__WEBPACK_IMPORTED_MODULE_2___default.a, {
@@ -590,7 +589,7 @@ function FixedBox() {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 314
+      lineNumber: 313
     },
     __self: this
   }), " ")));
@@ -603,7 +602,7 @@ function Box(props) {
   return __jsx(StyledBox, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 386
+      lineNumber: 385
     },
     __self: this
   }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_6__["Typography"], {
@@ -612,7 +611,7 @@ function Box(props) {
     className: "Box-title",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 387
+      lineNumber: 386
     },
     __self: this
   }, "Book your Early Bird Tickets for EuroBrake"), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_6__["Typography"], {
@@ -621,7 +620,7 @@ function Box(props) {
     className: "Box-text-it",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 388
+      lineNumber: 387
     },
     __self: this
   }, "Secure your tickets by 1 April 2020"), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_6__["Typography"], {
@@ -630,7 +629,7 @@ function Box(props) {
     className: "Box-date",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 389
+      lineNumber: 388
     },
     __self: this
   }, " Europe's braking technology conference & exhibition"), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_6__["Typography"], {
@@ -639,7 +638,7 @@ function Box(props) {
     className: "Box-text",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 390
+      lineNumber: 389
     },
     __self: this
   }, "2-4 June 2020,"), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_6__["Typography"], {
@@ -648,14 +647,14 @@ function Box(props) {
     className: "Box-text",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 391
+      lineNumber: 390
     },
     __self: this
   }, "CCIB, Barcelona, Spain"), __jsx(next_link__WEBPACK_IMPORTED_MODULE_5___default.a, {
     href: "/pricing",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 392
+      lineNumber: 391
     },
     __self: this
   }, __jsx(_Button__WEBPACK_IMPORTED_MODULE_10__["Button"], {
@@ -671,14 +670,14 @@ function Box(props) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 393
+      lineNumber: 392
     },
     __self: this
   }, "Pricing/Registration")), __jsx("div", {
     className: "logo_box",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 395
+      lineNumber: 394
     },
     __self: this
   }, __jsx(_Icons__WEBPACK_IMPORTED_MODULE_11__["SmlLogo"], {
@@ -686,7 +685,7 @@ function Box(props) {
     height: "10rem",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 396
+      lineNumber: 395
     },
     __self: this
   })));
@@ -1235,7 +1234,6 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement;
 
 
 const SmlLogo = props => __jsx("svg", Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_1__["default"])({
-  cd: true,
   width: props.width,
   height: props.height,
   viewBox: "0 0 96.536 96.627"
@@ -5852,6 +5850,7 @@ const Meta = () => __jsx(next_head__WEBPACK_IMPORTED_MODULE_1___default.a, {
   __self: undefined
 }), __jsx("link", {
   rel: "shortcut icon",
+  type: "image/x-icon",
   href: "/static/favicon.png",
   __source: {
     fileName: _jsxFileName,
@@ -6294,7 +6293,7 @@ class Nav extends react__WEBPACK_IMPORTED_MODULE_1__["Component"] {
       },
       __self: this
     }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
-      href: "/exhibitAndSponsor",
+      href: "/exhibition",
       __source: {
         fileName: _jsxFileName,
         lineNumber: 108
@@ -7030,7 +7029,6 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 
 
 const Itt = props => __jsx("svg", Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
-  cd: true,
   width: props.width,
   height: props.height,
   viewBox: "0 0 238.58 170.14"
@@ -7121,7 +7119,6 @@ const Itt = props => __jsx("svg", Object(_babel_runtime_corejs2_helpers_esm_exte
   __self: undefined
 }))));
 const Link = props => __jsx("svg", Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
-  cd: true,
   width: props.width,
   height: props.height,
   viewBox: "0 0 705.39 272.94"
@@ -7185,7 +7182,6 @@ const Link = props => __jsx("svg", Object(_babel_runtime_corejs2_helpers_esm_ext
   __self: undefined
 }))));
 const Lapinus = props => __jsx("svg", Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
-  cd: true,
   width: props.width,
   height: props.height,
   viewBox: "0 0 614.27 153.06"
@@ -7249,7 +7245,6 @@ const Lapinus = props => __jsx("svg", Object(_babel_runtime_corejs2_helpers_esm_
   __self: undefined
 }))));
 const Alroko = props => __jsx("svg", Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
-  cd: true,
   width: props.width,
   height: props.height,
   viewBox: "0 0 652.18 279.26"
@@ -7375,7 +7370,6 @@ const Alroko = props => __jsx("svg", Object(_babel_runtime_corejs2_helpers_esm_e
   __self: undefined
 }))));
 const Itaprochim = props => __jsx("svg", Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
-  cd: true,
   width: props.width,
   height: props.height,
   viewBox: "0 0 159.41 31.75"
@@ -7471,7 +7465,6 @@ const Itaprochim = props => __jsx("svg", Object(_babel_runtime_corejs2_helpers_e
   __self: undefined
 }))));
 const Sadeca = props => __jsx("svg", Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
-  cd: true,
   width: props.width,
   height: props.height,
   viewBox: "0 0 919.54 197.05"
@@ -7535,7 +7528,6 @@ const Sadeca = props => __jsx("svg", Object(_babel_runtime_corejs2_helpers_esm_e
   __self: undefined
 }))));
 const Brembo = props => __jsx("svg", Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
-  cd: true,
   width: props.width,
   height: props.height,
   viewBox: "0 0 709.49 170.4"
@@ -7591,7 +7583,6 @@ const Brembo = props => __jsx("svg", Object(_babel_runtime_corejs2_helpers_esm_e
   __self: undefined
 }))));
 const Fagor = props => __jsx("svg", Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
-  cd: true,
   width: props.width,
   height: props.height,
   viewBox: "0 0 260.96 21.89"
@@ -7655,7 +7646,6 @@ const Fagor = props => __jsx("svg", Object(_babel_runtime_corejs2_helpers_esm_ex
   __self: undefined
 }))));
 const Horiba = props => __jsx("svg", Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
-  cd: true,
   width: props.width,
   height: props.height,
   viewBox: "0 0 102.5 27.47"
@@ -7703,7 +7693,6 @@ const Horiba = props => __jsx("svg", Object(_babel_runtime_corejs2_helpers_esm_e
   __self: undefined
 }))));
 const Applus = props => __jsx("svg", Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
-  cd: true,
   width: props.width,
   height: props.height,
   viewBox: "0 0 415.65 223.52"
@@ -7783,7 +7772,6 @@ const Applus = props => __jsx("svg", Object(_babel_runtime_corejs2_helpers_esm_e
   __self: undefined
 }))));
 const Nof = props => __jsx("svg", Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
-  cd: true,
   width: props.width,
   height: props.height,
   viewBox: "0 0 641.18 105.57"
@@ -7903,8 +7891,6 @@ async function GetFormSSR({
     const data = await response.json();
 
     if (data.status === 'success') {
-      console.log('getForm', data);
-      console.log('tkn', data.__csrf_token);
       return data;
     } else {
       let error = new Error(data.error);
@@ -7938,8 +7924,6 @@ async function GetForm(url) {
     const data = await response.json();
 
     if (data.status === 'success') {
-      console.log('getForm', data);
-      console.log('tkn', data.__csrf_token);
       return data;
     } else {
       let error = new Error(data.error);
@@ -7961,7 +7945,8 @@ async function SendFile({
   const {
     logintoken
   } = js_cookie__WEBPACK_IMPORTED_MODULE_2___default.a.get();
-  const formData = new FormData(); // * Standard
+  const formData = new FormData(); // ? Fail safe incase form inputs true/false
+  // * Standard
 
   (await values.accept) && values.accept === true ? values.accept = 'yes' : null;
   (await values.copyright) && values.copyright === true ? values.copyright = 'yes' : null; // * Fiec
@@ -7977,11 +7962,6 @@ async function SendFile({
     formData.append(key, values[key]);
   });
 
-  console.log({
-    logintoken,
-    url
-  });
-
   if (logintoken && csrf) {
     try {
       const apiUrl = url;
@@ -7994,12 +7974,8 @@ async function SendFile({
         }
       });
       const data = await response.json();
-      await console.log({
-        data
-      });
 
       if (data.status === 'success') {
-        console.log('getForm', data);
         return data;
       } else {
         let error = new Error(data.error);
@@ -8013,19 +7989,18 @@ async function SendFile({
   }
 
   if (url === 'https://prelude.eurobrake.net/esop') {
+    // ! TRIAL FOR ERROR MESSAGE DISPLAY
+    //  * LOOKS GOOD
     try {
       const apiUrl = url;
       const response = await isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_4___default()(apiUrl, {
         method: 'POST',
         body: formData
-      });
-      const data = await response.json();
-      await console.log({
-        data
-      });
+      }); // * trial to display error message to user
 
-      if (data.status === 'success') {
-        console.log('getForm', data);
+      const data = await response.json();
+
+      if (data) {
         return data;
       } else {
         let error = new Error(data.error);
@@ -8116,7 +8091,6 @@ async function SendForm({
   }
 
   if (FT === 'reset') {
-    // console.log({url, form});
     try {
       const response = await isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_4___default()(url, {
         method: 'POST',
@@ -8129,7 +8103,6 @@ async function SendForm({
       const data = await response.json();
 
       if (data.status === 'success') {
-        // console.log('getForm', data);
         return data;
       } else {
         let error = new Error(data.error);
@@ -8143,7 +8116,6 @@ async function SendForm({
   }
 
   if (FT === 'newsletter' || FT === 'contact') {
-    // console.log({url, form});
     try {
       const response = await isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_4___default()(url, {
         method: 'POST',
@@ -8156,7 +8128,6 @@ async function SendForm({
       const data = await response.json();
 
       if (data.status === 'success') {
-        // console.log('getForm', data);
         return data;
       } else {
         let error = new Error(data.error);
@@ -8170,7 +8141,6 @@ async function SendForm({
   }
 
   if (FT === 'withdraw') {
-    // console.log({url, csrf});
     try {
       const response = await isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_4___default()(url, {
         method: 'POST',
@@ -8184,7 +8154,6 @@ async function SendForm({
       const data = await response.json();
 
       if (data.status === 'success') {
-        // console.log('getForm', data);
         return data;
       } else {
         let error = new Error(data.error);
@@ -14140,10 +14109,23 @@ const auth = ctx => {
 }; // LOGOUT FUNCTION
 
 const logout = async ctx => {
+  const cook = js_cookie__WEBPACK_IMPORTED_MODULE_6___default.a.get('logintoken');
+  console.log({
+    cook
+  });
+  console.log('logout func');
   const url = 'https://prelude.eurobrake.net/authors/logout'; // ? need to set up fetch req???
 
-  await Object(_components_forms_FormActions__WEBPACK_IMPORTED_MODULE_7__["GetForm"])(url);
-  await js_cookie__WEBPACK_IMPORTED_MODULE_6___default.a.remove('logintoken'); // To trigger the event listener we save some random data into the `logout` key
+  const res = await Object(_components_forms_FormActions__WEBPACK_IMPORTED_MODULE_7__["GetForm"])(url);
+  const data = await res;
+  console.log('logout', {
+    data
+  });
+  await js_cookie__WEBPACK_IMPORTED_MODULE_6___default.a.remove('logintoken');
+  await js_cookie__WEBPACK_IMPORTED_MODULE_6___default.a.remove('logintoken', {
+    path: '/',
+    domain: 'eurobrake.net'
+  }); // To trigger the event listener we save some random data into the `logout` key
 
   await window.localStorage.setItem("logout", _babel_runtime_corejs2_core_js_date_now__WEBPACK_IMPORTED_MODULE_2___default()());
   await next_router__WEBPACK_IMPORTED_MODULE_4___default.a.push("/authors");
@@ -14168,7 +14150,7 @@ const withAuthSync = WrappedComponent => {
     return __jsx(WrappedComponent, Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_1__["default"])({}, props, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 77
+        lineNumber: 85
       },
       __self: undefined
     }));
