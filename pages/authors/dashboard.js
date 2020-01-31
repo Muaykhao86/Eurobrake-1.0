@@ -353,8 +353,8 @@ class AuthorsAreaDash extends Component {
                                                                
                                                                 {paper.tasks && paper.tasks.map(task => {
 
-                                                                           let dueDate = new Date('2020-01-26T00:00:00');
-                                                                           let doneDate = new Date('2020-01-17T19:03:17');
+                                                                           let dueDate = new Date(task.due);
+                                                                           let doneDate = new Date(task.done);
                                                                             let taskDate = dueDate.getDate();
                                                                             let dateDone = doneDate.getDate();
                                                                             let taskMonth = dueDate.getMonth();
