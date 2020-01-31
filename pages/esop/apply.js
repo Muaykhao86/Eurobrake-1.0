@@ -69,7 +69,7 @@ export default () => (
         t="35rem"
         max="55%">
     
-            Esop Application Form
+            ESOP Application Form
     </HeroSection>
         <StyledPage>
             <Typography className="Esop-title" >Apply for EuroBrake Student Opportunities Programme</Typography>

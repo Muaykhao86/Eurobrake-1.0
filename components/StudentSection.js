@@ -11,7 +11,7 @@ const StudentCard = () => (
     <Card right>
                     <h1>Learn more about ESOP</h1>
                     <Link href="/esop">
-                    <Button br="500rem">ESOP</Button>
+                    <Button br="500rem">APPLY FOR ESOP</Button>
                     </Link>
                 </Card>
 );
