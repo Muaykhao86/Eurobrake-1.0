@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 6);
+/******/ 	return __webpack_require__(__webpack_require__.s = 5);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -10545,7 +10545,7 @@ const StyledPage = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div.
 const StyledQuote = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div.withConfig({
   displayName: "exhibition__StyledQuote",
   componentId: "mmbavj-2"
-})(["margin-top:5rem;"]);
+})([""]);
 /* harmony default export */ __webpack_exports__["default"] = (() => {
   const {
     0: full,
@@ -10658,94 +10658,7 @@ const StyledQuote = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div
       lineNumber: 183
     },
     __self: undefined
-  }, "Download the exhibition & sponsorship brochure")), __jsx("div", {
-    className: "infoBox",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 192
-    },
-    __self: undefined
-  }, __jsx("div", {
-    className: "infoBox-text",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 193
-    },
-    __self: undefined
-  }, __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_3___default.a, {
-    gutterBottom: true,
-    className: "Exhibit Exhibit-italic",
-    style: {
-      color: 'black'
-    },
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 195
-    },
-    __self: undefined
-  }, "Please note, all sponsor.exhibitor content must be sent to FISITA by", __jsx("span", {
-    className: "Exhibit-boldIt",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 195
-    },
-    __self: undefined
-  }, " Tuesday 28 January 2020"), " for inclusion in the Preliminary Program."), __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_3___default.a, {
-    gutterBottom: true,
-    className: "Exhibit  Exhibit-bold",
-    style: {
-      color: 'black'
-    },
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 196
-    },
-    __self: undefined
-  }, "For more information please contact FISITA: "), __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_3___default.a, {
-    gutterBottom: true,
-    className: "Exhibit  Exhibit-bold Exhibit-icon_text",
-    style: {
-      color: 'black',
-      marginLeft: '3rem'
-    },
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 198
-    },
-    __self: undefined
-  }, __jsx(_components_Icons__WEBPACK_IMPORTED_MODULE_7__["PhoneIcon"], {
-    className: "Exhibit-icon",
-    width: "20",
-    height: "20",
-    color: "#000",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 198
-    },
-    __self: undefined
-  }), " +44 (0) 1279883470 "), __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_3___default.a, {
-    gutterBottom: true,
-    className: "Exhibit Exhibit-bold Exhibit-icon_text",
-    style: {
-      color: 'black',
-      marginLeft: '3rem'
-    },
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 199
-    },
-    __self: undefined
-  }, __jsx(_components_Icons__WEBPACK_IMPORTED_MODULE_7__["MailIcon"], {
-    className: "Exhibit-icon",
-    width: "20",
-    height: "20",
-    color: "#000",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 199
-    },
-    __self: undefined
-  }), " sales@fisita.com"))), __jsx(StyledQuote, {
+  }, "Download the exhibition & sponsorship brochure")), __jsx(StyledQuote, {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 202
@@ -10877,7 +10790,7 @@ const StyledQuote = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div
     br: "100rem",
     bcolor: "#134381",
     style: {
-      margin: '3.5rem 0'
+      margin: '3rem 0'
     },
     __source: {
       fileName: _jsxFileName,
@@ -10891,7 +10804,7 @@ const StyledQuote = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div
     br: "100rem",
     bcolor: "#134381",
     style: {
-      margin: '3.5rem 0'
+      margin: '1rem 0'
     },
     __source: {
       fileName: _jsxFileName,
@@ -10915,7 +10828,7 @@ const StyledQuote = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div
 
 /***/ }),
 
-/***/ 6:
+/***/ 5:
 /*!***********************************!*\
   !*** multi ./pages/exhibition.js ***!
   \***********************************/

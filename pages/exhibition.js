@@ -148,7 +148,7 @@ const StyledPage = styled.div`
 `;
 
 const StyledQuote = styled.div`
-    margin-top: 5rem; 
+    /* margin-top: 5rem;  */
     `;
 
 
@@ -189,7 +189,7 @@ const svgHeight = full ? '100vh' : '';
                         style={{ margin: '3.5rem 0', }}
                     >Download the exhibition & sponsorship brochure</Button>
                 </div>
-                <div className="infoBox">
+                {/* <div className="infoBox">
                     <div className="infoBox-text">
 
                         <Typography gutterBottom className="Exhibit Exhibit-italic" style={{ color: 'black' }}>Please note, all sponsor.exhibitor content must be sent to FISITA by<span className="Exhibit-boldIt"> Tuesday 28 January 2020</span> for inclusion in the Preliminary Program.</Typography>
@@ -198,7 +198,7 @@ const svgHeight = full ? '100vh' : '';
                         <Typography gutterBottom className="Exhibit  Exhibit-bold Exhibit-icon_text" style={{ color: 'black', marginLeft: '3rem'  }}><PhoneIcon className="Exhibit-icon" width="20" height="20" color="#000"  /> +44 (0) 1279883470 </Typography>
                         <Typography gutterBottom className="Exhibit Exhibit-bold Exhibit-icon_text" style={{ color: 'black' , marginLeft: '3rem' }}><MailIcon className="Exhibit-icon" width="20" height="20" color="#000" /> sales@fisita.com</Typography>
                     </div>
-                </div>
+                </div> */}
                 <StyledQuote>
                     <Quote />
                 </StyledQuote>
@@ -222,7 +222,7 @@ const svgHeight = full ? '100vh' : '';
                         background="#134381"
                         br="100rem"
                         bcolor="#134381"
-                        style={{ margin: '3.5rem 0' }}
+                        style={{ margin: '3rem 0' }}
                     >DOWNLOAD THE EXHBITOR TERMS & CONDITIONS</Button>
                     <Button
                      target="_blank"
@@ -230,7 +230,7 @@ const svgHeight = full ? '100vh' : '';
                         background="#134381"
                         br="100rem"
                         bcolor="#134381"
-                        style={{ margin: '3.5rem 0' }}
+                        style={{ margin: '1rem 0' }}
                     >View the event floor plan</Button>
                 </div>
 

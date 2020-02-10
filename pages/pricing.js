@@ -6,8 +6,8 @@ import ExpandMoreOutlinedIcon from '@material-ui/icons/ExpandMoreOutlined';
 import HeroSection from '../components/HeroSection';
 import ExpandTable from '../components/ExpandTable';
 import { Button } from '../components/Button';
-import {StyledBanner, StyledContainer} from '../components/styles/PageStyles';
-import {FixedDates, FixedBox} from '../components/Dates';
+import { StyledBanner, StyledContainer } from '../components/styles/PageStyles';
+import { FixedDates, FixedBox } from '../components/Dates';
 
 
 
@@ -89,26 +89,26 @@ const FilledBanner = () => (
         </StyledContainer>
     </StyledBanner>
 )
- 
+
 
 export default () => (
     <>
-        <HeroSection 
-        banner={FilledBanner}
-         max="55%" 
-         src="https://live.staticflickr.com/65535/48016205181_9141b91094_b.jpg"
-         scolor="#F9B721"
-         sfs="8rem"
-         tsfs="5rem"
-         tst="60%"
-         mst="65%"
-         secondary="Book your early bird tickets today"
+        <HeroSection
+            banner={FilledBanner}
+            max="55%"
+            src="https://live.staticflickr.com/65535/48016205181_9141b91094_b.jpg"
+            scolor="#F9B721"
+            sfs="8rem"
+            tsfs="5rem"
+            tst="60%"
+            mst="65%"
+            secondary="Book your early bird tickets today"
         >
             Pricing & Registration
             </HeroSection>
         <StyledPage >
-            <FixedDates/>
-            <FixedBox/>
+            <FixedDates />
+            <FixedBox />
 
             <div className="Registration">
 
@@ -124,7 +124,10 @@ export default () => (
                     <li><Typography className="Registration"> Coffee/Refresments</Typography></li>
                     <li><Typography className="Registration"> Lunches</Typography></li>
                 </ul>
-                <Typography className="Registration_list-title">All prices are qouted in <span className="Registration-bold" >&euro; EUR</span></Typography>
+                <Typography className="Registration_list-title">All prices are quoted in <span className="Registration-bold" >&euro; EUR</span></Typography>
+            <Link href="/registration">
+                <Button br="100rem" bcolor="#134381" background="#134381" style={{ maxWidth: "24rem", margin: "5rem 0" }}>book now</Button>
+            </Link>
             </div>
             <div className="">
                 <Typography className="Registration_sub-title">
@@ -132,9 +135,9 @@ export default () => (
                     </Typography>
                 <ExpandTable />
             </div>
-                        <Link  href="/registration">
-            <Button br="100rem" bcolor="#134381" background="#134381" style={{maxWidth: "24rem", margin: "5rem 0"}}>book now</Button>
-                        </Link>
+            <Link href="/registration">
+                <Button br="100rem" bcolor="#134381" background="#134381" style={{ maxWidth: "24rem", margin: "5rem 0" }}>book now</Button>
+            </Link>
             <div className="">
 
                 <Typography gutterBottom className="Registration">Please note:</Typography>
@@ -152,10 +155,9 @@ export default () => (
                 <Typography className="Registration">For more information or help with registration, please call:</Typography>
                 <Typography className="Registration"><span className=" Registration-bold ">+44 (0) 1279883470</span> or email <span className="Registration-bold ">info@eurobrake.net</span></Typography>
             </div>
-                        <Link  href="/registration">
-
-            <Button br="100rem" bcolor="#134381" background="#134381" style={{maxWidth: "24rem", margin: "5rem 0"}}>book now</Button>
-                        </Link>
+            <Link href="/registration">
+                <Button br="100rem" bcolor="#134381" background="#134381" style={{ maxWidth: "24rem", margin: "5rem 0" }}>book now</Button>
+            </Link>
         </StyledPage>
     </>
 )
