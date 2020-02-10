@@ -103,6 +103,7 @@ const StyledFixedDates = styled.div`
 
       
     .hide-box-dates{
+        cursor: pointer;
         border: 2px solid #FFF;
         position: absolute;
         z-index: -100;
@@ -220,7 +221,7 @@ const StyledFixedBox = styled.div`
     
     .hide-box{
         border: 2px solid #FFF;
-
+        cursor: pointer;
         position: absolute;
         z-index: -100;
         bottom: -2rem;

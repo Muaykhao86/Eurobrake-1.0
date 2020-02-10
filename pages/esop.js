@@ -146,6 +146,7 @@ const StyledQuote = styled.div`
 export default () => (
     <>
         <HeroSection 
+        t="20%"
         max="70%"
         src="https://live.staticflickr.com/65535/48015980517_8b8abbc7ef_b.jpg" 
              >
@@ -165,7 +166,7 @@ export default () => (
             <Typography gutterBottom className="Esop ">The EuroBrake Student Opportunities Programme (ESOP) offers students from around the world the chance to attend EuroBrake 2020.</Typography>
             <Typography gutterBottom className="Esop ">Selected students will be offered the opportunity to attend EuroBrake via a sponsorship package which offers a strong networking opportunities, a CV check/one to one career advice with HR representatives from the sponsor companies, access to the designated Student Lounge and much more. </Typography>
             {/* <Typography gutterBottom className="Esop-bold " style={{marginTop: 'rem', fontSize: '2rem'}}>ESOP 2020 applications are temporarily closed for maintenance. We apologise for any inconvenience. </Typography> */}
-            <Typography gutterBottom className="Esop-bold " style={{marginTop: 'rem', fontSize: '2rem'}}>The deadline for applications has been extended to 10 February 2020. Please check back here for updates.</Typography>
+            <Typography gutterBottom className="Esop-bold " style={{marginTop: 'rem', fontSize: '2rem'}}>The deadline for applications has been extended to 24 February 2020. Please check back here for updates.</Typography>
             <div className="button_box">
             <Link href="/esop/apply">
             <Button

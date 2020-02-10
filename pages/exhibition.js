@@ -109,7 +109,9 @@ const StyledPage = styled.div`
 
     .button_box{
         display: flex;
+        flex-flow: column;
         justify-content: flex-start;
+        align-items: flex-start;
     }
     .infoBox{
         display: flex;

@@ -368,7 +368,6 @@ class AuthorsAreaDash extends Component {
                                                                             let niceMonth = monthNames[taskMonth];
                                                                             let niceMonthDone = monthNames[monthDone];
 
-                                                                            // todo CHECK THE RIGHT DATES!
                                                                 return (
                                                                     <TableRow key={task.task}>
                                                                         <StyledCell component="th" scope="row" className="" style={{width: '10%'}}>{task.done !== null ?
