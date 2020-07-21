@@ -115,10 +115,10 @@ export default function HeroSection(props) {
         <StyledHero>
             {/* <div className="styledoverlay"> */}
 
-            {cara ?
-                <StyledCarousel /> :
-                <img className="hero-img" srcSet={props.src ? props.src : "/images/pic11.png"} alt="EuroBrake Greating" />
-            }
+            {/* {cara ?
+                <StyledCarousel /> : */}
+                <img className="hero-img" style={{width: '100vw', maxHeight: '80vh'}} srcSet={props.src ? props.src : "/images/pic11.png"} alt="EuroBrake Greating" />
+            {/* } */}
             <StyledText t={t} mt={mt} tt={tt} max={max} mmax={mmax} fs={fs} tfs={tfs} mfs={mfs}  bfs={bfs}>
                 {props.children}
             </StyledText>

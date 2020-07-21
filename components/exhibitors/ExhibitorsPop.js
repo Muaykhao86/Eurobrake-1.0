@@ -155,7 +155,7 @@ const selectedSvg = `#prefix__booth-${booth}`;
 
   const handleOpen = () => {
     setOpen(true);
-    handleSvg()
+    // handleSvg()
   };
 
   const handleClose = () => {
